@@ -4,7 +4,7 @@ import React from "react";
 const LogoDescription = () => {
   return (
     <>
-      <section className="md:hidden px-5 font-body text-gray-600">
+      <section className="md:hidden bg-white px-5 font-body text-gray-600">
         <h1 className="text-gray-600 font-heading font-bold text-xl text-center  mb-4">
           ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
         </h1>

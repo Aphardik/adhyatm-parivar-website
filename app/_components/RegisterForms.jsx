@@ -5,7 +5,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const RegisterForm = () => {
   return (
-    <div className="py-16 px-5 sm:px-10">
+    <div className="py-16 bg-white px-5 sm:px-10">
       
       {/* <Link
         href="/pages/booklist"

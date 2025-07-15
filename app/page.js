@@ -7,7 +7,7 @@ import RegisterForm from './_components/RegisterForms';
 const LandingPage = () => {
   return (
     <div>
-    <div className="font-heading min-h-[70vh] bg-white flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
+    <div className="font-heading min-h-[70dvh] bg-white flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
       <div className="max-w-7xl mx-auto text-center">
         {/* Main heading */}
         <h1 className="text-5xl md:text-8xl leading-relaxed font-bold text-gray-900 mb-8">

@@ -107,7 +107,7 @@ export default function TestimonialSlider() {
 
 
   return (
-    <div className='max-w-7xl pt-20'>
+    <div className='max-w-7xl bg-white pt-20'>
         <img src="/6.jpg" alt="" />
     <div className=" font-body p-8 ">
       <div className=" mx-auto">
