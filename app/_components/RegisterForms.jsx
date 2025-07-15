@@ -131,7 +131,7 @@ const RegisterForm = () => {
   </div>
   <Link
     href="/pages/form/mahabharat"
-    className="text-lg font-heading py-2 w-full text-center bg-cyan-800 text-white font-semibold"
+    className="text-lg font-heading py-2 w-full text-center  bg-cyan-800 text-white font-semibold"
   >
     Register here
   </Link>
