@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className="font-body bg-white"
+        style={{backgroundColor: "#fff"}}
       >
         <Header />
         <div className='max-w-7xl bg-white min-h-dvh pt-16 flex items-center justify-center mx-auto px-4'>
