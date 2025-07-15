@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         className="font-body"
       >
         <Header />
-        <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-4'>
+        <div className='max-w-7xl bg-white min-h-dvh pt-16 flex items-center justify-center mx-auto px-4'>
           {children}
         </div>
         <Footer />
