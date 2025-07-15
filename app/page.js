@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
 import LogoDescription from './_components/LogoDescription';
-import Letters from './_components/letters';
+import Letters from './_components/Letters';
 import RegisterForm from './_components/RegisterForms';
 
 const LandingPage = () => {
