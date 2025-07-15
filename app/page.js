@@ -1,9 +1,13 @@
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
+import LogoDescription from './_components/LogoDescription';
+import Letters from './_components/letters';
+import RegisterForm from './_components/RegisterForms';
 
 const LandingPage = () => {
   return (
-    <div className="font-heading  bg-white flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div>
+    <div className="font-heading min-h-[70vh] bg-white flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
       <div className="max-w-7xl mx-auto text-center">
         {/* Main heading */}
         <h1 className="text-5xl md:text-8xl leading-relaxed font-bold text-gray-900 mb-8">
@@ -23,14 +27,18 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
-
+{/* 
          <div className="mt-12">
           <button className=" border font-body text-white border-gray-400 bg-gray-700 hover:bg-gray-800 hover:text-white font-medium py-3 px-8 rounded-full text-lg transition-all duration-300">
             Know More about us
             <FaArrowRight className="inline-block ml-2 h-5 w-5" />
           </button>
-        </div>
+        </div> */}
       </div>
+      </div>
+      <LogoDescription/>
+      <Letters/>
+      <RegisterForm/>
     </div>
   );
 };

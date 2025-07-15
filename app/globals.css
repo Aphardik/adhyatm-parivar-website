@@ -5,6 +5,7 @@
   --foreground: #171717;
   --font-heading: 'Yatra One', sans-serif;
   --font-body: 'Tiro Devanagari Hindi', sans-serif;
+  --font-anek: 'Anek Gujarati', sans-serif;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --font-anek: var(--font-anek);
 }
 
 @media (prefers-color-scheme: dark) {

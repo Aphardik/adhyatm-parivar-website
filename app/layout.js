@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/layouts/Header";
+import Footer from "./_components/layouts/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,15 +24,16 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet" />
       </head>
       <body
         className="font-body"
       >
         <Header />
         <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-4'>
-        {children}
+          {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
