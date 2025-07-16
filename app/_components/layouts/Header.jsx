@@ -29,35 +29,35 @@ const Header = () => {
       {
         id: 11,
         emoji: '🔥',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmurti-vibhag/jinpratima-suraksha",
         title: 'जिनप्रतिमा सुरक्षा',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 12,
         emoji: '❤️',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmurti-vibhag/jinpratima-nirmaan-pashaan",
         title: 'जिनप्रतिमा निर्माण - पाषाण',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
       {
         id: 13,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmurti-vibhag/jinpratima-nirmaan-dhatu",
         title: 'जिनप्रतिमा निर्माण - धातु',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
       {
         id: 42,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmurti-vibhag/jinpratima-sangrahan",
         title: 'प्राचीन जिनप्रतिमा संग्रहण',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
       {
         id: 14,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmurti-vibhag/jinpratima-aashatara-nivaran",
         title: 'जिनप्रतिमा आशातरा निवारण',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
@@ -66,35 +66,35 @@ const Header = () => {
       {
         id: 15,
         emoji: '🔥',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmandir-vibhag/jinalaya-suraksha",
         title: 'जिनालय सुरक्षा (मरम्मत)',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 16,
         emoji: '❤️',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmandir-vibhag/jinalaya-suddhi",
         title: 'जिनालय शुद्धि - उपाश्रय शुद्धि',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
       {
         id: 17,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmandir-vibhag/jinalaya-navnirmaan",
         title: 'जिनालय नवनिर्माण तथा मार्गदर्शन',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
       {
         id: 18,
         emoji: '📘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmandir-vibhag/patthar-ghadayi",
         title: 'जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई',
         description: 'At vitae consectetur lacus, scelerisque. Faucibus aliquam.'
       },
       {
         id: 19,
         emoji: '😎',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinmandir-vibhag/dev-bagicha",
         title: 'देव बगीचे का निर्माण',
         description: 'Mi donec id in pellentesque ullamcorper ut. Venenatis eu.'
       },
@@ -291,7 +291,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <a href="/" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                 About us
               </a>
               
@@ -300,7 +300,7 @@ const Header = () => {
                 onMouseEnter={() => handleMouseEnter('menu1')}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-cyan-700 font-medium transition-colors">
+                <button className={`flex items-center space-x-1  ${activeDropdown === 'menu1' ? 'text-cyan-700' : 'text-gray-700'} font-medium transition-colors`}>
                   <span>जिनमूर्ति विभाग</span>
                   <BiChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'menu1' ? 'rotate-180' : ''}`} />
                 </button>
@@ -311,7 +311,7 @@ const Header = () => {
                 onMouseEnter={() => handleMouseEnter('menu2')}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-cyan-700 font-medium transition-colors">
+                <button className={`flex items-center space-x-1  ${activeDropdown === 'menu2' ? 'text-cyan-700' : 'text-gray-700'} font-medium transition-colors`}>
                   <span>जिनमंदिर विभाग</span>
                   <BiChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'menu2' ? 'rotate-180' : ''}`} />
                 </button>
@@ -321,7 +321,7 @@ const Header = () => {
                 onMouseEnter={() => handleMouseEnter('menu3')}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-cyan-700 font-medium transition-colors">
+                <button className={`flex items-center space-x-1  ${activeDropdown === 'menu3' ? 'text-cyan-700' : 'text-gray-700'} font-medium transition-colors`}>
                   <span>जिनागम विभाग</span>
                   <BiChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'menu3' ? 'rotate-180' : ''}`} />
                 </button>
@@ -331,7 +331,7 @@ const Header = () => {
                 onMouseEnter={() => handleMouseEnter('menu4')}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-cyan-700 font-medium transition-colors">
+                <button className={`flex items-center space-x-1 ${activeDropdown === 'menu4' ? 'text-cyan-700' : 'text-gray-700'} font-medium transition-colors`}>
                   <span>अध्यात्म विभाग</span>
                   <BiChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'menu4' ? 'rotate-180' : ''}`} />
                 </button>

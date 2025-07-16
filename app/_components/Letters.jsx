@@ -24,7 +24,7 @@ export default function TestimonialSlider() {
           organization:"जैन संघ, मुलुंड पूर्व, मुंबई"
         },
         {
-          quote: "जिस प्रकार गंगोत्री में से निकलती गंगा आगे बढ़ती है और विराट फलक पर फैल जाती है, उसी प्रकार आपके परिवार की श्रुतयात्रा भी फलक पर विस्तृत होती जाए ऐसी प्रभु से प्रार्थना है।” एक बार पुनः आपके इस कार्य की खूब - खूब अनुमोदना ",
+          quote: "जिस प्रकार गंगोत्री में से निकलती गंगा आगे बढ़ती है और विराट फलक पर फैल जाती है, उसी प्रकार आपके परिवार की श्रुतयात्रा भी फलक पर विस्तृत होती जाए ऐसी प्रभु से प्रार्थना है। एक बार पुनः आपके इस कार्य की खूब - खूब अनुमोदना ",
           author: "श्रमण भगवंत"
         },
         {
@@ -51,26 +51,30 @@ export default function TestimonialSlider() {
   const [windowWidth, setWindowWidth] = useState(0);
   const autoplayInterval = 5000;
 
-  // Handle window resize and group calculation
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      setCurrentGroup(0); // Reset to first group on resize
+      setCurrentGroup(0); 
     };
     
-    handleResize(); // Initial set
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Calculate groups based on screen size
-  const groupSize = windowWidth <= 768 ? 1 : 3; // Adjust breakpoint as needed
+  const getGroupSize = () => {
+    if (windowWidth <= 640) return 1; 
+    if (windowWidth <= 768) return 2; 
+    if (windowWidth <= 1024) return 3; 
+    return 4; 
+  };
+
+  const groupSize = getGroupSize();
   const testimonialGroups = [];
   for (let i = 0; i < testimonials.length; i += groupSize) {
     testimonialGroups.push(testimonials.slice(i, i + groupSize));
   }
 
-  // Auto-advance the slider
   useEffect(() => {
     if (!autoplay || testimonialGroups.length === 0) return;
     
@@ -81,14 +85,13 @@ export default function TestimonialSlider() {
     return () => clearInterval(interval);
   }, [autoplay, testimonialGroups.length]);
 
-  // Pause autoplay when user interacts
   const handleMouseEnter = () => setAutoplay(false);
   const handleMouseLeave = () => setAutoplay(true);
 
   const goToGroup = (index) => {
     setCurrentGroup(index);
-    setAutoplay(false); // Pause when user navigates manually
-    setTimeout(() => setAutoplay(true), 5000); // Resume after 5 seconds
+    setAutoplay(false); 
+    setTimeout(() => setAutoplay(true), 5000);
   };
 
   const nextGroup = () => {
@@ -105,99 +108,103 @@ export default function TestimonialSlider() {
     setTimeout(() => setAutoplay(true), 5000);
   };
 
-
   return (
     <div className='max-w-7xl bg-white pt-20'>
-        <img src="/6.jpg" alt="" />
-    <div className=" font-body p-8 ">
-      <div className=" mx-auto">
-        <h1 className=" text-2xl  sm:text-3xl font-heading font-bold text-center text-gray-800 mb-8">
-        प्रतिभाव पत्रों में से कुछ चुनिंदा प्रसादी...
-        </h1>
+      <img src="/6.jpg" alt="" />
+      <div className="font-body p-8">
+        <div className="mx-auto">
+          <h1 className="text-2xl sm:text-3xl font-heading font-bold text-center text-gray-800 mb-12">
+            प्रतिभाव पत्रों में से कुछ चुनिंदा प्रसादी...
+          </h1>
 
-        <div 
-          className="relative overflow-hidden"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
-            <button 
-              onClick={prevGroup}
-              className="bg-cyan-800/50 text-gray-100 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-cyan-800 focus:outline-none transition-all duration-300"
-              aria-label="Previous testimonials"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-          </div>
-          <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
-            <button 
-              onClick={nextGroup}
-              className="bg-cyan-800/50 text-gray-100 rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-cyan-800 focus:outline-none transition-all duration-300"
-              aria-label="Next testimonials"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Slider Track */}
           <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentGroup * 100}%)` }}
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            {testimonialGroups.map((group, index) => (
-              <div 
-                key={index}
-                className="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6 px-2"
+            <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-20">
+              <button 
+                onClick={prevGroup}
+                className="bg-cyan-800/80 hover:bg-cyan-800 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                aria-label="Previous testimonials"
               >
-                {group.map((testimonial, idx) => (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
+              <button 
+                onClick={nextGroup}
+                className="bg-cyan-800/80 hover:bg-cyan-800 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                aria-label="Next testimonials"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="overflow-hidden px-2">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentGroup * 100}%)` }}
+              >
+                {testimonialGroups.map((group, index) => (
                   <div 
-                    key={idx}
-                    className="bg-white  border border-purple-100 overflow-hidden aspect-square flex flex-col transition-all duration-300 hover:shadow-xl hover:border-purple-300"
+                    key={index}
+                    className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                   >
-                 <div 
-                    key={index} 
-                    className="bg-white  border border-purple-100 overflow-hidden aspect-square flex flex-col transition-all duration-300 hover:shadow-xl hover:border-purple-300"
-                  >
-                    <div className="p-6 flex flex-col h-full">
-                      <div className="mb-4 flex-grow overflow-y-auto">
-                        <p className="text-gray-700 leading-relaxed text-sm md:text-[0.95rem]">"{testimonial.quote}"</p>
+                    {group.map((testimonial, idx) => (
+                      <div 
+                        key={idx}
+                        className="bg-white border border-gray-200 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-cyan-600 hover:-translate-y-1"
+                      >
+                        <div className="p-6 flex flex-col h-full">
+                          {/* Quote section */}
+                          <div className="flex-grow overflow-y-auto mb-4">
+                            <div className="text-cyan-800/30 text-3xl font-bold mb-2">"</div>
+                            <p className="text-gray-700 leading-relaxed text-sm line-height-loose">
+                              {testimonial.quote}
+                            </p>
+                          </div>
+                          
+                          <div className="mt-auto border-t border-purple-100 pt-4">
+                            <p className="text-cyan-800 font-semibold text-right text-sm">
+                              ...{testimonial.author}
+                            </p>
+                            {testimonial.organization && (
+                              <p className="text-cyan-800/80 text-xs text-right mt-1">
+                                {testimonial.organization}
+                              </p>
+                            )}
+                          </div>
+                        </div>
                       </div>
-                      <div className="mt-auto border-t border-purple-100 pt-4">
-                        <p className="text-cyan-800 font-semibold text-right">...{testimonial.author}</p>
-                        {testimonial.organization && (
-                          <p className="text-cyan-800 text-sm text-right">{testimonial.organization}</p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                   </div>
                 ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Dots navigation */}
-          <div className="flex justify-center mt-8">
-            {testimonialGroups.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToGroup(index)}
-                className={`w-3 h-3 mx-1 rounded-full focus:outline-none transition-all duration-300 ${
-                  currentGroup === index ? 'bg-cyan-800 scale-125' : 'bg-cyan-800/50'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            <div className="flex justify-center mt-8 space-x-2">
+              {testimonialGroups.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToGroup(index)}
+                  className={`w-2 h-2 rounded-full focus:outline-none transition-all duration-300 ${
+                    currentGroup === index 
+                      ? 'bg-cyan-800 w-6' 
+                      : 'bg-cyan-800/50 hover:bg-cyan-800/70'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
-        
-       
         </div>
       </div>
-    </div>
     </div>
   );
 }

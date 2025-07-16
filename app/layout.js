@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         style={{backgroundColor: "#fff"}}
       >
         <Header />
-        <div className='max-w-7xl bg-white min-h-dvh pt-16 flex items-center justify-center mx-auto px-4'>
+        <div className='max-w-7xl bg-white min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'>
           {children}
         </div>
         <Footer />
