@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaBuilding, FaChevronRight } from 'react-icons/fa';
+import Praptisthan from '@/app/_components/Praptisthan';
 
 const ContactPage = () => {
   const [selectedLocation, setSelectedLocation] = useState(0);
@@ -13,7 +14,7 @@ const ContactPage = () => {
       address: "अध्यात्म भवन, तीसरी मंजिल, आनंद श्रावक आराधना भवन, संजीवकुमार ओडिटोरियम के पास, पाल, सुरत - 395 009",
       phone: "7676769600",
       phoneDisplay: "7676 76 96 00",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.8616347668!2d72.8342!3d21.1702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sPal%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1627384750436!5m2!1sen!2sin"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1669043038683!2d72.78118397388128!3d21.18552768237838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dc12c7be50d%3A0xfb3cf9ba453cd32f!2sAdhyatm%20parivar%20(Adhyatm%20bhavan)!5e0!3m2!1sen!2sin!4v1752667088470!5m2!1sen!2sin"
     },
     {
       city: "मुंबई",
@@ -22,7 +23,7 @@ const ContactPage = () => {
       address: "संभव दर्शन, ग्राउन्ड फ्लोर, हेमुकलानी मेइन रोड, ईरानी वाडी, कांदीवली वेस्ट, मुंबई - 400 067",
       phone: "8448444050",
       phoneDisplay: "844 844 40 50",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8616347668!2d72.8342!3d19.2056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e59411d563%3A0xfe4558290938b042!2sKandivali%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1627384750436!5m2!1sen!2sin"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.8478104063706!2d72.83873662382022!3d19.201848448012363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6dca2c3da3b%3A0xad72c42dae8ec7b6!2sSambhav%20Darshan%2C%20Hemu%20Colony%2C%20Irani%20Wadi%2C%20Kandivali%20West%2C%20Mumbai%2C%20Maharashtra%20400067!5e0!3m2!1sen!2sin!4v1752667361044!5m2!1sen!2sin"
     },
     {
       city: "अमदावाद",
@@ -31,7 +32,7 @@ const ContactPage = () => {
       address: "वल्लभ अपार्टमेन्ट, ग्राउन्ड फ्लोर, स्कारलेट कोम्प्लेक्स के पीछे, अंकुर स्कूल के सामने, फतेपुरा, पालडी, अमदावाद - 380 007",
       phone: "7227070704",
       phoneDisplay: "72270 70704",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8616347668!2d72.5714!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e59411d563%3A0xfe4558290938b042!2sPaldi%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1627384750436!5m2!1sen!2sin"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.0468609081604!2d72.56901129871349!3d23.023237405015898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e845679f5b561%3A0xbc907be6190a0c80!2sF-5!5e0!3m2!1sen!2sin!4v1752667484177!5m2!1sen!2sin"
     }
   ];
 
@@ -140,6 +141,7 @@ const ContactPage = () => {
         </div>
 
       </div>
+      <Praptisthan />
     </div>
   );
 };

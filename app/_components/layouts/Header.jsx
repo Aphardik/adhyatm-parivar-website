@@ -66,35 +66,35 @@ const Header = () => {
       {
         id: 15,
         emoji: '🔥',
-        link:"/pages/jinmandir-vibhag/jinalaya-suraksha",
+        link:"/pages/jinmandir-vihabg/jinalaya-suraksha",
         title: 'जिनालय सुरक्षा (मरम्मत)',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 16,
         emoji: '❤️',
-        link:"/pages/jinmandir-vibhag/jinalaya-suddhi",
+        link:"/pages/jinmandir-vihabg/jinalaya-suddhi",
         title: 'जिनालय शुद्धि - उपाश्रय शुद्धि',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
       {
         id: 17,
         emoji: '🤘',
-        link:"/pages/jinmandir-vibhag/jinalaya-navnirmaan",
+        link:"/pages/jinmandir-vihabg/jinalaya-navnirmaan",
         title: 'जिनालय नवनिर्माण तथा मार्गदर्शन',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
       {
         id: 18,
         emoji: '📘',
-        link:"/pages/jinmandir-vibhag/patthar-ghadayi",
+        link:"/pages/jinmandir-vihabg/patthar-ghadayi",
         title: 'जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई',
         description: 'At vitae consectetur lacus, scelerisque. Faucibus aliquam.'
       },
       {
         id: 19,
         emoji: '😎',
-        link:"/pages/jinmandir-vibhag/dev-bagicha",
+        link:"/pages/jinmandir-vihabg/dev-bagicha",
         title: 'देव बगीचे का निर्माण',
         description: 'Mi donec id in pellentesque ullamcorper ut. Venenatis eu.'
       },
