@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import LogoDescription from './_components/LogoDescription';
 import Letters from './_components/Letters';
 import RegisterForm from './_components/RegisterForms';
+import VibhagDescription from './_components/VibhagDescription';
 
 const LandingPage = () => {
   return (
@@ -37,6 +38,7 @@ const LandingPage = () => {
       </div>
       </div>
       <LogoDescription/>
+      <VibhagDescription/>
       <Letters/>
       <RegisterForm/>
     </div>
