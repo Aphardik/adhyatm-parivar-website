@@ -153,44 +153,95 @@ const Page = () => {
                   <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-center mb-2 sm:mb-3 font-heading">सौभाग्य का सीमाचिन्ह</h2>
                   <p className="text-center">
                     पिछले ५ सालो में अध्यात्म परिवार द्वारा प्रतिवर्ष भादरवा सुदी ६ से आसोज सुदी ६ दौरान,
-                    <span className="font-semibold text-yellow-600"> श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा </span>
+                    <span className="font-semibold text-gray-600"> श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा </span>
                     की ओप (शुद्ध) सहित महातीर्थ पर विराजमान अन्य प्रतिमाओं के ओप आदि का कार्य अनुक्रम से किया जा रहा है।
                   </p>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gray-50 rounded-sm border border-gray-300 shadow-md p-4 sm:p-6">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                <div className="text-center bg-gray-200 pb-4">
-                  <div className="w-full h-36 sm:h-40 lg:h-48 bg-gray-200 border border-gray-300 shadow-sm mb-3 flex items-center justify-center">
-                    <img src="/jinmurti/jinpratima-suraksha/img-1.7.png" alt="Damaged Statue" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="font-bold mb-2  sm:text-base">श्री गिरनार महातीर्थ</h3>
-                  <p className=" text-gray-600">में विराटमान प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा के ओप का कार्य</p>
-                </div>
-                <div className="text-center bg-gray-200 pb-4">
-                  <div className="w-full h-36 sm:h-40 lg:h-48 bg-gray-200 border border-gray-300 shadow-sm mb-3 flex items-center justify-center">
-                    <img src="/jinmurti/jinpratima-suraksha/img-1.8.png" alt="Damaged Parts" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="font-bold mb-2  sm:text-base">श्री समेतशिखर महातीर्थ</h3>
-                  <p className=" text-gray-600">के जलमंदिर में विराजमान श्री श्यामला पार्श्वनाथ परमात्मा के लेप का कार्य</p>
-                </div>
-                <div className="text-center sm:col-span-2 lg:col-span-1 bg-gray-200 pb-4">
-                  <div className="w-full h-36 sm:h-40 lg:h-48 bg-gray-200 border border-gray-300 shadow-sm mb-3 flex items-center justify-center">
-                    <img src="/jinmurti/jinpratima-suraksha/img-1.9.png" alt="Damaged Parts" className="w-full h-full object-cover" />
-                  </div>
-                  <h3 className="font-bold mb-2  sm:text-base">श्री शंखेश्वर महातीर्थ</h3>
-                  <p className=" text-gray-600">की भमती में विराजमान तमाम परमात्माओं के ओप का कार्य</p>
-                </div>
-              </div>
-              <div className="mt-4 sm:mt-6 bg-gray-100 border border-gray-200 rounded-sm p-3 sm:p-4">
-                <p className=" text-center font-medium">
-                  श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा के लेप सहित 
-                  बावन जिनालय में सुशोभित तमाम परमात्माओ के ओप आदि का कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
-                </p>
-              </div>
+            <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-sm border border-gray-200 shadow-lg p-6 sm:p-8 mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Card 1 */}
+        <div className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-300 transform hover:-translate-y-1">
+          <div className="relative overflow-hidden">
+            <div className="w-full h-48 sm:h-52 lg:h-56 bg-gradient-to-br from-gray-100 to-gray-100 flex items-center justify-center">
+              <img 
+                src="/jinmurti/jinpratima-suraksha/img-1.7.png" 
+                alt="Damaged Statue" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+              />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="p-5">
+            <h3 className="font-bold text-lg mb-3 text-gray-800 group-hover:text-gray-600 transition-colors">
+              श्री गिरनार महातीर्थ
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-sm">
+              में विराटमान प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा के ओप का कार्य
+            </p>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-300 transform hover:-translate-y-1">
+          <div className="relative overflow-hidden">
+            <div className="w-full h-48 sm:h-52 lg:h-56 bg-gradient-to-br from-gray-100 to-gray-100 flex items-center justify-center">
+              <img 
+                src="/jinmurti/jinpratima-suraksha/img-1.8.png" 
+                alt="Damaged Parts" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="p-5">
+            <h3 className="font-bold text-lg mb-3 text-gray-800 group-hover:text-gray-600 transition-colors">
+              श्री समेतशिखर महातीर्थ
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-sm">
+              के जलमंदिर में विराजमान श्री श्यामला पार्श्वनाथ परमात्मा के लेप का कार्य
+            </p>
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-300 transform hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+          <div className="relative overflow-hidden">
+            <div className="w-full h-48 sm:h-52 lg:h-56 bg-gradient-to-br from-gray-100 to-gray-100 flex items-center justify-center">
+              <img 
+                src="/jinmurti/jinpratima-suraksha/img-1.9.png" 
+                alt="Damaged Parts" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="p-5">
+            <h3 className="font-bold text-lg mb-3 text-gray-800 group-hover:text-gray-600 transition-colors">
+              श्री शंखेश्वर महातीर्थ
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-sm">
+              की भमती में विराजमान तमाम परमात्माओं के ओप का कार्य
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="mt-8 bg-gradient-to-r from-gray-100 to-gray-100 border-2 border-gray-200 rounded-sm p-6 shadow-inner">
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-12 h-1 bg-gray-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-gray-500 rounded-full mx-3"></div>
+          <div className="w-12 h-1 bg-gray-400 rounded-full"></div>
+        </div>
+        <p className="text-center font-semibold text-gray-800 leading-relaxed text-base sm:text-lg">
+          श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा के लेप सहित 
+          बावन जिनालय में सुशोभित तमाम परमात्माओ के ओप आदि का कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
+        </p>
+
+      </div>
+    </div>
             
             <div className="bg-gray-50 rounded-sm border border-gray-300 shadow-md p-4 sm:p-6">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-center mb-4 sm:mb-6 font-heading">ये तो हुई समस्या, परन्तु समाधान? यह रहा...</h2>
