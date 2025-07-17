@@ -40,17 +40,17 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto py-6">
           <div className="text-center">
-            <h1 className="text-4xl font-heading font-bold text-gray-800 mb-2">
+            <h1 className="text-2xl font-heading font-bold text-gray-800 mb-2">
               अध्यात्म परिवार
             </h1>
-            <p className="text-lg font-body text-gray-600">संपर्क विवरण</p>
+            <p className="text- font-body text-gray-600">संपर्क विवरण</p>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto py-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Location Cards */}
           <div className="lg:col-span-1 space-y-4">
@@ -68,12 +68,12 @@ const ContactPage = () => {
                 onClick={() => setSelectedLocation(index)}
               >
                 <div className={`h-1 ${selectedLocation === index ? 'bg-gray-600' : 'bg-gray-300'}`}></div>
-                <div className="p-6">
+                <div className="p-[1.775rem]">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-heading font-bold text-gray-700">{location.city}</h3>
-                    <FaChevronRight className={`text-gray-600 transition-transform duration-300 ${
+                    <h3 className="text-xl font-heading font-bold text-gray-700">{location.city}</h3>
+                    {/* <FaChevronRight className={`text-gray-600 transition-transform duration-300 ${
                       selectedLocation === index ? 'rotate-90' : ''
-                    }`} size={16} />
+                    }`} size={16} /> */}
                   </div>
                   
                   <div className="space-y-3">
@@ -103,7 +103,7 @@ const ContactPage = () => {
               <div className={`h-1 bg-gray-600`}></div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-heading font-bold text-gray-700">
+                  <h3 className="text-xl font-heading font-bold text-gray-700">
                     {locations[selectedLocation].city}
                   </h3>
 
