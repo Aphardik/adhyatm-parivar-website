@@ -244,7 +244,11 @@ const Page = () => {
     </div>
             
             <div className="bg-gray-50 rounded-sm border border-gray-300 shadow-md p-4 sm:p-6">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-center mb-4 sm:mb-6 font-heading">ये तो हुई समस्या, परन्तु समाधान? यह रहा...</h2>
+                        <div className="text-center mb-6 lg:mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-heading bg-gray-300 text-gray-800 block px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+             ये तो हुई समस्या, परन्तु समाधान? यह रहा...
+            </h2>
+          </div>
               <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
                 <div className="bg-gray-100 border border-gray-100 rounded-sm p-3 sm:p-4">
                   <h3 className="font-bold mb-2 sm:mb-3  sm:text-base">प्रत्येक पूजक का एक संकल्प:</h3>
@@ -272,9 +276,12 @@ const Page = () => {
         <div className="bg-gray-50 text-black py-4 sm:py-8">
           <div className="mx-auto">
             <div className="bg-gray-100 border border-gray-200 rounded-sm p-4 sm:p-6 lg:p-8">
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 font-heading text-center">
-                सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
-              </h1>
+             
+              <div className="text-center mb-6 lg:mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-heading bg-gray-300 text-gray-800 block px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+             सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
+            </h2>
+          </div>
               
               <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-6 lg:mb-8">
                 <div className="space-y-3 text-base">
