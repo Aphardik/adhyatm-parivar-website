@@ -99,40 +99,39 @@ const Header = () => {
         description: 'Mi donec id in pellentesque ullamcorper ut. Venenatis eu.'
       },
     ],
-
      menu3: [
       {
         id: 20,
         emoji: '🔥',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinagam-vibhag/prachin-shrut-surksha",
         title: 'प्राचीन श्रुत सुरक्षा',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 21,
         emoji: '❤️',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinagam-vibhag/arvachin-shrut-prakashan",
         title: 'अर्वाचीन श्रुत प्रकाशन-प्रचार',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
       {
         id: 22,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinagam-vibhag/haribhadrasuri-shastra-sangrah",
         title: 'हरिभद्रसूरी शास्त्रसंग्रह',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
       {
         id: 23,
         emoji: '🔥',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinagam-vibhag/adhyatm-gyantirth",
         title: 'अध्यात्म ज्ञानतीर्थ',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 24,
         emoji: '❤️',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/jinagam-vibhag/ganipitak-nirmaan-prasar",
         title: 'गणीपिटक निर्माण प्रसार',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
@@ -141,123 +140,122 @@ const Header = () => {
       {
         id: 25,
         emoji: '🔥',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/parishthapanika-samiti",
         title: 'परिष्ठापानिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डेम) निर्माण',
         description: 'Integer ut sit parienti enim eu. Egestas odio scelerisque.'
       },
       {
         id: 26,
         emoji: '❤️',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/vihar-suraksha",
         title: 'विहार सुरक्षा',
         description: 'Platea elemend odio at integer nulla tristique magna sed sed.'
       },
       {
         id: 27,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/charitra-upkaran-bhakti",
         title: 'चारित्र उपकरण भक्ति',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 28,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/jal-stand",
         title: 'उष्ण जल ठंडा करने का स्टैंड',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 29,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/suddh-puja-dravya",
         title: 'शुद्ध पूजा के द्रव्यों की सम्प्राप्ति',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 30,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/dharmanusthan",
         title: 'धर्मानुष्ठान सुशोभन सामग्री की उपलब्धि',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 31,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/uddhyapan-upkaran",
         title: 'उद्यापन उपकरण व्यवस्था',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 32,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/anusthan-aayojan",
         title: 'अनुष्ठान आयोजन (सामूहिक दीक्षा, उपधान , वाचना श्रेणी आदि)',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 33,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/adhyatmshala",
         title: 'अध्यात्मशाला (बालसंस्करण पाठशाला)',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 34,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/sanskrit-shikshan",
         title: 'संस्कृत शिक्षण वर्ग (संशिव)',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 35,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/paiyashala",
         title: 'पाइयशाला (प्राकृत शिक्षणशाला)',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 36,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/jivant-drishyawali",
         title: 'जीवंत दृश्यावली (भावोत्पादक नाटक)',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {id: 37,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/prabhubhakti-upkaran",
         title: 'प्रभुभक्ति आदि के बेजोड़ उपकरणों का निर्माण',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 38,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/uttam-bhaktidrivya",
         title: 'उत्तम भक्तिद्रव्य संशोधन',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 39,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/legal-cell",
         title: 'लीगल सेल : क़ानूनी मार्गदर्शन',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 40,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/chitra-nirmaan",
         title: 'चित्र निर्माण',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
        {
         id: 41,
         emoji: '🤘',
-        link:"/department/jinmurtidepartment",
+        link:"/pages/adhyatm-vibhag/vividh-sangh",
         title: 'विविध संघो तथा आराधना भवनों का संचालन',
         description: 'Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.'
       },
     ],
-    
   };
 
   const toggleMobileSection = (section) => {

@@ -6,7 +6,6 @@ import { IoLocation } from "react-icons/io5";
 const PratisthanDirectory = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Sample data structure based on your format
   const pratisthanData  = {
     'मुंबई': [
       {
@@ -903,7 +902,6 @@ const PratisthanDirectory = () => {
   ]
 }
 
-  // Filter data based on search term
   const filteredData = useMemo(() => {
     if (!searchTerm) return pratisthanData;
 
@@ -1008,7 +1006,6 @@ const PratisthanDirectory = () => {
         )}
       </div>
 
-      {/* Footer */}
       <div className="bg-white border-t-2 border-gray-300 mt-12">
         <div className="max-w-7xl mx-auto px-4 py-6 font-heading text-center text-gray-600">
           <p>कुल {Object.values(filteredData).reduce((sum, entries) => sum + entries.length, 0)} शुद्धद्रव्य प्राप्तिस्थान</p>
