@@ -64,20 +64,20 @@ const VibhagDescription = () => {
             {vibhags.map((vibhag, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-background border p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gray-400 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-lighten-bg rounded-full flex items-center justify-center">
                       <img className='w-16 h-16 rounded-full object-cover' src={vibhag.icon} alt="" />
                     </div>
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2 font-heading">
+                    <h3 className="text-lg font-semibold text-heading mb-2 font-heading">
                       {vibhag.title}
                     </h3>
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-content text-sm leading-relaxed">
                       {vibhag.description}
                     </p>
                   </div>
