@@ -5,7 +5,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const RegisterForm = () => {
   return (
-    <div className="py-16 bg-white px-5 sm:px-10">
+    <div className="py-16 bg-background px-5 sm:px-10">
       
       {/* <Link
         href="/pages/booklist"
@@ -42,7 +42,7 @@ const RegisterForm = () => {
       </Link> */}
 
       <div className="">
-        <h1 className="font-bold flex items-center gap-2 border-b-2  border-cyan-800 font-heading mb-8 text-xl text-gray-600 text-start">
+        <h1 className="font-bold flex items-center gap-2 border-b-2  border-secondary-color font-heading mb-8 text-xl text-secondary-color text-start">
           रजिस्ट्रेशन फॉर्म
           {/* इवेंट्स के लिए */}
           <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow" />
@@ -51,7 +51,7 @@ const RegisterForm = () => {
           {/* Book Card */}
            <div className="flex flex-col items-center justify-center w-full group max-w-[210px]">
             <div className="relative w-full h-[320px]"> {/* Fixed height for portrait aspect ratio */}
-              <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
+              <div className="relative bg-light-bg font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
                   src="/bookimages/ravanni-bhitarma.jpg"

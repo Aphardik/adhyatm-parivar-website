@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -6,6 +6,12 @@
   --font-heading: 'Yatra One', sans-serif;
   --font-body: 'Tiro Devanagari Hindi', sans-serif;
   --font-anek: 'Anek Gujarati', sans-serif;
+  --secondary-color: #104E64;
+  --text-color-heading :#36393e;
+  --text-color-light :#ffffff;
+  --text-color-content :#4A5565;
+  --light-bg : #7a7a7a;
+  --lighten-bg : #ececec;
 }
 
 @theme inline {
@@ -16,6 +22,15 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-anek: var(--font-anek);
+
+  --color-light-bg : var(--light-bg);
+  --color-lighten-bg : var(--lighten-bg);
+  --color-secondary-color: var(--secondary-color);
+
+  
+  --text-color-heading : var(--text-color-heading);
+  --text-color-light : var(--text-color-light);
+  --text-color-content : var(--text-color-content);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,4 +44,92 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+@import "tailwindcss";
+
+:root {
+  /* Light mode colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-heading: 'Yatra One', sans-serif;
+  --font-body: 'Tiro Devanagari Hindi', sans-serif;
+  --font-anek: 'Anek Gujarati', sans-serif;
+  --secondary-color: #104E64;
+  --text-color-heading: #36393e;
+  --text-color-light: #ffffff;
+  --text-color-content: #4A5565;
+  --light-bg: #cbcbcb;
+  --lighten-bg: #ececec;
+   --border-color: #d1d5db;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --secondary-color: #4A90B8; /* Lighter blue for better contrast */
+    --text-color-heading: #ededed; /* Light text for dark backgrounds */
+    --text-color-light: #ffffff; /* Keep white for emphasis */
+    --text-color-content: #b4b4b4; /* Lighter gray for better readability */
+    --light-bg: #2a2a2a; /* Darker background alternative */
+    --lighten-bg: #1a1a1a; /* Very dark background for contrast */
+     --border-color: #4b5563;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-anek: var(--font-anek);
+
+  --color-light-bg: var(--light-bg);
+  --color-lighten-bg: var(--lighten-bg);
+  --color-secondary-color: var(--secondary-color);
+
+  --text-color-heading: var(--text-color-heading);
+  --text-color-light: var(--text-color-light);
+  --text-color-content: var(--text-color-content);
+  --color-border: var(--border-color);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  border-color: var(--border-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Manual dark mode toggle class */
+/* [data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --secondary-color: #4A90B8;
+  --text-color-heading: #ededed;
+  --text-color-light: #ffffff;
+  --text-color-content: #b4b4b4;
+  --light-bg: #2a2a2a;
+  --lighten-bg: #1a1a1a;
+   --border-color: #4b5563;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --secondary-color: #104E64;
+  --text-color-heading: #36393e;
+  --text-color-light: #ffffff;
+  --text-color-content: #4A5565;
+  --light-bg: #7a7a7a;
+  --lighten-bg: #ececec;
+   --border-color: #d1d5db;
+} */

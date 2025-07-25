@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet" />
       </head>
       <body
-        className="font-body bg-white"
-        style={{backgroundColor: "#fff"}}
+        className="font-body bg-background"
+       
       >
         <Header />
-        <div className='max-w-7xl bg-white min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'>
+        <div className='max-w-7xl bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'>
           {children}
         </div>
         <Footer />
