@@ -110,7 +110,7 @@ body {
 
 
 /* Manual dark mode toggle class */
-/* [data-theme="dark"] {
+[data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
   --secondary-color: #4A90B8;
@@ -132,4 +132,4 @@ body {
   --light-bg: #7a7a7a;
   --lighten-bg: #ececec;
    --border-color: #d1d5db;
-} */
+}
