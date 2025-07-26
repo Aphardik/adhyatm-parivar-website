@@ -375,7 +375,7 @@ const Page = () => {
               <div className="w-3 h-3 bg-light-bg rounded-full mx-3"></div>
               <div className="w-12 h-1 bg-light-bg rounded-sm"></div>
             </div>
-            <p className="text-center font-semibold text-secondary-color leading-relaxed text-lg sm:text-xl">
+            <p className="text-center font-semibold text-heading leading-relaxed text-lg sm:text-xl">
               श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
               के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओ के ओप आदि का
               कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
