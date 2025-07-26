@@ -87,7 +87,7 @@ const Praptisthan = () => {
                 }}
                 className={`flex items-center gap-2 px-2 sm:px-6 py-3 font-heading transition-colors ${
                   activeTab === 'suddh-dravya'
-                    ? 'bg-secondary-color text-background'
+                    ? 'bg-light-bg text-heading'
                     : 'bg-background text-heading hover:bg-lighten-bg'
                 }`}
               >
@@ -101,7 +101,7 @@ const Praptisthan = () => {
                 }}
                 className={`flex items-center gap-2 px-3 sm:px-6 py-3 font-heading transition-colors ${
                   activeTab === 'pustak'
-                    ? 'bg-secondary-color text-background'
+                    ? 'bg-light-bg text-heading'
                     : 'bg-background text-heading hover:bg-lighten-bg'
                 }`}
               >
@@ -140,11 +140,11 @@ const Praptisthan = () => {
             <div key={city} className="">
               {/* City Header - Clickable */}
               <div 
-                className="mb-6 bg-secondary-color cursor-pointer hover:bg-secondary-color/90 transition-colors"
+                className="mb-6 bg-light-bg cursor-pointer hover:bg-light-bg/90 transition-colors"
                 onClick={() => toggleCityCollapse(city)}
               >
                 <div className="flex items-center justify-between px-4 py-3">
-                  <h2 className="text-lg sm:text-xl font-heading text-background">
+                  <h2 className="text-lg sm:text-xl font-heading text-heading">
                     {city} - {filteredData[city].length} {tabTitle}
                   </h2>
                   <div className="text-background">

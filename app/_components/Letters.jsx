@@ -159,7 +159,7 @@ export default function TestimonialSlider() {
                     {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
-                        className="bg-light-bg/60 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
+                        className="bg-light-bg/30 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
                       >
                         <div className="p-6 flex flex-col h-full">
                           {/* Quote section */}
