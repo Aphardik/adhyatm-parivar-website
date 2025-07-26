@@ -372,7 +372,7 @@ const Header = () => {
               {activeDropdown && dropdownItems[activeDropdown]?.map((item, index) => (
                 <Link href={item.link}
                   key={item.id}
-                  className={`p-4 rounded-lg bg-lighten-bg hover:bg-secondary-color/20 transition-all duration-300 cursor-pointer group transform ${
+                  className={`p-4 rounded-lg bg-light-bg hover:bg-secondary-color/20 transition-all duration-300 cursor-pointer group transform ${
                     activeDropdown 
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-4 opacity-0'

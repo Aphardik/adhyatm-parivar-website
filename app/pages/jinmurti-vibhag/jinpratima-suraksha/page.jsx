@@ -5,14 +5,14 @@ const Page = () => {
   return (
     <div className="bg-background text-heading font-body">
       {/* Header */}
-      <header className="bg-secondary-color">
+      <header className="bg-light-bg">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-background mb-1 sm:mb-2">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
                 जिनप्रतिमा सुरक्षा
               </h1>
-              <p className="sm:text-base lg:text-lg text-background font-medium">
+              <p className="sm:text-base lg:text-lg text-heading font-medium">
                 कार्य आरंभ: वि.सं. २०६३
               </p>
             </div>
@@ -24,7 +24,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-secondary-color text-background inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               जिनप्रतिमा सुरक्षा - यह क्या है?
             </h2>
           </div>
@@ -54,7 +54,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16 ">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-secondary-color text-background inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               समस्याएं - यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?
             </h2>
           </div>
@@ -159,7 +159,7 @@ const Page = () => {
           {/* Ancient Wisdom Quote */}
           <div className="mb-8 lg:mb-12">
             <div className="text-center mb-8 lg:mb-12">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-secondary-color text-background inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
                 महत्वपूर्ण निष्कर्ष
               </h3>
             </div>
@@ -202,7 +202,7 @@ const Page = () => {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex gap-4 items-start">
-                    <span className="w-8 h-8 bg-secondary-color text-background rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <span className="w-8 h-8 bg-light-bg text-heading rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                       1
                     </span>
                     <span className="font-medium text-lg">
@@ -210,7 +210,7 @@ const Page = () => {
                     </span>
                   </div>
                   <div className="flex gap-4 items-start">
-                    <span className="w-8 h-8 bg-secondary-color text-background rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <span className="w-8 h-8 bg-light-bg text-heading rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                       2
                     </span>
                     <span className="font-medium text-lg">
@@ -218,7 +218,7 @@ const Page = () => {
                     </span>
                   </div>
                   <div className="flex gap-4 items-start">
-                    <span className="w-8 h-8 bg-secondary-color text-background rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <span className="w-8 h-8 bg-light-bg text-heading rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                       3
                     </span>
                     <span className="font-medium text-lg">
@@ -237,7 +237,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16 ">
         <div className="mx-auto  max-w-6xl">
           <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-secondary-color text-background inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               ये तो हुई समस्या, परन्तु समाधान? यह रहा...
             </h2>
           </div>
@@ -280,7 +280,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-secondary-color text-background inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               सौभाग्य का सीमाचिह्न
             </h2>
           </div>
@@ -371,9 +371,9 @@ const Page = () => {
           {/* Makshi Tirth Summary */}
           <div className="bg-lighten-bg rounded-sm shadow-md p-6 sm:p-8 lg:p-10">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-12 h-1 bg-secondary-color rounded-sm"></div>
-              <div className="w-3 h-3 bg-secondary-color rounded-full mx-3"></div>
-              <div className="w-12 h-1 bg-secondary-color rounded-sm"></div>
+              <div className="w-12 h-1 bg-light-bg rounded-sm"></div>
+              <div className="w-3 h-3 bg-light-bg rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-light-bg rounded-sm"></div>
             </div>
             <p className="text-center font-semibold text-secondary-color leading-relaxed text-lg sm:text-xl">
               श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
@@ -390,7 +390,7 @@ const Page = () => {
         <div className="container mx-auto  max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <div className="inline-block bg-secondary-color text-background px-8 py-4 rounded-sm shadow-md">
+            <div className="inline-block bg-light-bg text-heading px-8 py-4 rounded-sm shadow-md">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
                 सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
               </h1>
@@ -402,7 +402,7 @@ const Page = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Story Content */}
               <div className="space-y-6">
-                <div className="bg-secondary-color/10 p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     प्रतीक्षा का काल
                   </h2>
@@ -430,7 +430,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-secondary-color/10 p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     साधना का फल
                   </h2>
@@ -445,7 +445,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-secondary-color/10 p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     तैयारी और चुनौती
                   </h2>
@@ -463,7 +463,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-secondary-color/10 p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     समर्पण और सफलता
                   </h2>
@@ -493,7 +493,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                {/* <div className="bg-background p-6 rounded-lg border-2 border-secondary-color">
+                {/* <div className="bg-background p-6 rounded-lg border-2 border-light-bg">
                   <p className="text-xl font-bold text-center text-heading">
                     हमारे सौभाग्य का यह सीमाचिह्न है।
                   </p>
@@ -549,7 +549,7 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="flex flex-col justify-center space-y-4">
-                      <div className="bg-background p-4 rounded-lg border-l-4 border-secondary-color">
+                      <div className="bg-background p-4 rounded-lg border-l-4 border-light-bg">
                         <p className="font-semibold text-heading">
                           अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड
                           पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।

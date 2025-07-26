@@ -62,7 +62,7 @@ const ContactPage = () => {
             {locations.map((location, index) => (
               <div 
                 key={index}
-                className={`bg-background border border-gray-400 transition-all duration-300 cursor-pointer ${
+                className={`bg-lighten-bg border border-gray-400 transition-all duration-300 cursor-pointer ${
                   selectedLocation === index ? 'shadow-sm' : ''
                 }`}
                 onClick={() => setSelectedLocation(index)}

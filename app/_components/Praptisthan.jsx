@@ -42,7 +42,7 @@ const Praptisthan = () => {
   };
 
   const PratisthanCard = ({ entry }) => (
-    <div className="bg-background shadow-md hover:shadow-lg border border-gray-300 p-6 font-body hover:bg-light-bg transition-colors">
+    <div className="bg-background shadow-md hover:shadow-lg border border-gray-300 p-6 font-body hover:bg-lighten-bg transition-colors">
       <div className="flex flex-col space-y-3">
         <h3 className="text-xl font-bold text-heading">{entry.name}</h3>
         
@@ -102,7 +102,7 @@ const Praptisthan = () => {
                 className={`flex items-center gap-2 px-3 sm:px-6 py-3 font-heading transition-colors ${
                   activeTab === 'pustak'
                     ? 'bg-secondary-color text-background'
-                    : 'bg-background text-heading hover:bg-light-bg'
+                    : 'bg-background text-heading hover:bg-lighten-bg'
                 }`}
               >
                 <FiBook className="hidden sm:block w-5 h-5" />
@@ -114,12 +114,12 @@ const Praptisthan = () => {
           {/* Search Bar */}
           <div className="relative w-full max-w-2xl  rounded-3xl">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <BiSearch className="h-5 w-5 text-gray-400" />
+              <BiSearch className="h-5 w-5 text-content" />
             </div>
             <input
               type="text"
               placeholder="नाम, फोन, पता, या शहर से खोजें..."
-              className="w-full placeholder:font-body bg-background placeholder:text-content pl-10 pr-4 py-3 text-lg border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-700/60 focus:border-gray-400"
+              className="w-full placeholder:font-body bg-background placeholder:text-content pl-10 pr-4 py-3 text-lg border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary-color/60 focus:border-gray-400"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

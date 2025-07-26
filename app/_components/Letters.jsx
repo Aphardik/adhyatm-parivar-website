@@ -125,7 +125,7 @@ export default function TestimonialSlider() {
             <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-20">
               <button 
                 onClick={prevGroup}
-                className="bg-cyan-800/80 hover:bg-cyan-800 text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                className="bg-secondary-color/80 hover:bg-secondary-color text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 aria-label="Previous testimonials"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +137,7 @@ export default function TestimonialSlider() {
             <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
               <button 
                 onClick={nextGroup}
-                className="bg-cyan-800/80 hover:bg-cyan-800 text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                className="bg-secondary-color/80 hover:bg-secondary-color text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 aria-label="Next testimonials"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -159,7 +159,7 @@ export default function TestimonialSlider() {
                     {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
-                        className="bg-background border border-light-bg shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
+                        className="bg-light-bg/60 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
                       >
                         <div className="p-6 flex flex-col h-full">
                           {/* Quote section */}

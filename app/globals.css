@@ -123,13 +123,13 @@ body {
 }
 
 [data-theme="light"] {
-  --background: #ffffff;
+  --background: #FAEDCA;
   --foreground: #171717;
-  --secondary-color: #104E64;
+  --secondary-color: #FE5D26;
   --text-color-heading: #36393e;
   --text-color-light: #ffffff;
   --text-color-content: #4A5565;
-  --light-bg: #7a7a7a;
-  --lighten-bg: #ececec;
+  --light-bg: #F2C078;
+  --lighten-bg: #C1DBB3;
    --border-color: #d1d5db;
 }
