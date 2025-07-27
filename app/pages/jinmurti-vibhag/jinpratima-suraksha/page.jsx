@@ -63,7 +63,7 @@ const Page = () => {
           <div className="mb-12 lg:mb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
-                <div className="bg-background rounded-sm shadow-md overflow-hidden">
+                <div className="bg-background rounded-sm  overflow-hidden">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.1.png"
                     alt="Damaged Statue"
@@ -71,7 +71,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="order-1 lg:order-2 bg-background rounded-sm shadow-md p-6 sm:p-8">
+              <div className="order-1 lg:order-2 bg-background rounded-sm  p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-heading font-semibold text-heading mb-4">
                   कड़वी वास्तविकता
                 </h3>
@@ -85,7 +85,7 @@ const Page = () => {
           {/* Problem 2 - Image Right */}
           <div className="mb-12 lg:mb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="bg-background rounded-sm shadow-md p-6 sm:p-8">
+              <div className="bg-background rounded-sm  p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-heading font-semibold text-heading mb-4">
                   प्रभु के चरणों की दुर्दशा
                 </h3>
@@ -95,7 +95,7 @@ const Page = () => {
                   दर्दनाक दुर्दशा!
                 </p>
               </div>
-              <div className="bg-background rounded-sm shadow-md overflow-hidden">
+              <div className="bg-background rounded-sm  overflow-hidden">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.2.png"
                   alt="Damaged Feet"
@@ -109,7 +109,7 @@ const Page = () => {
           <div className="mb-12 lg:mb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
-                <div className="bg-background rounded-sm shadow-md overflow-hidden">
+                <div className="bg-background rounded-sm  overflow-hidden">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.3.png"
                     alt="Damaged Parts"
@@ -117,7 +117,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="order-1 lg:order-2 bg-background rounded-sm shadow-md p-6 sm:p-8">
+              <div className="order-1 lg:order-2 bg-background rounded-sm  p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-heading font-semibold text-heading mb-4">
                   नमी का कारण
                 </h3>
@@ -132,7 +132,7 @@ const Page = () => {
           {/* Problem 4 - Image Right */}
           <div className="mb-12 lg:mb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="bg-background rounded-sm shadow-md p-6 sm:p-8">
+              <div className="bg-background rounded-sm  p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-heading font-semibold text-heading mb-4">
                   धरणेंद्र की सुरक्षा
                 </h3>
@@ -141,7 +141,7 @@ const Page = () => {
                   प्रभु के प्रतिबिंब रूपी फणा को नहीं संभाल सके!
                 </p>
               </div>
-              <div className="bg-background rounded-sm shadow-md overflow-hidden">
+              <div className="bg-background rounded-sm  overflow-hidden">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.4.png"
                   alt="Damaged Parts"
@@ -163,7 +163,7 @@ const Page = () => {
                 महत्वपूर्ण निष्कर्ष
               </h3>
             </div>
-            <div className="bg-lighten-bg rounded-sm shadow-md p-6 sm:p-8">
+            <div className="bg-lighten-bg rounded-sm  p-6 sm:p-8">
               <p className="text-heading text-lg sm:text-xl font-medium text-center">
                 जो बात ASI ने कही है वह बात सदियों पहले श्री श्राद्धविधि ग्रंथ
                 में अंकित है:
@@ -186,7 +186,7 @@ const Page = () => {
           </div>
 
           {/* Root Cause Analysis */}
-          <div className=" rounded-sm shadow-md p-6 sm:p-8 lg:p-10">
+          <div className=" rounded-sm  p-6 sm:p-8 lg:p-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className=" rounded-sm p-4 flex items-center justify-center h-64 sm:h-80">
                 <img
@@ -243,7 +243,7 @@ const Page = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            <div className="bg-lighten-bg rounded-sm shadow-md p-6 sm:p-8">
+            <div className="bg-lighten-bg rounded-sm  p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-heading">
                 प्रत्येक पूजक का एक संकल्प:
               </h3>
@@ -256,7 +256,7 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-lighten-bg rounded-sm shadow-md p-6 sm:p-8">
+            <div className="bg-lighten-bg rounded-sm  p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-heading">
                 भविष्य का नुकसान रुकेगा:
               </h3>
@@ -285,7 +285,7 @@ const Page = () => {
             </h2>
           </div>
 
-          <div className="bg-background rounded-sm mb-8 shadow-md overflow-hidden hover:shadow-md transition-shadow">
+          <div className="bg-lighten-bg rounded-sm mb-8  overflow-hidden hover: transition-shadow">
             <div className="h-full bg-lighten-bg flex items-center justify-center">
               <img
                 src="/jinmurti/jinpratima-suraksha/img-1.6.png"
@@ -309,7 +309,7 @@ const Page = () => {
           {/* Major Tirth Work Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 lg:mb-12">
             {/* Card 1 */}
-            <div className="bg-background rounded-sm shadow-md overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-lighten-bg rounded-sm  overflow-hidden hover: transition-shadow">
               <div className="h-48 sm:h-56 bg-lighten-bg flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.7.png"
@@ -329,7 +329,7 @@ const Page = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-background rounded-sm shadow-md overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-lighten-bg rounded-sm  overflow-hidden hover: transition-shadow">
               <div className="h-48 sm:h-56 bg-lighten-bg flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.8.png"
@@ -349,7 +349,7 @@ const Page = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-background rounded-sm shadow-md overflow-hidden hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
+            <div className="bg-lighten-bg rounded-sm  overflow-hidden hover: transition-shadow sm:col-span-2 lg:col-span-1">
               <div className="h-48 sm:h-56 bg-lighten-bg flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.9.png"
@@ -369,11 +369,11 @@ const Page = () => {
           </div>
 
           {/* Makshi Tirth Summary */}
-          <div className="bg-lighten-bg rounded-sm shadow-md p-6 sm:p-8 lg:p-10">
+          <div className="bg-lighten-bg rounded-sm  p-6 sm:p-8 lg:p-10">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-12 h-1 bg-light-bg rounded-sm"></div>
-              <div className="w-3 h-3 bg-light-bg rounded-full mx-3"></div>
-              <div className="w-12 h-1 bg-light-bg rounded-sm"></div>
+              <div className="w-12 h-1 bg-secondary-color rounded-sm"></div>
+              <div className="w-3 h-3 bg-secondary-color rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-secondary-color rounded-sm"></div>
             </div>
             <p className="text-center font-semibold text-heading leading-relaxed text-lg sm:text-xl">
               श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
@@ -390,7 +390,7 @@ const Page = () => {
         <div className="container mx-auto  max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <div className="inline-block bg-light-bg text-heading px-8 py-4 rounded-sm shadow-md">
+            <div className="inline-block bg-light-bg text-heading px-8 py-4 rounded-sm ">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
                 सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
               </h1>
@@ -402,7 +402,7 @@ const Page = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Story Content */}
               <div className="space-y-6">
-                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     प्रतीक्षा का काल
                   </h2>
@@ -430,7 +430,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     साधना का फल
                   </h2>
@@ -445,7 +445,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     तैयारी और चुनौती
                   </h2>
@@ -463,7 +463,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-light-bg/10 p-6 rounded-lg border-l-4 border-light-bg">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     समर्पण और सफलता
                   </h2>
@@ -502,7 +502,7 @@ const Page = () => {
 
               {/* Visual Content Section */}
               <div className="space-y-6">
-                <div className="bg-background p-6 rounded-lg shadow-md">
+                <div className="bg-background p-6 rounded-lg ">
                   <h3 className="text-lg font-semibold text-center mb-4 text-heading">
                     वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा
                     क्योंकि उन्हें पता था कि...
@@ -534,7 +534,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-background rounded-md shadow-md p-8">
+                <div className="bg-background rounded-md  p-8">
                   <div className="grid lg:grid-cols-1 gap-6">
                     <div className="lg:col-span-2">
                       <div className="bg-background h-56 flex items-center justify-center rounded-lg">

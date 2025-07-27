@@ -73,9 +73,9 @@ const RegisterForm = () => {
             </div>
             <Link
               href="/pages/form/ravanni-bhitarma"
-              className="text-lg font-heading py-2 w-full text-center bg-secondary-color text-white font-semibold"
+              className="text-lg font-sans py-2 w-full text-center bg-secondary-color text-white font-semibold"
             >
-              Register here
+              Register
             </Link>
           </div>
           
@@ -102,7 +102,7 @@ const RegisterForm = () => {
       </div>
     </div>
   </div>
-  <div className="text-lg font-heading py-2 w-full text-center bg-secondary-color text-white font-semibold opacity-50 cursor-not-allowed">
+  <div className="text-lg font-sans py-2 w-full text-center bg-secondary-color text-white font-semibold opacity-50 cursor-not-allowed">
     Out Of Stock
   </div>
   </div>
@@ -131,9 +131,9 @@ const RegisterForm = () => {
   </div>
   <Link
     href="/pages/form/mahabharat"
-    className="text-lg font-heading py-2 w-full text-center  bg-secondary-color text-white font-semibold"
+    className="text-lg font-sans py-2 w-full text-center  bg-secondary-color text-white font-semibold"
   >
-    Register here
+    Register
   </Link>
 </div>
         </div>
