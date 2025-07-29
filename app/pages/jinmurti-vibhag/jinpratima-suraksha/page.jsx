@@ -18,7 +18,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header> 
 
       {/* Section 1: Introduction */}
       <section className="py-8 sm:py-12 lg:py-16">
