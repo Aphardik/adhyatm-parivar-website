@@ -11,8 +11,11 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
                 जिनप्रतिमा निर्माण - पाषाण
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">
-                (अध्यात्म शिल्पशाला) &nbsp; कार्य आरंभ: वि.सं. २०६४
+              <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-content font-semibold">
+                अध्यात्म शिल्पशाला
+              </p>
+              <p className="text-sm text-center sm:text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">
+                  कार्य आरंभ: वि.सं. २०६४
               </p>
             </div>
           </div>
@@ -20,7 +23,7 @@ const Page = () => {
       </header>
 
       {/* Introduction Section */}
-      <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
+      <section className="py-8 sm:py-12 lg:py-16">
         <div className="border-l-4 border-secondary-color rounded-md p-4 bg-lighten-bg">
           <p className="text-xl leading-relaxed">
             गुजरात के हिम्मतनगर शहर में अध्यात्म परिवार द्वारा प्रारंभ अध्यात्म
@@ -31,7 +34,7 @@ const Page = () => {
       </section>
 
       {/* Stone Selection Criteria Section */}
-      <section className="my-8">
+      <section className="py-8 sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             पाषाण की जिनप्रतिमा का निर्माण...
@@ -93,12 +96,7 @@ const Page = () => {
 
       {/* Process Documentation Section */}
       <section className="my-12">
-        <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-            निर्माण प्रक्रिया
-          </h3>
-        </div>
-
+    
         {/* Process Step 1 - Image Left, Text Right */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
@@ -172,17 +170,17 @@ const Page = () => {
               और भी निखारा जाता है।
             </p>
           </div>
-          <div className="bg-lighten-bg rounded-lg p-6 shadow-sm order-1 md:order-2">
-            <div className="space-y-4">
+          <div className="bg-lighten-bg  rounded-lg p-6  order-1 md:order-2">
+            <div className="flex items-center justify-center">
               <img
                 src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.16.png"
                 alt="3D स्कैन और एडिटिंग"
-                className="w-full h-32 object-contain rounded-lg"
+                className="w-full h-64 object-contain rounded-lg"
               />
               <img
                 src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.17.png"
                 alt="डिजिटल प्रसंस्करण"
-                className="w-full h-32 object-contain rounded-lg"
+                className="w-full h-64 object-contain rounded-lg"
               />
             </div>
           </div>

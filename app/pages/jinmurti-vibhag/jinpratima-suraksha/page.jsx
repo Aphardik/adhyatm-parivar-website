@@ -12,7 +12,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
                 जिनप्रतिमा सुरक्षा
               </h1>
-              <p className="sm:text-base lg:text-lg text-heading font-medium">
+              <p className="sm:text-base lg:text-lg text-content font-medium">
                 कार्य आरंभ: वि.सं. २०६३
               </p>
             </div>
@@ -23,11 +23,7 @@ const Page = () => {
       {/* Section 1: Introduction */}
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="mx-auto  max-w-7xl">
-          <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              जिनप्रतिमा सुरक्षा - यह क्या है?
-            </h2>
-          </div>
+
 
           <div className="bg-background  p-6 sm:p-8 lg:p-10">
             <div className="space-y-6 text-center">
@@ -51,11 +47,11 @@ const Page = () => {
       </section>
 
       {/* Section 2: Problems - Modern Grid Layout */}
-      <section className="py-8 sm:py-12 lg:py-16 ">
+      <section className="py-8 sm:pb-12 lg:pb-16 ">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8 lg:mb-12">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              समस्याएं - यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?
+             यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?
             </h2>
           </div>
 
@@ -186,14 +182,23 @@ const Page = () => {
           </div>
 
           {/* Root Cause Analysis */}
-          <div className=" rounded-sm  p-6 sm:p-8 lg:p-10">
+          <div className="">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className=" rounded-sm p-4 flex items-center justify-center h-64 sm:h-80">
+              <div className="flex flex-row gap-2">
+              <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
                 <img
-                  src="/jinmurti/jinpratima-suraksha/img-1.5.png"
+                  src="/jinmurti/jinpratima-suraksha/img-1.5.1.png"
                   alt="Root Cause Analysis"
                   className="w-full h-full object-contain"
                 />
+              </div>
+                            <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
+                <img
+                  src="/jinmurti/jinpratima-suraksha/img-1.5.2.png"
+                  alt="Root Cause Analysis"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 text-heading">
@@ -235,14 +240,14 @@ const Page = () => {
 
       {/* Section 4: Solutions */}
       <section className="py-8 sm:py-12 lg:py-16 ">
-        <div className="mx-auto  max-w-6xl">
+        <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               ये तो हुई समस्या, परन्तु समाधान? यह रहा...
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-8">
             <div className="bg-lighten-bg rounded-sm  p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-heading">
                 प्रत्येक पूजक का एक संकल्प:

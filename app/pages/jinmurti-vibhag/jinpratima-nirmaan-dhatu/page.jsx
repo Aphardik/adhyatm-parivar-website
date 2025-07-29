@@ -3,38 +3,35 @@ import React from 'react'
 const Page = () => {
   return (
     <div className="mx-auto font-body bg-background">
-      {/* Header Section */}
       <header className="bg-light-bg ">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">जिनप्रतिमा निर्माण : धातु...</h1>
-              <p className="text-sm sm:text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">(कार्य आरंभ : वि.सं. २०६४)</p>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०६४</p>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Introduction Section */}
+
       <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
         <div className="border-l-4 border-secondary-color rounded-md p-4 bg-lighten-bg">
-          <p className="text-lg leading-relaxed text-heading">
+          <p className="text-xl leading-relaxed text-heading">
             अध्यात्म शिल्पशाला की यह दूसरी उपलब्धि है। धातु की प्रतिमाजी के निर्माण में आधुनिक तकनीक 
             और पारंपरिक कलाकारी का संयोजन किया गया है।
           </p>
         </div>
       </section>
 
-      {/* Manufacturing Process Section */}
       <section className="my-12">
 
-        {/* Process Step 2 - Text Left, Image Right */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="rounded-lg p-6  order-2 md:order-1">
-            <h3 className="font-bold text-xl text-heading mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
-            <p className="text-base leading-relaxed text-content mb-4">
+            <h3 className="font-bold text-xl sm:text-2xl text-heading mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
+            <p className="text-base sm:text-lg leading-relaxed text-content mb-4">
               धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर 
-              <span className="text-heading font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
+              <span className="text-secondary-color font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
               से धातु की प्रतिमाजी का निर्माण किया जाता है।
             </p>
 
@@ -49,16 +46,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Final Products Section */}
       <section className="my-12">
-
-         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-           उत्कृष्ट कलाकृतियां
-          </h3>
-        </div>
-
-        {/* Final Products - Images Left, Text Right */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lighten-bg rounded-lg p-6">
             <div className="grid grid-cols-3 gap-4 mb-4">
@@ -80,8 +68,8 @@ const Page = () => {
             </div>
           </div>
           <div className=" rounded-lg p-6">
-            <h3 className="font-bold text-xl text-heading mb-4 font-heading">विशिष्ट डिटेलिंग</h3>
-            <p className="text-base leading-relaxed text-content">
+            <h3 className="font-bold text-xl sm:text-2xl text-heading mb-4 font-heading">विशिष्ट डिटेलिंग</h3>
+            <p className="text-base sm:text-lg leading-relaxed text-content">
               ऐसे अद्भुत डिटेलिंग वाले प्रभुजी, सिद्धचक्रजी तथा परिकर उपलब्ध करवाने के लिए अध्यात्म परिवार सज्ज है! 
               प्रत्येक कलाकृति में सूक्ष्म से सूक्ष्म विवरण को सावधानीपूर्वक तैयार किया जाता है।
             </p>
@@ -89,40 +77,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Additional Information Section */}
-      <section className="my-12">
-        <div className="bg-background rounded-lg p-8">
-
-           <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-           अध्यात्म शिल्पशाला की विशेषताएं
-          </h3>
-        </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="bg-secondary-color text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="font-bold">1</span>
-              </div>
-              <h4 className="font-semibold text-xl text-heading mb-2">पारंपरिक कला</h4>
-              <p className="text-base text-content">शास्त्रोक्त माप और पारंपरिक तकनीकों का उपयोग</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-secondary-color text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="font-bold">2</span>
-              </div>
-              <h4 className="font-semibold text-xl text-heading mb-2">आधुनिक तकनीक</h4>
-              <p className="text-base text-content">वैक्यूम कास्टिंग और उन्नत निर्माण प्रक्रिया</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-secondary-color text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <span className="font-bold">3</span>
-              </div>
-              <h4 className="font-semibold text-xl text-heading mb-2">सूक्ष्म विवरण</h4>
-              <p className="text-base text-content">प्रत्येक अंग-उपांग में अत्यधिक बारीकी</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </div>
   )
 }
