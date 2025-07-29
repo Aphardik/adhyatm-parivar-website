@@ -28,29 +28,6 @@ const Page = () => {
       {/* Manufacturing Process Section */}
       <section className="my-12">
 
-         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-           धातु प्रतिमा निर्माण प्रक्रिया
-          </h3>
-        </div>
-
-        {/* Process Step 1 - Image Left, Text Right */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="bg-lighten-bg rounded-lg p-6">
-            <img
-              src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.181920.png"
-              alt="Process 3"
-              className="w-full h-64 object-cover filter grayscale rounded-lg"
-            />
-          </div>
-          <div className="rounded-lg p-6 ">
-            <h3 className="font-bold text-xl text-gray-900 mb-4 font-heading">प्रारंभिक डिज़ाइन और नाप</h3>
-            <p className="text-base leading-relaxed text-gray-700">
-              यह नयनरम्य प्रतिमाजीओं का निर्माण ऐसी चीवट से किया जाता है कि लेफ्ट-राईट सभी छोटे से छोटे अंग-ऊपांगो का नाप प्रभु के समचतुरस्र संस्थान की झांकि दिलाए ऐसे समान नाप के बनते है।
-            </p>
-          </div>
-        </div>
-
         {/* Process Step 2 - Text Left, Image Right */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="rounded-lg p-6  order-2 md:order-1">
@@ -60,15 +37,13 @@ const Page = () => {
               <span className="text-heading font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
               से धातु की प्रतिमाजी का निर्माण किया जाता है।
             </p>
-            <p className="text-center font-semibold text-heading">
-              कास्टिंग इस प्रकार होती है
-            </p>
+
           </div>
           <div className="bg-lighten-bg rounded-lg p-6 order-1 md:order-2">
             <img
               src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.21.png"
               alt="Casting Process"
-              className="w-full h-64 object-cover filter grayscale rounded-lg"
+              className="w-full h-64 object-contain filter grayscale rounded-lg"
             />
           </div>
         </div>
@@ -90,17 +65,17 @@ const Page = () => {
               <img 
                 src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.22.png" 
                 alt="Detailed Idol" 
-                className="w-full h-32 object-cover filter grayscale rounded-lg" 
+                className="w-full h-32 object-contain filter grayscale rounded-lg" 
               />
               <img 
                 src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.23.png" 
                 alt="Symbol" 
-                className="w-full h-32 object-cover filter grayscale rounded-lg" 
+                className="w-full h-32 object-contain filter grayscale rounded-lg" 
               />
               <img 
                 src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.24.png" 
                 alt="Design" 
-                className="w-full h-32 object-cover filter grayscale rounded-lg" 
+                className="w-full h-32 object-contain filter grayscale rounded-lg" 
               />
             </div>
           </div>

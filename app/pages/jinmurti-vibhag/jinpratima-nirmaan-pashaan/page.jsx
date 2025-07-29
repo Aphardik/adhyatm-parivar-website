@@ -187,6 +187,21 @@ const Page = () => {
             </div>
           </div>
         </div>
+                <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
+          <div className="bg-lighten-bg rounded-lg p-6">
+            <img
+              src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.181920.png"
+              alt="Process 3"
+              className="w-full h-64 object-contain filter grayscale rounded-lg"
+            />
+          </div>
+          <div className="rounded-lg p-6">
+            <h3 className="font-bold text-xl text-gray-900 mb-4 font-heading">प्रारंभिक डिज़ाइन और नाप</h3>
+            <p className="text-base leading-relaxed text-gray-700">
+              यह नयनरम्य प्रतिमाजीओं का निर्माण ऐसी चीवट से किया जाता है कि लेफ्ट-राईट सभी छोटे से छोटे अंग-ऊपांगो का नाप प्रभु के समचतुरस्र संस्थान की झांकि दिलाए ऐसे समान नाप के बनते है।
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

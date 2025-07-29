@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function TestimonialSlider() {
-
-    const testimonials = [
+      const testimonials = [
         {
           quote: "प्रतिमाजी की सुरक्षा के लिए टीका आदि अत्यंत ही जोखमी है, तथा ओप आदि के कार्यों में चालू कारीगर बिल्कुल विश्वसनीय नहीं हैं। अतः इस संबंध में अध्यात्म परिवार संस्था के सहयोग से काम करवाना हितावह है। ",
           author: "बाबु अमीचंद पन्नालाल",
@@ -46,67 +45,106 @@ export default function TestimonialSlider() {
         }
       ];
 
+
   const [currentGroup, setCurrentGroup] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   const [windowWidth, setWindowWidth] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const sliderRef = useRef(null);
   const autoplayInterval = 5000;
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setCurrentGroup(0); 
-    };
-    
-    handleResize(); 
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const getGroupSize = () => {
-    if (windowWidth <= 640) return 1; 
-    if (windowWidth <= 768) return 2; 
-    if (windowWidth <= 1024) return 3; 
-    return 4; 
+    if (windowWidth <= 640) return 1;
+    if (windowWidth <= 768) return 2;
+    if (windowWidth <= 1024) return 3;
+    return 4;
   };
 
   const groupSize = getGroupSize();
-  const testimonialGroups = [];
+  const originalGroups = [];
   for (let i = 0; i < testimonials.length; i += groupSize) {
-    testimonialGroups.push(testimonials.slice(i, i + groupSize));
+    originalGroups.push(testimonials.slice(i, i + groupSize));
   }
 
+  const totalGroups = originalGroups.length;
+  
+  // Create infinite scroll groups by duplicating first/last groups
+  const testimonialGroups = [
+    ...originalGroups.slice(totalGroups - 1),
+    ...originalGroups,
+    ...originalGroups.slice(0, 1)
+  ];
+
   useEffect(() => {
-    if (!autoplay || testimonialGroups.length === 0) return;
+    if (!autoplay || totalGroups === 0) return;
     
     const interval = setInterval(() => {
-      setCurrentGroup((prev) => (prev + 1) % testimonialGroups.length);
+      setCurrentGroup(prev => {
+        const newIndex = prev + 1;
+        // Reset position without animation when reaching cloned end
+        if (newIndex >= totalGroups + 1) {
+          setTimeout(() => {
+            setTransitionEnabled(false);
+            setCurrentGroup(1);
+            setTimeout(() => setTransitionEnabled(true), 50);
+          }, 500);
+          return newIndex;
+        }
+        return newIndex;
+      });
     }, autoplayInterval);
     
     return () => clearInterval(interval);
-  }, [autoplay, testimonialGroups.length]);
+  }, [autoplay, totalGroups]);
+
+  // Handle reset position after looping
+  useEffect(() => {
+    if (currentGroup === 0) {
+      setTimeout(() => {
+        setTransitionEnabled(false);
+        setCurrentGroup(totalGroups);
+        setTimeout(() => setTransitionEnabled(true), 50);
+      }, 500);
+    } 
+    else if (currentGroup === totalGroups + 1) {
+      setTimeout(() => {
+        setTransitionEnabled(false);
+        setCurrentGroup(1);
+        setTimeout(() => setTransitionEnabled(true), 50);
+      }, 500);
+    }
+  }, [currentGroup, totalGroups]);
 
   const handleMouseEnter = () => setAutoplay(false);
   const handleMouseLeave = () => setAutoplay(true);
 
   const goToGroup = (index) => {
     setCurrentGroup(index);
-    setAutoplay(false); 
+    setAutoplay(false);
     setTimeout(() => setAutoplay(true), 5000);
   };
 
   const nextGroup = () => {
-    setCurrentGroup((prevGroup) => (prevGroup + 1) % testimonialGroups.length);
+    setCurrentGroup(prev => (prev + 1) % (totalGroups + 2));
     setAutoplay(false);
     setTimeout(() => setAutoplay(true), 5000);
   };
 
   const prevGroup = () => {
-    setCurrentGroup((prevGroup) => 
-      prevGroup === 0 ? testimonialGroups.length - 1 : prevGroup - 1
-    );
+    setCurrentGroup(prev => (prev - 1 + totalGroups + 2) % (totalGroups + 2));
     setAutoplay(false);
     setTimeout(() => setAutoplay(true), 5000);
   };
+
+  // Calculate active dot index accounting for cloned slides
+  const activeDotIndex = (currentGroup - 1 + totalGroups) % totalGroups;
 
   return (
     <div className='max-w-7xl bg-background pt-20'>
@@ -122,7 +160,7 @@ export default function TestimonialSlider() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-20">
+             <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-20">
               <button 
                 onClick={prevGroup}
                 className="bg-secondary-color/80 hover:bg-secondary-color text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
@@ -146,17 +184,20 @@ export default function TestimonialSlider() {
               </button>
             </div>
 
-            <div className="overflow-hidden px-2">
+            <div className="overflow-hidden px-2" ref={sliderRef}>
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentGroup * 100}%)` }}
+                style={{ 
+                  transform: `translateX(-${currentGroup * 100}%)`,
+                  transition: transitionEnabled ? 'transform 500ms ease-in-out' : 'none'
+                }}
               >
                 {testimonialGroups.map((group, index) => (
                   <div 
                     key={index}
                     className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                   >
-                    {group.map((testimonial, idx) => (
+                                        {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
                         className="bg-light-bg/30 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
@@ -189,12 +230,12 @@ export default function TestimonialSlider() {
             </div>
 
             <div className="flex justify-center mt-8 space-x-2">
-              {testimonialGroups.map((_, index) => (
+              {originalGroups.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => goToGroup(index)}
+                  onClick={() => goToGroup(index + 1)}
                   className={`w-2 h-2 rounded-full focus:outline-none transition-all duration-300 ${
-                    currentGroup === index 
+                    activeDotIndex === index 
                       ? 'bg-secondary-color w-6' 
                       : 'bg-secondary-color/50 hover:bg-secondary-color/70'
                   }`}

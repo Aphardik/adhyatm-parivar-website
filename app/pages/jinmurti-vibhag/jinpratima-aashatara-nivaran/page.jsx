@@ -1,73 +1,67 @@
-import React from 'react'
+import React from "react";
 
 const Page = () => {
-  
   return (
-    <div className="bg-gray-50 text-gray-800 font-body">
-      {/* <!-- Header --> */}
-      <header className="bg-gray-100 border border-gray-200">
+    <div className="bg-background text-heading font-body">
+      {/* Header */}
+      <header className="bg-light-bg">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-6 lg:gap-8">
-            <div className="bg-gray-300 text-gray-800 text-2xl sm:text-4xl font-bold font-heading px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-6 min-w-fit">
-              1.1
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-gray-900 mb-1 sm:mb-2"> जिनप्रतिमा आशातरा निवारण</h1>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">  (बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था) कार्य प्रारंभ : वि.सं. २०७६</p>
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
+                जिनप्रतिमा आशातरा निवारण
+              </h1>
+              <p className="text-sm sm:text-base lg:text-lg text-content font-medium">
+              (बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था) कार्य प्रारंभ : वि.सं. २०७६
+              </p>
             </div>
           </div>
         </div>
       </header>
 
-      {/* <!-- Content Section --> */}
-        <div className="py-4 sm:py-6 lg:py-8 lg:px-0">
-      <div className="flex flex-col md:flex-row gap-4 sm:gap-8">
-        {/* <!-- Left Side --> */}
-        <div className="md:w-3/5 bg-gray-100 p-8">
-          <div>
-            <img
-              alt="Decorative arch with a blank space in the center where a statue would be placed"
-              className="w-full"
-              height="800"
-              src="/jinmurti/jinpratima-aashatana-nivaran/img-1.26.png"
-              width="600"
-            />
+      {/* What is This Section */}
+      <section className="py-8 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 lg:mb-12">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+              जिनप्रतिमा आशातरा निवारण - यह क्या है?
+            </h3>
           </div>
-          <p className="mt-4 text-center text-sm">
-            यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान !
-            <span className="font-bold"> अतिप्राचीन धर्मनाथ दादा </span>
-            यह प्रतिमाजी हिम्मतनगर, गुजरात के समीप के खेत से प्राप्त हुई थी।
-          </p>
-        </div>
 
-        {/* <!-- Right Side --> */}
-        <div className="md:w-2/5 p-8 bg-gray-100 md:mt-0">
-          <p className="mt-8 md:px-10">
-            श्री षोडशक ग्रंथ षो.८गा.१ में पूज्य हरिभद्रसूरि महाराजा का वचन है कि :
-            <span className="font-bold">
-              ‘प्रतिमा बनाने के बाद मात्र दस दिनों में उसका अंजन विधान होना चाहिए।’</span>
-            सद्गुरु के मुख से ऐसा सुनने के बाद आराधक आत्मा को अत्यंत चिंता होती है कि पूर्व में नासमझी में घर में 'गिफ्ट' के रूप में स्वीकार की हुई पाषाण, धातु, फाइबर की प्रतिमाजी का क्या करें?
-          </p>
-
-          <p className="mt-4 md:px-10">
-            इसके समाधान के लिए उनकी आशातना न हो उस प्रकार उनकी व्यवस्था के लिए अध्यात्म परिवार सज्ज है।
-          </p>
-
-          {/* <!-- Image --> */}
-          <div className="mt-4">
-            <img
-              alt="Various small statues and a decorative item placed on a red cloth"
-              className="w-full filter grayscale"
-              height="200"
-              src="/jinmurti/jinpratima-aashatana-nivaran/img-1.27.png"
-              width="300"
-            />
+          <div className="p-4 mx-auto max-w-4xl sm:p-6">
+            <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
+             श्री षोडशक ग्रंथ षो.८गा.१ में पूज्य हरिभद्रसूरि महाराजा का वचन है कि :‘प्रतिमा बनाने के बाद मात्र दस दिनों में उसका अंजन विधान होना चाहिए।’सद्गुरु के मुख से ऐसा सुनने के बाद आराधक आत्मा को अत्यंत चिंता होती है कि पूर्व में नासमझी में घर में 'गिफ्ट' के रूप में स्वीकार की हुई पाषाण, धातु, फाइबर की प्रतिमाजी का क्या करें?
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-    </div>
-  )
-}
+      </section>
 
-export default Page
+      {/* How It Works Section */}
+      <section className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+                    <div className="text-center mb-8 lg:mb-12">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-light-bg font-heading text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+             समाधान 
+            </h3>
+          </div>
+
+<div className="py-8 flex flex-col sm:flex-row gap-6 ">
+   <div className=" bg-light-bg flex items-center justify-center border-l-4  border-secondary-color p-4 mx-auto max-w-4xl sm:p-6  rounded-2xl ">
+                  <div className="flex items-center justify-center space-x-4">
+                    <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
+                       इसके समाधान के लिए उनकी आशातना न हो उस प्रकार उनकी व्यवस्था के लिए अध्यात्म परिवार सज्ज है।
+                    </p>
+                  </div>
+                </div>
+        <div>
+          <img src="/jinmurti/jinpratima-aashatana-nivaran/img-1.27.png" alt="adhyatm parivar" />
+        </div>
+        </div>
+      </section>
+    
+    </div>
+  );
+};
+
+export default Page;

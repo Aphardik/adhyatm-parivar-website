@@ -64,7 +64,7 @@ const VibhagDescription = () => {
             {vibhags.map((vibhag, index) => (
               <div
                 key={index}
-                className="bg-background border p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-background  p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0">
