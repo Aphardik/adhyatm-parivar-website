@@ -109,13 +109,14 @@ body {
 }
 
 .bg-gradient{
- background: radial-gradient(circle,rgba(255, 212, 232, 1) 50%, rgba(148, 187, 233, 1) 100%);
+background: #ffd1e5;
+background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 25%, rgba(134, 174, 191, 1) 50%, rgba(127, 199, 191, 1) 75%, rgba(121, 121, 168, 1) 100%);
 
 }
-.section-desc-bg{
+/* .section-desc-bg{
   background: linear-gradient(nulldeg,rgba(255, 212, 232, 1) 50%, rgba(148, 187, 233, 1) 100%);
 
-}
+} */
 
 
 

@@ -23,8 +23,6 @@ const Page = () => {
       {/* Section 1: Introduction */}
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="mx-auto  max-w-7xl">
-
-
           <div className="bg-background  p-6 sm:p-8 lg:p-10">
             <div className="space-y-6 text-center">
               <p className="text-heading text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">

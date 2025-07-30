@@ -1,63 +1,63 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
-     <div className="mx-auto py-6 font-body">
-      {/* <!-- Title Block --> */}
-      <div className="flex mb-4">
-        <div className="bg-gray-800 inline text-white text-4xl font-bold p-4">
-          <span>2.4</span>
+    <div className="mx-auto font-body bg-background">
+      <header className="bg-light-bg ">
+        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading"> जिनालय तथा गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई</h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium mb-1 sm:mb-2">कार्य प्रारंभ : वि.सं. २०७७</p>
+            </div>
+          </div>
         </div>
-        <div className="ml-4">
-          <h1 className="text-gray-800 font-heading text-xl sm:text-2xl font-bold">
-            जिनालय तथा गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई
-          </h1>
-          <p className="font-bold text-gray-500">
-            (कार्य प्रारंभ : वि.सं. २०७७)
+      </header>
+
+
+      <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
+        <div className="border-l-4 border-secondary-color rounded-md p-8 bg-lighten-bg">
+          <p className="text-xl leading-relaxed text-heading">
+           अध्यात्म शिल्पशाला में हो रही जिनालय के पत्थरों की घड़ाई की बात आपने पढ़ी और निहारी। इस कार्य के दरमियान ही वहां गृहजिनालय के योग्य पत्थरों को अलग से तराशा जाता है। जिनमें से गृहजिनालय बनाने की भावना रखने वाले सुश्रावकों की भावना अनुसार हृदय आह्लादक कोरणी वाली सुंदर देरियां तैयार करके उपलब्ध करवाई जाती हैं।
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* <!-- Description Paragraph --> */}
-      <p className="mb-4">
-        अध्यात्म शिल्पशाला में हो रही जिनालय के पत्थरों की घड़ाई की बात आपने पढ़ी और निहारी।
-        इस कार्य के दरमियान ही वहां गृहजिनालय के योग्य पत्थरों को अलग से तराशा जाता है।
-        जिनमें से गृहजिनालय बनाने की भावना रखने वाले सुश्रावकों की भावना अनुसार हृदय आह्लादक
-        कोरणी वाली सुंदर देरियां तैयार करके उपलब्ध करवाई जाती हैं।
-      </p>
+                <div className="text-center my-8 lg:mt-12">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            अध्यात्म परिवार द्वारा निर्माण की हुई कुछ गृहजिनालय की मोहक देरियां।
+            </h2>
+          </div>
 
-      {/* <!-- Images Section --> */}
-      <div className="flex justify-between px-20 border-blue-50 mb-4">
-        <img
-          alt="A beautifully carved marble temple with intricate designs"
-          className="w-1/3 p-2"
-          height="300"
-          src="/jinmandir/patthar-ghadayi/img-2.27.png"
-          width="200"
-        />
-        <img
-          alt="A beautifully carved marble temple with intricate designs"
-          className="w-1/3 p-2"
-          height="300"
-          src="/jinmandir/patthar-ghadayi/img-2.28.png"
-          width="200"
-        />
-        <img
-          alt="A beautifully carved marble temple with intricate designs"
-          className="w-1/3 p-2"
-          height="300"
-          src="/jinmandir/patthar-ghadayi/img-2.29.png"
-          width="200"
-        />
-      </div>
+      <section className="my-12">
+        <div className="grid md:grid-cols-1 gap-8 mb-12 items-center">
+          <div className="bg-lighten-bg rounded-lg p-6">
+            <div className="grid sm:grid-cols-3 gap-4">
+              <img 
+                src="/jinmandir/patthar-ghadayi/img-2.27.png" 
+                alt="Detailed Idol" 
+                className="w-full object-contain " 
+              />
+              <img 
+                src="/jinmandir/patthar-ghadayi/img-2.28.png" 
+                alt="Symbol" 
+                className="w-full object-contain " 
+              />
+              <img 
+                src="/jinmandir/patthar-ghadayi/img-2.29.png" 
+                alt="Design" 
+                className="w-full object-contain " 
+              />
+            </div>
 
-      {/* <!-- Caption --> */}
-      <p className="text-center text-gray-700 font-bold">
-        अध्यात्म परिवार द्वारा निर्माण की हुई कुछ गृहजिनालय की मोहक देरियां।
-      </p>
-     
+          </div>
+
+        </div>
+      </section>
+
+    
     </div>
   )
 }
 
-export default page
+export default Page

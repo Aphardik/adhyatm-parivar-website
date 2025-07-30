@@ -330,14 +330,14 @@ export default function TempleConstructionPage() {
 
         {/* Current Project */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
+          <div className="bg-lighten-bg rounded-lg p-6">
             <img
               src="/jinmandir/jinalaya-navnirmaan/img-2.24.png"
               alt="कच्छ-रापर-गढ़वाली जिनालय कार्विंग"
-              className="w-full h-64 object-cover rounded-lg"
+              className="w-full h-64 object-contain rounded-lg"
             />
           </div>
-          <div className="bg-light-bg/20 rounded-lg p-6">
+          <div className="bg-lighten rounded-lg p-6">
             <h3 className="font-bold text-xl text-heading mb-4 font-heading">
               कच्छ-रापर- गढ़वाली के दर्शनीय जिनालय
             </h3>
@@ -358,40 +358,46 @@ export default function TempleConstructionPage() {
       {/* Final Temple Images */}
       <section className="mb-12">
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
-            <img
-              alt="सुंदर नक्काशीदार मंदिर संरचना"
-              className="w-full h-80 object-cover rounded-lg"
-              src="/jinmandir/jinalaya-navnirmaan/img-2.25.png"
-            />
+          <div className="flex flex-col gap-4">
+            <div className="bg-lighten-bg rounded-lg p-6 shadow-sm flex-grow">
+              <img
+                alt="मंदिर कार्विंग पर काम कर रहे कारीगर"
+                className="w-full object-contain rounded-lg"
+                src="/jinmandir/jinalaya-navnirmaan/img-2.25.png"
+              />
+            </div>
+            <div className="bg-secondary-color text-white rounded-lg p-4">
+              <p className="text-base leading-relaxed">
+                श्री शांति कनक जिनालय, नानपुरा सूरत के जिनालय की कोरणी कई विशेषज्ञों के लिए आकर्षण बनी है!
+              </p>
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <div className="bg-lighten-bg rounded-lg p-6 shadow-sm flex-grow">
               <img
                 alt="मंदिर कार्विंग पर काम कर रहे कारीगर"
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full object-contain rounded-lg"
                 src="/jinmandir/jinalaya-navnirmaan/img-2.26.png"
               />
             </div>
-            <div className="bg-blue-900 text-gray-200 rounded-lg p-4">
-              <p className="text-sm leading-relaxed">
+            <div className="bg-secondary-color text-white rounded-lg p-4">
+              <p className="text-base leading-relaxed">
                 श्री शान्तिवर्धक जिनालय-पाल, अभी तो यह निर्माणाधीन है तो भी ऐसा
-                मन मोह लेता है तो जब पूर्ण रूप से बन जाएगा तब कैसा होगा!!
+                मन मोह लेता है तो जब पूर्ण रूप से बन जाएगा तब कैसा होगा!
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="text-center py-8">
+      {/* <section className="text-center py-8">
         <div className="bg-light-bg rounded-lg p-6 inline-block">
           <p className="text-xl font-bold text-heading">
             यह तो चित्र हैं। साक्षात निहारने के लिए पधारिए 'अध्यात्म शिल्पशाला'
             हिम्मतनगर!
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

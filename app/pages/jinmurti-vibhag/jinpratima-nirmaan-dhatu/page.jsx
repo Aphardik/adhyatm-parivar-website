@@ -40,7 +40,7 @@ const Page = () => {
             <img
               src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.21.png"
               alt="Casting Process"
-              className="w-full h-64 object-contain filter grayscale rounded-lg"
+              className="w-full h-64 object-contain rounded-lg"
             />
           </div>
         </div>

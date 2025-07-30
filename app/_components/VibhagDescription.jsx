@@ -25,7 +25,7 @@ const VibhagDescription = () => {
   ];
 
   return (
-    <div className="font-body bg-background sm:px-4">
+    <div className="font-body  sm:px-4">
       <div className="max-w-5xl pt-20 mx-auto">
         {/* Desktop and Tablet View */}
         <div className="hidden md:block">
@@ -64,7 +64,7 @@ const VibhagDescription = () => {
             {vibhags.map((vibhag, index) => (
               <div
                 key={index}
-                className="bg-background  p-6 hover:shadow-lg transition-shadow duration-300"
+                className="  p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0">

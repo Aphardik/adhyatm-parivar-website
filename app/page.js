@@ -7,8 +7,8 @@ import VibhagDescription from "./_components/VibhagDescription";
 
 const LandingPage = () => {
   return (
-    <div>
-      <div className="font-heading bg-gradient min-h-[70dvh]  flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
+    <div style={{background:"#ffd1e5",background:"linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 25%, rgba(134, 174, 191, 1) 50%, rgba(127, 199, 191, 1) 75%, rgba(121, 121, 168, 1) 100%)"}}>
+      <div className="font-heading w-full  min-h-[70dvh]  flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
         <div className="mx-auto text-center">
           {/* Main heading */}
           <h1 className="text-5xl md:text-8xl leading-relaxed font-bold text-heading mb-8">
