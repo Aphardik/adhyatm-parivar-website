@@ -8,8 +8,8 @@ import VibhagDescription from "./_components/VibhagDescription";
 const LandingPage = () => {
   return (
     <div>
-      <div className="font-heading bg-gradient min-h-[70dvh] bg-background flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="font-heading bg-gradient min-h-[70dvh]  flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-0">
+        <div className="mx-auto text-center">
           {/* Main heading */}
           <h1 className="text-5xl md:text-8xl leading-relaxed font-bold text-heading mb-8">
             <span className="block text-heading">अध्यात्म परिवार</span>
