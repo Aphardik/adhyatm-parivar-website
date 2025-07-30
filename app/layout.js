@@ -31,7 +31,8 @@ export default function RootLayout({ children }) {
         className="font-body bg-background"
       >
         <Header />
-        <div className='max-w-7xl bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'>
+        {/* <div className='max-w-7xl bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
+        <div className='max-w-7xl bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto '>
           {children}
         </div>
         <Footer />

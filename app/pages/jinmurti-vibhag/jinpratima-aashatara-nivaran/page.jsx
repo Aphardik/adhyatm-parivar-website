@@ -11,9 +11,11 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
                 जिनप्रतिमा आशातरा निवारण
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-content font-medium">
-                (बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था) कार्य प्रारंभ :
-                वि.सं. २०७६
+              <p className="text-sm text-center sm:text-base lg:text-lg text-content font-semibold">
+                बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था
+              </p>
+              <p className="text-sm text-center sm:text-base lg:text-lg text-content font-medium">
+                 कार्य प्रारंभ : वि.सं. २०७६
               </p>
             </div>
           </div>
@@ -23,11 +25,7 @@ const Page = () => {
       {/* What is This Section */}
       <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 lg:mb-12">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              जिनप्रतिमा आशातरा निवारण - यह क्या है?
-            </h3>
-          </div>
+
 
           <div className="p-4 mx-auto max-w-4xl sm:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">

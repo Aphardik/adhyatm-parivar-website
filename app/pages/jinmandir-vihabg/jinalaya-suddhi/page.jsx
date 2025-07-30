@@ -1,65 +1,98 @@
-import React from 'react'
+import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
-     <div class="container mx-auto py-8 font-body">
-      <div class="flex flex-col md:flex-row gap-8">
-        {/* <!-- First Column --> */}
-        <div class="w-full md:basis-2/5">
-          <div class="py-4">
-            <div class="text-4xl font-bold">
-              <span class="bg-gray-800 text-white px-4 py-2">2.2</span>
+    <div className="mx-auto font-body bg-background">
+      {/* Header */}
+      <header className="bg-light-bg">
+        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+                जिनालय शुद्धि - उपाश्रय शुद्धि...
+              </h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium mb-1 sm:mb-2">
+                कार्य प्रारंभ : वि.सं. २०७७
+              </p>
             </div>
-            <h1 class="text-gray-800 text-2xl font-heading font-bold mt-8">
-              जिनालय शुद्धि - उपाश्रय शुद्धि...
-            </h1>
-            <p class="text-gray-600 mt-2">(कार्य प्रारंभ : वि.सं. २०७७)</p>
           </div>
-          <p class="mt-4">
-            ‘प्रभु का धाम तो देवविमान जैसा लगना चाहिए।’
-          </p>
-          <p class="mt-2">
-            इस भावना से यह कार्य करने की अध्यात्म परिवार की रीत अनोखी है। जिनालय का प्रत्येक स्तंभ, कोना, सामरण-शिखर और बारिक-बारिक कोरणी-इन सभी भागों की शुद्धि के साथ पूजा के विविध उपकरणों की भी शुद्धि की जाती है।
-          </p>
-          <p class="mt-2">
-            आराधना के धाम की तरह उपाश्रयों की भी आमूलचूल शुद्धि यह इसके साथ जुड़ा हुआ प्रकल्प है।
-          </p>
-          <p class="mt-2">
-            शुद्धियों के पूर्व और पश्चात की छवियों में कार्य की खूबी दिखाई देगी!
+        </div>
+      </header>
+
+      {/* Intro Section */}
+      <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
+        <div className="border-l-4 border-secondary-color rounded-xl p-4 sm:p-8 bg-lighten-bg max-w-4xl mx-auto">
+          <p className="text-base sm:text-xl leading-relaxed text-heading">
+            ‘प्रभु का धाम तो देवविमान जैसा लगना चाहिए।’ इस भावना से यह कार्य करने की अध्यात्म परिवार की रीत अनोखी है। जिनालय का प्रत्येक स्तंभ, कोना, सामरण-शिखर और बारिक-बारिक कोरणी-इन सभी भागों की शुद्धि के साथ पूजा के विविध उपकरणों की भी शुद्धि की जाती है। आराधना के धाम की तरह उपाश्रयों की भी आमूलचूल शुद्धि यह इसके साथ जुड़ा हुआ प्रकल्प है। शुद्धियों के पूर्व और पश्चात की छवियों में कार्य की खूबी दिखाई देगी!
           </p>
         </div>
+      </section>
 
-        {/* <!-- Second Column --> */}
-        <div class="w-full md:basis-1/5">
-          <img
-            alt="Main Image"
-            class="h-full w-full object-cover rounded"
-            src="/jinmandir/jinalaya-suddhi/img-2.10.png"
-          />
-        </div>
+    
 
-        {/* <!-- Third Column --> */}
-        <div class="w-full md:basis-2/5 flex flex-col justify-between">
-          <div class="bg-gray-100 p-4 rounded">
-            <h3 class="text-xl font-heading font-bold text-gray-800">
-              सौभाग्य का सीमाचिह्न : शत्रुंजय के शिखर पर, दादा के दरबार में....
+      <section className="my-12">
+        <div className="grid md:grid-cols-1 gap-8 mb-12 items-center">
+          
+          <div className="rounded-lg p-6 order-1 md:order-1">
+
+             <div className="text-center mb-8 lg:mb-12">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+               सौभाग्य का सीमाचिह्न : शत्रुंजय के शिखर पर
             </h3>
-            <p class="mt-2">
+          </div>
+            <p className="text-base text-center sm:text-lg leading-relaxed text-content mb-2">
               हर वर्ष दादा आदिनाथ के गर्भगृह-रंगमंडप की शुद्धि तथा आस-पास के जिनालयों-देरियों तथा नवटूंक के जिनालयों का शुद्धिकरण, रंगरोगान आदि का कार्य गतिमान है।
             </p>
-            <p class="mt-2">
-              नवटूक के जिनालयों के सभी शिखरों की शुद्धि के साथ निगोद न हो इस लिए जर्मन कंपनी के वोटर रिपेलन्ट द्वारा प्रिझर्वेशन-प्रोसेस प्रगति पर है।
+            <p className="text-base sm:text-lg text-center leading-relaxed text-content">
+              नवटूक के जिनालयों के सभी शिखरों की शुद्धि के साथ निगोद न हो, इस लिए जर्मन कंपनी के वोटर रिपेलन्ट द्वारा प्रिझर्वेशन-प्रोसेस प्रगति पर है।
             </p>
           </div>
-          <img
-            alt="Bottom Image"
-            class="rounded-lg mt-4 w-full object-cover"
-            src="/jinmandir/jinalaya-suddhi/img-2.11.png"
-          />
         </div>
-      </div>
-    </div>
-  )
-}
+        <div className="grid bg-lighten-bg rounded-lg p-8 md:grid-cols-2">
+          <div className=" order-2 md:order-2">
+            <img
+              src="/jinmandir/jinalaya-suddhi/img-2.11-1.png"
+              alt="Jinalay Preservation"
+              className="w-full sm:h-64 object-contain rounded-lg"
+            />
+          </div>
+          <div className=" order-2 md:order-2">
+            <img
+              src="/jinmandir/jinalaya-suddhi/img-2.11-2.png"
+              alt="Jinalay Preservation"
+              className="w-full sm:h-64 object-contain rounded-lg"
+            />
+          </div>
+          </div>
+      </section>
+       <section className="my-12">
+        <div className="bg-lighten-bg rounded-lg grid md:grid-cols-3 gap-8 mb-12 items-center">
 
-export default page
+          <div className=" order-1 md:order-2">
+            <img
+              src="/jinmandir/jinalaya-suddhi/img-2.10-1.png"
+              alt="Jinalay Cleaning"
+              className="w-full sm:h-64 object-contain rounded-lg"
+            />
+          </div>
+          <div className=" order-1 md:order-2">
+            <img
+              src="/jinmandir/jinalaya-suddhi/img-2.10-2.png"
+              alt="Jinalay Cleaning"
+              className="w-full sm:h-64 object-contain rounded-lg"
+            />
+          </div>
+          <div className=" p-6 order-1 md:order-2">
+            <img
+              src="/jinmandir/jinalaya-suddhi/img-2.10-3.png"
+              alt="Jinalay Cleaning"
+              className="w-full sm:h-64 object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Page;

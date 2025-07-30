@@ -11,8 +11,8 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
                 प्राचीन जिनप्रतिमा संग्रहण
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-content font-medium">
-                (कार्य आरंभ : वि.सं. २०६८)
+              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium">
+                कार्य आरंभ : वि.सं. २०६८
               </p>
             </div>
           </div>
@@ -20,13 +20,9 @@ const Page = () => {
       </header>
 
       {/* What is This Section */}
-      <section className="py-8 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 lg:mb-12">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              प्राचीन जिनप्रतिमा संग्रहण - यह क्या है?
-            </h3>
-          </div>
+
 
           <div className="p-4 sm:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
@@ -37,20 +33,9 @@ const Page = () => {
             </p>
           </div>
         </div>
-      </section>
+        <div className="max-w-4xl mx-auto px-4  py-8  sm:px-6 lg:px-8">
 
-      {/* How It Works Section */}
-      <section className="py-8 ">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-                    <div className="text-center mb-8 lg:mb-12">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-light-bg font-heading text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-             यह कैसे काम करता है?
-            </h3>
-          </div>
-
-          <div className="bg-background p-4 lg:p-6">
+ <div className="bg-lighten-bg border-secondary-color rounded-xl  border-l-4 p-4 lg:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
               साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
               जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म परिवार
@@ -59,6 +44,8 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+     
 
       {/* Success Story Section */}
       <section className="py-16 bg-background">

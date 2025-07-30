@@ -108,6 +108,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.bg-gradient{
+ background: radial-gradient(circle,rgba(255, 212, 232, 1) 50%, rgba(148, 187, 233, 1) 100%);
+
+}
+.section-desc-bg{
+  background: linear-gradient(nulldeg,rgba(255, 212, 232, 1) 50%, rgba(148, 187, 233, 1) 100%);
+
+}
+
 
 
 /* Manual dark mode toggle class */
@@ -135,7 +144,18 @@ body {
    --border-color: #d1d5db;
 } */
  
- [data-theme="light"] {
+ /* [data-theme="light"] {
+  --background: #EEF5DC;
+  --foreground: #171717;
+  --secondary-color: #E63463;
+  --text-color-heading: #36393e;
+  --text-color-light: #ffffff;
+  --text-color-content: #4A5565;
+  --light-bg: #C8EFCF;
+  --lighten-bg: #d6efda;
+   --border-color: #d1d5db;
+} */
+  [data-theme="light"] {
   --background: #EEF5DC;
   --foreground: #171717;
   --secondary-color: #E63463;
@@ -146,3 +166,4 @@ body {
   --lighten-bg: #d6efda;
    --border-color: #d1d5db;
 }
+
