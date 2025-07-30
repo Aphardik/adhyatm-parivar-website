@@ -75,6 +75,7 @@ const LogoDescription = () => {
       </section>
 
       <div style={{backgroundImage: backgroundSVG,backgroundSize:"contain"}} className="hidden md:block px-8 py-16 font-body mx-auto">
+        <div className="max-w-7xl mx-auto">
         <h1 className="text-white font-semibold text-3xl text-center font-heading mb-4">
           ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
         </h1>
@@ -87,7 +88,7 @@ const LogoDescription = () => {
           </p>
         </div>
 
-        <div className="flex">
+        <div className="flex jus">
           {/* Left column */}
           <div className="w-1/3 flex flex-col justify-between pr-4">
             <div className="text-end mb-4">
@@ -118,7 +119,7 @@ const LogoDescription = () => {
           </div>
 
           {/* Central image */}
-          <div className="w-1/3 flex items-center justify-center">
+          <div className="w-1/3 max-w-3xl flex items-center justify-center">
             <img src="/logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
 
           </div>
@@ -155,6 +156,7 @@ const LogoDescription = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

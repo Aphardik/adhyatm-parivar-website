@@ -147,7 +147,7 @@ export default function TestimonialSlider() {
   const activeDotIndex = (currentGroup - 1 + totalGroups) % totalGroups;
 
   return (
-    <div className='max-w-7xl bg-background pt-20'>
+    <div className='max-w-7xl mx-auto bg-background pt-20'>
       <img src="/6.jpg" alt="" />
       <div className="font-body p-8">
         <div className="mx-auto">
