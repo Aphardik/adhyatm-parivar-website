@@ -47,7 +47,7 @@ const RegisterForm = () => {
           {/* इवेंट्स के लिए */}
           <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow" />
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 font-body justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
           {/* Book Card */}
            <div className="flex flex-col items-center justify-center w-full group ">
             <div className="relative w-full "> {/* Fixed height for portrait aspect ratio */}

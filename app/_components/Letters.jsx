@@ -64,7 +64,7 @@ export default function TestimonialSlider() {
     if (windowWidth <= 640) return 1;
     if (windowWidth <= 768) return 2;
     if (windowWidth <= 1024) return 3;
-    return 4;
+    return 3;
   };
 
   const groupSize = getGroupSize();
@@ -195,28 +195,28 @@ export default function TestimonialSlider() {
                 {testimonialGroups.map((group, index) => (
                   <div 
                     key={index}
-                    className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                    className="w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"
                   >
                                         {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
-                        className="bg-[#ffedb3] shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-[#01044c] "
+                        className="bg-[linear-gradient(180deg,_rgba(255,209,229,1)_0%,_rgba(235,221,129,1)_50%,_rgba(134,174,191,1)_100%)] shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-[#01044c] "
                       >
                         <div className="p-6 flex flex-col h-full">
                           {/* Quote section */}
                           <div className="flex-grow overflow-y-auto mb-4">
                             <div className="text-[#01044c] text-5xl font-bold mb-2">"</div>
-                            <p className="text-content leading-relaxed text-sm line-height-loose">
+                            <p className="text-content leading-relaxed text-base line-height-loose">
                               {testimonial.quote}
                             </p>
                           </div>
                           
                           <div className="mt-auto border-t border-purple-100 pt-4">
-                            <p className="text-[#01044c] font-semibold text-right text-sm">
+                            <p className="text-[#01044c] font-semibold text-right text-base">
                               ...{testimonial.author}
                             </p>
                             {testimonial.organization && (
-                              <p className="text-[#01044c]/80 text-xs text-right mt-1">
+                              <p className="text-[#01044c]/80 text-sm text-right mt-1">
                                 {testimonial.organization}
                               </p>
                             )}
