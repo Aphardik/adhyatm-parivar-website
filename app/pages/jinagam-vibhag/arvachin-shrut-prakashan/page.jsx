@@ -1,93 +1,196 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
-     <div className="mx-auto bg-white font-body py-6">
-      <div className="flex flex-wrap justify-between mb-6">
-        <div className="flex items-start flex-row sm:flex-col mb-4 gap-2 sm:gap-0 md:w-1/4 p-2">
-          <div className="bg-[#731f46] text-gray-200 text-4xl font-bold pt-6 p-4 mb-4">3.2</div>
-          <div>
-            <div className="text-[#731f46] font-heading text-3xl font-bold mb-2">
-              अर्वाचीन <br className="hidden sm:block" />
-              श्रुत प्रकाशन- <br className="hidden sm:block" />
-              श्रुत प्रचार
+    <div className="mx-auto max-w-7xl font-body bg-background">
+      <header className="bg-light-bg">
+        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+           
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+                अर्वाचीन श्रुत प्रकाशन-श्रुत प्रचार
+              </h1>
+              <p className="text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">
+                कार्य प्रारंभ : वि.सं. २०६३
+              </p>
             </div>
-            <div className="text-[#731f46]">(कार्य प्रारंभ : वि.सं. २०६३)</div>
           </div>
         </div>
+      </header>
 
-
-        <div className="text-center w-full md:w-1/4 p-2">
-          <img
-            alt="Collection of books on a red velvet background"
-            className="w-full h-auto"
-            height="400"
-            src="/jinagam/arvachin-shrut-prakashan/img-3.3.png"
-            width="300"
-          />
+      <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
+        <div className="border-l-4 border-secondary-color rounded-md p-4 bg-lighten-bg">
+          <div className="grid grid-cols-1 gap-4">
+            <p className="text-lg leading-relaxed text-heading">
+              • जिन प्रवचनों से औसतन हर १० से १५ दिनों में एक दीक्षा का सर्जन हो रहा है।
+            </p>
+            <p className="text-lg leading-relaxed text-heading">
+              • जिन वचनों ने श्रमण-श्रमणी वर्ग को कलिकाल की जहरीली हवा से सुरक्षित रखा है।
+            </p>
+            <p className="text-lg leading-relaxed text-heading">
+              • जो नित्य उपयोगी साहित्य आराधकों का श्वास-प्राण बन गया है।
+            </p>
+            <p className="text-lg leading-relaxed text-heading">
+              • जो नूतन सर्जन भक्तिरस और वैराग्यरस से भींजा हुआ है, ऐसा श्रेणीबद्ध साहित्य अध्यात्म परिवार द्वारा प्रकाशित हो रहा है।
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="text-center w-full md:w-1/4 p-2">
-          <img
-            alt="Collection of study books on a red velvet background"
-            className="w-full h-auto"
-            height="400"
-            src="/jinagam/arvachin-shrut-prakashan/img-3.4.png"
-            width="300"
-          />
-        </div>
+      <section className="my-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="text-center">
+            <div className="bg-lighten-bg rounded-lg p-6 mb-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.3.png"
+                alt="Collection of books"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-bold text-lg text-heading font-heading">
+              प्रवचन की पुस्तकें
+            </h3>
+          </div>
 
-        <div className="text-center w-full md:w-1/4 p-2">
-          <img
-            alt="Collection of children's literature on a red velvet background"
-            className="w-full h-auto"
-            height="400"
-            src="/jinagam/arvachin-shrut-prakashan/img-3.5.png"
-            width="300"
-          />
-        </div>
-      </div>
+          <div className="text-center">
+            <div className="bg-lighten-bg rounded-lg p-6 mb-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.4.png"
+                alt="Collection of study books"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-bold text-lg text-heading font-heading">
+              अध्ययन पुस्तकें
+            </h3>
+          </div>
 
-      <div className="flex flex-wrap justify-between">
-        <div className="bg-[#731f46] text-base text-gray-200 p-2 rounded w-full md:w-1/2 mb-4 md:mb-0">
-          <ul className="list-disc p-8">
-            <li className="mb-2">
-              जिन प्रवचनों से औसतन हर १० से १५ दिनों में एक दीक्षा का सर्जन हो रहा है।
-            </li>
-            <li className="mb-2">
-              जिन वचनों ने श्रमण-श्रमणी वर्ग को कलिकाल की जहरीली हवा से सुरक्षित रखा है।
-            </li>
-            <li className="mb-2">
-              जो नित्य उपयोगी साहित्य आराधकों का श्वास-प्राण बन गया है।
-            </li>
-            <li>
-              जो नूतन सर्जन भक्तिरस और वैराग्यरस से भींजा हुआ है, ऐसा श्रेणीबद्ध साहित्य अध्यात्म परिवार द्वारा प्रकाशित हो रहा है।
-            </li>
-          </ul>
-        </div>
+          <div className="text-center">
+            <div className="bg-lighten-bg rounded-lg p-6 mb-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.5.png"
+                alt="Collection of children's literature"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-bold text-lg text-heading font-heading">
+              बालकथा साहित्य
+            </h3>
+          </div>
 
-        <div className="text-center w-full md:w-1/4 pl-4 p-2">
-          <img
-            alt="Collection of various literature on a red velvet background"
-            className="w-full h-auto"
-            height="400"
-            src="/jinagam/arvachin-shrut-prakashan/img-3.6.png"
-            width="300"
-          />
+          <div className="text-center">
+            <div className="bg-lighten-bg rounded-lg p-6 mb-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.6.png"
+                alt="Collection of various literature"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-bold text-lg text-heading font-heading">
+              विविध साहित्य
+            </h3>
+          </div>
+          <div className="text-center">
+            <div className="bg-lighten-bg rounded-lg p-6 mb-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.7.png"
+                alt="Collection of various literature"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-bold text-lg text-heading font-heading">
+              नित्योपयोगी साहित्य
+            </h3>
+          </div>
         </div>
+      </section>
 
-        <div className="text-center w-full md:w-1/4 p-3">
-          <img
-            alt="Collection of Nityopayogi literature on a red velvet background"
-            className="w-full h-auto"
-            height="400"
-            src="/jinagam/arvachin-shrut-prakashan/img-3.7.png"
-            width="300"
-          />
+      <section className="py-12">
+            <div className="text-center mb-8 lg:mb-12">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+               विविध श्रुतकार्यों की झलक...
+            </h3>
+          </div>
+
+        <div className="bg-lighten-bg rounded-lg p-8 text-heading">
+         
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="bg-lighten-bg rounded-lg p-6">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.8.png"
+                alt="Ancient manuscripts collection"
+                className="w-full h-64 object-contain rounded-lg"
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <p className="sm:text-lg leading-relaxed">
+               ऐसी मध्यकालीन कृतियों वाली हजारों हस्तप्रतों के लाखों पन्ने जर्जर हालत में हैं।
+              </p>
+              <p className="sm:text-lg leading-relaxed">
+               जिनको पिछले २५० वर्षों में शायद किसी ने कभी उठाया भी नहीं है।
+              </p>
+              <p className="sm:text-lg leading-relaxed">
+               पूज्य कृपानाथ के निश्रावर्ती संख्याबद्ध श्रमण-श्रमणीवर्या इस विराट साहित्य को गीतार्थसुलभ बनाने के लिए कमरतोड़ परिश्रम कर रहे हैं।
+              </p>
+              <p className="sm:text-lg leading-relaxed">
+              जिसके सुंदर फल श्री संघ के करकमल में अर्पण किए जा रहे है।
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="my-12">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <div className="bg-lighten-bg rounded-lg p-6">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.9.png"
+                alt="Adhyatm Parichay book"
+                className="w-full h-96 object-contain rounded-lg mb-4"
+              />
+              <h3 className="font-bold text-xl text-heading font-heading text-center">
+                अध्यात्म परिचय
+              </h3>
+            </div>
+          </div>
+          
+          <div className="rounded-lg p-6">
+            <p className="text-base sm:text-lg leading-relaxed text-content">
+             अध्यात्म परिवार द्वारा पिछले १६-१७ वर्षों से प्रारंभ की गई इस श्रुतयात्रा में प्राचीनश्रुत, अर्वाचीनश्रुत आदि कितनी धाराएं हैं? तो यात्रा ने कितने माइलस्टोन पार किये हैं? इस यात्रा का भावी मुक्काम क्या है? ऐसी अनेक बातें जानने के लिए प्रस्तुत है... कद में छोटी किंतु जानकारी में विशाल पुस्तिका :
+            </p>
+            <p className="text-lg font-semibold text-secondary-color mt-4">
+             श्रुतयात्रा अध्यात्म परिवार की
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="my-12">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="rounded-lg p-6 order-2 md:order-1">
+            <p className="text-base sm:text-lg leading-relaxed text-content mb-6">
+             यह है <span className='text-secondary-color font-semibold'>ज्ञानसेतु</span>  के हर महीने प्रकाशित होने वाले अंक। इसके द्वारा अध्यात्म परिवार समग्र जैनशासन के बाग में हर महीने खिलने वाले पुस्तकफूलों की जानकारी का सुंदर गुलदस्ता बनाकर ज्ञानभंडारों तथा श्रुतरसिक चतुर्विध संघ को पहुंचाता है।
+            </p>
+          </div>
+          
+          <div className="space-y-4 order-1 md:order-2">
+            <div className="bg-lighten-bg rounded-lg p-4">
+              <img
+                src="/jinagam/arvachin-shrut-prakashan/img-3.10.png"
+                alt="Publication book series"
+                className="w-full h-96 object-contain rounded-lg"
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
 
-export default page
+export default Page

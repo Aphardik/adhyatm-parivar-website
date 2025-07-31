@@ -151,7 +151,7 @@ export default function TestimonialSlider() {
       <img src="/6.jpg" alt="" />
       <div className="font-body p-8">
         <div className="mx-auto">
-          <h1 className="text-2xl sm:text-3xl font-heading font-bold text-center text-heading mb-12">
+          <h1 className="text-2xl sm:text-3xl font-heading font-bold text-center text-[#01044c] mb-12">
             प्रतिभाव पत्रों में से कुछ चुनिंदा प्रसादी...
           </h1>
 
@@ -163,7 +163,7 @@ export default function TestimonialSlider() {
              <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 z-20">
               <button 
                 onClick={prevGroup}
-                className="bg-secondary-color/80 hover:bg-secondary-color text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                className="bg-[#01044c]/80 hover:bg-[#01044c] text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 aria-label="Previous testimonials"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -175,7 +175,7 @@ export default function TestimonialSlider() {
             <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
               <button 
                 onClick={nextGroup}
-                className="bg-secondary-color/80 hover:bg-secondary-color text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                className="bg-[#01044c]/80 hover:bg-[#01044c] text-background rounded-full w-10 h-10 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 aria-label="Next testimonials"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -200,23 +200,23 @@ export default function TestimonialSlider() {
                                         {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
-                        className="bg-light-bg/30 shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-secondary-color "
+                        className="bg-[#ffedb3] shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-[#01044c] "
                       >
                         <div className="p-6 flex flex-col h-full">
                           {/* Quote section */}
                           <div className="flex-grow overflow-y-auto mb-4">
-                            <div className="text-secondary-color/30 text-3xl font-bold mb-2">"</div>
+                            <div className="text-[#01044c] text-5xl font-bold mb-2">"</div>
                             <p className="text-content leading-relaxed text-sm line-height-loose">
                               {testimonial.quote}
                             </p>
                           </div>
                           
                           <div className="mt-auto border-t border-purple-100 pt-4">
-                            <p className="text-secondary-color font-semibold text-right text-sm">
+                            <p className="text-[#01044c] font-semibold text-right text-sm">
                               ...{testimonial.author}
                             </p>
                             {testimonial.organization && (
-                              <p className="text-secondary-color/80 text-xs text-right mt-1">
+                              <p className="text-[#01044c]/80 text-xs text-right mt-1">
                                 {testimonial.organization}
                               </p>
                             )}
@@ -236,8 +236,8 @@ export default function TestimonialSlider() {
                   onClick={() => goToGroup(index + 1)}
                   className={`w-2 h-2 rounded-full focus:outline-none transition-all duration-300 ${
                     activeDotIndex === index 
-                      ? 'bg-secondary-color w-6' 
-                      : 'bg-secondary-color/50 hover:bg-secondary-color/70'
+                      ? 'bg-[#01044c] w-6' 
+                      : 'bg-[#01044c]/50 hover:bg-[#01044c]/70'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

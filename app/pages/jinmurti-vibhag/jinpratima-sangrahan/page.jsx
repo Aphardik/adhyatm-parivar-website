@@ -22,8 +22,6 @@ const Page = () => {
       {/* What is This Section */}
       <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
           <div className="p-4 sm:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
               जमीन से निकलने वाली प्रतिमाजी सरकारी म्यूज़ियम आदि अयोग्य स्थानों
@@ -34,8 +32,7 @@ const Page = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4  py-8  sm:px-6 lg:px-8">
-
- <div className="bg-lighten-bg border-secondary-color rounded-xl  border-l-4 p-4 lg:p-6">
+          <div className="bg-lighten-bg border-secondary-color rounded-xl  border-l-4 p-4 lg:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
               साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
               जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म परिवार
@@ -45,14 +42,10 @@ const Page = () => {
         </div>
       </section>
 
-     
-
       {/* Success Story Section */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-                    <div className="text-center mb-8 lg:mb-12">
+          <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               सफलता की कहानी
             </h3>
@@ -92,38 +85,38 @@ const Page = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 sm:py-0 py-12 items-center">
-  {/* Illustrative Image First (on large screens) */}
-  <div className="order-1 lg:order-1 sm:p-10">
-    <div className="relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary-color/20 to-secondary-color/10 rounded-3xl transform -rotate-3"></div>
-      <div className="relative bg-light-bg rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
-        <img
-          src="/jinmurti/jinpratima-sangrahan/img-1.26.png"
-          alt="Another success story"
-          className="w-full h-auto object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-heading/5 to-transparent"></div>
-      </div>
-    </div>
-  </div>
+            {/* Illustrative Image First (on large screens) */}
+            <div className="order-1 lg:order-1 sm:p-10">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary-color/20 to-secondary-color/10 rounded-3xl transform -rotate-3"></div>
+                <div className="relative bg-light-bg rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                  <img
+                    src="/jinmurti/jinpratima-sangrahan/img-1.26.png"
+                    alt="Another success story"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-heading/5 to-transparent"></div>
+                </div>
+              </div>
+            </div>
 
-  {/* Text Content */}
-  <div className="order-2 lg:order-2 sm:p-10">
-    <div className="relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-secondary-color/10 to-secondary-color/5 rounded-2xl"></div>
-      <div className="relative bg-light-bg border-l-4 border-secondary-color rounded-2xl shadow-lg p-8 lg:p-10">
-        <div className="flex items-start space-x-4">
-          <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
-           यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान ! अतिप्राचीन धर्मनाथ दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के समीप के खेत से प्राप्त हुई थी।
-
-
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+            {/* Text Content */}
+            <div className="order-2 lg:order-2 sm:p-10">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary-color/10 to-secondary-color/5 rounded-2xl"></div>
+                <div className="relative bg-light-bg border-l-4 border-secondary-color rounded-2xl shadow-lg p-8 lg:p-10">
+                  <div className="flex items-start space-x-4">
+                    <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
+                      यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि
+                      रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान !
+                      अतिप्राचीन धर्मनाथ दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के
+                      समीप के खेत से प्राप्त हुई थी।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

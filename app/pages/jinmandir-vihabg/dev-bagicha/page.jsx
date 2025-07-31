@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="mx-auto font-body bg-background">
+    <div className="mx-auto max-w-7xl font-body bg-background">
       <header className="bg-light-bg ">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
@@ -125,6 +125,25 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+<section className='p-4 sm:p-16 bg-lighten-bg mb-12'>
+  <div className='text-center mb-8'>
+    <h2 className='text-xl md:text-2xl font-semibold text-heading px-4'>
+      हजारों-लाखों हृदयों की आस्था द्वारा सर्जित चमत्कार की झांकी में निमित्त बनने का सौभाग्य अध्यात्म परिवार के इतिहास का स्वर्णपृष्ठ बन गया !
+    </h2>
+  </div>
+  
+  <div className='grid grid-cols-1 gap-6 items-center'>
+    <div className='w-full'>
+      <img src="/jinmandir/dev-bagicha/img-2.34-1.png" alt="" className='w-full h-auto' />
+    </div>
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 items-center'>
+      <img src="/jinmandir/dev-bagicha/img-2.34-2.png" alt="" className='w-full h-auto' />
+      <img src="/jinmandir/dev-bagicha/img-2.34-3.png" alt="" className='w-full h-auto' />
+      <img src="/jinmandir/dev-bagicha/img-2.34-4.png" alt="" className='w-full h-auto' />
+    </div>
+  </div>
+</section>
     </div>
   )
 }

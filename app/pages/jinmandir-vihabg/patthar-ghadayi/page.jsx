@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="mx-auto font-body bg-background">
+    <div className="mx-auto max-w-7xl font-body bg-background">
       <header className="bg-light-bg ">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">

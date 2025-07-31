@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
       </head>
       <body
-        className="font-body bg-background"
+        className="font-body bg-gradient1"
       >
         <Header />
-        {/* <div className='max-w-7xl bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
-        <div className=' bg-background min-h-dvh pt-16 flex items-center justify-center mx-auto '>
+        <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'>
+        {/* <div className=' min-h-dvh pt-16 flex items-center justify-center mx-auto '> */}
           {children}
         </div>
         <Footer />

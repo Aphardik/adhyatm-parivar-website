@@ -38,11 +38,11 @@ const RegisterForm = () => {
           />
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-secondary-color origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-[#01044c] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
       </Link> */}
 
       <div className="">
-        <h1 className="font-bold flex items-center gap-2 border-b-2  border-secondary-color font-heading mb-8 text-xl text-secondary-color text-start">
+        <h1 className="font-bold flex items-center gap-2 border-b-2  border-[#01044c] font-heading mb-8 text-xl text-[#01044c] text-start">
           रजिस्ट्रेशन फॉर्म
           {/* इवेंट्स के लिए */}
           <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow" />
@@ -73,7 +73,7 @@ const RegisterForm = () => {
             </div>
             <Link
               href="/pages/form/ravanni-bhitarma"
-              className="text-lg font-sans py-2 w-full text-center bg-secondary-color text-white font-semibold"
+              className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold"
             >
               Register
             </Link>
@@ -102,7 +102,7 @@ const RegisterForm = () => {
       </div>
     </div>
   </div>
-  <div className="text-lg font-sans py-2 w-full text-center bg-secondary-color text-white font-semibold opacity-50 cursor-not-allowed">
+  <div className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold opacity-50 cursor-not-allowed">
     Out Of Stock
   </div>
   </div>
@@ -131,7 +131,7 @@ const RegisterForm = () => {
   </div>
   <Link
     href="/pages/form/mahabharat"
-    className="text-lg font-sans py-2 w-full text-center  bg-secondary-color text-white font-semibold"
+    className="text-lg font-sans py-2 w-full text-center  bg-[#01044c] text-white font-semibold"
   >
     Register
   </Link>
