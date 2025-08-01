@@ -7,6 +7,10 @@ const LogoDescription = () => {
   return (
     <>
       <section  className="md:hidden  px-5 font-body text-content">
+                  <div className="w-full max-w-3xl flex items-center justify-center">
+            <img src="/logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
+
+          </div>
         <h1 className="text-[#01044c] font-heading font-bold text-xl text-center  mb-4">
           ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
         </h1>

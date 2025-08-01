@@ -156,7 +156,9 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --lighten-bg: #d6efda;
    --border-color: #d1d5db;
 } */
-  [data-theme="light"] {
+
+
+  /* [data-theme="light"] {
   --background: #EEF5DC;
   --foreground: #171717;
   --secondary-color: #E63463;
@@ -165,6 +167,19 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --text-color-content: #4A5565;
   --light-bg: #C8EFCF;
   --lighten-bg: #d6efda;
+   --border-color: #d1d5db;
+} */
+
+
+  [data-theme="light"] {
+  --background: #fff;
+  --foreground: #171717;
+  --secondary-color: #E63463;
+  --text-color-heading: #901E3E;
+  --text-color-light: #ffffff;
+  --text-color-content: #4A5565;
+  --light-bg: #fffbcc;
+  --lighten-bg: #fffbcc;
    --border-color: #d1d5db;
 }
 
