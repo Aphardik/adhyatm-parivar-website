@@ -26,13 +26,13 @@ const ContactPage = () => {
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.8478104063706!2d72.83873662382022!3d19.201848448012363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6dca2c3da3b%3A0xad72c42dae8ec7b6!2sSambhav%20Darshan%2C%20Hemu%20Colony%2C%20Irani%20Wadi%2C%20Kandivali%20West%2C%20Mumbai%2C%20Maharashtra%20400067!5e0!3m2!1sen!2sin!4v1752667361044!5m2!1sen!2sin"
     },
     {
-      city: "अमदावाद",
+      city: "अहमदाबाद ",
       cityEn: "Ahmedabad",
       title: "अध्यात्म परिवार शाखा",
-      address: "वल्लभ अपार्टमेन्ट, ग्राउन्ड फ्लोर, स्कारलेट कोम्प्लेक्स के पीछे, अंकुर स्कूल के सामने, फतेपुरा, पालडी, अमदावाद - 380 007",
+      address: "अध्यात्म परिवार, तृतीय तल, श्री शांति जिन जैन संघ, श्री शांति जैन संयम मार्ग, पशु अस्पताल के बाजू में, पालडी, अहमदाबाद - 380 007",
       phone: "7227070704",
       phoneDisplay: "72270 70704",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.0468609081604!2d72.56901129871349!3d23.023237405015898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e845679f5b561%3A0xbc907be6190a0c80!2sF-5!5e0!3m2!1sen!2sin!4v1752667484177!5m2!1sen!2sin"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.0839557987515!2d72.56588717394371!3d23.020689416401087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e856496edc8ef%3A0x20f13fa246bcb7d2!2sShanti%20Jin%20Jain%20Sangh!5e0!3m2!1sen!2sin!4v1754035971676!5m2!1sen!2sin"
     }
   ];
 

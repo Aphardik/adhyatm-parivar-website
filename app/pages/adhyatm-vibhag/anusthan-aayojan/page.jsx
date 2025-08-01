@@ -1,85 +1,92 @@
 import React from 'react';
 
-export default function AnusthanAyojan() {
+const AnusthanAyojan = () => {
   return (
-    <div className="bg-gray-100 font-body text-gray-800 mx-auto p-6 mt-6">
-      {/* Main Container: Makes it responsive */}
-      <div className="flex md:flex-row flex-col items-center gap-6">
-        {/* Left Side: Heading & Description */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <div className="inline-block bg-gray-800 text-gray-200 text-4xl font-bold py-2 px-4 rounded mb-4">
-            4.8
+    <div className="container  mx-auto font-body">
+      {/* Header Section */}
+      <header className="bg-light-bg">
+        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+                अनुष्ठान आयोजन...
+              </h1>
+              <p className="text-sm text-center sm:text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">
+                कार्य प्रारंभ : वि.सं.२०६५
+              </p>
+            </div>
           </div>
-          <h1 className="text-2xl font-bold font-heading">अनुष्ठान आयोजन...</h1>
-          <p className="text-sm font-semibold mt-1">(कार्य प्रारंभ : वि.सं.२०६५)</p>
-          <p className="mt-4 leading-relaxed">
-            अध्यात्म परिवार द्वारा सामूहिक दीक्षा, उपधान तप, वाचनाश्रेणी, S3 विशिष्ट प्रश्नोत्तरी प्रवचन, प्रतिष्ठा महोत्सव, महापूजाएं और हाल ही में एक कदम आगे बढ़कर ब्रह्मयात्रा आदि जैसे अनुष्ठानों का आयोजन होता है कि जो हजारों के जीवन में बोधिबीज डालने का कार्य करते हैं। थोड़ी झांकी :
-          </p>
         </div>
+      </header>
 
-        {/* Right Side: Image & Description */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-          <img
-            src="/adhyatm/anusthan-aayojan/img-3.47.png"
-            alt="Spiritual event"
-            className="rounded shadow-lg w-full max-w-sm md:max-w-full"
-          />
-          <p className="text-base font-semibold font-heading text-center md:text-left mt-4">
-            उपधान की साधना जीवन की दिशा बदल देती है।
-          </p>
+      {/* Introduction Section */}
+      <section className="py-8 sm:py-12 lg:py-16">
+        <div className="grid sm:grid-cols-1 items-center gap-6 sm:gap-10">
+          <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg">
+            <p className="text-xl leading-relaxed">
+              अध्यात्म परिवार द्वारा सामूहिक दीक्षा, उपधान तप, वाचनाश्रेणी, S3 विशिष्ट प्रश्नोत्तरी प्रवचन, प्रतिष्ठा महोत्सव, महापूजाएं और हाल ही में एक कदम आगे बढ़कर ब्रह्मयात्रा आदि जैसे अनुष्ठानों का आयोजन होता है कि जो हजारों के जीवन में बोधिबीज डालने का कार्य करते हैं। थोड़ी झांकी :
+            </p>
+          </div>
+          <div className="p-6 bg-lighten-bg">
+            <img className="w-full rounded shadow-lg" src="/adhyatm/anusthan-aayojan/img-3.47.png" alt="Spiritual event" />
+            <p className="text-lg sm:text-xl font-semibold font-heading text-center mt-4">
+              उपधान की साधना जीवन की दिशा बदल देती है।
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Second Section - Image Layout */}
-      <div className="container mx-auto mt-8">
-        {/* First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          {/* First Image with Description */}
-          <div className="flex items-center">
+      {/* Activities Section */}
+      <section className="py-8 sm:pb-12 lg:pb-16">
+        <div className="text-center mb-8 lg:mb-12">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            विविध अनुष्ठानों की झलक!
+          </h3>
+        </div>
+        
+        {/* Activity Cards */}
+        <div className="grid sm:grid-cols-1 gap-6 mb-8">
+          <div className="flex items-center justify-evenly  p-4 rounded-md">
             <img
-              alt="Placeholder image of 150x150 pixels"
-              className="w-1/2 md:w-1/2"
+              alt="वाचना श्रेणी"
+              className="w-1/3 rounded"
               src="/adhyatm/anusthan-aayojan/img-3.49.png"
-              width="150"
-              height="150"
             />
             <div className="ml-4">
-              <h2 className="text-lg font-heading font-bold">वाचना- श्रेणी</h2>
-              <p className="text-gray-600 font-semibold">
+              <h2 className="text-lg sm:text-xl font-heading font-bold text-heading">वाचना- श्रेणी</h2>
+              <p className="text-content font-semibold">
                 अब तक वाचना- श्रेणी में लगभग २५,००० श्रोताओंने जिनवाणी पान किया है।
               </p>
             </div>
           </div>
 
-          {/* Second Image with Description */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-evenly p-4 rounded-md">
             <img
-              alt="Placeholder image of 150x150 pixels"
-              className="w-1/2 md:w-1/2"
+              alt="ब्रह्मयात्रा"
+              className="w-1/3 order-2 rounded"
               src="/adhyatm/anusthan-aayojan/img-3.50.png"
-              width="150"
-              height="150"
             />
-            <div className="ml-4">
-              <h2 className="text-lg font-heading font-bold">ब्रह्मयात्रा</h2>
-              <p className="text-gray-600 font-semibold">
+            <div className="ml-4 order-1">
+              <h2 className="text-lg sm:text-xl font-heading font-bold text-heading">ब्रह्मयात्रा</h2>
+              <p className="text-content font-semibold">
                 'ब्रह्मयात्रा' के अंतर्गत १५ से २५ वर्ष के युवा नेमिनाथ प्रभु के प्राचीन तीर्थों की यात्रा करके धन्य बने!
               </p>
             </div>
           </div>
         </div>
 
-        {/* Second Row */}
+        {/* Full Width Image */}
         <div className="w-full">
           <img
-            alt="Placeholder image of 1200x400 pixels"
-            className="w-full"
+            alt="अनुष्ठान आयोजन का व्यापक दृश्य"
+            className="w-full rounded shadow-lg"
             src="/adhyatm/anusthan-aayojan/img-3.48.png"
-            width="1200"
-            height="400"
           />
         </div>
-      </div>
+      </section>
     </div>
   );
-}
+};
+
+export default AnusthanAyojan;

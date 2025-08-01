@@ -4,6 +4,7 @@ import LogoDescription from "./_components/LogoDescription";
 import Letters from "./_components/Letters";
 import RegisterForm from "./_components/RegisterForms";
 import VibhagDescription from "./_components/VibhagDescription";
+import SbaHomePage from "./_components/SbaHomePage";
 
 const LandingPage = () => {
   return (
@@ -41,6 +42,7 @@ const LandingPage = () => {
         </div>
       </div>
       <LogoDescription />
+      <SbaHomePage />
       <VibhagDescription />
       <Letters />
       <RegisterForm />
