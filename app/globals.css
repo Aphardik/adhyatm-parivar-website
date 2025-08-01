@@ -93,7 +93,9 @@ body {
 
   --color-light-bg: var(--light-bg);
   --color-lighten-bg: var(--lighten-bg);
+  --color-header-bg: var(--header-bg);
   --color-secondary-color: var(--secondary-color);
+  --color-secondary-yellow: var(--secondary-yellow);
 
   --text-color-heading: var(--text-color-heading);
   --text-color-light: var(--text-color-light);
@@ -173,8 +175,10 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
 
   [data-theme="light"] {
   --background: #fff;
+  --header-bg:#FFDCDC;
   --foreground: #171717;
   --secondary-color: #E63463;
+  --secondary-yellow: #cdc565;
   --text-color-heading: #901E3E;
   --text-color-light: #ffffff;
   --text-color-content: #4A5565;

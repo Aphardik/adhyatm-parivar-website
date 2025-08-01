@@ -8,7 +8,7 @@ import SbaHomePage from "./_components/SbaHomePage";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="bg-gradient1">
       <div className="font-heading w-full  min-h-[70dvh]  flex items-center justify-center px-4 sm:px-6 lg:px-4">
         <div className="mx-auto  text-center">
           {/* Main heading */}

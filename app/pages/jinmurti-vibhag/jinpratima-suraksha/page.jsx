@@ -586,9 +586,9 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const Page = () => {
   return (
-    <div className="bg-background text-heading px-2 sm:px-6 font-body">
+    <div className="bg-background text-heading  font-body">
       {/* Header */}
-      <header className="bg-light-bg">
+      <header className="bg-header-bg">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
@@ -603,6 +603,7 @@ const Page = () => {
         </div>
       </header> 
 
+<div className="px-2 sm:px-6">
       {/* Section 1: Introduction */}
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="mx-auto  max-w-7xl">
@@ -631,7 +632,7 @@ const Page = () => {
       <section className="py-8 sm:pb-12 lg:pb-16 ">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-header-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
              यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?
             </h2>
           </div>
@@ -674,7 +675,7 @@ const Page = () => {
               </div>
               <div className="bg-background rounded-sm  overflow-hidden">
                 <img
-                  src="/jinmurti/jinpratima-suraksha/img-1.2.png"
+                  src="/jinmurti/jinpratima-suraksha/img-1.2.jpg"
                   alt="Damaged Feet"
                   className="w-full h-64 sm:h-80 object-cover"
                 />
@@ -718,9 +719,14 @@ const Page = () => {
                   प्रभु के प्रतिबिंब रूपी फणा को नहीं संभाल सके!
                 </p>
               </div>
-              <div className="bg-background rounded-sm  overflow-hidden">
+              <div className="bg-background flex items-center rounded-sm  overflow-hidden">
                 <img
-                  src="/jinmurti/jinpratima-suraksha/img-1.4.png"
+                  src="/jinmurti/jinpratima-suraksha/img-1.4-1.jpeg"
+                  alt="Damaged Parts"
+                  className="w-full h-64 sm:h-80 object-cover"
+                />
+                <img
+                  src="/jinmurti/jinpratima-suraksha/img-1.4-2.jpg"
                   alt="Damaged Parts"
                   className="w-full h-64 sm:h-80 object-cover"
                 />
@@ -736,7 +742,7 @@ const Page = () => {
           {/* Ancient Wisdom Quote */}
           <div className="mb-8 lg:mb-12">
             <div className="text-center mb-8 lg:mb-12">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-header-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
                 महत्वपूर्ण निष्कर्ष
               </h3>
             </div>
@@ -823,7 +829,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16 ">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-header-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               ये तो हुई समस्या, परन्तु समाधान? यह रहा...
             </h2>
           </div>
@@ -866,7 +872,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="mx-auto  max-w-7xl">
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-header-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               सौभाग्य का सीमाचिह्न
             </h2>
           </div>
@@ -975,8 +981,8 @@ const Page = () => {
       <div className="min-h-screen bg-background">
         <div className="container mx-auto  max-w-7xl">
           {/* Header Section */}
-          <div className="text-center mb-12">
-            <div className="inline-block bg-light-bg text-heading px-8 py-4 rounded-sm ">
+          <div className="text-center my-12">
+            <div className="inline-block bg-header-bg text-heading px-8 py-4 rounded-sm ">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
                 सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
               </h1>
@@ -988,7 +994,7 @@ const Page = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Story Content */}
               <div className="space-y-6">
-                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-yellow">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     प्रतीक्षा का काल
                   </h2>
@@ -1016,7 +1022,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-yellow">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     साधना का फल
                   </h2>
@@ -1031,7 +1037,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-yellow">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     तैयारी और चुनौती
                   </h2>
@@ -1049,7 +1055,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-color">
+                <div className="bg-lighten-bg p-6 rounded-lg border-l-4 border-secondary-yellow">
                   <h2 className="text-xl font-heading  text-heading mb-4">
                     समर्पण और सफलता
                   </h2>
@@ -1095,7 +1101,7 @@ const Page = () => {
                   </h3>
                   <div className="bg-background h-48 flex items-center justify-center rounded-lg mb-4">
                     <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.10.png"
+                      src="/jinmurti/jinpratima-suraksha/img-1.10.jpg"
                       alt="क्षतिग्रस्त प्रतिमा"
                       className="w-full h-full object-cover rounded-lg"
                     />
@@ -1156,6 +1162,7 @@ const Page = () => {
 
         </div>
       </div>
+    </div>
     </div>
   );
 };

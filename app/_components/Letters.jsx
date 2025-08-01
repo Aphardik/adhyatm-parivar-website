@@ -200,7 +200,7 @@ export default function TestimonialSlider() {
                                         {group.map((testimonial, idx) => (
                       <div 
                         key={idx}
-                        className="bg-[linear-gradient(180deg,_rgba(255,209,229,1)_0%,_rgba(235,221,129,1)_50%,_rgba(134,174,191,1)_100%)] shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-[#01044c] "
+                        className="bg-[linear-gradient(180deg,_rgba(255,209,229,1)_0%,_rgba(235,221,129,1)_50%)] shadow-xl overflow-hidden h-80 flex flex-col transition-all duration-300 hover:shadow-xl hover:border-[#01044c] "
                       >
                         <div className="p-6 flex flex-col h-full">
                           {/* Quote section */}
