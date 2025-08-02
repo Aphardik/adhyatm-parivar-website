@@ -39,7 +39,7 @@ const VibhagDescription = () => {
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
                   <div className="inline-block">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-heading mb-4 font-heading">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-[#01044c] mb-4 font-heading">
                       {vibhag.title}
                     </h3>
                     <p className="text-content text-base md:text-lg max-w-lg">
@@ -74,7 +74,7 @@ const VibhagDescription = () => {
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-heading mb-2 font-heading">
+                    <h3 className="text-lg font-semibold text-[#01044c] mb-2 font-heading">
                       {vibhag.title}
                     </h3>
                     <p className="text-content text-sm leading-relaxed">
