@@ -56,7 +56,7 @@ const Page = () => {
             <div className="order-2 sm:p-10 lg:order-1">
               <div className="relative">
                 <div className="absolute inset-0  rounded-2xl"></div>
-                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-10">
+                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-16">
                   <div className="flex items-start space-x-4">
                     <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                       डीसा के नजदीक खेत में से निकले अतिप्राचीन आदिनाथ दादा आज
@@ -104,7 +104,7 @@ const Page = () => {
             <div className="order-2 lg:order-2 sm:p-10">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl"></div>
-                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-10">
+                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-16">
                   <div className="flex items-start space-x-4">
                     <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                       यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि

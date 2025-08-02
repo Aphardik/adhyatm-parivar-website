@@ -8,7 +8,7 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">जिनप्रतिमा निर्माण : धातु...</h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon text-content font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०६४</p>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०६४</p>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Page = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="rounded-lg p-6  order-2 md:order-1">
             <h3 className="font-bold text-xl sm:text-2xl text-maroon mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
-            <p className="text-base sm:text-lg leading-relaxed text-content mb-4">
+            <p className="text-base sm:text-lg leading-relaxed text-maroon mb-4">
               धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर 
               <span className="text-darkpink font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
               से धातु की प्रतिमाजी का निर्माण किया जाता है।
@@ -70,7 +70,7 @@ const Page = () => {
           </div>
           <div className=" rounded-lg p-6">
             <h3 className="font-bold text-xl sm:text-2xl text-maroon mb-4 font-heading">विशिष्ट डिटेलिंग</h3>
-            <p className="text-base sm:text-lg leading-relaxed text-content">
+            <p className="text-base sm:text-lg leading-relaxed text-maroon">
               ऐसे अद्भुत डिटेलिंग वाले प्रभुजी, सिद्धचक्रजी तथा परिकर उपलब्ध करवाने के लिए अध्यात्म परिवार सज्ज है! 
               प्रत्येक कलाकृति में सूक्ष्म से सूक्ष्म विवरण को सावधानीपूर्वक तैयार किया जाता है।
             </p>

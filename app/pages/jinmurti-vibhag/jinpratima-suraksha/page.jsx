@@ -825,6 +825,192 @@ const Page = () => {
         </div>
       </section>
 
+            {/* Section 3 - Updated सौभाग्य का सीमाचिह्न section */}
+      <div className="min-h-screen bg-whitey py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto  max-w-7xl">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <div className="inline-block bg-lightpink text-maroon px-8 py-4 rounded-sm ">
+              <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
+                सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
+              </h1>
+            </div>
+          </div>
+
+          {/* Main Story Section */}
+          <div className="bg-whitey mb-8">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Story Content */}
+              <div className="space-y-6">
+                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
+                  <h2 className="text-xl font-heading  text-maroon mb-4">
+                    प्रतीक्षा का काल
+                  </h2>
+                  <div className="space-y-3 text-maroon leading-relaxed">
+                    <p>
+                      १५,०६० दिनों तक लाखों लोगों के दिल की अनकही पीड़ा के अनुभव
+                      से कौन अनजान है?
+                    </p>
+                    <p>
+                      कि जब श्री अंतरिक्षजी के अधिनायक दादा दरवाजों के पीछे बंद
+                      थे।
+                    </p>
+                    <p>
+                      अपने दादा को पाने के लिए कितना धनव्यय... कितनी बाधाएं...
+                    </p>
+                    <p>
+                      कितनी तप साधना... कितने दशकों, महीनों, घंटों की लम्बी
+                      प्रतीक्षा...
+                    </p>
+                    <p>
+                      <span className="font-bold text-maroon">
+                        श्वेतांबर श्रीसंघ ने की है....
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
+                  <h2 className="text-xl font-heading  text-maroon mb-4">
+                    साधना का फल
+                  </h2>
+                  <div className="space-y-3 text-maroon leading-relaxed">
+                    
+                    <p>
+                      अंत में सर्वोच्च न्यायालय के उस ऐतिहासिक इंटरिम ऑर्डर के
+                      रूप में वह साधना फलीभूत हुई।
+                    </p>
+                    <p>अब दादा की पूजा का लाभ मिलने वाला था।</p>
+                    <p>जो लेपकार्य दशकों से रुका हुआ था उसको संपन्न करना था।</p>
+                  </div>
+                </div>
+
+                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
+                  <h2 className="text-xl font-heading  text-maroon mb-4">
+                    तैयारी और चुनौती
+                  </h2>
+                  <div className="space-y-3 text-maroon leading-relaxed">
+                    <p>संपूर्ण भारत के जैन संघों की परस्पर बैठकें शुरू हुईं।</p>
+                    <p>क्या होगा? किस प्रकार होगा? होगा तो सही न?</p>
+                    <p>
+                      और उस समय, अध्यात्म परिवार के पूर्णसमर्पित शासन सेवक का
+                      संपर्क किया गया।
+                    </p>
+                    <p>
+                      पूछा गया कि: क्या आप अंतरिक्षजी के दादा के लेप करने का
+                      कार्य कर सकोगे?
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
+                  <h2 className="text-xl font-heading  text-maroon mb-4">
+                    समर्पण और सफलता
+                  </h2>
+                  <div className="space-y-3 text-maroon leading-relaxed">
+                    <p>
+                      अध्यात्म परिवार के कार्यवाहक शासन सेवक के साढ़े तीन करोड़
+                      रोम हर्षित हो गए।
+                    </p>
+                    <p>
+                      उन्होंने तत्काल जवाब दिया:{" "}
+                      <span className="font-bold text-maroon">
+                        अवश्य। मैं अंतरिक्षजी पहुंचता हूं।
+                      </span>
+                    </p>
+                    <p>
+                      किन्तु वहां पहुंचते ही वहां के गंभीर हालत में जान के जोखम
+                      का अंदाज आ गया।
+                    </p>
+                    <p>
+                      पर दादा की भक्ति के उल्लास के सामने जोखम का भय फीका पड़
+                      गया।
+                    </p>
+                    <p>
+                      दादा की भक्ति और समग्र भारत के चतुर्विध संघों के मंगल आशीष
+                      के बल से दादा के लेप का मंगल कार्य संपन्न हुआ।
+                    </p>
+                  </div>
+                </div>
+
+                {/* <div className="bg-whitey p-6 rounded-lg border-2 border-light-bg">
+                  <p className="text-xl font-bold text-center text-maroon">
+                    हमारे सौभाग्य का यह सीमाचिह्न है।
+                  </p>
+                </div> */}
+              </div>
+
+              {/* Visual Content Section */}
+              <div className="space-y-6">
+                <div className="bg-whitey p-6 rounded-lg ">
+                  <h3 className="text-base font-semibold text-center mb-4 text-maroon">
+                    वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा
+                    क्योंकि उन्हें पता था कि...
+                  </h3>
+                  <div className="bg-whitey h-48 flex items-center justify-center rounded-lg mb-4">
+                    <img
+                      src="/jinmurti/jinpratima-suraksha/img-1.10.jpg"
+                      alt="क्षतिग्रस्त प्रतिमा"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="hidden w-full h-full items-center justify-center text-maroon">
+                      प्रतिमा छवि
+                    </div>
+                  </div>
+                  <p className="font-semibold text-center text-maroon bg-whitey p-3 rounded">
+                    ठग कारीगर एमसील आदि हल्के द्रव्यों का उपयोग करके प्रभु की
+                    दुर्दशा करते हैं!
+                  </p>
+                </div>
+
+                <div className="bg-whitey h-64 flex items-center justify-center rounded-lg">
+                  <img
+                    src="/jinmurti/jinpratima-suraksha/img-1.11.png"
+                    alt="क्षतिग्रस्त प्रतिमा"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  <div className="hidden w-full h-full items-center justify-center text-maroon">
+                    प्रतिमा छवि
+                  </div>
+                </div>
+
+                <div className="bg-whitey rounded-md  p-8">
+                  <div className="grid lg:grid-cols-1 gap-6">
+                    <div className="lg:col-span-2">
+                      <div className="bg-whitey h-56 flex items-center justify-center rounded-lg">
+                        <img
+                          src="/jinmurti/jinpratima-suraksha/img-1.12.png"
+                          alt="संरक्षित प्रतिमा"
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                        <div className="hidden w-full h-full items-center justify-center text-maroon">
+                          प्रतिमा छवि
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-center space-y-4">
+                      <div className="bg-whitey p-4 rounded-lg border-l-4 border-light-bg">
+                        <p className="font-semibold text-maroon">
+                          अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड
+                          पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।
+                        </p>
+                      </div>
+                      {/* <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <p className="font-semibold text-blue-800 text-center">
+                          लेपकार्य संपन्न होने के बाद आंखों को कैसी ठंडक मिलती
+                          है?
+                        </p>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* Section 4: Solutions */}
       <section className="py-8 sm:py-12 lg:py-16 ">
         <div className="mx-auto  max-w-7xl">
@@ -976,192 +1162,6 @@ const Page = () => {
         </div>
       </section>
 
-
-      {/* Section 3 - Updated सौभाग्य का सीमाचिह्न section */}
-      <div className="min-h-screen bg-whitey">
-        <div className="container mx-auto  max-w-7xl">
-          {/* Header Section */}
-          <div className="text-center my-12">
-            <div className="inline-block bg-lightpink text-maroon px-8 py-4 rounded-sm ">
-              <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
-                सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
-              </h1>
-            </div>
-          </div>
-
-          {/* Main Story Section */}
-          <div className="bg-whitey mb-8">
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Story Content */}
-              <div className="space-y-6">
-                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                  <h2 className="text-xl font-heading  text-maroon mb-4">
-                    प्रतीक्षा का काल
-                  </h2>
-                  <div className="space-y-3 text-maroon leading-relaxed">
-                    <p>
-                      १५,०६० दिनों तक लाखों लोगों के दिल की अनकही पीड़ा के अनुभव
-                      से कौन अनजान है?
-                    </p>
-                    <p>
-                      कि जब श्री अंतरिक्षजी के अधिनायक दादा दरवाजों के पीछे बंद
-                      थे।
-                    </p>
-                    <p>
-                      अपने दादा को पाने के लिए कितना धनव्यय... कितनी बाधाएं...
-                    </p>
-                    <p>
-                      कितनी तप साधना... कितने दशकों, महीनों, घंटों की लम्बी
-                      प्रतीक्षा...
-                    </p>
-                    <p>
-                      <span className="font-bold text-maroon">
-                        श्वेतांबर श्रीसंघ ने की है....
-                      </span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                  <h2 className="text-xl font-heading  text-maroon mb-4">
-                    साधना का फल
-                  </h2>
-                  <div className="space-y-3 text-maroon leading-relaxed">
-                    
-                    <p>
-                      अंत में सर्वोच्च न्यायालय के उस ऐतिहासिक इंटरिम ऑर्डर के
-                      रूप में वह साधना फलीभूत हुई।
-                    </p>
-                    <p>अब दादा की पूजा का लाभ मिलने वाला था।</p>
-                    <p>जो लेपकार्य दशकों से रुका हुआ था उसको संपन्न करना था।</p>
-                  </div>
-                </div>
-
-                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                  <h2 className="text-xl font-heading  text-maroon mb-4">
-                    तैयारी और चुनौती
-                  </h2>
-                  <div className="space-y-3 text-maroon leading-relaxed">
-                    <p>संपूर्ण भारत के जैन संघों की परस्पर बैठकें शुरू हुईं।</p>
-                    <p>क्या होगा? किस प्रकार होगा? होगा तो सही न?</p>
-                    <p>
-                      और उस समय, अध्यात्म परिवार के पूर्णसमर्पित शासन सेवक का
-                      संपर्क किया गया।
-                    </p>
-                    <p>
-                      पूछा गया कि: क्या आप अंतरिक्षजी के दादा के लेप करने का
-                      कार्य कर सकोगे?
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                  <h2 className="text-xl font-heading  text-maroon mb-4">
-                    समर्पण और सफलता
-                  </h2>
-                  <div className="space-y-3 text-maroon leading-relaxed">
-                    <p>
-                      अध्यात्म परिवार के कार्यवाहक शासन सेवक के साढ़े तीन करोड़
-                      रोम हर्षित हो गए।
-                    </p>
-                    <p>
-                      उन्होंने तत्काल जवाब दिया:{" "}
-                      <span className="font-bold text-maroon">
-                        अवश्य। मैं अंतरिक्षजी पहुंचता हूं।
-                      </span>
-                    </p>
-                    <p>
-                      किन्तु वहां पहुंचते ही वहां के गंभीर हालत में जान के जोखम
-                      का अंदाज आ गया।
-                    </p>
-                    <p>
-                      पर दादा की भक्ति के उल्लास के सामने जोखम का भय फीका पड़
-                      गया।
-                    </p>
-                    <p>
-                      दादा की भक्ति और समग्र भारत के चतुर्विध संघों के मंगल आशीष
-                      के बल से दादा के लेप का मंगल कार्य संपन्न हुआ।
-                    </p>
-                  </div>
-                </div>
-
-                {/* <div className="bg-whitey p-6 rounded-lg border-2 border-light-bg">
-                  <p className="text-xl font-bold text-center text-maroon">
-                    हमारे सौभाग्य का यह सीमाचिह्न है।
-                  </p>
-                </div> */}
-              </div>
-
-              {/* Visual Content Section */}
-              <div className="space-y-6">
-                <div className="bg-whitey p-6 rounded-lg ">
-                  <h3 className="text-lg font-semibold text-center mb-4 text-maroon">
-                    वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा
-                    क्योंकि उन्हें पता था कि...
-                  </h3>
-                  <div className="bg-whitey h-48 flex items-center justify-center rounded-lg mb-4">
-                    <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.10.jpg"
-                      alt="क्षतिग्रस्त प्रतिमा"
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                    <div className="hidden w-full h-full items-center justify-center text-maroon">
-                      प्रतिमा छवि
-                    </div>
-                  </div>
-                  <p className="font-semibold text-center text-maroon bg-whitey p-3 rounded">
-                    ठग कारीगर एमसील आदि हल्के द्रव्यों का उपयोग करके प्रभु की
-                    दुर्दशा करते हैं!
-                  </p>
-                </div>
-
-                <div className="bg-whitey h-64 flex items-center justify-center rounded-lg">
-                  <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.11.png"
-                    alt="क्षतिग्रस्त प्रतिमा"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                  <div className="hidden w-full h-full items-center justify-center text-maroon">
-                    प्रतिमा छवि
-                  </div>
-                </div>
-
-                <div className="bg-whitey rounded-md  p-8">
-                  <div className="grid lg:grid-cols-1 gap-6">
-                    <div className="lg:col-span-2">
-                      <div className="bg-whitey h-56 flex items-center justify-center rounded-lg">
-                        <img
-                          src="/jinmurti/jinpratima-suraksha/img-1.12.png"
-                          alt="संरक्षित प्रतिमा"
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                        <div className="hidden w-full h-full items-center justify-center text-maroon">
-                          प्रतिमा छवि
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center space-y-4">
-                      <div className="bg-whitey p-4 rounded-lg border-l-4 border-light-bg">
-                        <p className="font-semibold text-maroon">
-                          अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड
-                          पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।
-                        </p>
-                      </div>
-                      {/* <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                        <p className="font-semibold text-blue-800 text-center">
-                          लेपकार्य संपन्न होने के बाद आंखों को कैसी ठंडक मिलती
-                          है?
-                        </p>
-                      </div> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
     </div>
   );

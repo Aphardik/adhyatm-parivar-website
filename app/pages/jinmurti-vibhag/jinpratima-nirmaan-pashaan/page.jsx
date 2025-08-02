@@ -23,17 +23,6 @@ const Page = () => {
       </header>
 
 <div className="px-2 sm:px-6">
-      {/* Introduction Section */}
-      <section className="py-8 sm:py-12 lg:py-16">
-        <div className=" p-4 ">
-          <p className="text-xl text-center text-maroon leading-relaxed">
-            गुजरात के हिम्मतनगर शहर में अध्यात्म परिवार द्वारा प्रारंभ अध्यात्म
-            शिल्पशाला का उपक्रम एक बहुआयामी योजना है। जिसकी बातें अत्यंत रोमांचक
-            हैं।
-          </p>
-        </div>
-      </section>
-
       {/* Stone Selection Criteria Section */}
       <section className="py-8 sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
@@ -201,6 +190,20 @@ const Page = () => {
             </p>
           </div>
         </div>
+      </section>
+            <section className="py-8 sm:py-12 lg:py-16">
+                 <div className="bg-lightyellow rounded-sm  p-6 sm:p-8 lg:p-10">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+              <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+            </div>
+            <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
+              गुजरात के हिम्मतनगर शहर में अध्यात्म परिवार द्वारा प्रारंभ अध्यात्म
+            शिल्पशाला का उपक्रम एक बहुआयामी योजना है। जिसकी बातें अत्यंत रोमांचक
+            हैं।
+            </p>
+          </div>
       </section>
     </div>
     </div>

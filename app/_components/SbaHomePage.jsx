@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState, useCallback, useMemo } from 'react';
 import { FaEye, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { FaX } from "react-icons/fa6";
@@ -33,44 +34,85 @@ const PhotoGalleryHome = () => {
     setSelectedImageIndex(index);
   }, []);
 
+  // Generate a simple blur placeholder
+  const generateBlurDataURL = (width = 400, height = 300) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    
+    // Create a gradient blur effect
+    const gradient = ctx.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, '#f3f4f6');
+    gradient.addColorStop(0.5, '#e5e7eb');
+    gradient.addColorStop(1, '#d1d5db');
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+    
+    return canvas.toDataURL('image/jpeg', 0.1);
+  };
+
   const PhotoCard = ({ photo, index, isActive = false }) => {
-    const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+      setIsLoading(false);
+    };
+
+    const handleImageError = () => {
+      setImageError(true);
+      setIsLoading(false);
+      console.error(`Failed to load image: ${photo.imageUrl}`);
+    };
 
     return (
-      <div
-        className="group  font-heading rounded-sm shadow-lg hover:shadow-2xl transition-all duration-500  overflow-hidden border border-gray-100"
-      >
+      <div className="group font-heading rounded-sm shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
         <div className="relative overflow-hidden rounded-t-sm">
           {!imageError ? (
-            <>
-              {!imageLoaded && (
-                <div className="w-full h-auto min-h-[300px] bg-gradient-to-br from-gray-100 to-gray-200 animate-pulse flex items-center justify-center">
+            <div className="relative w-full min-h-[300px] bg-gradient-to-br from-gray-100 to-gray-200">
+              {/* Loading overlay */}
+              {isLoading && (
+                <div className="absolute inset-0 z-10 bg-gradient-to-br from-gray-100 to-gray-200 animate-pulse flex items-center justify-center">
                   <div className="text-gray-400 flex flex-col items-center">
                     <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mb-3">
-                      <div className="w-8 h-8 text-gray-400">
-                        <img src="/logo.png" alt="adhyatm" />
+                      <div className="w-8 h-8 text-gray-400 relative">
+                        <Image
+                          src="/logo.png"
+                          alt="adhyatm"
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
                       </div>
                     </div>
                     <div className="text-sm">Loading...</div>
                   </div>
                 </div>
               )}
-              <img
+              
+              <Image
                 src={photo.imageUrl}
-                alt={photo.name}
+                alt={photo.name || 'Gallery image'}
+                width={400}
+                height={300}
                 className={`w-full h-auto object-contain bg-lighten-bg transition-all duration-700 group-hover:scale-102 ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0 absolute'
+                  isLoading ? 'opacity-0' : 'opacity-100'
                 }`}
-                onLoad={() => setImageLoaded(true)}
-                onError={() => {
-                  console.error(`Failed to load image: ${photo.imageUrl}`);
-                  setImageError(true);
-                }}
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+                priority={isActive && index === 0} // Priority for first active image
                 loading={isActive ? "eager" : "lazy"}
-                decoding="async"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx4f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyEcTV52mSKZl+6BFjKgN1JJ3AzX6tscQvpZ7KqRnLM2lDpwTnZ4tZh2HnrtBUHKAajTAhc/d+FHaZJ3+t/J+XGfJOGjHrrnPXbq0a4bP8AIWl3yJ/8U8lfhqxHfSJFLNGJLbxf5v/Z"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
               />
-            </>
+            </div>
           ) : (
             <div className="w-full h-auto min-h-[300px] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
               <div className="text-center text-gray-500">
@@ -111,12 +153,47 @@ const PhotoGalleryHome = () => {
     </div>
   );
 
+  // Thumbnail component with optimized loading
+  const ThumbnailButton = ({ photo, index, isSelected }) => {
+    const [thumbnailError, setThumbnailError] = useState(false);
+
+    return (
+      <button
+        onClick={() => goToSlide(index)}
+        className={`relative w-16 h-12 rounded-md overflow-hidden transition-all duration-300 ${
+          isSelected
+            ? 'ring-2 ring-[#01044c]/80 ring-offset-2 scale-110'
+            : 'opacity-60 hover:opacity-100'
+        }`}
+      >
+        {!thumbnailError ? (
+          <Image
+            src={photo.imageUrl}
+            alt={`Thumbnail ${index + 1}`}
+            width={64}
+            height={48}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx4f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyEcTV52mSKZl+6BFjKgN1JJ3AzX6tscQvpZ7KqRnLM2lDpwTnZ4tZh2HnrtBUHKAajTAhc/d+FHaZJ3+t/J+XGfJOGjHrrnPXbq0a4bP8AIWl3yJ/8U8lfhqxHfSJFLNGJLbxf5v/Z"
+            onError={() => setThumbnailError(true)}
+            sizes="64px"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+            <FaX className="w-4 h-4 text-gray-500" />
+          </div>
+        )}
+      </button>
+    );
+  };
+
   return (
-    <div className="font-heading  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+    <div className="font-heading max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
       {/* Header */}
       <div className='border-b-2 border-[#01044c] mb-6'>
-        <h2 className="font-semibold flex items-center gap-2 text-xl text-heading text-start">शासनभक्ति की अंजलि</h2>
-        <p className="font-body text-sm font-semibold text-content mb-4">
+        <h2 className="font-semibold flex items-center gap-2 text-xl text-[#01044c] text-start">शासनभक्ति की अंजलि</h2>
+        <p className="font-body text-sm font-semibold text-[#01044c] mb-4">
           अध्यात्म परिवार द्वारा किए जा रहे शासन सेवा - सुरक्षा के कार्यों की झलक
         </p>
       </div>
@@ -138,7 +215,7 @@ const PhotoGalleryHome = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={goToPrevious}
-                  className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white/60  rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                  className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white/60 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 z-10"
                   aria-label="Previous image"
                 >
                   <FaChevronLeft/>
@@ -146,16 +223,11 @@ const PhotoGalleryHome = () => {
 
                 <button
                   onClick={goToNext}
-                  className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white/60  rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                  className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white/60 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110 z-10"
                   aria-label="Next image"
                 >
                   <FaChevronRight/>
                 </button>
-
-                {/* Image Counter */}
-                {/* <div className="absolute top-3 right-3 bg-black/60 text-heading px-3 py-1 rounded-full text-sm font-medium">
-                  {selectedImageIndex + 1} / {latestPhotos.length}
-                </div> */}
               </div>
 
               {/* Navigation Dots */}
@@ -164,22 +236,12 @@ const PhotoGalleryHome = () => {
               {/* Thumbnail Preview */}
               <div className="flex justify-center space-x-2 mt-4 px-4">
                 {latestPhotos.map((photo, index) => (
-                  <button
+                  <ThumbnailButton
                     key={photo.id}
-                    onClick={() => goToSlide(index)}
-                    className={`relative w-16 h-12 rounded-md overflow-hidden transition-all duration-300 ${
-                      index === selectedImageIndex
-                        ? 'ring-2 ring-[#01044c]/80 ring-offset-2 scale-110'
-                        : 'opacity-60 hover:opacity-100'
-                    }`}
-                  >
-                    <img
-                      src={photo.imageUrl}
-                      alt={`Thumbnail ${index + 1}`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </button>
+                    photo={photo}
+                    index={index}
+                    isSelected={index === selectedImageIndex}
+                  />
                 ))}
               </div>
             </div>

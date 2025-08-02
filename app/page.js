@@ -42,8 +42,8 @@ const LandingPage = () => {
         </div>
       </div>
       <LogoDescription />
-      <SbaHomePage />
       <VibhagDescription />
+      <SbaHomePage />
       <Letters />
       <RegisterForm />
     </div>

@@ -56,49 +56,19 @@ const ImageCarousel = () => {
             className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-500 ease-in-out
               ${currentSlide === index ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="relative h-full  drop-shadow-2xl py-6 w-auto max-w-full overflow-hidden">
+            <div className="relative h-full drop-shadow-2xl p-4 sm:py-6 w-full flex items-center justify-center">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="object-contain h-full w-auto max-w-full mx-auto"
-                style={{ aspectRatio: "2/3" }}
+                className="object-contain max-h-full w-auto max-w-full mx-auto"
               />
             </div>
           </div>
         ))}
       </div>
-
-      {/* Navigation Arrows */}
-      {/* <button
-        onClick={goToPrevSlide}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200"
-      >
-        <IoIosArrowBack />
-      </button>
-      <button
-        onClick={goToNextSlide}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200"
-      >
-        <IoIosArrowForward />
-      </button> */}
-
-      {/* Dots Navigation */}
-      {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 
-              ${
-                currentSlide === index ? "bg-white" : "bg-white bg-opacity-50"
-              }`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };
-
 const CopySelector = ({
   label = "તમે આ પુસ્તકની કેટલી નકલો ઓર્ડર કરવા માંગો છો?",
   value,
@@ -223,7 +193,7 @@ export default function RavanniBhitarmaForm() {
     <div className="min-h-screen w-full flex flex-col items-center justify-center py-0 md:py-8 bg-gray-100">
            <div className="text-center mb-6 sm:mb-10">
         <div className="inline-block">
-          <h1 className="font-anek  text-2xl sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+          <h1 className="font-anek  text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
              રાવણની ભીતરમાં
           </h1>
           <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
@@ -234,16 +204,11 @@ export default function RavanniBhitarmaForm() {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1  gap-12 sm:gap-0 lg:grid-cols-2">
             {/* Image Section */}
-            <div className=" flex items-center justify-center">
-              <div className="h-full w-full">
-                {/* <div className="flex flex-col bg-gray-300 font-anek items-center py-2 justify-center text-center">
-                  <h1 className="text-2xl font-bold text-gray-800">
-                    રાવણની ભીતરમાં
-                  </h1>
-                </div> */}
-                <ImageCarousel />
-              </div>
-            </div>
+           <div className="h-96 sm:h-[500px] lg:h-auto flex items-center justify-center">
+  <div className="h-full w-full">
+    <ImageCarousel />
+  </div>
+</div>
 
             {/* Form Section */}
             <div className="relative p-6 bg-white">
@@ -431,7 +396,6 @@ export default function RavanniBhitarmaForm() {
                 <div className="flex mt-6 justify-between items-center">
                   <button
                     className="rounded-sm font-sans uppercase text-sm font-medium px-5 py-2 bg-red-500 text-white hover:bg-red-600 transition-colors"
-                    htmlType="button"
                     onClick={onReset}
                   >
                     Reset
@@ -439,7 +403,6 @@ export default function RavanniBhitarmaForm() {
 
                   <button
                     className="rounded-sm text-sm font-sm uppercase font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
-                    htmlType="submit"
                     disabled={loading}
                   >
                     {loading ? (
