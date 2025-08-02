@@ -23,11 +23,11 @@ const ImageCarousel = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const images = [
-    "/Mahabharat1.png",
-    "/Mahabharat2.png",
-    "/Mahabharat3.png",
-    "/Mahabharat4.png",
-    "/Mahabharat5.png",
+    "/bookimages/Mahabharat1.png",
+    "/bookimages/Mahabharat2.png",
+    "/bookimages/Mahabharat3.png",
+    "/bookimages/Mahabharat4.png",
+    "/bookimages/Mahabharat5.png",
   ];
 
   useEffect(() => {
@@ -149,10 +149,16 @@ export default function MahabharatForm() {
   };
 
   return (
-    <div className=" sm:w-[100vw]  lg:h-[100vh] pt-4 sm:p-4 md:border flex flex-col justify-center">
-      <h1 className=" text-center sm:mb-8 mb-3 font-Anek text-gray-700 text-lg sm:text-xl font-bold ">
-        મહાભારત - જૈન ગ્રંથોના આલોકમાં (ભાગ ૧ થી ૫) (ગુજરાતી)
-      </h1>
+    <div className=" sm:w-[100vw]  lg:min-h-[100vh] pt-4 sm:p-4 md:border border-gray-300 flex flex-col justify-center">
+     <div className="text-center mb-6 sm:mb-10">
+        <div className="inline-block">
+          <h1 className="font-anek  text-2xl sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+            મહાભારત - જૈન ગ્રંથોના આલોકમાં
+          </h1>
+          <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
+          <p className="font-anek text-gray-600 text-lg mt-3">(ભાગ ૧ થી ૫) (ગુજરાતી)</p>
+        </div>
+      </div>
       <div className="container mx-auto max-w-[80rem] w-full grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         {/* Image Section - Hidden on small screens */}
         {/* <div className="hidden lg:block">
@@ -168,7 +174,7 @@ export default function MahabharatForm() {
         </div>
 
         {/* Form Section */}
-        <div className="relative p-4 bg-[#fffa] md:overflow-hidden mx-2 sm:border sm:p-4">
+        <div className="relative p-4 bg-[#fffa] md:overflow-hidden mx-2 sm:border border-gray-300 sm:p-4">
           <Form
             style={{ width: "" }}
             form={form}
@@ -178,7 +184,7 @@ export default function MahabharatForm() {
             <Row gutter={16}>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>મોબાઇલ નંબર/मोबाइल नंबर</b>}
+                  label={<b className="font-anek">મોબાઇલ નંબર/मोबाइल नंबर</b>}
                   name="मोबाइल नंबर"
                   rules={[
                     {
@@ -199,7 +205,7 @@ export default function MahabharatForm() {
               </Col>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>નામ/नाम</b>}
+                  label={<b className="font-anek">નામ/नाम</b>}
                   name="नाम"
                   rules={[
                     {
@@ -224,7 +230,7 @@ export default function MahabharatForm() {
             <Row gutter={16}>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>શહેર/शहर</b>}
+                  label={<b className="font-anek">શહેર/शहर</b>}
                   name="शहर"
                   rules={[
                     {
@@ -245,7 +251,7 @@ export default function MahabharatForm() {
               </Col>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>એડ્રેસ/एड्रेस</b>}
+                  label={<b className="font-anek">એડ્રેસ/एड्रेस</b>}
                   name="એડ્રેસ/एड्रेस"
                   rules={[
                     {
@@ -269,7 +275,7 @@ export default function MahabharatForm() {
             <Row gutter={16}>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>પિનકોડ/पिनकोड</b>}
+                  label={<b className="font-anek">પિનકોડ/पिनकोड</b>}
                   name="पिनकोड"
                   rules={[
                     {
@@ -290,7 +296,7 @@ export default function MahabharatForm() {
               </Col>
               <Col xs={24} md={12}>
                 <Form.Item
-                  label={<b>રાજ્ય/राज्य</b>}
+                  label={<b className="font-anek">રાજ્ય/राज्य</b>}
                   name="राज्य"
                   rules={[
                     {
@@ -309,7 +315,7 @@ export default function MahabharatForm() {
                   >
                     {states.map((state) => (
                       <Select.Option key={state.value} value={state.value}>
-                        <span className="font-Anek">
+                        <span className="font-anek">
                           {state.label} / {state.value}
                         </span>
                       </Select.Option>
@@ -323,7 +329,7 @@ export default function MahabharatForm() {
               <Col xs={24}>
                 <Form.Item
                   label={
-                    <b>
+                    <b className="font-anek">
                       આપને મહાભારત પુસ્તક ના ૫ ભાગનો આખો સેટ જરૂર છે કે પછી ફક્ત
                       પહેલો ભાગ?
                     </b>
@@ -343,10 +349,10 @@ export default function MahabharatForm() {
                   <Radio.Group>
                     <div className="space-y-0">
                       <Radio value="ભાગ ૧ થી ૫ નો સેટ" className="block">
-                        <span className="font-Anek">ભાગ ૧ થી ૫ નો સેટ</span>
+                        <span className="font-anek">ભાગ ૧ થી ૫ નો સેટ</span>
                       </Radio>
                       <Radio value="ફક્ત ભાગ - ૧" className="block">
-                        <span className="font-Anek">ફક્ત ભાગ - ૧</span>
+                        <span className="font-anek">ફક્ત ભાગ - ૧</span>
                       </Radio>
                     </div>
                   </Radio.Group>
@@ -354,9 +360,9 @@ export default function MahabharatForm() {
               </Col>
             </Row>
 
-            <div className="flex mt-0  justify-between items-center">
+            <div className="flex mt-6  justify-between items-center">
               <button
-                className="uppercase text-sm !rounded-sm px-4 py-[.4rem] !bg-red-500 !text-gray-100"
+                className="uppercase font-sans text-sm !rounded-sm px-4 py-[.4rem] !bg-red-500 !text-gray-100"
                 htmlType="button"
                 onClick={onReset}
               >
@@ -364,8 +370,7 @@ export default function MahabharatForm() {
               </button>
               {loading ? (
                 <button
-                  className="uppercase text-sm rounded-sm border border-greenish px-4 py-[.4rem] "
-                  htmlType="submit"
+                  className="uppercase font-sans text-sm rounded-sm  px-4 py-[.4rem] "
                 >
                   <Spin
                     className="text-white"
@@ -376,8 +381,7 @@ export default function MahabharatForm() {
                 </button>
               ) : (
                 <button
-                  className="!rounded-sm text-sm uppercase !bg-greenish px-4 py-[.4rem] !text-gray-100 "
-                  htmlType="submit"
+                  className="!rounded-sm font-sans text-sm uppercase !bg-green-700 px-4 py-[.4rem] !text-gray-100 "
                 >
                   
                   Submit

@@ -12,7 +12,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/udayanmantri.JPG"];
+  const images = ["/bookimages/udayanmantri.JPG"];
 
   useEffect(() => {
     if (!isHovered) {
@@ -116,7 +116,7 @@ const CopySelector = ({
 
   return (
     <div className="w-full space-y-3 my-[1.31rem]">
-      <Form.Item label={<b>{label}</b>} name="નકલ">
+      <Form.Item label={<b className="font-anek">{label}</b>} name="નકલ">
         <div className="flex items-center space-x-4">
           <button
             type="button"
@@ -221,7 +221,7 @@ export default function UdayanmantriForm() {
 
   return (
     <div className="min-h-screen w-full py-0 md:py-8 bg-gray-100 flex items-center justify-center">
-      {/* <div className="flex flex-col font-Anek items-center justify-center text-center p-4 mb-6">
+      {/* <div className="flex flex-col font-anek items-center justify-center text-center p-4 mb-6">
         <span className="text-base text-gray-600 font-semibold">તાસકમાં મસ્તક</span>
         <h1 className="text-5xl font-bold text-gray-800">ઉદયનમંત્રી</h1>
       </div> */}
@@ -232,7 +232,7 @@ export default function UdayanmantriForm() {
             {/* Image Section */}
             <div className=" pb-4 flex items-center justify-center h-[28rem]">
               <div className="h-full w-full">
-                <div className="flex flex-col  bg-golden/50 font-Anek items-center py-2 mb-2 justify-center text-center">
+                <div className="flex flex-col  bg-golden/50 font-anek items-center py-2 mb-2 justify-center text-center">
                   <h1 className="text-2xl font-bold text-gray-800">
                     તાસકમાં મસ્તક : ઉદયનમંત્રી
                   </h1>
@@ -247,7 +247,7 @@ export default function UdayanmantriForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>મોબાઇલ નંબર/मोबाइल नंबर</b>}
+                      label={<b className="font-anek">મોબાઇલ નંબર/मोबाइल नंबर</b>}
                       name="मोबाइल नंबर"
                       rules={[
                         {
@@ -276,7 +276,7 @@ export default function UdayanmantriForm() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>નામ/नाम</b>}
+                      label={<b className="font-anek">નામ/नाम</b>}
                       name="नाम"
                       rules={[
                         {
@@ -297,7 +297,7 @@ export default function UdayanmantriForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>અટક/उपनाम</b>}
+                      label={<b className="font-anek">અટક/उपनाम</b>}
                       name="उपनाम"
                       rules={[
                         {
@@ -315,7 +315,7 @@ export default function UdayanmantriForm() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>પિનકોડ/पिनकोड</b>}
+                      label={<b className="font-anek">પિનકોડ/पिनकोड</b>}
                       name="पिनकोड"
                       rules={[
                         {
@@ -347,7 +347,7 @@ export default function UdayanmantriForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>રાજ્ય/राज्य</b>}
+                      label={<b className="font-anek">રાજ્ય/राज्य</b>}
                       name="राज्य"
                       rules={[
                         {
@@ -363,7 +363,7 @@ export default function UdayanmantriForm() {
                       <Select placeholder="રાજ્ય/राज्य" className="rounded-md">
                         {states.map((state) => (
                           <Select.Option key={state.value} value={state.value}>
-                            <span className="font-Anek">
+                            <span className="font-anek">
                               {state.label} / {state.value}
                             </span>
                           </Select.Option>
@@ -394,7 +394,7 @@ export default function UdayanmantriForm() {
                 <Row gutter={16}>
                 <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>એડ્રેસ/एड्रेस</b>}
+                      label={<b className="font-anek">એડ્રેસ/एड्रेस</b>}
                       name="એડ્રેસ/एड्रेस"
                       rules={[
                         {
@@ -434,7 +434,7 @@ export default function UdayanmantriForm() {
                   </button>
 
                   <button
-                    className="rounded-sm text-sm font-medium px-5 py-2 bg-greenish text-white hover:bg-green-600 transition-colors"
+                    className="rounded-sm text-sm font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
                     htmlType="submit"
                     disabled={loading}
                   >

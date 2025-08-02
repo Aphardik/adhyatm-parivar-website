@@ -2,13 +2,13 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="bg-background text-heading font-body">
+    <div className="bg-whitey text-maroon font-body">
       {/* Header */}
-      <header className="bg-light-bg">
+      <header className="bg-lightpink">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-1 sm:mb-2">
                 जिनप्रतिमा आशातरा निवारण
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg text-content font-semibold">
@@ -23,7 +23,7 @@ const Page = () => {
       </header>
 
       {/* What is This Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
@@ -41,16 +41,16 @@ const Page = () => {
 
       {/* How It Works Section */}
       <section className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-light-bg font-heading text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+        {/* <div className="text-center mb-8 lg:mb-12">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-light-bg font-heading text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             समाधान
           </h3>
-        </div>
+        </div> */}
 
         <div className="py-8 flex flex-col sm:flex-row gap-6 ">
-          <div className=" bg-light-bg flex items-center justify-center border-l-4  border-secondary-color p-4 mx-auto max-w-4xl sm:p-6  rounded-2xl ">
+          <div className=" bg-lightyellow flex items-center justify-center border-l-4  border-darkyellow p-4 mx-auto max-w-4xl sm:p-6  rounded-2xl ">
             <div className="flex items-center justify-center space-x-4">
-              <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
+              <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                 इसके समाधान के लिए उनकी आशातना न हो उस प्रकार उनकी व्यवस्था के
                 लिए अध्यात्म परिवार सज्ज है।
               </p>

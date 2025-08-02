@@ -316,7 +316,7 @@ const Header = () => {
   return (
     <div className="fixed z-50  right-0 left-0 font-heading">
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-background">
+      <header className="sticky top-0 z-50 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -324,7 +324,7 @@ const Header = () => {
               <div className="flex items-center space-x-2">
                 <Link href={"/"} className="flex gap-4 items-center">
                   <img className="h-10" src="/logo.png" alt="" />
-                  <span className="text-lg uppercase text-heading">
+                  <span className="text-lg uppercase text-maroon">
                     <b>अध्यात्म &nbsp;&nbsp;&nbsp;परिवार</b>
                   </span>
                 </Link>
@@ -335,7 +335,7 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="/"
-                className={`${pathname=="/" && "text-secondary-color"} text-heading font-sans hover:text-secondary-color font-medium transition-colors`}
+                className={`${pathname=="/" && "text-black"} text-maroon font-sans hover:text-pink-600 font-medium transition-colors`}
               >
                 About us
               </a>
@@ -346,10 +346,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinmurti-vibhag") && "text-secondary-color"}  ${
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinmurti-vibhag") && "text-pink-600"}  ${
                     activeDropdown === "menu1"
-                      ? "text-secondary-color"
-                      : "text-heading"
+                      ? "text-pink-600"
+                      : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनमूर्ति विभाग</span>
@@ -367,10 +367,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinmandir-vihabg") && "text-secondary-color"}   ${
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinmandir-vihabg") && "text-pink-600"}   ${
                     activeDropdown === "menu2"
-                      ? "text-secondary-color"
-                      : "text-heading"
+                      ? "text-pink-600"
+                      : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनमंदिर विभाग</span>
@@ -387,10 +387,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinagam-vibhag") && "text-secondary-color"}    ${
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinagam-vibhag") && "text-pink-600"}    ${
                     activeDropdown === "menu3"
-                      ? "text-secondary-color"
-                      : "text-heading"
+                      ? "text-pink-600"
+                      : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनागम विभाग</span>
@@ -407,10 +407,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/adhyatm-vibhag") && "text-secondary-color"}  ${
+                  className={`flex items-center space-x-1 ${pathname.includes("/adhyatm-vibhag") && "text-pink-600"}  ${
                     activeDropdown === "menu4"
-                      ? "text-secondary-color"
-                      : "text-heading"
+                      ? "text-pink-600"
+                      : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>अध्यात्म विभाग</span>
@@ -427,7 +427,7 @@ const Header = () => {
             <div className="hidden md:flex items-center">
               <Link
                 href={"/pages/contactus"}
-                className="bg-secondary-color font-sans hover:bg-secondary-color/90 text-light px-6 py-2 rounded-full font-medium transition-colors"
+                className="bg-maroon font-sans hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors"
               >
                 Contact us
               </Link>
@@ -435,7 +435,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-md text-heading hover:text-content hover:bg-light-bg transition-colors"
+              className="md:hidden p-2 rounded-md text-maroon hover:text-content hover:bg-lightpink transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
@@ -449,7 +449,7 @@ const Header = () => {
 
         {/* Desktop Dropdown Menu - Animated Height */}
         <div
-          className={`absolute top-full left-0 w-full bg-background shadow-lg border-t z-40 overflow-y-scroll transition-all duration-300 ease-out ${
+          className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-scroll transition-all duration-300 ease-out ${
             activeDropdown
               ? "max-h-96 opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-2"
@@ -466,8 +466,8 @@ const Header = () => {
                     key={item.id}
                     onClick={handleMenuItemClick}
                     className={`p-4 rounded-lg ${
-                      item.link == pathname && "bg-secondary-color text-white"
-                    } bg-light-bg/80 hover:bg-lighten-bg hover:text-heading  transition-all duration-300 cursor-pointer group transform ${
+                      item.link == pathname && "bg-maroon text-white"
+                    } bg-lightpink/80 hover:bg-lightyellow hover:text-maroon  transition-all duration-300 cursor-pointer group transform ${
                       activeDropdown
                         ? "translate-y-0 opacity-100"
                         : "translate-y-4 opacity-0"
@@ -482,7 +482,7 @@ const Header = () => {
                       </span>
                       <div>
                         <h3 className="mb-1">{item.title}</h3>
-                        <p className="text-sm  leading-relaxed">
+                        <p className="text-sm leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -496,7 +496,7 @@ const Header = () => {
 
       {/* Mobile Menu - Animated Width */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-background transform transition-all duration-300 ease-out ${
+        className={`md:hidden fixed inset-0 z-50 bg-whitey transform transition-all duration-300 ease-out ${
           isMobileMenuOpen
             ? "translate-x-0 opacity-100"
             : "translate-x-full opacity-0"
@@ -506,13 +506,13 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Link href={"/"} className="flex gap-4 items-center">
               <img className="h-10" src="/logo.png" alt="" />
-              <span className="text-lg uppercase text-heading">
+              <span className="text-lg uppercase text-maroon">
                 <b>अध्यात्म &nbsp;&nbsp;&nbsp;परिवार</b>
               </span>
             </Link>
           </div>
           <button
-            className="p-2 rounded-md text-content hover:text-heading hover:bg-light-bg transition-colors"
+            className="p-2 rounded-md text-content hover:text-maroon hover:bg-lightpink transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <BiX className="w-6 h-6" />
@@ -522,14 +522,14 @@ const Header = () => {
         <div className="px-4 py-6 space-y-6">
           <a
             href="/"
-            className={`${pathname=="/" && "text-secondary-color"} block font-sans text-lg font-medium text-heading hover:text-secondary-color transition-colors`}
+            className={`${pathname=="/" && "text-pink-600"} block font-sans text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
           >
             About us
           </a>
 
           <div>
             <button
-              className={`${pathname.includes("/jinmurti-vibhag") && "text-secondary-color"} flex items-center justify-between w-full text-lg font-medium text-heading hover:text-secondary-color transition-colors`}
+              className={`${pathname.includes("/jinmurti-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu1")}
             >
               <span>जिनमूर्ति विभाग</span>
@@ -553,8 +553,8 @@ const Header = () => {
                     key={item.id}
                     onClick={handleMenuItemClick}
                     className={`flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-secondary-color text-white"
-                    } rounded-lg hover:bg-secondary-color/20 transition-all duration-300 transform ${
+                      item.link == pathname && "bg-maroon text-white"
+                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu1"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
@@ -568,7 +568,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className="text-heading mb-1">{item.title}</h3>
+                      <h3 className="mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                   </Link>
@@ -579,7 +579,7 @@ const Header = () => {
 
           <div>
             <button
-              className={`${pathname.includes("/jinmandir-vihabg") && "text-secondary-color"} flex items-center justify-between w-full text-lg font-medium text-heading hover:text-secondary-color transition-colors`}
+              className={`${pathname.includes("/jinmandir-vihabg") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu2")}
             >
               <span>जिनमंदिर विभाग</span>
@@ -603,8 +603,8 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-secondary-color text-white"
-                    } rounded-lg  hover:bg-secondary-color/20 transition-all duration-300 transform ${
+                      item.link == pathname && "bg-maroon text-white"
+                    } rounded-lg  hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu2"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
@@ -618,7 +618,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" text-heading mb-1">{item.title}</h3>
+                      <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                   </Link>
@@ -629,7 +629,7 @@ const Header = () => {
 
           <div>
             <button
-              className={`${pathname.includes("/jinagam-vibhag") && "text-secondary-color"} flex items-center justify-between w-full text-lg font-medium text-heading hover:text-secondary-color transition-colors`}
+              className={`${pathname.includes("/jinagam-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu3")}
             >
               <span>जिनागम विभाग</span>
@@ -653,8 +653,8 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-secondary-color text-white"
-                    } rounded-lg hover:bg-secondary-color/20 transition-all duration-300 transform ${
+                      item.link == pathname && "bg-maroon text-white"
+                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu3"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
@@ -668,7 +668,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" text-heading mb-1">{item.title}</h3>
+                      <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                   </Link>
@@ -679,7 +679,7 @@ const Header = () => {
 
           <div>
             <button
-              className={`${pathname.includes("/adhyatm-vibhag") && "text-secondary-color"} flex items-center justify-between w-full text-lg font-medium text-heading hover:text-secondary-color transition-colors`}
+              className={`${pathname.includes("/adhyatm-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu4")}
             >
               <span>अध्यात्म विभाग</span>
@@ -703,8 +703,8 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-secondary-color text-white"
-                    } rounded-lg hover:bg-secondary-color/20 transition-all duration-300 transform ${
+                      item.link == pathname && "bg-maroon text-white"
+                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu4"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
@@ -718,7 +718,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" text-heading mb-1">{item.title}</h3>
+                      <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                   </Link>
@@ -729,7 +729,7 @@ const Header = () => {
 
           <Link
             href={"/pages/contactus"}
-            className="w-full font-sans flex items-center justify-center bg-secondary-color hover:bg-secondary-color/90 text-light px-6 py-3 rounded-full font-medium transition-colors"
+            className="w-full font-sans flex items-center justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
           >
             Contact us
           </Link>

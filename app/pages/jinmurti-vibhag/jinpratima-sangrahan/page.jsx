@@ -2,16 +2,16 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="bg-background text-heading font-body">
+    <div className="bg-whitey text-maroon font-body">
       {/* Header */}
-      <header className="bg-light-bg">
+      <header className="bg-lightpink">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading mb-1 sm:mb-2">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-1 sm:mb-2">
                 प्राचीन जिनप्रतिमा संग्रहण
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium">
                 कार्य आरंभ : वि.सं. २०६८
               </p>
             </div>
@@ -20,10 +20,10 @@ const Page = () => {
       </header>
 
       {/* What is This Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-whitey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-4 sm:p-6">
-            <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
+            <p className="text-maroon text-lg lg:text-xl leading-relaxed text-center">
               जमीन से निकलने वाली प्रतिमाजी सरकारी म्यूज़ियम आदि अयोग्य स्थानों
               पर न चली जाएं अपितु योग्य स्थान पर उनकी पूजा हो सके, इसलिए उन
               प्रतिमाजी का शुद्धिकरण, यदि जरूरत हो तो लेप आदि करके योग्य स्थान
@@ -32,8 +32,8 @@ const Page = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4  py-8  sm:px-6 lg:px-8">
-          <div className="bg-lighten-bg border-secondary-color rounded-xl  border-l-4 p-4 lg:p-6">
-            <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
+          <div className="bg-lightyellow border-darkyellow rounded-xl  border-l-4 p-4 lg:p-6">
+            <p className="text-maroon text-lg lg:text-xl leading-relaxed text-center">
               साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
               जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म परिवार
               'सेतु' बन रहा है।
@@ -43,10 +43,10 @@ const Page = () => {
       </section>
 
       {/* Success Story Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 lg:mb-12">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               सफलता की कहानी
             </h3>
           </div>
@@ -55,10 +55,10 @@ const Page = () => {
             {/* Text Content */}
             <div className="order-2 sm:p-10 lg:order-1">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary-color/10 to-secondary-color/5 rounded-2xl"></div>
-                <div className="relative bg-light-bg border-l-4 border-secondary-color rounded-2xl shadow-lg p-8 lg:p-10">
+                <div className="absolute inset-0  rounded-2xl"></div>
+                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-10">
                   <div className="flex items-start space-x-4">
-                    <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
+                    <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                       डीसा के नजदीक खेत में से निकले अतिप्राचीन आदिनाथ दादा आज
                       श्री शांतिकनक जैन संघ, नानपुरा-सूरत जिनालय के महाराजा बनकर
                       शोभायमान हैं।
@@ -71,8 +71,8 @@ const Page = () => {
             {/* Illustrative Image */}
             <div className="order-1 sm:p-10 lg:order-2">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary-color/20 to-secondary-color/10 rounded-3xl transform rotate-3"></div>
-                <div className="relative bg-light-bg rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-3xl transform rotate-3"></div>
+                <div className="relative bg-lightyellow rounded-3xl shadow-2xl overflow-hidden border border-darkyellow transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     src="/jinmurti/jinpratima-sangrahan/img-1.25.png"
                     alt="Ancient Adinath deity now enshrined at Shri Shantikanak Jain Sangh, Nanpura-Surat"
@@ -88,8 +88,8 @@ const Page = () => {
             {/* Illustrative Image First (on large screens) */}
             <div className="order-1 lg:order-1 sm:p-10">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary-color/20 to-secondary-color/10 rounded-3xl transform -rotate-3"></div>
-                <div className="relative bg-light-bg rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                <div className="absolute inset-0  rounded-3xl transform -rotate-3"></div>
+                <div className="relative bg-lightpink rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     src="/jinmurti/jinpratima-sangrahan/img-1.26.png"
                     alt="Another success story"
@@ -103,10 +103,10 @@ const Page = () => {
             {/* Text Content */}
             <div className="order-2 lg:order-2 sm:p-10">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary-color/10 to-secondary-color/5 rounded-2xl"></div>
-                <div className="relative bg-light-bg border-l-4 border-secondary-color rounded-2xl shadow-lg p-8 lg:p-10">
+                <div className="absolute inset-0 rounded-2xl"></div>
+                <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-10">
                   <div className="flex items-start space-x-4">
-                    <p className="text-heading text-lg lg:text-xl leading-relaxed font-medium">
+                    <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                       यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि
                       रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान !
                       अतिप्राचीन धर्मनाथ दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के

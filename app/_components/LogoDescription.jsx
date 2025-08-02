@@ -117,7 +117,7 @@ const LogoDescription = () => {
             <div className="text-end">
               <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">धर्मचक्र</h2>
               <p className="text-base font-semibold text-content">
-                इस अवसर्पिणी के २४ तीर्थंकरो की याद दिलाते धर्मचक्र के २४ आरे !
+                इस अवसर्पिणी के २४ तीर्थंकरो की याद दिलाते धर्मचक्र के <br /> २४ आरे !
               </p>
             </div>
           </div>

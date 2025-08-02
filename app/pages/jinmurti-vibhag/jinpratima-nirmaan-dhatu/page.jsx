@@ -2,22 +2,23 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="mx-auto max-w-7xl font-body bg-background">
-      <header className="bg-light-bg ">
+    <div className="mx-auto max-w-7xl font-body bg-whitey">
+      <header className="bg-lightpink ">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">जिनप्रतिमा निर्माण : धातु...</h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-content font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०६४</p>
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">जिनप्रतिमा निर्माण : धातु...</h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon text-content font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०६४</p>
             </div>
           </div>
         </div>
       </header>
 
 
+<div className='px-2 sm:px-6'>
       <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
-        <div className="border-l-4 border-secondary-color rounded-md p-4 bg-lighten-bg">
-          <p className="text-xl leading-relaxed text-heading">
+        <div className=" p-4 ">
+          <p className="text-xl text-center leading-relaxed text-maroon">
             अध्यात्म शिल्पशाला की यह दूसरी उपलब्धि है। धातु की प्रतिमाजी के निर्माण में आधुनिक तकनीक 
             और पारंपरिक कलाकारी का संयोजन किया गया है।
           </p>
@@ -28,15 +29,15 @@ const Page = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="rounded-lg p-6  order-2 md:order-1">
-            <h3 className="font-bold text-xl sm:text-2xl text-heading mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
+            <h3 className="font-bold text-xl sm:text-2xl text-maroon mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
             <p className="text-base sm:text-lg leading-relaxed text-content mb-4">
               धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर 
-              <span className="text-secondary-color font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
+              <span className="text-darkpink font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
               से धातु की प्रतिमाजी का निर्माण किया जाता है।
             </p>
 
           </div>
-          <div className="bg-lighten-bg rounded-lg p-6 order-1 md:order-2">
+          <div className="bg-lightyellow rounded-lg p-6 order-1 md:order-2">
             <img
               src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.21.png"
               alt="Casting Process"
@@ -48,7 +49,7 @@ const Page = () => {
 
       <section className="my-12">
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="bg-lighten-bg rounded-lg p-6">
+          <div className="bg-lightyellow rounded-lg p-6">
             <div className="grid grid-cols-3 gap-4 mb-4">
               <img 
                 src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.22.png" 
@@ -68,7 +69,7 @@ const Page = () => {
             </div>
           </div>
           <div className=" rounded-lg p-6">
-            <h3 className="font-bold text-xl sm:text-2xl text-heading mb-4 font-heading">विशिष्ट डिटेलिंग</h3>
+            <h3 className="font-bold text-xl sm:text-2xl text-maroon mb-4 font-heading">विशिष्ट डिटेलिंग</h3>
             <p className="text-base sm:text-lg leading-relaxed text-content">
               ऐसे अद्भुत डिटेलिंग वाले प्रभुजी, सिद्धचक्रजी तथा परिकर उपलब्ध करवाने के लिए अध्यात्म परिवार सज्ज है! 
               प्रत्येक कलाकृति में सूक्ष्म से सूक्ष्म विवरण को सावधानीपूर्वक तैयार किया जाता है।
@@ -76,8 +77,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-
-    
+    </div>
     </div>
   )
 }

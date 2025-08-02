@@ -12,7 +12,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/ravanni-bhitarma.jpg"];
+  const images = ["/bookimages/ravanni-bhitarma.jpg"];
 
   useEffect(() => {
     if (!isHovered) {
@@ -56,7 +56,7 @@ const ImageCarousel = () => {
             className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-500 ease-in-out
               ${currentSlide === index ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="relative h-full  border-2 border-[#371A22] shadow-2xl max-h-[26rem] w-auto max-w-full overflow-hidden">
+            <div className="relative h-full  drop-shadow-2xl py-6 w-auto max-w-full overflow-hidden">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
@@ -116,7 +116,7 @@ const CopySelector = ({
 
   return (
     <div className="w-full space-y-3 my-[1.31rem]">
-      <Form.Item label={<b>{label}</b>} name="નકલ">
+      <Form.Item label={<b className="font-anek">{label}</b>} name="નકલ">
         <div className="flex items-center space-x-4">
           <button
             type="button"
@@ -220,23 +220,27 @@ export default function RavanniBhitarmaForm() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center py-0 md:py-8 bg-gray-100">
-      {/* <div className="flex flex-col font-Anek items-center justify-center text-center p-4 mb-6">
-        <span className="text-base text-gray-600 font-semibold">તાસકમાં મસ્તક</span>
-        <h1 className="text-5xl font-bold text-gray-800">ઉદયનમંત્રી</h1>
-      </div> */}
+    <div className="min-h-screen w-full flex flex-col items-center justify-center py-0 md:py-8 bg-gray-100">
+           <div className="text-center mb-6 sm:mb-10">
+        <div className="inline-block">
+          <h1 className="font-anek  text-2xl sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+             રાવણની ભીતરમાં
+          </h1>
+          <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
+        </div>
+      </div>
 
       <div className="container mx-auto max-w-6xl">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1  gap-12 sm:gap-0 lg:grid-cols-2">
             {/* Image Section */}
-            <div className=" pb-6 flex items-center justify-center h-[30rem]">
+            <div className=" flex items-center justify-center">
               <div className="h-full w-full">
-                <div className="flex flex-col bg-gray-300 font-Anek items-center py-2 justify-center text-center">
+                {/* <div className="flex flex-col bg-gray-300 font-anek items-center py-2 justify-center text-center">
                   <h1 className="text-2xl font-bold text-gray-800">
                     રાવણની ભીતરમાં
                   </h1>
-                </div>
+                </div> */}
                 <ImageCarousel />
               </div>
             </div>
@@ -247,7 +251,7 @@ export default function RavanniBhitarmaForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>મોબાઇલ નંબર/मोबाइल नंबर</b>}
+                      label={<b className="font-anek">મોબાઇલ નંબર/मोबाइल नंबर</b>}
                       name="मोबाइल नंबर"
                       rules={[
                         {
@@ -276,7 +280,7 @@ export default function RavanniBhitarmaForm() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>નામ/नाम</b>}
+                      label={<b className="font-anek">નામ/नाम</b>}
                       name="नाम"
                       rules={[
                         {
@@ -297,7 +301,7 @@ export default function RavanniBhitarmaForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>અટક/उपनाम</b>}
+                      label={<b className="font-anek">અટક/उपनाम</b>}
                       name="उपनाम"
                       rules={[
                         {
@@ -315,7 +319,7 @@ export default function RavanniBhitarmaForm() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>પિનકોડ/पिनकोड</b>}
+                      label={<b className="font-anek">પિનકોડ/पिनकोड</b>}
                       name="पिनकोड"
                       rules={[
                         {
@@ -347,7 +351,7 @@ export default function RavanniBhitarmaForm() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>રાજ્ય/राज्य</b>}
+                      label={<b className="font-anek">રાજ્ય/राज्य</b>}
                       name="राज्य"
                       rules={[
                         {
@@ -363,7 +367,7 @@ export default function RavanniBhitarmaForm() {
                       <Select placeholder="રાજ્ય/राज्य" className="rounded-md">
                         {states.map((state) => (
                           <Select.Option key={state.value} value={state.value}>
-                            <span className="font-Anek">
+                            <span className="font-anek">
                               {state.label} / {state.value}
                             </span>
                           </Select.Option>
@@ -373,7 +377,7 @@ export default function RavanniBhitarmaForm() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>શહેર/शहर</b>}
+                      label={<b className="font-anek">શહેર/शहर</b>}
                       name="शहर"
                       rules={[
                         {
@@ -394,7 +398,7 @@ export default function RavanniBhitarmaForm() {
                 <Row gutter={16}>
                 <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b>એડ્રેસ/एड्रेस</b>}
+                      label={<b className="font-anek">એડ્રેસ/एड्रेस</b>}
                       name="એડ્રેસ/एड्रेस"
                       rules={[
                         {
@@ -426,7 +430,7 @@ export default function RavanniBhitarmaForm() {
 
                 <div className="flex mt-6 justify-between items-center">
                   <button
-                    className="rounded-sm text-sm font-medium px-5 py-2 bg-red-500 text-white hover:bg-red-600 transition-colors"
+                    className="rounded-sm font-sans uppercase text-sm font-medium px-5 py-2 bg-red-500 text-white hover:bg-red-600 transition-colors"
                     htmlType="button"
                     onClick={onReset}
                   >
@@ -434,7 +438,7 @@ export default function RavanniBhitarmaForm() {
                   </button>
 
                   <button
-                    className="rounded-sm text-sm font-medium px-5 py-2 bg-greenish text-white hover:bg-green-600 transition-colors"
+                    className="rounded-sm text-sm font-sm uppercase font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
                     htmlType="submit"
                     disabled={loading}
                   >
