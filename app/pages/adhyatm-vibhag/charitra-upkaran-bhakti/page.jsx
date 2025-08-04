@@ -1,6 +1,11 @@
+import CounterStatsUI from "@/app/_components/StatData";
 import React from "react";
 
 const Page = () => {
+           const statsData = [
+    { count: "09", label: "कुल उपकरण", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+
+  ];
   return (
     <div className="mx-auto max-w-7xl font-body bg-background">
       <header className="bg-light-bg">
@@ -142,6 +147,7 @@ const Page = () => {
 
         </div>
       </section>
+        <CounterStatsUI statsData={statsData}/>
     </div>
   );
 };

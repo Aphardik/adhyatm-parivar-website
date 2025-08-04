@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Page = () => {
+  
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       <header className="bg-lightpink ">
@@ -77,6 +78,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+
     </div>
     </div>
   )

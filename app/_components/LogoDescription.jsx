@@ -92,7 +92,7 @@ const LogoDescription = () => {
           </p>
         </div>
 
-        <div className="flex jus">
+        <div className="flex justify-center">
           {/* Left column */}
           <div className="w-1/3 flex flex-col justify-between pr-4">
             <div className="text-end mb-4">

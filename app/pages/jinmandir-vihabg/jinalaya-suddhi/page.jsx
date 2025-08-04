@@ -1,6 +1,12 @@
+import CounterStatsUI from "@/app/_components/StatData";
 import React from "react";
 
 const Page = () => {
+  const statsData = [
+    { count: "381", label: "कुल जिनालयों का शुद्धिकरण", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    { count: "85", label: "कुल उपाश्रय को शुद्धिकरण", color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "3.5Cr +", label: "अध्यात्म परिवार द्वारा सद्व्यय", color: "bg-gradient-to-b from-blue-400 to-blue-600" }
+  ];
   return (
     <div className="mx-auto font-body bg-background">
       {/* Header */}
@@ -91,6 +97,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <CounterStatsUI statsData={statsData}/>
     </div>
   );
 };

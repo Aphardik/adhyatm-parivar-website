@@ -37,15 +37,15 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen max-w-7xl bg-whitey px-4 sm:px-6">
       {/* Header */}
-      <div className="bg-background border-b">
+      <div className="bg-lightpink">
         <div className="container mx-auto py-6">
           <div className="text-center">
-            <h1 className="text-2xl font-heading font-bold text-heading mb-2">
+            <h1 className="text-2xl font-heading font-bold text-[#01044c] mb-2">
               अध्यात्म परिवार
             </h1>
-            <p className="text- font-body text-content">संपर्क विवरण</p>
+            <p className="text- font-body text-[#01044c]">संपर्क विवरण</p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ const ContactPage = () => {
             {locations.map((location, index) => (
               <div 
                 key={index}
-                className={`bg-light-bg/40 border border-gray-400 transition-all duration-300 cursor-pointer ${
+                className={`bg-lightpink/40 border border-gray-300 transition-all duration-300 cursor-pointer ${
                   selectedLocation === index ? 'shadow-sm' : ''
                 }`}
                 onClick={() => setSelectedLocation(index)}
@@ -70,7 +70,7 @@ const ContactPage = () => {
                 <div className={`h-1 ${selectedLocation === index ? 'bg-foreground' : ''}`}></div>
                 <div className="p-[1.775rem]">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-heading font-bold text-content">{location.city}</h3>
+                    <h3 className="text-xl font-heading font-bold text-[#01044c]">{location.city}</h3>
                     {/* <FaChevronRight className={`text-gray-600 transition-transform duration-300 ${
                       selectedLocation === index ? 'rotate-90' : ''
                     }`} size={16} /> */}
@@ -78,15 +78,15 @@ const ContactPage = () => {
                   
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <FaMapMarkerAlt className="text-content mt-1 flex-shrink-0" size={16} />
-                      <p className="font-body text-heading text-sm leading-relaxed">{location.address}</p>
+                      <FaMapMarkerAlt className="text-[#01044c] mt-1 flex-shrink-0" size={16} />
+                      <p className="font-body text-[#01044c] text-sm leading-relaxed">{location.address}</p>
                     </div>
                     
                     <div className="flex items-center space-x-3">
-                      <FaPhone className="text-content flex-shrink-0" size={16} />
+                      <FaPhone className="text-[#01044c] flex-shrink-0" size={16} />
                       <a 
                         href={`tel:${location.phone}`}
-                        className="font-body text-heading font-semibold hover:text-heading transition-colors"
+                        className="font-body text-[#01044c] font-semibold hover:text-[#01044c] transition-colors"
                       >
                         {location.phoneDisplay}
                       </a>
@@ -99,11 +99,11 @@ const ContactPage = () => {
 
           {/* Map Section */}
           <div className="lg:col-span-2">
-            <div className="bg-background border border-gray-400">
+            <div className="bg-whitey border border-gray-300">
               <div className={`h-1 bg-foreground`}></div>
-              <div className="p-6">
+              <div className="p-[1.84rem]">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-heading font-bold text-heading">
+                  <h3 className="text-xl font-heading font-bold text-[#01044c]">
                     {locations[selectedLocation].city}
                   </h3>
 
@@ -122,14 +122,14 @@ const ContactPage = () => {
                   ></iframe>
                 </div>
                 
-                <div className="mt-6 p-4 bg-background ">
-                  <h4 className="font-heading font-bold text-heading mb-2">{locations[selectedLocation].title}</h4>
-                  <p className="font-body text-heading text-sm mb-2">{locations[selectedLocation].address}</p>
+                <div className="mt-6 p-4 bg-whitey ">
+                  <h4 className="font-heading font-bold text-[#01044c] mb-2">{locations[selectedLocation].title}</h4>
+                  <p className="font-body text-[#01044c] text-sm mb-2">{locations[selectedLocation].address}</p>
                   <div className="flex items-center space-x-2">
-                    <FaPhone className="text-content" size={14} />
+                    <FaPhone className="text-[#01044c]" size={14} />
                     <a 
                       href={`tel:${locations[selectedLocation].phone}`}
-                      className="font-body text-content font-semibold hover:text-heading transition-colors"
+                      className="font-body text-[#01044c] font-semibold hover:text-[#01044c] transition-colors"
                     >
                       {locations[selectedLocation].phoneDisplay}
                     </a>

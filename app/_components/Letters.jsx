@@ -147,9 +147,9 @@ export default function TestimonialSlider() {
   const activeDotIndex = (currentGroup - 1 + totalGroups) % totalGroups;
 
   return (
-    <div className='max-w-7xl mx-auto pt-20'>
+    <div className='max-w-7xl mx-auto pt-20 px-8'>
       <img src="/6.jpg" alt="" />
-      <div className="font-body p-8">
+      <div className="font-body py-8">
         <div className="mx-auto">
           <h1 className="text-2xl sm:text-3xl font-heading font-bold text-center text-[#01044c] mb-12">
             प्रतिभाव पत्रों में से कुछ चुनिंदा प्रसादी...

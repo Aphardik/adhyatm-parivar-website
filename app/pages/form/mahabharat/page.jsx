@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { states } from "../../../data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-// import { BorderBeam} from "../../../_components/magicui/border-beam";
+import SubmissionPopup from "../../../_components/SubmissionPopup"; 
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -115,10 +115,15 @@ const ImageCarousel = () => {
 export default function MahabharatForm() {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [popupStatus, setPopupStatus] = useState("loading");
   const router = useRouter();
 
   const onFinish = async (values) => {
     console.log("Form values: ", values);
+
+    setPopupVisible(true);
+    setPopupStatus("loading");
 
     try {
       setLoading(true);
@@ -129,23 +134,43 @@ export default function MahabharatForm() {
 
       if (response.status === 200) {
         console.log("Response sent successfully:", response.data);
-        message.success("Form submitted successfully!");
+        
+        setPopupStatus("success");
+        
+        // Reset form
         form.resetFields();
+        
       } else {
         console.log("Unexpected response status:", response.status);
-        message.error("There was an issue submitting the form.");
+        setPopupStatus("error");
       }
     } catch (error) {
       console.log("Error sending response:", error);
-      message.error(error.response.data.message);
+      
+      setPopupStatus("error");
+      
+      // Show detailed error message if available
+      if (error.response?.data?.message) {
+        message.error(error.response.data.message);
+      }
     } finally {
       setLoading(false);
-      router.push("/pages/success");
     }
   };
 
   const onReset = () => {
     form.resetFields();
+  };
+
+  const handlePopupClose = () => {
+    setPopupVisible(false);
+    setPopupStatus("loading"); 
+  };
+
+  const handleSuccessOk = () => {
+    setPopupVisible(false);
+    setPopupStatus("loading");
+    router.push("/"); 
   };
 
   return (
@@ -160,15 +185,6 @@ export default function MahabharatForm() {
         </div>
       </div>
       <div className="container mx-auto max-w-[80rem] w-full grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-        {/* Image Section - Hidden on small screens */}
-        {/* <div className="hidden lg:block">
-          <img
-            src="/Mahabharat.jpg"
-            alt="Mahabharat"
-            className="w-full h-full object-cover "
-          />
-        </div> */}
-
         <div className="relative">
           <ImageCarousel />
         </div>
@@ -363,36 +379,36 @@ export default function MahabharatForm() {
             <div className="flex mt-6  justify-between items-center">
               <button
                 className="uppercase font-sans text-sm !rounded-sm px-4 py-[.4rem] !bg-red-500 !text-gray-100"
-                htmlType="button"
+                type="button"
                 onClick={onReset}
               >
                 Reset
               </button>
-              {loading ? (
-                <button
-                  className="uppercase font-sans text-sm rounded-sm  px-4 py-[.4rem] "
-                >
-                  <Spin
-                    className="text-white"
-                    spinning={loading}
-                    tip="Submitting..."
-                  ></Spin>{" "}
-                  Submit
-                </button>
-              ) : (
-                <button
-                  className="!rounded-sm font-sans text-sm uppercase !bg-green-700 px-4 py-[.4rem] !text-gray-100 "
-                >
-                  
-                  Submit
-                </button>
-              )}
+              
+              <button
+                type="submit"
+                disabled={loading}
+                className="!rounded-sm font-sans text-sm uppercase !bg-green-700 px-4 py-[.4rem] !text-gray-100 disabled:bg-gray-400"
+              >
+                Submit
+              </button>
             </div>
           </Form>
-          {/* <BorderBeam duration={8} size={300} /> */}
         </div>
-      
       </div>
+
+      {/* Submission Popup */}
+      <SubmissionPopup
+        visible={popupVisible}
+        status={popupStatus}
+        onClose={handlePopupClose}
+        onSuccess={handleSuccessOk}
+        title="Form Submission"
+        loadingText="Submitting your form..."
+        successText="Form submitted successfully!"
+        errorText="Failed to submit form. Please try again."
+        showAutoClose={false}
+      />
     </div>
   );
 }

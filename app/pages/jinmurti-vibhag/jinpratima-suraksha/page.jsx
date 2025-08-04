@@ -582,9 +582,17 @@
 
 
 import React from "react";
+import CounterStatsUI from "@/app/_components/StatData"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const Page = () => {
+   const statsData = [
+    { count: "653", label: "कुल संघ जिनालय", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    { count: "12002", label: " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा", color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "4865", label: " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा", color: "bg-gradient-to-b from-teal-400 to-teal-600" },
+    { count: "1Cr +", label: "श्रीसंघ द्वारा सद्व्यय", color: "bg-gradient-to-b from-blue-400 to-blue-600" },
+    { count: "3.5Cr +", label: "अध्यात्म परिवार द्वारा सद्व्यय", color: "bg-gradient-to-b from-blue-400 to-blue-600" }
+  ];
   return (
     <div className="bg-whitey text-maroon  font-body">
       {/* Header */}
@@ -826,7 +834,7 @@ const Page = () => {
       </section>
 
             {/* Section 3 - Updated सौभाग्य का सीमाचिह्न section */}
-      <div className="min-h-screen bg-whitey py-8 sm:py-12 lg:py-16">
+      <div className=" bg-whitey py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto  max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -1162,6 +1170,7 @@ const Page = () => {
         </div>
       </section>
 
+<CounterStatsUI statsData={statsData}/>
     </div>
     </div>
   );
