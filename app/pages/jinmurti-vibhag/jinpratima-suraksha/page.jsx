@@ -584,6 +584,7 @@
 import React from "react";
 import CounterStatsUI from "@/app/_components/StatData"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Page = () => {
    const statsData = [
@@ -651,7 +652,7 @@ const Page = () => {
               <div className="order-2 lg:order-1">
                 <div className="bg-whitey rounded-sm  overflow-hidden">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.1.png"
+                    src="/jinmurti/jinpratima-suraksha/img-1.1.jpg"
                     alt="Damaged Statue"
                     className="w-full h-64 sm:h-80 object-cover"
                   />
@@ -697,9 +698,9 @@ const Page = () => {
               <div className="order-2 lg:order-1">
                 <div className="bg-whitey rounded-sm  overflow-hidden">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.3.png"
+                    src="/jinmurti/jinpratima-suraksha/img-1.3.jpeg"
                     alt="Damaged Parts"
-                    className="w-full h-64 sm:h-80 object-cover"
+                    className="w-full h-64 sm:h-80 object-contain"
                   />
                 </div>
               </div>
@@ -997,7 +998,7 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="flex flex-col justify-center space-y-4">
-                      <div className="bg-whitey p-4 rounded-lg border-l-4 border-light-bg">
+                      <div className="bg-whitey p-4 rounded-lg ">
                         <p className="font-semibold text-maroon">
                           अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड
                           पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।
@@ -1019,48 +1020,10 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Section 4: Solutions */}
-      <section className="py-8 sm:py-12 lg:py-16 ">
-        <div className="mx-auto  max-w-7xl">
-          <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              ये तो हुई समस्या, परन्तु समाधान? यह रहा...
-            </h2>
-          </div>
+<CounterStatsUI statsData={statsData}/>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-8">
-            <div className="bg-lightyellow rounded-sm  p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-maroon">
-                प्रत्येक पूजक का एक संकल्प:
-              </h3>
-              <div className=" rounded-sm p-4 sm:p-6 space-y-3">
-                <p className="font-medium text-lg text-maroon">
-                  'शासन की धरोहर की सुरक्षा के लिए रोज १ मिनट अर्पण करूंगा'।
-                </p>
-                <p className="font-medium text-lg text-maroon">
-                  मै अंगलुंछ्ने से अपने प्रभु को सूखा कर ही पूजा करूंगा।
-                </p>
-              </div>
-            </div>
-            <div className="bg-lightyellow rounded-sm  p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-maroon">
-                भविष्य का नुकसान रुकेगा:
-              </h3>
-              <div className=" rounded-sm p-4 sm:p-6 space-y-3">
-                <p className="font-medium text-maroon text-base sm:text-lg leading-relaxed">
-                  अध्यात्म परिवार ने टिका निकाल कर प्रतिमाजी का लेप-ओप करने के
-                  लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस हमें
-                  ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ
-                  दीजिये-दिलवाइये।
-                </p>
-                <p className="font-medium text-maroon text-base sm:text-lg">
-                  मै अंगलुंछ्ने से अपने प्रभु को सूखा कर ही पूजा करूंगा।
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Section 4: Solutions */}
+     
 
       {/* Section 5: Work Done - Success Stories */}
       <section className="py-8 sm:py-12 lg:py-16 bg-whitey">
@@ -1074,7 +1037,7 @@ const Page = () => {
           <div className="bg-lightyellow rounded-sm mb-8  overflow-hidden hover: transition-shadow">
             <div className="h-full bg-lightyellow flex items-center justify-center">
               <img
-                src="/jinmurti/jinpratima-suraksha/img-1.6.png"
+                src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
                 alt="Work Done"
                 className="w-full h-full object-cover"
               />
@@ -1169,8 +1132,66 @@ const Page = () => {
           </div>
         </div>
       </section>
+       <section className="py-8 sm:py-12 lg:py-16 ">
+        <div className="mx-auto  max-w-7xl">
+          <div className="text-center mb-8">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+             प्रत्येक पूजक का एक संकल्प:
+            </h2>
+          </div>
 
-<CounterStatsUI statsData={statsData}/>
+          <div className="grid md:grid-cols-1 gap-8 lg:gap-8">
+            <div className="bg-lightyellow rounded-sm  p-6 sm:p-8">
+              {/* <h3 className="text-xl sm:text-2xl font-semibold font-heading mb-4 text-maroon">
+                प्रत्येक पूजक का एक संकल्प:
+              </h3> */}
+
+
+               <div className="bg-lightyellow rounded-sm ">
+            
+            <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
+            'शासन की धरोहर की सुरक्षा के लिए रोज १ मिनट अर्पण करूंगा'।
+             
+            </p>
+             <div className="flex items-center justify-center my-6">
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+              <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+            </div>
+            <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
+           
+             मै अंगलुंछ्ने से अपने प्रभु को सूखा कर ही पूजा करूंगा।
+            </p>
+             <div className="flex items-center justify-center my-6">
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+              <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+            </div>
+          </div>
+
+            </div>
+           <div className="bg-lightyellow rounded-sm p-6 sm:p-8">
+      <h3 className="text-xl text-center sm:text-2xl font-semibold font-heading mb-4 text-maroon">
+        भविष्य का नुकसान रुकेगा:
+      </h3>
+      <div className="rounded-sm max-w-4xl mx-auto p-4 sm:p-6 space-y-3">
+        <p className="font-medium text-center text-maroon text-base sm:text-lg leading-relaxed">
+          अध्यात्म परिवार ने टिका निकाल कर प्रतिमाजी का लेप-ओप करने के
+          लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस हमें
+          ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ
+          दीजिये-दिलवाइये।
+        </p>
+        <div className="mt-8 text-center">
+          <Link href={"/pages/contactus"} className="bg-maroon hover:bg-red-900 text-white font-semibold py-3 px-6 rounded-sm transition-colors duration-200">
+            संपर्क करें
+          </Link>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+      </section>
+
     </div>
     </div>
   );

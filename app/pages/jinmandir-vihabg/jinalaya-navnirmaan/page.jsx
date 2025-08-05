@@ -151,7 +151,7 @@ export default function TempleConstructionPage() {
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmandir/jinalaya-navnirmaan/img-2.12.png"
+              src="/jinmandir/jinalaya-navnirmaan/img-2.12.jpg"
               alt="स्टोन ब्लॉक"
               className="w-full h-48 object-contain rounded-lg mb-4"
             />
@@ -161,7 +161,7 @@ export default function TempleConstructionPage() {
           </div>
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmandir/jinalaya-navnirmaan/img-2.13.png"
+              src="/jinmandir/jinalaya-navnirmaan/img-2.13.jpg"
               alt="अंबाजी माइन की खरीदी"
               className="w-full h-48 object-contain rounded-lg mb-4"
             />
@@ -173,7 +173,7 @@ export default function TempleConstructionPage() {
 
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmandir/jinalaya-navnirmaan/img-2.14.png"
+              src="/jinmandir/jinalaya-navnirmaan/img-2.14.jpg"
               alt="स्टोन ब्लॉक"
               className="w-full h-48 object-contain rounded-lg mb-4"
             />
@@ -184,7 +184,7 @@ export default function TempleConstructionPage() {
 
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmandir/jinalaya-navnirmaan/img-2.15.png"
+              src="/jinmandir/jinalaya-navnirmaan/img-2.15.jpg"
               alt="विदेशी पाषाण"
               className="w-full h-48 object-contain rounded-lg mb-4"
             />
@@ -206,7 +206,7 @@ export default function TempleConstructionPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
                 <img
-                  src="/jinmandir/jinalaya-navnirmaan/img-2.16.png"
+                  src="/jinmandir/jinalaya-navnirmaan/img-2.16.jpg"
                   alt="जैसलमेर का स्टोन ब्लॉक"
                   className="w-full h-80 object-contain rounded-lg"
                 />
@@ -214,7 +214,7 @@ export default function TempleConstructionPage() {
               </div>
               <div className="text-center">
                 <img
-                  src="/jinmandir/jinalaya-navnirmaan/img-2.17.png"
+                  src="/jinmandir/jinalaya-navnirmaan/img-2.17.jpg"
                   alt="जैसलमेर का स्टोन ब्लॉक"
                   className="w-full h-80 object-contain rounded-lg"
                 />
@@ -246,7 +246,7 @@ export default function TempleConstructionPage() {
             </div> */}
             <div className="text-center">
               <img
-                src="/jinmandir/jinalaya-navnirmaan/img-2.18.png"
+                src="/jinmandir/jinalaya-navnirmaan/img-2.18.jpg"
                 alt="CNC डायमंड वायर प्रोफाइल मशीन"
                 className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
               />
@@ -256,7 +256,7 @@ export default function TempleConstructionPage() {
             </div>
             <div className="text-center">
               <img
-                src="/jinmandir/jinalaya-navnirmaan/img-2.19.png"
+                src="/jinmandir/jinalaya-navnirmaan/img-2.19.jpg"
                 alt="पिलर निर्माण"
                 className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
               />
@@ -266,7 +266,7 @@ export default function TempleConstructionPage() {
             </div>
             <div className="text-center">
               <img
-                src="/jinmandir/jinalaya-navnirmaan/img-2.20.png"
+                src="/jinmandir/jinalaya-navnirmaan/img-2.20.jpg"
                 alt="एक्सीस प्रीफाइल मशीन"
                 className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
               />
@@ -332,9 +332,9 @@ export default function TempleConstructionPage() {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lighten-bg rounded-lg p-6">
             <img
-              src="/jinmandir/jinalaya-navnirmaan/img-2.24.png"
+              src="/jinmandir/jinalaya-navnirmaan/img-2.24.jpeg"
               alt="कच्छ-रापर-गढ़वाली जिनालय कार्विंग"
-              className="w-full h-64 object-contain rounded-lg"
+              className="w-full bg-lightyellow sm:p-20 object-contain rounded-lg"
             />
           </div>
           <div className="bg-lighten rounded-lg p-6">

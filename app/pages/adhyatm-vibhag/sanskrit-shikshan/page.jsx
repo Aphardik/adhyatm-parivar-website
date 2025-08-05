@@ -1,6 +1,13 @@
+import CounterStatsUI from '@/app/_components/StatData';
 import React from 'react';
 
 const Page = () => {
+                 const statsData = [
+    { count: "225", label: "कुल छात्र",  color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    { count: "600", label: "कुल वर्ग घंटे",  color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "5L +", label: "अध्यात्म परिवार द्वारा सद्व्यय",  color: "bg-gradient-to-b from-teal-400 to-teal-600" },
+   
+  ];
   return (
     <div className="container  mx-auto font-body">
       {/* Header Section */}
@@ -34,7 +41,7 @@ const Page = () => {
         </div>
       </section>
 
-     
+      <CounterStatsUI statsData={statsData}/>
     </div>
   );
 };

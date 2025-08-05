@@ -163,7 +163,7 @@ const Page = () => {
           <div className="bg-lightyellow  rounded-lg p-6  order-1 md:order-2">
             <div className="flex items-center justify-center">
               <img
-                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.16.png"
+                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.16.jpg"
                 alt="3D स्कैन और एडिटिंग"
                 className="w-full h-64 object-contain rounded-lg"
               />
@@ -178,9 +178,9 @@ const Page = () => {
                 <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lightyellow rounded-lg p-6">
             <img
-              src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.181920.png"
+              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.181920.jpeg"
               alt="Process 3"
-              className="w-full h-64 object-contain filter grayscale rounded-lg"
+              className="w-full h-64 object-contain  rounded-lg"
             />
           </div>
           <div className="rounded-lg p-6">

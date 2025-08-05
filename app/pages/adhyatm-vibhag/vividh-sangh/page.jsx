@@ -1,3 +1,4 @@
+import CounterStatsUI from "@/app/_components/StatData";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
@@ -11,6 +12,10 @@ const Page = () => {
     "श्री धारिणी अध्यात्म भवन - वालकेश्वर, मुंबई",
     "साध्वी श्री सुलोचना श्रीजी श्राविका आराधना भवन - साबरमती, अहमदाबाद",
   ];
+
+                    const statsData = [
+    { count: "7.09Cr +", label: "व्यवस्था का खर्च, अन्य संघो/ट्रस्टों को दान तथा विविध अनुष्ठान खर्च आदि",  color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    ];
   return (
     <div className="container mx-auto font-body">
       {/* Header Section */}
@@ -555,6 +560,7 @@ const Page = () => {
         ))}
       </div>
     </div>
+     <CounterStatsUI statsData={statsData}/>
     </div>
   );
 };

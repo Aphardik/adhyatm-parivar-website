@@ -80,13 +80,13 @@ const Page = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-1.png" alt="तुफान क्षति 1" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-1.jpg" alt="तुफान क्षति 1" className="w-full h-96 object-cover rounded" />
           </div>
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-2.png" alt="तुफान क्षति 2" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-2.jpg" alt="तुफान क्षति 2" className="w-full h-96 object-cover rounded" />
           </div>
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-3.png" alt="तुफान क्षति 3" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-3.jpg" alt="तुफान क्षति 3" className="w-full h-96 object-cover rounded" />
           </div>
         </div>
       </section>
@@ -122,13 +122,13 @@ const Page = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-4.png" alt="सुधार कार्य 1" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-4.jpg" alt="सुधार कार्य 1" className="w-full h-96 object-cover rounded" />
           </div>
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-5.png" alt="सुधार कार्य 2" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-5.jpg" alt="सुधार कार्य 2" className="w-full h-96 object-cover rounded" />
           </div>
           <div className="bg-light-bg rounded-lg p-4">
-            <img src="/jinmandir/dev-bagicha/img-2.33-6.png" alt="सुधार कार्य 3" className="w-full h-96 object-cover rounded" />
+            <img src="/jinmandir/dev-bagicha/img-2.33-6.jpg" alt="सुधार कार्य 3" className="w-full h-96 object-cover rounded" />
           </div>
         </div>
       </section>
@@ -145,9 +145,9 @@ const Page = () => {
       <img src="/jinmandir/dev-bagicha/img-2.34-1.png" alt="" className='w-full h-auto' />
     </div>
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 items-center'>
-      <img src="/jinmandir/dev-bagicha/img-2.34-2.png" alt="" className='w-full h-auto' />
+      <img src="/jinmandir/dev-bagicha/img-2.34-2.jpg" alt="" className='w-full h-auto' />
       <img src="/jinmandir/dev-bagicha/img-2.34-3.png" alt="" className='w-full h-auto' />
-      <img src="/jinmandir/dev-bagicha/img-2.34-4.png" alt="" className='w-full h-auto' />
+      <img src="/jinmandir/dev-bagicha/img-2.34-4.jpg" alt="" className='w-full h-auto' />
     </div>
   </div>
 </section>

@@ -59,14 +59,14 @@ const Page = () => {
             <img
               src="/jinmandir/jinalaya-suddhi/img-2.11-1.png"
               alt="Jinalay Preservation"
-              className="w-full sm:h-64 object-contain rounded-lg"
+              className="w-full sm:h-64 object-cover rounded-lg"
             />
           </div>
           <div className=" order-2 md:order-2">
             <img
               src="/jinmandir/jinalaya-suddhi/img-2.11-2.png"
               alt="Jinalay Preservation"
-              className="w-full sm:h-64 object-contain rounded-lg"
+              className="w-full sm:h-64 object-cover rounded-lg"
             />
           </div>
           </div>
@@ -76,23 +76,23 @@ const Page = () => {
 
           <div className=" order-1 md:order-2">
             <img
-              src="/jinmandir/jinalaya-suddhi/img-2.10-1.png"
+              src="/jinmandir/jinalaya-suddhi/img-2.10-1.jpeg"
               alt="Jinalay Cleaning"
-              className="w-full sm:h-64 object-contain rounded-lg"
+              className="w-full sm:h-80 object-cover rounded-lg"
             />
           </div>
           <div className=" order-1 md:order-2">
             <img
-              src="/jinmandir/jinalaya-suddhi/img-2.10-2.png"
+              src="/jinmandir/jinalaya-suddhi/img-2.10-2.jpeg"
               alt="Jinalay Cleaning"
-              className="w-full sm:h-64 object-contain rounded-lg"
+              className="w-full sm:h-80 object-cover rounded-lg"
             />
           </div>
-          <div className=" p-6 order-1 md:order-2">
+          <div className="  order-1 md:order-2">
             <img
               src="/jinmandir/jinalaya-suddhi/img-2.10-3.png"
               alt="Jinalay Cleaning"
-              className="w-full sm:h-64 object-contain rounded-lg"
+              className="w-full sm:h-80 object-cover rounded-lg"
             />
           </div>
         </div>

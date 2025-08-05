@@ -55,17 +55,17 @@ const Page = () => {
               <img 
                 src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.22.png" 
                 alt="Detailed Idol" 
-                className="w-full h-32 object-contain filter grayscale rounded-lg" 
+                className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />
               <img 
-                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.23.png" 
+                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.23.jpg" 
                 alt="Symbol" 
-                className="w-full h-32 object-contain filter grayscale rounded-lg" 
+                className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />
               <img 
-                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.24.png" 
+                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.24.jpg" 
                 alt="Design" 
-                className="w-full h-32 object-contain filter grayscale rounded-lg" 
+                className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />
             </div>
           </div>

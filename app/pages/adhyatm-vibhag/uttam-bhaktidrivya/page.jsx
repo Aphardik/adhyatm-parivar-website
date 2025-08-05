@@ -1,6 +1,13 @@
+import CounterStatsUI from '@/app/_components/StatData';
 import React from 'react';
 
 const BhaktidravyShanshodhan = () => {
+                  const statsData = [
+    { count: "60", label: "कुल अंदाजन संशोधनीय औषधियां",  color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    { count: "08", label: " आज तक एकत्रित जल के नदियों की संख्या",  color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "120", label: "एकत्रित मिट्टी के तीर्थो की संख्या",  color: "bg-gradient-to-b from-teal-400 to-teal-600" },
+   
+  ];
   return (
     <div className="container mx-auto font-body">
       {/* Header Section */}
@@ -132,6 +139,7 @@ const BhaktidravyShanshodhan = () => {
           </div>
         </div>
       </section>
+       <CounterStatsUI statsData={statsData}/>
     </div>
   );
 };
