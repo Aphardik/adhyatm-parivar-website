@@ -4,12 +4,12 @@ const VibhagDescription = () => {
   const vibhags = [
     {
       title: "जिनमूर्ति विभाग",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ab magni commodi itaque voluptatibus blanditiis deserunt cum fugit quisquam earum?",
+      description: "समग्र भारत में रही प्राचीन से लेकर आधुनिक काल तक की सभी जिनप्रतिमाओं की सुरक्षा के लिए विज्ञानसिद्ध परंपरागत पद्धति से लेप - ऑप आदि कार्य। नई, सुंदर पाषाण एवं धातु प्रतिमाओ का निर्माण, प्रतिमाओं की अशतना का निवारण आदि।",
       icon: "/adhyatm-vibhag.jpg"
     },
     {
       title: "जिनमंदिर विभाग", 
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ab magni commodi itaque voluptatibus blanditiis deserunt cum fugit quisquam earum?",
+      description: "समग्र भारत के जिनमंदिरों के लिए लीकेज समस्या जैसी समस्याओं का निवारण, यथासंभव हर वर्ष शुद्धि, नूतन जिनालय निर्माण के लिए शिल्पशाला आदि कार्य।",
       icon: "/jinmandir-vibhag.jpg"
     },
     {

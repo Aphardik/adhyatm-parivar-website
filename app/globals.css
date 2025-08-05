@@ -113,6 +113,11 @@ background: #ffd1e5;
 background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 25%, rgba(134, 174, 191, 1) 50%, rgba(127, 199, 191, 1) 75%, rgba(121, 121, 168, 1) 100%);
 
 }
+.bg-gradient2{
+background: #ffd1e5;
+background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 100%);
+
+}
 
 
 
@@ -141,3 +146,31 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --lightyellow: #fffbcc;
 }
 
+
+
+
+
+
+   /* animation for comment  */
+
+          @keyframes slideUpMobile {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDownMobile {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }

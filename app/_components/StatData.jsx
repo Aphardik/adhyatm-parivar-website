@@ -64,7 +64,7 @@ const ModernStatsUI = ({ statsData }) => {
     <div className=" bg-gray-50 py-8 sm:py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Stats grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${data.length > 2 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8`}>
+        <div className={`grid items-center grid-cols-1 md:grid-cols-2 ${data.length > 2 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8`}>
           {data.map((stat, index) => (
             <StatCard
               key={index}
