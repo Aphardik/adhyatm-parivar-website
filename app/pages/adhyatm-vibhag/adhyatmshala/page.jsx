@@ -36,7 +36,10 @@ const AnusthanAyojan = () => {
             </p>
           </div>
           <div className="">
-            <img className="w-full rounded shadow-lg" src="/adhyatm/adhyatmshala/img-3.51.png" alt="Spiritual event" />
+            <div className='flex w-full gap-2 flex-col sm:flex-row justify-center items-center'>
+            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-1.jpg" alt="Spiritual event" />
+            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-2.jpeg" alt="Spiritual event" />
+            </div>
             <p className="text-lg sm:text-xl font-semibold font-heading text-center mt-4">
              बच्चे आनंद से अध्यात्मशाला में पढ़ रहे हैं!
             </p>

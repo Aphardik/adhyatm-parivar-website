@@ -54,9 +54,9 @@ const Page = () => {
 
         </div>
                   <div className="grid sm:grid-cols-3 w-full items-center">
-            <img className="mx-auto w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.52.png" alt="" />
-            <img className="mx-auto w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.53.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.54.png" alt="" />
+            <img className="mx-auto object-cover sm:h-72 w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.52.jpg" alt="" />
+            <img className="mx-auto object-cover sm:h-72 w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.53.jpg" alt="" />
+            <img  className="mx-auto object-cover sm:h-72 w-full p-4" src="/adhyatm/jivant-drishyawali/img-3.54.png" alt="" />
           </div>
         
       </section>

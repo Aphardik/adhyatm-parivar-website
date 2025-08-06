@@ -41,17 +41,17 @@ const Page = () => {
 
       <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mb-10">
             {/* Left Column - First Image */}
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
-              <div className="flex flex-col sm:flex-row gap-4 h-64 w-full justify-center items-center mb-6">
+              <div className="flex flex-col sm:flex-row gap-4 h-full w-full justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.18-1.png"
+                  src="/adhyatm/parishthapanika-samiti/img-3.18-1.jpg"
                   alt="A rectangular planter with soil - type 1"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.18-2.png"
+                  src="/adhyatm/parishthapanika-samiti/img-3.18-2.jpg"
                   alt="A rectangular planter with soil - type 2"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
@@ -63,11 +63,16 @@ const Page = () => {
 
             {/* Right Column - Second Image */}
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
-              <div className="h-64 w-full flex justify-center items-center mb-6">
+             <div className="flex flex-col sm:flex-row gap-4 h-full w-full justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.19.png"
-                  alt="A large indoor area with a roof and a building"
-                  className="w-full max-w-sm h-full object-cover rounded-lg shadow"
+                  src="/adhyatm/parishthapanika-samiti/img-3.19-1.jpg"
+                  alt="A rectangular planter with soil - type 1"
+                  className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
+                />
+                <img
+                  src="/adhyatm/parishthapanika-samiti/img-3.19-2.jpg"
+                  alt="A rectangular planter with soil - type 2"
+                  className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
               </div>
               <p className="text-heading font-semibold text-center leading-relaxed">

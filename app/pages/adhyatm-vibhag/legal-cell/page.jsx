@@ -48,10 +48,10 @@ const Page = () => {
       <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 gap-8">
-            <div className="flex max-w-4xl mx-auto flex-col p-6">
-              <div className="h-96 w-full flex justify-center items-center">
+            <div className="flex max-w-7xl mx-auto flex-col p-6">
+              <div className="w-full flex justify-center items-center">
                 <img 
-                  src="/adhyatm/legal-cell/img-3.62.png" 
+                  src="/adhyatm/legal-cell/img-3.62.jpg" 
                   alt="ट्रस्टियों के लिए आयोजित संगोष्ठी" 
                   className="w-full h-full object-contain rounded-lg" 
                 />

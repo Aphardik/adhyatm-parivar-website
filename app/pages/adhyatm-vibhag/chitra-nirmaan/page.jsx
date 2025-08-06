@@ -59,7 +59,7 @@ const Page = () => {
             <div className="flex flex-col p-6">
               <div className="h-96 w-full flex justify-center items-center mb-6">
                 <img 
-                  src="/adhyatm/chitra-nirmaan/img-3.68.png" 
+                  src="/adhyatm/chitra-nirmaan/img-3.68.jpeg" 
                   alt="गिरनार तीर्थ चित्र" 
                   className="w-full h-full object-cover rounded-lg" 
                 />

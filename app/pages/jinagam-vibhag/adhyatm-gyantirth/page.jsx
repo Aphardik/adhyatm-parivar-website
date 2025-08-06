@@ -21,13 +21,13 @@ const Page = () => {
 
       <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2  mb-10">
             {/* Left Column - Building Image */}
-            <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
+            <div className="flex flex-col items-center bg-lighten-bg rounded-sm p-6">
               <img
-                src="/jinagam/adhyatm-gyantirth/img-3.15.png"
+                src="/jinagam/adhyatm-gyantirth/img-3.15.jpg"
                 alt="A four-story building with a modern design"
-                className="w-full max-w-sm h-64 object-contain rounded-lg mb-4"
+                className="w-full h-96  object-cover rounded-lg mb-4"
               />
               <div className="space-y-2 text-center">
                 <p className="text-gray-800 font-semibold">
@@ -40,11 +40,11 @@ const Page = () => {
             </div>
 
             {/* Right Column - Workshop Image */}
-            <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
+            <div className="flex flex-col items-center bg-lighten-bg rounded-sm p-6">
               <img
-                src="/jinagam/adhyatm-gyantirth/img-3.16.png"
+                src="/jinagam/adhyatm-gyantirth/img-3.16.jpg"
                 alt="A large room with people working at desks"
-                className="w-full h-64 object-contain rounded-lg mb-4"
+                className="w-full h-96  object-cover rounded-lg mb-4"
               />
               <div className="bg-secondary-color text-white text-center p-4 rounded-lg w-full">
                 <p className="font-semibold">

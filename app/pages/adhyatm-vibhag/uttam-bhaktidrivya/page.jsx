@@ -87,7 +87,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध प्रकार के औषधि प्रकल्प"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.58.png"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.58.jpeg"
               />
             </div>
             <div className="p-4">
@@ -100,7 +100,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध प्रकार के जल प्रकल्प"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.59.png"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.59.jpeg"
               />
             </div>
             <div className="p-4">
@@ -128,7 +128,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध गाँवों की मूर्तियाँ (मिट्टी)"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.61.png"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.61.jpg"
               />
             </div>
             <div className="p-4">

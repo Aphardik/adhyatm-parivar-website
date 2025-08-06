@@ -42,14 +42,14 @@ const Page = () => {
 
       <section className="py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* First Image and Text Pair */}
-            <div className="flex flex-col bg-lighten-bg rounded-lg p-6">
-              <div className="h-64 w-full flex justify-center items-center mb-6">
+            <div className="flex flex-col bg-lighten-bg rounded-sm p-6">
+              <div className=" w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/vihar-suraksha/img-3.20.png"
+                  src="/adhyatm/vihar-suraksha/img-3.20.jpg"
                   alt="Group of people walking on a road with a person on a bicycle carrying supplies"
-                  className="w-full h-full object-contain rounded-lg shadow"
+                  className="w-full h-full object-contain rounded-sm shadow"
                 />
               </div>
               <p className="text-heading sm:text-lg font-semibold text-center leading-relaxed">
@@ -58,12 +58,12 @@ const Page = () => {
             </div>
 
             {/* Second Image and Text Pair */}
-            <div className="flex flex-col bg-lighten-bg rounded-lg p-6">
-              <div className="h-64 w-full flex justify-center items-center mb-6">
+            <div className="flex flex-col bg-lighten-bg rounded-sm p-6">
+              <div className=" w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/vihar-suraksha/img-3.21.png"
+                  src="/adhyatm/vihar-suraksha/img-3.21.jpg"
                   alt="Person on a bicycle carrying supplies following a group of people walking on a road"
-                  className="w-full h-full object-contain rounded-lg shadow"
+                  className="w-full h-full object-contain rounded-sm shadow"
                 />
               </div>
               <p className="text-heading sm:text-lg font-semibold text-center leading-relaxed">

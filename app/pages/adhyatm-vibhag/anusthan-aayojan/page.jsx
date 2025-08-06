@@ -36,7 +36,7 @@ const AnusthanAyojan = () => {
             </p>
           </div>
           <div className="p-6 bg-lighten-bg">
-            <img className="w-full rounded shadow-lg" src="/adhyatm/anusthan-aayojan/img-3.47.png" alt="Spiritual event" />
+            <img className="w-full rounded shadow-lg" src="/adhyatm/anusthan-aayojan/img-3.47.jpg" alt="Spiritual event" />
             <p className="text-lg sm:text-xl font-semibold font-heading text-center mt-4">
               उपधान की साधना जीवन की दिशा बदल देती है।
             </p>
@@ -58,7 +58,7 @@ const AnusthanAyojan = () => {
             <img
               alt="वाचना श्रेणी"
               className="w-1/3 rounded"
-              src="/adhyatm/anusthan-aayojan/img-3.49.png"
+              src="/adhyatm/anusthan-aayojan/img-3.49.jpg"
             />
             <div className="ml-4">
               <h2 className="text-lg sm:text-xl font-heading font-bold text-heading">वाचना- श्रेणी</h2>
@@ -85,11 +85,17 @@ const AnusthanAyojan = () => {
 
         {/* Full Width Image */}
         <div className="w-full">
+           <div className="text-center mb-8 lg:mb-12">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+                'सिंहसत्त्वोत्सव' सामूहिक ७४ दीक्षा का मानव सैलाब
+              </h2>
+            </div>
           <img
             alt="अनुष्ठान आयोजन का व्यापक दृश्य"
             className="w-full rounded shadow-lg"
-            src="/adhyatm/anusthan-aayojan/img-3.48.png"
+            src="/adhyatm/anusthan-aayojan/img-3.48.jpg"
           />
+          
         </div>
       </section>
              <CounterStatsUI statsData={statsData}/>

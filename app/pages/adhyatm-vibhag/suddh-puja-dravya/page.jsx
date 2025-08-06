@@ -47,7 +47,7 @@ const Page = () => {
             <img
               alt="A set of sandalwood pieces"
               className="w-full h-64 object-contain transition-transform transform hover:scale-105"
-              src="/adhyatm/suddh-puja-dravya/img-3.30.png"
+              src="/adhyatm/suddh-puja-dravya/img-3.30.jpg"
             />
           </div>
           <div className="bg-light-bg/20 rounded-lg p-6">
@@ -119,7 +119,7 @@ const Page = () => {
           </div>
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm order-1 md:order-2">
             <img
-              src="/adhyatm/suddh-puja-dravya/img-3.33.png"
+              src="/adhyatm/suddh-puja-dravya/img-3.33.jpg"
               alt="Orisaya"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -174,7 +174,7 @@ const Page = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/adhyatm/suddh-puja-dravya/img-3.36.png"
+              src="/adhyatm/suddh-puja-dravya/img-3.36.jpg"
               alt="Yuktachandana Choorna"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -212,12 +212,12 @@ const Page = () => {
               <img
                 src="/adhyatm/suddh-puja-dravya/img-3.39.png"
                 alt="Gold leaf"
-                className="sm:h-64 object-cover rounded-full"
+                className="sm:h-52 object-cover rounded-full"
               />
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.40.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.40.jpg"
                 alt="Silver leaf"
-                className="sm:h-64 object-cover rounded-full"
+                className="sm:h-52 object-cover rounded-full"
               />
             </div>
           </div>
@@ -227,7 +227,7 @@ const Page = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lighten-bg rounded-lg p-6 shadow-sm">
             <img
-              src="/adhyatm/suddh-puja-dravya/img-3.41.png"
+              src="/adhyatm/suddh-puja-dravya/img-3.41.jpg"
               alt="Gold and silver leaf in containers"
               className="w-full h-64 object-contain rounded-lg"
             />

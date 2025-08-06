@@ -41,7 +41,7 @@ const Page = () => {
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.22.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.22.jpg"
                   alt="A stack of folded white cloths"
                   className="w-full max-w-xs h-full object-contain"
                 />
@@ -58,7 +58,7 @@ const Page = () => {
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.23.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.23.jpg"
                   alt="A red pot with a white cloth on top"
                   className="w-full max-w-xs h-full object-contain"
                 />
@@ -76,7 +76,7 @@ const Page = () => {
                        <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.24.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.24.jpg"
                   alt="A red pot with a white cloth on top"
                   className="w-full max-w-xs h-full object-contain"
                 />
@@ -94,7 +94,7 @@ const Page = () => {
                        <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.25.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.25.jpg"
                   alt="A red pot with a white cloth on top"
                   className="w-full max-w-xs h-full object-contain"
                 />
@@ -110,7 +110,7 @@ const Page = () => {
                <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.26.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.26.jpg"
                   alt="A red pot with a white cloth on top"
                   className="w-full max-w-xs h-full object-contain"
                 />
@@ -128,7 +128,7 @@ const Page = () => {
                <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="h-64 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/charitra-upkaran-bhakti/img-3.27.png"
+                  src="/adhyatm/charitra-upkaran-bhakti/img-3.27.jpg"
                   alt="A red pot with a white cloth on top"
                   className="w-full max-w-xs h-full object-contain"
                 />

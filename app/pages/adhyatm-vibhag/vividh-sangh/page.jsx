@@ -66,7 +66,7 @@ const Page = () => {
             <div className="flex flex-col p-6">
               <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/vividh-sangh/img-3.70.png"
+                  src="/adhyatm/vividh-sangh/img-3.70.jpg"
                   alt="पाल-सूरत संघ भवन"
                   className="w-full h-full object-contain rounded-lg"
                 />
@@ -165,7 +165,7 @@ const Page = () => {
             <div className="flex flex-col p-6">
               <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/vividh-sangh/img-3.71.png"
+                  src="/adhyatm/vividh-sangh/img-3.71.jpg"
                   alt="नानपुरा संघ भवन"
                   className="w-full h-full object-contain rounded-lg"
                 />
