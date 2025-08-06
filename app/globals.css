@@ -83,22 +83,25 @@ body {
 }
 
 @theme inline {
-  --color-whitey: var(--whitey);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-body: var(--font-body);
   --font-heading: var(--font-heading);
   --font-anek: var(--font-anek);
+  --color-whitey: var(--whitey);
+
 
   --color-lightyellow: var(--lightyellow);
   --color-lightpink: var(--lightpink);
   --color-darkpink: var(--darkpink);
   --color-darkyellow: var(--darkyellow);
-
   --color-maroon: var(--maroon);
-  --color-whitey: var(--whitey);
   --color-greyish: var(--greyish);
-  --color-darkpink: var(--darkpink);
+
+
+   --color-lightblue: var(--lightblue);
+   --color-darkblue: var(--darkblue);
+   --color-shadeblue: var(--shadeblue);
 }
 
 body {
@@ -136,11 +139,20 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
 }
 
   [data-theme="light"] {
+    /* first section */
   --whitey: #fff;
   --lightpink:#FFDCDC;
   --foreground: #171717;
   --darkpink: #E63463;
   --darkyellow: #cdc565;
+  --maroon: #901E3E;
+  --greyish: #4A5565;
+  --lightyellow: #fffbcc;
+    /* second section */
+  --lightblue:#a8bffe;
+  --foreground: #171717;
+  --darkblue: #1f1793;
+  --shadeblue: #dff1ff;
   --maroon: #901E3E;
   --greyish: #4A5565;
   --lightyellow: #fffbcc;

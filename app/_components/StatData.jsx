@@ -141,50 +141,7 @@ const StatCard = ({ count, label, label1, label2, accentColor }) => {
 };
 
 const ModernStatsUI = ({ statsData }) => {
-  const data = statsData || [
-    {
-      count: "85%",
-      label: "Customer Satisfaction",
-      label1: "Based on recent surveys",
-      label2: "Continuously improving",
-      color: "text-blue-500"
-    },
-    {
-      count: "1.2M+",
-      label: "Active Users",
-      label1: "Growing community",
-      label2: "Worldwide reach",
-      color: "text-green-500"
-    },
-    {
-      count: "99.9%",
-      label: "Uptime",
-      label1: "Reliable service",
-      label2: "24/7 monitoring",
-      color: "text-purple-500"
-    },
-    {
-      count: "150+",
-      label: "Countries",
-      label1: "Global presence",
-      label2: "Expanding daily",
-      color: "text-orange-500"
-    },
-    {
-      count: "24/7",
-      label: "Support",
-      label1: "Always available",
-      label2: "Expert assistance",
-      color: "text-red-500"
-    },
-    {
-      count: "4.8★",
-      label: "Rating",
-      label1: "Highly rated",
-      label2: "User reviews",
-      color: "text-yellow-500"
-    }
-  ];
+  const data = statsData;
 
   return (
     <div className="bg-gray-50 py-8 sm:py-12 px-4">
