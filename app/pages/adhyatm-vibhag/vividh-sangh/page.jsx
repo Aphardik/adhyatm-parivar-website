@@ -194,9 +194,14 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-sm p-4 sm:p-10 bg-lightyellow mb-8">
-
-          <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
+        <div className="relative rounded-sm p-4 sm:p-10 bg-lightyellow mb-8">
+      <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+          <ul className=" text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
               <span className="text-white bg-green-500 rounded-full p-1 mt-1">
                 <FaCheck size={14} />
@@ -598,8 +603,13 @@ const Page = () => {
             अन्य श्राविका आराधना भवन
           </h3>
         </div>
-       <div className="bg-lightyellow py-8 my-10 px-4 md:px-12 font-body">
-
+       <div className="relative bg-lightyellow py-8 my-10 px-4 md:px-12 font-body">
+ <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {bhavans.map((bhavan, index) => (
           <div
