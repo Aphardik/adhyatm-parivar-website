@@ -1,4 +1,6 @@
+import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import CounterStatsUI from "@/app/_components/StatData";
+import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
@@ -19,11 +21,11 @@ const Page = () => {
   return (
     <div className="container mx-auto font-body">
       {/* Header Section */}
-      <header className="bg-light-bg">
+      <header className="bg-lightpink">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 विविध संघों - आराधना भवनों का संचालन
               </h1>
             </div>
@@ -32,10 +34,17 @@ const Page = () => {
       </header>
 
       {/* Introduction Section */}
+      <div className="px-2 sm:px-4">
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="grid sm:grid-cols-1 items-center gap-6 sm:gap-10">
-          <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg">
-            <p className="text-xl leading-relaxed">
+          <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
+             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+            <p className="text-xl text-maroon leading-relaxed">
               विविध स्थलों पर आराधकों को पूरे बारह महीने आराधना स्थल का आलंबन
               मिलता रहे, इसलिए अध्यात्म परिवार अनेक संघों तथा श्राविका आराधना
               भवनों का निर्माण तथा संचालन कर रहा है।
@@ -47,7 +56,7 @@ const Page = () => {
       {/* Trust Details Section */}
       <section className="py-8 w-full sm:pb-8 lg:pb-8">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl  sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-कनक श्रमणोपासक ट्रस्ट - श्री अध्यात्म परिवार संचालित श्री
             संघ आदि की रूपरेखा
           </h3>
@@ -57,7 +66,7 @@ const Page = () => {
       {/* Paal-Surat Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-6">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांतिवर्धक श्वे.मू.पू. तपागच्छ जैन संघ, पाल-सूरत
           </h3>
         </div>
@@ -74,8 +83,20 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg mb-8">
-          <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow mb-8 relative">
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+          <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
               <span className="text-white bg-green-500 rounded-full p-1 mt-1">
                 <FaCheck size={14} />
@@ -156,7 +177,7 @@ const Page = () => {
       {/* Nanpura Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-6">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-कनक श्वे.मू.पू. तपागच्छ जैन संघ, नानपुरा
           </h3>
         </div>
@@ -173,9 +194,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg mb-8">
+        <div className="rounded-sm p-4 sm:p-10 bg-lightyellow mb-8">
 
-          <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+          <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
               <span className="text-white bg-green-500 rounded-full p-1 mt-1">
                 <FaCheck size={14} />
@@ -239,7 +260,7 @@ const Page = () => {
       {/* Ahmedabad Usmanpura Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-6">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-संयम श्वे.मू.पू. तपागच्छ जैन संघ, उस्मानपुरा - अहमदाबाद
           </h3>
         </div>
@@ -256,7 +277,13 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg mb-8">
+        <div className="rounded-sm p-4 sm:p-12 bg-lightyellow mb-8 relative">
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
          
            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
@@ -297,7 +324,7 @@ const Page = () => {
       {/* Madalpur Paladi Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-6">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-जिन श्वे.मू.पू. तपागच्छ जैन संघ, मादलपुर - पालड़ी
             अहमदाबाद (निर्माणाधीन)
           </h3>
@@ -315,7 +342,13 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg mb-8">
+        <div className="rounded-sm p-4 sm:p-12 bg-lightyellow mb-8 relative">
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
 
 
              <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
@@ -406,11 +439,17 @@ const Page = () => {
       {/* Adajan Patiya Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, अडाजन पाटिया - सुरत
           </h3>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg">
+        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
 
           <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
@@ -432,12 +471,17 @@ const Page = () => {
       {/* New Varana Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, न्यू वरणा - अहमदाबाद
           </h3>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg">
-
+        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
+   <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <TopLeftSvg />
+              </div>
+              <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <BottomRighSvg />
+              </div>
            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
               <span className="text-white bg-green-500 rounded-full p-1 mt-1">
@@ -476,12 +520,17 @@ const Page = () => {
       {/* Gurumandirs Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             गुरुमंदिर
           </h3>
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg mb-8">
-
+        <div className="relative rounded-sm p-4 sm:p-10 bg-lightyellow mb-8">
+ <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
                      <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
               <span className="text-white bg-green-500 rounded-full p-1 mt-1">
@@ -515,7 +564,7 @@ const Page = () => {
       {/* Yugbhumi Gurumandir Images Section */}
       <section className="py-8 px-4">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             युगभूमि गुरुमंदिर
           </h3>
         </div>
@@ -544,23 +593,26 @@ const Page = () => {
       </section>
 
       {/* Final Image Section */}
-      
-       <div className="bg-lighten-bg py-8 my-10 px-4 md:px-12 font-body">
-      <h2 className="text-2xl font-heading md:text-3xl font-semibold text-center mb-6 text-heading">
-        अन्य श्राविका आराधना भवन
-      </h2>
+           <div className="text-center my-8 lg:my-12">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink  text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+            अन्य श्राविका आराधना भवन
+          </h3>
+        </div>
+       <div className="bg-lightyellow py-8 my-10 px-4 md:px-12 font-body">
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {bhavans.map((bhavan, index) => (
           <div
             key={index}
-            className="bg-light-bg rounded-xl p-4 shadow-sm transition"
+            className="bg-lightpink rounded-xl p-4 shadow-sm transition"
           >
-            <p className="text-lg text-heading">{bhavan}</p>
+            <p className="text-lg text-maroon">{bhavan}</p>
           </div>
         ))}
       </div>
     </div>
      <CounterStatsUI statsData={statsData}/>
+    </div>
     </div>
   );
 };

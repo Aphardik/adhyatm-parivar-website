@@ -144,7 +144,7 @@ const ModernStatsUI = ({ statsData }) => {
   const data = statsData;
 
   return (
-    <div className="bg-gray-50 py-8 sm:py-12 px-4">
+    <div className="bg-gray-50 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto">
         {/* Stats flex container */}
         <div className="flex flex-wrap justify-center gap-8">

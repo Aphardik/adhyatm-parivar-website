@@ -1,4 +1,6 @@
+import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import CounterStatsUI from "@/app/_components/StatData";
+import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
 
 const Page = () => {
@@ -9,16 +11,16 @@ const Page = () => {
    
   ];
   return (
-    <div className="container bg-background mx-auto font-body">
+    <div className="bg-whitey mx-auto font-body">
       {/* Header Section */}
-      <header className="bg-light-bg">
+      <header className="bg-lightpink">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 धर्मानुष्ठान सुशोभन सामग्रियों की उपलब्धि
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-content font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
                   कार्य प्रारंभ : वि.सं. २०७६
               </p>
             </div>
@@ -26,14 +28,21 @@ const Page = () => {
         </div>
       </header>
 
+<div className="px-2 sm:px-4">
       {/* Introduction Section */}
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="grid sm:grid-cols-2 items-center gap-6 sm:gap-10">
           <div className="p-6 bg-lighten-bg">
         <img className="w-full" src="/adhyatm/dharmanusthan/img-3.42.png" alt="dharmanushthan" />
         </div>
-        <div className="border-l-4 border-secondary-color rounded-md p-4 sm:p-10 bg-lighten-bg">
-          <p className="text-xl leading-relaxed">
+        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
+           <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+          <p className="text-lg text-maroon leading-relaxed">
            जन हो या पूजा, महोत्सव हो या महापूजा, वंदना हो या संवेदना, तमाम धर्मानुष्ठानों में भावों में वृद्धिका कार्य करने वाले चार फुट के कलश जैसी अनेक यूनिक सामग्री परिवार द्वारा संग्रहित की गई है । तथा सभी को बिना किसी मूल्य उपयोग करने के लिए उपलब्ध की जा रही है । आज तक इन सैकड़ों आइटम के संग्रह द्वारा लगभग ४०० अवसरों को शोभायमान किया है।
           </p>
         </div>
@@ -43,7 +52,7 @@ const Page = () => {
       {/* Stone Selection Criteria Section */}
       <section className="py-8 sm:pb-12 lg:pb-16">
         <div className="text-center mb-8 lg:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-light-bg text-heading inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             इन सामग्रियों की एक अनेरी झलक!
           </h3>
 
@@ -58,6 +67,7 @@ const Page = () => {
       </section>
 <CounterStatsUI statsData={statsData}/>
      
+    </div>
     </div>
   );
 };

@@ -1,9 +1,11 @@
+import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
 
 const Page = () => {
   return (
-    <div className="mx-auto max-w-7xl font-body bg-background">
-      <header className="bg-light-bg">
+    <div className="mx-auto max-w-7xl font-body bg-whitey">
+      <header className="bg-lightpink">
         <div className="mx-auto p-4 sm:p-6 lg:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
 
@@ -16,8 +18,15 @@ const Page = () => {
         </div>
       </header>
 
-      <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
-        <div className="border-l-4 border-secondary-color rounded-xl p-8 bg-lighten-bg">
+<div className="px-2 sm:px-4">
+      <section className="py-4  sm:py-6 lg:py-8 lg:px-0">
+        <div className="relative rounded-sm p-8 sm:p-12 bg-lightyellow">
+          <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
           <p className="text-xl leading-relaxed text-content">
             'जिनबिंब जिनागम भवियण कुं आधारा' इन पंक्तियों के अनुसार जैसे जिनालय में जिनबिंब तथा उनके सेवक अधिष्ठायकों की स्थापना होती है, उसी प्रकार पाठशाला आदि में जिनागमस्थापना रूप श्री गणिपिटक तथा वाणी की अधिष्ठायिका सरस्वती देवी की स्थापना के लिए संगमरमर की श्री गणिपिटक का निर्माण तथा उसका प्रसार अध्यात्म परिवार द्वारा हो रहा है।
           </p>
@@ -45,6 +54,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };
