@@ -14,12 +14,12 @@ const VibhagDescription = () => {
     },
     {
       title: "जिनागम विभाग",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ab magni commodi itaque voluptatibus blanditiis deserunt cum fugit quisquam earum?",
+      description: "समग्र भारत में एवं विदेशों में भी स्थित जैन हस्तप्रतों का सूचीकरण करके १.५ करोड़ से भी ज्यादा श्लोकप्रमाण, करीब १५००० प्राचीन जैन ग्रंथों का अच्छी तरह से संपादन एवं विविध पुस्तकों का प्रकाशन वगैरह।",
       icon: "/jinagam-vibhag.jpg"
     },
     {
       title: "अध्यात्म विभाग",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ab magni commodi itaque voluptatibus blanditiis deserunt cum fugit quisquam earum?",
+      description: "जैनशासन के चार अंग - साधु, साध्वी, श्रावक एवं श्राविका - इन सबको धर्म की साधना में जहां-जहां बाधाए आती हो उन समस्याओं के निवारण के लिए संशोधन करके समाधान को क्रियान्वित करना। इसमें करीब 18 से 20 प्रकार के कार्य चल रहे हैं।",
       icon: "/adhyatm-vibhag.jpg"
     }
   ];

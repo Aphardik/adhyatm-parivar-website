@@ -103,7 +103,7 @@ const Header = () => {
         id: 18,
         emoji: "📘",
         link: "/pages/jinmandir-vihabg/patthar-ghadayi",
-        title: "जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई",
+        title: "जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई",
         description:
           "At vitae consectetur lacus, scelerisque. Faucibus aliquam.",
       },
@@ -260,7 +260,7 @@ const Header = () => {
         id: 37,
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/prabhubhakti-upkaran",
-        title: "प्रभुभक्ति आदि के बेजोड़ उपकरणों का निर्माण",
+        title: "प्रभुभक्ति आदि के बेजोड़ उपकरणों का निर्माण",
         description:
           "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
       },
@@ -276,7 +276,7 @@ const Header = () => {
         id: 39,
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/legal-cell",
-        title: "लीगल सेल : क़ानूनी मार्गदर्शन",
+        title: "लीगल सेल : क़ानूनी मार्गदर्शन",
         description:
           "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
       },
@@ -451,7 +451,7 @@ const Header = () => {
         <div
           className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-scroll transition-all duration-300 ease-out ${
             activeDropdown
-              ? "max-h-96 opacity-100 translate-y-0"
+              ? " opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-2"
           }`}
           onMouseEnter={() => handleMouseEnter(activeDropdown)}
@@ -494,7 +494,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu - Animated Width */}
+      {/* Mobile Menu - Fixed with Scrolling */}
       <div
         className={`md:hidden fixed inset-0 z-50 bg-whitey transform transition-all duration-300 ease-out ${
           isMobileMenuOpen
@@ -502,7 +502,8 @@ const Header = () => {
             : "translate-x-full opacity-0"
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-4 border-b">
+        {/* Fixed Header */}
+        <div className="flex items-center justify-between h-16 px-4 border-b bg-whitey">
           <div className="flex items-center space-x-2">
             <Link href={"/"} className="flex gap-4 items-center">
               <img className="h-10" src="/logo.png" alt="" />
@@ -519,7 +520,8 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="px-4 py-6 space-y-6">
+        {/* Scrollable Content */}
+        <div className="h-[calc(100vh-4rem)] overflow-y-auto px-4 py-6 space-y-6">
           <a
             href="/"
             className={`${pathname=="/" && "text-pink-600"} block font-sans text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
@@ -542,7 +544,7 @@ const Header = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ease-out ${
                 expandedMobileSection === "menu1"
-                  ? "max-h-96 opacity-100 mt-4"
+                  ? "max-h-[1000px] opacity-100 mt-4"
                   : "max-h-0 opacity-0 mt-0"
               }`}
             >
@@ -592,7 +594,7 @@ const Header = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ease-out ${
                 expandedMobileSection === "menu2"
-                  ? "max-h-96 opacity-100 mt-4"
+                  ? "max-h-[1000px] opacity-100 mt-4"
                   : "max-h-0 opacity-0 mt-0"
               }`}
             >
@@ -642,7 +644,7 @@ const Header = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ease-out ${
                 expandedMobileSection === "menu3"
-                  ? "max-h-96 opacity-100 mt-4"
+                  ? "max-h-[1000px] opacity-100 mt-4"
                   : "max-h-0 opacity-0 mt-0"
               }`}
             >
@@ -692,7 +694,7 @@ const Header = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ease-out ${
                 expandedMobileSection === "menu4"
-                  ? "max-h-96 opacity-100 mt-4"
+                  ? " opacity-100 mt-4"
                   : "max-h-0 opacity-0 mt-0"
               }`}
             >
