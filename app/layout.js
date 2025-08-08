@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Adhyatm Parivar",
-  description: "aaa",
+  title: "अध्यात्म परिवार",
+  description: "मेरा शासन मेरा जीवन",
 };
 
 export default function RootLayout({ children }) {

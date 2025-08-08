@@ -2,6 +2,12 @@ import React from "react";
 import CounterStatsUI from "@/app/_components/StatData";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import Link from "next/link";
+import HeaderSvg from "@/app/_components/HeaderSvg";
+
+export const metadata = {
+  title: 'जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग',
+  description: '',
+}
 
 const Page = () => {
   const statsData = [
@@ -35,33 +41,7 @@ const Page = () => {
     <div className="bg-whitey text-maroon  font-body">
       {/* Header */}
      <header className="bg-lightpink relative overflow-hidden">
-      {/* Dots SVG Background */}
-      <svg 
-        className="absolute inset-0 w-full h-full" 
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 1200 300"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <defs>
-          {/* Radial gradient for fade effect */}
-          <radialGradient id="fadeGradient" cx="50%" cy="50%" r="60%">
-            <stop offset="0%" stopColor="white" stopOpacity="1" />
-            <stop offset="70%" stopColor="white" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="white" stopOpacity="0" />
-          </radialGradient>
-          
-          {/* Pattern for dots */}
-          <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-            <circle cx="15" cy="15" r="2" fill="rgba(128, 0, 0, 0.15)" />
-          </pattern>
-        </defs>
-        
-        {/* Dots pattern covering entire area */}
-        <rect width="100%" height="100%" fill="url(#dots)" />
-        
-        {/* Overlay with fade effect */}
-        <rect width="100%" height="100%" fill="url(#fadeGradient)" />
-      </svg>
+     <HeaderSvg/>
 
       <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
@@ -70,7 +50,7 @@ const Page = () => {
               जिनप्रतिमा सुरक्षा
             </h1>
             <p className="sm:text-base text-center lg:text-lg text-maroon font-medium">
-              कार्य आरंभ: वि.सं. २०६३
+              कार्य आरंभ: वि.सं. २०७३
             </p>
           </div>
         </div>
@@ -95,7 +75,7 @@ const Page = () => {
                 <p className="text-maroon text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
                   इसके मूल शोधते शोधते अध्यात्म परिवार ने{" "}
                   <span className="text-darkpink font-sans font-bold">
-                    Archaeological Survey of India
+                    Archaeological Survey of India (ASI)
                   </span>{" "}
                   के दरवाजे खटखटाने तक के प्रयत्न किये है।
                 </p>
@@ -274,8 +254,8 @@ const Page = () => {
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 text-maroon">
-                    बबूल के पेड़ की जड़ के बदले मात्रा डालियां कांटने से कांटे
-                    चुभना किस प्रकार बंद होंगे?
+                    बबूल के पेड़ की जड़ के बदले मात्रा डालियां कांटने से कांटे चुभना किस प्रकार बंद होंगे?
+
                   </h3>
                   <div className="space-y-4">
                     <div className="flex gap-4 items-start">
@@ -430,7 +410,7 @@ const Page = () => {
 
                 {/* Visual Content Section */}
                 <div className="space-y-6">
-                  <div className="bg-whitey p-6 rounded-lg ">
+                  <div className="bg-whitey p-8 rounded-md ">
                     <h3 className="text-base font-semibold text-center mb-4 text-maroon">
                       वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा
                       क्योंकि उन्हें पता था कि...
@@ -441,9 +421,9 @@ const Page = () => {
                         alt="क्षतिग्रस्त प्रतिमा"
                         className="w-full h-full object-contain rounded-lg"
                       />
-                      <div className="hidden w-full h-full items-center justify-center text-maroon">
+                      {/* <div className="hidden w-full h-full items-center justify-center text-maroon">
                         प्रतिमा छवि
-                      </div>
+                      </div> */}
                     </div>
                     <p className="font-semibold text-center text-maroon bg-whitey p-3 rounded">
                       ठग कारीगर एमसील आदि हल्के द्रव्यों का उपयोग करके प्रभु की
@@ -457,13 +437,13 @@ const Page = () => {
                       alt="क्षतिग्रस्त प्रतिमा"
                       className="w-full h-full object-contain rounded-lg"
                     />
-                    <div className="hidden w-full h-full items-center justify-center text-maroon">
+                    {/* <div className="hidden w-full h-full items-center justify-center text-maroon">
                       प्रतिमा छवि
-                    </div>
+                    </div> */}
                   </div>
 
-                  <div className="bg-whitey rounded-md  p-8">
-                    <div className="grid lg:grid-cols-1 gap-6">
+                  <div className="bg-whitey rounded-md  flex items-center justify-center  p-8">
+                    <div className="grid lg:grid-cols-1">
                       <div className="lg:col-span-2">
                         <div className="bg-whitey h-56 flex items-center justify-center rounded-lg">
                           <img
@@ -471,9 +451,9 @@ const Page = () => {
                             alt="संरक्षित प्रतिमा"
                             className="w-full h-full object-contain rounded-lg"
                           />
-                          <div className="hidden w-full h-full items-center justify-center text-maroon">
+                          {/* <div className="hidden w-full h-full items-center justify-center text-maroon">
                             प्रतिमा छवि
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <div className="flex flex-col justify-center space-y-4">
@@ -524,10 +504,7 @@ const Page = () => {
                   श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
                 </h4>
                 <p className="text-maroon leading-relaxed">
-                  पिछले ५ सालो में अध्यात्म परिवार द्वारा प्रतिवर्ष भादरवा सुदी
-                  ६ से आसोज सुदी ६ दौरान, श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
-                  की ओप (शुद्ध) सहित महातीर्थ पर विराजमान अन्य प्रतिमाओं के ओप
-                  आदि का कार्य अनुक्रम से किया जा रहा है।
+                  वि.सं. २०७५-७६ से प्रतिवर्ष भादरवा सुद छठ से आसोज सुद छठ (एक माह) तक श्री शत्रुंजय तीर्थाधिपति दादा आदिनाथ का ओप (शुद्धि) सहित महातीर्थ पर विराजमान प्रतिमाओं के ओप आदि का कार्य अविरत चल रहा है।
                 </p>
               </div>
             </div>
@@ -548,8 +525,7 @@ const Page = () => {
                     श्री गिरनार महातीर्थ
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    में विराटमान प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा
-                    के ओप का कार्य
+                   वर्तमान विश्व की सबसे प्राचीन प्रतिमा गिरनार महातीर्थ मंडन श्री नेमिनाथ दादा की प्रतिमा का शास्त्रवर्णित शुद्ध द्रव्यों से लेप का कार्य एवं प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा के ओप का कार्य भी अध्यात्म परिवार द्वारा संपन्न!
                   </p>
                 </div>
               </div>
@@ -568,8 +544,8 @@ const Page = () => {
                     श्री समेतशिखर महातीर्थ
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    के जलमंदिर में विराजमान श्री श्यामला पार्श्वनाथ परमात्मा के
-                    लेप का कार्य
+                    इस अवसर्पिणी काल के २०-२० तीर्थंकरों के मोक्ष कल्याणक से सुवासित श्री समेत्तशिखर महातीर्थ के जलमंदिर में विराजमान श्री शामला पार्श्वनाथ परमात्मा के लेप का कार्य
+
                   </p>
                 </div>
               </div>
@@ -603,7 +579,7 @@ const Page = () => {
               </div>
               <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
                 श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
-                के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओ के ओप आदि का
+                के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओं के ओप आदि का
                 कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
               </p>
             </div>
@@ -613,7 +589,8 @@ const Page = () => {
           <div className="mx-auto  max-w-7xl">
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                प्रत्येक पूजक का एक संकल्प:
+                प्रत्येक पूजक का एक संकल्प, जिससे भविष्य का नुकसान रुकेगा
+
               </h2>
             </div>
 
@@ -645,7 +622,8 @@ const Page = () => {
               <div className="bg-gradient2 shadow-lg rounded-lg p-6 sm:p-8 my-8">
                 {/* Header */}
                 <h3 className="text-xl text-center sm:text-2xl font-bold font-heading mb-6 text-maroon py-3 px-4 ">
-                  भविष्य का नुकसान रुकेगा
+                  जो नुकसान पहले ही हो चुका है उसका क्या?
+
                 </h3>
 
                 {/* Main Content Grid */}
@@ -654,10 +632,8 @@ const Page = () => {
                   <div className="col-span-12 lg:col-span-8">
                     <div className=" rounded-lg p-4 sm:p-6  border-yellow-200">
                       <p className="font-medium text-maroon  text-center text-base sm:text-lg leading-relaxed">
-                        अध्यात्म परिवार ने टिका निकाल कर प्रतिमाजी का लेप-ओप
-                        करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की
-                        है। बस हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा
-                        का लाभ दीजिये-दिलवाइये।
+                        अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।
+
                       </p>
                     </div>
                   </div>

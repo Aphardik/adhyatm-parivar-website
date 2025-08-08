@@ -1,5 +1,11 @@
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import React from "react";
+
+export const metadata = {
+  title: 'शुद्ध पूजाद्रव्य संप्राप्ति | अध्यात्म विभाग',
+  description: '',
+}
 
 const Page = () => {
   const statsData = [
@@ -11,8 +17,9 @@ const Page = () => {
   return (
     <div className="bg-whitey mx-auto font-body min-h-screen">
       {/* Header Section */}
-      <header className="bg-lightpink">
-        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+      <header className="bg-lightpink relative">
+        <HeaderSvg/>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">

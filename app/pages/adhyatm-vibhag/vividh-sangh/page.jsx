@@ -1,8 +1,14 @@
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
+
+export const metadata = {
+  title: 'विविध संघों - आराधना भवनों का संचालन | अध्यात्म विभाग',
+  description: '',
+}
 
 const Page = () => {
    const bhavans = [
@@ -21,11 +27,12 @@ const Page = () => {
   return (
     <div className="container mx-auto font-body">
       {/* Header Section */}
-      <header className="bg-lightpink">
-        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+      <header className="bg-lightpink relative">
+        <HeaderSvg/>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
+              <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon">
                 विविध संघों - आराधना भवनों का संचालन
               </h1>
             </div>
@@ -55,7 +62,7 @@ const Page = () => {
 
       {/* Trust Details Section */}
       <section className="py-8 w-full sm:pb-8 lg:pb-8">
-        <div className="text-center mb-8 lg:mb-12">
+        <div className="text-center mb-8 lg:">
           <h3 className="text-xl  sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-कनक श्रमणोपासक ट्रस्ट - श्री अध्यात्म परिवार संचालित श्री
             संघ आदि की रूपरेखा
@@ -83,7 +90,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow mb-8 relative">
+        <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow mb-8 ">
            <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
@@ -98,73 +105,73 @@ const Page = () => {
             </div>
           <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
               विशाल संकुल
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
               द्वि मंजिलीय तथा त्रिशिखरीय शानदार जिनालय (निर्माणाधीन)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आनंद श्रावक आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
               चंपा श्राविका आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
               अध्यात्म भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
               आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              पाठशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अचित जलगृह
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              भक्तिखंड
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आगमतीर्थ
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अतिथि भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             मंगल घर
@@ -203,55 +210,55 @@ const Page = () => {
             </div>
           <ul className=" text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              प्राचीन आदिनाथ प्रभु का बेजोड़ कोरणीयुक्त जिनालय
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             श्रावक आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             सौभाग्य उत्तम श्राविका आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              श्री हरिभद्रसूरि शास्त्रसंग्रह (ज्ञानभंडार)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अनुष्ठान भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              पाठशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अचित जलगृह
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             अध्यात्म ज्ञानतीर्थ
@@ -292,31 +299,31 @@ const Page = () => {
          
            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              जिनालय
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
            आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              पाठशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अतिथि भवन
@@ -358,79 +365,79 @@ const Page = () => {
 
              <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आलीशान जिनालय
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
            श्रावक आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             श्राविका आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             अतिथि भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अनुष्ठान खंड
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              अनुष्ठान खंड
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             अध्यात्म भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             पाठशाला 
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             भोजनशाला 
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             यानशाला  
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             रथशाला 
@@ -443,7 +450,7 @@ const Page = () => {
 
       {/* Adajan Patiya Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
-        <div className="text-center mb-8 lg:mb-12">
+        <div className="text-center mb-8 lg:">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, अडाजन पाटिया - सुरत
           </h3>
@@ -458,13 +465,13 @@ const Page = () => {
 
           <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              जिनालय
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आराधना भवन
@@ -475,7 +482,7 @@ const Page = () => {
 
       {/* New Varana Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
-        <div className="text-center mb-8 lg:mb-12">
+        <div className="text-center mb-8 lg:">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, न्यू वरणा - अहमदाबाद
           </h3>
@@ -489,31 +496,31 @@ const Page = () => {
               </div>
            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              जिनालय
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              श्रावक आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             श्राविका आराधना भवन
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              आयंबिलशाला
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             पाठशाला
@@ -524,7 +531,7 @@ const Page = () => {
 
       {/* Gurumandirs Section */}
       <section className="py-8 w-full sm:pb-12 lg:pb-16">
-        <div className="text-center mb-8 lg:mb-12">
+        <div className="text-center mb-8 lg:">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             गुरुमंदिर
           </h3>
@@ -538,25 +545,25 @@ const Page = () => {
             </div>
                      <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              'सूरिशांति' अवतरण भूमि-मांडल
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
             'जिनविहार' युगभूमि, वेसु, सूरत
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
           'जिनविहार' भाभरतीर्थ (निर्माणाधीन)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white bg-green-500 rounded-full p-1 mt-1">
+              <span className="text-white bg-maroon rounded-full p-1 mt-1">
                 <FaCheck size={14} />
               </span>
              'सूरित्रय' जन्मभूमि, वाकड़िया वडगाम
@@ -568,7 +575,7 @@ const Page = () => {
 
       {/* Yugbhumi Gurumandir Images Section */}
       <section className="py-8 px-4">
-        <div className="text-center mb-8 lg:mb-12">
+        <div className="text-center mb-8 lg:">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             युगभूमि गुरुमंदिर
           </h3>
@@ -614,7 +621,7 @@ const Page = () => {
         {bhavans.map((bhavan, index) => (
           <div
             key={index}
-            className="bg-lightpink rounded-xl p-4 shadow-sm transition"
+            className="bg-lightpink/30 rounded-sm p-4 shadow-sm transition"
           >
             <p className="text-lg text-maroon">{bhavan}</p>
           </div>

@@ -1,7 +1,13 @@
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
+
+export const metadata = {
+  title: 'जिनालय शुद्धि - उपाश्रय शुद्धि | जिनमंदिर विभाग',
+  description: '',
+}
 
 const Page = () => {
   const statsData = [
@@ -25,8 +31,9 @@ const Page = () => {
   return (
     <div className=" font-body bg-whitey">
       {/* Header Section */}
-      <header className="bg-lightblue sm:my-6">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-8">
+      <header className="bg-lightblue relative">
+        <HeaderSvg/>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-4xl font-heading font-bold text-darkblue mb-4">
               जिनालय शुद्धि - उपाश्रय शुद्धि...

@@ -1,16 +1,23 @@
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
+
+export const metadata = {
+  title: 'गणिपिटक निर्माण-प्रसार | जिनागम विभाग',
+  description: '',
+}
 
 const Page = () => {
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
-      <header className="bg-lightpink">
-        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+      <header className="bg-lightpink relative">
+        <HeaderSvg/>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
 
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-heading">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 गणिपिटक निर्माण-प्रसार ...
               </h1>
             </div>
@@ -27,8 +34,8 @@ const Page = () => {
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-          <p className="text-xl leading-relaxed text-content">
-            'जिनबिंब जिनागम भवियण कुं आधारा' इन पंक्तियों के अनुसार जैसे जिनालय में जिनबिंब तथा उनके सेवक अधिष्ठायकों की स्थापना होती है, उसी प्रकार पाठशाला आदि में जिनागमस्थापना रूप श्री गणिपिटक तथा वाणी की अधिष्ठायिका सरस्वती देवी की स्थापना के लिए संगमरमर की श्री गणिपिटक का निर्माण तथा उसका प्रसार अध्यात्म परिवार द्वारा हो रहा है।
+          <p className="text-xl  leading-relaxed text-maroon">
+           <span className="font-bold">'जिनबिंब जिनागम भवियण कुं आधारा' </span>इन पंक्तियों के अनुसार जैसे जिनालय में जिनबिंब तथा उनके सेवक अधिष्ठायकों की स्थापना होती है, उसी प्रकार पाठशाला आदि में जिनागमस्थापना रूप श्री गणिपिटक तथा वाणी की अधिष्ठायिका सरस्वती देवी की स्थापना के लिए संगमरमर की श्री गणिपिटक का निर्माण तथा उसका प्रसार अध्यात्म परिवार द्वारा हो रहा है।
           </p>
         </div>
       </section>

@@ -1,7 +1,14 @@
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
+
+
+export const metadata = {
+  title: 'जिनालय सुरक्षा | जिनमंदिर विभाग',
+  description: '',
+}
 
 const JinalayaSuraksha = () => {
   const statsData = [
@@ -19,11 +26,12 @@ const JinalayaSuraksha = () => {
   return (
     <div className="bg-whitey font-body text-darkblue">
       {/* Header */}
-      <header className="bg-lightblue">
-        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+      <header className="bg-lightblue relative">
+        <HeaderSvg/>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-bold text-darkblue mb-1 sm:mb-2">
+              <h1 className="text-2xl sm:text-4xl  font-heading font-bold text-darkblue mb-1 sm:mb-2">
                 जिनालय सुरक्षा
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg text-darkblue font-semibold">

@@ -1,7 +1,13 @@
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
+import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import React from "react";
+
+export const metadata = {
+  title: 'प्राचीन श्रुत सुरक्षा | जिनागम विभाग',
+  description: '',
+}
 
 const Page = () => {
   const statsData = [
@@ -38,11 +44,12 @@ const Page = () => {
   ];
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
-      <header className="bg-lightpink">
-        <div className="mx-auto p-4 sm:p-6 lg:py-8">
+      <header className="bg-lightpink relative">
+        <HeaderSvg/>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 प्राचीन श्रुत सुरक्षा
               </h1>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
@@ -55,7 +62,7 @@ const Page = () => {
 
       <div className="px-2 sm:px-6">
         <section className="py-4 sm:py-6 lg:py-8 lg:px-0">
-          <div className="relative rounded-sm sm:p-8 p-12  bg-lightyellow">
+          <div className="relative rounded-sm sm:p-12 p-8 bg-lightyellow">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
@@ -131,7 +138,7 @@ const Page = () => {
               </div>
 
               <div className=" space-y-6">
-                <p className="p-4 border-l-4 border-secondary-color rounded-xl bg-lighten-bg text-lg text-maroon leading-relaxed">
+                <p className="py-3 px-6 rounded-sm bg-lightpink font-bold text-lg text-maroon  leading-relaxed">
                   सैकड़ों घंटों के परिश्रम द्वारा ये ग्रंथ गीतार्थों के हाथों तक
                   पहुंचे हैं।
                 </p>
