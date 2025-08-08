@@ -254,7 +254,7 @@ const Page = () => {
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 text-maroon">
-                    बबूल के पेड़ की जड़ के बदले मात्रा डालियां कांटने से कांटे चुभना किस प्रकार बंद होंगे?
+                    बबूल के पेड़ की जड़ के बदले मात्र डालियां कांटने से कांटे चुभना किस प्रकार बंद होंगे?
 
                   </h3>
                   <div className="space-y-4">
