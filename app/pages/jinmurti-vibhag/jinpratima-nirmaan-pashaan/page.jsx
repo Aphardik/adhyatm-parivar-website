@@ -22,7 +22,7 @@ const Page = () => {
                 अध्यात्म शिल्पशाला
               </p>
               <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
-                  कार्य आरंभ: वि.सं. २०६४
+                  कार्य आरंभ: वि.सं. २०७६
               </p>
             </div>
           </div>
