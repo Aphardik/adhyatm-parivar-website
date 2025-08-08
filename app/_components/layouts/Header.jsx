@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { BiChevronDown, BiMenu, BiX } from "react-icons/bi";
 import { usePathname } from "next/navigation";
+import HexagonalSvg from "../HexagonalSvg";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -457,6 +458,7 @@ const Header = () => {
           onMouseEnter={() => handleMouseEnter(activeDropdown)}
           onMouseLeave={handleMouseLeave}
         >
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {activeDropdown &&
@@ -467,7 +469,7 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     className={`p-4 rounded-lg ${
                       item.link == pathname && "bg-maroon text-white"
-                    } bg-lightpink/80 hover:bg-lightyellow hover:text-maroon  transition-all duration-300 cursor-pointer group transform ${
+                    } bg-lightpink/80 hover:bg-lightyellow relative hover:text-maroon  transition-all duration-300 cursor-pointer group transform ${
                       activeDropdown
                         ? "translate-y-0 opacity-100"
                         : "translate-y-4 opacity-0"
@@ -476,6 +478,7 @@ const Header = () => {
                       transitionDelay: `${index * 50}ms`,
                     }}
                   >
+                    <HexagonalSvg accentColor="maroon"/>
                     <div className="flex items-start space-x-3">
                       <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
                         {/* {item.emoji} */}
