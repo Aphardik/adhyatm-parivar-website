@@ -449,9 +449,9 @@ const Header = () => {
 
         {/* Desktop Dropdown Menu - Animated Height */}
         <div
-          className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-scroll transition-all duration-300 ease-out ${
+          className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-auto transition-all duration-300 ease-out ${
             activeDropdown
-              ? " opacity-100 translate-y-0"
+              ? "max-h-96 opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-2"
           }`}
           onMouseEnter={() => handleMouseEnter(activeDropdown)}
