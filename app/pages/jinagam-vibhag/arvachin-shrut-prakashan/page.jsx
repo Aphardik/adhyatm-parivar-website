@@ -118,10 +118,15 @@ const Page = () => {
         </div>
         <div className="grid grid-cols-1 gap-6">
           {bulletPoints.map((point, index) => (
-            <div key={index} className="bg-lightpink/30 backdrop-blur-sm rounded-lg p-4 border border-lightpink ">
-              <p className="text-lg leading-relaxed text-maroon font-medium">
+            <div key={index} className=" p-4  ">
+              <p className="text-lg font-semibold text-center leading-relaxed text-maroon">
                  {point}
               </p>
+                <div className="flex items-center justify-center mt-6">
+                    <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+                    <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
+                    <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+                  </div>
             </div>
           ))}
         </div>
