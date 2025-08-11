@@ -99,7 +99,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-       <CounterStatsUI statsData={statsData}/>
+     <CounterStatsUI statsData={statsData} textColor="maroon" />
     </div>
   );
 };

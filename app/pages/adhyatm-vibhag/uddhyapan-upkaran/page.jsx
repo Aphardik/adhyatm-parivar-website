@@ -93,7 +93,7 @@ const UdyapanPage = () => {
           इतने सारे उपकरण आवश्यकता वाले योग्य स्थानों पर पहुंचाए गए हैं।
         </div>
       </section> */}
-       <CounterStatsUI statsData={statsData}/>
+     <CounterStatsUI statsData={statsData} textColor="maroon" />
     </div>
     </div>
   );

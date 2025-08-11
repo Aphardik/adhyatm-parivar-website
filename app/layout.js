@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {/* <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
-        <div className=' min-h-dvh pt-16 bg-whitey flex items-center justify-center mx-auto '>
+        <div className=' min-h-dvh pt-16 bg-whitey flex  justify-center mx-auto '>
           {children}
         </div>
         <Footer />

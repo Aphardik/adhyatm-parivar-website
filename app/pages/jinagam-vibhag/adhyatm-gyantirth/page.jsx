@@ -18,7 +18,7 @@ const Page = () => {
 
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
-                अध्यात्म ज्ञानतीर्थ : संग्रह, संशोधन, प्रकाशन...
+                अध्यात्म ज्ञानतीर्थ : संग्रह, संशोधन, प्रकाशन
               </h1>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon mb-1 sm:mb-2">
                 कार्य प्रारंभ : वि.सं. २०७९

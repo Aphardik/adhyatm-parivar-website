@@ -2,7 +2,7 @@ import React from 'react'
 
 const HexagonalSvg = ({accentColor}) => {
   return (
-     <div className="absolute inset-0 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
+     <div className="absolute inset-0  opacity-10 group-hover:opacity-15 transition-opacity duration-300">
         <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id={`hexPattern${accentColor.replace(/[^a-zA-Z0-9]/g, '')}`} x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">

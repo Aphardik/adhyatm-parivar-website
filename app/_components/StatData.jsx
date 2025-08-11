@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StatCard = ({ count, label, label1, label2, accentColor }) => {
+const StatCard = ({ count, label, label1, label2, accentColor,textColor }) => {
   return (
     <div className="relative bg-white font-heading rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group h-64 flex flex-col justify-center overflow-hidden">
       {/* Hexagonal beehive background pattern */}
@@ -31,29 +31,29 @@ const StatCard = ({ count, label, label1, label2, accentColor }) => {
       </div>
              
       {/* Main content */}
-      <div className="relative text-center z-10">
+      <div className={`relative text-${textColor} text-center z-10`}>
         {/* Large percentage/number */}
         <div className="mb-4">
-          <span className="text-5xl font-sans font-bold text-maroon tracking-tight">
+          <span className="text-5xl font-sans font-bold  tracking-tight">
             {count}
           </span>
         </div>
                  
         {/* Label */}
         <div className="mb-3">
-          <h3 className="text-xl font-heading font-semibold text-maroon">
+          <h3 className="text-xl font-heading font-semibold ">
             {label}
           </h3>
         </div>
                  
         {/* Description */}
         <div>
-          <p className="text-maroon font-body text-sm leading-relaxed">
+          <p className=" font-body text-sm leading-relaxed">
             {label1}
           </p>
         </div>
         <div>
-          <p className="text-maroon font-body text-sm leading-relaxed">
+          <p className="font-body text-sm leading-relaxed">
             {label2}
           </p>
         </div>
@@ -62,33 +62,10 @@ const StatCard = ({ count, label, label1, label2, accentColor }) => {
   );
 };
 
-const ModernStatsUI = ({ statsData }) => {
-  // Sample data for demonstration
-  const defaultData = [
-    {
-      count: "85%",
-      label: "Customer Satisfaction",
-      label1: "Based on recent surveys",
-      label2: "Across all departments",
-      color: "text-blue-500"
-    },
-    {
-      count: "2.4k",
-      label: "Active Users",
-      label1: "Monthly active users",
-      label2: "Growing steadily",
-      color: "text-green-500"
-    },
-    {
-      count: "99.9%",
-      label: "Uptime",
-      label1: "System reliability",
-      label2: "Last 12 months",
-      color: "text-purple-500"
-    }
-  ];
-
-  const data = statsData || defaultData;
+const ModernStatsUI = ({ statsData,textColor }) => {
+ 
+  const data = statsData;
+  // console.log(statsData,accentColor,"textColor")
 
   return (
     <div className="bg-gray-50 py-8 sm:py-12">
@@ -106,6 +83,7 @@ const ModernStatsUI = ({ statsData }) => {
                 label1={stat.label1}
                 label2={stat.label2}
                 accentColor={stat.color}
+                textColor={textColor}
               />
             </div>
           ))}

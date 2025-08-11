@@ -32,12 +32,12 @@ const Page = () => {
 <div className="px-2 sm:px-6">
       {/* Stone Selection Criteria Section */}
       <section className="py-8 sm:pb-12 lg:pb-16">
-        <div className="text-center mb-8 lg:mb-12">
+        {/* <div className="text-center mb-8 lg:mb-12">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
             पाषाण की जिनप्रतिमा का निर्माण...
           </h3>
-        </div>
-        <p className="mb-6 text-center text-maroon text-lg">
+        </div> */}
+        <p className="mb-6 text-center font-bold text-maroon text-lg">
           आज ज्यादातर प्रतिमाजी के पाषाण के लिए 'सफेदी' यही अग्रिम और एकमात्र
           मापदंड बन गया है। वास्तव में क्रम ऐसा होना चाहिए :
         </p>
@@ -53,9 +53,8 @@ const Page = () => {
               पोगर परीक्षण :
             </h3>
             <p className="text-base text-maroon leading-relaxed">
-              जो पाषाण मोटी पोगर का होता है। वह ज्यादा पानी एब्ज़ोर्ब करता है,
-              जिसके परिणाम स्वरुप प्रतिमाजी कुछ वर्षों में नष्टप्राय: हो जाएगी।
-              इसलिए यह प्रथम मापदंड है।
+              जो पाषाण मोटी पोगर का होता है वह ज्यादा पानी एब्ज़ोर्ब करता है, जिसके परिणाम स्वरुप प्रतिमाजी कुछ वर्षों में नष्टप्राय: हो जाएगी। इसलिए यह प्रथम मापदंड है।
+
             </p>
           </div>
 
@@ -198,7 +197,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-            <section className="py-8 sm:py-12 lg:py-16">
+            <section className="py-6 sm:py-8 lg:py-8">
                  <div className="bg-lightyellow rounded-sm  p-6 sm:p-8 lg:p-10">
             <div className="flex items-center justify-center mb-6">
               <div className="w-12 h-1 bg-darkpink rounded-sm"></div>

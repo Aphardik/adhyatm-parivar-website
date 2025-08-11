@@ -291,7 +291,7 @@ const Page = () => {
         </section>
 
         <div className="pb-8">
-          <CounterStatsUI statsData={statsData}/>
+        <CounterStatsUI statsData={statsData} textColor="maroon" />
         </div>
       </div>
     </div>

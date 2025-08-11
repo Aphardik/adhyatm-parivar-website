@@ -26,8 +26,8 @@ const Page = () => {
         </div>
       </header>
 
-      {/* What is This Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-whitey">
+      <div className="px-2 sm:px-4">
+      <section className="py-6 sm:py-8 lg:py-8 bg-whitey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-4 sm:p-6">
             <p className="text-maroon text-lg lg:text-xl leading-relaxed text-center">
@@ -38,19 +38,26 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto px-4  py-8  sm:px-6 lg:px-8">
-          <div className="bg-lightyellow border-darkyellow rounded-xl  border-l-4 p-4 lg:p-6">
-            <p className="text-maroon text-lg lg:text-xl leading-relaxed text-center">
-              साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
+      
+
+        <section className="py-6 sm:py-8 lg:py-8">
+                 <div className="bg-lightyellow rounded-sm  p-6 sm:p-8 lg:p-10">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+              <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
+              <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
+            </div>
+            <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
+             साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
               जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म परिवार
               'सेतु' बन रहा है।
             </p>
           </div>
-        </div>
+      </section>
       </section>
 
       {/* Success Story Section */}
-      <section className="py-16 bg-whitey">
+      <section className="py-6 sm:py-8 lg:py-8 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
@@ -115,8 +122,8 @@ const Page = () => {
                   <div className="flex items-start space-x-4">
                     <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
                       यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि
-                      रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान !
-                      अतिप्राचीन धर्मनाथ दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के
+                      रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान ! <br />
+                      <span className="font-bold"> अतिप्राचीन धर्मनाथ </span>  दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के
                       समीप के खेत से प्राप्त हुई थी।
                     </p>
                   </div>
@@ -126,6 +133,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };

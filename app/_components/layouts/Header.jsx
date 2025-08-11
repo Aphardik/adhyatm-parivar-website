@@ -462,36 +462,42 @@ const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {activeDropdown &&
-                dropdownItems[activeDropdown]?.map((item, index) => (
-                  <Link
-                    href={item.link}
-                    key={item.id}
-                    onClick={handleMenuItemClick}
-                    className={`p-4 rounded-lg ${
-                      item.link == pathname && "bg-maroon text-white"
-                    } bg-lightpink/80 hover:bg-lightyellow relative hover:text-maroon  transition-all duration-300 cursor-pointer group transform ${
-                      activeDropdown
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-4 opacity-0"
-                    }`}
-                    style={{
-                      transitionDelay: `${index * 50}ms`,
-                    }}
-                  >
-                    <HexagonalSvg accentColor="maroon"/>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
-                        {/* {item.emoji} */}
-                      </span>
-                      <div>
-                        <h3 className="mb-1">{item.title}</h3>
-                        <p className="text-sm leading-relaxed">
-                          {item.description}
-                        </p>
+                dropdownItems[activeDropdown]?.map((item, index) => {
+                  const isActive = item.link === pathname;
+                  return (
+                    <Link
+                      href={item.link}
+                      key={item.id}
+                      onClick={handleMenuItemClick}
+                      className={`p-4 rounded-lg relative transition-all duration-300 cursor-pointer group transform ${
+                        isActive 
+                          ? "bg-maroon text-white" 
+                          : "bg-lightpink/80 hover:bg-lightyellow hover:text-maroon"
+                      } ${
+                        activeDropdown
+                          ? "translate-y-0 opacity-100"
+                          : "translate-y-4 opacity-0"
+                      }`}
+                      style={{
+                        transitionDelay: `${index * 50}ms`,
+                      }}
+                    >
+                      {/* Only show HexagonalSvg when not active to prevent conflicts */}
+                      {!isActive && <HexagonalSvg accentColor="maroon"/>}
+                      <div className="flex items-start space-x-3 relative z-10">
+                        <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
+                          {/* {item.emoji} */}
+                        </span>
+                        <div>
+                          <h3 className="mb-1">{item.title}</h3>
+                          <p className={`text-sm leading-relaxed ${isActive ? 'text-white/80' : ''}`}>
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </div>
@@ -551,13 +557,13 @@ const Header = () => {
                   : "max-h-0 opacity-0 mt-0"
               }`}
             >
-              <div className="space-y-4 pl-4">
+              <div className=" space-y-4 pl-4">
                 {dropdownItems.menu1.map((item, index) => (
                   <Link
                     href={item.link}
                     key={item.id}
                     onClick={handleMenuItemClick}
-                    className={`flex items-start space-x-3 p-3 ${
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
                       item.link == pathname && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu1"
@@ -576,8 +582,10 @@ const Header = () => {
                       <h3 className="mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
+                    <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
+                
               </div>
             </div>
           </div>

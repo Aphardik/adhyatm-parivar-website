@@ -363,7 +363,7 @@ const JinalayaSuraksha = () => {
                   />
                 </div>
                 <div className="sm:w-1/2 p-4">
-                  <p className="text-gray-800 text-lg leading-relaxed">
+                  <p className="text-darkblue text-lg leading-relaxed">
                     यहां{" "}
                     <span className="font-bold text-darkblue">'विमलवसाही'</span>{" "}
                     का रंग मंडप है, जहां दरार से लीकेज के कारण मूसलाधार पानी
@@ -458,7 +458,7 @@ const JinalayaSuraksha = () => {
           </div>
         </div>
       </section>
-      <CounterStatsUI statsData={statsData} />
+      <CounterStatsUI statsData={statsData} textColor="darkblue" />
     </div>
   );
 };

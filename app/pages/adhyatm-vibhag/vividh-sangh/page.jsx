@@ -628,7 +628,7 @@ const Page = () => {
         ))}
       </div>
     </div>
-     <CounterStatsUI statsData={statsData}/>
+     <CounterStatsUI statsData={statsData} textColor="maroon" />
     </div>
     </div>
   );

@@ -193,7 +193,7 @@ const Page = () => {
 
         {/* Stats Section */}
         <section className="py-6 sm:py-6 lg:py-8">
-          <CounterStatsUI statsData={statsData} />
+          <CounterStatsUI statsData={statsData} textColor="darkblue" />
         </section>
       </div>
     </div>
