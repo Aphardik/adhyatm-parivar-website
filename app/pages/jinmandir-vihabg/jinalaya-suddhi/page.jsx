@@ -29,9 +29,9 @@ const Page = () => {
   ];
 
   return (
-    <div className=" font-body bg-whitey">
+    <div className="max-w-7xl font-body bg-whitey">
       {/* Header Section */}
-      <header className="bg-lightblue relative">
+      <header className="bg-lightblue relative flex items-center justify-center h-40">
         <HeaderSvg/>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">

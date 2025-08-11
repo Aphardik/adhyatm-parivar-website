@@ -25,9 +25,9 @@ const Page = () => {
     { count: "7.09Cr +", label: "व्यवस्था का खर्च, अन्य संघो/ट्रस्टों को दान तथा विविध अनुष्ठान खर्च आदि",  color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
     ];
   return (
-    <div className="container mx-auto font-body">
+    <div className="max-w-7xl mx-auto font-body">
       {/* Header Section */}
-      <header className="bg-lightpink relative">
+      <header className="bg-lightpink relative flex items-center justify-center h-40">
         <HeaderSvg/>
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">

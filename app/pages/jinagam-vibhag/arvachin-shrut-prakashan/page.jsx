@@ -90,7 +90,7 @@ const Page = () => {
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       {/* Header */}
-      <header className="bg-lightpink relative">
+      <header className="bg-lightpink relative flex items-center justify-center h-40">
         <HeaderSvg/>
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">

@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <div className="bg-whitey text-maroon font-body">
       {/* Header */}
-      <header className="bg-lightpink relative">
+      <header className="bg-lightpink relative flex items-center justify-center h-40">
         <HeaderSvg/>
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
@@ -121,10 +121,9 @@ const Page = () => {
                 <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-16">
                   <div className="flex items-start space-x-4">
                     <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
-                      यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि
-                      रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान ! <br />
-                      <span className="font-bold"> अतिप्राचीन धर्मनाथ </span>  दादा यह प्रतिमाजी हिम्मतनगर, गुजरात के
-                      समीप के खेत से प्राप्त हुई थी।
+                      यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान <br />
+                      <span className="font-bold text-darkpink"> अतिप्राचीन धर्मनाथ दादा! </span>यह प्रतिमाजी हिम्मतनगर, गुजरात के समीप के खेत से प्राप्त हुई थी।
+
                     </p>
                   </div>
                 </div>

@@ -8,9 +8,9 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <div className="container bg-whitey mx-auto font-body">
+    <div className="max-w-7xl bg-whitey mx-auto font-body">
       {/* Header Section */}
-      <header className="relative bg-lightpink">
+      <header className="relative flex items-center justify-center h-40 bg-lightpink">
          <HeaderSvg/>
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">

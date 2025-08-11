@@ -38,9 +38,9 @@ const Page = () => {
     },
   ];
   return (
-    <div className="bg-whitey text-maroon  font-body">
+    <div className="bg-whitey max-w-7xl text-maroon  font-body">
       {/* Header */}
-     <header className="bg-lightpink relative overflow-hidden">
+     <header className="bg-lightpink relative flex items-center justify-center h-40 overflow-hidden">
      <HeaderSvg/>
 
       <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
