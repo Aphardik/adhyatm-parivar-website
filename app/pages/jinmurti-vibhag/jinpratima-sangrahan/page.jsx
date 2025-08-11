@@ -8,7 +8,7 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <div className="bg-whitey text-maroon font-body">
+    <div className="max-w-7xl bg-whitey text-maroon font-body">
       {/* Header */}
       <header className="bg-lightpink relative flex items-center justify-center h-40">
         <HeaderSvg/>

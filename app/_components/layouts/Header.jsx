@@ -482,7 +482,6 @@ const Header = () => {
                         transitionDelay: `${index * 50}ms`,
                       }}
                     >
-                      {/* Only show HexagonalSvg when not active to prevent conflicts */}
                       {!isActive && <HexagonalSvg accentColor="maroon"/>}
                       <div className="flex items-start space-x-3 relative z-10">
                         <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
@@ -615,9 +614,9 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`flex items-start space-x-3 p-3 ${
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
                       item.link == pathname && "bg-maroon text-white"
-                    } rounded-lg  hover:bg-maroon/20 transition-all duration-300 transform ${
+                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu2"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
@@ -634,6 +633,7 @@ const Header = () => {
                       <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
+                     <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
               </div>
@@ -665,7 +665,7 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`flex items-start space-x-3 p-3 ${
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
                       item.link == pathname && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu3"
@@ -684,7 +684,9 @@ const Header = () => {
                       <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
+                     <HexagonalSvg accentColor="maroon" />
                   </Link>
+                  
                 ))}
               </div>
             </div>
@@ -715,7 +717,7 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`flex items-start space-x-3 p-3 ${
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
                       item.link == pathname && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu4"
@@ -734,6 +736,7 @@ const Header = () => {
                       <h3 className=" mb-1">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
+                     <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
               </div>

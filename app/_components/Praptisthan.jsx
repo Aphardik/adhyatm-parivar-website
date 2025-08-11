@@ -5,6 +5,7 @@ import { IoLocation } from "react-icons/io5";
 import { FiBook } from "react-icons/fi";
 import {suddhDravyaPraptisthanData} from "@/app/data/suddhDravyaPraptisthan"
 import {pustakPraptisthanData} from "@/app/data/pustakPraptisthan"
+import HexagonalSvg from './HexagonalSvg';
 
 const Praptisthan = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -42,7 +43,8 @@ const Praptisthan = () => {
   };
 
   const PratisthanCard = ({ entry }) => (
-    <div className="bg-whitey shadow-md  hover:shadow-lg border border-gray-300 p-6 font-body  transition-colors">
+    <div className="bg-lightpink/30 shadow-md  hover:shadow-lg  p-6 font-body relative  transition-colors">
+      <HexagonalSvg accentColor="red"/>
       <div className="flex flex-col space-y-3">
         <h3 className="text-xl font-bold text-heading">{entry.name}</h3>
         
@@ -119,7 +121,7 @@ const Praptisthan = () => {
             <input
               type="text"
               placeholder="नाम, फोन, पता, या शहर से खोजें..."
-              className="w-full placeholder:font-body bg-whitey placeholder:text-content pl-10 pr-4 py-3 text-lg border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-maroon/60 focus:border-gray-400"
+              className="w-full placeholder:font-body bg-whitey placeholder:text-content pl-10 pr-4 py-3 text-sm border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-maroon/60 focus:border-gray-400"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

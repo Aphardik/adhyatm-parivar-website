@@ -32,7 +32,7 @@ export default function TempleConstructionPage() {
       </header>
 
       <div className="px-2 sm:px-6">
-        <section className="py-6 sm:py-6 lg:py-8">
+        <section className="py-6 flex flex-col gap-8 sm:py-6 lg:py-8">
           <div className="max-w-5xl bg-shadeblue p-8 relative mx-auto">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
@@ -42,19 +42,34 @@ export default function TempleConstructionPage() {
             </div>
             <div className="rounded-sm p-4 bg-shadeblue">
               <p className="text-lg leading-relaxed text-darkblue mb-4">
-                इसीलिए तो सीहोर के राजा जब भावनगर में बसे तब उन्होंने जैन
+                जैनों के स्थानांतर के कारण वे जिस नए स्थान पर जाकर बसते है वहां नूतन जिनालय आराधना के आलंबन के रूप में अनिवार्य होता है। इसीलिए तो सीहोर के राजा जब भावनगर में बसे तब उन्होंने जैन
                 <span className="text-secondary-color font-semibold">
                   {" "}
                   श्रेष्ठी कुंवरजीभाई माधाभाई{" "}
                 </span>
-                आदि को नगर के बसने का आमंत्रण दिया। लेकिन उन श्रेष्ठियों ने कह दिया
-                कि,
+                आदि को नगर में बसने का आमंत्रण दिया। लेकिन उन श्रेष्ठियों ने कह दिया कि,
                 <span className="text-secondary-color font-semibold">
                   {" "}
                   "जिनालय के बिना हम नहीं आएंगे"{" "}
                 </span>
-                राजा ने जिनालय की जगह दी। ऐसे तो अनेक इतिहास हैं।
+               राजा ने जिनालय की जगह दी। ऐसे तो अनेक इतिहास हैं।
               </p>
+             
+            </div>
+            <div>
+              
+            </div>
+          </div>
+
+          <div className="max-w-5xl bg-shadeblue p-8 relative mx-auto">
+            <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+              <BottomRighSvg />
+            </div>
+            <div className="rounded-sm p-4 bg-shadeblue">
+             
               <p className="text-lg leading-relaxed text-darkblue">
                 इसीलिए अध्यात्म परिवार ने{" "}
                 <span className="text-secondary-color font-semibold">
@@ -65,7 +80,11 @@ export default function TempleConstructionPage() {
                 झलक इस प्रकार है :
               </p>
             </div>
+            <div>
+              
+            </div>
           </div>
+
         </section>
 
         {/* Project Planning Section */}
@@ -159,19 +178,7 @@ export default function TempleConstructionPage() {
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <div className="max-w-fit bg-lightblue/20 rounded-lg mx-auto p-6 relative">
-              <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                <TopLeftSvg />
-              </div>
-              <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                <BottomRighSvg />
-              </div>
-              <p className="text-xl font-bold text-darkblue px-6 py-3">
-                अध्यात्म शिल्पशाला की उपलब्धि की यह झलकियां हैं!
-              </p>
-            </div>
-          </div>
+         
         </section>
 
         {/* Stone Processing Section */}
@@ -195,7 +202,7 @@ export default function TempleConstructionPage() {
           </div>
 
           {/* Stone Procurement */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-4 gap-6 mb-28">
             <div className="bg-shadeblue rounded-lg p-6 shadow-sm relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
@@ -349,17 +356,7 @@ export default function TempleConstructionPage() {
               <BottomRighSvg />
             </div>
             <div className="grid text-center md:grid-cols-1 gap-8 items-center">
-              <div>
-                <p className="text-lg font-semibold leading-relaxed text-darkblue mb-2">
-                  देलवाड़ा के मंदिर ८०० वर्ष बाद भी हमारा मन जीत लेते हैं, क्योंकि
-                  वहां बुरादे के बदले में चांदी, सोना तथा रत्न देकर गहरी गहरी
-                  कोरणी करवाई थी।
-                </p>
-                <p className="text-lg font-semibold leading-relaxed text-darkblue">
-                  छिछली कोरणी हो तो २५-५० वर्षों में पुनः घिसाई करवाने से वह कोरणी
-                  नष्ट हो जाती है।
-                </p>
-              </div>
+             
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="text-center sm:p-4">
                   <img
@@ -408,6 +405,22 @@ export default function TempleConstructionPage() {
                 className="w-full  sm:p-20 object-contain rounded-lg"
               />
             </div>
+
+
+
+            <div className="flex flex-col gap-8">
+               <div className="bg-shadeblue rounded-lg p-10 text-center relative">
+              <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <TopLeftSvg />
+              </div>
+              <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <BottomRighSvg />
+              </div>
+             
+              <p className="text-lg leading-relaxed text-darkblue">
+               देलवाड़ा के मंदिर ८०० वर्ष बाद भी हमारा मन जीत लेते हैं, क्योंकि वहां बुरादे के बदले में चांदी, सोना तथा रत्न देकर गहरी गहरी कोरणी करवाई थी। छिछली कोरणी हो तो २५-५० वर्षों में पुनः घिसाई करवाने से वह कोरणी नष्ट हो जाती है।
+              </p>
+            </div>
             <div className="bg-shadeblue rounded-lg p-10 text-center relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
@@ -429,6 +442,13 @@ export default function TempleConstructionPage() {
                 में हो रही है।
               </p>
             </div>
+
+           
+            </div>
+
+
+
+
           </div>
         </section>
 

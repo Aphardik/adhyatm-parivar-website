@@ -1,4 +1,5 @@
 import HeaderSvg from '@/app/_components/HeaderSvg'
+import Link from 'next/link'
 import React from 'react'
 
 export const metadata = {
@@ -39,9 +40,10 @@ const Page = () => {
           <div className="rounded-lg p-6  order-2 md:order-1">
             <h3 className="font-bold text-xl sm:text-2xl text-maroon mb-4 font-heading">वैक्यूम इन्वेस्टमेंट कास्टिंग</h3>
             <p className="text-base sm:text-lg leading-relaxed text-maroon mb-4">
-              धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर 
-              <span className="text-darkpink font-semibold"> वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति </span>
-              से धातु की प्रतिमाजी का निर्माण किया जाता है।
+              धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार  
+             <Link href="/jinmurti-vibhag/jinpratima-nirmaan-pashaan" className='text-darkpink font-bold'>&nbsp; (पाषाण जिनप्रतिमा निर्माण) &nbsp; </Link> 
+                मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति से धातु की प्रतिमाजी का निर्माण किया जाता है।
+
             </p>
 
           </div>

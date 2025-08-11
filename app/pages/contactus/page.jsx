@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaBuilding, FaChevronRight } from 'react-icons/fa';
 import Praptisthan from '@/app/_components/Praptisthan';
+import HeaderSvg from '@/app/_components/HeaderSvg';
+import HexagonalSvg from '@/app/_components/HexagonalSvg';
 
 const ContactPage = () => {
   const [selectedLocation, setSelectedLocation] = useState(0);
@@ -39,8 +41,9 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen max-w-7xl bg-whitey px-4 sm:px-6">
       {/* Header */}
-      <div className="bg-lightpink">
-        <div className="container mx-auto py-6">
+      <div className="bg-lightpink relative flex items-center justify-center h-40">
+        <HeaderSvg/>
+        <div className=" mx-auto z-10">
           <div className="text-center">
             <h1 className="text-2xl font-heading font-bold text-[#01044c] mb-2">
               अध्यात्म परिवार
@@ -62,11 +65,12 @@ const ContactPage = () => {
             {locations.map((location, index) => (
               <div 
                 key={index}
-                className={`bg-lightpink/40 border border-gray-300 transition-all duration-300 cursor-pointer ${
+                className={`bg-lightpink/30 shadow-md  hover:shadow-lg relative transition-all duration-300 cursor-pointer ${
                   selectedLocation === index ? 'shadow-sm' : ''
                 }`}
                 onClick={() => setSelectedLocation(index)}
               >
+                <HexagonalSvg accentColor="red"/>
                 <div className={`h-1 ${selectedLocation === index ? 'bg-foreground' : ''}`}></div>
                 <div className="p-[1.775rem]">
                   <div className="flex items-center justify-between mb-4">

@@ -36,7 +36,7 @@ const Page = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-4xl font-heading font-bold text-darkblue mb-4">
-              जिनालय शुद्धि - उपाश्रय शुद्धि...
+              जिनालय शुद्धि - उपाश्रय शुद्धि
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-darkblue font-medium">
               कार्य प्रारंभ : वि.सं. २०७७
