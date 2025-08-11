@@ -26,7 +26,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 उष्णजल ठंडा करने का स्टैंड
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon mb-1 sm:mb-2">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon">
                 (कार्य प्रारंभ : वि.सं. २०७७)
               </p>
             </div>

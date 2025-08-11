@@ -29,7 +29,7 @@ const BhaktidravyShanshodhan = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 उत्तम भक्तिद्रव्य संशोधन
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं. २०७३
               </p>
             </div>

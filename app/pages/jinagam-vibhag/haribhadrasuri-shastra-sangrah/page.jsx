@@ -28,7 +28,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl text-center font-heading font-bold text-maroon mb-4">
                 हरिभद्रसूरि शास्त्रसंग्रह : श्रीसंघ के लिए श्रुत की उपलब्धि
               </h1>
-              <p className="text-lg sm:text-base text-center lg:text-lg text-maroon mb-1 sm:mb-2">
+              <p className="text-lg sm:text-base text-center lg:text-lg text-maroon">
                 (कार्य प्रारंभ : वि.सं. २०७३)
               </p>
             </div>

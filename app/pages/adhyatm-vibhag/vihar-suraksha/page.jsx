@@ -29,7 +29,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 विहार सुरक्षा
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं. २०७३
               </p>
             </div>

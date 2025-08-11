@@ -37,7 +37,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-darkblue">
                 देवबगीचे का निर्माण
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-darkblue font-medium mb-1 sm:mb-2">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-darkblue font-medium">
                 कार्य प्रारंभ : वि.सं.२०७७
               </p>
             </div>

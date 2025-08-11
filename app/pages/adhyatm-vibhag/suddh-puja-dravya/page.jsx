@@ -28,7 +28,7 @@ const Page = () => {
               <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
                 अध्यात्म परिवार
               </p>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ: वि.सं. २०७०
               </p>
             </div>

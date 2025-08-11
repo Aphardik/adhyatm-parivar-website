@@ -27,7 +27,7 @@ const Page = () => {
               <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon mb-4">
                 धर्मानुष्ठान सुशोभन सामग्रियों की उपलब्धि
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                   कार्य प्रारंभ : वि.सं. २०७६
               </p>
             </div>

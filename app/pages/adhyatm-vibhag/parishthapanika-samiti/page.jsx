@@ -28,7 +28,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 परिष्ठापानिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डेम) निर्माण
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-semibold mb-1 sm:mb-2">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-semibold">
                 (कार्य प्रारंभ : वि.सं. २०६६)
               </p>
             </div>

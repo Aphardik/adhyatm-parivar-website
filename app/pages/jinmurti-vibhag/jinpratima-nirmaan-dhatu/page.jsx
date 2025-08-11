@@ -16,7 +16,7 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">जिनप्रतिमा निर्माण : धातु</h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium mb-1 sm:mb-2">कार्य आरंभ : वि.सं. २०७६</p>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium">कार्य आरंभ : वि.सं. २०७६</p>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const AnusthanAyojan = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
                 अनुष्ठान आयोजन
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं.२०६५
               </p>
             </div>

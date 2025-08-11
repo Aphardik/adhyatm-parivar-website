@@ -23,7 +23,7 @@ export default function TempleConstructionPage() {
               <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-darkblue font-semibold">
                 अध्यात्म शिल्पशाला
               </p>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-darkblue font-medium mb-1 sm:mb-2">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-darkblue font-medium">
                 कार्य प्रारंभ: वि.सं.२०७१
               </p>
             </div>
