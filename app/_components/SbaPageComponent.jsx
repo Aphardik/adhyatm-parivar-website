@@ -494,15 +494,15 @@ const PhotoGallery = () => {
                 href={whatsappLinks[language]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                className="flex items-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 <FaWhatsapp className="w-4 h-4" />
-                <span className="text-sm font-medium">
+                <span className="text-xs sm:text-sm font-medium">
                   {language === "hindi"
-                    ? "जॉइन व्हाट्सऐप ग्रुप"
+                    ? " व्हाट्सऐप ग्रुप"
                     : language === "gujarati"
-                    ? "જોઇન વોટ્સએપ ગ્રુપ"
-                    : "Join WhatsApp Group"}
+                    ? " વોટ્સએપ ગ્રુપ"
+                    : " WhatsApp Group"}
                 </span>
               </a>
 
@@ -510,7 +510,7 @@ const PhotoGallery = () => {
               <div className="relative flex items-center bg-gray-300 rounded-3xl p-1 shadow-inner">
                 <button
                   onClick={() => toggleLanguage("hindi")}
-                  className={`relative font-heading px-3 py-2 rounded-3xl text-sm font-medium transition-all duration-300 ease-in-out transform ${
+                  className={`relative cursor-pointer font-heading px-3 py-2 rounded-3xl text-xs sm:text-sm font-medium transition-all duration-300 ease-in-out transform ${
                     language === "hindi"
                       ? "bg-black  text-white shadow-lg scale-105"
                       : "text-gray-600"
@@ -520,7 +520,7 @@ const PhotoGallery = () => {
                 </button>
                 <button
                   onClick={() => toggleLanguage("gujarati")}
-                  className={`relative px-3 py-2 rounded-3xl font-anek text-sm font-medium transition-all duration-300 ease-in-out transform ${
+                  className={`relative cursor-pointer px-3 py-2 rounded-3xl font-anek text-xs sm:text-sm font-medium transition-all duration-300 ease-in-out transform ${
                     language === "gujarati"
                       ? "bg-black text-white shadow-lg scale-105"
                       : "text-gray-600"
@@ -530,7 +530,7 @@ const PhotoGallery = () => {
                 </button>
                 <button
                   onClick={() => toggleLanguage("english")}
-                  className={`relative px-3 font-sans py-2 rounded-3xl text-sm font-medium transition-all duration-300 ease-in-out transform ${
+                  className={`relative cursor-pointer px-3 font-sans py-2 rounded-3xl text-xs sm:text-sm font-medium transition-all duration-300 ease-in-out transform ${
                     language === "english"
                       ? "bg-black text-white shadow-lg scale-105"
                       : "text-gray-600"
