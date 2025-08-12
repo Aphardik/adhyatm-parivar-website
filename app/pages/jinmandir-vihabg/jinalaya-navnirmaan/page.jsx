@@ -73,7 +73,7 @@ export default function TempleConstructionPage() {
               <p className="text-lg leading-relaxed text-darkblue">
                 इसीलिए अध्यात्म परिवार ने{" "}
                 <span className="text-secondary-color font-semibold">
-                  'अध्यात्म शिल्पशाला'
+                  'अध्यात्म शिल्पशाला'{" "}
                 </span>
                 का एक विराट प्रकल्प प्रारंभ किया है। जिनालय निर्माण शास्त्रोक्त
                 विधिपूर्वक तथा आकर्षक हो इसलिए पद्धति अनुसार योजना बनाई है, उसकी एक
@@ -394,6 +394,18 @@ export default function TempleConstructionPage() {
           </div>
 
           {/* Current Project */}
+           <div className="bg-shadeblue rounded-lg p-10 my-12 text-center relative">
+              <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <TopLeftSvg />
+              </div>
+              <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
+                <BottomRighSvg />
+              </div>
+             
+              <p className="text-lg leading-relaxed text-darkblue">
+               <span className="font-semibold ">देलवाड़ा के मंदिर </span> ८०० वर्ष बाद भी हमारा मन जीत लेते हैं, क्योंकि वहां बुरादे के बदले में चांदी, सोना तथा रत्न देकर गहरी गहरी कोरणी करवाई थी। छिछली कोरणी हो तो २५-५० वर्षों में पुनः घिसाई करवाने से वह कोरणी नष्ट हो जाती है।
+              </p>
+            </div>
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="bg-shadeblue rounded-lg p-6 relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
@@ -409,18 +421,7 @@ export default function TempleConstructionPage() {
 
 
             <div className="flex flex-col gap-8">
-               <div className="bg-shadeblue rounded-lg p-10 text-center relative">
-              <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                <TopLeftSvg />
-              </div>
-              <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                <BottomRighSvg />
-              </div>
-             
-              <p className="text-lg leading-relaxed text-darkblue">
-               देलवाड़ा के मंदिर ८०० वर्ष बाद भी हमारा मन जीत लेते हैं, क्योंकि वहां बुरादे के बदले में चांदी, सोना तथा रत्न देकर गहरी गहरी कोरणी करवाई थी। छिछली कोरणी हो तो २५-५० वर्षों में पुनः घिसाई करवाने से वह कोरणी नष्ट हो जाती है।
-              </p>
-            </div>
+              
             <div className="bg-shadeblue rounded-lg p-10 text-center relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />

@@ -28,6 +28,12 @@ const Page = () => {
       color: "bg-gradient-to-b from-green-400 to-green-600",
     },
   ];
+
+    const immediateActions = [
+    "वृक्ष के आस-पास के संगमरमर के फर्श को खोल कर उसमें अन्य रायण वृक्षों की मिट्टी डाली गई।",
+    "उचित पोशक तत्त्व डाले गए।",
+    "जलसिंचन आदि की मात्र का निर्णय किया गया।"
+  ];
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       <header className="bg-lightblue relative flex items-center justify-center h-40">
@@ -73,8 +79,8 @@ const Page = () => {
               से लाए हुए पुष्पों से कुछ अंश में साकार होती है तो होती है।
               व्यक्तिगत पुष्प पूजा तो ९९.९९% मालन पर निर्भर हो गई है। वो जो फूल
               लाती है वही फूल चढ़ाने के लिए उपलब्ध होते हैं। क्या इसका कोई
-              समाधान नहीं है ?प्रतिदिन बोली जाने वाली दोहे कि यह पंक्ति साकार
-              नहीं हो सकती है? पांचवे स्वप्न में प्रभु की माता ने जितने प्रकार
+              समाधान नहीं है ? <span className="font-bold text-darkblue/90"> प्रतिदिन बोली जाने वाली दोहे कि यह पंक्ति साकार
+              नहीं हो सकती है? {" "}</span>  पांचवे स्वप्न में प्रभु की माता ने जितने प्रकार
               के फूल देखे थे, क्या उनमें से ज्यादा से ज्यादा प्रकार के फूलों से
               फूलपूजा हम नहीं कर सकते? इन सभी प्रश्नों का जवाब 'हां' है।
             </p>
@@ -189,31 +195,24 @@ const Page = () => {
             <div className="absolute bottom-0 right-0 opacity-15  transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <h3 className="text-xl font-heading sm:text-2xl font-semibold text-darkblue mb-6 pb-3 border-b border-darkblue/20">
-              कंसलटेंट के मार्गदर्शन के अनुसार तात्कालिक उपाय किए गए :
+            <h3 className="text-xl text-center font-heading sm:text-2xl font-semibold text-darkblue mb-6 pb-3 border-b border-darkblue/20">
+              कंसलटेंट के मार्गदर्शन के अनुसार तात्कालिक उपाय किए गए 
             </h3>
 
-            <div className="space-y-5">
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-white/30 backdrop-blur-sm transition-all duration-200 ">
-                <div className="w-2 h-2 rounded-full bg-darkblue mt-3 flex-shrink-0"></div>
-                <p className="text-base sm:text-lg text-darkblue leading-relaxed">
-                  वृक्ष के आस-पास के संगमरमर के फर्श को खोल कर उसमें अन्य रायण
-                  वृक्षों की मिट्टी डाली गई।
-                </p>
+        <div className="space-y-5 mb-8">
+            {immediateActions.map((action, index) => (
+              <div key={index} className="relative">
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-white/30 backdrop-blur-sm pl-10">
+                  <p className="text-base sm:text-lg text-darkblue leading-relaxed">
+                    {action}
+                  </p>
+                </div>
+                <div className="absolute -left-6 -top-1/8  transform w-12 h-12 bg-gradient-to-b from-blue-300 to-blue-800 flex items-end justify-end pr-1" style={{borderRadius: '18px 18px 4px 18px'}}>
+                  <span className="text-xl font-sans font-extrabold text-white">{index + 1}</span>
+                </div>
               </div>
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-white/30 backdrop-blur-sm transition-all duration-200 ">
-                <div className="w-2 h-2 rounded-full bg-darkblue mt-3 flex-shrink-0"></div>
-                <p className="text-base sm:text-lg text-darkblue leading-relaxed">
-                  उचित पोशक तत्त्व डाले गए।
-                </p>
-              </div>
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-white/30 backdrop-blur-sm transition-all duration-200 ">
-                <div className="w-2 h-2 rounded-full bg-darkblue mt-3 flex-shrink-0"></div>
-                <p className="text-base sm:text-lg text-darkblue leading-relaxed">
-                  जलसिंचन आदि की मात्र का निर्णय किया गया।
-                </p>
-              </div>
-            </div>
+            ))}
+          </div>
 
             <div className=" backdrop-blur-sm rounded-2xl p-8 mt-8  overflow-hidden">
               <p className="text-base sm:text-lg leading-relaxed text-darkblue font-semibold text-center z-10 pl-4">

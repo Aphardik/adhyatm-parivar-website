@@ -179,6 +179,7 @@ const Page = () => {
               </div>
 
               <div className="space-y-2">
+                <div>
                 <p className="sm:text-lg leading-relaxed">
                   ऐसी मध्यकालीन कृतियों वाली हजारों हस्तप्रतों के लाखों पन्ने
                   जर्जर हालत में हैं।
@@ -186,6 +187,8 @@ const Page = () => {
                 <p className="sm:text-lg leading-relaxed">
                   जिनको पिछले २५० वर्षों में शायद किसी ने कभी उठाया भी नहीं है।
                 </p>
+                </div>
+                <div>
                 <p className="sm:text-lg leading-relaxed">
                   पूज्य कृपानाथ के निश्रावर्ती संख्याबद्ध श्रमण-श्रमणीवर्या इस
                   विराट साहित्य को गीतार्थसुलभ बनाने के लिए कमरतोड़ परिश्रम कर
@@ -194,6 +197,7 @@ const Page = () => {
                 <p className="sm:text-lg leading-relaxed">
                   जिसके सुंदर फल श्री संघ के करकमल में अर्पण किए जा रहे है।
                 </p>
+              </div>
               </div>
             </div>
           </div>

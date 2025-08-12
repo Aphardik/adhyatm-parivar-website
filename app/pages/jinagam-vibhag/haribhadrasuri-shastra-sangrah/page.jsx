@@ -62,7 +62,7 @@ const Page = () => {
                   className="w-full h-64 object-contain rounded-lg mb-6"
                 />
                 <p className="text-maroon text-lg font-semibold text-center">
-                 इन ३७३ अलमारियों सर्वज्ञ प्रभु का ज्ञानवैभव दीमक तथा सीलन ना लगे इस प्रकार सुरक्षित रखा गया है।
+               इन ३७३ अलमारियों में सर्वज्ञ प्रभु का ज्ञानवैभव दीमक तथा सीलन ना लगे इस प्रकार सुरक्षित रखा गया है।
                 </p>
               </div>
 
@@ -73,7 +73,7 @@ const Page = () => {
                   className="w-full h-64 object-contain rounded-lg mb-6"
                 />
                 <p className="text-maroon text-lg font-semibold text-center">
-                आज जिसका आंकड़ा १.२५ लाख से अधिक है, ये ग्रंथ-पुस्तकें ज्ञानपिपासुओं प्राणों से भी प्यारी है।
+                आज जिसका आंकड़ा १.२५ लाख से अधिक है, ये ग्रंथ-पुस्तकें ज्ञानपिपासुओं को प्राणों से भी प्यारी है।
                 </p>
               </div>
 
@@ -103,7 +103,7 @@ const Page = () => {
 
             <div className="space-y-6 w-full max-w-4xl">
               <p className="p-4 bg-lightpink text-maroon rounded-sm text-lg leading-relaxed text-center font-semibold">
-               इस शास्त्रसंग्रह का २००७ साधु-साध्वीजी भगवंत तथा १९९६ श्रावक-श्राविका वर्ग उपयोग कर चुके हैं। क्या आप बाकी हैं?
+               इस शास्त्रसंग्रह का १००७ साधु-साध्वीजी भगवंत तथा १९९६ श्रावक-श्राविका वर्ग उपयोग कर चुके हैं। क्या आप बाकी हैं?
               </p>
             </div>
           </div>

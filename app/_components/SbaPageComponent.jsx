@@ -454,7 +454,7 @@ const PhotoGallery = () => {
 
   return (
     <div
-      className={`min-h-screen max-w-7xl px-2 sm:px-4  transition-opacity duration-1000 ${
+      className={`min-h-screen w-screen sm:w-[98vw] px-2 sm:px-4  transition-opacity duration-1000 ${
         language === "hindi" ? "font-heading" : "font-anek"
       } ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
