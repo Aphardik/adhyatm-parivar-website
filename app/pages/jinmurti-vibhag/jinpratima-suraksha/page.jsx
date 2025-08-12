@@ -3,11 +3,12 @@ import CounterStatsUI from "@/app/_components/StatData";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import Link from "next/link";
 import HeaderSvg from "@/app/_components/HeaderSvg";
+import CallToActionButton from "@/app/_components/CallToActionButton";
 
 export const metadata = {
-  title: 'जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग',
-  description: '',
-}
+  title: "जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग",
+  description: "",
+};
 
 const Page = () => {
   const statsData = [
@@ -40,22 +41,22 @@ const Page = () => {
   return (
     <div className="bg-whitey max-w-7xl text-maroon  font-body">
       {/* Header */}
-     <header className="bg-lightpink relative flex items-center justify-center h-40 overflow-hidden">
-     <HeaderSvg/>
+      <header className="bg-lightpink relative flex items-center justify-center h-40 overflow-hidden">
+        <HeaderSvg />
 
-      <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
-          <div className="text-center sm:text-left">
-            <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
-              जिनप्रतिमा सुरक्षा
-            </h1>
-            <p className="sm:text-base text-center lg:text-lg text-maroon font-medium">
-              कार्य आरंभ: वि.सं. २०७३
-            </p>
+        <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
+                जिनप्रतिमा सुरक्षा
+              </h1>
+              <p className="sm:text-base text-center lg:text-lg text-maroon font-medium">
+                कार्य आरंभ: वि.सं. २०७३
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
       <div className="px-2 sm:px-6">
         {/* Section 1: Introduction */}
@@ -254,8 +255,8 @@ const Page = () => {
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 text-maroon">
-                    बबूल के पेड़ की जड़ के बदले मात्र डालियां कांटने से कांटे चुभना किस प्रकार बंद होंगे?
-
+                    बबूल के पेड़ की जड़ के बदले मात्र डालियां कांटने से कांटे
+                    चुभना किस प्रकार बंद होंगे?
                   </h3>
                   <div className="space-y-4">
                     <div className="flex gap-4 items-start">
@@ -504,7 +505,10 @@ const Page = () => {
                   श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
                 </h4>
                 <p className="text-maroon leading-relaxed">
-                  वि.सं. २०७५-७६ से प्रतिवर्ष भादरवा सुद छठ से आसोज सुद छठ (एक माह) तक श्री शत्रुंजय तीर्थाधिपति दादा आदिनाथ का ओप (शुद्धि) सहित महातीर्थ पर विराजमान प्रतिमाओं के ओप आदि का कार्य अविरत चल रहा है।
+                  वि.सं. २०७५-७६ से प्रतिवर्ष भादरवा सुद छठ से आसोज सुद छठ (एक
+                  माह) तक श्री शत्रुंजय तीर्थाधिपति दादा आदिनाथ का ओप (शुद्धि)
+                  सहित महातीर्थ पर विराजमान प्रतिमाओं के ओप आदि का कार्य अविरत
+                  चल रहा है।
                 </p>
               </div>
             </div>
@@ -525,7 +529,10 @@ const Page = () => {
                     श्री गिरनार महातीर्थ
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                   वर्तमान विश्व की सबसे प्राचीन प्रतिमा गिरनार महातीर्थ मंडन श्री नेमिनाथ दादा की प्रतिमा का शास्त्रवर्णित शुद्ध द्रव्यों से लेप का कार्य एवं प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा के ओप का कार्य भी अध्यात्म परिवार द्वारा संपन्न!
+                    वर्तमान विश्व की सबसे प्राचीन प्रतिमा गिरनार महातीर्थ मंडन
+                    श्री नेमिनाथ दादा की प्रतिमा का शास्त्रवर्णित शुद्ध द्रव्यों
+                    से लेप का कार्य एवं प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ
+                    परमात्मा के ओप का कार्य भी अध्यात्म परिवार द्वारा संपन्न!
                   </p>
                 </div>
               </div>
@@ -544,8 +551,9 @@ const Page = () => {
                     श्री समेतशिखर महातीर्थ
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    इस अवसर्पिणी काल के २०-२० तीर्थंकरों के मोक्ष कल्याणक से सुवासित श्री समेत्तशिखर महातीर्थ के जलमंदिर में विराजमान श्री शामला पार्श्वनाथ परमात्मा के लेप का कार्य
-
+                    इस अवसर्पिणी काल के २०-२० तीर्थंकरों के मोक्ष कल्याणक से
+                    सुवासित श्री समेत्तशिखर महातीर्थ के जलमंदिर में विराजमान
+                    श्री शामला पार्श्वनाथ परमात्मा के लेप का कार्य
                   </p>
                 </div>
               </div>
@@ -590,7 +598,6 @@ const Page = () => {
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
                 प्रत्येक पूजक का एक संकल्प, जिससे भविष्य का नुकसान रुकेगा
-
               </h2>
             </div>
 
@@ -619,49 +626,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient2 shadow-lg rounded-lg p-6 sm:p-8 my-8">
-                {/* Header */}
-                <h3 className="text-xl text-center sm:text-2xl font-bold font-heading mb-6 text-maroon py-3 px-4 ">
-                  जो नुकसान पहले ही हो चुका है उसका क्या?
 
-                </h3>
-
-                {/* Main Content Grid */}
-                <div className="grid grid-cols-12 gap-4 sm:gap-6 max-w-7xl mx-auto items-center">
-                  {/* Text Content - 8 columns */}
-                  <div className="col-span-12 lg:col-span-8">
-                    <div className=" rounded-lg p-4 sm:p-6  border-yellow-200">
-                      <p className="font-medium text-maroon  text-center text-base sm:text-lg leading-relaxed">
-                        अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।
-
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Button Section - 4 columns */}
-                  <div className="col-span-12 flex items-center justify-center lg:col-span-4">
-                    <div className="text-center lg:text-left">
-                      <Link
-                        href="https://wa.me/918448444050?text=नमस्कार%2C%0A%0Aमैं%20अध्यात्म%20परिवार%20की%20सेवाओं%20के%20बारे%20में%20जानकारी%20चाहता%2Fचाहती%20हूं।%0Aकृपया%20प्रतिमाजी%20की%20शुद्धि-सुरक्षा%20के%20लिए%20उपलब्ध%20सेवाओं%20की%20विस्तृत%20जानकारी%20प्रदान%20करें।%0A%0Aधन्यवाद"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-maroon text-white font-bold py-3 px-8 rounded-sm shadow-sm transition-all duration-300 transform hover:shadow-xl text-lg inline-flex items-center gap-2"
-                      >
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
-                        </svg>
-                        संपर्क करें
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom highlight bar */}
-              </div>
+              <CallToActionButton
+                heading=" जो नुकसान पहले ही हो चुका है उसका क्या?"
+                content=" अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।"
+                id="jinpratima-suraksha-cta"
+                href={
+                  "https://wa.me/918448444050?text=नमस्कार%2C%0A%0Aमैं%20अध्यात्म%20परिवार%20की%20सेवाओं%20के%20बारे%20में%20जानकारी%20चाहता%2Fचाहती%20हूं।%0Aकृपया%20प्रतिमाजी%20की%20शुद्धि-सुरक्षा%20के%20लिए%20उपलब्ध%20सेवाओं%20की%20विस्तृत%20जानकारी%20प्रदान%20करें।%0A%0Aधन्यवाद"
+                }
+              />
             </div>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import BottomRighSvg from '@/app/_components/BottomRighSvg'
+import CallToActionButton from '@/app/_components/CallToActionButton'
 import HeaderSvg from '@/app/_components/HeaderSvg'
 import TopLeftSvg from '@/app/_components/TopLeftSvg'
 import React from 'react'
@@ -78,6 +79,14 @@ const Page = () => {
 
     
     </div>
+     <CallToActionButton
+        heading=" जो नुकसान पहले ही हो चुका है उसका क्या?"
+        content=" अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।"
+        id="jinpratima-suraksha-cta"
+        href={
+          "https://wa.me/918448444050?text=नमस्कार%2C%0A%0Aमैं%20अध्यात्म%20परिवार%20की%20सेवाओं%20के%20बारे%20में%20जानकारी%20चाहता%2Fचाहती%20हूं।%0Aकृपया%20प्रतिमाजी%20की%20शुद्धि-सुरक्षा%20के%20लिए%20उपलब्ध%20सेवाओं%20की%20विस्तृत%20जानकारी%20प्रदान%20करें।%0A%0Aधन्यवाद"
+        }
+      />
     </div>
   )
 }
