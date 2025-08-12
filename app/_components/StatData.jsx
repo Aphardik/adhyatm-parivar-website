@@ -88,6 +88,12 @@ const ModernStatsUI = ({ statsData,textColor }) => {
             </div>
           ))}
         </div>
+        {/* Optional: Add a footer or additional content here */}
+        <div className="mt-8 text-center">
+          <p className="text-sm  font-sans text-gray-500">
+            All statistics are based on the latest data available as of June 2025.
+          </p>
+      </div>
       </div>
     </div>
   );
