@@ -347,7 +347,7 @@ const JinalayaSuraksha = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightblue text-darkblue inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              विमलवसाही की मरम्मत
+              विमलवसही की मरम्मत
             </h3>
           </div>
 
@@ -358,14 +358,14 @@ const JinalayaSuraksha = () => {
                 <div className="sm:w-1/2">
                   <img
                     src="/jinmandir/jinalaya-suraksha/img-2.4.jpg"
-                    alt="विमलवसाही"
+                    alt="विमलवसही"
                     className="w-full h-auto rounded-sm border border-gray-300"
                   />
                 </div>
                 <div className="sm:w-1/2 p-4">
                   <p className="text-darkblue text-lg leading-relaxed">
                     यहां{" "}
-                    <span className="font-bold text-darkblue">'विमलवसाही'</span>{" "}
+                    <span className="font-bold text-darkblue">'विमलवसही'</span>{" "}
                     का रंग मंडप है, जहां दरार से लीकेज के कारण मूसलाधार पानी
                     गिरता था!
                   </p>
@@ -377,7 +377,7 @@ const JinalayaSuraksha = () => {
                 <div className="sm:w-1/2 p-4">
                   <img
                     src="/jinmandir/jinalaya-suraksha/img-2.5.jpg"
-                    alt="विमलवसाही"
+                    alt="विमलवसही"
                     className="w-full h-auto "
                   />
                 </div>
@@ -424,9 +424,7 @@ const JinalayaSuraksha = () => {
                   className="w-full h-auto  mb-4"
                 />
                 <p className="text-base text-darkblue leading-relaxed">
-                  यह शिखर पर दिखाई देने वाली कालाश वास्तव में एक फंगस है। जिसके
-                  कारण शिखरों में दरारें भी पड़ रही है। हर दो वर्षों में इसकी
-                  मरम्मत करना पड़ता था।
+                  यह शिखर पर दिखाई देने वाली कालाश वास्तव में एक फंगस है। जिसके कारण शिखरों में दरारें भी पड़ रही है। हर दो वर्षों में इसकी मरम्मत करनी पड़ती थी।
                 </p>
               </div>
 
