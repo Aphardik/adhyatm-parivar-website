@@ -163,6 +163,7 @@ const PhotoGallery = () => {
   const whatsappLinks = {
     hindi: "https://chat.whatsapp.com/FnaRgKLT21RBR6bqZeV3ri",
     gujarati: "https://chat.whatsapp.com/FBmimooR4HML8NF131x7Cd",
+    english: "https://chat.whatsapp.com/Gqic0PAlt14AUSq7JRuDp9",
   };
 
   // Function to fetch and organize all comments by photo name
@@ -453,7 +454,7 @@ const PhotoGallery = () => {
 
   return (
     <div
-      className={`min-h-screen max-w-7xl  transition-opacity duration-1000 ${
+      className={`min-h-screen max-w-7xl px-2 sm:px-4  transition-opacity duration-1000 ${
         language === "hindi" ? "font-heading" : "font-anek"
       } ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
@@ -463,18 +464,26 @@ const PhotoGallery = () => {
           <div className="flex justify-between flex-col gap-2 sm:flex-row items-center py-2">
             <div
               className={`${
-                language === "hindi" ? "font-heading" : "font-notoGujarati"
+                language === "hindi"
+                  ? "font-heading"
+                  : language === "gujarati"
+                  ? "font-anek"
+                  : "font-sans"
               }`}
             >
               <h1 className="text-2xl sm:text-2xl font-bold text-gray-900">
                 {language === "hindi"
                   ? "शासनभक्ति की अंजलि"
-                  : "શાસનભક્તિની અંજલિ"}
+                  : language === "gujarati"
+                  ? "શાસનભક્તિની અંજલિ"
+                  : "Shasan Bhakti Ki Anjali"}
               </h1>
               <p className="font-karma text-sm sm:text-base font-bold text-gray-600">
                 {language === "hindi"
                   ? "अध्यात्म परिवार द्वारा किए जा रहे शासन सेवा - सुरक्षा के कार्यों की झलक"
-                  : "અધ્યાત્મ પરિવાર દ્વારા કરવામાં આવી રહેલા શાસન - સુરક્ષાના કાર્યોની એક ઝલક"}
+                  : language === "gujarati"
+                  ? "અધ્યાત્મ પરિવાર દ્વારા કરવામાં આવી રહેલા શાસન - સુરક્ષાના કાર્યોની એક ઝલક"
+                  : "A glimpse of governance and security work being carried out by Adhyatm Parivar"}
               </p>
             </div>
 
@@ -488,20 +497,22 @@ const PhotoGallery = () => {
                 className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 <FaWhatsapp className="w-4 h-4" />
-                <span className="text-xs font-medium">
+                <span className="text-sm font-medium">
                   {language === "hindi"
                     ? "जॉइन व्हाट्सऐप ग्रुप"
-                    : "જોઇન વોટ્સએપ ગ્રુપ"}
+                    : language === "gujarati"
+                    ? "જોઇન વોટ્સએપ ગ્રુપ"
+                    : "Join WhatsApp Group"}
                 </span>
               </a>
 
-              {/* Language Toggle */}
+              {/* Language Toggle - Updated to include English */}
               <div className="relative flex items-center bg-gray-300 rounded-3xl p-1 shadow-inner">
                 <button
                   onClick={() => toggleLanguage("hindi")}
-                  className={`relative px-4 py-2 rounded-3xl text-sm font-medium font-heading transition-all duration-300 ease-in-out transform ${
+                  className={`relative font-heading px-3 py-2 rounded-3xl text-sm font-medium transition-all duration-300 ease-in-out transform ${
                     language === "hindi"
-                      ? "bg-black text-white shadow-lg scale-105"
+                      ? "bg-black  text-white shadow-lg scale-105"
                       : "text-gray-600"
                   }`}
                 >
@@ -509,13 +520,23 @@ const PhotoGallery = () => {
                 </button>
                 <button
                   onClick={() => toggleLanguage("gujarati")}
-                  className={`relative px-4 py-2 rounded-3xl font-notoGujarati text-sm font-medium transition-all duration-300 ease-in-out transform ${
+                  className={`relative px-3 py-2 rounded-3xl font-anek text-sm font-medium transition-all duration-300 ease-in-out transform ${
                     language === "gujarati"
                       ? "bg-black text-white shadow-lg scale-105"
                       : "text-gray-600"
                   }`}
                 >
                   ગુજરાતી
+                </button>
+                <button
+                  onClick={() => toggleLanguage("english")}
+                  className={`relative px-3 font-sans py-2 rounded-3xl text-sm font-medium transition-all duration-300 ease-in-out transform ${
+                    language === "english"
+                      ? "bg-black text-white shadow-lg scale-105"
+                      : "text-gray-600"
+                  }`}
+                >
+                  English
                 </button>
               </div>
             </div>
@@ -628,7 +649,9 @@ const PhotoGallery = () => {
                     <p className="text-sm text-gray-500">
                       {language === "hindi"
                         ? "टिप्पणियां लोड हो रही हैं..."
-                        : "ટિપ્પણીઓ લોડ થઈ રહી છે..."}
+                        : language === "gujarati"
+                        ? "ટિપ્પણીઓ લોડ થઈ રહી છે..."
+                        : "Loading comments..."}
                     </p>
                   </div>
                 ) : comments[sortedPhotos[selectedImageIndex].uid]?.length >
@@ -666,7 +689,9 @@ const PhotoGallery = () => {
                     <p className="text-sm text-gray-600 text-center">
                       {language === "hindi"
                         ? "अभी तक कोई टिप्पणी नहीं"
-                        : "અત્યાર સુધી કોઈ ટિપ્પણી નથી"}
+                        : language === "gujarati"
+                        ? "અત્યાર સુધી કોઈ ટિપ્પણી નથી"
+                        : "No comments yet"}
                     </p>
                   </div>
                 )}
@@ -690,7 +715,9 @@ const PhotoGallery = () => {
                     <span>
                       {language === "hindi"
                         ? "टिप्पणी सफलतापूर्वक जमा की गई!"
-                        : "ટિપ્પણી સફળતાપૂર્વક સબમિટ કરવામાં આવી!"}
+                        : language === "gujarati"
+                        ? "ટિપ્પણી સફળતાપૂર્વક સબમિટ કરવામાં આવી!"
+                        : "Comment submitted successfully!"}
                     </span>
                   </div>
                 </div>
@@ -711,7 +738,11 @@ const PhotoGallery = () => {
                     value={commentUsername}
                     onChange={(e) => setCommentUsername(e.target.value)}
                     placeholder={
-                      language === "hindi" ? "आपका नाम..." : "તમારુ નામ..."
+                      language === "hindi"
+                        ? "आपका नाम..."
+                        : language === "gujarati"
+                        ? "તમારુ નામ..."
+                        : "Your name..."
                     }
                     className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#01044c] focus:border-transparent"
                     required
@@ -724,7 +755,9 @@ const PhotoGallery = () => {
                       placeholder={
                         language === "hindi"
                           ? "टिप्पणी जोड़ें..."
-                          : "ટિપ્પણી ઉમેરો..."
+                          : language === "gujarati"
+                          ? "ટિપ્પણી ઉમેરો..."
+                          : "Add comment..."
                       }
                       className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#01044c] focus:border-transparent"
                       required
@@ -994,7 +1027,6 @@ const PhotoGallery = () => {
           </div>
         </>
       )}
-
     </div>
   );
 };
