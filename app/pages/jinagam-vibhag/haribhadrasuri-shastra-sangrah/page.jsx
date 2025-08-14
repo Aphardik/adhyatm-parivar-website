@@ -103,7 +103,7 @@ const Page = () => {
 
             <div className="space-y-6 w-full max-w-4xl">
               <p className="p-4 bg-lightpink text-maroon rounded-sm text-lg leading-relaxed text-center font-semibold">
-               इस शास्त्रसंग्रह का १००७ साधु-साध्वीजी भगवंत तथा १९९६ श्रावक-श्राविका वर्ग उपयोग कर चुके हैं। क्या आप बाकी हैं?
+               इस शास्त्रसंग्रह का १००७ साधु-साध्वीजी भगवंत तथा ११८४ श्रावक-श्राविका वर्ग उपयोग कर चुके हैं। क्या आप बाकी हैं?
               </p>
             </div>
           </div>

@@ -26,7 +26,7 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
-                परिष्ठापानिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डेम) निर्माण
+                परिष्ठापानिका समिति सुरक्षा - मात्रु की कुंडी निर्माण, स्थंडिलभूमि (डोम) निर्माण
               </h1>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-semibold">
                 (कार्य प्रारंभ : वि.सं. २०६६)
@@ -50,7 +50,8 @@ const Page = () => {
             <span className="text-maroon font-bold">
               ऐसे पूज्य कृपानाथ के मार्गदर्शन से एक अद्भुत विकल्प प्राप्त हुआ है।
             </span>{" "}
-            देखते ही देखते इसकी सुरभि संपूर्ण भारत में फैल गई। सैकड़ो-हजारों श्रमण-श्रमणियों को चारित्रपालन में सहायक बनने का लाभ मिला अध्यात्म परिवार को!
+            देखते ही देखते इसकी सुरभि संपूर्ण भारत में फैल गई। सैकड़ो-हजारों श्रमण-श्रमणियों के चारित्रपालन में सहायक बनने का लाभ मिला अध्यात्म परिवार को!
+
           </p>
         </div>
       </section>
@@ -73,7 +74,8 @@ const Page = () => {
                 />
               </div>
               <p className="text-white py-3 rounded-sm px-4 bg-maroon font-semibold text-center leading-relaxed">
-                संपूर्ण भारत के विविध स्थलों पर बनाई गई ऐसी मात्र परठने की कुंडियों में उपयोग होने वाले स्पेशल कोयले ने दुर्गंध की कंप्लेंट पर पूर्णविराम लगा दिया है!
+               संपूर्ण भारत के विविध स्थलों पर बनाई गई ऐसी मात्रु परठने की कुंडियों में उपयोग होने वाले स्पेशल कोयले ने दुर्गंध की कंप्लेंट पर पूर्णविराम लगा दिया है!
+
               </p>
             </div>
 
