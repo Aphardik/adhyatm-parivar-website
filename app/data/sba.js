@@ -231,6 +231,27 @@
         imageUrl: "/shasan-bhakti-anjali/SBA-33H.jpeg",
         date: "2025-08-02"
       },
+        {
+        uid:"sba34",
+        id: 34,
+        name: "शासनभक्ति की अंजलि-34",
+        imageUrl: "/shasan-bhakti-anjali/SBA-34H.jpeg",
+        date: "2025-08-03"
+      },
+        {
+        uid:"sba35",
+        id: 35,
+        name: "शासनभक्ति की अंजलि-35",
+        imageUrl: "/shasan-bhakti-anjali/SBA-35H.jpeg",
+        date: "2025-08-04"
+      },
+        {
+        uid:"sba36",
+        id: 36,
+        name: "शासनभक्ति की अंजलि-36",
+        imageUrl: "/shasan-bhakti-anjali/SBA-36H.jpeg",
+        date: "2025-08-05"
+      },
     ],
     gujarati: [
       {
@@ -464,6 +485,27 @@
         imageUrl: "/shasan-bhakti-anjali/SBA-33G.jpeg",
         date: "2025-08-02"
       },
+      {
+        uid:"34",
+        id: 34,
+        name: "શાસનભક્તિની અંજલિ-34",
+        imageUrl: "/shasan-bhakti-anjali/SBA-34G.jpeg",
+        date: "2025-08-03"
+      },
+      {
+        uid:"35",
+        id: 35,
+        name: "શાસનભક્તિની અંજલિ-35",
+        imageUrl: "/shasan-bhakti-anjali/SBA-35G.jpeg",
+        date: "2025-08-03"
+      },
+      {
+        uid:"36",
+        id: 36,
+        name: "શાસનભક્તિની અંજલિ-36",
+        imageUrl: "/shasan-bhakti-anjali/SBA-36G.jpeg",
+        date: "2025-08-04"
+      },
     ],
 
 
@@ -476,34 +518,69 @@
         imageUrl: "/shasan-bhakti-anjali/SBA-1E.jpeg",
         date: "2025-07-01"
       },
-      // {
-      //   uid:"sba2",
-      //   id: 2,
-      //   name: "Shasan Bhakti Anjali-2",
-      //   imageUrl: "/shasan-bhakti-anjali/SBA-2E.jpeg",
-      //   date: "2025-07-02"
-      // },
-      // {
-      //   uid:"sba3",
-      //   id: 3,
-      //   name: "Shasan Bhakti Anjali-3",
-      //   imageUrl: "/shasan-bhakti-anjali/SBA-3E.jpeg",
-      //   date: "2025-07-03"
-      // },
-      // {
-      //   uid:"sba4",
-      //   id: 4,
-      //   name: "Shasan Bhakti Anjali-4",
-      //   imageUrl: "/shasan-bhakti-anjali/SBA-4E.jpeg",
-      //   date: "2025-07-04"
-      // },
-      // {
-      //   uid:"sba5",
-      //   id: 5,
-      //   name: "Shasan Bhakti Anjali-5",
-      //   imageUrl: "/shasan-bhakti-anjali/SBA-5E.jpeg",
-      //   date: "2025-07-05"
-      // },
+      {
+        uid:"sba2",
+        id: 2,
+        name: "Shasan Bhakti Anjali-2",
+        imageUrl: "/shasan-bhakti-anjali/SBA-2E.jpeg",
+        date: "2025-07-02"
+      },
+      {
+        uid:"sba3",
+        id: 3,
+        name: "Shasan Bhakti Anjali-3",
+        imageUrl: "/shasan-bhakti-anjali/SBA-3E.jpeg",
+        date: "2025-07-03"
+      },
+      {
+        uid:"sba4",
+        id: 4,
+        name: "Shasan Bhakti Anjali-4",
+        imageUrl: "/shasan-bhakti-anjali/SBA-4E.jpeg",
+        date: "2025-07-04"
+      },
+      {
+        uid:"sba5",
+        id: 5,
+        name: "Shasan Bhakti Anjali-5",
+        imageUrl: "/shasan-bhakti-anjali/SBA-5E.jpeg",
+        date: "2025-07-05"
+      },
+      {
+        uid:"sba6",
+        id: 6,
+        name: "Shasan Bhakti Anjali-6",
+        imageUrl: "/shasan-bhakti-anjali/SBA-6E.jpeg",
+        date: "2025-07-06"
+      },
+      {
+        uid:"sba7",
+        id: 7,
+        name: "Shasan Bhakti Anjali-7",
+        imageUrl: "/shasan-bhakti-anjali/SBA-7E.jpeg",
+        date: "2025-07-07"
+      },
+      {
+        uid:"sba8",
+        id: 8,
+        name: "Shasan Bhakti Anjali-8",
+        imageUrl: "/shasan-bhakti-anjali/SBA-8E.jpeg",
+        date: "2025-07-08"
+      },
+      {
+        uid:"sba9",
+        id: 9,
+        name: "Shasan Bhakti Anjali-9",
+        imageUrl: "/shasan-bhakti-anjali/SBA-9E.jpeg",
+        date: "2025-07-09"
+      },
+      {
+        uid:"sba10",
+        id: 10,
+        name: "Shasan Bhakti Anjali-10",
+        imageUrl: "/shasan-bhakti-anjali/SBA-10E.jpeg",
+        date: "2025-07-10"
+      },
      
     ]
   };
