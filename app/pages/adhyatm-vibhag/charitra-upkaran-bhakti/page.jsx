@@ -10,9 +10,9 @@ export const metadata = {
 }
 
 const Page = () => {
-  const statsData = [
-    { count: "09", label: "कुल उपकरण", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
-  ];
+  // const statsData = [
+  //   { count: "09", label: "कुल उपकरण", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+  // ];
   
   return (
     <div className="mx-auto max-w-7xl font-body">
@@ -118,7 +118,7 @@ const Page = () => {
                 </div>
                 <div className="text-center space-y-1  p-4 rounded-lg w-full">
                   <p className="text-maroon font-bold leading-relaxed text-lg">
-                    नाके की डोरी की भी ऐसी ही भूमिका है।
+                    नाके की डोरी की रील की भी ऐसी ही भूमिका है।
                   </p>
                 </div>
               </div>
@@ -164,9 +164,9 @@ const Page = () => {
           </div>
         </section>
         
-        <div className="pb-8">
+        {/* <div className="pb-8">
        <CounterStatsUI statsData={statsData} textColor="maroon" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

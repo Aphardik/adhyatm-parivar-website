@@ -119,8 +119,8 @@ const Page = () => {
                 ओरसिया
               </h3>
               <p className="text-lg leading-relaxed text-maroon">
-                केसर चंदन आदि घिसने के लिए . स्वद्रव्य से पूजा करने का प्रथम
-                उपयोगी उपकरण । अलग-अलग साइज के ओरसिए उपलब्ध हैं।
+                केसर चंदन आदि घिसने के लिए . स्वद्रव्य से पूजा करने का प्रथम उपयोगी उपकरण । केसर चंदन आदि घिसने के लिए, अलग-अलग साइज के ओरसिए उपलब्ध हैं।
+
               </p>
             </div>
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink order-1 md:order-2">
@@ -162,9 +162,8 @@ const Page = () => {
                 गंधकाषायी वस्त्र
               </h3>
               <p className="text-lg leading-relaxed text-maroon">
-                यह है प्रभु के अंगलूछने के लिए ५०० काउंट का बंगाली वस्त्र-ढाका की
-                मलमल । इस वस्त्र से अंगलूछना करते वक्त सौधर्मेंद्र कृत जन्माभिषेक
-                की स्मृति होगी!
+               यह है प्रभु के अंगलूछने के लिए ५०० काउंट का बंगाली वस्त्र-ढाका की मलमल। इस वस्त्र से अंगलूछना करते वक्त सौधर्मेंद्र कृत जन्माभिषेक की स्मृति होगी!
+
               </p>
             </div>
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink order-1 md:order-2">
@@ -254,7 +253,7 @@ const Page = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12 items-start">
             <div className="bg-lightyellow rounded-xl p-8 text-center border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.37.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.37.jpg"
                 alt="Bheemseti Kapoor"
                 className="mx-auto mb-4 rounded-full h-64 w-64 object-cover"
               />
@@ -270,7 +269,7 @@ const Page = () => {
                 कर्पूर भी वनस्पति से प्राप्त होने वाला द्रव्य है। शास्त्र के
                 अनुसार ऐसे कर्पूर को पूजा के लिए केसर में मिलाना चाहिए। इससे केसर
                 घट्ट बनती है, साथ ही इसके एन्टीफंगल गुण के कारण प्रतिमाजी में फंगस
-                और गड्ढे पढ़ने की समस्या नहीं होती है। विशेष : प्रथम विश्वयुद्ध के
+                और गड्ढे पढ़ने की समस्या नहीं होती है। <br /> विशेष : प्रथम विश्वयुद्ध के
                 समय जर्मनी द्वारा बनाया हुआ 'सिंथेटिक कर्पूर' ही प्रायः वर्तमान
                 में सब स्थानों पर मिल रहा है। वह अशुद्ध है। भारत में शुद्ध कर्पूर
                 नहीं मिल सका है।
