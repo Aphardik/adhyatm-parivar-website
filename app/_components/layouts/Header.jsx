@@ -40,7 +40,7 @@ const Header = () => {
         link: "/pages/jinmurti-vibhag/jinpratima-suraksha",
         title: "जिनप्रतिमा सुरक्षा",
         description:
-          "Integer ut sit parienti enim eu. Egestas odio scelerisque.",
+          "प्राचीन प्रतिमाओं की सुरक्षा को ध्यान में रखकर कुदरती द्रव्यों से लेप व ओप का कार्य",
       },
       {
         id: 12,
@@ -48,7 +48,7 @@ const Header = () => {
         link: "/pages/jinmurti-vibhag/jinpratima-nirmaan-pashaan",
         title: "जिनप्रतिमा निर्माण - पाषाण",
         description:
-          "Platea elemend odio at integer nulla tristique magna sed sed.",
+          "मकराना आदि की माइन्स में से प्राप्त उत्कृष्ट पाषाण में से प्रतिमाजी का पवित्र वातावरण में निर्माणकार्य",
       },
       {
         id: 13,
@@ -56,7 +56,7 @@ const Header = () => {
         link: "/pages/jinmurti-vibhag/jinpratima-nirmaan-dhatu",
         title: "जिनप्रतिमा निर्माण - धातु",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "पंच धातु की प्रतिमा आदि का निर्माणकार्य",
       },
       {
         id: 42,
@@ -64,7 +64,7 @@ const Header = () => {
         link: "/pages/jinmurti-vibhag/jinpratima-sangrahan",
         title: "प्राचीन जिनप्रतिमा संग्रहण",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "प्रतिमाओं की पूजा-अर्चना अच्छी तरह से हो इसके लिए सूरत में प्रतिमातीर्थ में प्रतिमा का स्वीकार कार्य",
       },
       {
         id: 14,
@@ -72,7 +72,7 @@ const Header = () => {
         link: "/pages/jinmurti-vibhag/jinpratima-aashatara-nivaran",
         title: "जिनप्रतिमा आशातरा निवारण",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "खंडित आदि प्रतिमा एवं अयोग्य द्रव्य से बनी प्रतिमाओं की आशातना के निवारण के लिए स्वीकार कार्य",
       },
     ],
     menu2: [
@@ -82,7 +82,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/jinalaya-suraksha",
         title: "जिनालय सुरक्षा (मरम्मत)",
         description:
-          "Integer ut sit parienti enim eu. Egestas odio scelerisque.",
+          "जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य",
       },
       {
         id: 16,
@@ -90,7 +90,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/jinalaya-suddhi",
         title: "जिनालय शुद्धि - उपाश्रय शुद्धि",
         description:
-          "Platea elemend odio at integer nulla tristique magna sed sed.",
+          "जिनालय के तल से लेकर शिखर तक की कोने कोने की शुद्धि एवं उपाश्रय की भी शुद्धि का कार्य",
       },
       {
         id: 17,
@@ -98,7 +98,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/jinalaya-navnirmaan",
         title: "जिनालय नवनिर्माण तथा मार्गदर्शन",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "कहीं पर भी जिनालय का निर्माणकार्य एवं मार्गदर्शन",
       },
       {
         id: 18,
@@ -106,7 +106,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/patthar-ghadayi",
         title: "जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई",
         description:
-          "At vitae consectetur lacus, scelerisque. Faucibus aliquam.",
+          "जिनालय एवं गृहजिनालय के लिए आवश्यक पत्थरों  गढ़ने का कार्य",
       },
       {
         id: 19,
@@ -114,7 +114,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/dev-bagicha",
         title: "देव बगीचे का निर्माण",
         description:
-          "Mi donec id in pellentesque ullamcorper ut. Venenatis eu.",
+          "प्रभुपूजा के पुष्पों के लिए देवबगीचो का निर्माणकार्य",
       },
     ],
     menu3: [
@@ -124,7 +124,7 @@ const Header = () => {
         link: "/pages/jinagam-vibhag/prachin-shrut-surksha",
         title: "प्राचीन श्रुत सुरक्षा",
         description:
-          "Integer ut sit parienti enim eu. Egestas odio scelerisque.",
+          "जिनशासन के करोडों श्लोकप्रमाण प्राचीन शास्त्रों का संरक्षणकार्य",
       },
       {
         id: 21,
@@ -132,7 +132,7 @@ const Header = () => {
         link: "/pages/jinagam-vibhag/arvachin-shrut-prakashan",
         title: "अर्वाचीन श्रुत प्रकाशन-प्रचार",
         description:
-          "Platea elemend odio at integer nulla tristique magna sed sed.",
+          "पथदर्शक सूरीभगवन्त के प्रवचन आदि के पुस्तकों का प्रकाशनकार्य",
       },
       {
         id: 22,
@@ -140,7 +140,7 @@ const Header = () => {
         link: "/pages/jinagam-vibhag/haribhadrasuri-shastra-sangrah",
         title: "हरिभद्रसूरी शास्त्रसंग्रह",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "सूरत में एक ऐसा ग्रंथालय जहाँ से सैकड़ों ज्ञानपिपासुओं को शास्त्र उपलब्ध कराये जाते है",
       },
       {
         id: 23,
@@ -148,7 +148,7 @@ const Header = () => {
         link: "/pages/jinagam-vibhag/adhyatm-gyantirth",
         title: "अध्यात्म ज्ञानतीर्थ",
         description:
-          "Integer ut sit parienti enim eu. Egestas odio scelerisque.",
+          " प्राचीन- अर्वाचीन श्रुतज्ञान का सुरक्षा का विविध कार्यवाही के लिए चार मंजिला भवन",
       },
       {
         id: 24,
@@ -156,7 +156,7 @@ const Header = () => {
         link: "/pages/jinagam-vibhag/ganipitak-nirmaan-prasar",
         title: "गणीपिटक निर्माण प्रसार",
         description:
-          "Platea elemend odio at integer nulla tristique magna sed sed.",
+          "श्रुतज्ञान की सही अर्थ में पूजा करने का आलंबन उपाश्रय-पाठशाला आदि में",
       },
     ],
     menu4: [
@@ -165,9 +165,9 @@ const Header = () => {
         emoji: "🔥",
         link: "/pages/adhyatm-vibhag/parishthapanika-samiti",
         title:
-          "परिष्ठापानिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डेम) निर्माण",
+          "पारिष्ठापनिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डोम) निर्माण",
         description:
-          "Integer ut sit parienti enim eu. Egestas odio scelerisque.",
+          "चतुर्विध संघ की पारिष्ठापनिका समिति की रक्षा के लिए मात्रु कुंडी एवं स्थण्डिल डोम निर्माणकार्य ",
       },
       {
         id: 26,
@@ -175,7 +175,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/vihar-suraksha",
         title: "विहार सुरक्षा",
         description:
-          "Platea elemend odio at integer nulla tristique magna sed sed.",
+          "विहार के दौरान श्रमणी--- की सुरक्षा के लिए भारतभर में कर्मचारी भेजने का कार्य",
       },
       {
         id: 27,
@@ -183,7 +183,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/charitra-upkaran-bhakti",
         title: "चारित्र उपकरण भक्ति",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "चारित्रपालन में --- से बचाए ऐसे चुनिंदे उपकरणों से पूज्यो की भक्ति",
       },
       {
         id: 28,
@@ -191,7 +191,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/jal-stand",
         title: "उष्ण जल ठंडा करने का स्टैंड",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "उष्णजल को शीत करने के स्टेण्ड का वितरण कार्य ",
       },
       {
         id: 29,
@@ -199,7 +199,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/suddh-puja-dravya",
         title: "शुद्ध पूजा के द्रव्यों की सम्प्राप्ति",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          " पूजा में आवश्यक लेब टेस्ट द्वारा प्रमाणित शुद्धद्रव्यों की उपलब्धि का कार्य",
       },
       {
         id: 30,
@@ -207,7 +207,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/dharmanusthan",
         title: "धर्मानुष्ठान सुशोभन सामग्री की उपलब्धि",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "धर्म के अनुष्ठानों को जाजरमान बनाने वाली सामग्री की उपलब्धि का कार्य",
       },
       {
         id: 31,
@@ -215,7 +215,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/uddhyapan-upkaran",
         title: "उद्यापन उपकरण व्यवस्था",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "उद्यापनों में रखे गए उपकरणों की आवश्यकता के अनुसार उद्यापन का आयोजन",
       },
       {
         id: 32,
@@ -223,7 +223,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/anusthan-aayojan",
         title: "अनुष्ठान आयोजन (सामूहिक दीक्षा, उपधान , वाचना श्रेणी आदि)",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "सामूहिक दीक्षाएँ , उपधान तप , वाचनाश्रेणी जैसे अनुष्ठानों का आयोजन",
       },
       {
         id: 33,
@@ -231,7 +231,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/adhyatmshala",
         title: "अध्यात्मशाला (बालसंस्करण पाठशाला)",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "बच्चो में संस्कार सिंचन के लिए रुचिकर दैनिक आयोजन ",
       },
       {
         id: 34,
@@ -239,7 +239,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/sanskrit-shikshan",
         title: "संस्कृत शिक्षण वर्ग (संशिव)",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "संस्कृत भाषा का ज्ञान प्राप्त करने के लिए विशिष्ट वर्गो का आयोजन ",
       },
       {
         id: 35,
@@ -247,7 +247,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/paiyashala",
         title: "पाइयशाला (प्राकृत शिक्षणशाला)",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "प्राकृत भाषा का ज्ञान प्राप्त कराने के लिए व्यवस्था ",
       },
       {
         id: 36,
@@ -255,7 +255,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/jivant-drishyawali",
         title: "जीवंत दृश्यावली (भावोत्पादक नाटक)",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "शौर्य, समर्पण एवं त्याग की भावना को उद्दीप्त करने वाले नाटकों का आयोजन",
       },
       {
         id: 37,
@@ -263,7 +263,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/prabhubhakti-upkaran",
         title: "प्रभुभक्ति आदि के बेजोड़ उपकरणों का निर्माण",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "प्रभुभक्ति आदि में भावों की वृद्धि के लिए उपकरण बनवाने ",
       },
       {
         id: 38,
@@ -271,7 +271,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/uttam-bhaktidrivya",
         title: "उत्तम भक्तिद्रव्य संशोधन",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "प्रभुभक्ति में आवश्यक द्रव्य, औषधियाँ आदि कार्य का गहन संशोधन",
       },
       {
         id: 39,
@@ -279,7 +279,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/legal-cell",
         title: "लीगल सेल : क़ानूनी मार्गदर्शन",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "जैन धर्म से संलग्न होने वाली लीगल बाबतों की जानकारी श्रीसंघ में प्रसारित करना ",
       },
       {
         id: 40,
@@ -287,7 +287,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/chitra-nirmaan",
         title: "चित्र निर्माण",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "विविध चित्रों को बनवाकर प्रसारित करना",
       },
       {
         id: 41,
@@ -295,7 +295,7 @@ const Header = () => {
         link: "/pages/adhyatm-vibhag/vividh-sangh",
         title: "विविध संघो तथा आराधना भवनों का संचालन",
         description:
-          "Nisl ut aliquam ac, adipiscing pretium orci urna placerat. Id id.",
+          "आराधना के लिए जिनालय-उपाश्रय आदि से युक्त संकुलो का निर्माण व संचालनकार्य",
       },
     ],
   };
