@@ -18,6 +18,7 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-darkblue"> जिनालय तथा गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई</h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-darkblue font-bold my-1">जिनालय एवं गृहजिनालय के लिए आवश्यक पत्थरों को गढ़ने का कार्य</p>
               <p className="text-sm sm:text-base text-center lg:text-lg text-darkblue font-medium">कार्य प्रारंभ : वि.सं. २०७७</p>
             </div>
           </div>

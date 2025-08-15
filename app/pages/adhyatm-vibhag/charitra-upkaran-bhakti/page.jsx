@@ -21,9 +21,12 @@ const Page = () => {
         <div className="mx-auto p-6 sm:p-8 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
+              <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon">
                 चारित्र उपकरण भक्ति
               </h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-bold my-1">
+                चारित्रपालन में विराधना से बचाए ऐसे चुनिंदे उपकरणों से पूज्यो की भक्ति
+              </p>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं. २०७७
               </p>

@@ -25,10 +25,13 @@ const Page = () => {
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
-                परिष्ठापानिका समिति सुरक्षा - मात्रु की कुंडी निर्माण, स्थंडिलभूमि (डोम) निर्माण
+              <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon">
+               पारिष्ठापनिका समिति सुरक्षा
               </h1>
-              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-semibold">
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-bold my-1">
+               चतुर्विध संघ की पारिष्ठापनिका समिति की रक्षा के लिए मात्रु कुंडी एवं स्थण्डिल डोम का निर्माणकार्य
+              </p>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon">
                 (कार्य प्रारंभ : वि.सं. २०६६)
               </p>
             </div>

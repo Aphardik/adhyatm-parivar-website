@@ -19,10 +19,10 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
 
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                पाइयशाला-प्राकृत शिक्षण शाला
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon my-1 font-medium">
                कार्य प्रारंभ : वि.सं. २०७९
               </p>
             </div>

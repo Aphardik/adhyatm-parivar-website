@@ -17,9 +17,12 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
 
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 अध्यात्म ज्ञानतीर्थ : संग्रह, संशोधन, प्रकाशन
               </h1>
+              <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-bold my-1">
+               प्राचीन- अर्वाचीन श्रुतज्ञान की सुरक्षा की विविध कार्यवाही के लिए चार मंजिला भवन
+              </p>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon">
                 कार्य प्रारंभ : वि.सं. २०७९
               </p>
