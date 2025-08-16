@@ -13,18 +13,18 @@ export default function TempleConstructionPage() {
   return (
     <div className="max-w-7xl bg-whitey mx-auto font-body">
       {/* Header Section */}
-      <header className="bg-lightblue relative flex items-center justify-center h-40">
+      <header className="bg-lightpink relative flex items-center justify-center h-40">
         <HeaderSvg/>
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-darkblue">
+              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 जिनालय नवनिर्माण
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-darkblue font-semibold">
+              <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
                 अध्यात्म शिल्पशाला
               </p>
-              <p className="text-sm text-center sm:text-base lg:text-lg text-darkblue font-medium">
+              <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ: वि.सं.२०७१
               </p>
             </div>
@@ -34,22 +34,22 @@ export default function TempleConstructionPage() {
 
       <div className="px-2 sm:px-6">
         <section className="py-6 flex flex-col gap-8 sm:py-6 lg:py-8">
-          <div className="max-w-5xl bg-shadeblue p-8 relative mx-auto">
+          <div className="max-w-5xl bg-lightyellow p-8 relative mx-auto">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <div className="rounded-sm p-4 bg-shadeblue">
-              <p className="text-lg leading-relaxed text-darkblue mb-4">
+            <div className="rounded-sm p-4 bg-lightyellow">
+              <p className="text-lg leading-relaxed text-maroon mb-4">
                 जैनों के स्थानांतर के कारण वे जिस नए स्थान पर जाकर बसते है वहां नूतन जिनालय आराधना के आलंबन के रूप में अनिवार्य होता है। इसीलिए तो सीहोर के राजा जब भावनगर में बसे तब उन्होंने जैन
-                <span className="text-secondary-color font-semibold">
+                <span className="text-darkpink font-semibold">
                   {" "}
                   श्रेष्ठी कुंवरजीभाई माधाभाई{" "}
                 </span>
                 आदि को नगर में बसने का आमंत्रण दिया। लेकिन उन श्रेष्ठियों ने कह दिया कि,
-                <span className="text-secondary-color font-semibold">
+                <span className="text-darkpink font-semibold">
                   {" "}
                   "जिनालय के बिना हम नहीं आएंगे"{" "}
                 </span>
@@ -62,16 +62,16 @@ export default function TempleConstructionPage() {
             </div>
           </div>
 
-          <div className="max-w-5xl bg-shadeblue p-8 relative mx-auto">
+          <div className="max-w-5xl bg-lightyellow p-8 relative mx-auto">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <div className="rounded-sm p-4 bg-shadeblue">
+            <div className="rounded-sm p-4 bg-lightyellow">
              
-              <p className="text-lg leading-relaxed text-darkblue">
+              <p className="text-lg leading-relaxed text-maroon">
                 इसीलिए अध्यात्म परिवार ने{" "}
                 <span className="text-secondary-color font-semibold">
                   'अध्यात्म शिल्पशाला'{" "}
@@ -91,87 +91,87 @@ export default function TempleConstructionPage() {
         {/* Project Planning Section */}
         <section className="py-8 sm:pb-12 lg:pb-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-shadeblue relative rounded-lg p-6">
+            <div className="bg-lightyellow relative rounded-lg p-6">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   1
                 </span>
               </div>
-              <p className="text-base text-center leading-relaxed text-darkblue">
+              <p className="text-base text-center leading-relaxed text-maroon">
                 शिल्प शास्त्रानुसारी प्लान बनाना।
               </p>
             </div>
 
-            <div className="bg-shadeblue relative rounded-lg p-6">
+            <div className="bg-lightyellow relative rounded-lg p-6">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   2
                 </span>
               </div>
-              <p className="text-base leading-relaxed text-center text-darkblue">
+              <p className="text-base leading-relaxed text-center text-maroon">
                 स्तंभ, गोखले, घुम्मट आदि के आकर्षक भाववर्धक स्केच बनाना।
               </p>
             </div>
 
-            <div className="bg-shadeblue relative rounded-lg p-6">
+            <div className="bg-lightyellow relative rounded-lg p-6">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   3
                 </span>
               </div>
-              <p className="text-base text-center leading-relaxed text-darkblue">
+              <p className="text-base text-center leading-relaxed text-maroon">
                 पाषाण आदि द्रव्यों की शुद्धि रखना।
               </p>
             </div>
 
-            <div className="bg-shadeblue relative rounded-lg p-6">
+            <div className="bg-lightyellow relative rounded-lg p-6">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   4
                 </span>
               </div>
-              <p className="text-base text-center leading-relaxed text-darkblue">
+              <p className="text-base text-center leading-relaxed text-maroon">
                 रूपकाम मर्यादापूर्ण हो उसका ध्यान रखना।
               </p>
             </div>
 
-            <div className="bg-shadeblue relative rounded-lg p-6 shadow-sm">
+            <div className="bg-lightyellow relative rounded-lg p-6 shadow-sm">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   5
                 </span>
               </div>
-              <p className="text-base text-center leading-relaxed text-darkblue">
+              <p className="text-base text-center leading-relaxed text-maroon">
                 पत्थर खरीदी, बांधकाम, पत्थर फिटिंग, कार्निंग आदि हर एक लेवल की
                 देखरेख का कार्य स्वयं करना।
               </p>
             </div>
 
-            <div className="bg-shadeblue relative rounded-lg p-6 shadow-sm">
+            <div className="bg-lightyellow relative rounded-lg p-6 shadow-sm">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="text-center mb-4">
-                <span className="bg-darkblue text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
+                <span className="bg-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto text-lg font-bold">
                   6
                 </span>
               </div>
-              <p className="text-base text-center leading-relaxed text-darkblue">
+              <p className="text-base text-center leading-relaxed text-maroon">
                 भविष्य में जिनालय की जैन स्थापत्य के रूप में पहचान बने इसलिए
                 तीर्थंकर प्रभु आदि के जीवन प्रसंग तथा शासन-प्रभावक घटनाओं की कोरणी
                 करना।
@@ -185,9 +185,9 @@ export default function TempleConstructionPage() {
         {/* Stone Processing Section */}
         <section className="my-12">
           <div className="text-center mb-8 lg:mb-12">
-            <div className="max-w-fit bg-lightblue rounded-sm mx-auto p-6  ">
+            <div className="max-w-fit bg-lightpink rounded-sm mx-auto p-6  ">
 
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading text-darkblue">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading text-maroon">
                 जिनालय पाषाण निर्माण की प्रक्रिया (कार्य प्रारंभ: वि.सं.२०७६)
               </h3>
             </div>
@@ -195,7 +195,7 @@ export default function TempleConstructionPage() {
 
           <div className="max-w-5xl  rounded-sm p-6 mx-auto mb-8 ">
         
-            <p className="text-lg text-center leading-relaxed text-darkblue">
+            <p className="text-lg text-center leading-relaxed text-maroon">
               अध्यात्म शिल्पशाला द्वारा करोड़ों रुपए के देवद्रव्य का रक्षण, मजबूत
               बंधारण और गहरी तथा आकर्षक कोरणी, ऐसे त्रिविध लाभ के लिए यह कार्य
               प्रारंभ किया गया है।
@@ -204,7 +204,7 @@ export default function TempleConstructionPage() {
 
           {/* Stone Procurement */}
           <div className="grid md:grid-cols-4 gap-6 mb-28">
-            <div className="bg-shadeblue rounded-lg p-6 shadow-sm relative">
+            <div className="bg-lightyellow rounded-lg p-6 shadow-sm relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -213,11 +213,11 @@ export default function TempleConstructionPage() {
                 alt="स्टोन ब्लॉक"
                 className="w-full h-48 object-contain rounded-lg mb-4"
               />
-              <p className="text-center text-base font-semibold text-darkblue">
+              <p className="text-center text-base font-semibold text-maroon">
                 यह है आरस की टनल माइन
               </p>
             </div>
-            <div className="bg-shadeblue rounded-lg p-6 shadow-sm relative">
+            <div className="bg-lightyellow rounded-lg p-6 shadow-sm relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -226,13 +226,13 @@ export default function TempleConstructionPage() {
                 alt="अंबाजी माइन की खरीदी"
                 className="w-full h-48 object-contain rounded-lg mb-4"
               />
-              <p className="text-center text-base font-semibold text-darkblue">
+              <p className="text-center text-base font-semibold text-maroon">
                 अंबाजी माइन की एक थड़ी की खरीदी के समय खदानमलिक तथा अध्यात्म
                 परिवार निर्माण विभाग के कार्यकर्ता।
               </p>
             </div>
 
-            <div className="bg-shadeblue rounded-lg p-6 shadow-sm relative">
+            <div className="bg-lightyellow rounded-lg p-6 shadow-sm relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -241,12 +241,12 @@ export default function TempleConstructionPage() {
                 alt="स्टोन ब्लॉक"
                 className="w-full h-48 object-contain rounded-lg mb-4"
               />
-              <p className="text-center text-base font-semibold text-darkblue">
+              <p className="text-center text-base font-semibold text-maroon">
                 थड़ी की खरीद के बाद बनाया गया स्टोन ब्लॉक।
               </p>
             </div>
 
-            <div className="bg-shadeblue rounded-lg p-6 shadow-sm relative">
+            <div className="bg-lightyellow rounded-lg p-6 shadow-sm relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -255,7 +255,7 @@ export default function TempleConstructionPage() {
                 alt="विदेशी पाषाण"
                 className="w-full h-48 object-contain rounded-lg mb-4"
               />
-              <p className="text-center text-base font-semibold text-darkblue">
+              <p className="text-center text-base font-semibold text-maroon">
                 मात्र अंबाजी या मकराना ही नहीं, इटली, थासोस ग्रीस, इथोपिया, ईरान
                 आदि देशों से भी स्टोन ब्लॉक मंगवाया है।
               </p>
@@ -265,14 +265,14 @@ export default function TempleConstructionPage() {
           {/* Stone Processing Steps */}
           <div className="grid md:grid-cols-1 gap-8 mb-12 items-center">
             <div className="text-center mb-8">
-              <div className="max-w-fit bg-lightblue rounded-sm mx-auto p-6 ">
+              <div className="max-w-fit bg-lightpink rounded-sm mx-auto p-6 ">
 
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading text-darkblue">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading text-maroon">
                   जेसलमेर का स्टोन ब्लॉक
                 </h3>
               </div>
             </div>
-            <div className="bg-shadeblue rounded-lg p-6 shadow-sm order-1 md:order-2 relative">
+            <div className="bg-lightyellow rounded-lg p-6 shadow-sm order-1 md:order-2 relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -286,7 +286,7 @@ export default function TempleConstructionPage() {
                     alt="जैसलमेर का स्टोन ब्लॉक"
                     className="w-full h-80 object-contain rounded-lg"
                   />
-                  <p className="mt-4 text-darkblue font-semibold">जेसलमेर का स्टोन ब्लॉक</p>
+                  <p className="mt-4 text-maroon font-semibold">जेसलमेर का स्टोन ब्लॉक</p>
                 </div>
                 <div className="text-center">
                   <img
@@ -294,7 +294,7 @@ export default function TempleConstructionPage() {
                     alt="जैसलमेर का स्टोन ब्लॉक"
                     className="w-full h-80 object-contain rounded-lg"
                   />
-                  <p className="mt-4 text-darkblue font-semibold">
+                  <p className="mt-4 text-maroon font-semibold">
                     इस स्टोन ब्लॉक को ट्रेसिंग मशीन द्वारा जरूरी नाप के प्रमाण में
                     कटा जाता है।
                   </p>
@@ -304,14 +304,14 @@ export default function TempleConstructionPage() {
           </div>
 
           {/* Advanced Processing */}
-          <div className="bg-lightblue/20 rounded-lg p-6 mb-12 relative">
+          <div className="bg-lightpink/20 rounded-lg p-6 mb-12 relative">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <h3 className="font-bold text-xl text-darkblue mb-6 text-center font-heading">
+            <h3 className="font-bold text-xl text-maroon mb-6 text-center font-heading">
               उन्नत तकनीकी प्रक्रिया
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -321,7 +321,7 @@ export default function TempleConstructionPage() {
                   alt="CNC डायमंड वायर प्रोफाइल मशीन"
                   className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
                 />
-                <p className="text-base font-semibold text-darkblue">
+                <p className="text-base font-semibold text-maroon">
                   CNC डायमंड वायर प्रोफाइल मशीन
                 </p>
               </div>
@@ -331,7 +331,7 @@ export default function TempleConstructionPage() {
                   alt="पिलर निर्माण"
                   className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
                 />
-                <p className="text-base font-semibold text-darkblue">
+                <p className="text-base font-semibold text-maroon">
                   किसी भी शेप में पिलर बनाया जा सकता है
                 </p>
               </div>
@@ -341,7 +341,7 @@ export default function TempleConstructionPage() {
                   alt="एक्सीस प्रीफाइल मशीन"
                   className="w-60 h-60 object-cover rounded-full mx-auto mb-4"
                 />
-                <p className="text-base font-semibold text-darkblue">
+                <p className="text-base font-semibold text-maroon">
                   एक्सीस प्रीफाइल मशीन द्वारा कार्विंग
                 </p>
               </div>
@@ -349,7 +349,7 @@ export default function TempleConstructionPage() {
           </div>
 
           {/* Fine Work Section */}
-          <div className="rounded-sm p-20 bg-shadeblue mb-12 relative">
+          <div className="rounded-sm p-20 bg-lightyellow mb-12 relative">
             <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />
             </div>
@@ -365,7 +365,7 @@ export default function TempleConstructionPage() {
                     alt="प्रोफाइलिंग"
                     className="w-full object-contain rounded-lg mb-2"
                   />
-                  <p className="text-base font-semibold text-darkblue">
+                  <p className="text-base font-semibold text-maroon">
                     जैसा शेप जरूरी हो वैसी प्रोफाइलिंग हो सकती है।
                   </p>
                 </div>
@@ -375,7 +375,7 @@ export default function TempleConstructionPage() {
                     alt="इन-ले वर्क"
                     className="w-full object-contain rounded-lg mb-2"
                   />
-                  <p className="text-base font-semibold text-darkblue">
+                  <p className="text-base font-semibold text-maroon">
                     ऐसा इन-ले वर्क भी शिल्पशाला में होता है।
                   </p>
                 </div>
@@ -385,7 +385,7 @@ export default function TempleConstructionPage() {
                     alt="मैन्युअल कार्विंग"
                     className="w-full object-contain rounded-lg mb-2"
                   />
-                  <p className="text-base font-semibold text-darkblue">
+                  <p className="text-base font-semibold text-maroon">
                     यंत्र का काम होने के बाद इस प्रकार मैन्युअल फाइन कार्विंग आसान
                     बन जाती है।
                   </p>
@@ -395,7 +395,7 @@ export default function TempleConstructionPage() {
           </div>
 
           {/* Current Project */}
-           <div className="bg-shadeblue rounded-lg p-10 my-12 text-center relative">
+           <div className="bg-lightyellow rounded-lg p-10 my-12 text-center relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -403,12 +403,12 @@ export default function TempleConstructionPage() {
                 <BottomRighSvg />
               </div>
              
-              <p className="text-lg leading-relaxed text-darkblue">
+              <p className="text-lg leading-relaxed text-maroon">
                <span className="font-semibold ">देलवाड़ा के मंदिर </span> ८०० वर्ष बाद भी हमारा मन जीत लेते हैं, क्योंकि वहां बुरादे के बदले में चांदी, सोना तथा रत्न देकर गहरी गहरी कोरणी करवाई थी। छिछली कोरणी हो तो २५-५० वर्षों में पुनः घिसाई करवाने से वह कोरणी नष्ट हो जाती है।
               </p>
             </div>
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-            <div className="bg-shadeblue rounded-lg p-6 relative">
+            <div className="bg-lightyellow rounded-lg p-6 relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
@@ -423,22 +423,22 @@ export default function TempleConstructionPage() {
 
             <div className="flex flex-col gap-8">
               
-            <div className="bg-shadeblue rounded-lg p-10 text-center relative">
+            <div className="bg-lightyellow rounded-lg p-10 text-center relative">
               <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <TopLeftSvg />
               </div>
               <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                 <BottomRighSvg />
               </div>
-              <h3 className="font-bold text-xl text-darkblue mb-4 font-heading">
+              <h3 className="font-bold text-xl text-maroon mb-4 font-heading">
                 कच्छ-रापर- गढ़वाली के दर्शनीय जिनालय
               </h3>
-              <p className="text-lg leading-relaxed text-darkblue">
-                <span className="font-semibold text-darkblue">
+              <p className="text-lg leading-relaxed text-maroon">
+                <span className="font-semibold text-maroon">
                   कच्छ-रापर-गढ़वाली के दर्शनीय जिनालय
                 </span>{" "}
                 की यह कार्विंग तथा प्रोफाइलिंग{" "}
-                <span className="font-semibold text-darkblue">
+                <span className="font-semibold text-maroon">
                   अध्यात्म शिल्पशाला
                 </span>{" "}
                 में हो रही है।
@@ -458,7 +458,7 @@ export default function TempleConstructionPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-4">
-              <div className="bg-shadeblue rounded-lg p-6 shadow-sm flex-grow relative">
+              <div className="bg-lightyellow rounded-lg p-6 shadow-sm flex-grow relative">
                 <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                   <TopLeftSvg />
                 </div>
@@ -468,7 +468,7 @@ export default function TempleConstructionPage() {
                   src="/jinmandir/jinalaya-navnirmaan/img-2.25.png"
                 />
               </div>
-              <div className="bg-shadeblue text-darkblue rounded-sm p-4 relative">
+              <div className="bg-lightyellow text-maroon rounded-sm p-4 relative">
                 
                 <p className="text-base leading-relaxed">
                   श्री शांति कनक जिनालय, नानपुरा सूरत के जिनालय की कोरणी कई विशेषज्ञों के लिए आकर्षण बनी है!
@@ -476,7 +476,7 @@ export default function TempleConstructionPage() {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="bg-shadeblue rounded-lg p-6 shadow-sm flex-grow relative">
+              <div className="bg-lightyellow rounded-lg p-6 shadow-sm flex-grow relative">
                 <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
                   <TopLeftSvg />
                 </div>
@@ -486,7 +486,7 @@ export default function TempleConstructionPage() {
                   src="/jinmandir/jinalaya-navnirmaan/img-2.26.png"
                 />
               </div>
-              <div className="bg-shadeblue text-darkblue rounded-sm p-4 relative">
+              <div className="bg-lightyellow text-maroon rounded-sm p-4 relative">
                 
                 <p className="text-base leading-relaxed">
                   श्री शान्तिवर्धक जिनालय-पाल, अभी तो यह निर्माणाधीन है तो भी ऐसा

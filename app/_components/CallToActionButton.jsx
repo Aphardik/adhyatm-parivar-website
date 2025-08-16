@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import HexagonalSvg from "./HexagonalSvg";
 
 const CallToActionButton = ({heading,content,id,href}) => {
   return (
-    <div className="bg-gradient2 shadow-lg rounded-lg p-6 sm:p-8 my-8">
+    <div className="bg-gradient2 relative shadow-lg rounded-lg p-6 sm:p-8 my-8">
       {/* Header */}
       <h3 className="text-xl text-center sm:text-2xl font-bold font-heading mb-6 text-maroon py-3 px-4 ">
        {heading}

@@ -259,7 +259,7 @@ const PhotoGalleryHome = () => {
         <div className="mt-8 text-center">
           <Link
             href="/pages/sba"
-            className="font-Roboto font-semibold flex rounded-md sm:inline-flex items-center justify-center bg-[#01044c] text-white px-8 py-3 transition-all duration-300 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="font-sans font-semibold flex rounded-md sm:inline-flex items-center justify-center bg-[#01044c] text-white px-8 py-3 transition-all duration-300 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             View all
             <FaChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
