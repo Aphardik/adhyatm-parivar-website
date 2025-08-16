@@ -326,7 +326,7 @@ const Header = () => {
                 <Link href={"/"} className="flex gap-4 items-center">
                   <img className="h-10" src="/logo.png" alt="" />
                   <span className="text-lg uppercase text-maroon">
-                    <b>अध्यात्म &nbsp;&nbsp;&nbsp;परिवार</b>
+                    <b>अध्यात्म &nbsp;परिवार</b>
                   </span>
                 </Link>
               </div>
@@ -488,7 +488,7 @@ const Header = () => {
                           {/* {item.emoji} */}
                         </span>
                         <div>
-                          <h3 className="mb-1">{item.title}</h3>
+                          <h3 className="mb-1 font-semibold">{item.title}</h3>
                           <p className={`text-sm leading-relaxed ${isActive ? 'text-white/80' : ''}`}>
                             {item.description}
                           </p>
@@ -516,7 +516,7 @@ const Header = () => {
             <Link href={"/"} className="flex gap-4 items-center">
               <img className="h-10" src="/logo.png" alt="" />
               <span className="text-lg uppercase text-maroon">
-                <b>अध्यात्म &nbsp;&nbsp;&nbsp;परिवार</b>
+                <b>अध्यात्म &nbsp;परिवार</b>
               </span>
             </Link>
           </div>
@@ -578,7 +578,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className="mb-1">{item.title}</h3>
+                      <h3 className="mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                     <HexagonalSvg accentColor="maroon" />
@@ -630,7 +630,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" mb-1">{item.title}</h3>
+                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                      <HexagonalSvg accentColor="maroon" />
@@ -681,7 +681,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" mb-1">{item.title}</h3>
+                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                      <HexagonalSvg accentColor="maroon" />
@@ -733,7 +733,7 @@ const Header = () => {
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
                     <div>
-                      <h3 className=" mb-1">{item.title}</h3>
+                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
                      <HexagonalSvg accentColor="maroon" />

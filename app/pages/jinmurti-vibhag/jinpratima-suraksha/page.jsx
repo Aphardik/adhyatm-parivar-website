@@ -309,7 +309,7 @@ const Page = () => {
                 {/* Story Content */}
                 <div className="space-y-6">
                   <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-heading  text-maroon mb-4">
+                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
                       प्रतीक्षा का काल
                     </h2>
                     <div className="space-y-3 text-maroon leading-relaxed">
@@ -337,7 +337,7 @@ const Page = () => {
                   </div>
 
                   <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-heading  text-maroon mb-4">
+                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
                       साधना का फल
                     </h2>
                     <div className="space-y-3 text-maroon leading-relaxed">
@@ -353,7 +353,7 @@ const Page = () => {
                   </div>
 
                   <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-heading  text-maroon mb-4">
+                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
                       तैयारी और चुनौती
                     </h2>
                     <div className="space-y-3 text-maroon leading-relaxed">
@@ -373,7 +373,7 @@ const Page = () => {
                   </div>
 
                   <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-heading  text-maroon mb-4">
+                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
                       समर्पण और सफलता
                     </h2>
                     <div className="space-y-3 text-maroon leading-relaxed">
