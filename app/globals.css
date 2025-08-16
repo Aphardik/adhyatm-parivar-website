@@ -54,7 +54,9 @@ body {
   /* Light mode colors */
   --background: #ffffff;
   --foreground: #171717;
-  --font-heading: 'Yatra One', sans-serif;
+  /* --font-heading: 'Yatra One', sans-serif; */
+  /* --font-heading: 'Anek Devanagari', sans-serif; */
+  --font-heading: 'Anek Devanagari', sans-serif;
   --font-body: 'Tiro Devanagari Hindi', sans-serif;
   --font-anek: 'Anek Gujarati', sans-serif;
   --font-sans: 'Nunito Sans', sans-serif;
@@ -145,7 +147,8 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --darkyellow: #cdc565;
   --maroon: #901E3E;
   --greyish: #4A5565;
-  --lightyellow: #fffbcc;
+  /* --lightyellow: #fffbcc; */
+  --lightyellow: #FFF0C4;
     /* second section */
   --lightblue:#a8bffe;
   --foreground: #171717;

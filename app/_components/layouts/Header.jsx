@@ -315,7 +315,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed z-50  right-0 left-0 font-heading">
+    <div className="fixed z-50 text-maroon right-0 left-0 font-heading">
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
