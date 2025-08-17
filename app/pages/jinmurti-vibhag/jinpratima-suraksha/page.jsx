@@ -47,7 +47,7 @@ const Page = () => {
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
+              <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon">
                 जिनप्रतिमा सुरक्षा
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
