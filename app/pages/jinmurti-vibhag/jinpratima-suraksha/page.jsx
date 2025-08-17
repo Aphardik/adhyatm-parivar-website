@@ -50,6 +50,9 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 जिनप्रतिमा सुरक्षा
               </h1>
+              <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
+               जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य
+              </p>
               <p className="sm:text-base text-center lg:text-lg text-maroon font-medium">
                 कार्य आरंभ: वि.सं. २०७३
               </p>

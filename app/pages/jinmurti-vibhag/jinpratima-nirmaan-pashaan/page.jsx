@@ -19,9 +19,7 @@ const Page = () => {
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
                 जिनप्रतिमा निर्माण - पाषाण
               </h1>
-              <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
-                अध्यात्म शिल्पशाला
-              </p>
+
               <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                   कार्य आरंभ: वि.सं. २०७६
               </p>
