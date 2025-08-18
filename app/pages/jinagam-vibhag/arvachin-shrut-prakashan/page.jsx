@@ -99,7 +99,7 @@ const Page = () => {
                 अर्वाचीन श्रुत प्रकाशन-श्रुत प्रचार
               </h1>
               <p className="text-base text-center lg:text-lg text-maroon font-bold my-1">
-                पथदर्शक सूरिभगवन्त के प्रवचन आदि के पुस्तकों का प्रकाशनकार्य
+                पथदर्शक सूरिभगवन्त के प्रवचन आदि के पुस्तकों का प्रकाशन कार्य
               </p>
               <p className="text-base text-center lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं. २०६३
