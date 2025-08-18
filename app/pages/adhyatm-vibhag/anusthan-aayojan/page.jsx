@@ -12,7 +12,7 @@ export const metadata = {
 const AnusthanAyojan = () => {
              const statsData = [
     { count: "09", label: "कुल सामूहिक दीक्षा",  color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
-    { count: "12", label: "कुल वाचना श्रेणी",  color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "12", label: "कुल वाचना - श्रेणी",  color: "bg-gradient-to-b from-green-400 to-green-600" },
     { count: "05", label: "कुल उपधान",  color: "bg-gradient-to-b from-teal-400 to-teal-600" },
    
   ];
@@ -48,7 +48,7 @@ const AnusthanAyojan = () => {
               <BottomRighSvg />
             </div>
             <p className="text-xl text-maroon leading-relaxed">
-              अध्यात्म परिवार द्वारा सामूहिक दीक्षा, उपधान तप, वाचनाश्रेणी, S3 विशिष्ट प्रश्नोत्तरी प्रवचन, प्रतिष्ठा महोत्सव, महापूजाएं और हाल ही में एक कदम आगे बढ़कर ब्रह्मयात्रा आदि जैसे अनुष्ठानों का आयोजन होता है कि जो हजारों के जीवन में बोधिबीज डालने का कार्य करते हैं। थोड़ी झांकी :
+              अध्यात्म परिवार द्वारा सामूहिक दीक्षा, उपधान तप, वाचना - श्रेणी, S3 विशिष्ट प्रश्नोत्तरी प्रवचन, प्रतिष्ठा महोत्सव, महापूजाएं और हाल ही में एक कदम आगे बढ़कर ब्रह्मयात्रा आदि जैसे अनुष्ठानों का आयोजन होता है कि जो हजारों के जीवन में बोधिबीज डालने का कार्य करते हैं। थोड़ी झांकी :
             </p>
           </div>
           <div className="p-6 bg-lighten-bg">
@@ -77,9 +77,9 @@ const AnusthanAyojan = () => {
               src="/adhyatm/anusthan-aayojan/img-3.49.jpg"
             />
             <div className="ml-4">
-              <h2 className="text-lg sm:text-xl font-heading font-bold text-maroon">वाचना- श्रेणी</h2>
+              <h2 className="text-lg sm:text-xl font-heading font-bold text-maroon">वाचना - श्रेणी</h2>
               <p className="text-maroon font-semibold">
-                अब तक वाचना- श्रेणी में लगभग २५,००० श्रोताओंने जिनवाणी पान किया है।
+                अब तक वाचना - श्रेणी में लगभग २५,००० श्रोताओंने जिनवाणी पान किया है।
               </p>
             </div>
           </div>

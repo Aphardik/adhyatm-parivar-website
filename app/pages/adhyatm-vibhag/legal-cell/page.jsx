@@ -2,6 +2,7 @@ import BottomRighSvg from '@/app/_components/BottomRighSvg';
 import HeaderSvg from '@/app/_components/HeaderSvg';
 import TopLeftSvg from '@/app/_components/TopLeftSvg';
 import React from 'react';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 export const metadata = {
   title: 'कानूनी मार्गदर्शन : लीगल सेल | अध्यात्म विभाग',
@@ -130,8 +131,22 @@ const Page = () => {
           </div>
           <div className="text-center md:p-6 md:text-left md:pl-8">
             <div className="rounded-sm p-4 sm:p-10 ">
-              <p className="text-xl text-maroon leading-relaxed">
-                बालदीक्षा को राजमान्यता पुस्तक का शीर्षक गवाही देता है। सदियों से बालदीक्षा पर रहा हुआ जोखम दूर हुआ है और राजमन्यता द्वारा 'बालदीक्षा' की जयजयकार हुई है।
+              <div className="bg-lightyellow flex items-center justify-center p-6 sm:p-8 rounded-sm">
+                            <p className="text-maroon font-semibold flex items-center justify-center gap-4 text-xl sm:text-3xl italic text-center">
+                              <FaQuoteLeft
+                                size={32}
+                                className="text-maroon flex-shrink-0"
+                              />
+                             बालदीक्षा को राजमान्यता
+                              <FaQuoteRight
+                                size={32}
+                                className="text-maroon flex-shrink-0"
+                              />
+                            </p>
+                          </div>
+              <p className="text-xl text-center text-maroon leading-relaxed">
+             
+               पुस्तक का शीर्षक गवाही देता है। सदियों से बालदीक्षा पर रहा हुआ जोखम दूर हुआ है और राजमान्यता द्वारा <span className='font-bold text-darkpink'>'बालदीक्षा'</span>  की जयजयकार हुई है।
               </p>
             </div>
           </div>

@@ -40,7 +40,7 @@ const UdyapanPage = () => {
 
       {/* Introduction Section */}
       <div className="px-2 sm:px-4">
-      <section className="py-8 sm:py-12 lg:py-16">
+      <section className="py-8 text-maroon sm:py-12 lg:py-16">
         <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
            <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <TopLeftSvg />

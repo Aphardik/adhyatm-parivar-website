@@ -299,7 +299,7 @@ const Page = () => {
               <BottomRighSvg />
             </div>
 
-            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+            <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />
@@ -363,7 +363,7 @@ const Page = () => {
               <BottomRighSvg />
             </div>
 
-            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+            <ul className="text-xl grid sm:grid-cols-3 text-maroon leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />
@@ -450,7 +450,7 @@ const Page = () => {
         <section className="py-8 w-full sm:pb-12 lg:pb-16">
           <div className="text-center mb-8 lg:">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, अडाजन पाटिया - सुरत
+              श्री शांति-बाहुबली श्वे.मू.पू. तपागच्छ जैन संघ, अडाजन पाटिया - सुरत
             </h3>
           </div>
           <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
@@ -461,7 +461,7 @@ const Page = () => {
               <BottomRighSvg />
             </div>
 
-            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+            <ul className="text-xl grid text-maroon sm:grid-cols-3 leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />
@@ -482,7 +482,7 @@ const Page = () => {
         <section className="py-8 w-full sm:pb-12 lg:pb-16">
           <div className="text-center mb-8 lg:">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-              श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, न्यू वरणा - अहमदाबाद
+              श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, न्यू वासणा - अहमदाबाद
             </h3>
           </div>
           <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
@@ -492,7 +492,7 @@ const Page = () => {
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+            <ul className="text-xl grid text-maroon sm:grid-cols-3 leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />
@@ -541,7 +541,7 @@ const Page = () => {
             <div className="absolute bottom-0 right-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
               <BottomRighSvg />
             </div>
-            <ul className="text-xl grid sm:grid-cols-3 leading-relaxed space-y-2">
+            <ul className="text-xl text-maroon grid sm:grid-cols-3 leading-relaxed space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />

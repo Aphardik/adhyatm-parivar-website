@@ -157,11 +157,11 @@ const BhaktidravyShanshodhan = () => {
                 src="/adhyatm/uttam-bhaktidrivya/img-3.61.jpg"
               />
             </div>
-            <div className="p-4 bg-maroon text-whitey">
+            {/* <div className="p-4 bg-maroon text-whitey">
               <p className="text-center font-heading font-semibold text-lg">
                 विविध तीर्थों की मूर्तिका (मिट्टी)
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
