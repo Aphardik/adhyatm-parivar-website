@@ -394,18 +394,7 @@ const Page = () => {
                 </span>
                 अतिथि भवन
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-white bg-maroon rounded-full p-1 mt-1">
-                  <FaCheck size={14} />
-                </span>
-                अनुष्ठान खंड
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-white bg-maroon rounded-full p-1 mt-1">
-                  <FaCheck size={14} />
-                </span>
-                आयंबिलशाला
-              </li>
+             
               <li className="flex items-start gap-2">
                 <span className="text-white bg-maroon rounded-full p-1 mt-1">
                   <FaCheck size={14} />
