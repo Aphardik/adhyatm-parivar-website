@@ -6,14 +6,15 @@ const CallToActionButton = ({heading,content,id,href}) => {
   return (
     <div className="bg-gradient2 relative shadow-lg rounded-lg p-6 sm:p-8 my-8">
       {/* Header */}
-      <h3 className="text-xl text-center sm:text-2xl font-bold font-heading mb-6 text-maroon py-3 px-4 ">
-       {heading}
-      </h3>
+     
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-12 gap-4 sm:gap-6 max-w-7xl mx-auto items-center">
         {/* Text Content - 8 columns */}
         <div className="col-span-12 lg:col-span-8">
+           <h3 className="text-xl text-center sm:text-2xl font-bold font-heading text-maroon py-3 px-4 ">
+       {heading}
+      </h3>
           <div className=" rounded-lg p-4 sm:p-6  border-yellow-200">
             <p className="font-medium text-maroon  text-center text-base sm:text-lg leading-relaxed">
               {content}

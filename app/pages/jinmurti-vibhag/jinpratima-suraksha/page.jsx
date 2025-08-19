@@ -4,6 +4,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import Link from "next/link";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import CallToActionButton from "@/app/_components/CallToActionButton";
+import HexagonalSvg from "@/app/_components/HexagonalSvg";
 
 export const metadata = {
   title: "जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग",
@@ -484,9 +485,7 @@ const Page = () => {
 
         <CounterStatsUI statsData={statsData} />
 
-        {/* Section 4: Solutions */}
 
-        {/* Section 5: Work Done - Success Stories */}
         <section className="py-8 sm:py-8 lg:py-8 bg-whitey">
           <div className="mx-auto  max-w-7xl">
             <div className="text-center mb-8 lg:mb-12">
@@ -495,14 +494,14 @@ const Page = () => {
               </h2>
             </div>
 
-            <div className="bg-lightyellow rounded-sm mb-8  overflow-hidden hover: transition-shadow">
-              <div className="h-full bg-lightyellow flex items-center justify-center">
+            <div className="bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75%  rounded-sm mb-8  overflow-hidden h-52 sm:h-auto transition-shadow">
+              {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
                   alt="Work Done"
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
               <div className="p-6">
                 <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                   श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
@@ -516,17 +515,17 @@ const Page = () => {
               </div>
             </div>
 
-            {/* Major Tirth Work Cards */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 lg:mb-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 lg:mb-8">
               {/* Card 1 */}
-              <div className="bg-lightyellow rounded-sm  overflow-hidden hover: transition-shadow">
-                <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
+              <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm h-52 sm:h-auto overflow-hidden hover: transition-shadow">
+                <HexagonalSvg accentColor="red"/>
+                {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.7.png"
                     alt="Girnar Tirth"
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                     श्री गिरनार महातीर्थ
@@ -541,14 +540,15 @@ const Page = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-lightyellow rounded-sm  overflow-hidden hover: transition-shadow">
-                <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
+              <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% h-52 sm:h-auto rounded-sm  overflow-hidden hover: transition-shadow">
+                <HexagonalSvg accentColor="red"/>
+                {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.8.png"
                     alt="Sametshikhar Tirth"
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                     श्री समेतशिखर महातीर्थ
@@ -562,14 +562,15 @@ const Page = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-lightyellow rounded-sm  overflow-hidden hover: transition-shadow sm:col-span-2 lg:col-span-1">
-                <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
+              <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm h-52 sm:h-auto overflow-hidden transition-shadow sm:col-span-2 lg:col-span-1">
+                <HexagonalSvg accentColor="red"/>
+                {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.9.png"
                     alt="Shankheshwar Tirth"
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                     श्री शंखेश्वर महातीर्थ
@@ -581,20 +582,27 @@ const Page = () => {
               </div>
             </div>
 
-            {/* Makshi Tirth Summary */}
-            <div className="bg-lightyellow rounded-sm  p-6 sm:p-8 lg:p-10">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
-                <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
-                <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
-              </div>
-              <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
-                श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
+             <div className="bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
+              {/* <div className="h-full bg-lightyellow flex items-center justify-center">
+                <img
+                  src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
+                  alt="Work Done"
+                  className="w-full h-full object-cover"
+                />
+              </div> */}
+              <div className="p-6">
+                <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
+                 श्री मक्षीजी तीर्थ
+                </h4>
+                <p className="text-maroon leading-relaxed">
+                  श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
                 के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओं के ओप आदि का
                 कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
-              </p>
+                </p>
+              </div>
             </div>
           </div>
+
         </section>
         <section className="py-8 sm:py-8 lg:py-8 ">
           <div className="mx-auto  max-w-7xl">
@@ -639,7 +647,7 @@ const Page = () => {
                 content=" अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।"
                 id="jinpratima-suraksha-cta"
                 href={
-                  "https://wa.me/918448444050?text=नमस्कार%2C%0A%0Aमैं%20अध्यात्म%20परिवार%20की%20सेवाओं%20के%20बारे%20में%20जानकारी%20चाहता%2Fचाहती%20हूं।%0Aकृपया%20प्रतिमाजी%20की%20शुद्धि-सुरक्षा%20के%20लिए%20उपलब्ध%20सेवाओं%20की%20विस्तृत%20जानकारी%20प्रदान%20करें।%0A%0Aधन्यवाद"
+                  "https://wa.me/918448444050"
                 }
               />
     </div>
