@@ -113,7 +113,7 @@ const ContactPage = () => {
 
                 </div>
                 
-                <div className="relative h-96  overflow-hidden">
+                <div className="relative h-96  overflow-auto">
                   <iframe
                     src={locations[selectedLocation].mapUrl}
                     width="100%"
