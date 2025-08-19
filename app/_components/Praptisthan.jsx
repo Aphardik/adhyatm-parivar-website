@@ -76,7 +76,7 @@ const Praptisthan = () => {
       </div>
       
       <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`overflow-auto transition-all duration-300 ease-in-out ${
           collapsedCities[city] ? 'max-h-0 opacity-0' : 'max-h-none opacity-100'
         }`}
         style={{
@@ -130,7 +130,7 @@ const Praptisthan = () => {
         <div className="max-w-7xl flex items-center justify-between flex-col gap-2 sm:gap-0 sm:flex-row mx-auto px-4 py-3">
           {/* Tabs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex bg-whitey rounded-lg border border-gray-300 overflow-hidden">
+            <div className="flex bg-whitey rounded-lg border border-gray-300 overflow-auto">
               <button
                 onClick={() => {
                   setActiveTab('suddh-dravya');
