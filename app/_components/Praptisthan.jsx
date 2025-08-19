@@ -80,7 +80,7 @@ const Praptisthan = () => {
           collapsedCities[city] ? 'max-h-0 opacity-0' : 'max-h-none opacity-100'
         }`}
         style={{
-          maxHeight: collapsedCities[city] ? '0px' : '1000px'
+          maxHeight: collapsedCities[city] ? '0px' : '3000px'
         }}
       >
         <div className="p-6">
@@ -108,10 +108,10 @@ const Praptisthan = () => {
             <BiPhone className="w-8 h-8" />
           </div>
         </div>
-        <h3 className="text-2xl font-heading font-bold mb-4">
+        <h3 className="text-xl sm:text-2xl font-heading font-bold mb-4">
           आपके नज़दीकी प्राप्तिस्थान की विशेष जानकारी के लिए संपर्क करें।
         </h3>
-        <p className="text-lg font-body opacity-90 mb-6">
+        <p className="text-base sm:text-lg font-body opacity-90 mb-6">
           पूरी जानकारी और पता प्राप्त करने के लिए हमसे संपर्क करें
         </p>
         <Link href="https://wa.me/918448444050" className="bg-whitey text-maroon font-body font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 shadow-md">
@@ -126,8 +126,8 @@ const Praptisthan = () => {
   return (
     <div className="min-h-screen py-8">
       {/* Header */}
-      <div className="bg-transparent backdrop-blur-lg shadow-md sticky mb-8 top-16 z-10">
-        <div className="max-w-7xl flex items-center justify-between flex-col gap-2 sm:gap-0 sm:flex-row mx-auto px-4 py-3">
+      <div className="bg-transparent text-sm sm:text-base backdrop-blur-lg shadow-md sticky mb-8 top-16 z-10">
+        <div className="max-w-7xl flex items-center justify-between flex-col gap-2 sm:gap-0 sm:flex-row mx-auto py-3">
           {/* Tabs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex bg-whitey rounded-lg border border-gray-300 overflow-auto">
