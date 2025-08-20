@@ -36,7 +36,7 @@ const JinalayaSuraksha = () => {
                 जिनालय सुरक्षा (मरम्मत)
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-bold my-1">
-               जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य
+               जिनालय का लीकेज आदि समस्याओं का निवारण कार्य
               </p>
               <p className="text-sm text-center sm:text-base lg:text-lg text-maroon font-medium">
                 कार्य प्रारंभ : वि.सं. २०७७
@@ -70,11 +70,11 @@ const JinalayaSuraksha = () => {
       {/* Solution Section */}
       <section className="py-2 sm:py-4 lg:py-8 bg-whitey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 lg:mb-12">
+          {/* <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               समाधान
             </h3>
-          </div>
+          </div> */}
 
           <div className="bg-lightyellow rounded p-6 sm:p-8">
             <div className="flex flex-col lg:flex-row gap-8 items-center">

@@ -82,7 +82,7 @@ const Header = () => {
         link: "/pages/jinmandir-vihabg/jinalaya-suraksha",
         title: "जिनालय सुरक्षा (मरम्मत)",
         description:
-          "जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य",
+          "जिनालय का लीकेज आदि समस्याओं का निवारण कार्य",
       },
       {
         id: 16,

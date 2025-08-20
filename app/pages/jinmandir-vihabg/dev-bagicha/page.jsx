@@ -68,7 +68,7 @@ const Page = () => {
                   size={32}
                   className="text-maroon flex-shrink-0"
                 />
-                फुलड़ा केरा बाग मां बैठा श्री जिनराज
+                फुलड़ा केरा बागमां बैठा श्री जिनराज
                 <FaQuoteRight
                   size={32}
                   className="text-maroon flex-shrink-0"

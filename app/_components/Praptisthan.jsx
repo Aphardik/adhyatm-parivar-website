@@ -7,6 +7,7 @@ import {suddhDravyaPraptisthanData} from "@/app/data/suddhDravyaPraptisthan"
 import {pustakPraptisthanData} from "@/app/data/pustakPraptisthan"
 import HexagonalSvg from './HexagonalSvg';
 import Link from 'next/link';
+import CallToActionButton from './CallToActionButton';
 
 const Praptisthan = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -193,7 +194,13 @@ const Praptisthan = () => {
             ))}
             
             {/* Call to Action Card */}
-            <CallToActionCard />
+            <CallToActionButton 
+             heading="आपके नज़दीकी प्राप्तिस्थान की विशेष जानकारी के लिए संपर्क करें।"
+                id="contactus-cta"
+                href={
+                  "https://wa.me/918448444050"
+                }
+            />
           </div>
         )}
       </div>

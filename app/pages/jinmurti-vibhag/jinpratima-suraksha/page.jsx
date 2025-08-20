@@ -494,7 +494,7 @@ const Page = () => {
               </h2>
             </div>
 
-            <div className="bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75%  rounded-sm mb-8  overflow-hidden h-52 sm:h-auto transition-shadow">
+            <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75%  rounded-sm mb-8  overflow-hidden h-52 sm:h-auto transition-shadow">
               {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
@@ -502,6 +502,9 @@ const Page = () => {
                   className="w-full h-full object-cover"
                 />
               </div> */}
+              <div className="block sm:hidden">
+                <HexagonalSvg accentColor="red"/>
+                </div>
               <div className="p-6">
                 <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                   श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
@@ -582,7 +585,7 @@ const Page = () => {
               </div>
             </div>
 
-             <div className="bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
+             <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
               {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
@@ -590,6 +593,9 @@ const Page = () => {
                   className="w-full h-full object-cover"
                 />
               </div> */}
+              <div className="block sm:hidden">
+                <HexagonalSvg accentColor="red"/>
+                </div>
               <div className="p-6">
                 <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
                  श्री मक्षीजी तीर्थ
