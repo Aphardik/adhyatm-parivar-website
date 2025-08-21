@@ -428,9 +428,9 @@ const Header = () => {
             <div className="hidden md:flex items-center">
               <Link
                 href={"/pages/contactus"}
-                className="bg-maroon font-sans hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors"
+                className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors"
               >
-                Contact us
+                संपर्क
               </Link>
             </div>
 
@@ -745,9 +745,9 @@ const Header = () => {
 
           <Link
             href={"/pages/contactus"}
-            className="w-full font-sans flex items-center justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
+            className="w-full flex items-center justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
           >
-            Contact us
+            संपर्क
           </Link>
         </div>
       </div>
