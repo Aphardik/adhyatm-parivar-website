@@ -420,7 +420,7 @@ const Header = () => {
             <div className="hidden md:flex items-center">
               <Link
                 href="/pages/contactus"
-                className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center"
+                className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 leading-none rounded-full font-medium transition-colors flex items-center justify-center"
               >
                 संपर्क
               </Link>
