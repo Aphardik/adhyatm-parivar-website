@@ -419,11 +419,11 @@ const Header = () => {
             {/* Desktop */}
             <div className="hidden md:flex items-center">
               <Link
-  href="/pages/contactus"
-  className="bg-maroon hover:bg-maroon/90 text-white h-10 px-6 rounded-full font-medium transition-colors flex items-center justify-center"
->
-  संपर्क
-</Link>
+                href="/pages/contactus"
+                className="bg-maroon font-body hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center"
+              >
+                संपर्क
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -748,7 +748,7 @@ const Header = () => {
 
           <Link
             href={"/pages/contactus"}
-            className="w-full flex items-center justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
+            className="w-full flex items-center font-body justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
           >
             संपर्क
           </Link>
