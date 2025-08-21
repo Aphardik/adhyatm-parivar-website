@@ -55,8 +55,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/jinmurti-vibhag/jinpratima-nirmaan-dhatu",
         title: "जिनप्रतिमा निर्माण - धातु",
-        description:
-          "पंच धातु की प्रतिमा आदि का निर्माणकार्य",
+        description: "पंच धातु की प्रतिमा आदि का निर्माणकार्य",
       },
       {
         id: 42,
@@ -81,8 +80,7 @@ const Header = () => {
         emoji: "🔥",
         link: "/pages/jinmandir-vihabg/jinalaya-suraksha",
         title: "जिनालय सुरक्षा (मरम्मत)",
-        description:
-          "जिनालय का लीकेज आदि समस्याओं का निवारण कार्य",
+        description: "जिनालय का लीकेज आदि समस्याओं का निवारण कार्य",
       },
       {
         id: 16,
@@ -97,8 +95,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/jinmandir-vihabg/jinalaya-navnirmaan",
         title: "जिनालय नवनिर्माण तथा मार्गदर्शन",
-        description:
-          "कहीं पर भी जिनालय का निर्माणकार्य एवं मार्गदर्शन",
+        description: "कहीं पर भी जिनालय का निर्माणकार्य एवं मार्गदर्शन",
       },
       {
         id: 18,
@@ -113,8 +110,7 @@ const Header = () => {
         emoji: "😎",
         link: "/pages/jinmandir-vihabg/dev-bagicha",
         title: "देव बगीचे का निर्माण",
-        description:
-          "प्रभुपूजा के पुष्पों के लिए देवबगीचो का निर्माणकार्य",
+        description: "प्रभुपूजा के पुष्पों के लिए देवबगीचो का निर्माणकार्य",
       },
     ],
     menu3: [
@@ -164,8 +160,7 @@ const Header = () => {
         id: 25,
         emoji: "🔥",
         link: "/pages/adhyatm-vibhag/parishthapanika-samiti",
-        title:
-          "पारिष्ठापनिका समिति सुरक्षा",
+        title: "पारिष्ठापनिका समिति सुरक्षा",
         description:
           "चतुर्विध संघ की पारिष्ठापनिका समिति की रक्षा के लिए मात्रु कुंडी एवं स्थण्डिल डोम का निर्माण कार्य ",
       },
@@ -190,8 +185,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/jal-stand",
         title: "उष्ण जल ठंडा करने का स्टैंड",
-        description:
-          "उष्णजल को शीत करने के स्टैंड का वितरण कार्य",
+        description: "उष्णजल को शीत करने के स्टैंड का वितरण कार्य",
       },
       {
         id: 29,
@@ -230,8 +224,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/adhyatmshala",
         title: "अध्यात्मशाला (बालसंस्करण पाठशाला)",
-        description:
-          "बच्चो में संस्कार सिंचन के लिए रुचिकर दैनिक आयोजन ",
+        description: "बच्चो में संस्कार सिंचन के लिए रुचिकर दैनिक आयोजन ",
       },
       {
         id: 34,
@@ -246,8 +239,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/paiyashala",
         title: "पाइयशाला (प्राकृत शिक्षणशाला)",
-        description:
-          "प्राकृत भाषा का ज्ञान प्राप्त कराने के लिए व्यवस्था ",
+        description: "प्राकृत भाषा का ज्ञान प्राप्त कराने के लिए व्यवस्था ",
       },
       {
         id: 36,
@@ -270,8 +262,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/uttam-bhaktidrivya",
         title: "उत्तम भक्तिद्रव्य संशोधन",
-        description:
-          "प्रभुभक्ति में आवश्यक द्रव्य, औषधियाँ आदि का गहन संशोधन",
+        description: "प्रभुभक्ति में आवश्यक द्रव्य, औषधियाँ आदि का गहन संशोधन",
       },
       {
         id: 39,
@@ -286,8 +277,7 @@ const Header = () => {
         emoji: "🤘",
         link: "/pages/adhyatm-vibhag/chitra-nirmaan",
         title: "चित्र निर्माण",
-        description:
-          "विविध चित्रों को बनवाकर प्रसारित करना",
+        description: "विविध चित्रों को बनवाकर प्रसारित करना",
       },
       {
         id: 41,
@@ -336,7 +326,9 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="/"
-                className={`${pathname=="/" && "text-black"} text-maroon font-sans hover:text-pink-600 font-medium transition-colors`}
+                className={`${
+                  pathname == "/" && "text-black"
+                } text-maroon font-sans hover:text-pink-600 font-medium transition-colors`}
               >
                 About us
               </a>
@@ -347,10 +339,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinmurti-vibhag") && "text-pink-600"}  ${
-                    activeDropdown === "menu1"
-                      ? "text-pink-600"
-                      : "text-maroon"
+                  className={`flex items-center space-x-1 ${
+                    pathname.includes("/jinmurti-vibhag") && "text-pink-600"
+                  }  ${
+                    activeDropdown === "menu1" ? "text-pink-600" : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनमूर्ति विभाग</span>
@@ -368,10 +360,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinmandir-vihabg") && "text-pink-600"}   ${
-                    activeDropdown === "menu2"
-                      ? "text-pink-600"
-                      : "text-maroon"
+                  className={`flex items-center space-x-1 ${
+                    pathname.includes("/jinmandir-vihabg") && "text-pink-600"
+                  }   ${
+                    activeDropdown === "menu2" ? "text-pink-600" : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनमंदिर विभाग</span>
@@ -388,10 +380,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/jinagam-vibhag") && "text-pink-600"}    ${
-                    activeDropdown === "menu3"
-                      ? "text-pink-600"
-                      : "text-maroon"
+                  className={`flex items-center space-x-1 ${
+                    pathname.includes("/jinagam-vibhag") && "text-pink-600"
+                  }    ${
+                    activeDropdown === "menu3" ? "text-pink-600" : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>जिनागम विभाग</span>
@@ -408,10 +400,10 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${pathname.includes("/adhyatm-vibhag") && "text-pink-600"}  ${
-                    activeDropdown === "menu4"
-                      ? "text-pink-600"
-                      : "text-maroon"
+                  className={`flex items-center space-x-1 ${
+                    pathname.includes("/adhyatm-vibhag") && "text-pink-600"
+                  }  ${
+                    activeDropdown === "menu4" ? "text-pink-600" : "text-maroon"
                   } font-medium transition-colors`}
                 >
                   <span>अध्यात्म विभाग</span>
@@ -427,8 +419,8 @@ const Header = () => {
             {/* Desktop */}
             <div className="hidden md:flex items-center">
               <Link
-                href={"/pages/contactus"}
-                className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors"
+                href="/pages/contactus"
+                className="bg-maroon hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center"
               >
                 संपर्क
               </Link>
@@ -458,7 +450,6 @@ const Header = () => {
           onMouseEnter={() => handleMouseEnter(activeDropdown)}
           onMouseLeave={handleMouseLeave}
         >
-          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {activeDropdown &&
@@ -470,8 +461,8 @@ const Header = () => {
                       key={item.id}
                       onClick={handleMenuItemClick}
                       className={`p-4 rounded-lg relative transition-all duration-300 cursor-pointer group transform ${
-                        isActive 
-                          ? "bg-maroon text-white" 
+                        isActive
+                          ? "bg-maroon text-white"
                           : "bg-lightpink/80 hover:bg-lightyellow hover:text-maroon"
                       } ${
                         activeDropdown
@@ -482,14 +473,18 @@ const Header = () => {
                         transitionDelay: `${index * 50}ms`,
                       }}
                     >
-                      {!isActive && <HexagonalSvg accentColor="maroon"/>}
+                      {!isActive && <HexagonalSvg accentColor="maroon" />}
                       <div className="flex items-start space-x-3 relative z-10">
                         <span className="text-2xl group-hover:scale-110 transition-transform duration-200">
                           {/* {item.emoji} */}
                         </span>
                         <div>
                           <h3 className="mb-1 font-semibold">{item.title}</h3>
-                          <p className={`text-sm leading-relaxed ${isActive ? 'text-white/80' : ''}`}>
+                          <p
+                            className={`text-sm leading-relaxed ${
+                              isActive ? "text-white/80" : ""
+                            }`}
+                          >
                             {item.description}
                           </p>
                         </div>
@@ -532,14 +527,18 @@ const Header = () => {
         <div className="h-[calc(100vh-4rem)] overflow-y-auto px-4 py-6 space-y-6">
           <a
             href="/"
-            className={`${pathname=="/" && "text-pink-600"} block font-sans text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+            className={`${
+              pathname == "/" && "text-pink-600"
+            } block font-sans text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
           >
             About us
           </a>
 
           <div>
             <button
-              className={`${pathname.includes("/jinmurti-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${
+                pathname.includes("/jinmurti-vibhag") && "text-pink-600"
+              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu1")}
             >
               <span>जिनमूर्ति विभाग</span>
@@ -584,14 +583,15 @@ const Header = () => {
                     <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
-                
               </div>
             </div>
           </div>
 
           <div>
             <button
-              className={`${pathname.includes("/jinmandir-vihabg") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${
+                pathname.includes("/jinmandir-vihabg") && "text-pink-600"
+              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu2")}
             >
               <span>जिनमंदिर विभाग</span>
@@ -633,7 +633,7 @@ const Header = () => {
                       <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
-                     <HexagonalSvg accentColor="maroon" />
+                    <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
               </div>
@@ -642,7 +642,9 @@ const Header = () => {
 
           <div>
             <button
-              className={`${pathname.includes("/jinagam-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${
+                pathname.includes("/jinagam-vibhag") && "text-pink-600"
+              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu3")}
             >
               <span>जिनागम विभाग</span>
@@ -684,9 +686,8 @@ const Header = () => {
                       <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
-                     <HexagonalSvg accentColor="maroon" />
+                    <HexagonalSvg accentColor="maroon" />
                   </Link>
-                  
                 ))}
               </div>
             </div>
@@ -694,7 +695,9 @@ const Header = () => {
 
           <div>
             <button
-              className={`${pathname.includes("/adhyatm-vibhag") && "text-pink-600"} flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${
+                pathname.includes("/adhyatm-vibhag") && "text-pink-600"
+              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu4")}
             >
               <span>अध्यात्म विभाग</span>
@@ -736,7 +739,7 @@ const Header = () => {
                       <h3 className=" mb-1 font-semibold">{item.title}</h3>
                       <p className="text-sm text-content">{item.description}</p>
                     </div>
-                     <HexagonalSvg accentColor="maroon" />
+                    <HexagonalSvg accentColor="maroon" />
                   </Link>
                 ))}
               </div>
