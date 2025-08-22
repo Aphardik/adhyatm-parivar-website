@@ -79,12 +79,12 @@ const Page = () => {
 
         </div>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1  gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2   sm:gap-8">
             {/* First Image and Text Pair */}
             <div className="flex flex-col  p-6">
-              <div className="h-96 w-full flex justify-center items-center mb-6">
+              <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/prabhubhakti-upkaran/img-3.56.png"
+                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-1.png"
                   alt="ap"
                   className="w-full h-full object-contain rounded-lg"
                 />
@@ -93,6 +93,16 @@ const Page = () => {
             </div>
 
             {/* Second Image and Text Pair */}
+             <div className="flex flex-col  p-6">
+              <div className="sm:h-96 w-full flex justify-center items-center mb-6">
+                <img
+                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-2.png"
+                  alt="ap"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+             
+            </div>
             
           </div>
         </div>
