@@ -747,6 +747,7 @@ const Header = () => {
           </div>
 
           <Link
+          onClick={handleMenuItemClick}
             href={"/pages/contactus"}
             className="w-full flex items-center font-body justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
           >
