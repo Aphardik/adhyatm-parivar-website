@@ -50,7 +50,7 @@ const VibhagDescription = () => {
 
                 <div className="flex-shrink-0">
                   <div className="w-24 h-24 md:w-32 md:h-32 bg-transparent flex items-center justify-center">
-                    <img className='w-[5.5rem] md:w-[7.5rem] rounded-full h-[5.5rem] md:h-[7.5rem] object-cover' src={vibhag.icon} alt="" />
+                    <img className='w-[5.5rem] md:w-[7.5rem] h-[5.5rem] md:h-[7.5rem] object-cover' src={vibhag.icon} alt="" />
                   </div>
                 </div>
               </div>
