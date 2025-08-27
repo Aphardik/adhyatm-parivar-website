@@ -6,10 +6,12 @@ import { useRouter } from "next/navigation";
 import { states } from "../../../data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import SubmissionPopup from "@/app/_components/SubmissionPopup";
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  
 
   const images = ["/bookimages/calendar-2082.png"];
 
@@ -182,9 +184,12 @@ export default function Calendar2082Form() {
   const [loading, setLoading] = useState(false);
   const [copies, setCopies] = useState(1);
   const router = useRouter();
+      const [popupVisible, setPopupVisible] = useState(false);
+      const [popupStatus, setPopupStatus] = useState("loading");
 
   const onFinish = async (values) => {
-    // Add copies to the values object
+     setPopupVisible(true);
+    setPopupStatus("loading");
     values.નકલ = copies;
 
     console.log("Form values: ", values);
@@ -197,25 +202,38 @@ export default function Calendar2082Form() {
       );
 
       if (response.status === 200) {
+        setPopupStatus("success");
         console.log("Response sent successfully:", response.data);
-        message.success("Form submitted successfully!");
+        // message.success("Form submitted successfully!");
         form.resetFields();
       } else {
         console.log("Unexpected response status:", response.status);
+         setPopupStatus("error");
         message.error("There was an issue submitting the form.");
       }
     } catch (error) {
       console.log("Error sending response:", error);
+      setPopupStatus("error");
       message.error(error.response?.data?.message || "An error occurred");
     } finally {
       setLoading(false);
-      router.push("/pages/success?page=calendar");
     }
   };
 
   const onReset = () => {
     form.resetFields();
     setCopies(1);
+  };
+
+     const handlePopupClose = () => {
+    setPopupVisible(false);
+    setPopupStatus("loading"); 
+  };
+
+    const handleSuccessOk = () => {
+    setPopupVisible(false);
+    setPopupStatus("loading");
+    router.push("/"); 
   };
 
   return (
@@ -431,7 +449,7 @@ export default function Calendar2082Form() {
                   </button>
 
                   <button
-                    className="rounded-sm text-sm font-sans font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
+                    className="rounded-sm text-sm cursor-pointer font-sans font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
                     disabled={loading}
                   >
                     {loading ? (
@@ -448,6 +466,18 @@ export default function Calendar2082Form() {
           </div>
         </div>
       </div>
+       {/* Submission Popup */}
+                  <SubmissionPopup
+                    visible={popupVisible}
+                    status={popupStatus}
+                    onClose={handlePopupClose}
+                    onSuccess={handleSuccessOk}
+                    title="Form Submission"
+                    loadingText="Submitting your form..."
+                    successText="Form submitted successfully!"
+                    errorText="Failed to submit form. Please try again."
+                    showAutoClose={false}
+                  />
     </div>
   );
 }

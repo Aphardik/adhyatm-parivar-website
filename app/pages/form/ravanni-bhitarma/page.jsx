@@ -434,7 +434,6 @@ export default function RavanniBhitarmaForm() {
                   </button>
                 </div>
               </Form>
-              {/* <BorderBeam className="hidden md:block" duration={8} size={300} /> */}
             </div>
           </div>
         </div>
