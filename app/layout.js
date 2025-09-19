@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/layouts/Header";
 import Footer from "./_components/layouts/Footer";
+import GoogleAnalytics from "./_components/googleAnalytics/GoogleAnalytics";
+import GoogleTrack from "./_components/googleAnalytics/GoogleTrack";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
 
 
         <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
+          <GoogleAnalytics/>
+        <GoogleTrack/>
       </head>
       <body
         className="font-body bg-white"

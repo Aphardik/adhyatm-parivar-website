@@ -5,6 +5,7 @@ import Letters from "./_components/Letters";
 import RegisterForm from "./_components/RegisterForms";
 import VibhagDescription from "./_components/VibhagDescription";
 import SbaHomePage from "./_components/SbaHomePage";
+import MangalgharProducts from "./_components/MangalgharItems";
 
 const LandingPage = () => {
   return (

@@ -81,10 +81,9 @@ const RegisterForm = () => {
           </div>
 
         
-   <div className="flex flex-col items-center justify-center w-full group">
+   {/* <div className="flex flex-col items-center justify-center w-full group">
             <div className="relative w-full">
               {" "}
-              {/* Fixed height for portrait aspect ratio */}
               <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
@@ -112,7 +111,7 @@ const RegisterForm = () => {
               Register
             </Link>
           </div>
-
+ */}
 
 
           <div className="flex flex-col items-center justify-center w-full group">
