@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Form, Input, Row, Col, message, Spin, Select,Radio } from "antd";
+import { Form, Input, Row, Col, message, Spin, Select, Radio, InputNumber } from "antd";
 import axios from "axios";
 import { useRouter, useParams } from "next/navigation";
 import { states } from "../../../data/states";
@@ -186,6 +186,41 @@ const CopySelector = ({
             </svg>
           </button>
         </div>
+      </Form.Item>
+    </div>
+  );
+};
+
+const CopyInputField = ({
+  label = "તમે આ પુસ્તકની કેટલી નકલો ઓર્ડર કરવા માંગો છો?",
+  value,
+  onChange,
+}) => {
+  return (
+    <div className="w-full space-y-3 my-[1.31rem]">
+      <Form.Item 
+        label={<b className="font-anek">{label}</b>} 
+        name="નકલ"
+        rules={[
+          {
+            required: true,
+            message: <span style={{ fontSize: "12px" }}>Number of copies is required</span>,
+          },
+          {
+            type: 'number',
+            min: 1,
+            message: <span style={{ fontSize: "12px" }}>Please enter a valid number (minimum 1)</span>,
+          },
+        ]}
+      >
+        <InputNumber
+        style={{ width: '100%' }}
+          className="w-full rounded-md"
+          placeholder="Enter number of copies"
+          value={value}
+          onChange={onChange}
+          min={1}
+        />
       </Form.Item>
     </div>
   );
@@ -415,6 +450,16 @@ export default function DynamicForm() {
     return fieldMapping[fieldName] || null;
   };
 
+  // Helper function to check if form has active date constraints
+  const hasActiveDateConstraints = () => {
+    return formData?.active_from && formData?.active_to;
+  };
+
+  // Helper function to check if copies should use input field vs increment/decrement
+  const shouldUseInputField = () => {
+    return !formData?.no_of_copies || formData?.no_of_copies === 0;
+  };
+
   const onFinish = async (values) => {
     setPopupVisible(true);
     setPopupStatus("loading");
@@ -483,11 +528,15 @@ export default function DynamicForm() {
     );
   }
 
-  // Check if form is active
-  const currentDate = new Date();
-  const activeFrom = new Date(formData.active_from);
-  const activeTo = new Date(formData.active_to);
-  const isFormActive = formData.active && currentDate >= activeFrom && currentDate <= activeTo;
+  // Check if form is active - Updated logic
+  let isFormActive = formData.active;
+  
+  if (hasActiveDateConstraints()) {
+    const currentDate = new Date();
+    const activeFrom = new Date(formData.active_from);
+    const activeTo = new Date(formData.active_to);
+    isFormActive = isFormActive && currentDate >= activeFrom && currentDate <= activeTo;
+  }
 
   if (!isFormActive) {
     return (
@@ -604,13 +653,21 @@ export default function DynamicForm() {
                 {/* Copies Selector - Show in its own row if enabled */}
                 {formData.show_copies && (
                   <Row gutter={16}>
-                    <Col xs={24} md={12}>
-                      <CopySelector
-                        label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
-                        value={copies}
-                        onChange={setCopies}
-                        maxCopies={formData.no_of_copies}
-                      />
+                    <Col xs={24} md={24}>
+                      {shouldUseInputField() ? (
+                        <CopyInputField
+                          label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
+                          value={copies}
+                          onChange={setCopies}
+                        />
+                      ) : (
+                        <CopySelector
+                          label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
+                          value={copies}
+                          onChange={setCopies}
+                          maxCopies={formData.no_of_copies}
+                        />
+                      )}
                     </Col>
                   </Row>
                 )}
