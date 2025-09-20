@@ -216,3 +216,83 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+
+// "use client";
+// import React, { useEffect, useState } from "react";
+// import Link from "next/link";
+// import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
+// const RegisterForm = () => {
+//   const [forms, setForms] = useState([]);
+
+//   useEffect(() => {
+//     async function fetchForms() {
+//       try {
+//         const res = await fetch("https://apformgenerator.netlify.app/api/forms");
+//         const data = await res.json();
+//         setForms(data);
+//       } catch (err) {
+//         console.error("Error fetching forms:", err);
+//       }
+//     }
+//     fetchForms();
+//   }, []);
+
+//   return (
+//     <div className="py-16 max-w-7xl mx-auto px-5 sm:px-10">
+//       <h1 className="font-bold flex items-center gap-2 border-b-2 border-[#01044c] font-heading mb-8 text-xl text-[#01044c] text-start">
+//         रजिस्ट्रेशन फॉर्म
+//         <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow" />
+//       </h1>
+
+//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
+//         {forms.map((form) => (
+//           <div
+//             key={form.id}
+//             className="flex flex-col items-center justify-center w-full group"
+//           >
+//             <div className="relative w-full">
+//               <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
+//                 <img
+//                   className="sm:min-h-[70vh] h-full w-full object-cover object-center"
+//                   src={form.thumbnails?.[0] || "/placeholder.jpg"}
+//                   alt={form.slug}
+//                 />
+//                 {/* Hover Content */}
+//                 <div className={`absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center ${form.active ?'translate-y-full':'translate-y-0'}  group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white`}>
+//                   <h3 className="text-2xl text-center font-bold mb-3">
+//                     {form.title}
+//                   </h3>
+//                   <div className="space-y-2 text-sm text-center mb-4">
+//                     <p className="font-semibold text-cyan-800">ઓફિસ ડીટેલ:</p>
+//                     <p>અધ્યાત્મ ભવન</p>
+//                     <p>ત્રીજો માળ, આનંદ શ્રાવક આરાધના ભવન</p>
+//                     <p>સંજીવકુમાર ઓડિટોરીયમ પાસે, પાલ, સુરત - 395 009</p>
+//                     <p className="">M. 7676769600</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Register / Out of Stock */}
+//             {form.active ? (
+//               <Link
+//                 href={`/pages/form/${form.slug}`}
+//                 className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold"
+//               >
+//                 Register
+//               </Link>
+//             ) : (
+//               <div className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold opacity-50 cursor-not-allowed">
+//                 Out Of Stock
+//               </div>
+//             )}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default RegisterForm;
