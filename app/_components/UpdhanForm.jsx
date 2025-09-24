@@ -209,7 +209,7 @@ export default function SpiritualForm() {
     try {
       const response = await fetch('https://forms.zohopublic.in/adhyatmparivar/form/Untitled21/formperma/__EJy-o1mBOowsUa3dtWneDLpkwHlZVBw4mx3DAseCo/htmlRecords/submit', {
         method: 'POST',
-        // mode: 'no-cors',
+        mode: 'no-cors',
         body: submitData
       });
 
