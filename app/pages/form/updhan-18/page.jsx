@@ -54,7 +54,7 @@ const EventPage = () => {
             </p>
             </div>
             
-            <div className=" p-4 px-10  text-gray-800 rounded-[4rem] inline-block">
+            <div className=" px-10  text-gray-800 rounded-[4rem] inline-block">
               <p className="text-xl pb-4 md:text-2xl font-bold ">સુખનું ફરમાન</p>
               <h2 className="text-3xl md:text-[3.5rem] font-bold ">આધ્યાત્મિક ઉપધાન</h2>
               
@@ -77,20 +77,20 @@ const EventPage = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3  gap-6">
             {/* First Event */}
             <div className="group transition-all duration-300">
-              <div className="bg-white rounded-sm shadow-md border border-green-100 overflow-hidden hover:shadow-lg">
+              <div className="bg-white text-center rounded-sm shadow-md border border-green-100 overflow-hidden hover:shadow-lg">
                 <div className="bg-lightpink p-6">
-                  <h3 className="text-xl font-bold">પ્રથમ પ્રવેશ</h3>
+                  <h3 className="text-xl  font-bold">પ્રથમ પ્રવેશ</h3>
                 </div>
                 <div className="p-6 relative space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <FaCalendar className="w-5 h-5 mr-3 text-gray-700" />
-                    <span className="font-medium">વિ.સં. ૨૦૮૨</span>
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaCalendar className="w-5 h-5 mr-3 text-gray-700" /> */}
+                    <span className="font-medium text-center">વિ.સં. ૨૦૮૨</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <FaClock className="w-5 h-5 mr-3" />
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaClock className="w-5 h-5 mr-3" /> */}
                     <span className="font-medium">માગસર વદ ૬, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
@@ -103,17 +103,17 @@ const EventPage = () => {
 
             {/* Second Event */}
             <div className="group transition-all duration-300">
-              <div className="bg-white rounded-sm shadow-md border border-red-100 overflow-hidden hover:shadow-lg">
+              <div className="bg-white text-center rounded-sm shadow-md border border-red-100 overflow-hidden hover:shadow-lg">
                 <div className="bg-lightpink p-6">
                   <h3 className="text-xl font-bold">દ્વિતીય પ્રવેશ</h3>
                 </div>
                 <div className="p-6 relative space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <FaCalendar className="w-5 h-5 mr-3" />
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaCalendar className="w-5 h-5 mr-3" /> */}
                     <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <FaClock className="w-5 h-5 mr-3" />
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaClock className="w-5 h-5 mr-3" /> */}
                     <span className="font-medium">માગસર વદ ૮, શુક્રવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
@@ -125,18 +125,18 @@ const EventPage = () => {
             </div>
 
             {/* Third Event */}
-            <div className="group  transition-all duration-300">
+            <div className="group text-center transition-all duration-300">
               <div className=" rounded-sm shadow-md border border-purple-100 overflow-hidden hover:shadow-lg">
                 <div className="bg-lightpink p-6">
                   <h3 className="text-xl font-bold">મોક્ષમાળ</h3>
                 </div>
-                <div className="p-6 relative space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <FaCalendar className="w-5 h-5 mr-3" />
+                <div className="p-6  relative space-y-4">
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaCalendar className="w-5 h-5 mr-3" /> */}
                     <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <FaClock className="w-5 h-5 mr-3" />
+                  <div className="flex items-center justify-center text-gray-700">
+                    {/* <FaClock className="w-5 h-5 mr-3" /> */}
                     <span className="font-medium">મહા સુદ ૧૦, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
