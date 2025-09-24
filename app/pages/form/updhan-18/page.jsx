@@ -21,6 +21,16 @@ const EventPage = () => {
     "ઘરેણા ઉપધાનમાં પહેરાશે નહિ, સ્ત્રીઓએ માત્ર સૌભાગ્યચિહ્ન ધારણ કરી શકાશે."
   ];
 
+    const notice = [
+    "ઉપધાન તપમાં પ્રવેશ સ્નાન કરીને, પ્રભુપૂજા કરીને કરવાનો હોવાથી પૂજાના વસ્ત્ર સાથે લાવવા.",
+    "પ્રવેશના દિવસે નાણ સમક્ષ નંદીની ક્રિયા માટે શ્રીફળ, ૧.૨૫ કિલો ચોખા અને યથાશક્તિ રૂપાનાણું સાથે લાવવું.",
+    "ઉપધાનમાં અઢારિયાના પ્રવેશ પછી ત્રણ દિવસ સુધી જ કોઈપણ ઉપકરણ લઈ શકાશે, પછી લઈ શકાશે નહિ.",
+    "ઠંડીના હિસાબે પોતાની આવશ્યકતા પ્રમાણે ઓઢવા-પાથરવાની સામગ્રી લાવવી.",
+    "કોઈપણ પ્રકારનું જોખમ સાથે લઈને આવવું નહીં.",
+        "કાયમી દવા લેતા હો તો તે દવા સાથે લાવવી.",
+    "અનિવાર્ય કારણસર જો આપ ન પધારી શકો તો મેસેજ અથવા ફોન કરી અચૂક જાણ કરવા વિનંતી છે."
+  ];
+
   return (
     <div className="min-h-screen  font-anek">
       {/* Hero Section */}
@@ -43,8 +53,10 @@ const EventPage = () => {
             </p>
             </div>
             
-            <div className=" p-6 px-10 pt-8 bg-darkpink text-white rounded-[4rem] inline-block">
+            <div className=" p-6 px-10 pt-8 text-gray-800 rounded-[4rem] inline-block">
+              <p className="text-xl pb-4 md:text-2xl font-bold ">સુખનું ફરમાન</p>
               <h2 className="text-3xl md:text-5xl font-bold ">આધ્યાત્મિક ઉપધાન</h2>
+              
             </div>
           </div>
         </div>
@@ -118,7 +130,7 @@ const EventPage = () => {
                 <div className="p-6 space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3" />
-                    <span className="font-medium">વિ.સં. ૨૦૨૮</span>
+                    <span className="font-medium">વિ.સં. ૨૦૮૦</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaMapPin className="w-5 h-5 mr-3" />
@@ -243,15 +255,54 @@ const EventPage = () => {
             </div>
             
             {/* Footer inside rules section */}
-            <div className="mt-8 pt-8 border-t-2 border-gray-200">
+            {/* <div className="mt-8 pt-8 border-t-2 border-gray-200">
               <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
                 <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
                   આયોજક : અધ્યાત્મ પરિવાર - <br/> 844 844 40 50
                 </h1>
               </div>
+            </div> */}
+          </div>
+        </div>
+
+          {/*  notice Section */}
+       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-gradient2 p-4 px-8 pt-6 text-center">
+            <div className="flex items-center justify-center mb-4">
+              <h2 className="text-2xl font-bold">ખાસ સૂચના</h2>
+            </div>
+          </div>
+          
+          <div className="p-2 sm:p-8 bg-gradient-to-br from-gray-50 to-orange-50">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {notice.map((rule, index) => (
+                <div key={index} className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-darkpink hover:shadow-lg transition-all duration-300 h-full min-h-24 flex flex-col">
+                  <div className="flex items-start flex-1">
+                    {/* <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <span className="text-white text-xs font-bold">{index + 1}</span>
+                    </div> */}
+                    <p className="text-gray-700 leading-relaxed flex-1">
+                      {rule}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Footer inside rules section */}
+            <div className="mt-8 pt-8 border-t-2 border-gray-200">
+              <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
+                <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
+                  આયોજક 
+                </h1>
+                <p className='font-bold text-lg md:text-xl text-center text-gray-800'>અધ્યાત્મ પરિવાર</p>
+                <p className='font-bold text-lg md:text-xl text-center text-gray-800'>844 844 40 50</p>
+
+              </div>
             </div>
           </div>
         </div>
+
 
         {/* <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
           <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50">

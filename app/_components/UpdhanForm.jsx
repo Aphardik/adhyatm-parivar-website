@@ -99,12 +99,11 @@ export const SpiritualForm = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-6 sm:p-6">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
-        <div className="bg-gradient2 p-8 text-gray-800">
+        {/* <div className="bg-gradient2 p-8 text-gray-800">
           <h1 className="text-2xl sm:text-3xl font-bold text-center mb-2">
             સુખનું ફરમાન - આધ્યાત્મિક ઉપધાન
           </h1>
-          {/* <p className="text-center text-orange-100">(ભાવનાપત્ર)</p> */}
-        </div>
+        </div> */}
 
         <div className="sm:p-8 py-4 space-y-8">
           {/* Personal Details Section */}
