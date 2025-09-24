@@ -1,4 +1,5 @@
 "use client"
+import { SpiritualForm } from '@/app/_components/UpdhanForm';
 import React, { useState } from 'react';
 import { FaCalendar, FaMapPin, FaPhone, FaCheck, FaExclamationTriangle, FaLanguage } from 'react-icons/fa';
 
@@ -11,12 +12,13 @@ const EventPage = () => {
 
   // Rules array
   const rules = [
-    "ઉપધાન તપ કેગરહવમાં એક જ વાર કમતી અતિ મહત્વની કિંમા છે માટે તે એમની જ્ઞાનકારી અને પૂર્વિકાસ (પ્રેક્ષિકા) માટે પ્રબેલના એક દિવસ પૂર્વ આવવું અતિ આવશ્યક છે.",
-    "ઉપધાનના પ્રવેશ કરવા પહેલા આવના આંશા લોજિકલ સુધીના સુત્રી અને વતલતા છે. એક છે કોઈ સાથે ધર્મ ભાવના પૂર્વક આવવું અતિ આવશ્યક છે.",
-    "ઉપધાનના પ્રવેશ કરવા પહેલા સમ્પૂર્ણવની પ્રતિના ઉચ્યારમાં આવે છે જેમ વીતરાજ સર્વિન અથવા એવેમ ભગવાન તરીકે નવીન કરાતે કે નવીન અતિસાત્વીકીન.",
-    "વિશિષ્ટતઃક ઉપધાન કરમાના છે તેથી મોગાવર્ત વગેરે કોઈ સાધના લાભના નથીસી. સ્વીકાર પર વાત કરી શકાતા નથી.",
-    "૧૨ વર્ષ ઊંચ્યાનો બાકેરીનો સાઈ, બાળિકાઓની પહેરવાની રસોઈ, ઉન્મત વયેમના સર્વ ત્યાગ.",
-    "કર વગર કોઈ પણ - એક જ ઉપધાન કરવાની છે."
+    "ઉપધાનતપ શ્રાવકજીવનમાં એક જ વાર કરાતી અતિ મહત્ત્વની ક્રિયા છે માટે તે અંગેની જાણકારી અને પૂર્વાભ્યાસ (પ્રેક્ટીસ) માટે પ્રવેશના એક દિવસ પૂર્વે આવવું અતિ આવશ્યક છે, તે વિના ગુરુભગવંત ઉપધાનમાં પ્રવેશ કરાવશે નહીં.",
+    "ઉપધાનમાં પ્રવેશ કરતા પૂર્વે ઓછામાં ઓછા લોગસ્સ સુધીના સૂત્રો અને મુહપત્તિના ૫૦ બોલ આટલું આવડવું અનિવાર્ય છે, આથી આપ ભાવના પત્ર મોકલતાની સાથે જ તે અંગેનો પ્રયત્ન શરૂ કરશોજી. જો આટલું નહીં આવડતું હોય તો ઉપધાનમાં પ્રવેશ થશે નહીં.",
+    "ઉપધાનમાં પ્રવેશ કરતા પહેલા સમ્યક્ત્વની પ્રતિજ્ઞા ઉચ્ચારવામાં આવે છે. જેમાં વીતરાગ સર્વજ્ઞ (૨૪ તીર્થંકર અને સીમંધરસ્વામી વગેરે) એમને જ ભગવાન તરીકે સ્વીકારીશ. પંચમહાવ્રતોને પાળનારા વૈરાગીને ગુરુ તરીકે સ્વીકારીશ અને એ જ પ્રભુએ બતાવેલા તત્ત્વને ધર્મ તરીકે માનીશ. આ પ્રતિજ્ઞા સ્વીકાર કરનાર જ ઉપધાન કરી શકશે.",
+    "વિધિપૂર્વક ઉપધાન કરવાના છે તેથી મોબાઈલ વગેરે કોઈ સાધનો લાવવા નહિ, સ્પીકર પર વાત કરી શકાશે નહીં. જે એવું કરશે તેમને ગુરુભગવંત બીજે દિવસે પૌષધ પળાવી દેશે.",
+    "૧૨ વર્ષ ઉપરની બહેનોએ સાડી, ચણિયાચોળી પહેરવાની રહેશે. ઉદ્ભટ વેષનો સર્વથા ત્યાગ.",
+        "પુરૂષ વર્ગે ધોતિયા, ખેસનો જ ઉપયોગ કરવાનો રહેશે.",
+    "ઘરેણા ઉપધાનમાં પહેરાશે નહિ, સ્ત્રીઓએ માત્ર સૌભાગ્યચિહ્ન ધારણ કરી શકાશે."
   ];
 
   return (
@@ -27,21 +29,21 @@ const EventPage = () => {
         <div className="relative max-w-7xl mx-auto px-6 py-16">
           <div className="text-center space-y-6">
             <div className="space-y-2 text-gray-800 font-medium text-sm tracking-wide">
-              <div>ઘરમ તીર્થધિત શ્રી પદ્મસંહરાયજીનો નામ</div>
-              <div>શ્રી જગ-હિત-ઈચ્છુક-વિકાસ-શાસ્ત્રાઉપદેશ-કમકાણ-રોહિણીવર્ણ-રોહિતાશ્વર્યજી સરસ્વતીજી નામ</div>
+              <div>શાસનનાયક શ્રી મહાવીરસ્વામિને નમ:</div>
+              <div>શ્રી જીત-હીર-બુદ્ધિ-તિલક-શાન્તિચન્દ્ર-કનકપ્રભ-સોમચન્દ્ર-જિનચન્દ્ર-સંયમરત્નસૂરિ સદ્‍ગુરુભ્યો નમઃ</div>
             </div>
             
             <div>
             <p className="text-lg md:text-xl font-bold">
-              "સૃષ્ટિશાસ્ત્રિયત્વ" દીક્ષારાજાની વિચારવર્ષ
+              ‘સૂરિશાન્તિચન્દ્ર’ દીક્ષાશતાબ્દી વિરાગવર્ષે
             </p>
             
             <p className="text-lg md:text-xl font-bold">
-              મોહનગરી મુનાઈ - બારીવતીની ઘરા પર
+              મોહનગરી મુંબઈ-બોરીવલીની ધરા પર
             </p>
             </div>
             
-            <div className=" p-6 pt-8 backdrop-blur-3xl rounded-md inline-block">
+            <div className=" p-6 px-10 pt-8 bg-darkpink text-white rounded-[4rem] inline-block">
               <h2 className="text-3xl md:text-5xl font-bold ">આધ્યાત્મિક ઉપધાન</h2>
             </div>
           </div>
@@ -55,9 +57,9 @@ const EventPage = () => {
         <div className="mb-12">
           <div className="text-center mb-8">
             <div className="inline-block bg-gradient2 px-8 py-4 rounded-2xl shadow-lg">
-              <h2 className="text-2xl font-bold mb-2">ભાવના પત્રક</h2>
+              <h2 className="text-2xl font-bold mb-2">ભવનિસ્તારક નિશ્રા</h2>
               <p className="text-sm font-medium opacity-90">
-                ભવનિસ્તારક નિશ્રા : 'સૂરિશાન્તિ-જિન-સંયમ' કૃપાપ્રાપ્ત, અધ્યાત્મસમ્રાટ પ.પૂ.આ.ભ. શ્રીમદ્ વિજય યોગતિલકસૂરીશ્વરજી મહારાજા
+                 'સૂરિશાન્તિ-જિન-સંયમ' કૃપાપ્રાપ્ત, અધ્યાત્મસમ્રાટ પ.પૂ.આ.ભ. શ્રીમદ્ વિજય યોગતિલકસૂરીશ્વરજી મહારાજા
               </p>
             </div>
           </div>
@@ -72,14 +74,14 @@ const EventPage = () => {
                 <div className="p-6 space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3 text-gray-700" />
-                    <span className="font-medium">તિ.સં. ૨૦૨૨</span>
+                    <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaMapPin className="w-5 h-5 mr-3" />
-                    <span className="font-medium">માગશર વદ ૩, બુધવાર</span>
+                    <span className="font-medium">માગશર વદ ૬, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
-                    ૧૦-૧૧-૨૦૨૫
+                    ૧૦-૧૨-૨૦૨૫
                   </div>
                 </div>
               </div>
@@ -94,14 +96,14 @@ const EventPage = () => {
                 <div className="p-6 space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3" />
-                    <span className="font-medium">તિ.સં. ૨૦૨૬</span>
+                    <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaMapPin className="w-5 h-5 mr-3" />
                     <span className="font-medium">માગશર વદ ૮, શુક્રવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
-                    ૧૨-૧-૨૦૨૬
+                    ૧૨-૧૨-૨૦૨૫
                   </div>
                 </div>
               </div>
@@ -111,16 +113,16 @@ const EventPage = () => {
             <div className="group transition-all duration-300">
               <div className="bg-white rounded-3xl shadow-md border border-purple-100 overflow-hidden hover:shadow-lg">
                 <div className="bg-gradient2 p-6">
-                  <h3 className="text-xl font-bold">ત્રીજમાઉ</h3>
+                  <h3 className="text-xl font-bold">મોક્ષમાળ</h3>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3" />
-                    <span className="font-medium">તિ.સં. ૨૦૨૬</span>
+                    <span className="font-medium">વિ.સં. ૨૦૨૮</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaMapPin className="w-5 h-5 mr-3" />
-                    <span className="font-medium">મહા વદ ૧૦, બુધવાર</span>
+                    <span className="font-medium">મહા સુદ ૧૦, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૨૮-૧-૨૦૨૬
@@ -131,55 +133,20 @@ const EventPage = () => {
           </div>
         </div>
 
-        {/*  Rules Section */}
-       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
-          <div className="bg-gradient2 p-4 px-8 pt-6 text-center">
-            <div className="flex items-center justify-center mb-4">
-              <h2 className="text-2xl font-bold">અપચય પાતળ્લા યોગ્ય નિયમો</h2>
-            </div>
-          </div>
-          
-          <div className="p-2 sm:p-8 bg-gradient-to-br from-gray-50 to-orange-50">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-              {rules.map((rule, index) => (
-                <div key={index} className="bg-white p-6 min-h-28 rounded-2xl shadow-md border-l-4 border-darkpink hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-start flex-1">
-                    {/* <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                      <span className="text-white text-xs font-bold">{index + 1}</span>
-                    </div> */}
-                    <p className="text-gray-700 leading-relaxed flex-1">
-                      {rule}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Footer inside rules section */}
-            <div className="mt-8 pt-8 border-t-2 border-gray-200">
-              <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
-                <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
-                  આયોજક : અધ્યાત્મ પરિવાર - <br /> 844 844 40 50
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact and Location Section */}
+         {/* Contact and Location Section */}
         <div className="bg-white max-w-5xl mx-auto rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition-all duration-300 mb-12">
           <div className="bg-gradient2 p-6">
             <h3 className="text-2xl font-bold flex items-center">
               {/* <FaMapPin className="w-6 h-6 mr-3" /> */}
               ઉપધાન સ્થળ :
             </h3>
-            <p className="text-lg text-gray-700 font-bold flex items-center">પુષ્પાંજલિ ગાર્ડન્સ,ચંદાવરકર રોડ, બોરીવલી (વે), મુંબઈ</p>
+            <p className="text-lg text-gray-700 font-bold flex items-center">પુષ્પાંજલિ ગાર્ડન્સ, ચંદાવરકર રોડ, બોરીવલી (વે), મુંબઈ</p>
           </div>
 
           <div className="grid bg-gradient2 items-center justify-center md:grid-cols-1 gap-6 p-6">
             <div className="rounded-2xl overflow-hidden border-2 border-gray-100">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.8!2d72.8777!3d19.2183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEzJzA2LjAiTiA3MsKwNTInMzkuNyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1897116901796!2d72.84334927498143!3d19.23056208200608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b128ae83e0a7%3A0x64efaa7af84c8be4!2sPushpanjali%20Gardens!5e0!3m2!1sen!2sin!4v1758553257795!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "320px" }}
@@ -192,11 +159,15 @@ const EventPage = () => {
           </div>
         </div>
 
+
+       
+
+       
         {/* Registration Form Section */}
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
           <div className="bg-gradient2 flex flex-col sm:flex-row items-center justify-between p-4 px-8 text-center">
             <div className="flex items-center justify-center mb-4 sm:mb-0">
-              <h2 className="text-2xl font-bold">આધ્યાત્મિક ઉપધાન તપ - ભાવનાપત્ર</h2>
+              <h2 className="text-2xl font-bold">ભાવનાપત્ર</h2>
             </div>
                {/* Language Toggle */}
            <div className="flex justify-center items-center">
@@ -226,9 +197,8 @@ const EventPage = () => {
 
           </div>
 
-          <div className="sm:p-8">
+          {/* <div className="sm:p-8">
             <div className="space-y-6">
-              {/* Form iframe */}
               <div className="bg-gray-50 rounded-2xl sm:p-4">
                 <iframe
                   aria-label="સુખનું ફરમાન - આધ્યાત્મિક ઉપધાન (ભાવનાપત્ર)"
@@ -242,6 +212,42 @@ const EventPage = () => {
                       : 'https://forms.zohopublic.in/adhyatmparivar/form/Untitled21/formperma/OwjZqG5R74pAy8kg5Uf7dkxv2bqcyrxC_4wLFhltKJU?zf_enablecamera=true'
                   }
                 />
+              </div>
+            </div>
+          </div> */}
+          <SpiritualForm/>
+        </div>
+
+         {/*  Rules Section */}
+       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-gradient2 p-4 px-8 pt-6 text-center">
+            <div className="flex items-center justify-center mb-4">
+              <h2 className="text-2xl font-bold">અવશ્ય પાળવા યોગ્ય નિયમો</h2>
+            </div>
+          </div>
+          
+          <div className="p-2 sm:p-8 bg-gradient-to-br from-gray-50 to-orange-50">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {rules.map((rule, index) => (
+                <div key={index} className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-darkpink hover:shadow-lg transition-all duration-300 h-full min-h-32 flex flex-col">
+                  <div className="flex items-start flex-1">
+                    {/* <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <span className="text-white text-xs font-bold">{index + 1}</span>
+                    </div> */}
+                    <p className="text-gray-700 leading-relaxed flex-1">
+                      {rule}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Footer inside rules section */}
+            <div className="mt-8 pt-8 border-t-2 border-gray-200">
+              <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
+                <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
+                  આયોજક : અધ્યાત્મ પરિવાર - <br/> 844 844 40 50
+                </h1>
               </div>
             </div>
           </div>
