@@ -1,6 +1,45 @@
 import React, { useState } from 'react';
 
-export const SpiritualForm = () => {
+// Mock states data - replace with actual import from /data/states.js
+const statesData = [
+  'Andhra Pradesh',
+  'Arunachal Pradesh',
+  'Assam',
+  'Bihar',
+  'Chhattisgarh',
+  'Goa',
+  'Gujarat',
+  'Haryana',
+  'Himachal Pradesh',
+  'Jharkhand',
+  'Karnataka',
+  'Kerala',
+  'Madhya Pradesh',
+  'Maharashtra',
+  'Manipur',
+  'Meghalaya',
+  'Mizoram',
+  'Nagaland',
+  'Odisha',
+  'Punjab',
+  'Rajasthan',
+  'Sikkim',
+  'Tamil Nadu',
+  'Telangana',
+  'Tripura',
+  'Uttar Pradesh',
+  'Uttarakhand',
+  'West Bengal',
+  'Delhi',
+  'Jammu and Kashmir',
+  'Ladakh',
+  'Chandigarh',
+  'Dadra and Nagar Haveli and Daman and Diu',
+  'Lakshadweep',
+  'Puducherry'
+];
+
+export default function SpiritualForm() {
   const [formData, setFormData] = useState({
     SingleLine1: '',
     Radio: '',
@@ -20,19 +59,126 @@ export const SpiritualForm = () => {
     Radio3: ''
   });
 
+  const [errors, setErrors] = useState({});
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'file' ? files[0] : value
     }));
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Required field validation
+    if (!formData.SingleLine1.trim()) {
+      newErrors.SingleLine1 = 'પૂરું નામ આવશ્યક છે';
+    }
+
+    if (!formData.Radio) {
+      newErrors.Radio = 'જાતિ પસંદ કરવી આવશ્યક છે';
+    }
+
+    if (!formData.Date) {
+      newErrors.Date = 'જન્મ તારીખ આવશ્યક છે';
+    }
+
+    if (!formData.Address_AddressLine1.trim()) {
+      newErrors.Address_AddressLine1 = 'સરનામું આવશ્યક છે';
+    }
+
+    if (!formData.Address_City.trim()) {
+      newErrors.Address_City = 'શહેર/ગામ આવશ્યક છે';
+    }
+
+    if (!formData.Address_Region.trim()) {
+      newErrors.Address_Region = 'રાજ્ય આવશ્યક છે';
+    }
+
+    // Pincode validation
+    if (!formData.Address_ZipCode.trim()) {
+      newErrors.Address_ZipCode = 'પિનકોડ આવશ્યક છે';
+    } else if (!/^\d{6}$/.test(formData.Address_ZipCode.trim())) {
+      newErrors.Address_ZipCode = 'પિનકોડ 6 અંકનો હોવો જોઈએ';
+    }
+
+    if (!formData.SingleLine.trim()) {
+      newErrors.SingleLine = 'મૂળ વતન આવશ્યક છે';
+    }
+
+    // Mobile number validation
+    if (!formData.PhoneNumber_countrycode.trim()) {
+      newErrors.PhoneNumber_countrycode = 'મોબાઈલ નંબર આવશ્યક છે';
+    } else if (!/^\d{10}$/.test(formData.PhoneNumber_countrycode.trim())) {
+      newErrors.PhoneNumber_countrycode = 'મોબાઈલ નંબર 10 અંકનો હોવો જોઈએ';
+    }
+
+    // Relative contact number validation
+    if (!formData.PhoneNumber1_countrycode.trim()) {
+      newErrors.PhoneNumber1_countrycode = 'સંબંધીનો સંપર્ક નંબર આવશ્યક છે';
+    } else if (!/^\d{10}$/.test(formData.PhoneNumber1_countrycode.trim())) {
+      newErrors.PhoneNumber1_countrycode = 'સંપર્ક નંબર 10 અંકનો હોવો જોઈએ';
+    }
+
+    if (!formData.ImageUpload) {
+      newErrors.ImageUpload = 'ફોટો આવશ્યક છે';
+    }
+
+    if (!formData.Radio1) {
+      newErrors.Radio1 = 'પ્રવેશનો પ્રકાર પસંદ કરવો આવશ્યક છે';
+    }
+
+    if (!formData.Radio2) {
+      newErrors.Radio2 = 'મૂળવિધિ વિકલ્પ પસંદ કરવો આવશ્યક છે';
+    }
+
+    if (!formData.Radio3) {
+      newErrors.Radio3 = 'પ્રવેશ તારીખ પસંદ કરવી આવશ્યક છે';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const formatDateForSubmission = (dateString) => {
+    if (!dateString) return '';
+    
+    const date = new Date(dateString);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    
+    return `${day}-${month}-${year}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      // Scroll to first error
+      const firstErrorField = document.querySelector('.border-red-500');
+      if (firstErrorField) {
+        firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+
     setIsSubmitting(true);
     
     // Create FormData object for multipart/form-data submission
@@ -43,12 +189,17 @@ export const SpiritualForm = () => {
     submitData.append('zf_redirect_url', '');
     submitData.append('zc_gad', '');
     
-    // Add all form fields except ImageUpload
+    // Add all form fields except ImageUpload and Date
     Object.keys(formData).forEach(key => {
-      if (key !== 'ImageUpload' && formData[key] !== null && formData[key] !== '') {
+      if (key !== 'ImageUpload' && key !== 'Date' && formData[key] !== null && formData[key] !== '') {
         submitData.append(key, formData[key]);
       }
     });
+
+    // Format and add date field
+    if (formData.Date) {
+      submitData.append('Date', formatDateForSubmission(formData.Date));
+    }
 
     // Handle image upload separately
     if (formData.ImageUpload) {
@@ -58,12 +209,13 @@ export const SpiritualForm = () => {
     try {
       const response = await fetch('https://forms.zohopublic.in/adhyatmparivar/form/Untitled21/formperma/__EJy-o1mBOowsUa3dtWneDLpkwHlZVBw4mx3DAseCo/htmlRecords/submit', {
         method: 'POST',
-        mode: 'no-cors',
+        // mode: 'no-cors',
         body: submitData
       });
 
+    setShowSuccessModal(true);
       // Show success modal
-      setShowSuccessModal(true);
+      
       
       // Reset form
       setFormData({
@@ -84,6 +236,7 @@ export const SpiritualForm = () => {
         Radio2: '',
         Radio3: ''
       });
+      setErrors({});
     } catch (error) {
       console.error('Submission error:', error);
       setShowSuccessModal(true); // Show success modal anyway since no-cors doesn't allow error checking
@@ -98,16 +251,10 @@ export const SpiritualForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-6 sm:p-6">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
-        {/* <div className="bg-gradient2 p-8 text-gray-800">
-          <h1 className="text-2xl sm:text-3xl font-bold text-center mb-2">
-            સુખનું ફરમાન - આધ્યાત્મિક ઉપધાન
-          </h1>
-        </div> */}
-
-        <div className="sm:p-8 py-4 space-y-8">
+      <div className="max-w-4xl mx-auto  rounded-sm  overflow-hidden">
+        <div className=" py-4 space-y-8">
           {/* Personal Details Section */}
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-6 rounded-sm">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-orange-300 pb-2">
               વ્યક્તિગત વિગત
             </h2>
@@ -124,9 +271,14 @@ export const SpiritualForm = () => {
                   value={formData.SingleLine1}
                   onChange={handleInputChange}
                   maxLength="255"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
+                  className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                    errors.SingleLine1 ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                  }`}
                   required
                 />
+                {errors.SingleLine1 && (
+                  <p className="text-red-500 text-sm mt-1">{errors.SingleLine1}</p>
+                )}
               </div>
 
               {/* Gender */}
@@ -158,6 +310,9 @@ export const SpiritualForm = () => {
                     <span className="ml-2 text-gray-700">સ્ત્રી</span>
                   </label>
                 </div>
+                {errors.Radio && (
+                  <p className="text-red-500 text-sm mt-1">{errors.Radio}</p>
+                )}
               </div>
 
               {/* Date of Birth */}
@@ -170,10 +325,15 @@ export const SpiritualForm = () => {
                   name="Date"
                   value={formData.Date}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
+                  className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                    errors.Date ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                  }`}
                   required
                 />
                 <p className="text-sm text-gray-500 mt-1">Select your birth date</p>
+                {errors.Date && (
+                  <p className="text-red-500 text-sm mt-1">{errors.Date}</p>
+                )}
               </div>
             </div>
 
@@ -184,16 +344,23 @@ export const SpiritualForm = () => {
               </label>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="Address_AddressLine1"
-                  value={formData.Address_AddressLine1}
-                  onChange={handleInputChange}
-                  placeholder="ફ્લેટ નંબર, બિલ્ડિંગનું નામ, રોડ"
-                  maxLength="255"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
-                  required
-                />
+                <div>
+                  <input
+                    type="text"
+                    name="Address_AddressLine1"
+                    value={formData.Address_AddressLine1}
+                    onChange={handleInputChange}
+                    placeholder="ફ્લેટ નંબર, બિલ્ડિંગનું નામ, રોડ"
+                    maxLength="255"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                      errors.Address_AddressLine1 ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                    }`}
+                    required
+                  />
+                  {errors.Address_AddressLine1 && (
+                    <p className="text-red-500 text-sm mt-1">{errors.Address_AddressLine1}</p>
+                  )}
+                </div>
                 
                 <input
                   type="text"
@@ -205,35 +372,58 @@ export const SpiritualForm = () => {
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
                 />
                 
-                <input
-                  type="text"
-                  name="Address_City"
-                  value={formData.Address_City}
-                  onChange={handleInputChange}
-                  placeholder="શહેર/ગામ"
-                  maxLength="255"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
-                />
+                <div>
+                  <input
+                    type="text"
+                    name="Address_City"
+                    value={formData.Address_City}
+                    onChange={handleInputChange}
+                    placeholder="શહેર/ગામ"
+                    maxLength="255"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                      errors.Address_City ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                    }`}
+                  />
+                  {errors.Address_City && (
+                    <p className="text-red-500 text-sm mt-1">{errors.Address_City}</p>
+                  )}
+                </div>
                 
-                <input
-                  type="text"
-                  name="Address_Region"
-                  value={formData.Address_Region}
-                  onChange={handleInputChange}
-                  placeholder="રાજ્ય"
-                  maxLength="255"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
-                />
+                <div>
+                  <select
+                    name="Address_Region"
+                    value={formData.Address_Region}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                      errors.Address_Region ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                    }`}
+                  >
+                    <option value="">રાજ્ય પસંદ કરો</option>
+                    {statesData.map((state, index) => (
+                      <option key={index} value={state}>{state}</option>
+                    ))}
+                  </select>
+                  {errors.Address_Region && (
+                    <p className="text-red-500 text-sm mt-1">{errors.Address_Region}</p>
+                  )}
+                </div>
                 
-                <input
-                  type="text"
-                  name="Address_ZipCode"
-                  value={formData.Address_ZipCode}
-                  onChange={handleInputChange}
-                  placeholder="પિનકોડ"
-                  maxLength="255"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
-                />
+                <div>
+                  <input
+                    type="text"
+                    name="Address_ZipCode"
+                    value={formData.Address_ZipCode}
+                    onChange={handleInputChange}
+                    placeholder="પિનકોડ"
+                    maxLength="6"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                      errors.Address_ZipCode ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                    }`}
+                  />
+                  {errors.Address_ZipCode && (
+                    <p className="text-red-500 text-sm mt-1">{errors.Address_ZipCode}</p>
+                  )}
+                </div>
                 
                 <select
                   name="Address_Country"
@@ -258,9 +448,14 @@ export const SpiritualForm = () => {
                 value={formData.SingleLine}
                 onChange={handleInputChange}
                 maxLength="255"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
+                className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                  errors.SingleLine ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                }`}
                 required
               />
+              {errors.SingleLine && (
+                <p className="text-red-500 text-sm mt-1">{errors.SingleLine}</p>
+              )}
             </div>
 
             {/* Contact Numbers */}
@@ -274,10 +469,15 @@ export const SpiritualForm = () => {
                   name="PhoneNumber_countrycode"
                   value={formData.PhoneNumber_countrycode}
                   onChange={handleInputChange}
-                  maxLength="20"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
+                  maxLength="10"
+                  className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                    errors.PhoneNumber_countrycode ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                  }`}
                   required
                 />
+                {errors.PhoneNumber_countrycode && (
+                  <p className="text-red-500 text-sm mt-1">{errors.PhoneNumber_countrycode}</p>
+                )}
               </div>
               
               <div>
@@ -289,10 +489,15 @@ export const SpiritualForm = () => {
                   name="PhoneNumber1_countrycode"
                   value={formData.PhoneNumber1_countrycode}
                   onChange={handleInputChange}
-                  maxLength="20"
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300"
+                  maxLength="10"
+                  className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition duration-300 ${
+                    errors.PhoneNumber1_countrycode ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                  }`}
                   required
                 />
+                {errors.PhoneNumber1_countrycode && (
+                  <p className="text-red-500 text-sm mt-1">{errors.PhoneNumber1_countrycode}</p>
+                )}
               </div>
             </div>
 
@@ -307,13 +512,18 @@ export const SpiritualForm = () => {
                   name="ImageUpload"
                   accept="image/*"
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
+                  className={`w-full px-4 py-3 border-2 border-dashed rounded-lg focus:outline-none transition duration-300 cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100 ${
+                    errors.ImageUpload ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
+                  }`}
                   required
                 />
                 {formData.ImageUpload && (
                   <div className="mt-2 text-sm text-green-600">
                     Selected: {formData.ImageUpload.name} ({Math.round(formData.ImageUpload.size / 1024)} KB)
                   </div>
+                )}
+                {errors.ImageUpload && (
+                  <p className="text-red-500 text-sm mt-1">{errors.ImageUpload}</p>
                 )}
               </div>
             </div>
@@ -353,6 +563,9 @@ export const SpiritualForm = () => {
                   </label>
                 ))}
               </div>
+              {errors.Radio1 && (
+                <p className="text-red-500 text-sm mt-1">{errors.Radio1}</p>
+              )}
             </div>
 
             {/* Original Method */}
@@ -384,6 +597,9 @@ export const SpiritualForm = () => {
                   <span className="ml-2 text-gray-700">ના</span>
                 </label>
               </div>
+              {errors.Radio2 && (
+                <p className="text-red-500 text-sm mt-1">{errors.Radio2}</p>
+              )}
             </div>
 
             {/* Entry Date Selection */}
@@ -410,6 +626,9 @@ export const SpiritualForm = () => {
                   </label>
                 ))}
               </div>
+              {errors.Radio3 && (
+                <p className="text-red-500 text-sm mt-1">{errors.Radio3}</p>
+              )}
             </div>
           </div>
 
@@ -427,26 +646,6 @@ export const SpiritualForm = () => {
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </div>
-
-          {/* Form Data Preview (for testing) */}
-          {/* <div className="bg-gray-50 p-4 rounded-lg mt-8">
-            <h3 className="font-semibold mb-2">Form Data Preview:</h3>
-            <div className="text-sm bg-white p-3 rounded border overflow-x-auto">
-              <div><strong>Name:</strong> {formData.SingleLine1}</div>
-              <div><strong>Gender:</strong> {formData.Radio}</div>
-              <div><strong>Birth Date:</strong> {formData.Date}</div>
-              <div><strong>Address:</strong> {formData.Address_AddressLine1}, {formData.Address_City}</div>
-              <div><strong>Mobile:</strong> {formData.PhoneNumber_countrycode}</div>
-              <div><strong>Photo:</strong> {formData.ImageUpload ? `${formData.ImageUpload.name} (${Math.round(formData.ImageUpload.size / 1024)} KB)` : 'Not selected'}</div>
-              <div><strong>Entry Type:</strong> {formData.Radio1}</div>
-              <div><strong>Original Method:</strong> {formData.Radio2}</div>
-              <div><strong>Entry Date:</strong> {formData.Radio3}</div>
-            </div>
-            <p className="text-sm text-gray-600 mt-2">
-              <strong>Form Action URL:</strong><br/>
-              https://forms.zohopublic.in/adhyatmparivar/form/Untitled21/formperma/__EJy-o1mBOowsUa3dtWneDLpkwHlZVBw4mx3DAseCo/htmlRecords/submit
-            </p>
-          </div> */}
         </div>
       </div>
 
@@ -469,9 +668,6 @@ export const SpiritualForm = () => {
               <p className="text-gray-600 mb-6">
                 તમારું ભાવનાપત્ર સફળતાપૂર્વક સબમિટ થઈ ગયું છે.
               </p>
-              {/* <p className="text-sm text-gray-500 mb-6">
-                Form submitted successfully! We will contact you soon.
-              </p> */}
               
               {/* OK Button */}
               <button

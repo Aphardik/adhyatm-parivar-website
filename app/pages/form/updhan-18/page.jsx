@@ -1,7 +1,8 @@
 "use client"
-import { SpiritualForm } from '@/app/_components/UpdhanForm';
+import HexagonalSvg from '@/app/_components/HexagonalSvg';
+import SpiritualForm from '@/app/_components/UpdhanForm';
 import React, { useState } from 'react';
-import { FaCalendar, FaMapPin, FaPhone, FaCheck, FaExclamationTriangle, FaLanguage } from 'react-icons/fa';
+import { FaCalendar, FaClock, FaPhone, FaCheck, FaExclamationTriangle, FaLanguage } from 'react-icons/fa';
 
 const EventPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('gujarati');
@@ -68,7 +69,7 @@ const EventPage = () => {
         {/* Event Schedule Cards */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <div className="inline-block bg-gradient2 px-8 py-4 rounded-2xl shadow-lg">
+            <div className="inline-block bg-lightpink px-8 py-4 rounded-sm shadow-lg">
               <h2 className="text-2xl font-bold mb-2">ભવનિસ્તારક નિશ્રા</h2>
               <p className="text-sm font-medium opacity-90">
                  'સૂરિશાન્તિ-જિન-સંયમ' કૃપાપ્રાપ્ત, અધ્યાત્મસમ્રાટ પ.પૂ.આ.ભ. શ્રીમદ્ વિજય યોગતિલકસૂરીશ્વરજી મહારાજા
@@ -79,84 +80,89 @@ const EventPage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {/* First Event */}
             <div className="group transition-all duration-300">
-              <div className="bg-white rounded-3xl shadow-md border border-green-100 overflow-hidden hover:shadow-lg">
-                <div className="bg-gradient2 p-6">
+              <div className="bg-white rounded-sm shadow-md border border-green-100 overflow-hidden hover:shadow-lg">
+                <div className="bg-lightpink p-6">
                   <h3 className="text-xl font-bold">પ્રથમ પ્રવેશ</h3>
                 </div>
-                <div className="p-6 space-y-4">
+                <div className="p-6 relative space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3 text-gray-700" />
                     <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <FaMapPin className="w-5 h-5 mr-3" />
+                    <FaClock className="w-5 h-5 mr-3" />
                     <span className="font-medium">માગશર વદ ૬, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૧૦-૧૨-૨૦૨૫
                   </div>
+                   <HexagonalSvg accentColor="darkpink" />
                 </div>
               </div>
             </div>
 
             {/* Second Event */}
             <div className="group transition-all duration-300">
-              <div className="bg-white rounded-3xl shadow-md border border-red-100 overflow-hidden hover:shadow-lg">
-                <div className="bg-gradient2 p-6">
+              <div className="bg-white rounded-sm shadow-md border border-red-100 overflow-hidden hover:shadow-lg">
+                <div className="bg-lightpink p-6">
                   <h3 className="text-xl font-bold">દ્વિતીય પ્રવેશ</h3>
                 </div>
-                <div className="p-6 space-y-4">
+                <div className="p-6 relative space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3" />
                     <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <FaMapPin className="w-5 h-5 mr-3" />
+                    <FaClock className="w-5 h-5 mr-3" />
                     <span className="font-medium">માગશર વદ ૮, શુક્રવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૧૨-૧૨-૨૦૨૫
                   </div>
+                   <HexagonalSvg accentColor="darkpink" />
                 </div>
               </div>
             </div>
 
             {/* Third Event */}
-            <div className="group transition-all duration-300">
-              <div className="bg-white rounded-3xl shadow-md border border-purple-100 overflow-hidden hover:shadow-lg">
-                <div className="bg-gradient2 p-6">
+            <div className="group  transition-all duration-300">
+              <div className=" rounded-sm shadow-md border border-purple-100 overflow-hidden hover:shadow-lg">
+                <div className="bg-lightpink p-6">
                   <h3 className="text-xl font-bold">મોક્ષમાળ</h3>
                 </div>
-                <div className="p-6 space-y-4">
+                <div className="p-6 relative space-y-4">
                   <div className="flex items-center text-gray-700">
                     <FaCalendar className="w-5 h-5 mr-3" />
                     <span className="font-medium">વિ.સં. ૨૦૮૨</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <FaMapPin className="w-5 h-5 mr-3" />
+                    <FaClock className="w-5 h-5 mr-3" />
                     <span className="font-medium">મહા સુદ ૧૦, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૨૮-૧-૨૦૨૬
                   </div>
+                  <HexagonalSvg accentColor="darkpink" />
                 </div>
+                
               </div>
+               
             </div>
           </div>
         </div>
 
          {/* Contact and Location Section */}
-        <div className="bg-white max-w-5xl mx-auto rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition-all duration-300 mb-12">
-          <div className="bg-gradient2 p-6">
+        <div className="bg-white max-w-4xl mx-auto rounded-sm shadow-sm border border-lightpink overflow-hidden group hover:shadow-2xl transition-all duration-300 mb-12">
+          <div className="bg-lightpink p-6">
             <h3 className="text-2xl font-bold flex items-center">
-              {/* <FaMapPin className="w-6 h-6 mr-3" /> */}
-              ઉપધાન સ્થળ :
+              {/* <FaClock className="w-6 h-6 mr-3" /> */}
+              ઉપધાન સ્થળ 
             </h3>
             <p className="text-lg text-gray-700 font-bold flex items-center">પુષ્પાંજલિ ગાર્ડન્સ, ચંદાવરકર રોડ, બોરીવલી (વે), મુંબઈ</p>
           </div>
 
-          <div className="grid bg-gradient2 items-center justify-center md:grid-cols-1 gap-6 p-6">
-            <div className="rounded-2xl overflow-hidden border-2 border-gray-100">
+          <div className="grid  items-center justify-center md:grid-cols-1 gap-6 ">
+            <div className="rounded-sm overflow-hidden border-2 border-gray-100">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1897116901796!2d72.84334927498143!3d19.23056208200608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b128ae83e0a7%3A0x64efaa7af84c8be4!2sPushpanjali%20Gardens!5e0!3m2!1sen!2sin!4v1758553257795!5m2!1sen!2sin"
                 width="100%"
@@ -176,13 +182,13 @@ const EventPage = () => {
 
        
         {/* Registration Form Section */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
-          <div className="bg-gradient2 flex flex-col sm:flex-row items-center justify-between p-4 px-8 text-center">
+        <div className="bg-white max-w-4xl mx-auto rounded-sm shadow-md border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-lightpink flex flex-col sm:flex-row items-center justify-between p-4 px-8 text-center">
             <div className="flex items-center justify-center mb-4 sm:mb-0">
               <h2 className="text-2xl font-bold">ભાવનાપત્ર</h2>
             </div>
                {/* Language Toggle */}
-           <div className="flex justify-center items-center">
+           {/* <div className="flex justify-center items-center">
   <div className="inline-flex rounded-3xl overflow-auto border border-gray-300 bg-gray-200">
     <button
       onClick={() => switchLanguage('gujarati')}
@@ -205,7 +211,7 @@ const EventPage = () => {
       हिन्दी
     </button>
   </div>
-</div>
+</div> */}
 
           </div>
 
@@ -231,8 +237,8 @@ const EventPage = () => {
         </div>
 
          {/*  Rules Section */}
-       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
-          <div className="bg-gradient2 p-4 px-8 pt-6 text-center">
+       <div className="bg-white rounded-sm shadow-md border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-lightpink p-4 px-8 pt-6 text-center">
             <div className="flex items-center justify-center mb-4">
               <h2 className="text-2xl font-bold">અવશ્ય પાળવા યોગ્ય નિયમો</h2>
             </div>
@@ -256,7 +262,7 @@ const EventPage = () => {
             
             {/* Footer inside rules section */}
             {/* <div className="mt-8 pt-8 border-t-2 border-gray-200">
-              <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
+              <div className="bg-lightpink p-4 rounded-2xl shadow-lg">
                 <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
                   આયોજક : અધ્યાત્મ પરિવાર - <br/> 844 844 40 50
                 </h1>
@@ -266,8 +272,8 @@ const EventPage = () => {
         </div>
 
           {/*  notice Section */}
-       <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
-          <div className="bg-gradient2 p-4 px-8 pt-6 text-center">
+       <div className="bg-white rounded-sm shadow-md border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-lightpink p-4 px-8 pt-6 text-center">
             <div className="flex items-center justify-center mb-4">
               <h2 className="text-2xl font-bold">ખાસ સૂચના</h2>
             </div>
@@ -290,8 +296,8 @@ const EventPage = () => {
             </div>
             
             {/* Footer inside rules section */}
-            <div className="mt-8 pt-8 border-t-2 border-gray-200">
-              <div className="bg-gradient2 p-4 rounded-2xl shadow-lg">
+            {/* <div className="mt-8 pt-8 border-t-2 border-gray-200">
+              <div className="bg-lightpink p-4 rounded-2xl shadow-lg">
                 <h1 className='font-bold text-lg md:text-xl text-center text-gray-800'>
                   આયોજક 
                 </h1>
@@ -299,9 +305,20 @@ const EventPage = () => {
                 <p className='font-bold text-lg md:text-xl text-center text-gray-800'>844 844 40 50</p>
 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
+
+          <div className="mt-8">
+              <div className="bg-lightpink p-4 rounded-sm shadow-md">
+                <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
+                  આયોજક 
+                </h1>
+                <p className='font-bold text-lg md:text-xl text-center text-gray-700'>અધ્યાત્મ પરિવાર</p>
+                <p className='font-bold text-base md:text-lg text-center text-gray-700'>844 844 40 50</p>
+
+              </div>
+            </div>
 
 
         {/* <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
