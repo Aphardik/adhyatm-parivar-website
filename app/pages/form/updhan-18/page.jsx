@@ -45,7 +45,7 @@ const EventPage = () => {
             </div>
             
             <div>
-            <p className="text-lg md:text-[2rem] font-bold">
+            <p className="text-lg md:text-xl font-bold">
               ‘સૂરિશાન્તિચન્દ્ર’ દીક્ષાશતાબ્દી વિરાગવર્ષે
             </p>
             
@@ -56,7 +56,7 @@ const EventPage = () => {
             
             <div className=" p-4 px-10  text-gray-800 rounded-[4rem] inline-block">
               <p className="text-xl pb-4 md:text-2xl font-bold ">સુખનું ફરમાન</p>
-              <h2 className="text-3xl md:text-5xl font-bold ">આધ્યાત્મિક ઉપધાન</h2>
+              <h2 className="text-3xl md:text-[3.5rem] font-bold ">આધ્યાત્મિક ઉપધાન</h2>
               
             </div>
           </div>
