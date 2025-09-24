@@ -45,16 +45,16 @@ const EventPage = () => {
             </div>
             
             <div>
-            <p className="text-lg md:text-xl font-bold">
+            <p className="text-lg md:text-[2rem] font-bold">
               ‘સૂરિશાન્તિચન્દ્ર’ દીક્ષાશતાબ્દી વિરાગવર્ષે
             </p>
             
-            <p className="text-lg md:text-xl font-bold">
+            <p className="text-lg md:text-[2rem] font-bold">
               મોહનગરી મુંબઈ-બોરીવલીની ધરા પર
             </p>
             </div>
             
-            <div className=" p-6 px-10 pt-8 text-gray-800 rounded-[4rem] inline-block">
+            <div className=" p-4 px-10  text-gray-800 rounded-[4rem] inline-block">
               <p className="text-xl pb-4 md:text-2xl font-bold ">સુખનું ફરમાન</p>
               <h2 className="text-3xl md:text-5xl font-bold ">આધ્યાત્મિક ઉપધાન</h2>
               
@@ -91,7 +91,7 @@ const EventPage = () => {
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaClock className="w-5 h-5 mr-3" />
-                    <span className="font-medium">માગશર વદ ૬, બુધવાર</span>
+                    <span className="font-medium">માગસર વદ ૬, બુધવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૧૦-૧૨-૨૦૨૫
@@ -114,7 +114,7 @@ const EventPage = () => {
                   </div>
                   <div className="flex items-center text-gray-700">
                     <FaClock className="w-5 h-5 mr-3" />
-                    <span className="font-medium">માગશર વદ ૮, શુક્રવાર</span>
+                    <span className="font-medium">માગસર વદ ૮, શુક્રવાર</span>
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
                     ૧૨-૧૨-૨૦૨૫
