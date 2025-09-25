@@ -38,8 +38,9 @@ export default function RootLayout({ children }) {
         className="font-body bg-white"
       >
         <Header />
+       
         {/* <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
-        <div className=' min-h-dvh pt-16 bg-whitey flex  justify-center mx-auto '>
+        <div className=' min-h-dvh pt-[8rem] sm:pt-[5.7rem] bg-whitey flex  justify-center mx-auto '>
           {children}
         </div>
         <Footer />

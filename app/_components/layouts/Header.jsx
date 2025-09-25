@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { BiChevronDown, BiMenu, BiX } from "react-icons/bi";
 import { usePathname } from "next/navigation";
 import HexagonalSvg from "../HexagonalSvg";
+import NoticeHeader from "../noticeHeader";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -755,6 +756,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
+       <NoticeHeader />
     </div>
   );
 };
