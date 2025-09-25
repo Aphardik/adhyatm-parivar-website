@@ -136,7 +136,7 @@ const EventPage = () => {
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
-            ગુજરાતી
+            ગુ.
           </button>
           <button
             onClick={() => switchLanguage('hindi')}
@@ -146,7 +146,7 @@ const EventPage = () => {
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
-            हिन्दी
+            हि.
           </button>
         </div>
       </div>

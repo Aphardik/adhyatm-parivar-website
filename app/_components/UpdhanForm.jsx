@@ -52,7 +52,7 @@ const translations = {
     addressLine1: 'ફ્લેટ નંબર, બિલ્ડિંગનું નામ, રોડ',
     addressLine2: 'એરિયા, લેંડમાર્ક',
     city: 'શહેર/ગામ',
-    state: 'રાજ્ય પસંદ કરો',
+    state: 'રાજ્ય',
     pincode: 'પિનકોડ',
     nativePlace: 'મૂળ વતન',
     mobile: 'મોબાઈલ નંબર',
@@ -117,7 +117,7 @@ const translations = {
     addressLine1: 'फ्लैट नंबर, बिल्डिंग का नाम, रोड',
     addressLine2: 'एरिया, लैंडमार्क',
     city: 'शहर/गाँव',
-    state: 'राज्य चुनें',
+    state: 'राज्य',
     pincode: 'पिनकोड',
     nativePlace: 'मूल वतन',
     mobile: 'मोबाइल नंबर',
@@ -165,8 +165,8 @@ const translations = {
       "दूसरा अढारिया"
     ],
     entryDateOptions: [
-      "प्रथम प्रवेश (वि.सं.२०८२, मागशर वद ६, बुधवार, ता. 10-12-2025)",
-      "द्वितीय प्रवेश (वि.सं.२०८२, मागशर वद ८, शुक्रवार, ता. 12-12-2025)",
+      "प्रथम प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ६, बुधवार, ता. 10-12-2025)",
+      "द्वितीय प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ८, शुक्रवार, ता. 12-12-2025)",
       "अन्य"
     ],
     modalMessage: 'संचमानुरागी आराधकश्री, <br /><br />मुंबई महानगर में आयोजित होने वाले श्री उपधान तप में शामिल होकर जिनाज्ञामय आराधना तथा पूज्य अध्यात्मसम्राट गुरुभगवंत की अतिसात्त्विक, सटीक जिनवाणी में भींगकर संयमजीवन का रसास्वाद लेने की आपकी भावना की हम अंतर से अनुमोदना करते हैं।'
@@ -543,7 +543,7 @@ export default function SpiritualForm({language = 'gujarati'}) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-6 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-6 ">
       <div className="max-w-4xl mx-auto rounded-sm overflow-hidden">
         <div className="py-4 space-y-8">
           {/* Personal Details Section */}
