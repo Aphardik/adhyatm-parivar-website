@@ -177,7 +177,7 @@ const EventPage = () => {
             <div className="px-10 text-gray-800 rounded-[4rem] inline-block">
               
               <h2 className="text-3xl pb-2 md:text-[3.5rem] font-bold">{currentContent.heroSection.adhyatmikUpdhan}</h2>
-              <p className="text-xl  md:text-2xl font-bold">{currentContent.heroSection.sukhanumFarman}</p>
+              <p className="text-lg  md:text-2xl font-bold">{currentContent.heroSection.sukhanumFarman}</p>
             </div>
           </div>
         </div>
