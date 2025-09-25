@@ -15,11 +15,11 @@ const EventPage = () => {
   const content = {
     gujarati: {
       heroSection: {
-        greeting: "શાસનનાયક શ્રી મહાવીરસ્વામિને નમ:",
+        greeting: "શ્રી શંખેશ્વર પાર્શ્વનાથાય નમઃ",
         guruvandana: "શ્રી જીત-હીર-બુદ્ધિ-તિલક-શાન્તિચન્દ્ર-કનકપ્રભ-સોમચન્દ્ર-જિનચન્દ્ર-સંયમરત્નસૂરિ સદ્‍ગુરુભ્યો નમઃ",
         year: "'સૂરિશાન્તિચન્દ્ર' દીક્ષાશતાબ્દી વિરાગવર્ષે",
         location: "મોહનગરી મુંબઈ-બોરીવલીની ધરા પર",
-        sukhanumFarman: "સુખનું ફરમાન",
+        sukhanumFarman: "આનંદભર્યું જીવન, જીવનનો આનંદ",
         adhyatmikUpdhan: "આધ્યાત્મિક ઉપધાન"
       },
       eventSection: {
@@ -38,7 +38,7 @@ const EventPage = () => {
           "ઉપધાનતપ શ્રાવકજીવનમાં એક જ વાર કરાતી અતિ મહત્ત્વની ક્રિયા છે માટે તે અંગેની જાણકારી અને પૂર્વાભ્યાસ (પ્રેક્ટીસ) માટે પ્રવેશના એક દિવસ પૂર્વે આવવું અતિ આવશ્યક છે, તે વિના ગુરુભગવંત ઉપધાનમાં પ્રવેશ કરાવશે નહીં.",
           "ઉપધાનમાં પ્રવેશ કરતા પૂર્વે ઓછામાં ઓછા લોગસ્સ સુધીના સૂત્રો અને મુહપત્તિના ૫૦ બોલ આટલું આવડવું અનિવાર્ય છે, આથી આપ ભાવના પત્ર મોકલતાની સાથે જ તે અંગેનો પ્રયત્ન શરૂ કરશોજી. જો આટલું નહીં આવડતું હોય તો ઉપધાનમાં પ્રવેશ થશે નહીં.",
           "ઉપધાનમાં પ્રવેશ કરતા પહેલા સમ્યક્ત્વની પ્રતિજ્ઞા ઉચ્ચારવામાં આવે છે. જેમાં વીતરાગ સર્વજ્ઞ (૨૪ તીર્થંકર અને સીમંધરસ્વામી વગેરે) એમને જ ભગવાન તરીકે સ્વીકારીશ. પંચમહાવ્રતોને પાળનારા વૈરાગીને ગુરુ તરીકે સ્વીકારીશ અને એ જ પ્રભુએ બતાવેલા તત્ત્વને ધર્મ તરીકે માનીશ. આ પ્રતિજ્ઞા સ્વીકાર કરનાર જ ઉપધાન કરી શકશે.",
-          "વિધિપૂર્વક ઉપધાન કરવાના છે તેથી મોબાઈલ વગેરે કોઈ સાધનો લાવવા નહિ, સ્પીકર પર વાત કરી શકાશે નહીં. જે એવું કરશે તેમને ગુરુભગવંત બીજે દિવસે પૌષધ પળાવી દેશે.",
+          "વિધિપૂર્વક ઉપધાન કરવાના છે તેથી મોબાઈલ વગેરે કોઈ સાધનો લાવવા નહિ, સ્પીકર પર વાત કરી શકાશે નહીં. જે એવું કરશે તેમને ગુરુભગવંત બીજે દિવસે પૌષધ પરાવી દેશે.",
           "૧૨ વર્ષ ઉપરની બહેનોએ સાડી, ચણિયાચોળી પહેરવાની રહેશે. ઉદ્ભટ વેષનો સર્વથા ત્યાગ.",
           "પુરૂષ વર્ગે ધોતિયા, ખેસનો જ ઉપયોગ કરવાનો રહેશે.",
           "ઘરેણા ઉપધાનમાં પહેરાશે નહિ, સ્ત્રીઓએ માત્ર સૌભાગ્યચિહ્ન ધારણ કરી શકાશે."
@@ -68,11 +68,11 @@ const EventPage = () => {
     },
     hindi: {
       heroSection: {
-        greeting: "शासननायक श्री महावीरस्वामिने नमः",
+        greeting: "श्री शंखेश्वर पार्श्वनाथाय नमः",
         guruvandana: "श्री जीत-हीर-बुद्धि-तिलक-शान्तिचन्द्र-कनकप्रभ-सोमचन्द्र-जिनचन्द्र-संयमरत्नसूरि सद्‌गुरुभ्यो नमः",
         year: "'सूरिशान्तिचन्द्र' दीक्षाशताब्दी विरागवर्ष में",
         location: "मोहनगरी मुंबई-बोरीवली की धरा पर ",
-        sukhanumFarman: "सुख का फरमान",
+        sukhanumFarman: "आनंद भरा जीवन, जीवन का आनंद",
         adhyatmikUpdhan: "आध्यात्मिक उपधान"
       },
       eventSection: {
@@ -124,9 +124,9 @@ const EventPage = () => {
   const currentContent = content[selectedLanguage];
 
   return (
-    <div className={`${selectedLanguage == 'gujarati' ? 'font-anek' : 'font-heading'  } min-h-screen `}>
+    <div className={`${selectedLanguage == 'gujarati' ? 'font-anek' : 'font-heading'  } relative min-h-screen `}>
       {/* Language Toggle - Fixed at top right */}
-      <div className="fixed top-20 right-4 z-50">
+      <div className="fixed top-20 right-4 z-20">
         <div className="inline-flex rounded-full overflow-hidden border border-gray-300 bg-white shadow-lg">
           <button
             onClick={() => switchLanguage('gujarati')}
@@ -172,8 +172,9 @@ const EventPage = () => {
             </div>
             
             <div className="px-10 text-gray-800 rounded-[4rem] inline-block">
-              <p className="text-xl pb-4 md:text-2xl font-bold">{currentContent.heroSection.sukhanumFarman}</p>
-              <h2 className="text-3xl md:text-[3.5rem] font-bold">{currentContent.heroSection.adhyatmikUpdhan}</h2>
+              
+              <h2 className="text-3xl pb-2 md:text-[3.5rem] font-bold">{currentContent.heroSection.adhyatmikUpdhan}</h2>
+              <p className="text-xl  md:text-2xl font-bold">{currentContent.heroSection.sukhanumFarman}</p>
             </div>
           </div>
         </div>
