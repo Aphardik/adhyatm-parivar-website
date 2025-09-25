@@ -70,7 +70,7 @@ const translations = {
     successTitle: 'સફળતાપૂર્વક સબમિટ થયું!',
     successMessage: 'અમો મુંબઈ ખાતે ઉપધાનમાં વઘુને વધુ પુણ્યાત્માઓને સમાવી યથાશક્તિ ભક્તિ કરવાનો ભાવ ઘરાવીએ છીએ. તે માટેનું સંમતિપત્ર આપને મળે ત્યારબાદ જ આપશ્રી ઉપધાન તપ માટે પધારશોજી. આપ ઉપધાન તપ માટે પધારો ત્યારે સંમતિપત્ર સાથે લાવવું આવશ્યક છે.',
     submittedDetails: 'સબમિટ કરેલ વિગતો',
-    newForm: 'નવું ભાવનાપત્ર ભરવું',
+    newForm: 'નવું ભાવનાપત્ર ભરો',
     uploadedPhoto: 'અપલોડ કરેલ ફોટો',
     // Validation messages
     nameRequired: 'પૂરું નામ આવશ્યક છે',
@@ -92,18 +92,18 @@ const translations = {
     entryDateRequired: 'પ્રવેશ તારીખ પસંદ કરવી આવશ્યક છે',
     // Entry options
     entryOptions: [
-      "મોક્ષમાળ (પ્રથમ ઉપધાન)",
-      "પાંત્રીસું",
-      "અટ્ઠાવીસું",
-      "બીજું અઢારિયું, છકિયું, ચોકિયું (માળ)",
-      "છકિયું, ચોકિયું (માળ)",
-      "પહેલું અઢારિયું",
-      "બીજું અઢારિયું"
+        { label: "મોક્ષમાળ (પ્રથમ ઉપધાન)", value: "મોક્ષમાળ (પ્રથમ ઉપધાન)" },
+  { label: "પાંત્રીસું", value: "પાંત્રીસું" },
+  { label: "અટ્ઠાવીસું", value: "અટ્ઠાવીસું" },
+  { label: "બીજું અઢારિયું, છકિયું, ચોકિયું (માળ)", value: "બીજું અઢારિયું, છકિયું, ચોકિયું (માળ)" },
+  { label: "છકિયું, ચોકિયું (માળ)", value: "છકિયું, ચોકિયું (માળ)" },
+  { label: "પહેલું અઢારિયું", value: "પહેલું અઢારિયું" },
+  { label: "બીજું અઢારિયું", value: "બીજું અઢારિયું" }  
     ],
     entryDateOptions: [
-      "પ્રથમ પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૬, બુધવાર, તા. 10-12-2025)",
-      "દ્વિતીય પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૮, શુક્રવાર, તા. 12-12-2025)",
-      "અન્ય"
+     { label: "પ્રથમ પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૬, બુધવાર, તા. 10-12-2025)", value: "પ્રથમ પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૬, બુધવાર, તા. 10-12-2025)" },
+  { label: "દ્વિતીય પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૮, શુક્રવાર, તા. 12-12-2025)", value: "દ્વિતીય પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૮, શુક્રવાર, તા. 12-12-2025)" },
+  { label: "અન્ય", value: "અન્ય" }
     ],
     modalMessage: 'સંયમાનુરાગી આરાધકશ્રી, <br /><br />મુંબઈ મહાનગરે યોજાનાર શ્રી ઉપધાન તપમાં જોડાઈ જિનાજ્ઞામય આરાધના તથા પૂજ્ય અધ્યાત્મસમ્રાટ ગુરુભગવંતની અતિસાત્ત્વિક, સચોટ જિનવાણીમાં ભીંજાઈ સંયમજીવનનો રસાસ્વાદ માણવાની આપની ભાવનાની અમો અંતરથી અનુમોદના કરીએ છીએ.'
   },
@@ -130,11 +130,11 @@ const translations = {
     yes: 'हाँ',
     no: 'नहीं',
     entryDate: 'प्रवेश',
-    submit: 'जमा करें',
-    submitting: 'जमा किया जा रहा है...',
-    successTitle: 'सफलतापूर्वक जमा हुआ!',
-    successMessage: 'हम मुंबई में उपधान में अधिक से अधिक पुण्यात्माओं को शामिल करने की शक्ति भक्ति का भाव रखते हैं। उसके लिए सहमति पत्र मिलने के बाद ही आप उपधान तप के लिए पधारें। उपधान तप के लिए आने पर सहमति पत्र साथ लाना आवश्यक है।',
-    submittedDetails: 'जमा किए गए विवरण',
+    submit: 'सबमिट करें',
+    submitting: 'सबमिट किया जा रहा है...',
+    successTitle: 'सफलतापूर्वक सबमिट हुआ!',
+    successMessage: 'हम मुंबई में उपधान में अधिक से अधिक पुण्यात्माओं को शामिल करने की यथाशक्ति भक्ति का भाव रखते हैं। उसके लिए सहमति पत्र मिलने के बाद ही आप उपधान तप के लिए पधारें। उपधान तप के लिए आने पर सहमति पत्र साथ लाना आवश्यक है।',
+    submittedDetails: 'सबमिट किया गया विवरण',
     newForm: 'नया भावनापत्र भरें',
     uploadedPhoto: 'अपलोड की गई फोटो',
     // Validation messages
@@ -156,23 +156,26 @@ const translations = {
     methodRequired: 'मूल विधि विकल्प चुनना आवश्यक है',
     entryDateRequired: 'प्रवेश तारीख चुनना आवश्यक है',
     // Entry options
-    entryOptions: [
-      "मोक्षमाला (प्रथम उपधान)",
-      "पांत्रीसा",
-      "अट्ठावीसा",
-      "दूसरा अढारिया, छकिया, चोकिया (माला)",
-      "छकिया, चोकिया (माला)",
-      "पहला अढारिया",
-      "दूसरा अढारिया"
-    ],
+  entryOptions : [
+  { label: "मोक्षमाला (प्रथम उपधान)", value: "મોક્ષમાળ (પ્રથમ ઉપધાન)" },
+  { label: "पांत्रीसा", value: "પાંત્રીસું" },
+  { label: "अट्ठावीसा", value: "અટ્ઠાવીસું" },
+  { label: "दूसरा अढारिया, छकिया, चोकिया (माला)", value: "બીજું અઢારિયું, છકિયું, ચોકિયું (માળ)" },
+  { label: "छकिया, चोकिया (माला)", value: "છકિયું, ચોકિયું (માળ)" },
+  { label: "पहला अढारिया", value: "પહેલું અઢારિયું" },
+  { label: "दूसरा अढारिया", value: "બીજું અઢારિયું" }
+],
+
+
     entryDateOptions: [
-      "प्रथम प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ६, बुधवार, ता. 10-12-2025)",
-      "द्वितीय प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ८, शुक्रवार, ता. 12-12-2025)",
-      "अन्य"
+       { label: "प्रथम प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ६, बुधवार, ता. 10-12-2025)", value: "પ્રથમ પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૬, બુધવાર, તા. 10-12-2025)" },
+  { label: "द्वितीय प्रवेश (वि.सं.२०८२, मार्गशीर्ष वद ८, शुक्रवार, ता. 12-12-2025)", value: "દ્વિતીય પ્રવેશ (વિ.સં.૨૦૮૨, માગસર વદ ૮, શુક્રવાર, તા. 12-12-2025)" },
+  { label: "अन्य", value: "અન્ય" }
     ],
-    modalMessage: 'संचमानुरागी आराधकश्री, <br /><br />मुंबई महानगर में आयोजित होने वाले श्री उपधान तप में शामिल होकर जिनाज्ञामय आराधना तथा पूज्य अध्यात्मसम्राट गुरुभगवंत की अतिसात्त्विक, सटीक जिनवाणी में भींगकर संयमजीवन का रसास्वाद लेने की आपकी भावना की हम अंतर से अनुमोदना करते हैं।'
+    modalMessage: 'संयमानुरागी आराधकश्री, <br /><br />मुंबई महानगर में आयोजित होने वाले श्री उपधान तप में शामिल होकर जिनाज्ञामय आराधना तथा पूज्य अध्यात्मसम्राट गुरुभगवंत की अतिसात्त्विक, सटीक जिनवाणी में भींगकर संयमजीवन का रसास्वाद लेने की आपकी भावना की हम अंतर से अनुमोदना करते हैं।'
   }
 };
+
 
 export default function SpiritualForm({language = 'gujarati'}) {
   const t = translations[language] || translations.gujarati;
@@ -328,8 +331,7 @@ export default function SpiritualForm({language = 'gujarati'}) {
       }
       return;
     }
-
-
+ 
 
     setIsSubmitting(true);
 
@@ -383,10 +385,22 @@ export default function SpiritualForm({language = 'gujarati'}) {
     }
   };
 
- const closeModal = () => {
+//  const closeModal = () => {
+//     setShowSuccessModal(false);
+//     setIsSubmitted(true);
+   
+//   };
+
+  const closeModal = () => {
     setShowSuccessModal(false);
     setIsSubmitted(true);
-   
+    
+    setTimeout(() => {
+      const successSection = document.getElementById('success-section');
+      if (successSection) {
+        successSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   const resetForm = () => {
@@ -591,8 +605,8 @@ export default function SpiritualForm({language = 'gujarati'}) {
                     <input
                       type="radio"
                       name="Radio"
-                      value={language === 'gujarati' ? 'પુરુષ' : 'पुरुष'}
-                      checked={formData.Radio === (language === 'gujarati' ? 'પુરુષ' : 'पुरुष')}
+                      value='પુરુષ'
+                      checked={formData.Radio ===  'પુરુષ'}
                       onChange={handleInputChange}
                       className="w-4 h-4 text-amber-400 focus:ring-amber-400"
                     />
@@ -602,8 +616,8 @@ export default function SpiritualForm({language = 'gujarati'}) {
                     <input
                       type="radio"
                       name="Radio"
-                      value={language === 'gujarati' ? 'સ્ત્રી' : 'स्त्री'}
-                      checked={formData.Radio === (language === 'gujarati' ? 'સ્ત્રી' : 'स्त्री')}
+                      value='સ્ત્રી'
+                      checked={formData.Radio === 'સ્ત્રી' }
                       onChange={handleInputChange}
                       className="w-4 h-4 text-amber-400 focus:ring-amber-400"
                     />
@@ -882,12 +896,12 @@ export default function SpiritualForm({language = 'gujarati'}) {
                     <input
                       type="radio"
                       name="Radio1"
-                      value={option}
-                      checked={formData.Radio1 === option}
+                      value={option.value}
+                      checked={formData.Radio1 === option.value}
                       onChange={handleInputChange}
                       className="w-4 h-4 text-blue-500 focus:ring-blue-500"
                     />
-                    <span className="ml-3 text-gray-700">{option}</span>
+                    <span className="ml-3 text-gray-700">{option.label}</span>
                   </label>
                 ))}
               </div>
@@ -906,8 +920,8 @@ export default function SpiritualForm({language = 'gujarati'}) {
                   <input
                     type="radio"
                     name="Radio2"
-                    value={t.yes}
-                    checked={formData.Radio2 === t.yes}
+                    value='હા'
+                    checked={formData.Radio2 === 'હા'}
                     onChange={handleInputChange}
                     className="w-4 h-4 text-blue-500 focus:ring-blue-500"
                   />
@@ -917,8 +931,8 @@ export default function SpiritualForm({language = 'gujarati'}) {
                   <input
                     type="radio"
                     name="Radio2"
-                    value={t.no}
-                    checked={formData.Radio2 === t.no}
+                    value='ના'
+                    checked={formData.Radio2 === 'ના'}
                     onChange={handleInputChange}
                     className="w-4 h-4 text-blue-500 focus:ring-blue-500"
                   />
@@ -941,12 +955,12 @@ export default function SpiritualForm({language = 'gujarati'}) {
                     <input
                       type="radio"
                       name="Radio3"
-                      value={option}
-                      checked={formData.Radio3 === option}
+                      value={option.value}
+                      checked={formData.Radio3 === option.value}
                       onChange={handleInputChange}
                       className="w-4 h-4 text-blue-500 focus:ring-blue-500 flex-shrink-0"
                     />
-                    <span className="ml-3 text-gray-700">{option}</span>
+                    <span className="ml-3 text-gray-700">{option.label}</span>
                   </label>
                 ))}
               </div>
