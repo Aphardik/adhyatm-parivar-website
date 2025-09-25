@@ -68,16 +68,16 @@ const EventPage = () => {
     },
     hindi: {
       heroSection: {
-        greeting: "शासननायक श्री महावीरस्वामी को नमस्कार",
-        guruvandana: "श्री जीत-हीर-बुद्धि-तिलक-शांतिचन्द्र-कनकप्रभ-सोमचन्द्र-जिनचन्द्र-संयमरत्नसूरि सद्गुरुभ्यो नमः",
-        year: "'सूरिशांतिचन्द्र' दीक्षाशताब्दी विरागवर्ष में",
-        location: "मोहनगरी मुंबई-बोरिवली की धरा पर",
+        greeting: "शासननायक श्री महावीरस्वामिने नमः",
+        guruvandana: "श्री जीत-हीर-बुद्धि-तिलक-शान्तिचन्द्र-कनकप्रभ-सोमचन्द्र-जिनचन्द्र-संयमरत्नसूरि सद्‌गुरुभ्यो नमः",
+        year: "'सूरिशान्तिचन्द्र' दीक्षाशताब्दी विरागवर्ष में",
+        location: "मोहनगरी मुंबई-बोरीवली की धरा पर ",
         sukhanumFarman: "सुख का फरमान",
         adhyatmikUpdhan: "आध्यात्मिक उपधान"
       },
       eventSection: {
-        title: "भवनिस्तारक निश्रा",
-        guru: "'सूरिशांति-जिन-संयम' कृपाप्राप्त, अध्यात्मसम्राट प.पू.आ.भ. श्रीमद् विजय योगतिलकसूरीश्वरजी महाराजा",
+        title: "उपधान उपवन निश्रा",
+        guru: "'सूरिजिन-संयम’ कृपाप्राप्त अध्यात्मसम्राट प.पू.आ.भ.श्रीमद् विजय योगतिलकसूरीश्वरजी महाराजा",
         firstEntry: "प्रथम प्रवेश",
         secondEntry: "द्वितीय प्रवेश",
         mokshmala: "मोक्षमाला"
@@ -126,7 +126,7 @@ const EventPage = () => {
   return (
     <div className={`${selectedLanguage == 'gujarati' ? 'font-anek' : 'font-heading'  } min-h-screen `}>
       {/* Language Toggle - Fixed at top right */}
-      {/* <div className="fixed top-20 right-4 z-50">
+      <div className="fixed top-20 right-4 z-50">
         <div className="inline-flex rounded-full overflow-hidden border border-gray-300 bg-white shadow-lg">
           <button
             onClick={() => switchLanguage('gujarati')}
@@ -149,7 +149,7 @@ const EventPage = () => {
             हिन्दी
           </button>
         </div>
-      </div> */}
+      </div>
 
       {/* Hero Section */}
       <div className="relative bg-gradient1 text-gray-800">
@@ -202,13 +202,13 @@ const EventPage = () => {
                 </div>
                 <div className="p-6 relative space-y-4">
                   <div className="flex items-center justify-center text-gray-700">
-                    {selectedLanguage == 'gujarati' ? <span className="font-medium text-center">વિ.સં. ૨૦૮૨</span> : <span className="font-medium text-center">वि.सं. २०८२</span>}
+                    {selectedLanguage == 'gujarati' ? <span className="font-medium text-center">વિ.સં. ૨૦૮૨</span> : <span className="font-medium text-center">वि.सं.२०८२</span>}
                   </div>
                   <div className="flex items-center justify-center text-gray-700">
-                    {selectedLanguage == 'gujarati' ? <span className="font-medium text-center">માગસર વદ ૬, બુધવાર</span> : <span className="font-medium text-center">मागसर वद ६, बुधवार</span>}
+                    {selectedLanguage == 'gujarati' ? <span className="font-medium text-center">માગસર વદ ૬, બુધવાર</span> : <span className="font-medium text-center">मार्गशीर्ष वद ६, बुधवार</span>}
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
-                   { selectedLanguage == 'gujarati' ? '૧૦-૧૨-૨૦૨૫' : '१०-१२-२०२५' }
+                   { selectedLanguage == 'gujarati' ? '૧૦-૧૨-૨૦૨૫' : '10-12-2025' }
                   </div>
                   <HexagonalSvg accentColor="darkpink" />
                 </div>
@@ -223,13 +223,13 @@ const EventPage = () => {
                 </div>
                 <div className="p-6 relative space-y-4">
                   <div className="flex items-center justify-center text-gray-700">
-                   {selectedLanguage == 'gujarati' ? <span className="font-medium">વિ.સં. ૨૦૮૨</span> : <span className="font-medium">वि.सं. २०८२</span>}
+                   {selectedLanguage == 'gujarati' ? <span className="font-medium">વિ.સં. ૨૦૮૨</span> : <span className="font-medium">वि.सं.२०८२</span>}
                   </div>
                   <div className="flex items-center justify-center text-gray-700">
-                   {selectedLanguage == 'gujarati' ? <span className="font-medium">માગસર વદ ૮, શુક્રવાર</span> : <span className="font-medium">मागसर वद ८, शुक्रवार</span>}
+                   {selectedLanguage == 'gujarati' ? <span className="font-medium">માગસર વદ ૮, શુક્રવાર</span> : <span className="font-medium">मार्गशीर्ष वद ८, शुक्रवार</span>}
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
-                    { selectedLanguage == 'gujarati' ? '૧૨-૧૨-૨૦૨૫' : '१२-१२-२०२५' }
+                    { selectedLanguage == 'gujarati' ? '૧૨-૧૨-૨૦૨૫' : '12-12-2025' }
                   </div>
                   <HexagonalSvg accentColor="darkpink" />
                 </div>
@@ -244,13 +244,13 @@ const EventPage = () => {
                 </div>
                 <div className="p-6 relative space-y-4">
                   <div className="flex items-center justify-center text-gray-700">
-                    {selectedLanguage == 'gujarati' ? <span className="font-medium">વિ.સં. ૨૦૮૨</span> : <span className="font-medium">वि.सं. २०८२</span>}
+                    {selectedLanguage == 'gujarati' ? <span className="font-medium">વિ.સં. ૨૦૮૨</span> : <span className="font-medium">वि.सं.२०८२</span>}
                   </div>
                   <div className="flex items-center justify-center text-gray-700">
                    {selectedLanguage == 'gujarati' ? <span className="font-medium">મહા સુદ ૧૦, બુધવાર</span> : <span className="font-medium">माघ सुद १०, बुधवार </span>}
                   </div>
                   <div className="text-2xl font-bold text-center pt-2">
-                    { selectedLanguage == 'gujarati' ? '૨૮-૦૧-૨૬' : '२८-०१-२६' }
+                    { selectedLanguage == 'gujarati' ? '૨૮-૦૧-૨૬' : '28-01-2026 ' }
                   </div>
                   <HexagonalSvg accentColor="darkpink" />
                 </div>
