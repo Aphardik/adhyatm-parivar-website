@@ -270,123 +270,127 @@ export default function SpiritualForm() {
 
   // Data Display Component
   const DataDisplaySection = () => (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-6 sm:p-6">
-      <div className="max-w-4xl mx-auto">
-        {/* Success Message */}
-        <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-l-4 border-green-500 p-6 rounded-lg mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className=" bg-gradient-to-br from-green-50 to-blue-50 flex flex-col p-4 overflow-hidden">
+      <div className="flex-1 max-w-6xl mx-auto w-full flex flex-col">
+        {/* Success Message - Compact */}
+        <div className="bg-gradient-to-r from-green-100 to-emerald-100  p-4 rounded-sm mb-4 flex-shrink-0">
+          <div className="flex items-center mb-2">
+            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold text-green-800">સફળતાપૂર્વક સબમિટ થયું!</h1>
+            <h1 className="text-xl font-bold text-green-800">સફળતાપૂર્વક સબમિટ થયું!</h1>
           </div>
-          <p className="text-green-700 text-lg leading-relaxed">
+          <p className="text-green-700 text-sm leading-relaxed">
             અમો મુંબઈ ખાતે ઉપધાનમાં વઘુને વધુ પુણ્યાત્માઓને સમાવી થાશક્તિ ભક્તિ કરવાનો ભાવ ઘરાવીએ છીએ. તે માટેનું સંમતિપત્ર આપને મળે ત્યારબાદ જ આપશ્રી ઉપધાન તપ માટે પધારશોજી. આપ ઉપધાન તપ માટે પધારો ત્યારે સંમતિપત્ર સાથે લાવવું આવશ્યક છે.
           </p>
         </div>
 
-        {/* Submitted Data Display */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
-            <h2 className="text-2xl font-bold">સબમિટ કરેલ વિગતો</h2>
+        {/* Submitted Data Display - Scrollable */}
+        <div className="bg-white rounded-sm overflow-hidden flex-1 flex flex-col min-h-0">
+          <div className="bg-gray-200 text-gray-800 p-3 flex-shrink-0">
+            <h2 className="text-lg font-bold">સબમિટ કરેલ વિગતો</h2>
           </div>
 
-          <div className="p-6 space-y-8">
-            {/* Personal Details Section */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-orange-300 pb-2">
-                વ્યક્તિગત વિગત
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">પૂરું નામ</label>
-                  <p className="text-gray-800 font-medium">{submittedData.SingleLine1}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">જાતિ</label>
-                  <p className="text-gray-800 font-medium">{submittedData.Radio}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">જન્મ તારીખ</label>
-                  <p className="text-gray-800 font-medium">{formatDateForDisplay(submittedData.Date)}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">મૂળ વતન</label>
-                  <p className="text-gray-800 font-medium">{submittedData.SingleLine}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">મોબાઈલ નંબર</label>
-                  <p className="text-gray-800 font-medium">{submittedData.PhoneNumber_countrycode}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">સંબંધીનો સંપર્ક નંબર</label>
-                  <p className="text-gray-800 font-medium">{submittedData.PhoneNumber1_countrycode}</p>
-                </div>
-              </div>
-
-              {/* Address Section */}
-              <div className="mt-6">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-2">સરનામું</label>
-                  <div className="text-gray-800 font-medium">
-                    <p>{submittedData.Address_AddressLine1}</p>
-                    {submittedData.Address_AddressLine2 && <p>{submittedData.Address_AddressLine2}</p>}
-                    <p>{submittedData.Address_City}, {submittedData.Address_Region}</p>
-                    <p>{submittedData.Address_ZipCode}, {submittedData.Address_Country}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Photo */}
-              {submittedData.ImageUpload && (
-                <div className="mt-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <label className="block text-sm font-semibold text-gray-600 mb-2">અપલોડ કરેલ ફોટો</label>
-                    <p className="text-gray-800 font-medium">
-                      {submittedData.ImageUpload.name} ({Math.round(submittedData.ImageUpload.size / 1024)} KB)
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Entry Details Section */}
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">
-                પ્રવેશની વિગત
-              </h3>
+          <div className="flex-1 overflow-y-auto p-2">
+            {/* Personal Details and Entry Details in Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
+              
+              {/* Personal Details Section */}
               <div className="space-y-4">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">પ્રવેશનો પ્રકાર</label>
-                  <p className="text-gray-800 font-medium">{submittedData.Radio1}</p>
-                </div>
+                <h3 className="text-lg font-semibold text-gray-800 border-b-2 border-orange-300 pb-1">
+                  વ્યક્તિગત વિગત
+                </h3>
+                
+                <div className="grid grid-cols-1 gap-2">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">પૂરું નામ</label>
+                    <p className="text-gray-800 font-medium text-sm">{submittedData.SingleLine1}</p>
+                  </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">મૂળવિધિથી કરવાની ભાવના</label>
-                  <p className="text-gray-800 font-medium">{submittedData.Radio2}</p>
-                </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">જાતિ</label>
+                      <p className="text-gray-800 font-medium text-sm">{submittedData.Radio}</p>
+                    </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">પ્રવેશ તારીખ</label>
-                  <p className="text-gray-800 font-medium">{submittedData.Radio3}</p>
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">જન્મ તારીખ</label>
+                      <p className="text-gray-800 font-medium text-sm">{formatDateForDisplay(submittedData.Date)}</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">સરનામું</label>
+                    <div className="text-gray-800 font-medium text-sm">
+                      <p>{submittedData.Address_AddressLine1}</p>
+                      {submittedData.Address_AddressLine2 && <p>{submittedData.Address_AddressLine2}</p>}
+                      <p>{submittedData.Address_City}, {submittedData.Address_Region} - {submittedData.Address_ZipCode}</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">મૂળ વતન</label>
+                    <p className="text-gray-800 font-medium text-sm">{submittedData.SingleLine}</p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3">
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">મોબાઈલ નંબર</label>
+                      <p className="text-gray-800 font-medium text-sm">{submittedData.PhoneNumber_countrycode}</p>
+                    </div>
+
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">સંબંધીનો સંપર્ક નંબર</label>
+                      <p className="text-gray-800 font-medium text-sm">{submittedData.PhoneNumber1_countrycode}</p>
+                    </div>
+                  </div>
+
+                  {/* Photo */}
+                  {submittedData.ImageUpload && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <label className="block text-xs font-semibold text-gray-600 mb-1">અપલોડ કરેલ ફોટો</label>
+                      <p className="text-gray-800 font-medium text-sm">
+                        {submittedData.ImageUpload.name} ({Math.round(submittedData.ImageUpload.size / 1024)} KB)
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Entry Details Section */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800 border-b-2 border-blue-300 pb-1">
+                  પ્રવેશની વિગત
+                </h3>
+                
+                <div className="space-y-3">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">પ્રવેશનો પ્રકાર</label>
+                    <p className="text-gray-800 font-medium text-sm">{submittedData.Radio1}</p>
+                  </div>
+
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">મૂળવિધિથી કરવાની ભાવના</label>
+                    <p className="text-gray-800 font-medium text-sm">{submittedData.Radio2}</p>
+                  </div>
+
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">પ્રવેશ તારીખ</label>
+                    <p className="text-gray-800 font-medium text-sm">{submittedData.Radio3}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* New Form Button */}
-        <div className="text-center">
+        {/* New Form Button - Fixed at bottom */}
+        <div className="text-center pt-4 flex-shrink-0">
           <button
             onClick={resetForm}
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition duration-300 shadow-lg"
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition duration-300 shadow-lg"
           >
             નવું ફોર્મ ભરવું
           </button>
@@ -816,8 +820,8 @@ export default function SpiritualForm() {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 સફળતાપૂર્વક સબમિટ થયું!
               </h2>
-              <p className="text-gray-600 mb-6 ">
-                સંચમાનુરાગી આરાધકશ્રી, <br />
+              <p className="text-gray-600 mb-6">
+સંચમાનુરાગી આરાધકશ્રી, <br />
 
 મુંબઈ મહાનગરે યોજાનાર શ્રી ઉપધાન તપમાં જોડાંઈ જિનાજ્ઞામય આરાધના તથા પૂજ્ય અધ્યાત્મસમ્રાટ ગુરુભગવંતની અતિસાત્ત્વિક, સચોટ જિનવાણીમાં ભીંજાઈ સંયમજીવનનો રસાસ્વાદ માણવાની આપની ભાવનાની અમો અંતરથી અનુમોદના કરીએ છીએ.
 
