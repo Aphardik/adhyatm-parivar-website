@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaCamera, FaFolderOpen } from 'react-icons/fa';
 
 // Mock states data - replace with actual import from /data/states.js
 const statesData = [
@@ -795,31 +796,67 @@ export default function SpiritualForm({language = 'gujarati'}) {
             </div>
 
             {/* Photo Upload */}
-            <div className="mt-6">
-              <label className="block text-gray-700 font-semibold mb-2">
-                {t.photo} <span className="text-red-500">*</span>
-              </label>
-              <div className="relative">
-                <input
-                  type="file"
-                  name="ImageUpload"
-                  accept="image/*"
-                  onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border-2 border-dashed rounded-lg focus:outline-none transition duration-300 cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100 ${
-                    errors.ImageUpload ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-amber-400'
-                  }`}
-                  required
-                />
-                {formData.ImageUpload && (
-                  <div className="mt-2 text-sm text-green-600">
-                    Selected: {formData.ImageUpload.name} ({Math.round(formData.ImageUpload.size / 1024)} KB)
-                  </div>
-                )}
-                {errors.ImageUpload && (
-                  <p className="text-red-500 text-sm mt-1">{errors.ImageUpload}</p>
-                )}
-              </div>
-            </div>
+           <div className="mt-6">
+  <label className="block text-gray-700 font-semibold mb-2">
+    {t.photo} <span className="text-red-500">*</span>
+  </label>
+  <div className="relative">
+    <div className="grid grid-cols-2 gap-3 mb-3">
+      <button
+        type="button"
+        onClick={() => document.getElementById('gallery-input').click()}
+        className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed rounded-lg focus:outline-none transition duration-300 ${
+          errors.ImageUpload ? 'border-red-500 hover:border-red-400' : 'border-gray-300 hover:border-amber-400'
+        }`}
+      >
+        <FaFolderOpen size={20} />
+        Gallery
+      </button>
+      <button
+        type="button"
+        onClick={() => document.getElementById('camera-input').click()}
+        className={`flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed rounded-lg focus:outline-none transition duration-300 ${
+          errors.ImageUpload ? 'border-red-500 hover:border-red-400' : 'border-gray-300 hover:border-amber-400'
+        }`}
+      >
+        <FaCamera size={20} />
+        Camera
+      </button>
+    </div>
+    
+    {/* Hidden inputs */}
+    <input
+      id="gallery-input"
+      type="file"
+      name="ImageUpload"
+      accept="image/*"
+      onChange={handleInputChange}
+      className="hidden"
+    />
+    <input
+      id="camera-input"
+      type="file"
+      name="ImageUpload"
+      accept="image/*"
+      capture="environment"
+      onChange={handleInputChange}
+      className="hidden"
+    />
+    
+    {formData.ImageUpload && (
+      <div className="mt-2 text-sm text-green-600 flex items-center gap-2">
+        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+        Selected: {formData.ImageUpload.name} ({Math.round(formData.ImageUpload.size / 1024)} KB)
+      </div>
+    )}
+    {errors.ImageUpload && (
+      <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+        <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+        {errors.ImageUpload}
+      </p>
+    )}
+  </div>
+</div>
           </div>
 
           {/* Entry Details Section */}
