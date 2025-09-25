@@ -13,6 +13,8 @@ const Header = () => {
   const timeoutRef = useRef(null);
   const pathname = usePathname();
   // console.log(pathname,"pathname")
+    const isUpdhanPage = pathname.includes("updhan-18");
+
 
   const handleMouseEnter = (dropdown) => {
     if (timeoutRef.current) {
@@ -756,7 +758,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-       <NoticeHeader />
+{  !isUpdhanPage &&  <NoticeHeader />}
     </div>
   );
 };

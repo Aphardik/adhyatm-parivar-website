@@ -124,7 +124,7 @@ const EventPage = () => {
   const currentContent = content[selectedLanguage];
 
   return (
-    <div className={`${selectedLanguage == 'gujarati' ? 'font-anek' : 'font-heading'  } relative min-h-screen `}>
+    <div  className={`${selectedLanguage == 'gujarati' ? 'font-anek' : 'font-heading'  } relative  min-h-screen `}>
       {/* Language Toggle - Fixed at top right */}
       <div className="fixed top-20 right-4 z-20">
         <div className="inline-flex rounded-full overflow-hidden border border-gray-300 bg-white shadow-lg">
