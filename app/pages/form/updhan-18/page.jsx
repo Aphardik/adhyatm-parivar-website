@@ -284,18 +284,8 @@ const EventPage = () => {
           </div>
         </div>
 
-          <div className="mt-8">
-              <div className="bg-lightpink p-4 rounded-sm shadow-md">
-                <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
-                  આયોજક 
-                </h1>
-                <p className='font-bold text-lg md:text-xl text-center text-gray-700'>અધ્યાત્મ પરિવાર</p>
-                <p className='font-bold text-base md:text-lg text-center text-gray-700'>844 844 40 50</p>
 
-              </div>
-            </div>
-
-             {/* Contact and Location Section */}
+        {/* Contact and Location Section */}
         <div className="bg-white max-w-4xl mt-12 mx-auto rounded-sm shadow-sm border border-lightpink overflow-hidden group hover:shadow-2xl transition-all duration-300 mb-12">
           <div className="bg-lightpink p-6">
             <h3 className="text-2xl font-bold flex items-center">
@@ -320,6 +310,19 @@ const EventPage = () => {
             </div>
           </div>
         </div>
+
+          <div className="mt-8">
+              <div className="bg-lightpink p-4 rounded-sm shadow-md">
+                <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
+                  આયોજક 
+                </h1>
+                <p className='font-bold text-lg md:text-xl text-center text-gray-700'>અધ્યાત્મ પરિવાર</p>
+                <p className='font-bold text-base md:text-lg text-center text-gray-700'>844 844 40 50</p>
+
+              </div>
+            </div>
+
+             
 
 
 
