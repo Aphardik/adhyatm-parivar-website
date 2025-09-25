@@ -70,7 +70,7 @@ const translations = {
     successTitle: 'સફળતાપૂર્વક સબમિટ થયું!',
     successMessage: 'અમો મુંબઈ ખાતે ઉપધાનમાં વઘુને વધુ પુણ્યાત્માઓને સમાવી યથાશક્તિ ભક્તિ કરવાનો ભાવ ઘરાવીએ છીએ. તે માટેનું સંમતિપત્ર આપને મળે ત્યારબાદ જ આપશ્રી ઉપધાન તપ માટે પધારશોજી. આપ ઉપધાન તપ માટે પધારો ત્યારે સંમતિપત્ર સાથે લાવવું આવશ્યક છે.',
     submittedDetails: 'સબમિટ કરેલ વિગતો',
-    newForm: 'નવું ફોર્મ ભરવું',
+    newForm: 'નવું ભાવનાપત્ર ભરવું',
     uploadedPhoto: 'અપલોડ કરેલ ફોટો',
     // Validation messages
     nameRequired: 'પૂરું નામ આવશ્યક છે',
@@ -135,7 +135,7 @@ const translations = {
     successTitle: 'सफलतापूर्वक जमा हुआ!',
     successMessage: 'हम मुंबई में उपधान में अधिक से अधिक पुण्यात्माओं को शामिल करने की शक्ति भक्ति का भाव रखते हैं। उसके लिए सहमति पत्र मिलने के बाद ही आप उपधान तप के लिए पधारें। उपधान तप के लिए आने पर सहमति पत्र साथ लाना आवश्यक है।',
     submittedDetails: 'जमा किए गए विवरण',
-    newForm: 'नया फॉर्म भरें',
+    newForm: 'नया भावनापत्र भरें',
     uploadedPhoto: 'अपलोड की गई फोटो',
     // Validation messages
     nameRequired: 'पूरा नाम आवश्यक है',
@@ -329,7 +329,12 @@ export default function SpiritualForm({language = 'gujarati'}) {
       return;
     }
 
+
+
     setIsSubmitting(true);
+
+    //     const successSection = document.getElementById('success-section');
+    //  successSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     
     // Store submitted data for display
     setSubmittedData({...formData});
@@ -378,9 +383,10 @@ export default function SpiritualForm({language = 'gujarati'}) {
     }
   };
 
-  const closeModal = () => {
+ const closeModal = () => {
     setShowSuccessModal(false);
     setIsSubmitted(true);
+   
   };
 
   const resetForm = () => {
@@ -409,7 +415,7 @@ export default function SpiritualForm({language = 'gujarati'}) {
 
   // Data Display Component
   const DataDisplaySection = () => (
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 flex flex-col p-4 overflow-hidden">
+    <div id="success-section" className="bg-gradient-to-br from-green-50 to-blue-50 flex flex-col p-4 overflow-hidden">
       <div className="flex-1 max-w-6xl mx-auto w-full flex flex-col">
         {/* Success Message - Compact */}
         <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-sm mb-4 flex-shrink-0">
