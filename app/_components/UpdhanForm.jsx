@@ -62,6 +62,8 @@ export default function SpiritualForm() {
   const [errors, setErrors] = useState({});
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedData, setSubmittedData] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -167,6 +169,17 @@ export default function SpiritualForm() {
     return `${day}-${month}-${year}`;
   };
 
+  const formatDateForDisplay = (dateString) => {
+    if (!dateString) return '';
+    
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    
+    return `${day}/${month}/${year}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -180,6 +193,9 @@ export default function SpiritualForm() {
     }
 
     setIsSubmitting(true);
+    
+    // Store submitted data for display
+    setSubmittedData({...formData});
     
     // Create FormData object for multipart/form-data submission
     const submitData = new FormData();
@@ -213,30 +229,8 @@ export default function SpiritualForm() {
         body: submitData
       });
 
-    setShowSuccessModal(true);
-      // Show success modal
+      setShowSuccessModal(true);
       
-      
-      // Reset form
-      setFormData({
-        SingleLine1: '',
-        Radio: '',
-        Address_AddressLine1: '',
-        Address_AddressLine2: '',
-        Address_City: '',
-        Address_Region: '',
-        Address_ZipCode: '',
-        Address_Country: 'India',
-        SingleLine: '',
-        Date: '',
-        PhoneNumber_countrycode: '',
-        PhoneNumber1_countrycode: '',
-        ImageUpload: null,
-        Radio1: '',
-        Radio2: '',
-        Radio3: ''
-      });
-      setErrors({});
     } catch (error) {
       console.error('Submission error:', error);
       setShowSuccessModal(true); // Show success modal anyway since no-cors doesn't allow error checking
@@ -247,7 +241,164 @@ export default function SpiritualForm() {
 
   const closeModal = () => {
     setShowSuccessModal(false);
+    setIsSubmitted(true);
   };
+
+  const resetForm = () => {
+    setIsSubmitted(false);
+    setFormData({
+      SingleLine1: '',
+      Radio: '',
+      Address_AddressLine1: '',
+      Address_AddressLine2: '',
+      Address_City: '',
+      Address_Region: '',
+      Address_ZipCode: '',
+      Address_Country: 'India',
+      SingleLine: '',
+      Date: '',
+      PhoneNumber_countrycode: '',
+      PhoneNumber1_countrycode: '',
+      ImageUpload: null,
+      Radio1: '',
+      Radio2: '',
+      Radio3: ''
+    });
+    setSubmittedData({});
+    setErrors({});
+  };
+
+  // Data Display Component
+  const DataDisplaySection = () => (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-6 sm:p-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Success Message */}
+        <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-l-4 border-green-500 p-6 rounded-lg mb-8">
+          <div className="flex items-center mb-4">
+            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-green-800">સફળતાપૂર્વક સબમિટ થયું!</h1>
+          </div>
+          <p className="text-green-700 text-lg leading-relaxed">
+            અમો મુંબઈ ખાતે ઉપધાનમાં વઘુને વધુ પુણ્યાત્માઓને સમાવી થાશક્તિ ભક્તિ કરવાનો ભાવ ઘરાવીએ છીએ. તે માટેનું સંમતિપત્ર આપને મળે ત્યારબાદ જ આપશ્રી ઉપધાન તપ માટે પધારશોજી. આપ ઉપધાન તપ માટે પધારો ત્યારે સંમતિપત્ર સાથે લાવવું આવશ્યક છે.
+          </p>
+        </div>
+
+        {/* Submitted Data Display */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            <h2 className="text-2xl font-bold">સબમિટ કરેલ વિગતો</h2>
+          </div>
+
+          <div className="p-6 space-y-8">
+            {/* Personal Details Section */}
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-orange-300 pb-2">
+                વ્યક્તિગત વિગત
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">પૂરું નામ</label>
+                  <p className="text-gray-800 font-medium">{submittedData.SingleLine1}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">જાતિ</label>
+                  <p className="text-gray-800 font-medium">{submittedData.Radio}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">જન્મ તારીખ</label>
+                  <p className="text-gray-800 font-medium">{formatDateForDisplay(submittedData.Date)}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">મૂળ વતન</label>
+                  <p className="text-gray-800 font-medium">{submittedData.SingleLine}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">મોબાઈલ નંબર</label>
+                  <p className="text-gray-800 font-medium">{submittedData.PhoneNumber_countrycode}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">સંબંધીનો સંપર્ક નંબર</label>
+                  <p className="text-gray-800 font-medium">{submittedData.PhoneNumber1_countrycode}</p>
+                </div>
+              </div>
+
+              {/* Address Section */}
+              <div className="mt-6">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-2">સરનામું</label>
+                  <div className="text-gray-800 font-medium">
+                    <p>{submittedData.Address_AddressLine1}</p>
+                    {submittedData.Address_AddressLine2 && <p>{submittedData.Address_AddressLine2}</p>}
+                    <p>{submittedData.Address_City}, {submittedData.Address_Region}</p>
+                    <p>{submittedData.Address_ZipCode}, {submittedData.Address_Country}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Photo */}
+              {submittedData.ImageUpload && (
+                <div className="mt-6">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <label className="block text-sm font-semibold text-gray-600 mb-2">અપલોડ કરેલ ફોટો</label>
+                    <p className="text-gray-800 font-medium">
+                      {submittedData.ImageUpload.name} ({Math.round(submittedData.ImageUpload.size / 1024)} KB)
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Entry Details Section */}
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2">
+                પ્રવેશની વિગત
+              </h3>
+              <div className="space-y-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">પ્રવેશનો પ્રકાર</label>
+                  <p className="text-gray-800 font-medium">{submittedData.Radio1}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">મૂળવિધિથી કરવાની ભાવના</label>
+                  <p className="text-gray-800 font-medium">{submittedData.Radio2}</p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <label className="block text-sm font-semibold text-gray-600 mb-1">પ્રવેશ તારીખ</label>
+                  <p className="text-gray-800 font-medium">{submittedData.Radio3}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* New Form Button */}
+        <div className="text-center">
+          <button
+            onClick={resetForm}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition duration-300 shadow-lg"
+          >
+            નવું ફોર્મ ભરવું
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Show submitted data view if form is submitted
+  if (isSubmitted) {
+    return <DataDisplaySection />;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-6 sm:p-6">
@@ -665,8 +816,11 @@ export default function SpiritualForm() {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 સફળતાપૂર્વક સબમિટ થયું!
               </h2>
-              <p className="text-gray-600 mb-6">
-                તમારું ભાવનાપત્ર સફળતાપૂર્વક સબમિટ થઈ ગયું છે.
+              <p className="text-gray-600 mb-6 ">
+                સંચમાનુરાગી આરાધકશ્રી, <br />
+
+મુંબઈ મહાનગરે યોજાનાર શ્રી ઉપધાન તપમાં જોડાંઈ જિનાજ્ઞામય આરાધના તથા પૂજ્ય અધ્યાત્મસમ્રાટ ગુરુભગવંતની અતિસાત્ત્વિક, સચોટ જિનવાણીમાં ભીંજાઈ સંયમજીવનનો રસાસ્વાદ માણવાની આપની ભાવનાની અમો અંતરથી અનુમોદના કરીએ છીએ.
+
               </p>
               
               {/* OK Button */}
@@ -681,5 +835,5 @@ export default function SpiritualForm() {
         </div>
       )}
     </div>
-  )
+  );
 }
