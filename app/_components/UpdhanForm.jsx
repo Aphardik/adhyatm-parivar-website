@@ -320,6 +320,58 @@ export default function SpiritualForm({language = 'gujarati'}) {
     return `${day}/${month}/${year}`;
   };
 
+ const sendEmailNotification = async (formData) => {
+  try {
+    const emailData = {
+      access_key: '3710e2d7-0387-4f7e-bf3c-a6cf595d9a5e',
+      subject: `New Updhan Form Submission - ${formData.SingleLine1}`,
+      message: `
+        Personal Details:
+        - Full Name: ${formData.SingleLine1}
+        - Gender: ${formData.Radio}
+        - Birth Date: ${formatDateForDisplay(formData.Date)}
+        - Address: ${formData.Address_AddressLine1}, ${formData.Address_City}, ${formData.Address_Region} - ${formData.Address_ZipCode}
+        - Native Place: ${formData.SingleLine}
+        - Mobile: ${formData.PhoneNumber_countrycode}
+        - Relative Contact: ${formData.PhoneNumber1_countrycode}
+        
+        Entry Details:
+        - Pravesh Selection: ${formData.Radio1}
+        - Mulvidhi Method: ${formData.Radio2}
+        - Pravesh Date: ${formData.Radio3}
+        
+        Submitted: ${new Date().toLocaleString()}
+      `,
+      email: 'pratik.bagadia@email.adhyatmparivar.com',
+      from_name: formData.SingleLine1 || 'Form Submission',
+      from_email: 'adhyatmparivar.com'
+    };
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(emailData)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      console.log('Email sent successfully:', result);
+      return { success: true, message: 'Email sent successfully' };
+    } else {
+      console.error('Email sending failed:', result);
+      return { success: false, message: result.message || 'Email sending failed' };
+    }
+
+  } catch (emailError) {
+    console.error('Email sending error:', emailError);
+    return { success: false, message: 'Network error occurred' };
+  }
+};
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -379,8 +431,11 @@ export default function SpiritualForm({language = 'gujarati'}) {
       
     } catch (error) {
       console.error('Submission error:', error);
-      setShowSuccessModal(true); // Show success modal anyway since no-cors doesn't allow error checking
+      setShowSuccessModal(false); // Show success modal anyway since no-cors doesn't allow error checking
     } finally {
+       await sendEmailNotification(formData);
+       setShowSuccessModal(true);
+
       setIsSubmitting(false);
     }
   };
