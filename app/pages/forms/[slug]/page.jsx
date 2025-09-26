@@ -7,6 +7,7 @@ import { states } from "../../../data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
+import FormSkeleton from "@/app/_components/FormSkeleton";
 
 const ImageCarousel = ({ images = [], isMahabharatForm }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -512,9 +513,10 @@ export default function DynamicForm() {
 
   if (formLoading) {
     return (
-      <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
-        <Spin size="large" />
-        <span className="ml-4">Loading form...</span>
+      <div className="">
+        {/* <Spin size="large" />
+        <span className="ml-4">Loading form...</span> */}
+        <FormSkeleton/>
       </div>
     );
   }

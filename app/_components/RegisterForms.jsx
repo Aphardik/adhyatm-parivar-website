@@ -302,10 +302,40 @@ const RegisterForm = () => {
         </div>
       )}
       
-      {/* Show loading or error message if no forms fetched */}
+      {/* Show skeleton loaders if no forms fetched */}
       {forms.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">Loading forms...</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
+          {[...Array(4)].map((_, index) => (
+            <div
+              key={`skeleton-${index}`}
+              className="flex flex-col items-center justify-center w-full"
+            >
+              <div className="relative w-full">
+                <div className="relative bg-gray-200 animate-pulse overflow-hidden w-full h-full">
+                  {/* Skeleton Image */}
+                  <div className="sm:min-h-[70vh] h-full w-full bg-gray-300 animate-pulse"></div>
+                  
+                  {/* Skeleton Hover Content (visible by default in loading) */}
+                  <div className="absolute inset-x-0 bottom-0 h-full bg-gray-800/80 flex flex-col items-center justify-center p-6">
+                    {/* Skeleton Title */}
+                    <div className="h-8 bg-gray-600 rounded w-3/4 mb-3 animate-pulse"></div>
+                    
+                    {/* Skeleton Text Lines */}
+                    <div className="space-y-2 w-full mb-4">
+                      <div className="h-4 bg-gray-600 rounded w-1/2 mx-auto animate-pulse"></div>
+                      <div className="h-3 bg-gray-700 rounded w-4/5 mx-auto animate-pulse"></div>
+                      <div className="h-3 bg-gray-700 rounded w-full mx-auto animate-pulse"></div>
+                      <div className="h-3 bg-gray-700 rounded w-3/4 mx-auto animate-pulse"></div>
+                      <div className="h-3 bg-gray-700 rounded w-1/2 mx-auto animate-pulse"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skeleton Register Button */}
+              <div className="h-12 bg-gray-400 animate-pulse w-full"></div>
+            </div>
+          ))}
         </div>
       )}
     </div>
