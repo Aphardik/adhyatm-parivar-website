@@ -349,9 +349,9 @@ const EventPage = () => {
             </div>
           </div>
         </div>
-   <div className='flex flex-col sm:flex-row items-center justify-between'>
+   <div className='flex max-w-3xl flex-col mx-auto sm:flex-row items-center justify-between'>
     <div className="mt-8">
-          <div className="bg-lightpink p-4 rounded-sm shadow-md">
+          <div className="bg-lightpink w-72 h-36 flex flex-col items-center justify-center p-4 rounded-sm shadow-md">
             <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
              {currentContent.sponsor.title}
             </h1>
@@ -360,7 +360,7 @@ const EventPage = () => {
           </div>
         </div>
         <div className="mt-8">
-          <div className="bg-lightpink p-4 rounded-sm shadow-md">
+          <div className="bg-lightpink w-72 h-36 flex flex-col items-center justify-center  p-4 rounded-sm shadow-md">
             <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
               {currentContent.organizer.title}
             </h1>
