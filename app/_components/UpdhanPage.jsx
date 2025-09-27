@@ -101,7 +101,7 @@ const EventPage = () => {
         title: "विशेष सूचना",
         notices: [
           "उपधान तप में प्रवेश स्नान करके, प्रभुपूजा करके करना है इसलिए पूजा के वस्त्र साथ लाना।",
-          "प्रवेश के दिन नाण के सामने नंदी की क्रिया के लिए श्रीफल, १.२५ किलो चावल और यथाशक्ति रूपानाणा साथ लाना।",
+          "प्रवेश के दिन नाण के सामने नंदी की क्रिया के लिए श्रीफल, १.२५ किलो चावल और यथाशक्ति चांदी-रुपए आदि द्रव्य साथ लाना।",
           "उपधान में अढ़ारिया के प्रवेश के बाद तीन दिन तक ही कोई भी उपकरण ले सकेंगे, बाद में नहीं ले सकेंगे।",
           "ठंड के हिसाब से अपनी आवश्यकता के अनुसार ओढ़ने-बिछाने की सामग्री लेकर आवें।",
           "किसी भी प्रकार की जोखम साथ में लेकर न आवें।",
@@ -341,7 +341,7 @@ const EventPage = () => {
             </div>
           </div>
         </div>
-
+   <div className='flex flex-col sm:flex-row items-center justify-between'></div>
         <div className="mt-8">
           <div className="bg-lightpink p-4 rounded-sm shadow-md">
             <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
@@ -349,6 +349,15 @@ const EventPage = () => {
             </h1>
             <p className='font-bold text-lg md:text-xl text-center text-gray-700'>{currentContent.organizer.name}</p>
             <p className='font-bold text-base md:text-lg text-center text-gray-700'>{currentContent.organizer.phone}</p>
+          </div>
+        </div>
+        <div className="mt-8">
+          <div className="bg-lightpink p-4 rounded-sm shadow-md">
+            <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
+              निमंत्रक
+            </h1>
+            <p className='font-bold text-lg md:text-xl text-center text-gray-700'>विविध उदारदिल लाभार्थी</p>
+            {/* <p className='font-bold text-base md:text-lg text-center text-gray-700'>{currentContent.organizer.phone}</p> */}
           </div>
         </div>
       </div>
