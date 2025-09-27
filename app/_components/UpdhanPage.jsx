@@ -64,6 +64,10 @@ const EventPage = () => {
         title: "આયોજક",
         name: "અધ્યાત્મ પરિવાર",
         phone: "844 844 40 50"
+      },
+      sponsor: {
+        title: "નિમંત્રક",
+        name: "વિવિધ ઉદારદિલ લાભાર્થી",
       }
     },
     hindi: {
@@ -117,6 +121,10 @@ const EventPage = () => {
         title: "आयोजक",
         name: "अध्यात्म परिवार",
         phone: "844 844 40 50"
+      },
+      sponsor: {
+        title: "निमंत्रक",
+        name: "विविध उदारदिल लाभार्थी",
       }
     }
   };
@@ -341,7 +349,16 @@ const EventPage = () => {
             </div>
           </div>
         </div>
-   <div className='flex flex-col sm:flex-row items-center justify-between'></div>
+   <div className='flex flex-col sm:flex-row items-center justify-between'>
+    <div className="mt-8">
+          <div className="bg-lightpink p-4 rounded-sm shadow-md">
+            <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
+             {currentContent.sponsor.title}
+            </h1>
+            <p className='font-bold text-lg md:text-xl text-center text-gray-700'>{currentContent.sponsor.name} </p>
+            {/* <p className='font-bold text-base md:text-lg text-center text-gray-700'>{currentContent.organizer.phone}</p> */}
+          </div>
+        </div>
         <div className="mt-8">
           <div className="bg-lightpink p-4 rounded-sm shadow-md">
             <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
@@ -351,15 +368,8 @@ const EventPage = () => {
             <p className='font-bold text-base md:text-lg text-center text-gray-700'>{currentContent.organizer.phone}</p>
           </div>
         </div>
-        <div className="mt-8">
-          <div className="bg-lightpink p-4 rounded-sm shadow-md">
-            <h1 className='font-bold text-lg md:text-2xl text-center text-gray-800'>
-              निमंत्रक
-            </h1>
-            <p className='font-bold text-lg md:text-xl text-center text-gray-700'>विविध उदारदिल लाभार्थी</p>
-            {/* <p className='font-bold text-base md:text-lg text-center text-gray-700'>{currentContent.organizer.phone}</p> */}
-          </div>
         </div>
+       
       </div>
     </div>
   );
