@@ -281,7 +281,7 @@ const RegisterForm = () => {
             {/* Register / Out of Stock - only shows if form.show is true */}
             {form.active ? (
               <Link
-                href={`/pages/forms/${form.slug}`}
+                href={`/pages/forms?form=${form.slug}`}
                 className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold hover:bg-[#02055a] transition-colors duration-200"
               >
                 Register

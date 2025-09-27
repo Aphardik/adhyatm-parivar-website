@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Row, Col, message, Spin, Select, Radio, InputNumber } from "antd";
 import axios from "axios";
-import { useRouter, useParams } from "next/navigation";
-import { states } from "../../../data/states";
+import { useRouter, useSearchParams } from "next/navigation";
+import { states } from "../data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
@@ -70,7 +70,6 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
                 src={image}
                 alt={`Slide ${index + 1}`}
                 className={`object-contain h-[60vh] ${isMahabharatForm ? 'sm:min-h-[70vh]' : 'sm:h-full'}   w-full mx-auto`}
-                // style={{ aspectRatio: "2/3" }}
               />
             </div>
           </div>
@@ -243,12 +242,17 @@ export default function DynamicForm() {
                          formData?.title?.toLowerCase().includes('મહાભારત');
   
   const router = useRouter();
-  const params = useParams();
-  const formSlug = params.slug; // Get slug from URL
+  const searchParams = useSearchParams();
+  const formSlug = searchParams.get('form'); // Get form slug from query parameter
 
   // Fetch form configuration from API
   useEffect(() => {
     const fetchFormData = async () => {
+      if (!formSlug) {
+        setFormLoading(false);
+        return;
+      }
+
       try {
         setFormLoading(true);
         const response = await axios.get(
@@ -263,9 +267,7 @@ export default function DynamicForm() {
       }
     };
 
-    if (formSlug) {
-      fetchFormData();
-    }
+    fetchFormData();
   }, [formSlug]);
 
   const renderField = (fieldName, fieldConfig) => {
@@ -511,16 +513,28 @@ export default function DynamicForm() {
     router.push("/");
   };
 
+  // Show loading skeleton while fetching form data
   if (formLoading) {
     return (
       <div className="">
-        {/* <Spin size="large" />
-        <span className="ml-4">Loading form...</span> */}
         <FormSkeleton/>
       </div>
     );
   }
 
+  // Show error if no form slug is provided in query
+  if (!formSlug) {
+    return (
+      <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-600 mb-4">Form Parameter Missing</h2>
+          <p className="text-gray-500">Please provide a form parameter in the URL like: /pages/form?form=your-form-slug</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error if form data couldn't be loaded
   if (!formData) {
     return (
       <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
@@ -617,7 +631,6 @@ export default function DynamicForm() {
                         label={
                           <span className="font-anek font-bold text-gray-700 text-base flex items-center gap-2">
                             આપને મહાભારત પુસ્તક ના ૫ ભાગનો આખો સેટ જરૂર છે કે પછી ફક્ત પહેલો ભાગ?
-                            {/* <span className="text-red-400">*</span> */}
                           </span>
                         }
                         name="set/part-1"
