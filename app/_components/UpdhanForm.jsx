@@ -323,7 +323,7 @@ export default function SpiritualForm({language = 'gujarati'}) {
  const sendEmailNotification = async (formData) => {
   try {
     const emailData = {
-      access_key: '409ae609-b2b6-483c-9d43-f4ec3958e11d',
+      access_key: '3ec4f9d8-d315-460e-a811-1c94d1f3a9fc',
       subject: `New Updhan Form Submission - ${formData.SingleLine1}`,
       message: `
         Personal Details:
