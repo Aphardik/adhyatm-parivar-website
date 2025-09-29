@@ -236,10 +236,14 @@ export default function DynamicForm() {
   const [formData, setFormData] = useState(null);
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupStatus, setPopupStatus] = useState("loading");
+  const [generatedID, setGeneratedID] = useState(null);
 
   const isMahabharatForm = formData?.slug === 'mahabharat' || 
                          formData?.title?.toLowerCase().includes('mahabharat') ||
                          formData?.title?.toLowerCase().includes('મહાભારત');
+
+                         const thanksMessageTitle = formData?.tqmsg || "Thank You!";
+                         const thanksMessageDescription = formData?.tqmsg_description || "Form submitted successfully!";
   
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -478,7 +482,9 @@ export default function DynamicForm() {
     try {
       setLoading(true);
       const response = await axios.post(formData.link, values);
-
+      console.log(response,"response")
+      const generatedID = response.data.registrationId || null; // Adjust based on actual response structure
+      setGeneratedID(generatedID);
       if (response.status === 200) {
         setPopupStatus("success");
         console.log("Response sent successfully:", response.data);
@@ -724,7 +730,9 @@ export default function DynamicForm() {
         status={popupStatus}
         onClose={handlePopupClose}
         onSuccess={handleSuccessOk}
-        title="Form Submission"
+        generatedID= {generatedID}
+        title={thanksMessageTitle}
+        desc={thanksMessageDescription}
         loadingText="Submitting your form..."
         successText={formData?.tqmsg || "Form submitted successfully!"}
         errorText="Failed to submit form. Please try again."

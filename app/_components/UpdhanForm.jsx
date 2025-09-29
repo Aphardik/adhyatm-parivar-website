@@ -330,7 +330,7 @@ export default function SpiritualForm({language = 'gujarati'}) {
         - Full Name: ${formData.SingleLine1}
         - Gender: ${formData.Radio}
         - Birth Date: ${formatDateForDisplay(formData.Date)}
-        - Address: ${formData.Address_AddressLine1}, ${formData.Address_City}, ${formData.Address_Region} - ${formData.Address_ZipCode}
+        - Address: ${formData.Address_AddressLine1},${formData.Address_AddressLine2}, ${formData.Address_City}, ${formData.Address_Region} - ${formData.Address_ZipCode}
         - Native Place: ${formData.SingleLine}
         - Mobile: ${formData.PhoneNumber_countrycode}
         - Relative Contact: ${formData.PhoneNumber1_countrycode}
