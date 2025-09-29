@@ -237,6 +237,7 @@ export default function DynamicForm() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupStatus, setPopupStatus] = useState("loading");
   const [generatedID, setGeneratedID] = useState(null);
+  const [candidateName, setCandidateName] = useState("");
 
   const isMahabharatForm = formData?.slug === 'mahabharat' || 
                          formData?.title?.toLowerCase().includes('mahabharat') ||
@@ -477,6 +478,11 @@ export default function DynamicForm() {
       values.નકલ = copies;
     }
 
+    const name = values["नाम"] || "";
+const surname = values["उपनाम"] || "";
+const fullName = `${name} ${surname}`.trim();
+setCandidateName(fullName);
+
     console.log("Form values: ", values);
 
     try {
@@ -505,17 +511,20 @@ export default function DynamicForm() {
 
   const onReset = () => {
     form.resetFields();
+    setCandidateName("");
     setCopies(1);
   };
 
   const handlePopupClose = () => {
     setPopupVisible(false);
+    setCandidateName("");
     setPopupStatus("loading");
   };
 
   const handleSuccessOk = () => {
     setPopupVisible(false);
     setPopupStatus("loading");
+    setCandidateName("");
     router.push("/");
   };
 
@@ -728,6 +737,7 @@ export default function DynamicForm() {
       <SubmissionPopup
         visible={popupVisible}
         status={popupStatus}
+         candidateName={candidateName}
         onClose={handlePopupClose}
         onSuccess={handleSuccessOk}
         generatedID= {generatedID}

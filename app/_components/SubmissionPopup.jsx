@@ -127,6 +127,7 @@ const SubmissionPopup = ({
   visible, 
   status, 
   onClose, 
+  candidateName='user',
   onSuccess,
   title = "Tq",
   desc = "Form Submitted Successfully",
@@ -182,7 +183,7 @@ const SubmissionPopup = ({
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">ધન્યવાદ !</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">ધન્યવાદ ! {candidateName}</h2>
             <p className="text-gray-600 font-semibold text-lg mb-6">{title}</p>
 
             {/* Registration ID Card */}
