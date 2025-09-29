@@ -231,7 +231,22 @@ const RegisterForm = () => {
       try {
         const res = await fetch("https://apformgenerator.netlify.app/api/forms");
         const data = await res.json();
-        setForms(data);
+        
+        // Sort forms by order field (ascending), with null/undefined values at the end
+        const sortedData = data.sort((a, b) => {
+          // If both have order values, sort normally
+          if (a.order !== null && a.order !== undefined && b.order !== null && b.order !== undefined) {
+            return a.order - b.order;
+          }
+          // If only a has order, it comes first
+          if (a.order !== null && a.order !== undefined) return -1;
+          // If only b has order, it comes first
+          if (b.order !== null && b.order !== undefined) return 1;
+          // If neither has order, sort by created_at (newest first)
+          return new Date(b.created_at) - new Date(a.created_at);
+        });
+        
+        setForms(sortedData);
       } catch (err) {
         console.error("Error fetching forms:", err);
       }
