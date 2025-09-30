@@ -57,7 +57,6 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="relative flex items-center justify-center w-full h-full"
     >
-      {/* Slides */}
       <div className={`relative ${multiImages && 'my-36'}  sm:my-0 h-full  w-full flex items-center justify-center`}>
         {images.map((image, index) => (
           <div
@@ -76,7 +75,6 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
         ))}
       </div>
 
-      {/* Navigation Arrows - Show only if multiple images */}
       {images.length > 1 && (
         <>
           <button
@@ -94,7 +92,6 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
         </>
       )}
 
-      {/* Dots Navigation - Show only if multiple images */}
       {images.length > 1 && (
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {images.map((_, index) => (
@@ -109,6 +106,68 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
           ))}
         </div>
       )}
+    </div>
+  );
+};
+
+const QuantitySelector = ({ value, onChange }) => {
+  const handleDecrement = () => {
+    const newValue = Math.max(0, value - 1);
+    onChange?.(newValue);
+  };
+
+  const handleIncrement = () => {
+    const newValue = value + 1;
+    onChange?.(newValue);
+  };
+
+  return (
+    <div className="flex items-center space-x-3">
+      <button
+        type="button"
+        onClick={handleDecrement}
+        disabled={value === 0}
+        className="p-2 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+
+      <span className="text-base font-semibold min-w-[30px] text-center">
+        {value}
+      </span>
+
+      <button
+        type="button"
+        onClick={handleIncrement}
+        className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-all"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
     </div>
   );
 };
@@ -216,7 +275,7 @@ const CopyInputField = ({
         ]}
       >
         <InputNumber
-        style={{ width: '100%' }}
+          style={{ width: '100%' }}
           className="w-full rounded-md"
           placeholder="Enter number of copies"
           value={value}
@@ -238,19 +297,27 @@ export default function DynamicForm() {
   const [popupStatus, setPopupStatus] = useState("loading");
   const [generatedID, setGeneratedID] = useState(null);
   const [candidateName, setCandidateName] = useState("");
+  
+  // State for multiple book quantities (sanskrutam-saralam form)
+  const [bookQuantities, setBookQuantities] = useState({
+    pratham_yatra: 0,
+    dwitiy_yatra: 0,
+    dhatunaamrup_shreni: 0,
+  });
 
   const isMahabharatForm = formData?.slug === 'mahabharat' || 
                          formData?.title?.toLowerCase().includes('mahabharat') ||
                          formData?.title?.toLowerCase().includes('મહાભારત');
 
-                         const thanksMessageTitle = formData?.tqmsg || "Thank You!";
-                         const thanksMessageDescription = formData?.tqmsg_description || "Form submitted successfully!";
+  const isSanskrutamSaralamForm = formData?.slug === 'sanskrutam-saralam';
+
+  const thanksMessageTitle = formData?.tqmsg || "Thank You!";
+  const thanksMessageDescription = formData?.tqmsg_description || "Form submitted successfully!";
   
   const router = useRouter();
   const searchParams = useSearchParams();
-  const formSlug = searchParams.get('form'); // Get form slug from query parameter
+  const formSlug = searchParams.get('form');
 
-  // Fetch form configuration from API
   useEffect(() => {
     const fetchFormData = async () => {
       if (!formSlug) {
@@ -274,6 +341,18 @@ export default function DynamicForm() {
 
     fetchFormData();
   }, [formSlug]);
+
+  // Handle book quantity changes for sanskrutam-saralam form
+  const handleQuantityChange = (bookName, value) => {
+    setBookQuantities(prev => ({
+      ...prev,
+      [bookName]: value
+    }));
+    // Update form field values
+    form.setFieldsValue({
+      [bookName]: value
+    });
+  };
 
   const renderField = (fieldName, fieldConfig) => {
     const fieldMapping = {
@@ -419,53 +498,15 @@ export default function DynamicForm() {
         ],
         component: <Input className="rounded-md" placeholder="Age" />,
       },
-       parts: {
-        key: "set/part-1",
-        label: "આપને મહાભારત પુસ્તક ના ૫ ભાગનો આખો સેટ જરૂર છે કે પછી ફક્ત પહેલો ભાગ?",
-        placeholder: "",
-        icon: "📚",
-        rules: [
-          {
-            required: true,
-            message: <span style={{ fontSize: "12px" }}>Please select an option!</span>,
-          },
-        ],
-        component: (
-          <div className="mt-3">
-            <Radio.Group className="w-full">
-              <div className="space-y-3">
-                <div className="p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200">
-                  <Radio value="ભાગ ૧ થી ૫ નો સેટ" className="font-anek text-gray-700">
-                    <div className="ml-2">
-                      <span className="font-anek font-medium text-gray-800">ભાગ ૧ થી ૫ નો સેટ</span>
-                      <p className="text-sm text-gray-600 mt-1">Complete 5-part Mahabharat collection</p>
-                    </div>
-                  </Radio>
-                </div>
-                <div className="p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200">
-                  <Radio value="ફક્ત ભાગ - ૧" className="font-anek text-gray-700">
-                    <div className="ml-2">
-                      <span className="font-anek font-medium text-gray-800">ફક્ત ભાગ - ૧</span>
-                      <p className="text-sm text-gray-600 mt-1">Only the first part</p>
-                    </div>
-                  </Radio>
-                </div>
-              </div>
-            </Radio.Group>
-          </div>
-        ),
-      },
     };
 
     return fieldMapping[fieldName] || null;
   };
 
-  // Helper function to check if form has active date constraints
   const hasActiveDateConstraints = () => {
     return formData?.active_from && formData?.active_to;
   };
 
-  // Helper function to check if copies should use input field vs increment/decrement
   const shouldUseInputField = () => {
     return !formData?.no_of_copies || formData?.no_of_copies === 0;
   };
@@ -474,27 +515,42 @@ export default function DynamicForm() {
     setPopupVisible(true);
     setPopupStatus("loading");
     
-    if (formData?.show_copies) {
+    // Handle copies for non-sanskrutam-saralam forms
+    if (formData?.show_copies && !isSanskrutamSaralamForm) {
       values.નકલ = copies;
     }
 
+    // Handle book quantities for sanskrutam-saralam form
+    if (isSanskrutamSaralamForm) {
+      values.pratham_yatra = bookQuantities.pratham_yatra;
+      values.dwitiy_yatra = bookQuantities.dwitiy_yatra;
+      values.dhatunaamrup_shreni = bookQuantities.dhatunaamrup_shreni;
+    }
+
     const name = values["नाम"] || "";
-const surname = values["उपनाम"] || "";
-const fullName = `${name} ${surname}`.trim();
-setCandidateName(fullName);
+    const surname = values["उपनाम"] || "";
+    const fullName = `${name} ${surname}`.trim();
+    setCandidateName(fullName);
 
     console.log("Form values: ", values);
 
     try {
       setLoading(true);
       const response = await axios.post(formData.link, values);
-      console.log(response,"response")
-      const generatedID = response.data.registrationId || null; // Adjust based on actual response structure
+      console.log(response, "response");
+      const generatedID = response.data.registrationId || null;
       setGeneratedID(generatedID);
       if (response.status === 200) {
         setPopupStatus("success");
         console.log("Response sent successfully:", response.data);
         form.resetFields();
+        if (isSanskrutamSaralamForm) {
+          setBookQuantities({
+            pratham_yatra: 0,
+            dwitiy_yatra: 0,
+            dhatunaamrup_shreni: 0,
+          });
+        }
       } else {
         console.log("Unexpected response status:", response.status);
         setPopupStatus("error");
@@ -513,6 +569,13 @@ setCandidateName(fullName);
     form.resetFields();
     setCandidateName("");
     setCopies(1);
+    if (isSanskrutamSaralamForm) {
+      setBookQuantities({
+        pratham_yatra: 0,
+        dwitiy_yatra: 0,
+        dhatunaamrup_shreni: 0,
+      });
+    }
   };
 
   const handlePopupClose = () => {
@@ -528,7 +591,6 @@ setCandidateName(fullName);
     router.push("/");
   };
 
-  // Show loading skeleton while fetching form data
   if (formLoading) {
     return (
       <div className="">
@@ -537,7 +599,6 @@ setCandidateName(fullName);
     );
   }
 
-  // Show error if no form slug is provided in query
   if (!formSlug) {
     return (
       <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
@@ -549,7 +610,6 @@ setCandidateName(fullName);
     );
   }
 
-  // Show error if form data couldn't be loaded
   if (!formData) {
     return (
       <div className="min-h-screen w-full flex items-center justify-center bg-gray-100">
@@ -561,7 +621,6 @@ setCandidateName(fullName);
     );
   }
 
-  // Check if form is active - Updated logic
   let isFormActive = formData.active;
   
   if (hasActiveDateConstraints()) {
@@ -582,7 +641,6 @@ setCandidateName(fullName);
     );
   }
 
-  // Group fields into rows
   const fieldsToRender = formData.fields.filter(field => field !== 'copies');
   const fieldRows = [];
   for (let i = 0; i < fieldsToRender.length; i += 2) {
@@ -638,7 +696,7 @@ setCandidateName(fullName);
                   </Row>
                 ))}
 
-                {/* Mahabharat Parts Selection - Show only for Mahabharat forms */}
+                {/* Mahabharat Parts Selection */}
                 {isMahabharatForm && (
                   <Row gutter={[16, 16]}>
                     <Col xs={24}>
@@ -682,8 +740,61 @@ setCandidateName(fullName);
                   </Row>
                 )}
 
-                {/* Copies Selector - Show in its own row if enabled */}
-                {formData.show_copies && (
+                {/* Book Quantity Selection - Only for sanskrutam-saralam */}
+                {isSanskrutamSaralamForm && (
+                  <Row>
+                    <Col xs={24}>
+                      <div className="mb-6">
+                        <b className="font-anek text-sm mb-4 block">
+                          આપને પુસ્તકની કેટલી નકલની આવશ્યકતા છે ?    
+                        </b>
+                        
+                        <div className="grid sm:grid-cols-3 gap-4">
+                          {/* Book 1 */}
+                          <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
+                            <span className="font-anek font-medium block mb-3">પ્રથમા યાત્રા</span>
+                            <QuantitySelector
+                              value={bookQuantities.pratham_yatra}
+                              onChange={(value) => handleQuantityChange('pratham_yatra', value)}
+                            />
+                          </div>
+
+                          {/* Book 2 */}
+                          <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
+                            <span className="font-anek font-medium block mb-3">દ્વિતીયા યાત્રા</span>
+                            <QuantitySelector
+                              value={bookQuantities.dwitiy_yatra}
+                              onChange={(value) => handleQuantityChange('dwitiy_yatra', value)}
+                            />
+                          </div>
+
+                          {/* Book 3 */}
+                          <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
+                            <span className="font-anek font-medium block mb-3">ધાતુનામરૂપશ્રેણિઃ</span>
+                            <QuantitySelector
+                              value={bookQuantities.dhatunaamrup_shreni}
+                              onChange={(value) => handleQuantityChange('dhatunaamrup_shreni', value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Hidden form fields to store quantities */}
+                      <Form.Item name="pratham_yatra" style={{ display: 'none' }}>
+                        <Input type="hidden" />
+                      </Form.Item>
+                      <Form.Item name="dwitiy_yatra" style={{ display: 'none' }}>
+                        <Input type="hidden" />
+                      </Form.Item>
+                      <Form.Item name="dhatunaamrup_shreni" style={{ display: 'none' }}>
+                        <Input type="hidden" />
+                      </Form.Item>
+                    </Col>
+                  </Row>
+                )}
+
+                {/* Copies Selector - Show for other forms (not sanskrutam-saralam) */}
+                {formData.show_copies && !isSanskrutamSaralamForm && (
                   <Row gutter={16}>
                     <Col xs={24} md={24}>
                       {shouldUseInputField() ? (
@@ -737,10 +848,10 @@ setCandidateName(fullName);
       <SubmissionPopup
         visible={popupVisible}
         status={popupStatus}
-         candidateName={candidateName}
+        candidateName={candidateName}
         onClose={handlePopupClose}
         onSuccess={handleSuccessOk}
-        generatedID= {generatedID}
+        generatedID={generatedID}
         title={thanksMessageTitle}
         desc={thanksMessageDescription}
         loadingText="Submitting your form..."
