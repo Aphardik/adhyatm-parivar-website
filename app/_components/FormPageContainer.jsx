@@ -110,14 +110,14 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
   );
 };
 
-const QuantitySelector = ({ value, onChange }) => {
+const QuantitySelector = ({ value, onChange, max = 5 }) => {
   const handleDecrement = () => {
     const newValue = Math.max(0, value - 1);
     onChange?.(newValue);
   };
 
   const handleIncrement = () => {
-    const newValue = value + 1;
+    const newValue = Math.min(max, value + 1);
     onChange?.(newValue);
   };
 
@@ -151,7 +151,8 @@ const QuantitySelector = ({ value, onChange }) => {
       <button
         type="button"
         onClick={handleIncrement}
-        className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-all"
+        disabled={value === max}
+        className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -520,11 +521,17 @@ export default function DynamicForm() {
       values.નકલ = copies;
     }
 
-    // Handle book quantities for sanskrutam-saralam form
+    // Handle book quantities for sanskrutam-saralam form as nested object
     if (isSanskrutamSaralamForm) {
-      values.pratham_yatra = bookQuantities.pratham_yatra;
-      values.dwitiy_yatra = bookQuantities.dwitiy_yatra;
-      values.dhatunaamrup_shreni = bookQuantities.dhatunaamrup_shreni;
+      values.book_quantities = {
+        pratham_yatra: bookQuantities.pratham_yatra,
+        dwitiy_yatra: bookQuantities.dwitiy_yatra,
+        dhatunaamrup_shreni: bookQuantities.dhatunaamrup_shreni
+      };
+      // Remove individual fields if they exist
+      delete values.pratham_yatra;
+      delete values.dwitiy_yatra;
+      delete values.dhatunaamrup_shreni;
     }
 
     const name = values["नाम"] || "";
