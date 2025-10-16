@@ -12,8 +12,10 @@ const Header = () => {
   const [expandedMobileSection, setExpandedMobileSection] = useState(null);
   const timeoutRef = useRef(null);
   const pathname = usePathname();
+  const trimmedPath = pathname.replace(/^\/pages/, "");
   // console.log(pathname,"pathname")
     const isUpdhanPage = pathname.includes("updhan-18");
+    const isMembershipPage = pathname.includes("membership");
 
 
   const handleMouseEnter = (dropdown) => {
@@ -457,7 +459,7 @@ const Header = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {activeDropdown &&
                 dropdownItems[activeDropdown]?.map((item, index) => {
-                  const isActive = item.link === pathname;
+                  const isActive = item.link === pathname || item.link === trimmedPath;
                   return (
                     <Link
                       href={item.link}
@@ -565,7 +567,7 @@ const Header = () => {
                     key={item.id}
                     onClick={handleMenuItemClick}
                     className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-maroon text-white"
+                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu1"
                         ? "translate-x-0 opacity-100"
@@ -618,7 +620,7 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-maroon text-white"
+                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu2"
                         ? "translate-x-0 opacity-100"
@@ -671,7 +673,7 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-maroon text-white"
+                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu3"
                         ? "translate-x-0 opacity-100"
@@ -724,7 +726,7 @@ const Header = () => {
                     onClick={handleMenuItemClick}
                     key={item.id}
                     className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname && "bg-maroon text-white"
+                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
                     } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
                       expandedMobileSection === "menu4"
                         ? "translate-x-0 opacity-100"
@@ -758,7 +760,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-{  !isUpdhanPage &&  <NoticeHeader />}
+{  !isUpdhanPage && !isMembershipPage &&  <NoticeHeader />}
     </div>
   );
 };

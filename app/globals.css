@@ -187,3 +187,7 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
       opacity: 0;
     }
   }
+
+  .ant-form-item-label > label {
+  font-family: "Anek Gujarati", serif !important;
+}

@@ -8,8 +8,10 @@ import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
 import FormSkeleton from "@/app/_components/FormSkeleton";
+import HexagonalSvg from "./HexagonalSvg";
+import HeaderSvg from "./HeaderSvg";
 
-const ImageCarousel = ({ images = [], isMahabharatForm }) => {
+const ImageCarousel = ({ images = [], isMahabharatForm, formDescription, formHeading }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [multiImages, setMultiImages] = useState(images.length > 1);
@@ -57,7 +59,17 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="relative flex items-center justify-center w-full h-full"
     >
-      <div className={`relative ${multiImages && 'my-36'}  sm:my-0 h-full  w-full flex items-center justify-center`}>
+      <div className={`relative ${multiImages && 'my-36'}  sm:my-0 h-full  w-full flex flex-col items-center justify-center`}>
+        {/* <div className="text-center w-full mb-3 bg-gray-700">
+        <div className="px-4">
+          <h1 className="font-anek text-base mt-4 sm:mt-0 sm:pt-3 sm:text-lg lg:text-2xl font-bold  bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+            {formHeading}
+          </h1>
+        </div>
+        {formDescription && (
+          <p className="text-gray-600 mb-2 font-anek">{formDescription}</p>
+        )}
+      </div> */}
         {images.map((image, index) => (
           <div
             key={index}
@@ -68,7 +80,7 @@ const ImageCarousel = ({ images = [], isMahabharatForm }) => {
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className={`object-contain h-[60vh] ${isMahabharatForm ? 'sm:min-h-[70vh]' : 'sm:h-full'}   w-full mx-auto`}
+                className={`object-contain h-[40vh] ${isMahabharatForm ? 'sm:min-h-[70vh]' : 'sm:h-full'}   w-full mx-auto`}
               />
             </div>
           </div>
@@ -655,8 +667,8 @@ export default function DynamicForm() {
   }
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center py-0 md:py-8 bg-gray">
-      <div className="text-center mb-6 sm:mb-10">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center py-4 md:py-8 ">
+      {/* <div className="text-center mb-6 sm:mb-10">
         <div className="inline-block px-4">
           <h1 className="font-anek text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
             {formData.title}
@@ -666,20 +678,33 @@ export default function DynamicForm() {
         {formData.description && (
           <p className="text-gray-600 mt-2 font-anek">{formData.description}</p>
         )}
-      </div>
+      </div> */}
 
       <div className="container mx-auto max-w-6xl">
-        <div className="bg-white overflow-hidden">
-          <div className="grid grid-cols-1 gap-12 sm:gap-6 lg:grid-cols-2">
+        <div style={{backgroundImage:"url('./formpatternbg2.jpg')",backgroundSize:"contain"}} className="overflow-hidden">
+           <div className="text-center bg-lightpink">
+        <div className="inline-block px-4">
+          <h1 className="font-anek text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+            {formData.title}
+          </h1>
+          {/* <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div> */}
+        </div>
+        {formData.description && (
+          <p className="text-gray-600 mt-2 font-anek">{formData.description}</p>
+        )}
+      </div>
+         <div className="grid grid-cols-1 lg:grid-cols-5 p-4 sm:p-8 gap-8">
+            
             {/* Image Section */}
-            <div className=" flex items-center justify-center h-full">
+            <div className="lg:col-span-2 flex items-center justify-center">
               <div className="h-full w-full">
-                <ImageCarousel isMahabharatForm={isMahabharatForm} images={formData.thumbnails} />
+                <ImageCarousel formHeading={formData.title} formDescription={formData.description} isMahabharatForm={isMahabharatForm} images={formData.thumbnails} />
               </div>
             </div>
 
             {/* Form Section */}
-            <div className="relative p-6 bg-gray-100">
+             <div className="lg:col-span-3 relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
+             
               <Form form={form} layout="vertical" onFinish={onFinish}>
                 {/* Dynamic Fields */}
                 {fieldRows.map((row, rowIndex) => (

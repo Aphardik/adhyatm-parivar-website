@@ -127,7 +127,7 @@ const Praptisthan = () => {
   return (
     <div className="min-h-screen py-8">
       {/* Header */}
-      <div className="bg-transparent text-sm sm:text-base backdrop-blur-lg shadow-md sticky mb-8 top-16 z-10">
+      <div className="bg-transparent text-sm sm:text-base backdrop-blur-lg shadow-md sticky mb-8 top-24 z-10">
         <div className="max-w-7xl flex items-center justify-between flex-col gap-2 sm:gap-0 sm:flex-row mx-auto py-3">
           {/* Tabs */}
           <div className="flex flex-col sm:flex-row gap-4">

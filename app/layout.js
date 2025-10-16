@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./_components/layouts/Header";
 import Footer from "./_components/layouts/Footer";
 import GoogleAnalytics from "./_components/googleAnalytics/GoogleAnalytics";
+// import GoogleTagManager from "./_components/googleAnalytics/GTM";
 import GoogleTrack from "./_components/googleAnalytics/GoogleTrack";
 
 const geistSans = Geist({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
           <GoogleAnalytics/>
         <GoogleTrack/>
+        {/* <GoogleTagManager/> */}
       </head>
       <body
         className="font-body bg-white"
