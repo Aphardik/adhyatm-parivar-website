@@ -7,6 +7,7 @@ import { states } from "@/app/data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
+ import { TiInfoOutline } from "react-icons/ti";
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,7 +58,7 @@ const ImageCarousel = () => {
             className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-500 ease-in-out
               ${currentSlide === index ? "opacity-100" : "opacity-0"}`}
           >
-            <div className="relative h-full   shadow-2xl max-h-[26rem] w-auto max-w-full overflow-hidden">
+            <div className="relative h-full  max-h-[30rem] w-auto max-w-full overflow-hidden">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
@@ -187,6 +188,8 @@ export default function Calendar2082Form() {
       const [popupVisible, setPopupVisible] = useState(false);
       const [popupStatus, setPopupStatus] = useState("loading");
 
+      const isOutOfStock = true; // Set to true to indicate out of stock
+
   const onFinish = async (values) => {
      setPopupVisible(true);
     setPopupStatus("loading");
@@ -197,7 +200,8 @@ export default function Calendar2082Form() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/calendar2082Form",
+        // "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/calendar2082Form",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=calendar2082",
         values
       );
 
@@ -249,9 +253,9 @@ export default function Calendar2082Form() {
 
       <div className="container mx-auto max-w-6xl">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="grid grid-cols-1  gap-12 sm:gap-0 lg:grid-cols-2">
+          <div className="grid grid-cols-1 sm:gap-0 lg:grid-cols-2">
             {/* Image Section */}
-            <div className=" pb-6 flex items-center justify-center h-[30rem]">
+            <div className="flex items-center justify-center h-[31.5rem]">
               <div className="h-full w-full">
                 <ImageCarousel />
               </div>
@@ -259,6 +263,23 @@ export default function Calendar2082Form() {
 
             {/* Form Section */}
             <div className="relative p-6 bg-white">
+
+
+ {isOutOfStock && (
+    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-30 ">
+      <div className="bg-white flex flex-col items-center justify-center gap-2 text-center p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        <TiInfoOutline color="orange" size={36} />
+       
+
+        <p className="text-red-700 font-anek font-medium text-lg leading-relaxed">
+          કૅલેન્ડરનો સ્ટોક પૂર્ણ થયેલ છે,
+          <br />
+          ફિલહાલ નવા બુકિંગ સ્વીકારી શકાશે નહીં.
+        </p>
+      </div>
+    </div>
+  )}
+
               <Form form={form} layout="vertical" onFinish={onFinish}>
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
@@ -443,14 +464,14 @@ export default function Calendar2082Form() {
                 <div className="flex mt-6 justify-between items-center">
                   <button
                     className="rounded-sm font-sans text-sm font-medium px-5 py-2 bg-red-500 text-white hover:bg-red-600 transition-colors"
-                    onClick={onReset}
+                    onClick={onReset}  disabled={isOutOfStock}
                   >
                     Reset
                   </button>
 
                   <button
                     className="rounded-sm text-sm cursor-pointer font-sans font-medium px-5 py-2 bg-green-700 text-white hover:bg-green-600 transition-colors"
-                    disabled={loading}
+                  disabled={loading || isOutOfStock}
                   >
                     {loading ? (
                       <>

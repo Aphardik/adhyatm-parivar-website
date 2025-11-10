@@ -193,7 +193,8 @@ export default function UdayanmantriForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://udayanmantriform-fahifz22ha-uc.a.run.app",
+        // "https://udayanmantriform-fahifz22ha-uc.a.run.app",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=udayanmantri",
         values
       );
 

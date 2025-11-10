@@ -198,7 +198,8 @@ export default function MahabharatForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://universalform-fahifz22ha-uc.a.run.app/sanskrutam-saralam",
+        // "https://universalform-fahifz22ha-uc.a.run.app/sanskrutam-saralam",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=sanskrutam-saralam",
         formData
       );
 

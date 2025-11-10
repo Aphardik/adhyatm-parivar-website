@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho Form Proxy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        id="zohoForm"
+        src="https://forms.zohopublic.in/adhyatmparivar/form/VarshitapPaarna/formperma/roH6_EjBpsO2qpCwxsSJeHaWQQCUNHyPqFmSMnG5_FQ"
+        scrolling="no"
+        frameborder="0">
+    </iframe>
+
+    <script>
+        const iframe = document.getElementById('zohoForm');
+        let lastHeight = 0;
+
+        // Function to check and send height
+        function checkAndSendHeight() {
+            const height = document.body.scrollHeight;
+            
+            if (height !== lastHeight && height > 0) {
+                lastHeight = height;
+                // Send height to parent window
+                window.parent.postMessage({
+                    type: 'zoho-form-height',
+                    height: height
+                }, '*');
+                
+                // Also update our iframe height
+                iframe.style.height = height + 'px';
+            }
+        }
+
+        // Use MutationObserver to detect any DOM changes
+        const observer = new MutationObserver(checkAndSendHeight);
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            characterData: true
+        });
+
+        // Use ResizeObserver for more accurate height detection
+        if ('ResizeObserver' in window) {
+            const resizeObserver = new ResizeObserver(checkAndSendHeight);
+            resizeObserver.observe(document.body);
+        }
+
+        // Listen for messages from Zoho form
+        window.addEventListener('message', function(e) {
+            // Forward Zoho messages to parent
+            if (e.origin.includes('zohopublic.in')) {
+                try {
+                    let data = e.data;
+                    if (typeof data === 'string') {
+                        data = JSON.parse(data);
+                    }
+                    
+                    if (data.height) {
+                        iframe.style.height = data.height + 'px';
+                        window.parent.postMessage({
+                            type: 'zoho-form-height',
+                            height: data.height
+                        }, '*');
+                    }
+                } catch (err) {
+                    // Ignore parse errors
+                }
+            }
+            
+            // Listen for height requests from parent
+            if (e.data && e.data.type === 'request-height') {
+                checkAndSendHeight();
+            }
+        });
+
+        // Initial height check
+        iframe.onload = function() {
+            setTimeout(checkAndSendHeight, 500);
+            setTimeout(checkAndSendHeight, 1000);
+            setTimeout(checkAndSendHeight, 2000);
+        };
+
+        // Periodic height check as fallback
+        setInterval(checkAndSendHeight, 2000);
+
+        // Initial immediate check
+        checkAndSendHeight();
+    </script>
+</body>
+</html>

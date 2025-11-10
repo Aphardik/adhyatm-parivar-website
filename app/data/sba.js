@@ -511,6 +511,83 @@
         imageUrl: "/shasan-bhakti-anjali/SBA-73H.jpeg",
         date: "2025-09-11"
       },
+        {
+        uid:"sba74",
+        id: 74,
+        name: "शासनभक्ति की अंजलि-74",
+        imageUrl: "/shasan-bhakti-anjali/SBA-74H.jpeg",
+        date: "2025-09-12"
+      },
+        {
+        uid:"sba75",
+        id: 75,
+        name: "शासनभक्ति की अंजलि-75",
+        imageUrl: "/shasan-bhakti-anjali/SBA-75H.jpeg",
+        date: "2025-09-13"
+      },
+        {
+        uid:"sba76",
+        id: 76,
+        name: "शासनभक्ति की अंजलि-76",
+        imageUrl: "/shasan-bhakti-anjali/SBA-76H.jpeg",
+        date: "2025-09-14"
+      },
+        {
+        uid:"sba77",
+        id: 77,
+        name: "शासनभक्ति की अंजलि-77",
+        imageUrl: "/shasan-bhakti-anjali/SBA-77H.jpeg",
+        date: "2025-09-15"
+      },
+        {
+        uid:"sba78",
+        id: 78,
+        name: "शासनभक्ति की अंजलि-78",
+        imageUrl: "/shasan-bhakti-anjali/SBA-78H.jpeg",
+        date: "2025-09-16"
+      },
+        {
+        uid:"sba79",
+        id: 79,
+        name: "शासनभक्ति की अंजलि-79",
+        imageUrl: "/shasan-bhakti-anjali/SBA-79H.jpeg",
+        date: "2025-09-17"
+      },
+        {
+        uid:"sba80",
+        id: 80,
+        name: "शासनभक्ति की अंजलि-80",
+        imageUrl: "/shasan-bhakti-anjali/SBA-80H.jpeg",
+        date: "2025-09-18"
+      },
+        {
+        uid:"sba81",
+        id: 81,
+        name: "शासनभक्ति की अंजलि-81",
+        imageUrl: "/shasan-bhakti-anjali/SBA-81H.jpeg",
+        date: "2025-09-19"
+      },
+        {
+        uid:"sba82",
+        id: 82,
+        name: "शासनभक्ति की अंजलि-82",
+        imageUrl: "/shasan-bhakti-anjali/SBA-82H.jpeg",
+        date: "2025-09-20"
+      },
+        {
+        uid:"sba83",
+        id: 83,
+        name: "शासनभक्ति की अंजलि-83",
+        imageUrl: "/shasan-bhakti-anjali/SBA-83H.jpeg",
+        date: "2025-09-21"
+      },
+        {
+        uid:"sba84",
+        id: 84,
+        name: "शासनभक्ति की अंजलि-84",
+        imageUrl: "/shasan-bhakti-anjali/SBA-84H.jpeg",
+        date: "2025-09-22"
+      },
     ],
     gujarati: [
       {
@@ -1024,6 +1101,83 @@
         imageUrl: "/shasan-bhakti-anjali/SBA-73G.jpeg",
         date: "2025-09-11"
       },
+      {
+        uid:"74",
+        id: 74,
+        name: "શાસનભક્તિની અંજલિ-74",
+        imageUrl: "/shasan-bhakti-anjali/SBA-74G.jpeg",
+        date: "2025-09-12"
+      },
+      {
+        uid:"75",
+        id: 75,
+        name: "શાસનભક્તિની અંજલિ-75",
+        imageUrl: "/shasan-bhakti-anjali/SBA-75G.jpeg",
+        date: "2025-09-13"
+      },
+      {
+        uid:"76",
+        id: 76,
+        name: "શાસનભક્તિની અંજલિ-76",
+        imageUrl: "/shasan-bhakti-anjali/SBA-76G.jpeg",
+        date: "2025-09-14"
+      },
+      {
+        uid:"77",
+        id: 77,
+        name: "શાસનભક્તિની અંજલિ-77",
+        imageUrl: "/shasan-bhakti-anjali/SBA-77G.jpeg",
+        date: "2025-09-15"
+      },
+      {
+        uid:"78",
+        id: 78,
+        name: "શાસનભક્તિની અંજલિ-78",
+        imageUrl: "/shasan-bhakti-anjali/SBA-78G.jpeg",
+        date: "2025-09-16"
+      },
+      {
+        uid:"79",
+        id: 79,
+        name: "શાસનભક્તિની અંજલિ-79",
+        imageUrl: "/shasan-bhakti-anjali/SBA-79G.jpeg",
+        date: "2025-09-17"
+      },
+      {
+        uid:"80",
+        id: 80,
+        name: "શાસનભક્તિની અંજલિ-80",
+        imageUrl: "/shasan-bhakti-anjali/SBA-80G.jpeg",
+        date: "2025-09-18"
+      },
+      {
+        uid:"81",
+        id: 81,
+        name: "શાસનભક્તિની અંજલિ-81",
+        imageUrl: "/shasan-bhakti-anjali/SBA-81G.jpeg",
+        date: "2025-09-19"
+      },
+      {
+        uid:"82",
+        id: 82,
+        name: "શાસનભક્તિની અંજલિ-82",
+        imageUrl: "/shasan-bhakti-anjali/SBA-82G.jpeg",
+        date: "2025-09-20"
+      },
+      {
+        uid:"83",
+        id: 83,
+        name: "શાસનભક્તિની અંજલિ-83",
+        imageUrl: "/shasan-bhakti-anjali/SBA-83G.jpeg",
+        date: "2025-09-21"
+      },
+      {
+        uid:"84",
+        id: 84,
+        name: "શાસનભક્તિની અંજલિ-84",
+        imageUrl: "/shasan-bhakti-anjali/SBA-84G.jpeg",
+        date: "2025-09-22"
+      },
     ],
 
 
@@ -1371,6 +1525,97 @@
         name: "Shaasan Bhakti Anjali-49",
         imageUrl: "/shasan-bhakti-anjali/SBA-49E.jpeg",
         date: "2025-08-18"
+      },
+      {
+        uid:"sba50",
+        id: 50,
+        name: "Shaasan Bhakti Anjali-50",
+        imageUrl: "/shasan-bhakti-anjali/SBA-50E.jpeg",
+        date: "2025-08-19"
+      },
+      {
+        uid:"sba51",
+        id: 51,
+        name: "Shaasan Bhakti Anjali-51",
+        imageUrl: "/shasan-bhakti-anjali/SBA-51E.jpeg",
+        date: "2025-08-20"
+      },
+      {
+        uid:"sba52",
+        id: 52,
+        name: "Shaasan Bhakti Anjali-52",
+        imageUrl: "/shasan-bhakti-anjali/SBA-52E.jpeg",
+        date: "2025-08-21"
+      },
+      {
+        uid:"sba53",
+        id: 53,
+        name: "Shaasan Bhakti Anjali-53",
+        imageUrl: "/shasan-bhakti-anjali/SBA-53E.jpeg",
+        date: "2025-08-22"
+      },
+      {
+        uid:"sba54",
+        id: 54,
+        name: "Shaasan Bhakti Anjali-54",
+        imageUrl: "/shasan-bhakti-anjali/SBA-54E.jpeg",
+        date: "2025-08-23"
+      },
+      {
+        uid:"sba55",
+        id: 55,
+        name: "Shaasan Bhakti Anjali-55",
+        imageUrl: "/shasan-bhakti-anjali/SBA-55E.jpeg",
+        date: "2025-08-24"
+      },
+      {
+        uid:"sba56",
+        id: 56,
+        name: "Shaasan Bhakti Anjali-56",
+        imageUrl: "/shasan-bhakti-anjali/SBA-56E.jpeg",
+        date: "2025-08-25"
+      },
+      {
+        uid:"sba57",
+        id: 57,
+        name: "Shaasan Bhakti Anjali-57",
+        imageUrl: "/shasan-bhakti-anjali/SBA-57E.jpeg",
+        date: "2025-08-26"
+      },
+      {
+        uid:"sba58",
+        id: 58,
+        name: "Shaasan Bhakti Anjali-58",
+        imageUrl: "/shasan-bhakti-anjali/SBA-58E.jpeg",
+        date: "2025-08-27"
+      },
+      {
+        uid:"sba59",
+        id: 59,
+        name: "Shaasan Bhakti Anjali-59",
+        imageUrl: "/shasan-bhakti-anjali/SBA-59E.jpeg",
+        date: "2025-08-28"
+      },
+      {
+        uid:"sba60",
+        id: 60,
+        name: "Shaasan Bhakti Anjali-60",
+        imageUrl: "/shasan-bhakti-anjali/SBA-60E.jpeg",
+        date: "2025-08-29"
+      },
+      {
+        uid:"sba61",
+        id: 61,
+        name: "Shaasan Bhakti Anjali-61",
+        imageUrl: "/shasan-bhakti-anjali/SBA-61E.jpeg",
+        date: "2025-08-30"
+      },
+      {
+        uid:"sba62",
+        id: 62,
+        name: "Shaasan Bhakti Anjali-62",
+        imageUrl: "/shasan-bhakti-anjali/SBA-62E.jpeg",
+        date: "2025-08-31"
       },
      
     ]

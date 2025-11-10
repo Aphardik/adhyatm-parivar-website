@@ -167,7 +167,8 @@ export default function RavanniBhitarmaForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/ravanniBhitarmaForm",
+        // "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/ravanniBhitarmaForm",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=ravannibhitarma",
         values
       );
 

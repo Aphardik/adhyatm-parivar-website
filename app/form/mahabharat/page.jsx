@@ -128,7 +128,8 @@ export default function MahabharatForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://mahabharatform-fahifz22ha-uc.a.run.app",
+        // "https://mahabharatform-fahifz22ha-uc.a.run.app",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=mahabharat",
         values
       );
 

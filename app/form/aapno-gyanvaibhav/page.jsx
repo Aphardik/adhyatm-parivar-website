@@ -197,7 +197,8 @@ export default function AapnoGyanvaibhavForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://universalform-fahifz22ha-uc.a.run.app/aapnoGyanvaibhavForm",
+        // "https://universalform-fahifz22ha-uc.a.run.app/aapnoGyanvaibhavForm",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=aapnoGyanvaibhavForm",
         values
       );
 

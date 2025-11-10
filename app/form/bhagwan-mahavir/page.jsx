@@ -171,7 +171,7 @@ export default function BhagwanMahavirForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/bhagwanMahavirForm",
+        `https://universalform-fahifz22ha-uc.a.run.app?form=bhagwanmahavir`,
         values
       );
 
