@@ -11,8 +11,8 @@ const Timeline = () => {
 
   const timelineData = [
     {
-      year: "२०८०",
-      logo: "/diksha/dikshalogo.png",
+      year: 2024,
+      logo: "/diksha/35DikshaAhmedabad.png",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -25,61 +25,173 @@ const Timeline = () => {
       date: "सं. २०८०"
     },
     {
-      year: 2019,
-      logo: "/diksha/dikshalogo.png",
+      year: 2024,
+      logo: "/diksha/8DixaBhabhar.png",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "Annual Diksha Celebration",
-      place: "Mumbai, India",
-      description: "Expanding our community with over 200 new members receiving diksha in a grand ceremony.",
-      date: "August 22, 2019"
-    },
-    {
-      year: 2020,
-      logo: "/diksha/dikshalogo.png",
-      images: [
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-      ],
-      title: "Virtual Diksha Program",
-      place: "Online Event",
-      description: "Adapting to pandemic times with our first virtual diksha ceremony connecting participants worldwide.",
-      date: "November 7, 2020"
-    },
-    {
-      year: 2022,
-      logo: "/diksha/dikshalogo.png",
-      images: [
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-        "/dummyalbumpic.jpg",
-      ],
-      title: "Grand Diksha Mahotsav",
-      place: "Bangalore, India",
-      description: "A monumental celebration with record participation and special guest appearances.",
-      date: "April 30, 2022"
+      title: "८ दीक्षा",
+      place: "भाभर",
+      description: "आत्महितोत्सव",
+      date: "सं.२०८०"
     },
     {
       year: 2023,
-      logo: "/diksha/dikshalogo.png",
+      logo: "/diksha/5DixaTervada.png",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "Golden Jubilee Diksha",
-      place: "Chennai, India",
-      description: "Celebrating 50 years of spiritual service with special ceremonies and community outreach.",
-      date: "December 10, 2023"
-    }
+      title: "५ दीक्षा",
+      place: "तेरवाडा",
+      description: "संयम योग उत्सव",
+      date: "सं. २०७९"
+    },
+    {
+      year: 2023,
+      logo: "/diksha/7DixaAhmedabad.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "७ दीक्षा",
+      place: "अहमदाबाद",
+      description: "मोहविजयोत्सव",
+      date: "सं. २०७९"
+    },
+    {
+      year: 2022,
+      logo: "/diksha/74DixaSurat.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "७४ दीक्षा",
+      place: "सुरत",
+      description: "सिंहसत्त्वोत्सव",
+      date: "सं. २०७८"
+    },
+    {
+      year: 2020,
+      logo: "/diksha/18DixaSurat.jpg",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "१८ दीक्षा",
+      place: "सुरत",
+      description: "प्रभुपंथोत्सव",
+      date: "सं.२०७६"
+    },
+      {
+      year: 2019,
+      logo: "/diksha/44DikshaMumbai.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "४४ दीक्षा",
+      place: "मुंबई",
+      description: "आध्यात्मिक लग्नोत्सव",
+      date: "सं.२०७५"
+    },
+      {
+      year: 2018,
+      logo: "/diksha/26DikshaAhemdabad.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "२६ दीक्षा",
+      place: "अहमदाबाद",
+      description: "विश्वानंद उत्सव",
+      date: "सं. २०७४"
+    },
+      {
+      year: 2017,
+      logo: "/diksha/36DixaSurat.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "३६ दीक्षा",
+      place: "सुरत",
+      description: "रत्नत्रयी उत्सव",
+      date: "सं.२०७३"
+    },
+      {
+      year: 2015,
+      logo: "/diksha/45dikshaSurat.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "४५ दीक्षा",
+      place: "सुरत",
+      description: "संयम सुवास उत्सव",
+      date: "सं.२०७१"
+    },
+      {
+      year: 2014,
+      logo: "/diksha/updhanDikshaSurat.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "६ दीक्षा",
+      place: "भाभर",
+      description: "उपधान - दीक्षा उत्सव",
+      date: "सं. २०७०"
+    },
+      {
+      year: 2012,
+      logo: "/diksha/17Dixa.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "१७ दीक्षा",
+      place: "पालीताणा",
+      description: "अजितशांति दीक्षा प्रतिष्ठा उत्सव",
+      date: "सं. २०६८"
+    },
+      {
+      year: 2011,
+      logo: "/diksha/7DixaSurat.png",
+      images: [
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+        "/dummyalbumpic.jpg",
+      ],
+      title: "७ दीक्षा",
+      place: "सुरत",
+      description: "प्रव्रज्या प्रदान उत्सव",
+      date: "सं. २०६७"
+    },
   ];
 
   const handleNextImage = (yearIndex) => {
@@ -202,19 +314,19 @@ const Timeline = () => {
   };
 
   return (
-    <div className="min-h-screen font-heading bg-white">
+    <div className="min-h-screen w-screen font-heading bg-white">
       {/* Simple Banner - Image Only */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
         <img 
           src="/dikshabanner.png" 
           alt="Diksha Banner" 
-          className="w-full h-full object-cover"
+          className="w-full max-h-[85vh]  object-contain"
         />
       </div>
 
       {/* Announcement Text Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div className="text-center space-y-2 md:space-y-4">
+        <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
             ऐतिहासिक 17-45-36-26-44-18-74-35 आदि
           </p>
@@ -225,16 +337,11 @@ const Timeline = () => {
             'सूरियोग' की अद्वितीय वाणी के प्रभाव से...
           </p>
           <p className="text-lg md:text-xl text-gray-700 font-semibold">
-            महाराष्ट्र की धरा पर
+            महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार एक ही साथ एक ही मंडप में
           </p>
-          <p className="text-lg md:text-xl text-gray-700 font-semibold">
-            सदियों में सर्वप्रथम बार
-          </p>
-          <p className="text-base md:text-lg text-gray-600">
-            एक ही साथ एक ही मंडप में
-          </p>
+          
           <p className="text-2xl md:text-3xl lg:text-4xl text-maroon font-bold">
-            सामूहिक 55 दीक्षा
+            सामूहिक ५५ दीक्षा की एक झलक
           </p>
         </div>
       </div>
@@ -258,11 +365,11 @@ const Timeline = () => {
                   </div>
                 </div>
 
-                <div className="mx-4 ml-[3.8rem] bg-white w-[80%] rounded-sm p-6 transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
+                <div className="mx-4 ml-[3.8rem] bg-white w-[85%] rounded-sm p-2 transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
                   <div className="flex items-start gap-4">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-white shadow-lg p-2 border-2 border-maroon/20">
+                      <div className="w-36 h-auto p-1">
                         <img
                           src={item.logo}
                           alt="Event Logo"
@@ -272,17 +379,17 @@ const Timeline = () => {
                     </div>
                     
                     {/* Info */}
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-base font-semibold leading-relaxed mb-3">{item.description}</p>
-                      <div className="space-y-1">
-                        <div className="flex items-center text-gray-600">
-                          <FaMapPin className="w-3 h-3 mr-2 text-maroon" />
-                          <span className="text-sm">{item.place}</span>
+                    <div className="flex-1 min-w-0 text-center my-auto">
+                      <h3 className="text-xl font-bold text-gray-800 ">{item.title}</h3>
+                      <p className="text-gray-600 text-lg font-semibold leading-relaxed">{item.description}</p>
+                      <div className="space-y-0">
+                        <div className=" text-center text-gray-600">
+                          {/* <FaMapPin className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                          <span className="text-base">{item.place}</span>
                         </div>
-                        <div className="flex items-center text-gray-600">
-                          <FaClock className="w-3 h-3 mr-2 text-maroon" />
-                          <span className="text-sm">{item.date}</span>
+                        <div className=" text-center text-gray-600">
+                          {/* <FaClock className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                          <span className="text-base">{item.date}</span>
                         </div>
                       </div>
                     </div>
@@ -313,17 +420,17 @@ const Timeline = () => {
                 >
                   <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                     <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-2xl transform transition-all duration-300 cursor-pointer group">
-                      <span className="text-white text-2xl lg:text-3xl font-bold group-hover:scale-105 transition-transform duration-300">{item.year}</span>
+                      <span className="text-white font-sans text-2xl lg:text-3xl font-bold  transition-transform duration-300">{item.year}</span>
                     </div>
                   </div>
 
                   {/* Info Card - 45% width */}
                   <div className="w-[45%] pr-8 lg:pr-12">
-                    <div className="bg-white rounded-sm p-6 lg:p-8 h-full transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                      <div className="flex items-start gap-6">
+                    <div className="bg-white rounded-sm p-6 lg:p-8 h-full transform  transition-all duration-300 ">
+                      <div className="flex items-start gap-5">
                         {/* Logo */}
                         <div className="flex-shrink-0">
-                          <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-lg p-3 border-2 border-maroon/20">
+                          <div className="w-28 h-28 lg:w-52 lg:h-auto  p-3">
                             <img
                               src={item.logo}
                               alt="Event Logo"
@@ -333,22 +440,23 @@ const Timeline = () => {
                         </div>
                         
                         {/* Info */}
-                        <div className="flex-1">
-                          <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
+                        <div className="flex-1 min-w-0 my-auto">
+                          <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-1">{item.title}</h3>
+                          <h3 className="text-maroon font-semibold text-xl leading-relaxed">{item.description}</h3>
                           
-                          <div className="space-y-3 mb-4">
+                          <div className="space-y-1 mb-1">
                             <div className="flex items-center text-gray-600">
-                              <FaMapPin className="w-4 h-4 mr-3 text-maroon flex-shrink-0" />
-                              <span className="text-sm font-medium">{item.place}</span>
+                              {/* <FaMapPin className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                              <span className="text-lg font-medium">{item.place}</span>
                             </div>
                             
                             <div className="flex items-center text-gray-600">
-                              <FaClock className="w-4 h-4 mr-3 text-maroon flex-shrink-0" />
-                              <span className="text-sm font-medium">{item.date}</span>
+                              {/* <FaClock className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                              <span className="text-lg font-medium">{item.date}</span>
                             </div>
                           </div>
                           
-                          <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                          
                         </div>
                       </div>
                     </div>
