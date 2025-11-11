@@ -124,9 +124,8 @@ const Timeline = () => {
     }
   };
 
- const renderImageStack = (item, yearIndex) => {
+  const renderImageStack = (item, yearIndex) => {
     const currentImageIndex = activeImageIndex[yearIndex] || 0;
-    const totalImages = item.images.length;
     
     return (
       <div 
@@ -169,28 +168,7 @@ const Timeline = () => {
                       alt={`${item.year} - Image ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
-                    
-                    {/* Logo overlay on first image only */}
-                    {index === 0 && isActive && (
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent flex items-center justify-center">
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                          <div className="relative w-44 h-44 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full bg-white/40 backdrop-blur-sm p-3 md:p-4 shadow-2xl border-4 border-white/60 transform group-hover:scale-110 transition-all duration-300">
-                            <img
-                              src={item.logo}
-                              alt="Event Logo"
-                              className="w-full h-full object-contain rounded-full"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
-                  
-                  {/* Bottom text area like polaroid */}
-                  {/* <div className="h-[15%] flex items-center justify-center">
-                    <span className="text-gray-600 text-sm font-medium">{item.year} - {index + 1}/{totalImages}</span>
-                  </div> */}
                   
                   {!isActive && (
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -230,8 +208,35 @@ const Timeline = () => {
         <img 
           src="/dikshabanner.png" 
           alt="Diksha Banner" 
-          className="w-full  h-full object-cover"
+          className="w-full h-full object-cover"
         />
+      </div>
+
+      {/* Announcement Text Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="text-center space-y-2 md:space-y-4">
+          <p className="text-lg md:text-xl text-gray-700 font-medium">
+            ऐतिहासिक 17-45-36-26-44-18-74-35 आदि
+          </p>
+          <p className="text-base md:text-lg text-gray-600">
+            अनेक सामूहिक दीक्षा के बाद फिर एकबार
+          </p>
+          <p className="text-xl md:text-2xl text-amber-600 font-bold italic">
+            'सूरियोग' की अद्वितीय वाणी के प्रभाव से...
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 font-semibold">
+            महाराष्ट्र की धरा पर
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 font-semibold">
+            सदियों में सर्वप्रथम बार
+          </p>
+          <p className="text-base md:text-lg text-gray-600">
+            एक ही साथ एक ही मंडप में
+          </p>
+          <p className="text-2xl md:text-3xl lg:text-4xl text-maroon font-bold">
+            सामूहिक 55 दीक्षा
+          </p>
+        </div>
       </div>
 
       {/* Timeline Content */}
@@ -248,23 +253,40 @@ const Timeline = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="absolute left-0 top-6 z-20">
-                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform hover:scale-110 transition-all duration-300 ">
+                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform hover:scale-110 transition-all duration-300">
                     <span className="text-white text-sm font-bold">{item.year}</span>
                   </div>
                 </div>
 
-                <div className="mx-4 ml-[3.8rem] bg-white w-[80%] rounded-sm p-6  transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-1">{item.title}</h3>
-                  <h3 className="text-gray-600 text-lg font-semibold leading-relaxed">{item.description}</h3>
-                  <div className="flex items-center text-gray-600 mb-1">
-                    {/* <FaMapPin className="w-4 h-4 mr-2 text-maroon" /> */}
-                    <span className="text-sm">{item.place}</span>
+                <div className="mx-4 ml-[3.8rem] bg-white w-[80%] rounded-sm p-6 transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
+                  <div className="flex items-start gap-4">
+                    {/* Logo */}
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-full bg-white shadow-lg p-2 border-2 border-maroon/20">
+                        <img
+                          src={item.logo}
+                          alt="Event Logo"
+                          className="w-full h-full object-contain rounded-full"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Info */}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-base font-semibold leading-relaxed mb-3">{item.description}</p>
+                      <div className="space-y-1">
+                        <div className="flex items-center text-gray-600">
+                          <FaMapPin className="w-3 h-3 mr-2 text-maroon" />
+                          <span className="text-sm">{item.place}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600">
+                          <FaClock className="w-3 h-3 mr-2 text-maroon" />
+                          <span className="text-sm">{item.date}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center text-gray-600 mb-4">
-                    {/* <FaClock className="w-4 h-4 mr-2 text-maroon" /> */}
-                    {/* <span className="text-sm">{item.date}</span> */}
-                  </div>
-                  
                 </div>
 
                 <div className="">
@@ -290,29 +312,45 @@ const Timeline = () => {
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-2xl transform  transition-all duration-300 cursor-pointer group">
+                    <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-2xl transform transition-all duration-300 cursor-pointer group">
                       <span className="text-white text-2xl lg:text-3xl font-bold group-hover:scale-105 transition-transform duration-300">{item.year}</span>
                     </div>
                   </div>
 
                   {/* Info Card - 45% width */}
                   <div className="w-[45%] pr-8 lg:pr-12">
-                    <div className="bg-white rounded-sm p-6 lg:p-8  h-full transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                      <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
-                      
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center text-gray-600">
-                          {/* <FaMapPin className="w-5 h-5 mr-3 text-maroon" /> */}
-                          <span className="text-sm font-medium">{item.place}</span>
+                    <div className="bg-white rounded-sm p-6 lg:p-8 h-full transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                      <div className="flex items-start gap-6">
+                        {/* Logo */}
+                        <div className="flex-shrink-0">
+                          <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-lg p-3 border-2 border-maroon/20">
+                            <img
+                              src={item.logo}
+                              alt="Event Logo"
+                              className="w-full h-full object-contain rounded-full"
+                            />
+                          </div>
                         </div>
                         
-                        <div className="flex items-center text-gray-600">
-                          {/* <FaClock className="w-5 h-5 mr-3 text-maroon" /> */}
-                          <span className="text-sm font-medium">{item.date}</span>
+                        {/* Info */}
+                        <div className="flex-1">
+                          <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
+                          
+                          <div className="space-y-3 mb-4">
+                            <div className="flex items-center text-gray-600">
+                              <FaMapPin className="w-4 h-4 mr-3 text-maroon flex-shrink-0" />
+                              <span className="text-sm font-medium">{item.place}</span>
+                            </div>
+                            
+                            <div className="flex items-center text-gray-600">
+                              <FaClock className="w-4 h-4 mr-3 text-maroon flex-shrink-0" />
+                              <span className="text-sm font-medium">{item.date}</span>
+                            </div>
+                          </div>
+                          
+                          <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                         </div>
                       </div>
-                      
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </div>
 
