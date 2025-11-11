@@ -11,7 +11,7 @@ const Timeline = () => {
 
   const timelineData = [
     {
-      year: 2016,
+      year: "२०८०",
       logo: "/diksha/dikshalogo.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -19,10 +19,10 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "First Diksha Ceremony",
-      place: "New Delhi, India",
-      description: "The inaugural diksha ceremony marked the beginning of our spiritual journey with 50 dedicated participants.",
-      date: "March 15, 2016"
+      title: "३५ दीक्षा",
+      place: "अहमदाबाद",
+      description: "वीरव्रतोत्सव",
+      date: "सं. २०८०"
     },
     {
       year: 2019,
@@ -224,7 +224,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen font-heading bg-white">
       {/* Simple Banner - Image Only */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
         <img 
@@ -254,16 +254,17 @@ const Timeline = () => {
                 </div>
 
                 <div className="mx-4 ml-[3.8rem] bg-white w-[80%] rounded-sm p-6  transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
-                  <div className="flex items-center text-gray-600 mb-2">
-                    <FaMapPin className="w-4 h-4 mr-2 text-maroon" />
+                  <h3 className="text-2xl font-bold text-gray-800 mb-1">{item.title}</h3>
+                  <h3 className="text-gray-600 text-lg font-semibold leading-relaxed">{item.description}</h3>
+                  <div className="flex items-center text-gray-600 mb-1">
+                    {/* <FaMapPin className="w-4 h-4 mr-2 text-maroon" /> */}
                     <span className="text-sm">{item.place}</span>
                   </div>
                   <div className="flex items-center text-gray-600 mb-4">
-                    <FaClock className="w-4 h-4 mr-2 text-maroon" />
-                    <span className="text-sm">{item.date}</span>
+                    {/* <FaClock className="w-4 h-4 mr-2 text-maroon" /> */}
+                    {/* <span className="text-sm">{item.date}</span> */}
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  
                 </div>
 
                 <div className="">
@@ -301,12 +302,12 @@ const Timeline = () => {
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-gray-600">
-                          <FaMapPin className="w-5 h-5 mr-3 text-maroon" />
+                          {/* <FaMapPin className="w-5 h-5 mr-3 text-maroon" /> */}
                           <span className="text-sm font-medium">{item.place}</span>
                         </div>
                         
                         <div className="flex items-center text-gray-600">
-                          <FaClock className="w-5 h-5 mr-3 text-maroon" />
+                          {/* <FaClock className="w-5 h-5 mr-3 text-maroon" /> */}
                           <span className="text-sm font-medium">{item.date}</span>
                         </div>
                       </div>
