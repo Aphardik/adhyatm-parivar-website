@@ -360,12 +360,12 @@ const Timeline = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="absolute left-0 top-6 z-20">
-                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform hover:scale-110 transition-all duration-300">
+                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform  transition-all duration-300">
                     <span className="text-white text-sm font-bold">{item.year}</span>
                   </div>
                 </div>
 
-                <div className="mx-4 ml-[3.8rem] bg-white w-[85%] rounded-sm p-2 transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 mb-6">
+                <div className="mx-4 ml-[3.8rem] bg-white w-[85%] rounded-sm p-2 transform  transition-all duration-300  mb-6">
                   <div className="flex items-start gap-4">
                     {/* Logo */}
                     <div className="flex-shrink-0">
@@ -381,7 +381,7 @@ const Timeline = () => {
                     {/* Info */}
                     <div className="flex-1 min-w-0 text-center my-auto">
                       <h3 className="text-xl font-bold text-gray-800 ">{item.title}</h3>
-                      <p className="text-gray-600 text-lg font-semibold leading-relaxed">{item.description}</p>
+                      <p className="text-maroon text-lg  font-semibold leading-relaxed">{item.description}</p>
                       <div className="space-y-0">
                         <div className=" text-center text-gray-600">
                           {/* <FaMapPin className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
