@@ -361,7 +361,7 @@ const Timeline = () => {
               >
                 <div className="absolute left-0 top-6 z-20">
                   <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform  transition-all duration-300">
-                    <span className="text-white text-sm font-bold">{item.year}</span>
+                    <span className="text-white text-sm font-sans font-bold">{item.year}</span>
                   </div>
                 </div>
 
