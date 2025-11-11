@@ -124,7 +124,7 @@ const Timeline = () => {
     }
   };
 
-  const renderImageStack = (item, yearIndex) => {
+ const renderImageStack = (item, yearIndex) => {
     const currentImageIndex = activeImageIndex[yearIndex] || 0;
     const totalImages = item.images.length;
     
@@ -169,6 +169,22 @@ const Timeline = () => {
                       alt={`${item.year} - Image ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
+                    
+                    {/* Logo overlay on first image only */}
+                    {index === 0 && isActive && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent flex items-center justify-center">
+                        <div className="relative group">
+                          <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                          <div className="relative w-44 h-44 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full bg-white/40 backdrop-blur-sm p-3 md:p-4 shadow-2xl border-4 border-white/60 transform group-hover:scale-110 transition-all duration-300">
+                            <img
+                              src={item.logo}
+                              alt="Event Logo"
+                              className="w-full h-full object-contain rounded-full"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   {/* Bottom text area like polaroid */}
@@ -186,22 +202,22 @@ const Timeline = () => {
         </div>
 
         {item.images.length > 1 && (
-          <>
+          <div className='hidden sm:block'>
             <button
               onClick={() => handlePrevImage(yearIndex)}
-              className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-[150] bg-white hover:bg-gray-100 p-2 md:p-3 rounded-full shadow-xl transition-all duration-200 hover:scale-110"
+              className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-[150] bg-black/50 hover:bg-black/70 p-2 md:p-3 rounded-full shadow-xl transition-all duration-200 hover:scale-110"
               aria-label="Previous image"
             >
-              <FaChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-700" />
+              <FaChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-100" />
             </button>
             <button
               onClick={() => handleNextImage(yearIndex)}
-              className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-[150] bg-white hover:bg-gray-100 p-2 md:p-3 rounded-full shadow-xl transition-all duration-200 hover:scale-110"
+              className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-[150] bg-black/50 hover:bg-black/70 p-2 md:p-3 rounded-full shadow-xl transition-all duration-200 hover:scale-110"
               aria-label="Next image"
             >
-              <FaChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-700" />
+              <FaChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-100" />
             </button>
-          </>
+          </div>
         )}
       </div>
     );
@@ -273,14 +289,14 @@ const Timeline = () => {
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-2xl transform hover:scale-110 hover:rotate-6 transition-all duration-300 cursor-pointer group border-4 border-white">
+                    <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-2xl transform  transition-all duration-300 cursor-pointer group">
                       <span className="text-white text-2xl lg:text-3xl font-bold group-hover:scale-105 transition-transform duration-300">{item.year}</span>
                     </div>
                   </div>
 
                   {/* Info Card - 45% width */}
                   <div className="w-[45%] pr-8 lg:pr-12">
-                    <div className="bg-white rounded-sm p-6 lg:p-8 shadow-xl h-full transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div className="bg-white rounded-sm p-6 lg:p-8  h-full transform hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                       <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
                       
                       <div className="space-y-3 mb-6">
