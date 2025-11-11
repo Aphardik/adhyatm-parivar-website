@@ -214,7 +214,7 @@ const Timeline = () => {
         <img 
           src="/dikshabanner.png" 
           alt="Diksha Banner" 
-          className="w-full mt-[8.5rem] h-full object-cover"
+          className="w-full  h-full object-cover"
         />
       </div>
 
