@@ -25,7 +25,7 @@ const Timeline = () => {
       date: "सं. २०८०"
     },
     {
-      year: 2024,
+      year: 2023,
       logo: "/diksha/8DixaBhabhar.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -53,7 +53,7 @@ const Timeline = () => {
       date: "सं. २०७९"
     },
     {
-      year: 2023,
+      year: 2022,
       logo: "/diksha/7DixaAhmedabad.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -67,7 +67,7 @@ const Timeline = () => {
       date: "सं. २०७९"
     },
     {
-      year: 2022,
+      year: 2021,
       logo: "/diksha/74DixaSurat.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -81,7 +81,7 @@ const Timeline = () => {
       date: "सं. २०७८"
     },
     {
-      year: 2020,
+      year: 2019,
       logo: "/diksha/18DixaSurat.jpg",
       images: [
         "/dummyalbumpic.jpg",
@@ -109,7 +109,7 @@ const Timeline = () => {
       date: "सं.२०७५"
     },
       {
-      year: 2018,
+      year: 2017,
       logo: "/diksha/26DikshaAhemdabad.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -123,7 +123,7 @@ const Timeline = () => {
       date: "सं. २०७४"
     },
       {
-      year: 2017,
+      year: 2016,
       logo: "/diksha/36DixaSurat.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -137,7 +137,7 @@ const Timeline = () => {
       date: "सं.२०७३"
     },
       {
-      year: 2015,
+      year: 2014,
       logo: "/diksha/45dikshaSurat.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -151,7 +151,7 @@ const Timeline = () => {
       date: "सं.२०७१"
     },
       {
-      year: 2014,
+      year: 2013,
       logo: "/diksha/updhanDikshaSurat.png",
       images: [
         "/dummyalbumpic.jpg",
@@ -328,7 +328,7 @@ const Timeline = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
-            ऐतिहासिक <span className='font-bold'> १७-४५-३६-२६-४४-१८-७४-३५ </span> आदि
+            ऐतिहासिक <span className='font-bold'> 17-45-36-26-44-18-74-35 </span> आदि
           </p>
           <p className="text-base md:text-lg text-gray-600">
             अनेक सामूहिक दीक्षा के बाद फिर एकबार
@@ -337,11 +337,11 @@ const Timeline = () => {
             'सूरियोग' की अद्वितीय वाणी के प्रभाव से...
           </p>
           <p className="text-lg md:text-xl text-gray-700 font-semibold">
-            महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार एक ही साथ एक ही मंडप में
+            महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार <br /> एक ही साथ एक ही मंडप में
           </p>
           
           <p className="text-2xl md:text-3xl lg:text-4xl text-maroon font-bold">
-            सामूहिक ५५ दीक्षा
+            सामूहिक 55 दीक्षा
           </p>
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">
@@ -358,7 +358,7 @@ const Timeline = () => {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-orange-200/40 to-amber-200/40 blur-xl"></div>
             <h2 className="relative text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
-              पिछले साल हुई दीक्षाओं की झलक
+             पिछले कुछ सालों में हुई सामूहिक दीक्षा की झलक
             </h2>
           </div>
         </div>
@@ -415,9 +415,9 @@ const Timeline = () => {
                 </div>
 
                 <div className="">
-                  <div className="h-64 w-full overflow-visible">
+                  {/* <div className="h-64 w-full overflow-visible">
                     {renderImageStack(item, index)}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -481,11 +481,11 @@ const Timeline = () => {
                   </div>
 
                   {/* Image Album - 45% width */}
-                  <div className="w-[45%] pl-8 lg:pl-12">
+                  {/* <div className="w-[45%] pl-8 lg:pl-12">
                     <div className="h-80 lg:h-96 w-full">
                       {renderImageStack(item, index)}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               );
             })}
