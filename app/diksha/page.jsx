@@ -328,7 +328,7 @@ const Timeline = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
-            ऐतिहासिक १७-४५-३६-२६-४४-१८-७४-३५ आदि
+            ऐतिहासिक <span className='font-bold'> १७-४५-३६-२६-४४-१८-७४-३५ </span> आदि
           </p>
           <p className="text-base md:text-lg text-gray-600">
             अनेक सामूहिक दीक्षा के बाद फिर एकबार
@@ -391,7 +391,7 @@ const Timeline = () => {
                         <img
                           src={item.logo}
                           alt="Event Logo"
-                          className="w-full h-full object-contain rounded-full"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     </div>
@@ -452,7 +452,7 @@ const Timeline = () => {
                             <img
                               src={item.logo}
                               alt="Event Logo"
-                              className="w-full h-full object-contain rounded-full"
+                              className="w-full h-full object-contain"
                             />
                           </div>
                         </div>
