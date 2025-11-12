@@ -19,7 +19,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "३५ दीक्षा",
+      title: "35",
       place: "अहमदाबाद",
       description: "वीरव्रतोत्सव",
       date: "सं. २०८०"
@@ -33,7 +33,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "८ दीक्षा",
+      title: "8",
       place: "भाभर",
       description: "आत्महितोत्सव",
       date: "सं.२०८०"
@@ -47,7 +47,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "५ दीक्षा",
+      title: "5",
       place: "तेरवाडा",
       description: "संयम योग उत्सव",
       date: "सं. २०७९"
@@ -61,7 +61,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "७ दीक्षा",
+      title: "7",
       place: "अहमदाबाद",
       description: "मोहविजयोत्सव",
       date: "सं. २०७९"
@@ -75,7 +75,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "७४ दीक्षा",
+      title: "74",
       place: "सुरत",
       description: "सिंहसत्त्वोत्सव",
       date: "सं. २०७८"
@@ -89,7 +89,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "१८ दीक्षा",
+      title: "18",
       place: "सुरत",
       description: "प्रभुपंथोत्सव",
       date: "सं.२०७६"
@@ -103,7 +103,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "४४ दीक्षा",
+      title: "44",
       place: "मुंबई",
       description: "आध्यात्मिक लग्नोत्सव",
       date: "सं.२०७५"
@@ -117,7 +117,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "२६ दीक्षा",
+      title: "26",
       place: "अहमदाबाद",
       description: "विश्वानंद उत्सव",
       date: "सं. २०७४"
@@ -131,7 +131,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "३६ दीक्षा",
+      title: "36",
       place: "सुरत",
       description: "रत्नत्रयी उत्सव",
       date: "सं.२०७३"
@@ -145,7 +145,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "४५ दीक्षा",
+      title: "45",
       place: "सुरत",
       description: "संयम सुवास उत्सव",
       date: "सं.२०७१"
@@ -159,7 +159,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "६ दीक्षा",
+      title: "6",
       place: "भाभर",
       description: "उपधान - दीक्षा उत्सव",
       date: "सं. २०७०"
@@ -173,7 +173,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "१७ दीक्षा",
+      title: "17",
       place: "पालीताणा",
       description: "अजितशांति दीक्षा प्रतिष्ठा उत्सव",
       date: "सं. २०६८"
@@ -187,7 +187,7 @@ const Timeline = () => {
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
       ],
-      title: "७ दीक्षा",
+      title: "7",
       place: "सुरत",
       description: "प्रव्रज्या प्रदान उत्सव",
       date: "सं. २०६७"
@@ -328,7 +328,7 @@ const Timeline = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
-            ऐतिहासिक <span className='font-bold'> 17-45-36-26-44-18-74-35 </span> आदि
+            ऐतिहासिक <span className='font-bold text-xl text-maroon md:text-2xl'> 17-45-36-26-44-18-74-35 </span> आदि
           </p>
           <p className="text-base md:text-lg text-gray-600">
             अनेक सामूहिक दीक्षा के बाद फिर एकबार
@@ -340,8 +340,8 @@ const Timeline = () => {
             महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार <br /> एक ही साथ एक ही मंडप में
           </p>
           
-          <p className="text-2xl md:text-3xl lg:text-4xl text-maroon font-bold">
-            सामूहिक 55 दीक्षा
+          <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>55</span> दीक्षा
           </p>
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">
@@ -398,7 +398,7 @@ const Timeline = () => {
                     
                     {/* Info */}
                     <div className="flex-1 min-w-0 text-center my-auto">
-                      <h3 className="text-xl font-bold text-gray-800 ">{item.title}</h3>
+                      <h3 className="text-lg font-bold text-gray-800 "><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> दीक्षा</h3>
                       <p className="text-maroon text-lg  font-semibold leading-relaxed">{item.description}</p>
                       <div className="space-y-0">
                         <div className=" text-center text-gray-600">
@@ -459,7 +459,7 @@ const Timeline = () => {
                         
                         {/* Info */}
                         <div className="flex-1 min-w-0 my-auto">
-                          <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-1">{item.title}</h3>
+                          <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-1"><span className='text-xl lg:text-3xl'>{item.title}</span> दीक्षा</h3>
                           <h3 className="text-maroon font-semibold text-xl leading-relaxed">{item.description}</h3>
                           
                           <div className="space-y-1 mb-1">
