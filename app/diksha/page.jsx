@@ -328,7 +328,7 @@ const Timeline = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
-            ऐतिहासिक 17-45-36-26-44-18-74-35 आदि
+            ऐतिहासिक १७-४५-३६-२६-४४-१८-७४-३५ आदि
           </p>
           <p className="text-base md:text-lg text-gray-600">
             अनेक सामूहिक दीक्षा के बाद फिर एकबार
@@ -341,8 +341,26 @@ const Timeline = () => {
           </p>
           
           <p className="text-2xl md:text-3xl lg:text-4xl text-maroon font-bold">
-            सामूहिक ५५ दीक्षा की एक झलक
+            सामूहिक ५५ दीक्षा
           </p>
+          {/* Decorative Divider */}
+          <div className="flex items-center justify-center my-8 md:my-12">
+            <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
+            <div className="mx-4">
+              <svg className="w-8 h-8 text-maroon/40" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+              </svg>
+            </div>
+            <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
+          </div>
+
+          {/* Main Heading */}
+          <div className="relative inline-block">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-orange-200/40 to-amber-200/40 blur-xl"></div>
+            <h2 className="relative text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
+              पिछले साल हुई दीक्षाओं की झलक
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -351,7 +369,7 @@ const Timeline = () => {
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="relative">
-            <div className="absolute left-8 top-0 rounded-4xl bottom-0 w-1 bg-maroon/90 shadow-lg" />
+            <div className="absolute left-8 top-0 rounded-4xl bottom-0 w-1 bg-gradient-to-b from-[#800000] via-[#b33939] to-[#ff6b6b] shadow-lg" />
 
             {timelineData.map((item, index) => (
               <div
@@ -409,7 +427,7 @@ const Timeline = () => {
         {/* Desktop Layout - Info Card Left, Images Right (wider) */}
         <div className="hidden md:block">
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-maroon transform -translate-x-1/2 shadow-lg" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#800000] via-[#b33939] to-[#ff6b6b] transform -translate-x-1/2 shadow-lg" />
 
             {timelineData.map((item, index) => {
               return (
