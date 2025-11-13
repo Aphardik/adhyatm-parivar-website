@@ -48,6 +48,73 @@ const RegisterForm = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
           {/* Book Card */}
+
+          {/* <div className="flex flex-col items-center justify-center w-full group ">
+            <div className="relative w-full ">
+              {" "}
+              <div className="relative bg-light-bg font-anek overflow-hidden w-full h-full">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src="/bookimages/savjonisatvikkatha1.jpg"
+                  alt="ravanni-bhitarma"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white">
+                  <h3 className="text-2xl text-center font-bold mb-3">
+                   સાવજોની સાત્ત્વિક કથા
+                  </h3>
+                  <div className="space-y-2 text-sm text-center mb-4">
+                    <p className="font-semibold text-cyan-800">ઓફિસ ડીટેલ:</p>
+                    <p>અધ્યાત્મ ભવન</p>
+                    <p>ત્રીજો માળ, આનંદ શ્રાવક આરાધના ભવન</p>
+                    <p>સંજીવકુમાર ઓડિટોરીયમ પાસે, પાલ, સુરત - 395 009</p>
+                    <p className="">M. 7676769600</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link
+              href="/pages/form/savjoni-sattvik-katha"
+              className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold"
+            >
+              Register
+            </Link>
+          </div>
+
+
+          <div className="flex flex-col items-center justify-center w-full group ">
+            <div className="relative w-full ">
+              {" "}
+              <div className="relative bg-light-bg font-anek overflow-hidden w-full h-full">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src="/bookimages/ahankarvijay1.jpg"
+                  alt="ravanni-bhitarma"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white">
+                  <h3 className="text-2xl text-center font-bold mb-3">
+                    अहंकार विजय
+                  </h3>
+                  <div className="space-y-2 text-sm text-center mb-4">
+                    <p className="font-semibold text-cyan-800">ઓફિસ ડીટેલ:</p>
+                    <p>અધ્યાત્મ ભવન</p>
+                    <p>ત્રીજો માળ, આનંદ શ્રાવક આરાધના ભવન</p>
+                    <p>સંજીવકુમાર ઓડિટોરીયમ પાસે, પાલ, સુરત - 395 009</p>
+                    <p className="">M. 7676769600</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link
+              href="/pages/form/ahankar-vijay"
+              className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold"
+            >
+              Register
+            </Link>
+          </div> */}
+
+
+
+
           <div className="flex flex-col items-center justify-center w-full group ">
             <div className="relative w-full ">
               {" "}
