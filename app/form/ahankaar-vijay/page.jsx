@@ -242,7 +242,7 @@ export default function AhankarViharForm() {
      <div className="min-h-screen w-full flex flex-col items-center justify-center py-0 md:py-8 bg-gray-100">
            <div className="text-center mb-6 sm:mb-10">
         <div className="inline-block">
-          <h1 className="font-heading text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+          <h1 className="font-heading text-2xl mt-6 pt-2 sm:mt-0 sm:pt-3 sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
              अहंकार विजय
           </h1>
           <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>

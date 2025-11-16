@@ -29,25 +29,36 @@ const PhotoCard = memo(
     onOpenModal,
     onOpenCommentModal,
     getCommentsCount,
+    language, // Add language prop
   }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
     const imgRef = useRef(null);
-
-    useEffect(() => {
-      const img = imgRef.current;
-      if (img && img.complete && img.naturalHeight !== 0) {
-        setImageLoaded(true);
-      }
-    }, []);
 
     const handleImageLoad = () => {
       setImageLoaded(true);
     };
 
     const handleImageError = () => {
-      console.error(`Failed to load image: ${photo.imageUrl}`);
+      console.error(`Failed to load thumbnail: ${photo.uid}`);
       setImageError(true);
+    };
+
+    // Get thumbnail path based on UID and language
+    const getThumbnailPath = (uid, lang) => {
+      // Extract number from uid (e.g., "sba59" -> "59")
+      const uidNumber = uid.replace(/\D/g, '');
+      
+      // Get language code (H for Hindi, G for Gujarati, E for English)
+      let languageCode = 'H'; // Default to Hindi
+      if (lang === 'gujarati') {
+        languageCode = 'G';
+      } else if (lang === 'english') {
+        languageCode = 'E';
+      }
+      
+      // Return thumbnail path: /thumbnails/SBA_THUMB-{number}{code}.jpg
+      return `/thumbnails/SBA_THUMB-${uidNumber}${languageCode}.jpg`;
     };
 
     return (
@@ -70,21 +81,27 @@ const PhotoCard = memo(
                   className="w-full bg-gray-300 animate-pulse flex items-center justify-center"
                   style={{ aspectRatio: "240/297" }}
                 >
-                  <img className="w-12" src="/logo.png" alt="" />
+                  <img 
+                    src="/logo.png" 
+                    alt="Loading" 
+                    className="w-12 h-12"
+                  />
                 </div>
               )}
-              <img
-                ref={imgRef}
-                src={photo.imageUrl}
-                alt={photo.name}
-                className={`w-full object-cover transition-all duration-500 group-hover:scale-100 ${
-                  imageLoaded ? "opacity-100" : "opacity-0 absolute"
-                }`}
-                style={{ aspectRatio: "240/297" }}
-                onLoad={handleImageLoad}
-                onError={handleImageError}
-                loading="lazy"
-              />
+              <div className="relative w-full" style={{ aspectRatio: "240/297" }}>
+                <img
+                  ref={imgRef}
+                  src={getThumbnailPath(photo.uid, language)}
+                  alt={photo.name}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
+                  onLoad={handleImageLoad}
+                  onError={handleImageError}
+                  loading={index < 4 ? "eager" : "lazy"}
+                  decoding="async"
+                />
+              </div>
             </>
           ) : (
             <div
@@ -583,6 +600,7 @@ const PhotoGallery = () => {
               onOpenModal={openModal}
               onOpenCommentModal={openCommentModal}
               getCommentsCount={getCommentsCount}
+              language={language}
             />
           ))}
         </div>

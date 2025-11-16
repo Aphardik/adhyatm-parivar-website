@@ -258,7 +258,7 @@ const Timeline = () => {
           </p>
           
           <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>55</span> दीक्षा
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>57</span> दीक्षा
           </p>
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">
