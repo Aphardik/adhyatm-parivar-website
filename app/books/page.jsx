@@ -7,6 +7,10 @@ import { FaBookOpen, FaFilter, FaInfo, FaInfoCircle, FaSearch } from 'react-icon
 import { FaMarsAndVenus, FaX } from 'react-icons/fa6';
 
 
+const getBookThumbnail = (srno) => {
+  return `/book-thumbnails/BOOK_THUMB-${srno}.jpg`;
+};
+
 const extractUniqueValues = (books, key) => {
   if (key === 'language') {
     const languages = new Set();
@@ -437,10 +441,15 @@ const BookCatalog = () => {
                         
                       >
                         <img 
-                          src={book.image} 
-                          alt={book.name}
-                          className="w-full h-full max-h-[8rem] object-contain group-hover:scale-105 transition-transform duration-300"
-                        />
+  src={getBookThumbnail(book.srno)} 
+  alt={book.name}
+  className="w-full h-full max-h-[8rem] object-contain group-hover:scale-105 transition-transform duration-300"
+  loading="lazy"
+  onError={(e) => {
+    // Fallback to original image if thumbnail fails
+    e.target.src = book.image;
+  }}
+/>
                         {book.price > 0 ? (
                           <div className="absolute top-0 right-0 bg-gray-300  px-1.5 py-0.5  text-[10px] font-bold">₹{book.price}</div>
                         ) : (

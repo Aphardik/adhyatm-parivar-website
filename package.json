@@ -2,13 +2,15 @@
   "name": "adhyatm-parivar-website",
   "version": "0.1.0",
   "private": true,
-  
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-     "generate-thumbnails": "node scripts/runThumbnailGeneration.js",
-    "build": "npm run generate-thumbnails && next build"
+    "generate-thumbnails": "node scripts/runThumbnailGeneration.js",
+    "generate-book-thumbnails": "node scripts/runBookThumbnailGeneration.js",
+    "generate-all-thumbnails": "npm run generate-thumbnails && npm run generate-book-thumbnails",
+    "build": "npm run generate-thumbnails && npm run generate-book-thumbnails && next build"
   },
   "dependencies": {
     "@react-email/render": "^1.3.1",

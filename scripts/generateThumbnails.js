@@ -1,34 +1,28 @@
-// ============================================
-// File: scripts/generateThumbnails.js
-// COMPLETE UPDATED VERSION WITH LANGUAGE CODES
-// ============================================
+import sharp from 'sharp';
+import fs from 'fs';
+import path from 'path';
 
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
-
-// Configuration
 const THUMBNAIL_WIDTH = 300;
 const THUMBNAIL_HEIGHT = 371;
-const THUMBNAIL_QUALITY = 15;
+const THUMBNAIL_QUALITY = 30;
 const PUBLIC_DIR = './public';
 const OUTPUT_DIR = './public/thumbnails';
 
-// Function to generate thumbnail from local file
-async function generateThumbnailFromFile(inputPath, outputPath, filename) {
+// Generate thumbnail from local file
+export async function generateThumbnailFromFile(inputPath, outputPath, filename) {
   try {
     await sharp(inputPath)
       .resize(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, {
         fit: 'cover',
         position: 'center'
       })
-      .jpeg({ 
+      .jpeg({
         quality: THUMBNAIL_QUALITY,
         progressive: true,
         mozjpeg: true
       })
       .toFile(path.join(outputPath, filename));
-    
+
     return true;
   } catch (error) {
     console.error(`Error generating thumbnail for ${filename}:`, error.message);
@@ -36,16 +30,16 @@ async function generateThumbnailFromFile(inputPath, outputPath, filename) {
   }
 }
 
-// Main function to process all images with language code
-async function processImages(photoData, languageName = '', languageCode = '') {
-  // Create thumbnails directory if it doesn't exist
+// Main processor function
+export async function processImages(photoData, languageName = '', languageCode = '') {
+  // Create folder
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     console.log(`✓ Created directory: ${OUTPUT_DIR}\n`);
   }
 
   console.log(`Starting thumbnail generation for ${photoData.length} images...`);
-  
+
   let successCount = 0;
   let failCount = 0;
   let skippedCount = 0;
@@ -53,8 +47,7 @@ async function processImages(photoData, languageName = '', languageCode = '') {
 
   for (let i = 0; i < photoData.length; i++) {
     const photo = photoData[i];
-    
-    // Validate photo data
+
     if (!photo) {
       console.log(`[${i + 1}/${photoData.length}] ⚠️  Skipping - null/undefined photo data`);
       skippedCount++;
@@ -74,57 +67,52 @@ async function processImages(photoData, languageName = '', languageCode = '') {
       continue;
     }
 
-    // ========================================
-    // IMPORTANT: NEW NAMING CONVENTION
-    // Extract number from uid and add language code
-    // Example: uid="sba59" → "59" + "H" = "SBA_THUMB-59H.jpg"
-    // ========================================
-    const uidNumber = photo.uid.replace(/\D/g, ''); // Remove all non-digits
+    // Extract numbers from UID
+    const uidNumber = photo.uid.replace(/\D/g, '');
     const thumbnailFilename = `SBA_THUMB-${uidNumber}${languageCode}.jpg`;
     const thumbnailPath = path.join(OUTPUT_DIR, thumbnailFilename);
 
-    // Skip if thumbnail already exists
     if (fs.existsSync(thumbnailPath)) {
       console.log(`[${i + 1}/${photoData.length}] ⏭️  Skipping ${photo.name} - thumbnail exists`);
       successCount++;
       continue;
     }
 
-    // Construct full path to source image
-    const relativePath = photo.imageUrl.startsWith('/') 
-      ? photo.imageUrl.substring(1) 
+    const relativePath = photo.imageUrl.startsWith('/')
+      ? photo.imageUrl.slice(1)
       : photo.imageUrl;
-    
+
     const sourcePath = path.join(PUBLIC_DIR, relativePath);
 
-    // Check if source file exists
     if (!fs.existsSync(sourcePath)) {
       console.log(`[${i + 1}/${photoData.length}] ✗ ${photo.name} - source file not found`);
       console.log(`    Expected: ${sourcePath}`);
       failCount++;
-      failedPhotos.push({ 
-        name: photo.name, 
-        uid: photo.uid, 
+      failedPhotos.push({
+        name: photo.name,
+        uid: photo.uid,
         reason: 'Source file not found',
-        expectedPath: sourcePath 
+        expectedPath: sourcePath
       });
       continue;
     }
 
     try {
       console.log(`[${i + 1}/${photoData.length}] 📸 Processing ${photo.name}...`);
-      
-      // Generate thumbnail from local file
-      const success = await generateThumbnailFromFile(sourcePath, OUTPUT_DIR, thumbnailFilename);
-      
+
+      const success = await generateThumbnailFromFile(
+        sourcePath,
+        OUTPUT_DIR,
+        thumbnailFilename
+      );
+
       if (success) {
-        // Get file sizes for comparison
         const sourceStats = fs.statSync(sourcePath);
         const thumbnailStats = fs.statSync(thumbnailPath);
         const sourceSizeKB = (sourceStats.size / 1024).toFixed(2);
         const thumbnailSizeKB = (thumbnailStats.size / 1024).toFixed(2);
         const savings = ((1 - thumbnailStats.size / sourceStats.size) * 100).toFixed(1);
-        
+
         console.log(`    ✓ Generated: ${thumbnailFilename}`);
         console.log(`    📊 Original: ${sourceSizeKB} KB → Thumbnail: ${thumbnailSizeKB} KB (${savings}% smaller)`);
         successCount++;
@@ -132,7 +120,6 @@ async function processImages(photoData, languageName = '', languageCode = '') {
         failCount++;
         failedPhotos.push({ name: photo.name, uid: photo.uid, reason: 'Generation failed' });
       }
-      
     } catch (error) {
       console.error(`    ✗ Failed to process ${photo.name}: ${error.message}`);
       failCount++;
@@ -148,7 +135,6 @@ async function processImages(photoData, languageName = '', languageCode = '') {
   console.log(`📊 Total: ${photoData.length}`);
   console.log('========================================');
 
-  // Show failed photos if any
   if (failedPhotos.length > 0) {
     console.log('\n⚠️  Failed/Skipped Photos:');
     failedPhotos.forEach((photo, idx) => {
@@ -161,7 +147,7 @@ async function processImages(photoData, languageName = '', languageCode = '') {
   }
 
   console.log('');
-  
+
   return {
     success: successCount,
     failed: failCount,
@@ -171,5 +157,7 @@ async function processImages(photoData, languageName = '', languageCode = '') {
   };
 }
 
-// Export for use in other scripts
-module.exports = { processImages };
+// Default export (optional)
+export default {
+  processImages
+};
