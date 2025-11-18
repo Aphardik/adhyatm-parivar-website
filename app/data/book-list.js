@@ -350,5 +350,26 @@ export const BOOKS_DATA = [
   { srno: 349, name: "સંસ્કારશાળા - માર્ગદર્શિકા", shreniCode:"SSSG-02", shreni: "संस्कारशाला साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 500, image: "/books/349.jpg" },
   { srno: 350, name: "સોનેરી યાદો", shreniCode:"SSSG-03", shreni: "संस्कारशाला साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 500, image: "/books/350.jpg" },
   { srno: 351, name: "પ્રભુજીવન નમનાવલી", shreniCode:"SSSG-04", shreni: "संस्कारशाला साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 2000, image: "/books/351.jpg" },
-  { srno: 352, name: "ભગવાન મહાવીર : ગુજરાતના વિદ્યાર્થીઓની દ્રષ્ટિમાં", shreniCode:"VSG-25", shreni: "विविध साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 20000, image: "/books/352.jpg" }
+  { srno: 352, name: "ભગવાન મહાવીર : ગુજરાતના વિદ્યાર્થીઓની દ્રષ્ટિમાં", shreniCode:"VSG-25", shreni: "विविध साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 20000, image: "/books/352.jpg" },
+
+//   { srno: 353, name: "શ્રીપાલ રાસ", shreniCode:"RSS-46", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 85, edition: "1", totalCopies: 250, image: "/books/353.jpg" },
+
+// { srno: 354, name: "ગંગદત્ત ચરિત્ર રાસ", shreniCode:"RSS-47", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 135, edition: "1", totalCopies: 250, image: "/books/354.jpg" },
+
+// { srno: 355, name: "લલિતાંગકુમાર રાસ", shreniCode:"RSS-48", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 150, edition: "1", totalCopies: 250, image: "/books/355.jpg" },
+
+// { srno: 356, name: "ગજસુકુમાલ ચોપાઈ", shreniCode:"RSS-49", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 135, edition: "1", totalCopies: 250, image: "/books/356.jpg" },
+
+// { srno: 357, name: "અંબડ રાસ", shreniCode:"RSS-50", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 120, edition: "1", totalCopies: 250, image: "/books/357.jpg" },
+
+// { srno: 358, name: "સીતાસતી ચોપાઈ", shreniCode:"RSS-51", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 90, edition: "1", totalCopies: 250, image: "/books/358.jpg" },
+
+// { srno: 359, name: "અષ્ટપ્રકારી પૂજા રાસ", shreniCode:"RSS-52", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 210, edition: "1", totalCopies: 250, image: "/books/359.jpg" },
+
+// { srno: 360, name: "સુરસુંદર રાજર્ષિ પ્રબંધ", shreniCode:"RSS-53", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 90, edition: "1", totalCopies: 250, image: "/books/360.jpg" },
+
+// { srno: 361, name: "સુદર્શનશ્રેષ્ઠી રાસ", shreniCode:"RSS-54", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 90, edition: "1", totalCopies: 250, image: "/books/361.jpg" },
+
+// { srno: 362, name: "વિજયચંદ ચોપાઈ", shreniCode:"RSS-55", shreni: "राससाहित्यश्रेणी", language: "गुजराती", price: 135, edition: "1", totalCopies: 250, image: "/books/362.jpg" },
+
 ];

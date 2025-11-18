@@ -17,7 +17,7 @@ const SubmissionPopup = ({
 }) => {
   
   const pathname = usePathname();
-  const isCalendarPage = pathname.includes('calendar')
+  const isCalendarPage = pathname.includes('calendarhshsh')
   useEffect(() => {
     if ((status === "success" || status === "error") && visible && showAutoClose) {
       const timer = setTimeout(() => {

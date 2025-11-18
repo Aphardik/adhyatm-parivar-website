@@ -13,7 +13,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/bookimages/calendar-2082.png"];
+  const images = ["/bookimages/calendar-2082-hindi.png"];
 
   useEffect(() => {
     if (!isHovered) {
@@ -187,7 +187,7 @@ export default function Calendar2082Form() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupStatus, setPopupStatus] = useState("loading");
 
-  const isOutOfStock = true; // Set to true to indicate out of stock
+  const isOutOfStock = false; // Set to true to indicate out of stock
 
   const onFinish = async (values) => {
     setPopupVisible(true);
@@ -200,7 +200,7 @@ export default function Calendar2082Form() {
       setLoading(true);
       const response = await axios.post(
         // "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/calendar2082Form",
-        "https://universalform-fahifz22ha-uc.a.run.app?form=calendar2082",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=calendar2082hindi",
         values
       );
 
@@ -243,8 +243,8 @@ export default function Calendar2082Form() {
     <div className="min-h-screen w-full flex flex-col items-center justify-center py-0 md:py-8 bg-gray-100">
       <div className="text-center mb-6 sm:mb-10">
         <div className="inline-block px-4">
-          <h1 className="font-anek  text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
-            આરાધના દિન દર્શિની (કેલેન્ડર પંચાંગ વિ.સ. ૨૦૮૨)
+          <h1 className="font-heading  text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
+            आराधना दिन दर्शिनी (कैलेंडर पंचांग वि.सं.२०८२)
           </h1>
           <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
         </div>

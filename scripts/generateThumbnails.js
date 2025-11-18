@@ -4,7 +4,7 @@ import path from 'path';
 
 const THUMBNAIL_WIDTH = 300;
 const THUMBNAIL_HEIGHT = 371;
-const THUMBNAIL_QUALITY = 30;
+const THUMBNAIL_QUALITY = 50;
 const PUBLIC_DIR = './public';
 const OUTPUT_DIR = './public/thumbnails';
 
