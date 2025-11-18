@@ -122,7 +122,7 @@ const CopySelector = ({
           <button
             type="button"
             onClick={handleDecrement}
-            disabled={value === 2}
+            disabled={value === 1}
             className="
               p-[.4rem] rounded-full bg-gray-100 text-gray-600 
               hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed
@@ -151,7 +151,7 @@ const CopySelector = ({
           <button
             type="button"
             onClick={handleIncrement}
-            disabled={value === 1}
+            disabled={value === 2}
             className="
               p-[.4rem] rounded-full bg-blue-100 text-blue-600 
               hover:bg-blue-200 disabled:opacity-50 disabled:cursor-not-allowed
