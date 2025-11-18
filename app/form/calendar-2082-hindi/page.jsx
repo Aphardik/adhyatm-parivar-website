@@ -281,7 +281,7 @@ export default function Calendar2082Form() {
                   <Col xs={24} md={12}>
                     <Form.Item
                       label={
-                        <b className="font-anek">મોબાઇલ નંબર/मोबाइल नंबर</b>
+                        <b className="font-anek">मोबाइल नंबर/મોબાઇલ નંબર</b>
                       }
                       name="मोबाइल नंबर"
                       rules={[
@@ -305,13 +305,13 @@ export default function Calendar2082Form() {
                     >
                       <Input
                         className="rounded-md"
-                        placeholder="મોબાઇલ નંબર/मोबाइल नंबर"
+                        placeholder="मोबाइल नंबर/મોબાઇલ નંબર"
                       />
                     </Form.Item>
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">નામ/नाम</b>}
+                      label={<b className="font-anek">नाम/નામ</b>}
                       name="नाम"
                       rules={[
                         {
@@ -324,7 +324,7 @@ export default function Calendar2082Form() {
                         },
                       ]}
                     >
-                      <Input className="rounded-md" placeholder="નામ/नाम" />
+                      <Input className="rounded-md" placeholder="नाम/નામ" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -332,7 +332,7 @@ export default function Calendar2082Form() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">અટક/उपनाम</b>}
+                      label={<b className="font-anek">उपनाम/અટક</b>}
                       name="उपनाम"
                       rules={[
                         {
@@ -345,12 +345,12 @@ export default function Calendar2082Form() {
                         },
                       ]}
                     >
-                      <Input className="rounded-md" placeholder="અટક/उपनाम" />
+                      <Input className="rounded-md" placeholder="उपनाम/અટક" />
                     </Form.Item>
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">પિનકોડ/पिनकोड</b>}
+                      label={<b className="font-anek">पिनकोड/પિનકોડ</b>}
                       name="पिनकोड"
                       rules={[
                         {
@@ -373,7 +373,7 @@ export default function Calendar2082Form() {
                     >
                       <Input
                         className="rounded-md"
-                        placeholder="પિનકોડ/पिनकोड"
+                        placeholder="पिनकोड/પિનકોડ"
                       />
                     </Form.Item>
                   </Col>
@@ -382,7 +382,7 @@ export default function Calendar2082Form() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">રાજ્ય/राज्य</b>}
+                      label={<b className="font-anek">राज्य/રાજ્ય</b>}
                       name="राज्य"
                       rules={[
                         {
@@ -395,7 +395,7 @@ export default function Calendar2082Form() {
                         },
                       ]}
                     >
-                      <Select placeholder="રાજ્ય/राज्य" className="rounded-md">
+                      <Select placeholder="राज्य/રાજ્ય" className="rounded-md">
                         {states.map((state) => (
                           <Select.Option key={state.value} value={state.value}>
                             <span className="font-anek">
@@ -408,7 +408,7 @@ export default function Calendar2082Form() {
                   </Col>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">શહેર/शहर</b>}
+                      label={<b className="font-anek">शहर/શહેર</b>}
                       name="शहर"
                       rules={[
                         {
@@ -421,7 +421,7 @@ export default function Calendar2082Form() {
                         },
                       ]}
                     >
-                      <Input className="rounded-md" placeholder="શહેર/शहर" />
+                      <Input className="rounded-md" placeholder="शहर/શહેર" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -429,7 +429,7 @@ export default function Calendar2082Form() {
                 <Row gutter={16}>
                   <Col xs={24} md={12}>
                     <Form.Item
-                      label={<b className="font-anek">એડ્રેસ/एड्रेस</b>}
+                      label={<b className="font-anek">एड्रेस/એડ્રેસ</b>}
                       name="એડ્રેસ/एड्रेस"
                       rules={[
                         {
@@ -444,7 +444,7 @@ export default function Calendar2082Form() {
                     >
                       <TextArea
                         className="rounded-md"
-                        placeholder="એડ્રેસ/एड्रेस"
+                        placeholder="एड्रेस/એડ્રેસ"
                         rows={3}
                       />
                     </Form.Item>
