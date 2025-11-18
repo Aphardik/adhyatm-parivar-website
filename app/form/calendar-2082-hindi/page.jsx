@@ -101,7 +101,7 @@ const ImageCarousel = () => {
 };
 
 const CopySelector = ({
-  label = "તમે આ પુસ્તકની કેટલી નકલો ઓર્ડર કરવા માંગો છો?",
+  label = "आपको इस कैलेंडर की कितनी प्रतियों की आवश्यकता है?",
   value,
   onChange,
 }) => {
@@ -122,7 +122,7 @@ const CopySelector = ({
           <button
             type="button"
             onClick={handleDecrement}
-            disabled={value === 1}
+            disabled={value === 2}
             className="
               p-[.4rem] rounded-full bg-gray-100 text-gray-600 
               hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed
@@ -451,7 +451,7 @@ export default function Calendar2082Form() {
                   </Col>
                   <Col xs={24} md={12}>
                     <CopySelector
-                      label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
+                      label="आपको इस कैलेंडर की कितनी प्रतियों की आवश्यकता है?"
                       value={copies}
                       onChange={setCopies}
                     />
