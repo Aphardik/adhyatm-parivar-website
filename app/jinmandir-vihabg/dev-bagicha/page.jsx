@@ -96,19 +96,19 @@ const Page = () => {
         <section className="py-4 sm:py-6 lg:py-8 lg:px-0 ">
           <div className="grid lg:grid-cols-3 items-center">
             <div className="flex flex-col gap-2 items-center justify-center">
-              <img src="/jinmandir/dev-bagicha/img-2.30.png" alt="ap" />
+              <img src="/jinmandir/dev-bagicha/img-2.30.webp" alt="ap" />
               <p className="text-center text-maroon font-semibold">
                 यह है जूनागढ़ देवबगीचा
               </p>
             </div>
             <div className="flex flex-col gap-2 items-center justify-center">
-              <img src="/jinmandir/dev-bagicha/img-2.31.png" alt="ap" />
+              <img src="/jinmandir/dev-bagicha/img-2.31.webp" alt="ap" />
               <p className="text-center text-maroon font-semibold">
                 पुष्पों के कुंडों की व्यवस्था परिवार करता है।
               </p>
             </div>
             <div className="flex flex-col gap-2 items-center justify-center">
-              <img src="/jinmandir/dev-bagicha/img-2.32.png" alt="ap" />
+              <img src="/jinmandir/dev-bagicha/img-2.32.webp" alt="ap" />
               <p className="text-center text-maroon font-semibold">
                 खंभात में देवबगीचे का प्रारंभ
               </p>
@@ -165,21 +165,21 @@ const Page = () => {
           <div className="grid md:grid-cols-3 gap-2">
             <div className="bg-lightyellow rounded-lg p-4">
               <img
-                src="/jinmandir/dev-bagicha/img-2.33-1.jpg"
+                src="/jinmandir/dev-bagicha/img-2.33-1.webp"
                 alt="तुफान क्षति 1"
                 className="w-full h-96 object-cover rounded"
               />
             </div>
             <div className="bg-lightyellow rounded-lg p-4">
               <img
-                src="/jinmandir/dev-bagicha/img-2.33-2.jpg"
+                src="/jinmandir/dev-bagicha/img-2.33-2.webp"
                 alt="तुफान क्षति 2"
                 className="w-full h-96 object-cover rounded"
               />
             </div>
             <div className="bg-lightyellow rounded-lg p-4">
               <img
-                src="/jinmandir/dev-bagicha/img-2.33-3.jpg"
+                src="/jinmandir/dev-bagicha/img-2.33-3.webp"
                 alt="तुफान क्षति 3"
                 className="w-full h-96 object-cover rounded"
               />
@@ -234,7 +234,7 @@ const Page = () => {
             <div className="bg-lightyellow rounded-2xl p-6 shadow-md transition-all duration-300 transform  group">
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src="/jinmandir/dev-bagicha/img-2.33-4.jpg"
+                  src="/jinmandir/dev-bagicha/img-2.33-4.webp"
                   alt="सुधार कार्य 1"
                   className="w-full h-96 object-cover transition-transform duration-500 "
                 />
@@ -243,7 +243,7 @@ const Page = () => {
             <div className="bg-lightyellow rounded-2xl p-6 shadow-md  transition-all duration-300 transform  group">
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src="/jinmandir/dev-bagicha/img-2.33-5.jpg"
+                  src="/jinmandir/dev-bagicha/img-2.33-5.webp"
                   alt="सुधार कार्य 2"
                   className="w-full h-96 object-cover transition-transform duration-500 "
                 />
@@ -252,7 +252,7 @@ const Page = () => {
             <div className="bg-lightyellow rounded-2xl p-6 shadow-md  transition-all duration-300 transform  group">
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src="/jinmandir/dev-bagicha/img-2.33-6.jpg"
+                  src="/jinmandir/dev-bagicha/img-2.33-6.webp"
                   alt="सुधार कार्य 3"
                   className="w-full h-96 object-cover transition-transform duration-500 "
                 />
@@ -279,24 +279,24 @@ const Page = () => {
           <div className="grid grid-cols-1 gap-6 items-center">
             <div className="w-full">
               <img
-                src="/jinmandir/dev-bagicha/img-2.34-1.png"
+                src="/jinmandir/dev-bagicha/img-2.34-1.webp"
                 alt=""
                 className="w-full h-auto"
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
               <img
-                src="/jinmandir/dev-bagicha/img-2.34-2.jpg"
+                src="/jinmandir/dev-bagicha/img-2.34-2.webp"
                 alt=""
                 className="w-full h-auto"
               />
               <img
-                src="/jinmandir/dev-bagicha/img-2.34-3.png"
+                src="/jinmandir/dev-bagicha/img-2.34-3.webp"
                 alt=""
                 className="w-full h-auto"
               />
               <img
-                src="/jinmandir/dev-bagicha/img-2.34-4.jpg"
+                src="/jinmandir/dev-bagicha/img-2.34-4.webp"
                 alt=""
                 className="w-full h-auto"
               />

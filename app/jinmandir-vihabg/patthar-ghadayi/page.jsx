@@ -52,21 +52,21 @@ const Page = () => {
             <div className="grid sm:grid-cols-3 gap-8">
               <div className='p-8 bg-lightyellow rounded-sm'>
               <img 
-                src="/jinmandir/patthar-ghadayi/img-2.27.png" 
+                src="/jinmandir/patthar-ghadayi/img-2.27.webp" 
                 alt="Detailed Idol" 
                 className="w-full object-contain " 
               />
               </div>
               <div className='p-8 bg-lightyellow rounded-sm'>
               <img 
-                src="/jinmandir/patthar-ghadayi/img-2.28.png" 
+                src="/jinmandir/patthar-ghadayi/img-2.28.webp" 
                 alt="Symbol" 
                 className="w-full object-contain " 
               />
               </div>
               <div className='p-8 bg-lightyellow rounded-sm'>
               <img 
-                src="/jinmandir/patthar-ghadayi/img-2.29.png" 
+                src="/jinmandir/patthar-ghadayi/img-2.29.webp" 
                 alt="Design" 
                 className="w-full object-contain " 
               />

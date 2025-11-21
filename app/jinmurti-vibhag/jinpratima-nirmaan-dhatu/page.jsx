@@ -50,7 +50,7 @@ const Page = () => {
           </div>
           <div className="bg-lightyellow rounded-lg p-6 order-1 md:order-2">
             <img
-              src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.21.png"
+              src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.21.webp"
               alt="Casting Process"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -63,17 +63,17 @@ const Page = () => {
           <div className="bg-lightyellow rounded-lg p-6">
             <div className="grid grid-cols-3 gap-4 mb-4">
               <img 
-                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.22.png" 
+                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.22.webp" 
                 alt="Detailed Idol" 
                 className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />
               <img 
-                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.23.jpg" 
+                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.23.webp" 
                 alt="Symbol" 
                 className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />
               <img 
-                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.24.jpg" 
+                src="/jinmurti/jinpratima-nirmaan-dhatu/img-1.24.webp" 
                 alt="Design" 
                 className="w-full h-64 object-contain filter grayscale rounded-lg" 
               />

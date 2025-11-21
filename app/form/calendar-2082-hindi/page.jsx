@@ -13,7 +13,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/bookimages/calendar-2082-hindi.png"];
+  const images = ["/bookimages/calendar-2082-hindi.webp"];
 
   useEffect(() => {
     if (!isHovered) {

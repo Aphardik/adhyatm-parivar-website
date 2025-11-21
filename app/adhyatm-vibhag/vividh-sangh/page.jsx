@@ -87,7 +87,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.70.jpg"
+                    src="/adhyatm/vividh-sangh/img-3.70.webp"
                     alt="पाल-सूरत संघ भवन"
                     className="w-full h-full object-contain rounded-lg"
                   />
@@ -197,7 +197,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.71.jpg"
+                    src="/adhyatm/vividh-sangh/img-3.71.webp"
                     alt="नानपुरा संघ भवन"
                     className="w-full h-full object-contain rounded-lg"
                   />
@@ -283,7 +283,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.72.png"
+                    src="/adhyatm/vividh-sangh/img-3.72.webp"
                     alt="उस्मानपुरा संघ भवन"
                     className="w-full h-full object-contain rounded-lg"
                   />
@@ -347,7 +347,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.73.png"
+                    src="/adhyatm/vividh-sangh/img-3.73.webp"
                     alt="मादलपुर संघ भवन"
                     className="w-full h-full object-contain rounded-lg"
                   />
@@ -571,7 +571,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.74.png"
+                    src="/adhyatm/vividh-sangh/img-3.74.webp"
                     alt="युगभूमि गुरुमंदिर"
                     className="w-full h-full object-contain rounded-lg"
                   />
@@ -580,7 +580,7 @@ const Page = () => {
               <div className="flex flex-col p-6">
                 <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                   <img
-                    src="/adhyatm/vividh-sangh/img-3.75.png"
+                    src="/adhyatm/vividh-sangh/img-3.75.webp"
                     alt="गुरु प्रतिमा"
                     className="w-full h-full object-contain rounded-lg"
                   />

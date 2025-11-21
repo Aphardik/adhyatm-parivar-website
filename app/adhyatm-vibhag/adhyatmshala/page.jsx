@@ -54,8 +54,8 @@ const AnusthanAyojan = () => {
           </div>
           <div className="">
             <div className='flex w-full gap-2 flex-col sm:flex-row justify-center items-center'>
-            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-1.jpg" alt="Spiritual event" />
-            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-2.jpeg" alt="Spiritual event" />
+            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-1.webp" alt="Spiritual event" />
+            <img className="w-full h-96 rounded " src="/adhyatm/adhyatmshala/img-3.51-2.webp" alt="Spiritual event" />
             </div>
             <p className="text-lg bg-maroon sm:text-xl text-whitey p-3 rounded-sm font-semibold font-heading text-center mt-2">
              बच्चे आनंद से अध्यात्मशाला में पढ़ रहे हैं!

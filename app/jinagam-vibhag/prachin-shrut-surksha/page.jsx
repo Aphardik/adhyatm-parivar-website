@@ -86,7 +86,7 @@ const Page = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div className=" rounded-lg overflow-hidden ">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.1-1.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.1-1.webp"
                     alt="1"
                     className="w-full h-64 object-cover "
                   />
@@ -94,7 +94,7 @@ const Page = () => {
 
                 <div className=" rounded-lg overflow-hidden ">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.1-2.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.1-2.webp"
                     alt="2"
                     className="w-full h-64 object-cover "
                   />
@@ -102,7 +102,7 @@ const Page = () => {
 
                 <div className=" rounded-lg overflow-hidden  ">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.1-3.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.1-3.webp"
                     alt="3"
                     className="w-full h-64 object-cover "
                   />
@@ -110,7 +110,7 @@ const Page = () => {
 
                 <div className=" rounded-lg overflow-hidden border ">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.1-4.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.1-4.webp"
                     alt="4"
                     className="w-full h-64 object-cover "
                   />
@@ -118,7 +118,7 @@ const Page = () => {
 
                 <div className="rounded-lg overflow-hidden">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.1-5.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.1-5.webp"
                     alt="5"
                     className="w-full h-64 object-cover "
                   />
@@ -130,7 +130,7 @@ const Page = () => {
               <div className="">
                 <div className=" rounded-lg overflow-hidden">
                   <img
-                    src="/jinagam/prachin-shrut-suraksha/img-3.2.png"
+                    src="/jinagam/prachin-shrut-suraksha/img-3.2.webp"
                     alt="ap"
                     className="w-full h-80 lg:h-96 object-contain "
                   />

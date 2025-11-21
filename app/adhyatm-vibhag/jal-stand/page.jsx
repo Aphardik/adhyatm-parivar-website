@@ -75,7 +75,7 @@ const Page = () => {
         {/* First Image */}
         <div className="h-80 flex-1 flex justify-center items-center">
           <img
-            src="/adhyatm/jal-stand/img-3.28.png"
+            src="/adhyatm/jal-stand/img-3.28.webp"
             alt="झरने वाला उष्णजल स्टैंड"
             className="w-full max-w-sm h-full object-contain rounded-lg"
           />
@@ -84,7 +84,7 @@ const Page = () => {
         {/* Second Image */}
         <div className="h-80 flex-1 flex justify-center items-center">
           <img
-            src="/adhyatm/jal-stand/img-3.29.png"
+            src="/adhyatm/jal-stand/img-3.29.webp"
             alt="स्टेनलेस स्टील स्टैंड"
             className="w-full max-w-sm h-full object-contain rounded-lg"
           />

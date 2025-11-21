@@ -13,7 +13,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/bookimages/ravanni-bhitarma.jpg"];
+  const images = ["/bookimages/ravanni-bhitarma.webp"];
 
   useEffect(() => {
     if (!isHovered) {

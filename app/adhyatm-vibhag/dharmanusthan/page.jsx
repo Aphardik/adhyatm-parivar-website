@@ -41,7 +41,7 @@ const Page = () => {
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="grid sm:grid-cols-2 items-center gap-6 sm:gap-10">
           <div className="p-6 bg-lighten-bg">
-        <img className="w-full" src="/adhyatm/dharmanusthan/img-3.42.png" alt="dharmanushthan" />
+        <img className="w-full" src="/adhyatm/dharmanusthan/img-3.42.webp" alt="dharmanushthan" />
         </div>
         <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
            <div className="absolute top-0 left-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
@@ -66,10 +66,10 @@ const Page = () => {
 
         </div>
                   <div className="grid sm:grid-cols-4 w-full items-center">
-            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-1.png" alt="" />
-            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-2.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-3.png" alt="" />
-            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-4.png" alt="" />
+            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-1.webp" alt="" />
+            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-2.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-3.webp" alt="" />
+            <img className="mx-auto w-full p-4" src="/adhyatm/dharmanusthan/img-3.43-4.webp" alt="" />
           </div>
         
       </section>

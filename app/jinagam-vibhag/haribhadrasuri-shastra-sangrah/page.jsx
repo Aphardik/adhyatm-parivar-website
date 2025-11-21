@@ -57,7 +57,7 @@ const Page = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="rounded-sm overflow-hidden bg-lightyellow p-4">
                 <img
-                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.12.png"
+                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.12.webp"
                   alt="Library shelves filled with books"
                   className="w-full h-64 object-contain rounded-lg mb-6"
                 />
@@ -68,7 +68,7 @@ const Page = () => {
 
               <div className="rounded-sm overflow-hidden bg-lightyellow p-4">
                 <img
-                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.11.png"
+                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.11.webp"
                   alt="Library books collection"
                   className="w-full h-64 object-contain rounded-lg mb-6"
                 />
@@ -79,7 +79,7 @@ const Page = () => {
 
               <div className="rounded-sm overflow-hidden bg-lightyellow p-4">
                 <img
-                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.13.png"
+                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.13.webp"
                   alt="Library entrance with glass doors"
                   className="w-full h-64 object-contain rounded-lg mb-6"
                 />
@@ -94,7 +94,7 @@ const Page = () => {
             <div className="w-full max-w-md">
               <div className="rounded-sm overflow-hidden">
                 <img
-                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.14.png"
+                  src="/jinagam/haribhadrasuri-shastra-sangrah/img-3.14.webp"
                   alt="Beautifully carved wooden statue of Guru Shri Haribhadra Acharya"
                   className="w-full h-80 lg:h-[90vh] object-contain rounded-lg"
                 />

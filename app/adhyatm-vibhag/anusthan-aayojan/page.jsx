@@ -52,7 +52,7 @@ const AnusthanAyojan = () => {
             </p>
           </div>
           <div className="p-6 bg-lighten-bg">
-            <img className="w-full rounded shadow-lg" src="/adhyatm/anusthan-aayojan/img-3.47.jpg" alt="Spiritual event" />
+            <img className="w-full rounded shadow-lg" src="/adhyatm/anusthan-aayojan/img-3.47.webp" alt="Spiritual event" />
             <p className="text-lg text-whitey bg-maroon rounded-sm py-3 sm:text-xl font-semibold font-heading text-center mt-2">
               उपधान की साधना जीवन की दिशा बदल देती है।
             </p>
@@ -74,7 +74,7 @@ const AnusthanAyojan = () => {
             <img
               alt="वाचना श्रेणी"
               className="w-1/3 rounded"
-              src="/adhyatm/anusthan-aayojan/img-3.49.jpg"
+              src="/adhyatm/anusthan-aayojan/img-3.49.webp"
             />
             <div className="ml-4">
               <h2 className="text-lg sm:text-xl font-heading font-bold text-maroon">वाचना - श्रेणी</h2>
@@ -88,7 +88,7 @@ const AnusthanAyojan = () => {
             <img
               alt="ब्रह्मयात्रा"
               className="w-1/3 order-2 rounded"
-              src="/adhyatm/anusthan-aayojan/img-3.50.png"
+              src="/adhyatm/anusthan-aayojan/img-3.50.webp"
             />
             <div className="ml-4 order-1">
               <h2 className="text-lg sm:text-xl font-heading font-bold text-maroon">ब्रह्मयात्रा</h2>
@@ -109,7 +109,7 @@ const AnusthanAyojan = () => {
           <img
             alt="अनुष्ठान आयोजन का व्यापक दृश्य"
             className="w-full rounded shadow-lg"
-            src="/adhyatm/anusthan-aayojan/img-3.48.jpg"
+            src="/adhyatm/anusthan-aayojan/img-3.48.webp"
           />
           
         </div>

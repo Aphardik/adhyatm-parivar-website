@@ -60,14 +60,14 @@ const Page = () => {
 
         </div>
                   <div className="grid sm:grid-cols-4 w-full items-center">
-            <img className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-1.png" alt="" />
-            <img className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-2.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-3.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-4.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-5.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-6.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-7.png" alt="" />
-            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-8.png" alt="" />
+            <img className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-1.webp" alt="" />
+            <img className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-2.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-3.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-4.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-5.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-6.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-7.webp" alt="" />
+            <img  className="mx-auto w-full p-4" src="/adhyatm/prabhubhakti-upkaran/img-3.55-8.webp" alt="" />
           </div>
         
       </section>
@@ -84,7 +84,7 @@ const Page = () => {
             <div className="flex flex-col  p-6">
               <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-1.png"
+                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-1.webp"
                   alt="ap"
                   className="w-full h-full object-contain rounded-lg"
                 />
@@ -96,7 +96,7 @@ const Page = () => {
              <div className="flex flex-col  p-6">
               <div className="sm:h-96 w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-2.png"
+                  src="/adhyatm/prabhubhakti-upkaran/img-3.56-2.webp"
                   alt="ap"
                   className="w-full h-full object-contain rounded-lg"
                 />

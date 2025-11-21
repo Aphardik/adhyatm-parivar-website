@@ -57,7 +57,7 @@ const Page = () => {
               <div className="w-full max-w-2xl">
                 <div className="rounded-lg overflow-hidden bg-lighten-bg p-8">
                   <img
-                    src="/jinagam/ganipitak-nirmaan-prasar/img-3.17.png"
+                    src="/jinagam/ganipitak-nirmaan-prasar/img-3.17.webp"
                     alt="Decorative sculpture with intricate design"
                     className="w-full h-80 lg:h-96 object-contain rounded-lg"
                   />

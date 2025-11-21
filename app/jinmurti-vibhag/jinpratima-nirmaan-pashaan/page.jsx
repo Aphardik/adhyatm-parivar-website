@@ -96,7 +96,7 @@ const Page = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lightyellow rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.13.png"
+              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.13.webp"
               alt="पाषाण के पीस में छोटा होल करके स्टेन डाला जाता है।"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -126,7 +126,7 @@ const Page = () => {
           </div>
           <div className="bg-lightyellow rounded-lg p-6 shadow-sm order-1 md:order-2">
             <img
-              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.14.png"
+              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.14.webp"
               alt="यह जो लाइन दिख रही है, वह वरण है।"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -137,7 +137,7 @@ const Page = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lightyellow rounded-lg p-6 shadow-sm">
             <img
-              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.15.png"
+              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.15.webp"
               alt="मिट्टी का नयनाकर्षक मॉडल"
               className="w-full h-64 object-contain rounded-lg"
             />
@@ -168,12 +168,12 @@ const Page = () => {
           <div className="bg-lightyellow  rounded-lg p-6  order-1 md:order-2">
             <div className="flex items-center justify-center">
               <img
-                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.16.jpg"
+                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.16.webp"
                 alt="3D स्कैन और एडिटिंग"
                 className="w-full h-64 object-contain rounded-lg"
               />
               <img
-                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.17.png"
+                src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.17.webp"
                 alt="डिजिटल प्रसंस्करण"
                 className="w-full h-64 object-contain rounded-lg"
               />
@@ -183,7 +183,7 @@ const Page = () => {
                 <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
           <div className="bg-lightyellow rounded-lg p-6">
             <img
-              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.181920.jpeg"
+              src="/jinmurti/jinpratima-nirmaan-pashaan/img-1.181920.webp"
               alt="Process 3"
               className="w-full h-64 object-contain  rounded-lg"
             />

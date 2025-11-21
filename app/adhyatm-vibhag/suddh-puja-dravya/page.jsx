@@ -54,7 +54,7 @@ const Page = () => {
               <img
                 alt="A set of sandalwood pieces"
                 className="w-full h-64 object-contain rounded-xl"
-                src="/adhyatm/suddh-puja-dravya/img-3.30.jpg"
+                src="/adhyatm/suddh-puja-dravya/img-3.30.webp"
               />
             </div>
             <div className=" rounded-xl p-8">
@@ -88,7 +88,7 @@ const Page = () => {
               <img
                 alt="Bottles of sandalwood oil"
                 className="w-full h-64 object-contain rounded-xl"
-                src="/adhyatm/suddh-puja-dravya/img-3.31.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.31.webp"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.32.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.32.webp"
                 alt="Vasachoorna"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -127,7 +127,7 @@ const Page = () => {
             </div>
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink order-1 md:order-2">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.33.jpg"
+                src="/adhyatm/suddh-puja-dravya/img-3.33.webp"
                 alt="Orisaya"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -138,7 +138,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.34.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.34.webp"
                 alt="Kesar"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -170,7 +170,7 @@ const Page = () => {
             </div>
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink order-1 md:order-2">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.35.png"
+                src="/adhyatm/suddh-puja-dravya/img-3.35.webp"
                 alt="Gandhakavari Vastra"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -181,7 +181,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.36.jpg"
+                src="/adhyatm/suddh-puja-dravya/img-3.36.webp"
                 alt="Yuktachandana Choorna"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -217,12 +217,12 @@ const Page = () => {
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink order-1 md:order-2">
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <img
-                  src="/adhyatm/suddh-puja-dravya/img-3.39.png"
+                  src="/adhyatm/suddh-puja-dravya/img-3.39.webp"
                   alt="Gold leaf"
                   className="sm:h-52 object-cover rounded-full"
                 />
                 <img
-                  src="/adhyatm/suddh-puja-dravya/img-3.40.jpg"
+                  src="/adhyatm/suddh-puja-dravya/img-3.40.webp"
                   alt="Silver leaf"
                   className="sm:h-52 object-cover rounded-full"
                 />
@@ -234,7 +234,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="bg-lightyellow rounded-xl p-8 border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.41.jpg"
+                src="/adhyatm/suddh-puja-dravya/img-3.41.webp"
                 alt="Gold and silver leaf in containers"
                 className="w-full h-64 object-contain rounded-xl"
               />
@@ -255,7 +255,7 @@ const Page = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12 items-start">
             <div className="bg-lightyellow rounded-xl p-8 text-center border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.37.jpg"
+                src="/adhyatm/suddh-puja-dravya/img-3.37.webp"
                 alt="Bheemseti Kapoor"
                 className="mx-auto mb-4 rounded-full h-64 w-64 object-cover"
               />
@@ -280,7 +280,7 @@ const Page = () => {
 
             <div className="bg-lightyellow rounded-xl p-8 text-center border border-lightpink">
               <img
-                src="/adhyatm/suddh-puja-dravya/img-3.38.jpeg"
+                src="/adhyatm/suddh-puja-dravya/img-3.38.webp"
                 alt="Ghanasara Kapoor"
                 className="mx-auto mb-4 rounded-full h-64 w-64 object-cover"
               />

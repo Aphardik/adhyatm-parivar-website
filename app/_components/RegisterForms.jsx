@@ -122,7 +122,7 @@ const RegisterForm = () => {
               <div className="relative bg-light-bg font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
-                  src="/bookimages/ravanni-bhitarma.jpg"
+                  src="/bookimages/ravanni-bhitarma.webp"
                   alt="ravanni-bhitarma"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white">
@@ -186,7 +186,7 @@ const RegisterForm = () => {
               <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
-                  src="/bookimages/Mahabharat.jpg"
+                  src="/bookimages/Mahabharat.webp"
                   alt="mahabharat"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white">
@@ -218,7 +218,7 @@ const RegisterForm = () => {
               <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
-                  src="/bookimages/bhagwan-mahavir.jpg"
+                  src="/bookimages/bhagwan-mahavir.webp"
                   alt="bhagwan-mahavir"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out p-6 text-white">
@@ -250,7 +250,7 @@ const RegisterForm = () => {
               <div className="relative bg-[#F0E9D7] font-anek overflow-hidden w-full h-full">
                 <img
                   className="h-full w-full object-cover object-center"
-                  src="/bookimages/udayanmantri.JPG"
+                  src="/bookimages/udayanmantri.webp"
                   alt="udayanmantri"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-full bg-black/80 flex flex-col items-center justify-center translate-y-0 transition-transform duration-300 ease-in-out p-6 text-gray-400">

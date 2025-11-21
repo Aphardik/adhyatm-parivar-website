@@ -67,7 +67,7 @@ const Page = () => {
           </div>
           <div>
             <img
-              src="/jinmurti/jinpratima-aashatana-nivaran/img-1.27.png"
+              src="/jinmurti/jinpratima-aashatana-nivaran/img-1.27.webp"
               alt="adhyatm parivar"
             />
           </div>

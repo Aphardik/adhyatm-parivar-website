@@ -61,27 +61,27 @@ const Page = () => {
 
   const bookCategories = [
     {
-      image: "/jinagam/arvachin-shrut-prakashan/img-3.3.png",
+      image: "/jinagam/arvachin-shrut-prakashan/img-3.3.webp",
       alt: "Collection of books",
       title: "प्रवचन की पुस्तकें",
     },
     {
-      image: "/jinagam/arvachin-shrut-prakashan/img-3.4.png",
+      image: "/jinagam/arvachin-shrut-prakashan/img-3.4.webp",
       alt: "Collection of study books",
       title: "अध्ययन पुस्तकें",
     },
     {
-      image: "/jinagam/arvachin-shrut-prakashan/img-3.5.png",
+      image: "/jinagam/arvachin-shrut-prakashan/img-3.5.webp",
       alt: "Collection of children's literature",
       title: "बालकथा साहित्य",
     },
     {
-      image: "/jinagam/arvachin-shrut-prakashan/img-3.6.png",
+      image: "/jinagam/arvachin-shrut-prakashan/img-3.6.webp",
       alt: "Collection of various literature",
       title: "विविध साहित्य",
     },
     {
-      image: "/jinagam/arvachin-shrut-prakashan/img-3.7.png",
+      image: "/jinagam/arvachin-shrut-prakashan/img-3.7.webp",
       alt: "Collection of various literature",
       title: "नित्योपयोगी साहित्य",
     },
@@ -175,7 +175,7 @@ const Page = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="bg-lightyellow rounded-xl p-6">
                 <img
-                  src="/jinagam/arvachin-shrut-prakashan/img-3.8.png"
+                  src="/jinagam/arvachin-shrut-prakashan/img-3.8.webp"
                   alt="Ancient manuscripts collection"
                   className="w-full h-64 object-contain rounded-lg"
                 />
@@ -218,7 +218,7 @@ const Page = () => {
                   <BottomRighSvg />
                 </div>
                 <img
-                  src="/jinagam/arvachin-shrut-prakashan/img-3.9.png"
+                  src="/jinagam/arvachin-shrut-prakashan/img-3.9.webp"
                   alt="Adhyatm Parichay book"
                   className="w-full h-96 object-contain rounded-lg mb-4"
                 />
@@ -266,7 +266,7 @@ const Page = () => {
                   <BottomRighSvg />
                 </div>
                 <img
-                  src="/jinagam/arvachin-shrut-prakashan/img-3.10.png"
+                  src="/jinagam/arvachin-shrut-prakashan/img-3.10.webp"
                   alt="Publication book series"
                   className="w-full h-96 object-contain rounded-lg"
                 />

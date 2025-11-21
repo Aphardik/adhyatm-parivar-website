@@ -12,7 +12,7 @@ const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const images = ["/bookimages/ahankarvijay1.jpg","/bookimages/ahankarvijay2.jpg"];
+  const images = ["/bookimages/ahankarvijay1.webp","/bookimages/ahankarvijay2.webp"];
 
   useEffect(() => {
     if (!isHovered) {

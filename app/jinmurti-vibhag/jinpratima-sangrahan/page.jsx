@@ -88,7 +88,7 @@ const Page = () => {
                   <div className="absolute inset-0 rounded-3xl transform rotate-3"></div>
                   <div className="relative bg-lightyellow rounded-3xl shadow-2xl overflow-hidden border border-darkyellow transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                     <img
-                      src="/jinmurti/jinpratima-sangrahan/img-1.25.png"
+                      src="/jinmurti/jinpratima-sangrahan/img-1.25.webp"
                       alt="Ancient Adinath deity now enshrined at Shri Shantikanak Jain Sangh, Nanpura-Surat"
                       className="w-full h-auto object-cover"
                     />
@@ -105,7 +105,7 @@ const Page = () => {
                   <div className="absolute inset-0  rounded-3xl transform -rotate-3"></div>
                   <div className="relative bg-lightpink rounded-3xl shadow-2xl overflow-hidden border border-secondary-color/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                     <img
-                      src="/jinmurti/jinpratima-sangrahan/img-1.26.png"
+                      src="/jinmurti/jinpratima-sangrahan/img-1.26.webp"
                       alt="Another success story"
                       className="w-full h-auto object-cover"
                     />

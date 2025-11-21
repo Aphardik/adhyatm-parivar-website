@@ -65,7 +65,7 @@ const Page = () => {
             <div className="flex flex-col items-center justify-center bg-maroon  rounded-sm ">
               <div className=" w-full flex justify-center items-center">
                 <img
-                  src="/adhyatm/vihar-suraksha/img-3.20.jpg"
+                  src="/adhyatm/vihar-suraksha/img-3.20.webp"
                   alt="Group of people walking on a road with a person on a bicycle carrying supplies"
                   className="w-full h-full object-contain rounded-sm shadow"
                 />
@@ -79,7 +79,7 @@ const Page = () => {
             <div className="flex flex-col items-center justify-center bg-maroon text-whitey rounded-sm ">
               <div className=" w-full flex justify-center items-center">
                 <img
-                  src="/adhyatm/vihar-suraksha/img-3.21.jpg"
+                  src="/adhyatm/vihar-suraksha/img-3.21.webp"
                   alt="Person on a bicycle carrying supplies following a group of people walking on a road"
                   className="w-full h-full object-contain rounded-sm shadow"
                 />

@@ -23,11 +23,11 @@ const ImageCarousel = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const images = [
-    "/bookimages/Mahabharat1.png",
-    "/bookimages/Mahabharat2.png",
-    "/bookimages/Mahabharat3.png",
-    "/bookimages/Mahabharat4.png",
-    "/bookimages/Mahabharat5.png",
+    "/bookimages/Mahabharat1.webp",
+    "/bookimages/Mahabharat2.webp",
+    "/bookimages/Mahabharat3.webp",
+    "/bookimages/Mahabharat4.webp",
+    "/bookimages/Mahabharat5.webp",
   ];
 
   useEffect(() => {

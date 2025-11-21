@@ -100,7 +100,7 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-16 sm:mb-20 lg:mb-24">
             <div className="bg-lightyellow rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-1.2.jpeg"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-1.2.webp"
                 alt="Jinalay Cleaning Before"
                 className="w-full h-64 sm:h-80 lg:h-96 object-contain"
               />
@@ -112,7 +112,7 @@ const Page = () => {
             </div>
             <div className="bg-lightyellow rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-1.1.jpeg"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-1.1.webp"
                 alt="Jinalay Cleaning After"
                 className="w-full h-64 sm:h-80 lg:h-96 object-contain"
               />
@@ -128,7 +128,7 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-16 sm:mb-20 lg:mb-24">
             <div className="bg-lightyellow rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.11-2.1.jpg"
+                src="/jinmandir/jinalaya-suddhi/img-2.11-2.1.webp"
                 alt="Jinalay Cleaning Before"
                 className="w-full h-64 sm:h-80 lg:h-96 object-contain"
               />
@@ -140,7 +140,7 @@ const Page = () => {
             </div>
             <div className="bg-lightyellow rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.11-2.2.jpg"
+                src="/jinmandir/jinalaya-suddhi/img-2.11-2.2.webp"
                 alt="Jinalay Cleaning After"
                 className="w-full h-64 sm:h-80 lg:h-96 object-contain"
               />
@@ -163,28 +163,28 @@ const Page = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-2.1.jpeg"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-2.1.webp"
                 alt="Risk Work 1"
                 className="w-full h-48 sm:h-64 lg:h-80 object-contain"
               />
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-2.2.jpeg"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-2.2.webp"
                 alt="Risk Work 2"
                 className="w-full h-48 sm:h-64 lg:h-80 object-contain"
               />
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-3.1.png"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-3.1.webp"
                 alt="Risk Work 3"
                 className="w-full h-48 sm:h-64 lg:h-80 object-cover"
               />
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/jinmandir/jinalaya-suddhi/img-2.10-3.2.png"
+                src="/jinmandir/jinalaya-suddhi/img-2.10-3.2.webp"
                 alt="Risk Work 4"
                 className="w-full h-48 sm:h-64 lg:h-80 object-cover"
               />

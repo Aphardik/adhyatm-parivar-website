@@ -11,7 +11,7 @@ const Timeline = () => {
  const timelineData = [
     {
       year: 2024,
-      logo: "/diksha/35DikshaAhmedabad.png",
+      logo: "/diksha/35DikshaAhmedabad.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -25,7 +25,7 @@ const Timeline = () => {
     },
     {
       year: 2023,
-      logo: "/diksha/8DixaBhabhar.png",
+      logo: "/diksha/8DixaBhabhar.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -39,7 +39,7 @@ const Timeline = () => {
     },
     {
       year: 2023,
-      logo: "/diksha/5DixaTervada.png",
+      logo: "/diksha/5DixaTervada.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -53,7 +53,7 @@ const Timeline = () => {
     },
     {
       year: 2022,
-      logo: "/diksha/7DixaAhmedabad.png",
+      logo: "/diksha/7DixaAhmedabad.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -67,7 +67,7 @@ const Timeline = () => {
     },
     {
       year: 2021,
-      logo: "/diksha/74DixaSurat.png",
+      logo: "/diksha/74DixaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -81,7 +81,7 @@ const Timeline = () => {
     },
     {
       year: 2019,
-      logo: "/diksha/18DixaSurat.jpg",
+      logo: "/diksha/18DixaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -95,7 +95,7 @@ const Timeline = () => {
     },
       {
       year: 2019,
-      logo: "/diksha/44DikshaMumbai.png",
+      logo: "/diksha/44DikshaMumbai.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -109,7 +109,7 @@ const Timeline = () => {
     },
       {
       year: 2017,
-      logo: "/diksha/26DikshaAhemdabad.png",
+      logo: "/diksha/26DikshaAhemdabad.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -123,7 +123,7 @@ const Timeline = () => {
     },
       {
       year: 2016,
-      logo: "/diksha/36DixaSurat.png",
+      logo: "/diksha/36DixaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -137,7 +137,7 @@ const Timeline = () => {
     },
       {
       year: 2014,
-      logo: "/diksha/45dikshaSurat.png",
+      logo: "/diksha/45dikshaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -151,7 +151,7 @@ const Timeline = () => {
     },
       {
       year: 2013,
-      logo: "/diksha/updhanDikshaSurat.png",
+      logo: "/diksha/updhanDikshaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -165,7 +165,7 @@ const Timeline = () => {
     },
       {
       year: 2012,
-      logo: "/diksha/17Dixa.png",
+      logo: "/diksha/17Dixa.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -179,7 +179,7 @@ const Timeline = () => {
     },
       {
       year: 2011,
-      logo: "/diksha/7DixaSurat.png",
+      logo: "/diksha/7DixaSurat.webp",
       images: [
         "/dummyalbumpic.jpg",
         "/dummyalbumpic.jpg",
@@ -235,7 +235,7 @@ const Timeline = () => {
       {/* Simple Banner - Image Only */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
         <img 
-          src="/dikshabanner.png" 
+          src="/dikshabanner.webp" 
           alt="Diksha Banner" 
           className="w-full max-h-[85vh]  object-contain"
         />

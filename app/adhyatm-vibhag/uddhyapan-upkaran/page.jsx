@@ -75,17 +75,17 @@ const UdyapanPage = () => {
         <div className="grid sm:grid-cols-3 w-full items-center gap-4">
           <img 
             className="mx-auto w-full p-4 " 
-            src="/adhyatm/uddhyapan-upkaran/img-3.44.png" 
+            src="/adhyatm/uddhyapan-upkaran/img-3.44.webp" 
             alt="Decorative items including an elephant statue and swastika symbol" 
           />
           <img 
             className="mx-auto w-full p-4 " 
-            src="/adhyatm/uddhyapan-upkaran/img-3.45.png" 
+            src="/adhyatm/uddhyapan-upkaran/img-3.45.webp" 
             alt="Decorative pots with intricate designs" 
           />
           <img 
             className="mx-auto w-full p-4 " 
-            src="/adhyatm/uddhyapan-upkaran/img-3.46.png" 
+            src="/adhyatm/uddhyapan-upkaran/img-3.46.webp" 
             alt="A large decorative item in a spacious room" 
           />
         </div>

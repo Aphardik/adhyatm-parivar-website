@@ -68,12 +68,12 @@ const Page = () => {
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
               <div className="flex flex-col sm:flex-row gap-4 h-full w-full justify-center items-center mb-4">
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.18-1.jpg"
+                  src="/adhyatm/parishthapanika-samiti/img-3.18-1.webp"
                   alt="A rectangular planter with soil - type 1"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.18-2.jpg"
+                  src="/adhyatm/parishthapanika-samiti/img-3.18-2.webp"
                   alt="A rectangular planter with soil - type 2"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
@@ -88,12 +88,12 @@ const Page = () => {
             <div className="flex flex-col items-center bg-lighten-bg rounded-lg p-6">
              <div className="flex flex-col sm:flex-row gap-4 h-full w-full justify-center items-center mb-4">
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.19-1.jpg"
+                  src="/adhyatm/parishthapanika-samiti/img-3.19-1.webp"
                   alt="A rectangular planter with soil - type 1"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />
                 <img
-                  src="/adhyatm/parishthapanika-samiti/img-3.19-2.jpg"
+                  src="/adhyatm/parishthapanika-samiti/img-3.19-2.webp"
                   alt="A rectangular planter with soil - type 2"
                   className="w-full sm:w-1/2 h-full object-cover rounded-lg shadow"
                 />

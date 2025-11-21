@@ -59,7 +59,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4 border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.22.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.22.webp"
                     alt="A stack of folded white cloths"
                     className="w-full max-w-xs h-full object-contain"
                   />
@@ -76,7 +76,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4    border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.23.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.23.webp"
                     alt="A red pot with a white cloth on top"
                     className="w-full max-w-xs h-full object-contain"
                   />
@@ -95,7 +95,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4    border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.24.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.24.webp"
                     alt="Pure wool"
                     className="w-full max-w-xs h-full object-contain"
                   />
@@ -114,7 +114,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4    border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.25.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.25.webp"
                     alt="Nose string"
                     className="w-full max-w-xs h-full object-contain"
                   />
@@ -130,7 +130,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4    border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.26.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.26.webp"
                     alt="Silk thread reel"
                     className="w-full max-w-xs h-full object-contain"
                   />
@@ -149,7 +149,7 @@ const Page = () => {
               <div className="flex flex-col items-center bg-lightyellow rounded-sm p-4    border border-lightpink ">
                 <div className="h-64 w-full flex justify-center items-center mb-6  rounded-lg p-4">
                   <img
-                    src="/adhyatm/charitra-upkaran-bhakti/img-3.27.jpg"
+                    src="/adhyatm/charitra-upkaran-bhakti/img-3.27.webp"
                     alt="Wooden containers"
                     className="w-full max-w-xs h-full object-contain"
                   />

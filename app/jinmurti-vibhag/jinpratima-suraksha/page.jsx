@@ -104,7 +104,7 @@ const Page = () => {
                 <div className="order-2 lg:order-1">
                   <div className="bg-whitey rounded-sm  overflow-hidden">
                     <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.1.jpg"
+                      src="/jinmurti/jinpratima-suraksha/img-1.1.webp"
                       alt="Damaged Statue"
                       className="w-full h-64 sm:h-80 object-cover"
                     />
@@ -136,7 +136,7 @@ const Page = () => {
                 </div>
                 <div className="bg-whitey rounded-sm  overflow-hidden">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.2.jpg"
+                    src="/jinmurti/jinpratima-suraksha/img-1.2.webp"
                     alt="Damaged Feet"
                     className="w-full h-64 sm:h-80 object-cover"
                   />
@@ -151,14 +151,14 @@ const Page = () => {
                   <div className="flex  flex-col sm:flex-row  gap-2">
                     <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
                       <img
-                        src="/jinmurti/jinpratima-suraksha/img-1.3-1.jpg"
+                        src="/jinmurti/jinpratima-suraksha/img-1.3-1.webp"
                         alt="Root Cause Analysis"
                         className="w-full h-64 sm:h-80 object-cover"
                       />
                     </div>
                     <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
                       <img
-                        src="/jinmurti/jinpratima-suraksha/img-1.3-2.jpg"
+                        src="/jinmurti/jinpratima-suraksha/img-1.3-2.webp"
                         alt="Root Cause Analysis"
                         className="w-full h-64 sm:h-80 object-cover"
                       />
@@ -191,12 +191,12 @@ const Page = () => {
                 </div>
                 <div className="bg-whitey flex flex-col gap-2 sm:flex-row items-center rounded-sm  overflow-hidden">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.4-1.jpeg"
+                    src="/jinmurti/jinpratima-suraksha/img-1.4-1.webp"
                     alt="Damaged Parts"
                     className="w-full h-64 sm:h-80 object-cover"
                   />
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.4-2.jpg"
+                    src="/jinmurti/jinpratima-suraksha/img-1.4-2.webp"
                     alt="Damaged Parts"
                     className="w-full h-64 sm:h-80 object-cover"
                   />
@@ -244,14 +244,14 @@ const Page = () => {
                 <div className="flex  flex-col sm:flex-row  gap-2">
                   <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
                     <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.5.1.jpg"
+                      src="/jinmurti/jinpratima-suraksha/img-1.5.1.webp"
                       alt="Root Cause Analysis"
                       className="w-full h-full object-contain"
                     />
                   </div>
                   <div className=" rounded-sm  flex items-center justify-center h-64 sm:h-80">
                     <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.5.2.jpg"
+                      src="/jinmurti/jinpratima-suraksha/img-1.5.2.webp"
                       alt="Root Cause Analysis"
                       className="w-full h-full object-contain"
                     />
@@ -422,7 +422,7 @@ const Page = () => {
                     </h3>
                     <div className="bg-whitey h-48 flex items-center justify-center rounded-lg mb-4">
                       <img
-                        src="/jinmurti/jinpratima-suraksha/img-1.10.jpg"
+                        src="/jinmurti/jinpratima-suraksha/img-1.10.webp"
                         alt="क्षतिग्रस्त प्रतिमा"
                         className="w-full h-full object-contain rounded-lg"
                       />
@@ -438,7 +438,7 @@ const Page = () => {
 
                   <div className="bg-whitey h-64 flex items-center justify-center rounded-lg">
                     <img
-                      src="/jinmurti/jinpratima-suraksha/img-1.11.png"
+                      src="/jinmurti/jinpratima-suraksha/img-1.11.webp"
                       alt="क्षतिग्रस्त प्रतिमा"
                       className="w-full h-full object-contain rounded-lg"
                     />
@@ -452,7 +452,7 @@ const Page = () => {
                       <div className="lg:col-span-2">
                         <div className="bg-whitey h-56 flex items-center justify-center rounded-lg">
                           <img
-                            src="/jinmurti/jinpratima-suraksha/img-1.12.png"
+                            src="/jinmurti/jinpratima-suraksha/img-1.12.webp"
                             alt="संरक्षित प्रतिमा"
                             className="w-full h-full object-contain rounded-lg"
                           />
@@ -497,7 +497,7 @@ const Page = () => {
             <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75%  rounded-sm mb-8  overflow-hidden h-52 sm:h-auto transition-shadow">
               {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
-                  src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
+                  src="/jinmurti/jinpratima-suraksha/img-1.6.webp"
                   alt="Work Done"
                   className="w-full h-full object-cover"
                 />
@@ -524,7 +524,7 @@ const Page = () => {
                 <HexagonalSvg accentColor="red"/>
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.7.png"
+                    src="/jinmurti/jinpratima-suraksha/img-1.7.webp"
                     alt="Girnar Tirth"
                     className="w-full h-full object-cover"
                   />
@@ -547,7 +547,7 @@ const Page = () => {
                 <HexagonalSvg accentColor="red"/>
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.8.png"
+                    src="/jinmurti/jinpratima-suraksha/img-1.8.webp"
                     alt="Sametshikhar Tirth"
                     className="w-full h-full object-cover"
                   />
@@ -569,7 +569,7 @@ const Page = () => {
                 <HexagonalSvg accentColor="red"/>
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
-                    src="/jinmurti/jinpratima-suraksha/img-1.9.png"
+                    src="/jinmurti/jinpratima-suraksha/img-1.9.webp"
                     alt="Shankheshwar Tirth"
                     className="w-full h-full object-cover"
                   />
@@ -588,7 +588,7 @@ const Page = () => {
              <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
               {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
-                  src="/jinmurti/jinpratima-suraksha/img-1.6.jpeg"
+                  src="/jinmurti/jinpratima-suraksha/img-1.6.webp"
                   alt="Work Done"
                   className="w-full h-full object-cover"
                 />

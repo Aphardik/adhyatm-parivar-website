@@ -68,7 +68,7 @@ const BhaktidravyShanshodhan = () => {
             <div className="flex flex-col p-6">
               <div className="w-full flex justify-center items-center mb-6">
                 <img
-                  src="/adhyatm/uttam-bhaktidrivya/img-3.57.png"
+                  src="/adhyatm/uttam-bhaktidrivya/img-3.57.webp"
                   alt="A document from the Ministry of Environment, Forest and Climate Change"
                   className="w-full h-96 object-contain rounded-lg"
                 />
@@ -113,7 +113,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध प्रकार के औषधि प्रकल्प"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.58.jpeg"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.58.webp"
               />
             </div>
             <div className="p-4 bg-maroon text-whitey">
@@ -126,7 +126,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध प्रकार के जल प्रकल्प"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.59.jpeg"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.59.webp"
               />
             </div>
             <div className="p-4 bg-maroon text-whitey">
@@ -139,7 +139,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध नदियों का जल"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.60.png"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.60.webp"
               />
             </div>
             <div className="p-4 bg-maroon text-whitey">
@@ -154,7 +154,7 @@ const BhaktidravyShanshodhan = () => {
               <img
                 alt="विविध गाँवों की मूर्तियाँ (मिट्टी)"
                 className="w-full h-full object-cover"
-                src="/adhyatm/uttam-bhaktidrivya/img-3.61.jpg"
+                src="/adhyatm/uttam-bhaktidrivya/img-3.61.webp"
               />
             </div>
             {/* <div className="p-4 bg-maroon text-whitey">

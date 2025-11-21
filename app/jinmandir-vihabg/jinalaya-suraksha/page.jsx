@@ -80,7 +80,7 @@ const JinalayaSuraksha = () => {
             <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="w-full lg:w-1/5">
                 <img
-                  src="/jinmandir/jinalaya-suraksha/img-2.3.png"
+                  src="/jinmandir/jinalaya-suraksha/img-2.3.webp"
                   alt="Additional repair"
                   className="w-full h-56 object-cover rounded"
                 />
@@ -134,7 +134,7 @@ const JinalayaSuraksha = () => {
               <div className="relative group">
                 <div className="bg-whitey p-4">
                   <img
-                    src="/jinmandir/jinalaya-suraksha/img-2.1.jpg"
+                    src="/jinmandir/jinalaya-suraksha/img-2.1.webp"
                     alt="मरम्मत पूर्व"
                     className="w-80 h-80 object-cover transition-colors duration-300"
                   />
@@ -166,7 +166,7 @@ const JinalayaSuraksha = () => {
               <div className="relative group">
                 <div className="bg-whitey p-4 ">
                   <img
-                    src="/jinmandir/jinalaya-suraksha/img-2.2.jpg"
+                    src="/jinmandir/jinalaya-suraksha/img-2.2.webp"
                     alt="मरम्मत पश्चात"
                     className="w-80 h-80 object-cover transition-colors duration-300"
                   />
@@ -333,7 +333,7 @@ const JinalayaSuraksha = () => {
 
               <div className="bg-lightyellow p-4 rounded-sm">
                 <img
-                  src="/jinmandir/jinalaya-suraksha/img-2.9.png"
+                  src="/jinmandir/jinalaya-suraksha/img-2.9.webp"
                   alt="पुराने पत्थर की दीवार"
                   className="w-full h-auto rounded-sm border border-gray-300"
                 />
@@ -358,7 +358,7 @@ const JinalayaSuraksha = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <div className="sm:w-1/2">
                   <img
-                    src="/jinmandir/jinalaya-suraksha/img-2.4.jpg"
+                    src="/jinmandir/jinalaya-suraksha/img-2.4.webp"
                     alt="विमलवसही"
                     className="w-full h-auto rounded-sm border border-gray-300"
                   />
@@ -377,7 +377,7 @@ const JinalayaSuraksha = () => {
               <div className="flex flex-col sm:flex-row-reverse items-center gap-6">
                 <div className="sm:w-1/2 p-4">
                   <img
-                    src="/jinmandir/jinalaya-suraksha/img-2.5.jpg"
+                    src="/jinmandir/jinalaya-suraksha/img-2.5.webp"
                     alt="विमलवसही"
                     className="w-full h-auto "
                   />
@@ -420,7 +420,7 @@ const JinalayaSuraksha = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-lightyellow p-4 rounded-sm">
                 <img
-                  src="/jinmandir/jinalaya-suraksha/img-2.6.jpeg"
+                  src="/jinmandir/jinalaya-suraksha/img-2.6.webp"
                   alt="दरार"
                   className="w-full h-auto  mb-4"
                 />
@@ -431,7 +431,7 @@ const JinalayaSuraksha = () => {
 
               <div className="bg-lightyellow  p-4 rounded-sm">
                 <img
-                  src="/jinmandir/jinalaya-suraksha/img-2.7.jpeg"
+                  src="/jinmandir/jinalaya-suraksha/img-2.7.webp"
                   alt="फंगस हटाना"
                   className="w-full h-auto  mb-4"
                 />
@@ -445,7 +445,7 @@ const JinalayaSuraksha = () => {
 
               <div className="bg-lightyellow   p-4 rounded-sm">
                 <img
-                  src="/jinmandir/jinalaya-suraksha/img-2.8.png"
+                  src="/jinmandir/jinalaya-suraksha/img-2.8.webp"
                   alt="10-15 साल परिणाम"
                   className="w-full h-auto  mb-4"
                 />

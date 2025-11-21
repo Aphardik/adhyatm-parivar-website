@@ -76,7 +76,7 @@ const Page = () => {
             <div className="flex max-w-7xl mx-auto flex-col p-6">
               <div className="w-full flex justify-center items-center">
                 <img 
-                  src="/adhyatm/legal-cell/img-3.62.jpg" 
+                  src="/adhyatm/legal-cell/img-3.62.webp" 
                   alt="ट्रस्टियों के लिए आयोजित संगोष्ठी" 
                   className="w-full h-full object-contain rounded-lg" 
                 />
@@ -108,10 +108,10 @@ const Page = () => {
           </p>
         </div>
         <div className="grid sm:grid-cols-4 bg-lightpink w-full items-center">
-          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.63.png" alt="कानूनी दस्तावेज़ 1" />
-          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.64.png" alt="कानूनी दस्तावेज़ 2" />
-          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.65.png" alt="कानूनी दस्तावेज़ 3" />
-          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.66.png" alt="कानूनी दस्तावेज़ 4" />
+          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.63.webp" alt="कानूनी दस्तावेज़ 1" />
+          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.64.webp" alt="कानूनी दस्तावेज़ 2" />
+          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.65.webp" alt="कानूनी दस्तावेज़ 3" />
+          <img className="mx-auto w-full p-4" src="/adhyatm/legal-cell/img-3.66.webp" alt="कानूनी दस्तावेज़ 4" />
         </div>
       </section>
 
@@ -126,7 +126,7 @@ const Page = () => {
           <div className="flex justify-center mb-6 md:mb-0">
             <img
               alt="भारत का मानचित्र और व्यक्ति की छाया"
-              src="/adhyatm/legal-cell/img-3.67.png"
+              src="/adhyatm/legal-cell/img-3.67.webp"
               className="w-full h-auto"
               width="200"
             />

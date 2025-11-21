@@ -37,7 +37,7 @@ const Page = () => {
             {/* Left Column - Building Image */}
             <div className="flex flex-col items-center bg-white border border-gray-200 p-6">
               <img
-                src="/jinagam/adhyatm-gyantirth/img-3.15.jpg"
+                src="/jinagam/adhyatm-gyantirth/img-3.15.webp"
                 alt="A four-story building with a modern design"
                 className="w-full h-96 object-cover mb-4"
               />
@@ -51,7 +51,7 @@ const Page = () => {
             {/* Right Column - Workshop Image */}
             <div className="flex flex-col items-center bg-white border border-gray-200 p-6">
               <img
-                src="/jinagam/adhyatm-gyantirth/img-3.16.jpg"
+                src="/jinagam/adhyatm-gyantirth/img-3.16.webp"
                 alt="A large room with people working at desks"
                 className="w-full h-96 object-cover mb-4"
               />

@@ -66,7 +66,7 @@ const Page = () => {
                        <div className="flex flex-col p-6">
               <div className="h-full w-full flex flex-col justify-center items-center mb-6">
                 <img 
-                  src="/adhyatm/chitra-nirmaan/img-3.69.png" 
+                  src="/adhyatm/chitra-nirmaan/img-3.69.webp" 
                   alt="चित्र निर्माण कार्यशाला" 
                   className="h-full object-contain rounded-t-sm" 
                 />
