@@ -681,7 +681,7 @@ export default function DynamicForm() {
       </div> */}
 
       <div className="container mx-auto max-w-6xl">
-        <div style={{backgroundImage:"url('./formpatternbg2.jpg')",backgroundSize:"contain"}} className="overflow-hidden">
+        <div style={{backgroundImage:"url('/')",backgroundSize:"contain"}} className="overflow-hidden bg-pink-50">
            <div className="text-center bg-lightpink">
         <div className="inline-block px-4">
           <h1 className="font-anek text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
@@ -703,7 +703,7 @@ export default function DynamicForm() {
             </div>
 
             {/* Form Section */}
-             <div className="lg:col-span-3 relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
+             <div className="lg:col-span-3 bg-white relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
              
               <Form form={form} layout="vertical" onFinish={onFinish}>
                 {/* Dynamic Fields */}
