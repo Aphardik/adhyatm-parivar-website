@@ -289,9 +289,23 @@ const Timeline = () => {
             सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>59</span> दीक्षा
           </p>
 
+          
+
           {/* Auto-Sliding Carousel */}
           <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
-            <div className="relative h-64 md:h-96 overflow-hidden rounded-lg shadow-2xl">
+             <div className="relative inline-block w-full text-center my-6">
+  <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
+
+  <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
+    59 दीक्षार्थियों के  
+    <span className="block mt-1">
+      'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
+    </span>
+  </h2>
+</div>
+
+
+            <div className="relative h-64 md:h-96 overflow-hidden rounded-sm shadow-2xl">
               {carouselImages.map((image, index) => (
                 <div
                   key={index}
@@ -352,7 +366,7 @@ const Timeline = () => {
           {/* Main Heading */}
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-orange-200/40 to-amber-200/40 blur-xl"></div>
-            <h2 className="relative text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
+            <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
              पिछले कुछ सालों में हुई सामूहिक दीक्षा की झलक
             </h2>
           </div>
