@@ -1,14 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
+  const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
   const minSwipeDistance = 50;
 
- const timelineData = [
+  const carouselImages = [
+    "/diksha/muhurt1.webp",
+    "/diksha/muhurt2.webp"
+  ];
+
+  // Auto-slide carousel effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCarouselIndex((prevIndex) => 
+        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const timelineData = [
     {
       year: 2024,
       logo: "/diksha/35DikshaAhmedabad.webp",
@@ -93,7 +110,7 @@ const Timeline = () => {
       description: "प्रभुपंथोत्सव",
       date: "सं.२०७६"
     },
-      {
+    {
       year: 2019,
       logo: "/diksha/44DikshaMumbai.webp",
       images: [
@@ -107,7 +124,7 @@ const Timeline = () => {
       description: "आध्यात्मिक लग्नोत्सव",
       date: "सं.२०७५"
     },
-      {
+    {
       year: 2017,
       logo: "/diksha/26DikshaAhemdabad.webp",
       images: [
@@ -121,7 +138,7 @@ const Timeline = () => {
       description: "विश्वानंद उत्सव",
       date: "सं. २०७४"
     },
-      {
+    {
       year: 2016,
       logo: "/diksha/36DixaSurat.webp",
       images: [
@@ -135,7 +152,7 @@ const Timeline = () => {
       description: "रत्नत्रयी उत्सव",
       date: "सं.२०७३"
     },
-      {
+    {
       year: 2014,
       logo: "/diksha/45dikshaSurat.webp",
       images: [
@@ -149,7 +166,7 @@ const Timeline = () => {
       description: "संयम सुवास उत्सव",
       date: "सं.२०७१"
     },
-      {
+    {
       year: 2013,
       logo: "/diksha/updhanDikshaSurat.webp",
       images: [
@@ -163,7 +180,7 @@ const Timeline = () => {
       description: "उपधान - दीक्षा उत्सव",
       date: "सं. २०७०"
     },
-      {
+    {
       year: 2012,
       logo: "/diksha/17Dixa.webp",
       images: [
@@ -177,7 +194,7 @@ const Timeline = () => {
       description: "अजितशांति दीक्षा प्रतिष्ठा उत्सव",
       date: "सं. २०६८"
     },
-      {
+    {
       year: 2011,
       logo: "/diksha/7DixaSurat.webp",
       images: [
@@ -192,7 +209,6 @@ const Timeline = () => {
       date: "सं. २०६७"
     },
   ];
-
 
   const handleNextImage = (yearIndex) => {
     const currentIndex = activeImageIndex[yearIndex] || 0;
@@ -230,14 +246,26 @@ const Timeline = () => {
     if (isRightSwipe) handlePrevImage(yearIndex);
   };
 
+  const handleCarouselPrev = () => {
+    setCurrentCarouselIndex((prevIndex) => 
+      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleCarouselNext = () => {
+    setCurrentCarouselIndex((prevIndex) => 
+      prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-   <div className="min-h-screen w-screen font-heading bg-white">
+    <div className="min-h-screen w-screen font-heading bg-white">
       {/* Simple Banner - Image Only */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
         <img 
           src="/dikshabanner.webp" 
           alt="Diksha Banner" 
-          className="w-full max-h-[85vh]  object-contain"
+          className="w-full max-h-[85vh] object-contain"
         />
       </div>
 
@@ -258,8 +286,58 @@ const Timeline = () => {
           </p>
           
           <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>57</span> दीक्षा
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>59</span> दीक्षा
           </p>
+
+          {/* Auto-Sliding Carousel */}
+          <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
+            <div className="relative h-64 md:h-96 overflow-hidden rounded-lg shadow-2xl">
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentCarouselIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`Muhurt ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+              
+              {/* Navigation Buttons */}
+              {/* <button
+                onClick={handleCarouselPrev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+              >
+                <FaChevronLeft className="text-maroon text-xl" />
+              </button>
+              <button
+                onClick={handleCarouselNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+              >
+                <FaChevronRight className="text-maroon text-xl" />
+              </button> */}
+
+              {/* Dots Indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentCarouselIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentCarouselIndex 
+                        ? 'bg-maroon w-8' 
+                        : 'bg-white/60 hover:bg-white/80'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">
             <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
@@ -295,12 +373,12 @@ const Timeline = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="absolute left-0 top-6 z-20">
-                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform  transition-all duration-300">
+                  <div className="px-4 py-2 bg-maroon rounded-sm flex items-center justify-center shadow-xl transform transition-all duration-300">
                     <span className="text-white text-sm font-sans font-bold">{item.year}</span>
                   </div>
                 </div>
 
-                <div className="mx-4 ml-[3.8rem] bg-white w-[85%] rounded-sm p-2 transform  transition-all duration-300  mb-6">
+                <div className="mx-4 ml-[3.8rem] bg-white w-[85%] rounded-sm p-2 transform transition-all duration-300 mb-6">
                   <div className="flex items-start gap-4">
                     {/* Logo */}
                     <div className="flex-shrink-0">
@@ -315,15 +393,13 @@ const Timeline = () => {
                     
                     {/* Info */}
                     <div className="flex-1 min-w-0 text-center my-auto">
-                      <h3 className="text-lg font-bold text-gray-800 "><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> दीक्षा</h3>
-                      <p className="text-maroon text-lg  font-semibold leading-relaxed">{item.description}</p>
+                      <h3 className="text-lg font-bold text-gray-800"><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> दीक्षा</h3>
+                      <p className="text-maroon text-lg font-semibold leading-relaxed">{item.description}</p>
                       <div className="space-y-0">
-                        <div className=" text-center text-gray-600">
-                          {/* <FaMapPin className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                        <div className="text-center text-gray-600">
                           <span className="text-base">{item.place}</span>
                         </div>
-                        <div className=" text-center text-gray-600">
-                          {/* <FaClock className="w-3 h-3 mr-2 text-maroon flex-shrink-0" /> */}
+                        <div className="text-center text-gray-600">
                           <span className="text-base">{item.date}</span>
                         </div>
                       </div>
@@ -332,9 +408,6 @@ const Timeline = () => {
                 </div>
 
                 <div className="">
-                  {/* <div className="h-64 w-full overflow-visible">
-                    {renderImageStack(item, index)}
-                  </div> */}
                 </div>
               </div>
             ))}
