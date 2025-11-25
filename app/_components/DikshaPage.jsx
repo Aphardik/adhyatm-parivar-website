@@ -21,7 +21,7 @@ const Timeline = () => {
       setCurrentCarouselIndex((prevIndex) => 
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 6000); // Change slide every 3 seconds
+    }, 6000); // Change slide every 6 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -305,17 +305,17 @@ const Timeline = () => {
                 <div className="space-y-5">
                   {/* Diksha Day Section - Top Most */}
                   <div className="text-center space-y-2 p-2">
-                    <div className="text-3xl md:text-4xl font-extrabold text-maroon">
+                    <div className="text-lg md:text-2xl font-extrabold text-gray-800">
                       दीक्षा दिन
                     </div>
                   </div>
 
                   {/* Date Section */}
                   <div className="text-center space-y-1 p-2">
-                    <div className="text-maroon font-bold text-lg md:text-2xl">
+                    <div className="text-maroon font-bold text-xl md:text-3xl">
                       माघ बदी 7
                     </div>
-                    <div className="text-gray-700 font-semibold text-base md:text-lg">
+                    <div className="text-maroon font-bold text-xl md:text-3xl">
                       February 8, 2026
                     </div>
                   </div>
