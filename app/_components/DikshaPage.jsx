@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import HexagonalSvg from "./HexagonalSvg";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -20,7 +21,7 @@ const Timeline = () => {
       setCurrentCarouselIndex((prevIndex) => 
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change slide every 3 seconds
+    }, 6000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -290,6 +291,49 @@ const Timeline = () => {
           </p>
 
           
+                 
+
+         {/* Diksha Details Card */}
+          <div className="relative w-full max-w-md mx-auto my-8 md:my-10">
+            <div className="relative">
+              <HexagonalSvg accentColor="red" />
+              {/* Background gradient effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
+              
+              {/* Card Content */}
+              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
+                <div className="space-y-5">
+                  {/* Diksha Day Section - Top Most */}
+                  <div className="text-center space-y-2 p-2">
+                    <div className="text-3xl md:text-4xl font-extrabold text-maroon">
+                      दीक्षा दिन
+                    </div>
+                  </div>
+
+                  {/* Date Section */}
+                  <div className="text-center space-y-1 p-2">
+                    <div className="text-maroon font-bold text-lg md:text-2xl">
+                      माघ बदी 7
+                    </div>
+                    <div className="text-gray-700 font-semibold text-base md:text-lg">
+                      February 8, 2026
+                    </div>
+                  </div>
+
+                  {/* Location Section */}
+                  <div className="text-center space-y-2 p-2">
+                    <div className="text-amber-700 font-bold text-lg md:text-2xl">
+                      📍 स्थान
+                    </div>
+                    <div className="text-gray-800 font-semibold text-base md:text-lg">
+                      बोरीवली, मुंबई
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           {/* Auto-Sliding Carousel */}
           <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
