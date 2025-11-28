@@ -296,7 +296,7 @@ const RegisterForm = () => {
   useEffect(() => {
     async function fetchForms() {
       try {
-        const res = await fetch("https://apformgenerator.netlify.app/api/forms");
+        const res = await fetch("https://book.adhyatmparivar.com/api/forms");
         const data = await res.json();
         
         // Sort forms by order field (ascending), with null/undefined values at the end

@@ -7,6 +7,7 @@ import { states } from "@/app/data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
+import StaticSubmissionPopup from "@/app/_components/StaticSubmissionPopup";
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -198,7 +199,7 @@ export default function AhankarViharForm() {
       setLoading(true);
       const response = await axios.post(
         // "https://universalform-fahifz22ha-uc.a.run.app/aapnoGyanvaibhavForm",
-        "https://universalform-fahifz22ha-uc.a.run.app?form=ahankarvijay",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=ahankarvijay&slug=ahankaar-vijay",
         values
       );
 
@@ -470,7 +471,7 @@ export default function AhankarViharForm() {
         </div>
       </div>
             {/* Submission Popup */}
-            <SubmissionPopup
+            <StaticSubmissionPopup
               visible={popupVisible}
               status={popupStatus}
               onClose={handlePopupClose}

@@ -313,7 +313,7 @@ const Timeline = () => {
                   {/* Date Section */}
                   <div className="text-center space-y-1 p-2">
                     <div className="text-maroon font-bold text-2xl md:text-3xl">
-                      माघ बदी 7
+                      माघ वदी 7
                     </div>
                     <div className="text-maroon font-bold text-2xl md:text-3xl">
                       February 8, 2026

@@ -8,6 +8,7 @@ import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
 import { TiInfoOutline } from "react-icons/ti";
+import StaticSubmissionPopup from "@/app/_components/StaticSubmissionPopup";
 
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -200,7 +201,7 @@ export default function Calendar2082Form() {
       setLoading(true);
       const response = await axios.post(
         // "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/calendar2082Form",
-        "https://universalform-fahifz22ha-uc.a.run.app?form=calendar2082hindi",
+        "https://universalform-fahifz22ha-uc.a.run.app?form=calendar2082hindi&slug=calendar-2082-hindi",
         values
       );
 
@@ -486,7 +487,7 @@ export default function Calendar2082Form() {
         </div>
       </div>
       {/* Submission Popup */}
-      <SubmissionPopup
+      <StaticSubmissionPopup
         visible={popupVisible}
         status={popupStatus}
         onClose={handlePopupClose}

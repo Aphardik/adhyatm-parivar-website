@@ -10,6 +10,134 @@ import SubmissionPopup from "@/app/_components/SubmissionPopup";
 import FormSkeleton from "@/app/_components/FormSkeleton";
 import HexagonalSvg from "./HexagonalSvg";
 import HeaderSvg from "./HeaderSvg";
+import { detectLanguage } from "../utils/detectLanguage.utils";
+
+// Translation object for multi-language support
+const translations = {
+  english: {
+    mobile: { label: "Mobile Number", placeholder: "Mobile Number" },
+    name: { label: "Name", placeholder: "Name" },
+    sname: { label: "Surname", placeholder: "Surname" },
+    pincode: { label: "Pincode", placeholder: "Pincode" },
+    state: { label: "State", placeholder: "State" },
+    city: { label: "City", placeholder: "City" },
+    address: { label: "Address", placeholder: "Address" },
+    gender: { label: "Gender", placeholder: "Select Gender" },
+    age: { label: "Age", placeholder: "Age" },
+    copies: { label: "How many copies of this book do you need?", placeholder: "Number of copies" },
+    mahabharat: {
+      question: "Do you need the complete set of 5 parts of Mahabharat book or just the first part?",
+      set: "Parts 1 to 5 Set",
+      part1: "Only Part - 1",
+    },
+    sanskrutam: {
+      question: "How many copies of the book do you need?",
+      pratham: "Pratham Yatra",
+      dwitiy: "Dwitiya Yatra",
+      dhatunaamrup: "Dhatunaamrup Shreni",
+    },
+    buttons: { reset: "Reset", submit: "Submit", submitting: "Submitting..." },
+    validation: {
+      mobileRequired: "Mobile no. is required",
+      mobileInvalid: "Mobile no. must be exactly 10 digits",
+      nameRequired: "Name is required",
+      surnameRequired: "Please enter your surname",
+      pincodeRequired: "Pincode is required",
+      pincodeInvalid: "Pincode must be exactly 6 digits",
+      stateRequired: "State is required",
+      cityRequired: "Please enter your city",
+      addressRequired: "Address is required",
+      genderRequired: "Gender is required",
+      ageRequired: "Age is required",
+      ageInvalid: "Age must be a number",
+      copiesRequired: "Number of copies is required",
+      copiesInvalid: "Please enter a valid number (minimum 1)",
+      selectionRequired: "Please select an option!",
+    },
+  },
+  hindi: {
+    mobile: { label: "मोबाइल नंबर", placeholder: "मोबाइल नंबर" },
+    name: { label: "नाम", placeholder: "नाम" },
+    sname: { label: "उपनाम", placeholder: "उपनाम" },
+    pincode: { label: "पिनकोड", placeholder: "पिनकोड" },
+    state: { label: "राज्य", placeholder: "राज्य" },
+    city: { label: "शहर", placeholder: "शहर" },
+    address: { label: "एड्रेस", placeholder: "एड्रेस" },
+    gender: { label: "लिंग", placeholder: "लिंग चुनें" },
+    age: { label: "आयु", placeholder: "आयु" },
+    copies: { label: "आपको इस पुस्तक की कितनी प्रतियों की आवश्यकता है?", placeholder: "प्रतियों की संख्या" },
+    mahabharat: {
+      question: "क्या आपको महाभारत पुस्तक के 5 भागों का पूरा सेट चाहिए या केवल पहला भाग?",
+      set: "भाग 1 से 5 का सेट",
+      part1: "केवल भाग - 1",
+    },
+    sanskrutam: {
+      question: "आपको पुस्तक की कितनी प्रतियों की आवश्यकता है?",
+      pratham: "प्रथम यात्रा",
+      dwitiy: "द्वितीय यात्रा",
+      dhatunaamrup: "धातुनामरूपश्रेणिः",
+    },
+    buttons: { reset: "Reset", submit: "Submit", submitting: "Submitting..." },
+    validation: {
+      mobileRequired: "मोबाइल नंबर आवश्यक है",
+      mobileInvalid: "मोबाइल नंबर ठीक 10 अंकों का होना चाहिए",
+      nameRequired: "नाम आवश्यक है",
+      surnameRequired: "कृपया अपना उपनाम दर्ज करें",
+      pincodeRequired: "पिनकोड आवश्यक है",
+      pincodeInvalid: "पिनकोड ठीक 6 अंकों का होना चाहिए",
+      stateRequired: "राज्य आवश्यक है",
+      cityRequired: "कृपया अपना शहर दर्ज करें",
+      addressRequired: "पता आवश्यक है",
+      genderRequired: "लिंग आवश्यक है",
+      ageRequired: "आयु आवश्यक है",
+      ageInvalid: "आयु एक संख्या होनी चाहिए",
+      copiesRequired: "प्रतियों की संख्या आवश्यक है",
+      copiesInvalid: "कृपया एक मान्य संख्या दर्ज करें (न्यूनतम 1)",
+      selectionRequired: "कृपया एक विकल्प चुनें!",
+    },
+  },
+  gujarati: {
+    mobile: { label: "મોબાઇલ નંબર", placeholder: "મોબાઇલ નંબર" },
+    name: { label: "નામ", placeholder: "નામ" },
+    sname: { label: "અટક", placeholder: "અટક" },
+    pincode: { label: "પિનકોડ", placeholder: "પિનકોડ" },
+    state: { label: "રાજ્ય", placeholder: "રાજ્ય" },
+    city: { label: "શહેર", placeholder: "શહેર" },
+    address: { label: "એડ્રેસ", placeholder: "એડ્રેસ" },
+    gender: { label: "લિંગ", placeholder: "લિંગ પસંદ કરો" },
+    age: { label: "ઉંમર", placeholder: "ઉંમર" },
+    copies: { label: "આપને આ પુસ્તકની કેટલી નકલની આવશ્યકતા છે?", placeholder: "નકલની સંખ્યા" },
+    mahabharat: {
+      question: "આપને મહાભારત પુસ્તક ના ૫ ભાગનો આખો સેટ જરૂર છે કે પછી ફક્ત પહેલો ભાગ?",
+      set: "ભાગ ૧ થી ૫ નો સેટ",
+      part1: "ફક્ત ભાગ - ૧",
+    },
+    sanskrutam: {
+      question: "આપને પુસ્તકની કેટલી નકલની આવશ્યકતા છે ?",
+      pratham: "પ્રથમા યાત્રા",
+      dwitiy: "દ્વિતીયા યાત્રા",
+      dhatunaamrup: "ધાતુનામરૂપશ્રેણિઃ",
+    },
+    buttons: { reset: "Reset", submit: "Submit", submitting: "Submitting..." },
+    validation: {
+      mobileRequired: "મોબાઇલ નંબર જરૂરી છે",
+      mobileInvalid: "મોબાઇલ નંબર બરાબર 10 અંકોનો હોવો જોઈએ",
+      nameRequired: "નામ જરૂરી છે",
+      surnameRequired: "કૃપા કરીને તમારી અટક દાખલ કરો",
+      pincodeRequired: "પિનકોડ જરૂરી છે",
+      pincodeInvalid: "પિનકોડ બરાબર 6 અંકોનો હોવો જોઈએ",
+      stateRequired: "રાજ્ય જરૂરી છે",
+      cityRequired: "કૃપા કરીને તમારું શહેર દાખલ કરો",
+      addressRequired: "સરનામું જરૂરી છે",
+      genderRequired: "લિંગ જરૂરી છે",
+      ageRequired: "ઉંમર જરૂરી છે",
+      ageInvalid: "ઉંમર એક સંખ્યા હોવી જોઈએ",
+      copiesRequired: "નકલની સંખ્યા જરૂરી છે",
+      copiesInvalid: "કૃપા કરીને માન્ય સંખ્યા દાખલ કરો (ન્યૂનતમ 1)",
+      selectionRequired: "કૃપા કરીને એક વિકલ્પ પસંદ કરો!",
+    },
+  },
+};
 
 const ImageCarousel = ({ images = [], isMahabharatForm, formDescription, formHeading }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -111,8 +239,7 @@ const ImageCarousel = ({ images = [], isMahabharatForm, formDescription, formHea
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 
-                ${
-                  currentSlide === index ? "bg-gray-400" : "bg-gray-300 bg-opacity-50"
+                ${currentSlide === index ? "bg-gray-400" : "bg-gray-300 bg-opacity-50"
                 }`}
             />
           ))}
@@ -190,6 +317,7 @@ const CopySelector = ({
   value,
   onChange,
   maxCopies = 5,
+  fontClass = "font-anek",
 }) => {
   const handleDecrement = () => {
     const newCopies = Math.max(1, value - 1);
@@ -203,7 +331,7 @@ const CopySelector = ({
 
   return (
     <div className="w-full space-y-3 my-[1.31rem]">
-      <Form.Item label={<b className="font-anek">{label}</b>} name="નકલ">
+      <Form.Item label={<b className={fontClass}>{label}</b>} name="નકલ">
         <div className="flex items-center space-x-4">
           <button
             type="button"
@@ -269,28 +397,34 @@ const CopyInputField = ({
   label = "તમે આ પુસ્તકની કેટલી નકલો ઓર્ડર કરવા માંગો છો?",
   value,
   onChange,
+  validation = {
+    required: "Number of copies is required",
+    invalid: "Please enter a valid number (minimum 1)"
+  },
+  placeholder = "Enter number of copies",
+  fontClass = "font-anek",
 }) => {
   return (
     <div className="w-full space-y-3 my-[1.31rem]">
-      <Form.Item 
-        label={<b className="font-anek">{label}</b>} 
+      <Form.Item
+        label={<b className={fontClass}>{label}</b>}
         name="નકલ"
         rules={[
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Number of copies is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{validation.required}</span>,
           },
           {
             type: 'number',
             min: 1,
-            message: <span style={{ fontSize: "12px" }}>Please enter a valid number (minimum 1)</span>,
+            message: <span style={{ fontSize: "12px" }}>{validation.invalid}</span>,
           },
         ]}
       >
         <InputNumber
           style={{ width: '100%' }}
           className="w-full rounded-md"
-          placeholder="Enter number of copies"
+          placeholder={placeholder}
           value={value}
           onChange={onChange}
           min={1}
@@ -310,7 +444,16 @@ export default function DynamicForm() {
   const [popupStatus, setPopupStatus] = useState("loading");
   const [generatedID, setGeneratedID] = useState(null);
   const [candidateName, setCandidateName] = useState("");
-  
+
+  // Get language from formData
+  const language = formData?.language?.toLowerCase() || 'gujarati';
+  console.log(language, formData, "formData")
+  const t = translations[language] || translations.gujarati;
+
+  const detectedLang = detectLanguage(formData?.title);
+  const fontClass = detectedLang === 'Hindi' ? 'font-heading' :
+    detectedLang === 'Gujarati' ? 'font-anek' : 'font-sans';
+
   // State for multiple book quantities (sanskrutam-saralam form)
   const [bookQuantities, setBookQuantities] = useState({
     pratham_yatra: 0,
@@ -318,15 +461,15 @@ export default function DynamicForm() {
     dhatunaamrup_shreni: 0,
   });
 
-  const isMahabharatForm = formData?.slug === 'mahabharat' || 
-                         formData?.title?.toLowerCase().includes('mahabharat') ||
-                         formData?.title?.toLowerCase().includes('મહાભારત');
+  const isMahabharatForm = formData?.slug === 'mahabharat' ||
+    formData?.title?.toLowerCase().includes('mahabharat') ||
+    formData?.title?.toLowerCase().includes('મહાભારત');
 
   const isSanskrutamSaralamForm = formData?.slug === 'sanskrutam-saralam';
 
   const thanksMessageTitle = formData?.tqmsg || "Thank You!";
   const thanksMessageDescription = formData?.tqmsg_description || "Form submitted successfully!";
-  
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const formSlug = searchParams.get('form');
@@ -341,7 +484,7 @@ export default function DynamicForm() {
       try {
         setFormLoading(true);
         const response = await axios.get(
-          `https://apformgenerator.netlify.app/api/forms/${formSlug}`
+          `https://book.adhyatmparivar.com/api/forms/${formSlug}`
         );
         setFormData(response.data);
       } catch (error) {
@@ -368,78 +511,95 @@ export default function DynamicForm() {
   };
 
   const renderField = (fieldName, fieldConfig) => {
+    // Get the language from formData, default to 'gujarati' if not specified
+    const language = formData?.language?.toLowerCase() || 'gujarati';
+    const t = translations[language] || translations.gujarati;
+
+    // Map for form field keys based on language
+    const fieldKeys = {
+      mobile: language === 'hindi' ? "मोबाइल नंबर" : language === 'english' ? "mobile" : "મોબાઇલ નંબર",
+      name: language === 'hindi' ? "नाम" : language === 'english' ? "name" : "નામ",
+      sname: language === 'hindi' ? "उपनाम" : language === 'english' ? "surname" : "અટક",
+      pincode: language === 'hindi' ? "पिनकोड" : language === 'english' ? "pincode" : "પિનકોડ",
+      state: language === 'hindi' ? "राज्य" : language === 'english' ? "state" : "રાજ્ય",
+      city: language === 'hindi' ? "शहर" : language === 'english' ? "city" : "શહેર",
+      address: language === 'hindi' ? "एड्रेस" : language === 'english' ? "address" : "એડ્રેસ",
+      gender: language === 'hindi' ? "लिंग" : language === 'english' ? "gender" : "લિંગ",
+      age: language === 'hindi' ? "आयु" : language === 'english' ? "age" : "ઉંમર",
+    };
+
     const fieldMapping = {
       mobile: {
-        key: "मोबाइल नंबर",
-        label: "મોબાઇલ નંબર/मोबाइल नंबर",
-        placeholder: "મોબાઇલ નંબર/मोबाइल नंबर",
+        key: fieldKeys.mobile,
+        label: t.mobile.label,
+        placeholder: t.mobile.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Mobile no. is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.mobileRequired}</span>,
           },
           {
             pattern: /^[0-9]{10}$/,
-            message: <span style={{ fontSize: "12px" }}>Mobile no. must be exactly 10 digits</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.mobileInvalid}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="મોબાઇલ નંબર/मोबाइल नंबर" />,
+        component: <Input className="rounded-md" placeholder={t.mobile.placeholder} />,
       },
       name: {
-        key: "नाम",
-        label: "નામ/नाम",
-        placeholder: "નામ/नाम",
+        key: fieldKeys.name,
+        label: t.name.label,
+        placeholder: t.name.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Name is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.nameRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="નામ/नाम" />,
+        component: <Input className="rounded-md" placeholder={t.name.placeholder} />,
       },
       sname: {
-        key: "उपनाम",
-        label: "અટક/उपनाम",
-        placeholder: "અટક/उपनाम",
+        key: fieldKeys.sname,
+        label: t.sname.label,
+        placeholder: t.sname.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Please enter your surname</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.surnameRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="અટક/उपनाम" />,
+        component: <Input className="rounded-md" placeholder={t.sname.placeholder} />,
       },
       pincode: {
-        key: "पिनकोड",
-        label: "પિનકોડ/पिनकोड",
-        placeholder: "પિનકોડ/पिनकोड",
+        key: fieldKeys.pincode,
+        label: t.pincode.label,
+        placeholder: t.pincode.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Pincode is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.pincodeRequired}</span>,
           },
           {
             pattern: /^[0-9]{6}$/,
-            message: <span style={{ fontSize: "12px" }}>Pincode must be exactly 6 digits</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.pincodeInvalid}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="પિનકોડ/पिनकोड" />,
+        component: <Input className="rounded-md" placeholder={t.pincode.placeholder} />,
       },
       state: {
-        key: "राज्य",
-        label: "રાજ્ય/राज्य",
-        placeholder: "રાજ્ય/राज्य",
+        key: fieldKeys.state,
+        label: t.state.label,
+        placeholder: t.state.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>State is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.stateRequired}</span>,
           },
         ],
         component: (
-          <Select placeholder="રાજ્ય/राज्य" className="rounded-md">
+          <Select placeholder={t.state.placeholder} className="rounded-md">
             {states.map((state) => (
               <Select.Option key={state.value} value={state.value}>
-                <span className="font-anek">
+                <span className={fontClass}>
                   {state.label} / {state.value}
                 </span>
               </Select.Option>
@@ -448,47 +608,47 @@ export default function DynamicForm() {
         ),
       },
       city: {
-        key: "शहर",
-        label: "શહેર/शहर",
-        placeholder: "શહેર/शहर",
+        key: fieldKeys.city,
+        label: t.city.label,
+        placeholder: t.city.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Please enter your city</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.cityRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="શહેર/शहर" />,
+        component: <Input className="rounded-md" placeholder={t.city.placeholder} />,
       },
       address: {
-        key: "એડ્રેસ/एड्रेस",
-        label: "એડ્રેસ/एड्रेस",
-        placeholder: "એડ્રેસ/एड्रेस",
+        key: fieldKeys.address,
+        label: t.address.label,
+        placeholder: t.address.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Address is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.addressRequired}</span>,
           },
         ],
         component: (
           <TextArea
             className="rounded-md"
-            placeholder="એડ્રેસ/एड्रेस"
+            placeholder={t.address.placeholder}
             rows={2}
           />
         ),
       },
       gender: {
-        key: "gender",
-        label: "Gender",
-        placeholder: "Select Gender",
+        key: fieldKeys.gender,
+        label: t.gender.label,
+        placeholder: t.gender.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Gender is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.genderRequired}</span>,
           },
         ],
         component: (
-          <Select placeholder="Select Gender" className="rounded-md">
+          <Select placeholder={t.gender.placeholder} className="rounded-md">
             <Select.Option value="male">Male</Select.Option>
             <Select.Option value="female">Female</Select.Option>
             <Select.Option value="other">Other</Select.Option>
@@ -496,20 +656,20 @@ export default function DynamicForm() {
         ),
       },
       age: {
-        key: "age",
-        label: "Age",
-        placeholder: "Age",
+        key: fieldKeys.age,
+        label: t.age.label,
+        placeholder: t.age.placeholder,
         rules: [
           {
             required: true,
-            message: <span style={{ fontSize: "12px" }}>Age is required</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.ageRequired}</span>,
           },
           {
             pattern: /^[0-9]+$/,
-            message: <span style={{ fontSize: "12px" }}>Age must be a number</span>,
+            message: <span style={{ fontSize: "12px" }}>{t.validation.ageInvalid}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder="Age" />,
+        component: <Input className="rounded-md" placeholder={t.age.placeholder} />,
       },
     };
 
@@ -527,7 +687,7 @@ export default function DynamicForm() {
   const onFinish = async (values) => {
     setPopupVisible(true);
     setPopupStatus("loading");
-    
+
     // Handle copies for non-sanskrutam-saralam forms
     if (formData?.show_copies && !isSanskrutamSaralamForm) {
       values.નકલ = copies;
@@ -613,7 +773,7 @@ export default function DynamicForm() {
   if (formLoading) {
     return (
       <div className="">
-        <FormSkeleton/>
+        <FormSkeleton />
       </div>
     );
   }
@@ -641,7 +801,7 @@ export default function DynamicForm() {
   }
 
   let isFormActive = formData.active;
-  
+
   if (hasActiveDateConstraints()) {
     const currentDate = new Date();
     const activeFrom = new Date(formData.active_from);
@@ -660,7 +820,19 @@ export default function DynamicForm() {
     );
   }
 
-  const fieldsToRender = formData.fields.filter(field => field !== 'copies');
+  const fieldPriority = ['name', 'sname', 'mobile', 'pincode', 'state', 'city', 'address'];
+
+  const fieldsToRender = formData.fields
+    .filter(field => field !== 'copies')
+    .sort((a, b) => {
+      const indexA = fieldPriority.indexOf(a);
+      const indexB = fieldPriority.indexOf(b);
+
+      if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+      if (indexA !== -1) return -1;
+      if (indexB !== -1) return 1;
+      return 0;
+    });
   const fieldRows = [];
   for (let i = 0; i < fieldsToRender.length; i += 2) {
     fieldRows.push(fieldsToRender.slice(i, i + 2));
@@ -681,20 +853,20 @@ export default function DynamicForm() {
       </div> */}
 
       <div className="container mx-auto max-w-6xl">
-        <div style={{backgroundImage:"url('/')",backgroundSize:"contain"}} className="overflow-hidden bg-pink-50">
-           <div className="text-center bg-lightpink">
-        <div className="inline-block px-4">
-          <h1 className="font-anek text-2xl mt-4 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-2 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
-            {formData.title}
-          </h1>
-          {/* <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div> */}
-        </div>
-        {formData.description && (
-          <p className="text-gray-600 mt-2 font-anek">{formData.description}</p>
-        )}
-      </div>
-         <div className="grid grid-cols-1 lg:grid-cols-5 p-4 sm:p-8 gap-8">
-            
+        <div style={{ backgroundImage: "url('/')", backgroundSize: "contain" }} className="overflow-hidden bg-pink-50">
+          <div className="text-center bg-lightpink">
+            <div className="inline-block px-4">
+              <h1 className={`${fontClass} text-2xl mt-4 pt-2 sm:pt-0 sm:mt-0 sm:pt-3 sm:text-2xl lg:text-3xl font-bold  bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent`}>
+                {formData.title}
+              </h1>
+              {/* <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div> */}
+            </div>
+            {formData.description && (
+              <p className={`text-gray-700 mt-2 px-2 font-semibold ${fontClass}`}>{formData.description}</p>
+            )}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 p-4 sm:p-8 gap-8">
+
             {/* Image Section */}
             <div className="lg:col-span-2 flex items-center justify-center">
               <div className="h-full w-full">
@@ -703,8 +875,8 @@ export default function DynamicForm() {
             </div>
 
             {/* Form Section */}
-             <div className="lg:col-span-3 bg-white relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
-             
+            <div className="lg:col-span-3 bg-white relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
+
               <Form form={form} layout="vertical" onFinish={onFinish}>
                 {/* Dynamic Fields */}
                 {fieldRows.map((row, rowIndex) => (
@@ -716,7 +888,7 @@ export default function DynamicForm() {
                       return (
                         <Col key={fieldName} xs={24} md={row.length === 1 ? 24 : 12}>
                           <Form.Item
-                            label={<b className="font-anek text-gray-700">{fieldInfo.label}</b>}
+                            label={<b className={`${fontClass} text-gray-700`}>{fieldInfo.label}</b>}
                             name={fieldInfo.key}
                             rules={fieldInfo.rules}
                           >
@@ -734,15 +906,15 @@ export default function DynamicForm() {
                     <Col xs={24}>
                       <Form.Item
                         label={
-                          <span className="font-anek font-bold text-gray-700 text-base flex items-center gap-2">
-                            આપને મહાભારત પુસ્તક ના ૫ ભાગનો આખો સેટ જરૂર છે કે પછી ફક્ત પહેલો ભાગ?
+                          <span className={`${fontClass} font-bold text-gray-700 text-base flex items-center gap-2`}>
+                            {t.mahabharat.question}
                           </span>
                         }
                         name="set/part-1"
                         rules={[
                           {
                             required: true,
-                            message: <span style={{ fontSize: "12px" }}>Please select an option!</span>,
+                            message: <span style={{ fontSize: "12px" }}>{t.validation.selectionRequired}</span>,
                           },
                         ]}
                         className="mb-6"
@@ -751,16 +923,16 @@ export default function DynamicForm() {
                           <Radio.Group className="w-full">
                             <div className="flex gap-4 w-full items-center">
                               <div className="p-4 w-1/2 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200">
-                                <Radio value="ભાગ ૧ થી ૫ નો સેટ" className="font-anek text-gray-700">
+                                <Radio value={t.mahabharat.set} className={`${fontClass} text-gray-700`}>
                                   <div className="ml-2">
-                                    <span className="font-anek font-medium text-gray-800">ભાગ ૧ થી ૫ નો સેટ</span>
+                                    <span className={`${fontClass} font-medium text-gray-800`}>{t.mahabharat.set}</span>
                                   </div>
                                 </Radio>
                               </div>
                               <div className="p-4 w-1/2 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200">
-                                <Radio value="ફક્ત ભાગ - ૧" className="font-anek text-gray-700">
+                                <Radio value={t.mahabharat.part1} className={`${fontClass} text-gray-700`}>
                                   <div className="ml-2">
-                                    <span className="font-anek font-medium text-gray-800">ફક્ત ભાગ - ૧</span>
+                                    <span className={`${fontClass} font-medium text-gray-800`}>{t.mahabharat.part1}</span>
                                   </div>
                                 </Radio>
                               </div>
@@ -777,14 +949,14 @@ export default function DynamicForm() {
                   <Row>
                     <Col xs={24}>
                       <div className="mb-6">
-                        <b className="font-anek text-sm mb-4 block">
-                          આપને પુસ્તકની કેટલી નકલની આવશ્યકતા છે ?    
+                        <b className={`${fontClass} text-sm mb-4 block`}>
+                          {t.sanskrutam.question}
                         </b>
-                        
+
                         <div className="grid sm:grid-cols-3 gap-4">
                           {/* Book 1 */}
                           <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
-                            <span className="font-anek font-medium block mb-3">પ્રથમા યાત્રા</span>
+                            <span className={`${fontClass} font-medium block mb-3`}>{t.sanskrutam.pratham}</span>
                             <QuantitySelector
                               value={bookQuantities.pratham_yatra}
                               onChange={(value) => handleQuantityChange('pratham_yatra', value)}
@@ -793,7 +965,7 @@ export default function DynamicForm() {
 
                           {/* Book 2 */}
                           <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
-                            <span className="font-anek font-medium block mb-3">દ્વિતીયા યાત્રા</span>
+                            <span className={`${fontClass} font-medium block mb-3`}>{t.sanskrutam.dwitiy}</span>
                             <QuantitySelector
                               value={bookQuantities.dwitiy_yatra}
                               onChange={(value) => handleQuantityChange('dwitiy_yatra', value)}
@@ -802,7 +974,7 @@ export default function DynamicForm() {
 
                           {/* Book 3 */}
                           <div className="text-center flex flex-col justify-center items-start sm:items-center p-3 border border-gray-300 bg-gray-50">
-                            <span className="font-anek font-medium block mb-3">ધાતુનામરૂપશ્રેણિઃ</span>
+                            <span className={`${fontClass} font-medium block mb-3`}>{t.sanskrutam.dhatunaamrup}</span>
                             <QuantitySelector
                               value={bookQuantities.dhatunaamrup_shreni}
                               onChange={(value) => handleQuantityChange('dhatunaamrup_shreni', value)}
@@ -831,16 +1003,23 @@ export default function DynamicForm() {
                     <Col xs={24} md={24}>
                       {shouldUseInputField() ? (
                         <CopyInputField
-                          label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
+                          label={t.copies.label}
                           value={copies}
                           onChange={setCopies}
+                          validation={{
+                            required: t.validation.copiesRequired,
+                            invalid: t.validation.copiesInvalid
+                          }}
+                          placeholder={t.copies.placeholder}
+                          fontClass={fontClass}
                         />
                       ) : (
                         <CopySelector
-                          label="આપને આ કેલેન્ડરની કેટલી નકલની આવશ્યકતા છે?"
+                          label={t.copies.label}
                           value={copies}
                           onChange={setCopies}
                           maxCopies={formData.no_of_copies}
+                          fontClass={fontClass}
                         />
                       )}
                     </Col>
@@ -853,7 +1032,7 @@ export default function DynamicForm() {
                     className="rounded-sm font-sans text-sm font-medium px-5 py-2 bg-red-500 text-white hover:bg-red-600 transition-colors"
                     onClick={onReset}
                   >
-                    Reset
+                    {t.buttons.reset}
                   </button>
 
                   <button
@@ -863,10 +1042,10 @@ export default function DynamicForm() {
                   >
                     {loading ? (
                       <>
-                        <Spin size="small" /> Submitting...
+                        <Spin size="small" /> {t.buttons.submitting}
                       </>
                     ) : (
-                      "Submit"
+                      t.buttons.submit
                     )}
                   </button>
                 </div>
