@@ -54,6 +54,10 @@ const translations = {
       copiesInvalid: "Please enter a valid number (minimum 1)",
       selectionRequired: "Please select an option!",
     },
+    outOfStock: {
+      title: "Out of Stock",
+      message: "This book is currently out of stock.",
+    },
   },
   hindi: {
     mobile: { label: "मोबाइल नंबर", placeholder: "मोबाइल नंबर" },
@@ -95,6 +99,10 @@ const translations = {
       copiesInvalid: "कृपया एक मान्य संख्या दर्ज करें (न्यूनतम 1)",
       selectionRequired: "कृपया एक विकल्प चुनें!",
     },
+    outOfStock: {
+      title: "स्टॉक खत्म",
+      message: "यह पुस्तक वर्तमान में स्टॉक में नहीं है।",
+    },
   },
   gujarati: {
     mobile: { label: "મોબાઇલ નંબર", placeholder: "મોબાઇલ નંબર" },
@@ -135,6 +143,10 @@ const translations = {
       copiesRequired: "નકલની સંખ્યા જરૂરી છે",
       copiesInvalid: "કૃપા કરીને માન્ય સંખ્યા દાખલ કરો (ન્યૂનતમ 1)",
       selectionRequired: "કૃપા કરીને એક વિકલ્પ પસંદ કરો!",
+    },
+    outOfStock: {
+      title: "સ્ટોક ખાલી છે",
+      message: "આ પુસ્તક હાલમાં સ્ટોકમાં નથી.",
     },
   },
 };
@@ -444,6 +456,7 @@ export default function DynamicForm() {
   const [popupStatus, setPopupStatus] = useState("loading");
   const [generatedID, setGeneratedID] = useState(null);
   const [candidateName, setCandidateName] = useState("");
+  const [isOutOfStock, setIsOutOfStock] = useState(false);
 
   // Get language from formData
   const language = formData?.language?.toLowerCase() || 'gujarati';
@@ -498,6 +511,30 @@ export default function DynamicForm() {
     fetchFormData();
   }, [formSlug]);
 
+  // Check for stock availability
+  useEffect(() => {
+    const checkStock = async () => {
+      if (!formData || !formData.slug || !formData.stock) return;
+
+      try {
+        const response = await axios.get(
+          `https://us-central1-adhyatm-parivar-main.cloudfunctions.net/getBookCopyCount?slug=${formData.slug}`
+        );
+
+        const totalCopies = response.data?.totalCopies || 0;
+        console.log("Stock Check:", { totalCopies, stockLimit: formData.stock });
+
+        if (totalCopies >= formData.stock) {
+          setIsOutOfStock(true);
+        }
+      } catch (error) {
+        console.error("Error checking stock:", error);
+      }
+    };
+
+    checkStock();
+  }, [formData]);
+
   // Handle book quantity changes for sanskrutam-saralam form
   const handleQuantityChange = (bookName, value) => {
     setBookQuantities(prev => ({
@@ -517,15 +554,15 @@ export default function DynamicForm() {
 
     // Map for form field keys based on language
     const fieldKeys = {
-      mobile: language === 'hindi' ? "मोबाइल नंबर" : language === 'english' ? "mobile" : "મોબાઇલ નંબર",
-      name: language === 'hindi' ? "नाम" : language === 'english' ? "name" : "નામ",
-      sname: language === 'hindi' ? "उपनाम" : language === 'english' ? "surname" : "અટક",
-      pincode: language === 'hindi' ? "पिनकोड" : language === 'english' ? "pincode" : "પિનકોડ",
-      state: language === 'hindi' ? "राज्य" : language === 'english' ? "state" : "રાજ્ય",
-      city: language === 'hindi' ? "शहर" : language === 'english' ? "city" : "શહેર",
-      address: language === 'hindi' ? "एड्रेस" : language === 'english' ? "address" : "એડ્રેસ",
-      gender: language === 'hindi' ? "लिंग" : language === 'english' ? "gender" : "લિંગ",
-      age: language === 'hindi' ? "आयु" : language === 'english' ? "age" : "ઉંમર",
+      mobile: "मोबाइल नंबर",
+      name: "नाम",
+      sname: "उपनाम",
+      pincode: "पिनकोड",
+      state: "राज्य",
+      city: "शहर",
+      address: "एड्रेस",
+      gender: "लिंग",
+      age: "आयु",
     };
 
     const fieldMapping = {
@@ -875,9 +912,18 @@ export default function DynamicForm() {
             </div>
 
             {/* Form Section */}
-            <div className="lg:col-span-3 bg-white relative p-6 bg-transparent backdrop-blur-lg rounded-sm shadow-md">
+            <div className="lg:col-span-3 bg-white relative p-6  backdrop-blur-lg rounded-sm shadow-md">
 
-              <Form form={form} layout="vertical" onFinish={onFinish}>
+              {isOutOfStock && (
+                <div className={`${detectLanguage(t.outOfStock.title) == 'Hindi' ? 'font-heading' : detectLanguage(t.outOfStock.title) == 'Gujarati' ? 'font-anek' : 'font-sans'} absolute inset-0 z-20 bg-black/60 backdrop-blur-sm flex items-center justify-center rounded-sm`}>
+                  <div className="text-center bg-white rounded-sm p-6">
+                    <h3 className=" text-2xl font-bold text-red-600 mb-2">{t.outOfStock.title}</h3>
+                    <p className=" text-lg text-gray-700">{t.outOfStock.message}</p>
+                  </div>
+                </div>
+              )}
+
+              <Form form={form} layout="vertical" onFinish={onFinish} className={isOutOfStock ? "opacity-50 pointer-events-none" : ""}>
                 {/* Dynamic Fields */}
                 {fieldRows.map((row, rowIndex) => (
                   <Row key={rowIndex} gutter={16}>
@@ -1003,7 +1049,7 @@ export default function DynamicForm() {
                     <Col xs={24} md={24}>
                       {shouldUseInputField() ? (
                         <CopyInputField
-                          label={t.copies.label}
+                          label={formData.copy_question || t.copies.label}
                           value={copies}
                           onChange={setCopies}
                           validation={{
@@ -1015,7 +1061,7 @@ export default function DynamicForm() {
                         />
                       ) : (
                         <CopySelector
-                          label={t.copies.label}
+                          label={formData.copy_question || t.copies.label}
                           value={copies}
                           onChange={setCopies}
                           maxCopies={formData.no_of_copies}
