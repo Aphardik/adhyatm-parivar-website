@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import HexagonalSvg from "./HexagonalSvg";
+import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -18,7 +19,7 @@ const Timeline = () => {
   // Auto-slide carousel effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentCarouselIndex((prevIndex) => 
+      setCurrentCarouselIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 6000); // Change slide every 6 seconds
@@ -248,13 +249,13 @@ const Timeline = () => {
   };
 
   const handleCarouselPrev = () => {
-    setCurrentCarouselIndex((prevIndex) => 
+    setCurrentCarouselIndex((prevIndex) =>
       prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
     );
   };
 
   const handleCarouselNext = () => {
-    setCurrentCarouselIndex((prevIndex) => 
+    setCurrentCarouselIndex((prevIndex) =>
       prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -263,9 +264,9 @@ const Timeline = () => {
     <div className="min-h-screen w-screen font-heading bg-white">
       {/* Simple Banner - Image Only */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
-        <img 
-          src="/dikshabanner.webp" 
-          alt="Diksha Banner" 
+        <img
+          src="/dikshabanner.webp"
+          alt="Diksha Banner"
           className="w-full max-h-[85vh] object-contain"
         />
       </div>
@@ -285,21 +286,21 @@ const Timeline = () => {
           <p className="text-lg md:text-xl text-gray-700 font-semibold">
             महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार <br /> एक ही साथ एक ही मंडप में
           </p>
-          
+
           <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>59</span> दीक्षा
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>62</span> दीक्षा
           </p>
 
-          
-                 
 
-         {/* Diksha Details Card */}
+
+
+          {/* Diksha Details Card */}
           <div className="relative w-full max-w-md mx-auto my-8 md:my-10">
             <div className="relative">
               <HexagonalSvg accentColor="red" />
               {/* Background gradient effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
-              
+
               {/* Card Content */}
               <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
                 <div className="space-y-5">
@@ -337,25 +338,24 @@ const Timeline = () => {
 
           {/* Auto-Sliding Carousel */}
           <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
-             <div className="relative inline-block w-full text-center my-6">
-  <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
+            <div className="relative inline-block w-full text-center my-6">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
-  <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-    59 दीक्षार्थियों के  
-    <span className="block mt-1">
-      'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
-    </span>
-  </h2>
-</div>
+              <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
+                62 दीक्षार्थियों के
+                <span className="block mt-1">
+                  'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
+                </span>
+              </h2>
+            </div>
 
 
             <div className="relative h-64 md:h-96 overflow-hidden rounded-sm shadow-2xl">
               {carouselImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentCarouselIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentCarouselIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                   <img
                     src={image}
@@ -364,7 +364,7 @@ const Timeline = () => {
                   />
                 </div>
               ))}
-              
+
               {/* Navigation Buttons */}
               {/* <button
                 onClick={handleCarouselPrev}
@@ -385,23 +385,24 @@ const Timeline = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentCarouselIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentCarouselIndex 
-                        ? 'bg-maroon w-8' 
-                        : 'bg-white/60 hover:bg-white/80'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentCarouselIndex
+                      ? 'bg-maroon w-8'
+                      : 'bg-white/60 hover:bg-white/80'
+                      }`}
                   />
                 ))}
               </div>
             </div>
           </div>
 
+          <DiksharthiDetailsPage />
+
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">
             <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
             <div className="mx-4">
               <svg className="w-8 h-8 text-maroon/40" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+                <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
               </svg>
             </div>
             <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
@@ -411,7 +412,7 @@ const Timeline = () => {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-orange-200/40 to-amber-200/40 blur-xl"></div>
             <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
-             पिछले कुछ सालों में हुई सामूहिक दीक्षा की झलक
+              पिछले कुछ सालों में हुई सामूहिक दीक्षा की झलक
             </h2>
           </div>
         </div>
@@ -448,7 +449,7 @@ const Timeline = () => {
                         />
                       </div>
                     </div>
-                    
+
                     {/* Info */}
                     <div className="flex-1 min-w-0 text-center my-auto">
                       <h3 className="text-lg font-bold text-gray-800"><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> दीक्षा</h3>
