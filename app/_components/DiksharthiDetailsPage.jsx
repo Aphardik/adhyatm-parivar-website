@@ -6,13 +6,18 @@ const Card3DCarousel = ({ items, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState(null);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
   
-  // Group items into pages of 3
-  const itemsPerPage = 3;
+  // Group items into pages of 5
+  const itemsPerPage = 5;
   const pages = [];
   for (let i = 0; i < items.length; i += itemsPerPage) {
     pages.push(items.slice(i, i + itemsPerPage));
   }
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -34,6 +39,29 @@ const Card3DCarousel = ({ items, title }) => {
       setIsAnimating(false);
       setDirection(null);
     }, 400);
+  };
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
   };
 
   const getVisibleCards = () => {
@@ -119,17 +147,15 @@ const Card3DCarousel = ({ items, title }) => {
   };
 
   return (
-    <div className="w-full py-2">
-      {/* Title */}
-      {/* <div className="text-center mb-8">
-        <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-900 via-amber-700 to-red-900 bg-clip-text text-transparent">
-          {title}
-        </h3>
-      </div> */}
-
+    <div className="w-full py-2 font-heading">
       {/* Deck Stack Container */}
-      <div className="relative w-full min-h-[450px] md:min-h-[500px] flex items-center justify-center px-4">
-        <div className="relative w-full max-w-2xl min-h-[420px] sm:min-h-[480px] mx-auto" >
+      <div className="relative w-full min-h-[420px] md:min-h-[440px] flex items-center justify-center px-4">
+        <div 
+          className="relative w-full max-w-2xl min-h-[400px] sm:min-h-[420px] mx-auto touch-pan-y"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {getVisibleCards().map(({ index, position }) => (
             <div
               key={`${index}-${position}`}
@@ -139,32 +165,28 @@ const Card3DCarousel = ({ items, title }) => {
                 pointerEvents: position === 0 ? 'auto' : 'none',
               }}
             >
-              <div className="bg-gradient-to-br from-white via-amber-50/30 to-white  shadow-2xl border border-amber-200/50 p-6 md:p-8 h-full">
-                <div className="space-y-4 bg-white">
+              <div className="bg-gradient-to-br from-white via-amber-50/30 to-white shadow-2xl border border-amber-200/50 h-full">
+                <div className="space-y-0 bg-gradient2 h-full overflow-hidden">
                   {pages[index].map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-gradient-to-r from-amber-100/40 via-pink-300/40 to-amber-100/40 rounded-lg border border-amber-200/50 px-4 py-4 md:px-6 md:py-5"
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex-1">
-                          <h4 className="text-base md:text-lg font-semibold text-gray-900">
-                            {item.name}
-                          </h4>
-                          <p className="text-xs md:text-sm text-gray-600 mt-1">
-                            {item.gender === 'M' ? 'पुरुष' : 'महिला'} • आयु: {item.age}
-                          </p>
+                    <div key={idx}>
+                      <div className="px-3 py-1 md:px-4 md:py-2.5">
+                        <div className="text-center mb-1">
+                          <span className="text-[0.5rem] md:text-sm font-semibold text-gray-700 bg-gradient-to-r from-amber-100 to-pink-100 px-3 py-0.5 rounded-full inline-block">
+                            {item.gender === 'M' ? 'मुमुक्षुरत्न' : 'मुमुक्षुरत्ना'}
+                          </span>
+                        </div>
+                        <h4 className="text-xs md:text-base font-semibold text-gray-900 text-center">
+                          {item.name}
+                        </h4>
+                        <div className="mt-1 flex items-center justify-center gap-3 text-xs md:text-sm text-gray-600">
+                          <span>आयु: {item.age}</span>
+                          <span>•</span>
+                          <span>{item.residence}</span>
                         </div>
                       </div>
-                      <div className="mt-3 flex items-center gap-2">
-                        <svg className="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <span className="text-xs md:text-sm text-gray-700">
-                          {item.residence}
-                        </span>
-                      </div>
+                      {idx < pages[index].length - 1 && (
+                        <div className="border-b border-amber-200/50"></div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -179,14 +201,14 @@ const Card3DCarousel = ({ items, title }) => {
           disabled={isAnimating}
           className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
         >
-          <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-maroon group-hover:scale-110 transition-transform" />
+          <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-red-900 group-hover:scale-110 transition-transform" />
         </button>
         <button
           onClick={nextSlide}
           disabled={isAnimating}
           className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
         >
-          <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-maroon group-hover:scale-110 transition-transform" />
+          <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-red-900 group-hover:scale-110 transition-transform" />
         </button>
       </div>
 
@@ -208,7 +230,7 @@ const Card3DCarousel = ({ items, title }) => {
             }}
             className={`h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? 'bg-maroon w-8'
+                ? 'bg-red-900 w-8'
                 : 'bg-gray-400 w-2 hover:bg-gray-500'
             }`}
           />
@@ -302,7 +324,7 @@ export default function DiksharthiDetailsPage() {
         }
       `}</style>
 
-      <div className="relative inline-block w-full text-center my-6 px-4">
+      <div className="relative inline-block w-full text-center mt-6 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
         <h2 className="relative text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-900 via-amber-700 to-red-900 bg-clip-text text-transparent py-2 leading-snug">
           62 दीक्षार्थियों का विवरण
