@@ -151,7 +151,7 @@ const Card3DCarousel = ({ items, title }) => {
       {/* Deck Stack Container */}
       <div className="relative w-full min-h-[420px] md:min-h-[440px] flex items-center justify-center px-4">
         <div 
-          className="relative w-full max-w-2xl min-h-[400px] sm:min-h-[420px] mx-auto touch-pan-y"
+          className="relative w-full max-w-2xl min-h-[400px] sm:min-h-[500px] mx-auto touch-pan-y"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
@@ -171,7 +171,7 @@ const Card3DCarousel = ({ items, title }) => {
                     <div key={idx}>
                       <div className="px-3 py-1 md:px-4 md:py-2.5">
                         <div className="text-center mb-1">
-                          <span className="text-[0.5rem] md:text-sm font-semibold text-gray-700 bg-gradient-to-r from-amber-100 to-pink-100 px-3 py-0.5 rounded-full inline-block">
+                          <span className="text-[0.5rem] md:text-xs font-semibold text-gray-700 bg-gradient-to-r from-amber-100 to-pink-100 px-3 py-0.5 rounded-full inline-block">
                             {item.gender === 'M' ? 'मुमुक्षुरत्न' : 'मुमुक्षुरत्ना'}
                           </span>
                         </div>
@@ -249,69 +249,69 @@ export default function DiksharthiDetailsPage() {
   const maleData = [
     { name: "हरखचंदजी बछराजजी भंसाली", gender: "M", age: 71, residence: "हाडेचा-मुंबई" },
     { name: "पारसमलजी सिरेमलजी अंगारा", gender: "M", age: 68, residence: "सुपुर-मुंबई" },
-    { name: "वीरेणभाई शिवलालजी हिरानी", gender: "M", age: 60, residence: "मालवाड़ा-मुंबई" },
-    { name: "चंपकभाई मोहनलालजी मोरखया", gender: "M", age: 61, residence: "वातम-सूरत" },
-    { name: "समीरभाई कालालजी शाह", gender: "M", age: 52, residence: "पिंडवाड़ा-अहमदाबाद" },
-    { name: "शैलेभाई गौतमचंदजी संकलेचा", gender: "M", age: 49, residence: "रायपुर" },
-    { name: "आशीषभाई राजजी सुराना", gender: "M", age: 44, residence: "रायपुर" },
+    { name: "प्रवीणभाई शिवलालजी हिरानी", gender: "M", age: 60, residence: "मालवाड़ा-मुंबई" },
+    { name: "चंपकभाई मोहनलालजी मोरखिया", gender: "M", age: 61, residence: "वातम-सूरत" },
+    { name: "समीरभाई कांतिलालजी शाह", gender: "M", age: 52, residence: "पिंडवाड़ा-अहमदाबाद" },
+    { name: "शैलेन्द्रभाई गौतमचंदजी संकलेचा", gender: "M", age: 49, residence: "रायपुर" },
+    { name: "आशीषभाई राजेन्द्रजी सुराना", gender: "M", age: 44, residence: "रायपुर" },
     { name: "मयूरभाई मनहरभाई शाह", gender: "M", age: 42, residence: "सूरत" },
-    { name: "हर्षिलभाई भेशभाई शाह", gender: "M", age: 34, residence: "जमनपुर-मुंबई" },
+    { name: "हर्षिलभाई भद्रेशभाई शाह", gender: "M", age: 34, residence: "जमनपुर-मुंबई" },
     { name: "जैनमकुमार निमिशभाई शाह", gender: "M", age: 27, residence: "बोटाड-मुंबई" },
-    { name: "हर्षिलभाई चंपकभाई मोरखया", gender: "M", age: 26, residence: "वातम-सूरत" },
+    { name: "हर्षिलभाई चंपकभाई मोरखिया", gender: "M", age: 26, residence: "वातम-सूरत" },
     { name: "ध्रुवकुमार कुमारभाई मनीयार", gender: "M", age: 22, residence: "भाभर-मुंबई" },
     { name: "प्रियलकुमार संजयभाई संघवी", gender: "M", age: 18, residence: "भाभर-मुंबई" },
-    { name: "आयनकुमार आशीषभाई सुराना", gender: "M", age: 16, residence: "रायपुर" },
+    { name: "आर्यनकुमार आशीषभाई सुराना", gender: "M", age: 16, residence: "रायपुर" },
     { name: "जिनांग योगेशभाई शाह", gender: "M", age: 15, residence: "कुवाला-मुंबई" },
-    { name: "आर्षकुमार आशीषभाई सुराना", gender: "M", age: 14, residence: "रायपुर" },
-    { name: "वृकुमार रोहनभाई मुजपुरा", gender: "M", age: 14, residence: "भाभर-सूरत" },
-    { name: "तनीषकुमार मोदभाई सोनिगारा", gender: "M", age: 13, residence: "रायपुर" }
+    { name: "आरुषकुमार आशीषभाई सुराना", gender: "M", age: 14, residence: "रायपुर" },
+    { name: "वज्रभाई रोहनभाई मुजपुरा", gender: "M", age: 14, residence: "भाभर-सूरत" },
+    { name: "तनीषकुमार प्रमोदभाई सोनिगारा", gender: "M", age: 13, residence: "रायपुर" }
   ];
 
   const femaleData = [
     { name: "सुजाताबेन राजेशभाई वोरा", gender: "F", age: 66, residence: "USA" },
     { name: "संगीताबेन संजयभाई शाह", gender: "F", age: 63, residence: "खेड़ा-USA" },
-    { name: "लताबेन वीरेणभाई हिरानी", gender: "F", age: 55, residence: "मालवाड़ा-मुंबई" },
-    { name: "प्रवीणबेन राकेशकुमार शाह", gender: "F", age: 53, residence: "आसेड़ा(डीसा)-मुंबई" },
-    { name: "निशाबेन चंपकभाई मोरखया", gender: "F", age: 52, residence: "वातम-सूरत" },
-    { name: "जिनप्राभाबेन बिपीनभाई गडा", gender: "F", age: 52, residence: "लाकडिया कुंवागड-मुंबई" },
-    { name: "एकताबेन शैलेभाई संकलेचा", gender: "F", age: 47, residence: "रायपुर" },
-    { name: "चिकाबेन समीरभाई शाह", gender: "F", age: 46, residence: "पिंडवाड़ा-अहमदाबाद" },
-    { name: "रतुबेन आशीषभाई सुराना", gender: "F", age: 42, residence: "रायपुर" },
-    { name: "रुपलबेन मयूरभाई शाह", gender: "F", age: 36, residence: "सूरत" },
+    { name: "लताबेन प्रवीणभाई हिरानी", gender: "F", age: 55, residence: "मालवाड़ा-मुंबई" },
+    { name: "पल्लवीबेन राकेशकुमार शाह", gender: "F", age: 53, residence: "आसेड़ा(डीसा)-मुंबई" },
+    { name: "निशाबेन चंपकभाई मोरखिया", gender: "F", age: 52, residence: "वातम-सूरत" },
+    { name: "जिनाज्ञाबेन बिपीनभाई गडा", gender: "F", age: 52, residence: "लाकडिया कुंवागड-मुंबई" },
+    { name: "एकताबेन शैलेन्द्रभाई संकलेचा", gender: "F", age: 47, residence: "रायपुर" },
+    { name: "रुचिकाबेन समीरभाई शाह", gender: "F", age: 46, residence: "पिंडवाड़ा-अहमदाबाद" },
+    { name: "रीतुबेन आशीषभाई सुराना", gender: "F", age: 42, residence: "रायपुर" },
+    { name: "रिम्पलबेन मयूरभाई शाह", gender: "F", age: 36, residence: "सूरत" },
     { name: "प्रियलबेन हर्षिलभाई शाह", gender: "F", age: 33, residence: "जमनपुर-मुंबई" },
-    { name: "मिलकुमारी पारसमलजी दोषी", gender: "F", age: 30, residence: "हाडेचा-वडोदरा" },
+    { name: "मित्तलकुमारी पारसमलजी दोषी", gender: "F", age: 30, residence: "हाडेचा-वडोदरा" },
     { name: "मोक्षीबेन धवलकुमार आकराणी", gender: "F", age: 29, residence: "खमत-भाभर" },
-    { name: "इक्षितकुमारी अशोकभाई जैन", gender: "F", age: 28, residence: "उदयपुर" },
-    { name: "प्रेरीकुमारी भरतभाई अजबानी", gender: "F", age: 27, residence: "धानेरा-सूरत" },
+    { name: "इतिकुमारी अशोकभाई जैन", gender: "F", age: 28, residence: "उदयपुर" },
+    { name: "श्रेष्ठीकुमारी भरतभाई अजबानी", gender: "F", age: 27, residence: "धानेरा-सूरत" },
     { name: "साक्षीकुमारी नरभाई बैद", gender: "F", age: 27, residence: "नोखा(राजस्थान)-हिंगणघाट(Maharashtra)" },
     { name: "सुरभिकुमारी कपूरचंदजी भंसाली", gender: "F", age: 27, residence: "रायपुर" },
     { name: "अंजली कांतीलालजी भंसाली", gender: "F", age: 27, residence: "गढ़ सिवाना(राजस्थान)-पुणे" },
-    { name: "हेत्वीकुमारी काशभाई ओवाल", gender: "F", age: 27, residence: "गढ़ सिवाना(राजस्थान)-चलथान(गुजरात)" },
+    { name: "हेत्वीकुमारी प्रकाशभाई ओस्तवाल", gender: "F", age: 27, residence: "गढ़ सिवाना(राजस्थान)-चलथान(गुजरात)" },
     { name: "दीनीशाकुमारी भूपेंद्रजी कानूनगो(बोथरा)", gender: "F", age: 26, residence: "सुपुर-मुंबई" },
     { name: "संयमीकुमारी मयूरभाई दोषी", gender: "F", age: 23, residence: "दियोदर-मुंबई" },
-    { name: "कान्ताकुमारी दिलीपभाई मेहता", gender: "F", age: 23, residence: "हाडेचा-मुंबई" },
-    { name: "प्राज्ञाकुमारी पुरुषोत्तमभाई शेठ", gender: "F", age: 23, residence: "थराद-सूरत" },
-    { name: "खुशीकुमारी जितेशभाई मेहता", gender: "F", age: 22, residence: "माडका(वाव)-सूरत" },
+    { name: "काव्याकुमारी दिलीपभाई मेहता", gender: "F", age: 23, residence: "हाडेचा-मुंबई" },
+    { name: "प्रवज्याकुमारी पुरवीशभाई शेठ", gender: "F", age: 23, residence: "थराद-सूरत" },
+    { name: "खुशीकुमारी जिग्नेशभाई मेहता", gender: "F", age: 22, residence: "माडका(वाव)-सूरत" },
     { name: "हनीकुमारी मनोजभाई राठौड़", gender: "F", age: 21, residence: "पिंडवाड़ा-सूरत" },
     { name: "मितव्याकुमारी हितेशभाई संघवी", gender: "F", age: 19, residence: "शेणवाल-सूरत" },
-    { name: "प्रीयाकुमारी केशभाई संघवी", gender: "F", age: 19, residence: "भाभर-मुंबई" },
-    { name: "आंशीकुमारी जितेशभाई मेहता", gender: "F", age: 19, residence: "माडका(वाव)-सूरत" },
-    { name: "विरक्तिकुमारी जिगरभाई शाह", gender: "F", age: 18, residence: "आगलोड(गुजरात)-मुंबई" },
+    { name: "श्रीयाकुमारी कल्पेशभाई संघवी", gender: "F", age: 19, residence: "भाभर-मुंबई" },
+    { name: "आंशिकुमारी जिग्नेशभाई मेहता", gender: "F", age: 19, residence: "माडका(वाव)-सूरत" },
+    { name: "विरतिकुमारी जिगरभाई शाह", gender: "F", age: 18, residence: "आगलोड(गुजरात)-मुंबई" },
     { name: "दीयाकुमारी विजयभाई सेठ", gender: "F", age: 18, residence: "तीर्थगाम(बनासकांठा)-सूरत" },
     { name: "परीकुमारी मुकेशभाई धोखा", gender: "F", age: 17, residence: "झेरडा-पुणे" },
-    { name: "ऋद्धाकुमारी पुरुषोत्तमभाई शेठ", gender: "F", age: 17, residence: "थराद-सूरत" },
+    { name: "दिव्याकुमारी पुरर्विशभाई शेठ", gender: "F", age: 17, residence: "थराद-सूरत" },
     { name: "श्रेणिकुमारी केतनभाई रोलिया", gender: "F", age: 17, residence: "भाभर-मुंबई" },
     { name: "माईशाकुमारी रितेशभाई मेहता", gender: "F", age: 17, residence: "उज्जैन-मुंबई" },
-    { name: "प्रियाकुमारी जितेशभाई फोफानी", gender: "F", age: 17, residence: "तेरवाड़ा-थरा" },
+    { name: "क्रियाकुमारी जिग्नेशभाई फोफानी", gender: "F", age: 17, residence: "तेरवाड़ा-थरा" },
     { name: "श्रेयसीकुमारी किंजलभाई रोलिया(शाह)", gender: "F", age: 16, residence: "भाभर-मुंबई" },
-    { name: "जैनीकुमारी मेलभाई संघवी", gender: "F", age: 15, residence: "शेणवाल-अहमदाबाद" },
+    { name: "जैनीकुमारी मेहुल संघवी", gender: "F", age: 15, residence: "शेणवाल-अहमदाबाद" },
     { name: "प्रांजलकुमारी कुनालभाई शाह", gender: "F", age: 14, residence: "काली(राजस्थान)-कोयंबतूर" },
-    { name: "झीलकुमारी निर्तितनभाई संघवी", gender: "F", age: 14, residence: "भाभर" },
+    { name: "झीलकुमारी नितिन संघवी", gender: "F", age: 14, residence: "भाभर" },
     { name: "मोक्षाकुमारी मयंकभाई रोलिया", gender: "F", age: 13, residence: "भाभर-मुंबई" },
     { name: "आर्याकुमारी अमितभाई रोलिया", gender: "F", age: 11, residence: "भाभर-सूरत" },
     { name: "जैनाकुमारी तुषारभाई भाभेरा", gender: "F", age: 11, residence: "दुनावाडा(पाटन)-सूरत" },
     { name: "धृतिकुमारी हर्षिलभाई शाह", gender: "F", age: 8, residence: "जमनपुर-मुंबई" },
-    { name: "तत्वर्तीकुमारी समीरभाई शाह", gender: "F", age: 7, residence: "भांडोरा(बनासकांठा)-सूरत" }
+    { name: "तहती समीरभाई शाह", gender: "F", age: 7, residence: "भांडोरा(बनासकांठा)-सूरत" }
   ];
 
   return (
