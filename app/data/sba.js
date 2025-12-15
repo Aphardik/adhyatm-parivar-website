@@ -672,6 +672,62 @@ export const photoData1 = {
       imageUrl: "/shasan-bhakti-anjali/SBA-96H.webp",
       date: "2025-10-04"
     },
+    {
+      uid: "sba97",
+      id: 97,
+      name: "शासनभक्ति की अंजलि-97",
+      imageUrl: "/shasan-bhakti-anjali/SBA-97H.webp",
+      date: "2025-10-05"
+    },
+    {
+      uid: "sba98",
+      id: 98,
+      name: "शासनभक्ति की अंजलि-98",
+      imageUrl: "/shasan-bhakti-anjali/SBA-98H.webp",
+      date: "2025-10-06"
+    },
+    {
+      uid: "sba99",
+      id: 99,
+      name: "शासनभक्ति की अंजलि-99",
+      imageUrl: "/shasan-bhakti-anjali/SBA-99H.webp",
+      date: "2025-10-07"  
+    },
+    {
+      uid: "sba100",
+      id: 100,
+      name: "शासनभक्ति की अंजलि-100",
+      imageUrl: "/shasan-bhakti-anjali/SBA-100H.webp",
+      date: "2025-10-08"
+    },
+    {
+      uid: "sba101",
+      id: 101,
+      name: "शासनभक्ति की अंजलि-101",
+      imageUrl: "/shasan-bhakti-anjali/SBA-101H.webp",
+      date: "2025-10-09"  
+    },
+    {
+      uid: "sba102",
+      id: 102,
+      name: "शासनभक्ति की अंजलि-102",
+      imageUrl: "/shasan-bhakti-anjali/SBA-102H.webp",
+      date: "2025-10-10"
+    },
+    {
+      uid: "sba103",
+      id: 103,
+      name: "शासनभक्ति की अंजलि-103",
+      imageUrl: "/shasan-bhakti-anjali/SBA-103H.webp",
+      date: "2025-10-11"
+    },
+    {
+      uid: "sba104",
+      id: 104,
+      name: "शासनभक्ति की अंजलि-104",
+      imageUrl: "/shasan-bhakti-anjali/SBA-104H.webp",
+      date: "2025-10-12"
+    }
 
   ],
   gujarati: [
@@ -1346,6 +1402,62 @@ export const photoData1 = {
       name: "શાસનભક્તિની અંજલિ-96",
       imageUrl: "/shasan-bhakti-anjali/SBA-96G.webp",
       date: "2025-10-04"
+    },
+    {
+      uid: "sba97",
+      id: 97,
+      name: "શાસનભક્તિની અંજલિ-97",
+      imageUrl: "/shasan-bhakti-anjali/SBA-97G.webp",
+      date: "2025-10-05"
+    },
+    {
+      uid: "sba98",
+      id: 98,
+      name: "શાસનભક્તિની અંજલિ-98",
+      imageUrl: "/shasan-bhakti-anjali/SBA-98G.webp",
+      date: "2025-10-06"
+    },
+    {
+      uid: "sba99",
+      id: 99,
+      name: "શાસનભક્તિની અંજલિ-99",
+      imageUrl: "/shasan-bhakti-anjali/SBA-99G.webp",
+      date: "2025-10-07"
+    },
+    {
+      uid: "sba100",
+      id: 100,
+      name: "શાસનભક્તિની અંજલિ-100", 
+      imageUrl: "/shasan-bhakti-anjali/SBA-100G.webp",
+      date: "2025-10-08"
+    },
+    {
+      uid: "sba101",
+      id: 101,
+      name: "શાસનભક્તિની અંજલિ-101",
+      imageUrl: "/shasan-bhakti-anjali/SBA-101G.webp",
+      date: "2025-10-09"
+    },
+    {
+      uid: "sba102",
+      id: 102,
+      name: "શાસનભક્તિની અંજલિ-102",
+      imageUrl: "/shasan-bhakti-anjali/SBA-102G.webp",
+      date: "2025-10-10"
+    },
+    {
+      uid: "sba103",
+      id: 103,
+      name: "શાસનભક્તિની અંજલિ-103",
+      imageUrl: "/shasan-bhakti-anjali/SBA-103G.webp",
+      date: "2025-10-11"
+    },
+    {
+      uid: "sba104",
+      id: 104,
+      name: "શાસનભક્તિની અંજલિ-104",
+      imageUrl: "/shasan-bhakti-anjali/SBA-104G.webp",
+      date: "2025-10-12"
     }
 
   ],
@@ -1899,5 +2011,54 @@ export const photoData1 = {
       imageUrl: "/shasan-bhakti-anjali/SBA-78E.webp",
       date: "2025-09-16"
     },
+    {  
+      uid: "sba79",
+      id: 79,
+      name: "Shaasan Bhakti Anjali-79",
+      imageUrl: "/shasan-bhakti-anjali/SBA-79E.webp",
+      date: "2025-09-17"
+    },
+    {
+      uid: "sba80",
+      id: 80,
+      name: "Shaasan Bhakti Anjali-80",
+      imageUrl: "/shasan-bhakti-anjali/SBA-80E.webp",
+      date: "2025-09-18"
+    },
+    {
+      uid: "sba81",
+      id: 81,
+      name: "Shaasan Bhakti Anjali-81",
+      imageUrl: "/shasan-bhakti-anjali/SBA-81E.webp",
+      date: "2025-09-19"
+    },
+    {
+      uid: "sba82",
+      id: 82,
+      name: "Shaasan Bhakti Anjali-82",
+      imageUrl: "/shasan-bhakti-anjali/SBA-82E.webp",
+      date: "2025-09-20"
+    },
+    {
+      uid: "sba83",
+      id: 83,
+      name: "Shaasan Bhakti Anjali-83",
+      imageUrl: "/shasan-bhakti-anjali/SBA-83E.webp",
+      date: "2025-09-21"
+    },
+    {
+      uid: "sba84",
+      id: 84,
+      name: "Shaasan Bhakti Anjali-84",
+      imageUrl: "/shasan-bhakti-anjali/SBA-84E.webp",
+      date: "2025-09-22"
+    },
+    {
+      uid: "sba85",
+      id: 85,
+      name: "Shaasan Bhakti Anjali-85",
+      imageUrl: "/shasan-bhakti-anjali/SBA-85E.webp",
+      date: "2025-09-23"
+    }
   ]
 };

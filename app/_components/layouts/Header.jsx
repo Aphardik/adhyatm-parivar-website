@@ -760,7 +760,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-{  !isUpdhanPage && !isMembershipPage &&  <NoticeHeader />}
+{/* {  !isUpdhanPage && !isMembershipPage &&  <NoticeHeader />} */}
     </div>
   );
 };
