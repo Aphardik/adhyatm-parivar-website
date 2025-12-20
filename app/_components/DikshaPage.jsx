@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import HexagonalSvg from "./HexagonalSvg";
 import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
+import Image3DCarousel from "./Image3DCarousel";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -288,7 +289,7 @@ const Timeline = () => {
           </p>
 
           <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>62</span> दीक्षा
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>63</span> दीक्षा
           </p>
 
 
@@ -342,7 +343,7 @@ const Timeline = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
               <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-                62 दीक्षार्थियों के
+                63 दीक्षार्थियों के
                 <span className="block mt-1">
                   'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
                 </span>
@@ -396,6 +397,31 @@ const Timeline = () => {
           </div>
 
           <DiksharthiDetailsPage />
+
+          {/* New Image Carousel Section */}
+          <div className="relative w-full max-w-4xl mx-auto my-12 md:my-16">
+            <div className="relative inline-block w-full text-center mb-8 px-4">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
+              <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
+                महाराष्ट्र के मुंबई नगरी में पहली बार 59 जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
+              </h2>
+            </div>
+            <Image3DCarousel
+              images={[
+                "/diksha/dikshanews1.webp",
+                "/diksha/dikshanews2.webp",
+                "/diksha/dikshanews3.webp",
+                "/diksha/dikshanews4.webp",
+                "/diksha/dikshanews5.webp",
+                "/diksha/dikshanews6.webp",
+                "/diksha/dikshanews7.webp",
+                "/diksha/dikshanews8.webp",
+                "/diksha/dikshanews9.webp",
+                "/diksha/dikshanews10.webp",
+                "/diksha/dikshanews11.webp",
+              ]}
+            />
+          </div>
 
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-8 md:my-12">

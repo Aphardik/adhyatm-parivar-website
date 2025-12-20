@@ -248,7 +248,7 @@ const Card3DCarousel = ({ items, title }) => {
 export default function DiksharthiDetailsPage() {
   const maleData = [
     { name: "हरखचंदजी बछराजजी भंसाली", gender: "M", age: 71, residence: "हाडेचा-मुंबई" },
-    { name: "पारसमलजी सिरेमलजी अंगारा", gender: "M", age: 68, residence: "सुपुर-मुंबई" },
+    { name: "परसमालजी सिरेमालजी अंगारा", gender: "M", age: 68, residence: "सत्यपुर-मुंबई" },
     { name: "प्रवीणभाई शिवलालजी हिरानी", gender: "M", age: 60, residence: "मालवाड़ा-मुंबई" },
     { name: "चंपकभाई मोहनलालजी मोरखिया", gender: "M", age: 61, residence: "वातम-सूरत" },
     { name: "समीरभाई कांतिलालजी शाह", gender: "M", age: 52, residence: "पिंडवाड़ा-अहमदाबाद" },
@@ -261,7 +261,7 @@ export default function DiksharthiDetailsPage() {
     { name: "ध्रुवकुमार कुमारभाई मनीयार", gender: "M", age: 22, residence: "भाभर-मुंबई" },
     { name: "प्रियलकुमार संजयभाई संघवी", gender: "M", age: 18, residence: "भाभर-मुंबई" },
     { name: "आर्यनकुमार आशीषभाई सुराना", gender: "M", age: 16, residence: "रायपुर" },
-    { name: "जिनांग योगेशभाई शाह", gender: "M", age: 15, residence: "कुवाला-मुंबई" },
+    { name: "जिनंगकुमार योगेशभाई", gender: "M", age: 15, residence: "कुवाला-मुंबई" },
     { name: "आरुषकुमार आशीषभाई सुराना", gender: "M", age: 14, residence: "रायपुर" },
     { name: "वज्रभाई रोहनभाई मुजपुरा", gender: "M", age: 14, residence: "भाभर-सूरत" },
     { name: "तनीषकुमार प्रमोदभाई सोनिगारा", gender: "M", age: 13, residence: "रायपुर" }
@@ -272,7 +272,7 @@ export default function DiksharthiDetailsPage() {
     { name: "संगीताबेन संजयभाई शाह", gender: "F", age: 63, residence: "खेड़ा-USA" },
     { name: "लताबेन प्रवीणभाई हिरानी", gender: "F", age: 55, residence: "मालवाड़ा-मुंबई" },
     { name: "पल्लवीबेन राकेशकुमार शाह", gender: "F", age: 53, residence: "आसेड़ा(डीसा)-मुंबई" },
-    { name: "निशाबेन चंपकभाई मोरखिया", gender: "F", age: 52, residence: "वातम-सूरत" },
+    { name: "शिल्पाबेन चंपकभाई मोरखिया", gender: "F", age: 52, residence: "वातम-सूरत" },
     { name: "जिनाज्ञाबेन बिपीनभाई गडा", gender: "F", age: 52, residence: "लाकडिया कुंवागड-मुंबई" },
     { name: "एकताबेन शैलेन्द्रभाई संकलेचा", gender: "F", age: 47, residence: "रायपुर" },
     { name: "रुचिकाबेन समीरभाई शाह", gender: "F", age: 46, residence: "पिंडवाड़ा-अहमदाबाद" },
@@ -280,7 +280,7 @@ export default function DiksharthiDetailsPage() {
     { name: "रिम्पलबेन मयूरभाई शाह", gender: "F", age: 36, residence: "सूरत" },
     { name: "प्रियलबेन हर्षिलभाई शाह", gender: "F", age: 33, residence: "जमनपुर-मुंबई" },
     { name: "मित्तलकुमारी पारसमलजी दोषी", gender: "F", age: 30, residence: "हाडेचा-वडोदरा" },
-    { name: "मोक्षीबेन धवलकुमार आकराणी", gender: "F", age: 29, residence: "खमत-भाभर" },
+    { name: "मोक्षीबेन धवलकुमार आकरानी", gender: "F", age: 29, residence: "खीमत-भाभर" },
     { name: "इतिकुमारी अशोकभाई जैन", gender: "F", age: 28, residence: "उदयपुर" },
     { name: "श्रेष्ठीकुमारी भरतभाई अजबानी", gender: "F", age: 27, residence: "धानेरा-सूरत" },
     { name: "साक्षीकुमारी नरभाई बैद", gender: "F", age: 27, residence: "नोखा(राजस्थान)-हिंगणघाट(Maharashtra)" },
@@ -293,7 +293,7 @@ export default function DiksharthiDetailsPage() {
     { name: "प्रवज्याकुमारी पुरवीशभाई शेठ", gender: "F", age: 23, residence: "थराद-सूरत" },
     { name: "खुशीकुमारी जिग्नेशभाई मेहता", gender: "F", age: 22, residence: "माडका(वाव)-सूरत" },
     { name: "हनीकुमारी मनोजभाई राठौड़", gender: "F", age: 21, residence: "पिंडवाड़ा-सूरत" },
-    { name: "मितव्याकुमारी हितेशभाई संघवी", gender: "F", age: 19, residence: "शेणवाल-सूरत" },
+    { name: "मितवाकुमारी हितेशभाई संघवी", gender: "F", age: 19, residence: "शणवाल-सूरत" },
     { name: "श्रीयाकुमारी कल्पेशभाई संघवी", gender: "F", age: 19, residence: "भाभर-मुंबई" },
     { name: "आंशिकुमारी जिग्नेशभाई मेहता", gender: "F", age: 19, residence: "माडका(वाव)-सूरत" },
     { name: "विरतिकुमारी जिगरभाई शाह", gender: "F", age: 18, residence: "आगलोड(गुजरात)-मुंबई" },
@@ -311,7 +311,8 @@ export default function DiksharthiDetailsPage() {
     { name: "आर्याकुमारी अमितभाई रोलिया", gender: "F", age: 11, residence: "भाभर-सूरत" },
     { name: "जैनाकुमारी तुषारभाई भाभेरा", gender: "F", age: 11, residence: "दुनावाडा(पाटन)-सूरत" },
     { name: "धृतिकुमारी हर्षिलभाई शाह", gender: "F", age: 8, residence: "जमनपुर-मुंबई" },
-    { name: "तहती समीरभाई शाह", gender: "F", age: 7, residence: "भांडोरा(बनासकांठा)-सूरत" }
+    { name: "तहती समीरभाई शाह", gender: "F", age: 7, residence: "भांडोरा(बनासकांठा)-सूरत" },
+    { name: "खुशीकुमारी महेंद्रभाई अंगारा", gender: "F", age: 23, residence: "हाडेचा-मुंबई" }
   ];
 
   return (
@@ -327,7 +328,7 @@ export default function DiksharthiDetailsPage() {
       <div className="relative inline-block w-full text-center mt-6 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
         <h2 className="relative text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-900 via-amber-700 to-red-900 bg-clip-text text-transparent py-2 leading-snug">
-          62 दीक्षार्थियों का विवरण
+          63 दीक्षार्थियों का विवरण
         </h2>
       </div>
 
