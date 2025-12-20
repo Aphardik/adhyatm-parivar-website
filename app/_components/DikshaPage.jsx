@@ -402,8 +402,8 @@ const Timeline = () => {
           <div className="relative w-full max-w-4xl mx-auto my-12 md:my-16">
             <div className="relative inline-block w-full text-center mb-8 px-4">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
-              <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-                महाराष्ट्र के मुंबई नगरी में पहली बार 59 जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
+              <h2 className="relative text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
+                महाराष्ट्र के मुंबई नगरी में जैन शासन के इतिहास में पहली बार जगमशहूर  जैनाचार्य श्री योगतिलकसूरी महाराजा की निश्रा में 59  जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
               </h2>
             </div>
             <Image3DCarousel
