@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
 const Image3DCarousel = ({ images }) => {
@@ -10,6 +11,9 @@ const Image3DCarousel = ({ images }) => {
     const [touchEnd, setTouchEnd] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+
+    const [modalTouchStart, setModalTouchStart] = useState(null);
+    const [modalTouchEnd, setModalTouchEnd] = useState(null);
 
     // Minimum swipe distance (in px)
     const minSwipeDistance = 50;
@@ -51,6 +55,29 @@ const Image3DCarousel = ({ images }) => {
         if (isModalOpen || !touchStart || !touchEnd) return;
 
         const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            nextSlide();
+        } else if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
+    const handleModalTouchStart = (e) => {
+        setModalTouchEnd(null);
+        setModalTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleModalTouchMove = (e) => {
+        setModalTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleModalTouchEnd = () => {
+        if (!modalTouchStart || !modalTouchEnd) return;
+
+        const distance = modalTouchStart - modalTouchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
 
@@ -162,7 +189,7 @@ const Image3DCarousel = ({ images }) => {
         <div className="w-full py-4 font-heading">
             <div className="relative w-full min-h-[300px] md:min-h-[450px] flex items-center justify-center px-4">
                 <div
-                    className="relative w-full max-w-2xl min-h-[280px] sm:min-h-[420px] mx-auto touch-pan-y"
+                    className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-[747/1280] mx-auto touch-pan-y"
                     onTouchStart={onTouchStart}
                     onTouchMove={onTouchMove}
                     onTouchEnd={onTouchEnd}
@@ -180,7 +207,7 @@ const Image3DCarousel = ({ images }) => {
                             <img
                                 src={images[index]}
                                 alt={`Slide ${index}`}
-                                className="w-full h-full object-contain"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     ))}
@@ -228,28 +255,33 @@ const Image3DCarousel = ({ images }) => {
             </div>
 
             {/* Full Screen Modal */}
-            {isModalOpen && (
+            {isModalOpen && typeof document !== 'undefined' && ReactDOM.createPortal(
                 <div
-                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-8 transition-all duration-300 animate-in fade-in"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 md:p-8 transition-all duration-300 animate-in fade-in backdrop-blur-sm"
                     onClick={closeModal}
                 >
                     <button
-                        className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl md:text-4xl hover:text-red-500 transition-colors z-[110]"
+                        className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl md:text-5xl hover:text-red-500 transition-colors z-[110] bg-black/20 rounded-full p-2"
                         onClick={closeModal}
                     >
                         <FaTimes />
                     </button>
                     <div
-                        className="relative max-w-7xl max-h-full flex items-center justify-center animate-in zoom-in"
+                        className="relative max-w-full max-h-full flex items-center justify-center animate-in zoom-in duration-300 touch-pan-y"
                         onClick={(e) => e.stopPropagation()}
+                        onTouchStart={handleModalTouchStart}
+                        onTouchMove={handleModalTouchMove}
+                        onTouchEnd={handleModalTouchEnd}
                     >
                         <img
-                            src={selectedImage}
+                            key={currentIndex}
+                            src={images[currentIndex]}
                             alt="Full view"
-                            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                            className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl drop-shadow-2xl animate-fade-in"
                         />
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );

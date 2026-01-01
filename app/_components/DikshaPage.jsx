@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import HexagonalSvg from "./HexagonalSvg";
 import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
 import Image3DCarousel from "./Image3DCarousel";
+import RangChhataSection from "./RangChhataSection";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -272,6 +273,8 @@ const Timeline = () => {
         />
       </div>
 
+
+
       {/* Announcement Text Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
@@ -338,7 +341,7 @@ const Timeline = () => {
 
 
           {/* Auto-Sliding Carousel */}
-          <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
+          {/* <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
             <div className="relative inline-block w-full text-center my-6">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
@@ -366,8 +369,7 @@ const Timeline = () => {
                 </div>
               ))}
 
-              {/* Navigation Buttons */}
-              {/* <button
+              <button
                 onClick={handleCarouselPrev}
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
               >
@@ -378,9 +380,8 @@ const Timeline = () => {
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 z-10"
               >
                 <FaChevronRight className="text-maroon text-xl" />
-              </button> */}
+              </button>
 
-              {/* Dots Indicator */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                 {carouselImages.map((_, index) => (
                   <button
@@ -394,7 +395,9 @@ const Timeline = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* Rang Chhata Section */}
+          <RangChhataSection />
 
           <DiksharthiDetailsPage />
 
