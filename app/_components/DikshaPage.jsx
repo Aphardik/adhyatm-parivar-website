@@ -299,48 +299,54 @@ const Timeline = () => {
 
 
 
-          {/* Diksha Details Card */}
-          <div className="relative w-full max-w-md mx-auto my-8 md:my-10">
-            <div className="relative">
-              <HexagonalSvg accentColor="red" />
-              {/* Background gradient effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
+         {/* Diksha Details Card */}
+<div className="relative w-full max-w-md mx-auto my-8 md:my-10">
+  <div className="relative">
+    <HexagonalSvg accentColor="red" />
+    {/* Background gradient effect */}
+    <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
 
-              {/* Card Content */}
-              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
-                <div className="space-y-5">
-                  {/* Diksha Day Section - Top Most */}
-                  <div className="text-center space-y-2 p-2">
-                    <div className="text-lg md:text-2xl font-extrabold text-gray-700">
-                      दीक्षा दिन
-                    </div>
-                  </div>
-
-                  {/* Date Section */}
-                  <div className="text-center space-y-1 p-2">
-                    <div className="text-maroon font-bold text-2xl md:text-3xl">
-                      माघ वदी 7
-                    </div>
-                    <div className="text-maroon font-bold text-2xl md:text-3xl">
-                      February 8, 2026
-                    </div>
-                  </div>
-
-                  {/* Location Section */}
-                  <div className="text-center space-y-2 p-2">
-                    <div className="text-amber-700 font-bold text-lg md:text-2xl">
-                      📍 स्थान
-                    </div>
-                    <div className="text-gray-800 font-semibold text-base md:text-lg">
-                      बोरीवली, मुंबई
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    {/* Card Content */}
+    <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
+      <div className="space-y-5">
+        {/* Diksha Day Section - Top Most */}
+        <div className="text-center space-y-2 p-2">
+          <div className="text-lg md:text-2xl font-extrabold text-gray-700">
+            दीक्षा दिन
           </div>
+        </div>
 
+        {/* Date Section */}
+        <div className="text-center space-y-1 p-2">
+          <div className="text-maroon font-bold text-2xl md:text-3xl">
+            माघ वदी 7
+          </div>
+          <div className="text-maroon font-bold text-2xl md:text-3xl">
+            February 8, 2026
+          </div>
+        </div>
 
+        {/* Location Section */}
+        <div className="text-center space-y-2 p-2">
+          <div className="text-amber-700 font-bold text-lg md:text-2xl">
+            📍 स्थान
+          </div>
+          <a 
+  href="https://www.google.com/maps/place/Chikoowadi+Playground/@19.2213339,72.8367833,17z/data=!4m6!3m5!1s0x3be7b13254bedfc9:0xb8de434d3e78fbf7!8m2!3d19.2222972!4d72.8368523!16s%2Fg%2F11cmvvdv5r?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-800 font-semibold text-base md:text-lg hover:text-amber-700 hover:underline transition-colors duration-200 inline-block"
+>
+  चिकूवाड़ी प्लेग्राउंड<br />
+  85, कांति पार्क रोड, गोराई 1<br />
+  बोरीवली वेस्ट, मुंबई<br />
+  महाराष्ट्र 400092, भारत
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           {/* Auto-Sliding Carousel */}
           {/* <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
             <div className="relative inline-block w-full text-center my-6">
