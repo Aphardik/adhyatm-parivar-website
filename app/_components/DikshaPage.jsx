@@ -5,6 +5,7 @@ import HexagonalSvg from "./HexagonalSvg";
 import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
 import Image3DCarousel from "./Image3DCarousel";
 import RangChhataSection from "./RangChhataSection";
+import NewsInfiniteCarousel from "./NewsInfiniteCarousel";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -409,7 +410,7 @@ const Timeline = () => {
                 महाराष्ट्र के मुंबई नगरी में जैन शासन के इतिहास में पहली बार जगमशहूर  जैनाचार्य श्री योगतिलकसूरी महाराजा की निश्रा में 59  जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
               </h2>
             </div>
-            <Image3DCarousel
+            <NewsInfiniteCarousel
               images={[
                 "/diksha/dikshanews1.webp",
                 "/diksha/dikshanews2.webp",
