@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaMapMarkerAlt } from "react-icons/fa";
 import HexagonalSvg from "./HexagonalSvg";
 import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
 import Image3DCarousel from "./Image3DCarousel";
@@ -299,54 +299,54 @@ const Timeline = () => {
 
 
 
-         {/* Diksha Details Card */}
-<div className="relative w-full max-w-md mx-auto my-8 md:my-10">
-  <div className="relative">
-    <HexagonalSvg accentColor="red" />
-    {/* Background gradient effect */}
-    <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
+          {/* Diksha Date Card - Restored Hexagonal Style */}
+          <div className="relative w-full max-w-md mx-auto my-8 md:my-10">
+            <div className="relative">
+              <HexagonalSvg accentColor="red" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
+              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
+                <div className="space-y-5 text-center">
+                  <div className="text-lg md:text-2xl font-extrabold text-gray-700">दीक्षा दिन</div>
+                  <div className="space-y-1">
+                    <div className="text-maroon font-bold text-2xl md:text-3xl">माघ वदी 7</div>
+                    <div className="text-maroon font-bold text-2xl md:text-3xl">February 8, 2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    {/* Card Content */}
-    <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
-      <div className="space-y-5">
-        {/* Diksha Day Section - Top Most */}
-        <div className="text-center space-y-2 p-2">
-          <div className="text-lg md:text-2xl font-extrabold text-gray-700">
-            दीक्षा दिन
-          </div>
-        </div>
+          {/* Diksha Location Card - Updated for Perfect Consistency */}
+          <div className="relative max-w-4xl mx-auto mb-12">
+            {/* Background glow effect - same as date card */}
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-2xl"></div>
 
-        {/* Date Section */}
-        <div className="text-center space-y-1 p-2">
-          <div className="text-maroon font-bold text-2xl md:text-3xl">
-            माघ वदी 7
-          </div>
-          <div className="text-maroon font-bold text-2xl md:text-3xl">
-            February 8, 2026
-          </div>
-        </div>
+            <div className="relative rounded-sm shadow-2xl border border-amber-200/50 overflow-hidden group hover:shadow-hover-light transition-all duration-300 text-left">
+              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white p-6 md:p-8 border-b border-amber-100">
+                <h3 className="text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3">
+                  दीक्षा स्थान
+                </h3>
+                <p className="text-maroon font-bold text-2xl md:text-3xl leading-tight">
+                  चिकूवाड़ी प्लेग्राउंड, 85, कांति पार्क रोड, गोराई 1, बोरीवली वेस्ट, मुंबई, महाराष्ट्र 400092
+                </p>
+              </div>
 
-        {/* Location Section */}
-        <div className="text-center space-y-2 p-2">
-          <div className="text-amber-700 font-bold text-lg md:text-2xl">
-            📍 स्थान
+              <div className="p-1">
+                <div className="rounded-sm overflow-hidden border border-gray-100">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.37911893077!2d72.83427737382075!3d19.22230224736603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13254bedfc9%3A0xb8de434d3e78fbf7!2sChikoowadi%20Playground!5e0!3m2!1sen!2sin!4v1767419915722!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Chikoowadi Playground, Borivali"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
-          <a 
-  href="https://www.google.com/maps/place/Chikoowadi+Playground/@19.2213339,72.8367833,17z/data=!4m6!3m5!1s0x3be7b13254bedfc9:0xb8de434d3e78fbf7!8m2!3d19.2222972!4d72.8368523!16s%2Fg%2F11cmvvdv5r?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-gray-800 font-semibold text-base md:text-lg hover:text-amber-700 hover:underline transition-colors duration-200 inline-block"
->
-  चिकूवाड़ी प्लेग्राउंड<br />
-  85, कांति पार्क रोड, गोराई 1<br />
-  बोरीवली वेस्ट, मुंबई<br />
-  महाराष्ट्र 400092, भारत
-</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
           {/* Auto-Sliding Carousel */}
           {/* <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
             <div className="relative inline-block w-full text-center my-6">
