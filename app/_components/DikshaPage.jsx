@@ -310,7 +310,7 @@ const Timeline = () => {
             />
             <div className="relative z-10 text-center space-y-1 md:space-y-2 px-6">
               <div className="text-base md:text-xl font-extrabold text-gray-700 uppercase tracking-wider">दीक्षा दिन</div>
-              <div className="h-px w-12 md:w-16 bg-maroon/30 mx-auto"></div>
+              {/* <div className="h-px w-12 md:w-16 bg-maroon/30 mx-auto"></div> */}
               <div className="space-y-0.5">
                 <div className="text-maroon font-bold text-xl md:text-2xl">माघ वदी 7</div>
                 <div className="text-maroon font-bold text-lg md:text-xl">February 8, 2026</div>
