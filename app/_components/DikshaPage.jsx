@@ -6,6 +6,7 @@ import DiksharthiDetailsPage from "./DiksharthiDetailsPage";
 import Image3DCarousel from "./Image3DCarousel";
 import RangChhataSection from "./RangChhataSection";
 import NewsInfiniteCarousel from "./NewsInfiniteCarousel";
+import DikshaNimantran from "./DikshaNimantran";
 
 const Timeline = () => {
   const [activeImageIndex, setActiveImageIndex] = useState({});
@@ -277,7 +278,7 @@ const Timeline = () => {
 
 
       {/* Announcement Text Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-lg md:text-xl text-gray-700 font-medium">
             ऐतिहासिक <span className='font-bold text-xl text-maroon md:text-2xl'> 17-45-36-26-44-18-74-35 </span> आदि
@@ -300,7 +301,7 @@ const Timeline = () => {
 
 
           {/* Diksha Date Card - Restored Hexagonal Style */}
-          <div className="relative w-full max-w-md mx-auto my-8 md:my-10">
+          <div className="relative w-full max-w-md mx-auto my-4 md:my-10">
             <div className="relative">
               <HexagonalSvg accentColor="red" />
               <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
@@ -316,37 +317,6 @@ const Timeline = () => {
             </div>
           </div>
 
-          {/* Diksha Location Card - Updated for Perfect Consistency */}
-          <div className="relative max-w-4xl mx-auto mb-12">
-            {/* Background glow effect - same as date card */}
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-2xl"></div>
-
-            <div className="relative rounded-sm shadow-2xl border border-amber-200/50 overflow-hidden group hover:shadow-hover-light transition-all duration-300 text-left">
-              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white p-6 md:p-8 border-b border-amber-100">
-                <h3 className="text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3">
-                  दीक्षा स्थान
-                </h3>
-                <p className="text-maroon font-bold text-2xl md:text-3xl leading-tight">
-                  चिकूवाड़ी प्लेग्राउंड, 85, कांति पार्क रोड, गोराई 1, बोरीवली वेस्ट, मुंबई, महाराष्ट्र 400092
-                </p>
-              </div>
-
-              <div className="p-1">
-                <div className="rounded-sm overflow-hidden border border-gray-100">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.37911893077!2d72.83427737382075!3d19.22230224736603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13254bedfc9%3A0xb8de434d3e78fbf7!2sChikoowadi%20Playground!5e0!3m2!1sen!2sin!4v1767419915722!5m2!1sen!2sin"
-                    width="100%"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Chikoowadi Playground, Borivali"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
           {/* Auto-Sliding Carousel */}
           {/* <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
             <div className="relative inline-block w-full text-center my-6">
@@ -408,9 +378,43 @@ const Timeline = () => {
 
           <DiksharthiDetailsPage />
 
-          {/* New Image Carousel Section */}
-          <div className="relative w-full max-w-4xl mx-auto my-12 md:my-16">
-            <div className="relative inline-block w-full text-center mb-8 px-4">
+          <DikshaNimantran />
+
+          {/* Diksha Location Card - Updated for Perfect Consistency */}
+          <div className="relative max-w-4xl mx-auto mb-6 px-4">
+            {/* Background glow effect - same as date card */}
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-2xl"></div>
+
+            <div className="relative rounded-sm shadow-2xl border border-amber-200/50 overflow-hidden group hover:shadow-hover-light transition-all duration-300 text-left">
+              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white p-6 md:p-8 border-b border-amber-100">
+                <h3 className="text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3">
+                  दीक्षा स्थान
+                </h3>
+                <p className="text-maroon font-bold text-2xl md:text-3xl leading-tight text-center">
+                  चिकूवाड़ी प्लेग्राउंड, 85, कांति पार्क रोड, गोराई 1, बोरीवली वेस्ट, मुंबई, महाराष्ट्र 400092
+                </p>
+              </div>
+
+              <div className="p-1">
+                <div className="rounded-sm overflow-hidden border border-gray-100">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.37911893077!2d72.83427737382075!3d19.22230224736603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13254bedfc9%3A0xb8de434d3e78fbf7!2sChikoowadi%20Playground!5e0!3m2!1sen!2sin!4v1767419915722!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Chikoowadi Playground, Borivali"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Newspaper Section */}
+          <div className="relative w-full max-w-4xl mx-auto my-6 md:my-16">
+            <div className="relative inline-block w-full text-center mb-4 px-4">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
               <h2 className="relative text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
                 महाराष्ट्र के मुंबई नगरी में जैन शासन के इतिहास में पहली बार जगमशहूर  जैनाचार्य श्री योगतिलकसूरी महाराजा की निश्रा में 59  जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
@@ -434,7 +438,7 @@ const Timeline = () => {
           </div>
 
           {/* Decorative Divider */}
-          <div className="flex items-center justify-center my-8 md:my-12">
+          <div className="flex items-center justify-center my-4 md:my-12">
             <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
             <div className="mx-4">
               <svg className="w-8 h-8 text-maroon/40" fill="currentColor" viewBox="0 0 20 20">
@@ -455,7 +459,7 @@ const Timeline = () => {
       </div>
 
       {/* Timeline Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-16">
         {/* Mobile Layout */}
         <div className="md:hidden">
           <div className="relative">
