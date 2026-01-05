@@ -300,19 +300,20 @@ const Timeline = () => {
 
 
 
-          {/* Diksha Date Card - Restored Hexagonal Style */}
-          <div className="relative w-full max-w-md mx-auto my-4 md:my-10">
-            <div className="relative">
-              <HexagonalSvg accentColor="red" />
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
-              <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
-                <div className="space-y-2 text-center">
-                  <div className="text-lg md:text-2xl font-extrabold text-gray-700">दीक्षा दिन</div>
-                  <div className="space-y-0">
-                    <div className="text-maroon font-bold text-lg md:text-2xl">माघ वदी 7</div>
-                    <div className="text-maroon font-bold text-lg md:text-2xl">February 8, 2026</div>
-                  </div>
-                </div>
+          {/* Diksha Date Card - Updated to Circular Design */}
+          <div className="relative w-full  md:max-w-sm mx-auto my-4 md:my-10 aspect-square flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-2xl rounded-full"></div>
+            <img
+              src="/diksha/circledesign.png"
+              alt="Circle Design"
+              className="absolute inset-0 w-full h-full object-contain"
+            />
+            <div className="relative z-10 text-center space-y-1 md:space-y-2 px-6">
+              <div className="text-base md:text-xl font-extrabold text-gray-700 uppercase tracking-wider">दीक्षा दिन</div>
+              <div className="h-px w-12 md:w-16 bg-maroon/30 mx-auto"></div>
+              <div className="space-y-0.5">
+                <div className="text-maroon font-bold text-xl md:text-2xl">माघ वदी 7</div>
+                <div className="text-maroon font-bold text-lg md:text-xl">February 8, 2026</div>
               </div>
             </div>
           </div>

@@ -68,7 +68,7 @@ const DikshaNimantran = () => {
                     600 से अधिक श्रमण-श्रमणी भगवंतों की पवित्र ऊर्जामय उपस्थिति में
                 </p>
                 <h2 className="text-4xl pt-2 md:text-5xl lg:text-6xl font-black bg-gradient-to-b from-maroon to-red-600 bg-clip-text text-transparent pb-4">
-                    संयम रंग उत्सव
+                    संयमरंग उत्सव
                 </h2>
                 <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="h-px w-12 bg-maroon/30"></div>
@@ -76,7 +76,7 @@ const DikshaNimantran = () => {
                     <div className="h-px w-12 bg-maroon/30"></div>
                 </div>
                 <p className="text-xl md:text-3xl text-maroon font-bold">
-                    शामियाने में पधारने के लिए <br className="md:hidden" /> सस्नेह सन्निमंत्रणम !
+                    शामियाने में पधारने के लिए <br className="md:hidden" /> सस्नेह सन्निमंत्रणम् !
                 </p>
             </div>
 
