@@ -306,11 +306,11 @@ const Timeline = () => {
               <HexagonalSvg accentColor="red" />
               <div className="absolute inset-0 bg-gradient-to-r from-amber-300/40 via-pink-400/40 to-amber-300/40 blur-xl"></div>
               <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white rounded-lg shadow-2xl border border-amber-200/50 p-4 md:p-6">
-                <div className="space-y-5 text-center">
+                <div className="space-y-2 text-center">
                   <div className="text-lg md:text-2xl font-extrabold text-gray-700">दीक्षा दिन</div>
-                  <div className="space-y-1">
-                    <div className="text-maroon font-bold text-2xl md:text-3xl">माघ वदी 7</div>
-                    <div className="text-maroon font-bold text-2xl md:text-3xl">February 8, 2026</div>
+                  <div className="space-y-0">
+                    <div className="text-maroon font-bold text-lg md:text-2xl">माघ वदी 7</div>
+                    <div className="text-maroon font-bold text-lg md:text-2xl">February 8, 2026</div>
                   </div>
                 </div>
               </div>
@@ -390,7 +390,7 @@ const Timeline = () => {
                 <h3 className="text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3">
                   दीक्षा स्थान
                 </h3>
-                <p className="text-maroon font-bold text-2xl md:text-3xl leading-tight text-center">
+                <p className="text-maroon font-bold text-lg md:text-2xl leading-tight text-center">
                   चिकूवाड़ी प्लेग्राउंड, 85, कांति पार्क रोड, गोराई 1, बोरीवली वेस्ट, मुंबई, महाराष्ट्र 400092
                 </p>
               </div>
