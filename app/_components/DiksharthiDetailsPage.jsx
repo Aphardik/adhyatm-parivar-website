@@ -305,7 +305,7 @@ export default function DiksharthiDetailsPage() {
     { name: "क्रियाकुमारी जिग्नेशभाई फोफानी", gender: "F", age: 17, residence: "तेरवाड़ा-थरा" },
     { name: "श्रेयसीकुमारी किंजलभाई रोलिया(शाह)", gender: "F", age: 16, residence: "भाभर-मुंबई" },
     { name: "जैनीकुमारी मेहुल संघवी", gender: "F", age: 15, residence: "शेणवाल-अहमदाबाद" },
-    { name: "प्रांजलकुमारी कुनालभाई शाह", gender: "F", age: 14, residence: "काली(राजस्थान)-कोयंबतूर" },
+    { name: "प्रांजलकुमारी कुनालभाई शाह", gender: "F", age: 14, residence: "कालंद्री(राजस्थान)-कोयंबतूर" },
     { name: "झीलकुमारी नितिन संघवी", gender: "F", age: 14, residence: "भाभर" },
     { name: "मोक्षाकुमारी मयंकभाई रोलिया", gender: "F", age: 13, residence: "भाभर-मुंबई" },
     { name: "आर्याकुमारी अमितभाई रोलिया", gender: "F", age: 11, residence: "भाभर-सूरत" },

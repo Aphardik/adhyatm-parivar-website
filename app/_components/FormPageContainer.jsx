@@ -1,7 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Form, Input, Row, Col, message, Spin, Select, Radio, InputNumber } from "antd";
 import axios from "axios";
+import {
+  WhatsAppOutlined,
+  PhoneOutlined,
+  CheckCircleFilled,
+} from "@ant-design/icons";
 import { useRouter, useSearchParams } from "next/navigation";
 import { states } from "../data/states";
 import TextArea from "antd/es/input/TextArea";
@@ -11,6 +16,9 @@ import FormSkeleton from "@/app/_components/FormSkeleton";
 import HexagonalSvg from "./HexagonalSvg";
 import HeaderSvg from "./HeaderSvg";
 import { detectLanguage } from "../utils/detectLanguage.utils";
+import useUserFetch from "../_hooks/useUserFetch";
+import UserFetchModal from "./UserFetchModal";
+import { maskData } from "../_utils/userFetchUtils";
 
 // Translation object for multi-language support
 const translations = {
@@ -457,6 +465,81 @@ export default function DynamicForm() {
   const [generatedID, setGeneratedID] = useState(null);
   const [candidateName, setCandidateName] = useState("");
   const [isOutOfStock, setIsOutOfStock] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [fetchedUser, setFetchedUser] = useState(null);
+  const [realUserValues, setRealUserValues] = useState({});
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const [isVerified, setIsVerified] = useState(false);
+
+  // Get the language from formData, default to 'gujarati' if not specified
+  const currentLanguage = formData?.language?.toLowerCase() || 'gujarati';
+  // const t = translations[currentLanguage] || translations.gujarati;
+  // const fontClass = currentLanguage === 'gujarati' ? 'font-anek' : currentLanguage === 'hindi' ? 'font-heading' : 'font-sans';
+
+  const onFetchSuccess = useCallback((data) => {
+    setFetchedUser(data);
+    setIsModalVisible(true);
+  }, []);
+
+  const { loading: fetchLoading } = useUserFetch(phoneNumber, onFetchSuccess);
+
+  const handleModalConfirm = () => {
+    if (fetchedUser) {
+      form.setFieldsValue({
+        "नाम": maskData(fetchedUser.firstName),
+        "उपनाम": maskData(fetchedUser.lastName),
+        "एड्रेस": maskData(fetchedUser.address?.street, 'address'),
+        "शहर": maskData(fetchedUser.address?.city),
+        "राज्य": fetchedUser.address?.state,
+        "पिनकोड": maskData(fetchedUser.address?.pincode),
+        // Gujarati mappings
+        "નામ": maskData(fetchedUser.firstName),
+        "અટક": maskData(fetchedUser.lastName),
+        "એડ્રેસ": maskData(fetchedUser.address?.street, 'address'),
+        "પિનકોડ": maskData(fetchedUser.address?.pincode),
+        // English mappings
+        "Name": maskData(fetchedUser.firstName),
+        "Surname": maskData(fetchedUser.lastName),
+        "Address": maskData(fetchedUser.address?.street, 'address'),
+        "Pincode": maskData(fetchedUser.address?.pincode),
+      });
+
+      setRealUserValues({
+        "नाम": fetchedUser.firstName,
+        "उपनाम": fetchedUser.lastName,
+        "एड्रेस": fetchedUser.address?.street,
+        "शहर": fetchedUser.address?.city,
+        "राज्य": fetchedUser.address?.state,
+        "पिनकोड": fetchedUser.address?.pincode,
+
+        "નામ": fetchedUser.firstName,
+        "અટક": fetchedUser.lastName,
+        "એડ્રેસ": fetchedUser.address?.street,
+        "પિનકોડ": fetchedUser.address?.pincode,
+
+        "Name": fetchedUser.firstName,
+        "Surname": fetchedUser.lastName,
+        "Address": fetchedUser.address?.street,
+        "Pincode": fetchedUser.address?.pincode,
+
+        city: fetchedUser.address?.city,
+        state: fetchedUser.address?.state,
+        pincode: fetchedUser.address?.pincode
+      });
+
+      setIsVerified(true);
+      setIsModalVisible(false);
+    }
+  };
+
+  const handleModalCancel = () => {
+    setIsModalVisible(false);
+    setIsVerified(false);
+    setRealUserValues({});
+    // Optionally clear fields or leave them as is (user might want to edit)
+    // Requirement: "edit button for override the details" -> assumes we just close modal and let them type.
+  };
 
   // Get language from formData
   const language = formData?.language?.toLowerCase() || 'gujarati';
@@ -548,10 +631,6 @@ export default function DynamicForm() {
   };
 
   const renderField = (fieldName, fieldConfig) => {
-    // Get the language from formData, default to 'gujarati' if not specified
-    const language = formData?.language?.toLowerCase() || 'gujarati';
-    const t = translations[language] || translations.gujarati;
-
     // Map for form field keys based on language
     const fieldKeys = {
       mobile: "मोबाइल नंबर",
@@ -576,11 +655,20 @@ export default function DynamicForm() {
             message: <span style={{ fontSize: "12px" }}>{t.validation.mobileRequired}</span>,
           },
           {
-            pattern: /^[0-9]{10}$/,
+            pattern: /^(0|)[0-9]{10}$/,
             message: <span style={{ fontSize: "12px" }}>{t.validation.mobileInvalid}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder={t.mobile.placeholder} />,
+        component: <Input
+          className="rounded-md"
+          placeholder={t.mobile.placeholder}
+          maxLength={11}
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+            if (isVerified) setIsVerified(false);
+          }}
+          suffix={isVerified && (phoneNumber === form.getFieldValue(fieldKeys.mobile)) && <CheckCircleFilled className="text-green-500" />}
+        />,
       },
       name: {
         key: fieldKeys.name,
@@ -592,7 +680,11 @@ export default function DynamicForm() {
             message: <span style={{ fontSize: "12px" }}>{t.validation.nameRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder={t.name.placeholder} />,
+        component: <Input
+          className="rounded-md"
+          placeholder={t.name.placeholder}
+          disabled={form.getFieldValue(fieldKeys.name)?.includes('xxxx')}
+        />,
       },
       sname: {
         key: fieldKeys.sname,
@@ -604,7 +696,11 @@ export default function DynamicForm() {
             message: <span style={{ fontSize: "12px" }}>{t.validation.surnameRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder={t.sname.placeholder} />,
+        component: <Input
+          className="rounded-md"
+          placeholder={t.sname.placeholder}
+          disabled={form.getFieldValue(fieldKeys.sname)?.includes('xxxx')}
+        />,
       },
       pincode: {
         key: fieldKeys.pincode,
@@ -616,11 +712,15 @@ export default function DynamicForm() {
             message: <span style={{ fontSize: "12px" }}>{t.validation.pincodeRequired}</span>,
           },
           {
-            pattern: /^[0-9]{6}$/,
+            pattern: /^([0-9]{6}|.*xxxx.*)$/,
             message: <span style={{ fontSize: "12px" }}>{t.validation.pincodeInvalid}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder={t.pincode.placeholder} />,
+        component: <Input
+          className="rounded-md"
+          placeholder={t.pincode.placeholder}
+          disabled={form.getFieldValue(fieldKeys.pincode)?.includes('xxxx')}
+        />,
       },
       state: {
         key: fieldKeys.state,
@@ -633,7 +733,11 @@ export default function DynamicForm() {
           },
         ],
         component: (
-          <Select placeholder={t.state.placeholder} className="rounded-md">
+          <Select
+            placeholder={t.state.placeholder}
+            className="rounded-md"
+            disabled={form.getFieldValue(fieldKeys.state)?.includes('xxxx')}
+          >
             {states.map((state) => (
               <Select.Option key={state.value} value={state.value}>
                 <span className={fontClass}>
@@ -654,7 +758,11 @@ export default function DynamicForm() {
             message: <span style={{ fontSize: "12px" }}>{t.validation.cityRequired}</span>,
           },
         ],
-        component: <Input className="rounded-md" placeholder={t.city.placeholder} />,
+        component: <Input
+          className="rounded-md"
+          placeholder={t.city.placeholder}
+          disabled={form.getFieldValue(fieldKeys.city)?.includes('xxxx')}
+        />,
       },
       address: {
         key: fieldKeys.address,
@@ -671,6 +779,7 @@ export default function DynamicForm() {
             className="rounded-md"
             placeholder={t.address.placeholder}
             rows={2}
+            disabled={form.getFieldValue(fieldKeys.address)?.includes('xxxx')}
           />
         ),
       },
@@ -743,16 +852,55 @@ export default function DynamicForm() {
       delete values.dhatunaamrup_shreni;
     }
 
-    const name = values["नाम"] || "";
-    const surname = values["उपनाम"] || "";
-    const fullName = `${name} ${surname}`.trim();
+    // Merge real values if they exist
+    // We check if the current form value matches the MASKED value. If so, we replace it with the REAL value.
+    // If user edited it (so it doesn't match mask), we keep user's value.
+    const finalValues = { ...values };
+
+    // Helper to check and replace
+    const replaceIfMasked = (key, realValue) => {
+      if (values[key] && realValue && values[key].includes('xxxx')) { // Simple check for mask
+        finalValues[key] = realValue;
+      }
+    };
+
+    // Apply replacements for known fields
+    replaceIfMasked("नाम", realUserValues["नाम"]);
+    replaceIfMasked("उपनाम", realUserValues["उपनाम"]);
+    replaceIfMasked("एड्रेस", realUserValues["एड्रेस"]);
+    replaceIfMasked("शहर", realUserValues["शहर"]);
+    replaceIfMasked("राज्य", realUserValues["राज्य"]);
+    replaceIfMasked("पिनकोड", realUserValues["पिनकोड"]);
+
+    replaceIfMasked("નામ", realUserValues["નામ"]);
+    replaceIfMasked("અટક", realUserValues["અટક"]);
+    replaceIfMasked("એડ્રેસ", realUserValues["એડ્રેસ"]);
+
+    replaceIfMasked("Name", realUserValues["Name"]);
+    replaceIfMasked("Surname", realUserValues["Surname"]);
+    replaceIfMasked("Address", realUserValues["Address"]);
+    replaceIfMasked("Pincode", realUserValues["Pincode"]);
+
+    // Secondary Language check - some forms might use the Gujarati labels as keys if fieldKeys is mixed
+    // Actually our fieldKeys is fixed to Hindi. But let's be safe.
+    replaceIfMasked("નામ", realUserValues["નામ"]);
+    replaceIfMasked("અટક", realUserValues["અટક"]);
+    replaceIfMasked("એડ્રેસ", realUserValues["એડ્રેસ"]);
+    replaceIfMasked("પિનકોડ", realUserValues["પિનકોડ"]);
+
+    // Set candidate name for success popup (using merged unmasked values)
+    const nameForDisplay = finalValues["नाम"] || finalValues["નામ"] || finalValues["Name"] || "";
+    const surnameForDisplay = finalValues["उपनाम"] || finalValues["અટક"] || finalValues["Surname"] || "";
+    const fullName = `${nameForDisplay} ${surnameForDisplay}`.trim();
     setCandidateName(fullName);
 
-    console.log("Form values: ", values);
+    console.log("Form values (initial): ", values);
+    console.log("Form values (merged): ", finalValues);
+    console.log("Real values available: ", realUserValues);
 
     try {
       setLoading(true);
-      const response = await axios.post(formData.link, values);
+      const response = await axios.post(formData.link, finalValues);
       console.log(response, "response");
       const generatedID = response.data.registrationId || null;
       setGeneratedID(generatedID);
@@ -857,7 +1005,7 @@ export default function DynamicForm() {
     );
   }
 
-  const fieldPriority = ['name', 'sname', 'mobile', 'pincode', 'state', 'city', 'address'];
+  const fieldPriority = ['mobile', 'name', 'sname', 'address', 'city', 'state', 'pincode'];
 
   const fieldsToRender = formData.fields
     .filter(field => field !== 'copies')
@@ -871,8 +1019,24 @@ export default function DynamicForm() {
       return 0;
     });
   const fieldRows = [];
-  for (let i = 0; i < fieldsToRender.length; i += 2) {
-    fieldRows.push(fieldsToRender.slice(i, i + 2));
+  let currentRow = [];
+  fieldsToRender.forEach((field) => {
+    if (field === 'address') {
+      if (currentRow.length > 0) {
+        fieldRows.push(currentRow);
+        currentRow = [];
+      }
+      fieldRows.push([field]);
+    } else {
+      currentRow.push(field);
+      if (currentRow.length === 2) {
+        fieldRows.push(currentRow);
+        currentRow = [];
+      }
+    }
+  });
+  if (currentRow.length > 0) {
+    fieldRows.push(currentRow);
   }
 
   return (
@@ -1115,6 +1279,14 @@ export default function DynamicForm() {
         successText={formData?.tqmsg || "Form submitted successfully!"}
         errorText="Failed to submit form. Please try again."
         showAutoClose={false}
+      />
+      {/* Verification Modal */}
+      <UserFetchModal
+        visible={isModalVisible}
+        data={fetchedUser}
+        onConfirm={handleModalConfirm}
+        onCancel={handleModalCancel}
+        language={currentLanguage}
       />
     </div>
   );

@@ -20,18 +20,24 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-2H.webp",
             "/diksha/rangchhata-3H.webp",
             "/diksha/rangchhata-4H.webp",
+            "/diksha/rangchhata-5H.webp",
+            "/diksha/rangchhata-6H.webp",
         ],
         Gujarati: [
             "/diksha/rangchhata-1G.webp",
             "/diksha/rangchhata-2G.webp",
             "/diksha/rangchhata-3G.webp",
             "/diksha/rangchhata-4G.webp",
+            "/diksha/rangchhata-5G.webp",
+            "/diksha/rangchhata-6G.webp",
         ],
         English: [
             "/diksha/rangchhata-1E.webp",
             "/diksha/rangchhata-2E.webp",
             "/diksha/rangchhata-3E.webp",
             "/diksha/rangchhata-4E.webp",
+            "/diksha/rangchhata-5E.webp",
+            "/diksha/rangchhata-6E.webp",
         ]
     };
 
