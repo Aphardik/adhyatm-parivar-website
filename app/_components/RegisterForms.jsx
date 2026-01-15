@@ -475,8 +475,7 @@ const RegisterForm = () => {
           <div className="flex items-center justify-center gap-4">
 
             <span className="font-heading text-base sm:text-3xl font-bold drop-shadow-md">
-              ज्ञान भंडार में मौजूद पुस्तकों की सूची देखने के लिए यहां क्लिक
-              करें
+              अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची देखने के लिए यहाँ क्लिक करे
             </span>
           </div>
 

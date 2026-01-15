@@ -440,7 +440,7 @@ const AgtBooks = () => {
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-amber-700">₹{(item.price || 0) * item.quantity}</span>
                         <div className="flex items-center gap-2">
-                          <div className="flex items-center bg-gray-100 rounded border">
+                          {/* <div className="flex items-center bg-gray-100 rounded border">
                             <button onClick={() => updateQuantity(item.id, -1)} className="p-2 hover:bg-gray-200">
                               <FaMinus size={10} />
                             </button>
@@ -448,7 +448,7 @@ const AgtBooks = () => {
                             <button onClick={() => updateQuantity(item.id, 1)} className="p-2 hover:bg-gray-200">
                               <FaPlus size={10} />
                             </button>
-                          </div>
+                          </div> */}
                           <button onClick={() => removeFromCart(item.id)} className="p-2 text-red-500 hover:bg-red-50 rounded">
                             <FaTrash size={14} />
                           </button>
