@@ -1,7 +1,10 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
+import { message, notification } from 'antd';
+
 import { FaSearch, FaShoppingCart, FaPlus, FaMinus, FaTrash, FaCheckCircle, FaShoppingBag, FaTimes, FaInfoCircle, FaFilter, FaBookOpen } from 'react-icons/fa';
 import { HiOutlineArrowRight } from 'react-icons/hi';
+import { FaSprayCanSparkles } from 'react-icons/fa6';
 
 const BOOKS_API = "https://agtbook-backend-1.onrender.com/api/books";
 const ORDERS_API = "https://agtbook-backend-1.onrender.com/api/orders";
@@ -18,14 +21,14 @@ const AgtBooks = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(null);
-  
+
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalBooks, setTotalBooks] = useState(0);
   const [showPageDropdown, setShowPageDropdown] = useState(false);
   const [pageSearchTerm, setPageSearchTerm] = useState('');
-  
+
   // Filter states
   const [selectedShreni, setSelectedShreni] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState([]);
@@ -65,7 +68,7 @@ const AgtBooks = () => {
   const getPaginationNumbers = () => {
     const pages = [];
     const maxVisible = 5;
-    
+
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
@@ -119,16 +122,35 @@ const AgtBooks = () => {
   };
 
   const filteredBooks = useMemo(() => {
-    return books.filter(b => {
+    const result = books.filter(b => {
       const matchesSearch = (b.title || b.name || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
         (b.author || "").toLowerCase().includes(searchTerm.toLowerCase());
       return matchesSearch;
+    });
+    // Sort featured books first
+    return result.sort((a, b) => {
+      const aFeatured = a.isFeatured || a.featured;
+      const bFeatured = b.isFeatured || b.featured;
+      return (bFeatured ? 1 : 0) - (aFeatured ? 1 : 0);
     });
   }, [books, searchTerm]);
 
   const addToCart = (book) => {
     setCart(prev => {
       const existing = prev.find(item => item.id === book.id);
+      if (!existing) {
+        notification.success({
+          message: book.isAvailable ? "Added to Cart" : "Added to Wishlist",
+          placement: "topRight",
+          duration: 2,
+        });
+      } else {
+        notification.info({
+          message: book.isAvailable ? "Already in Cart" : "Already in Wishlist",
+          placement: "topRight",
+          duration: 2,
+        });
+      }
       return existing
         ? prev.map(item => (item.id === book.id) ? { ...item, quantity: item.quantity + 1 } : item)
         : [...prev, { ...book, quantity: 1, id: book.id }];
@@ -177,57 +199,57 @@ const AgtBooks = () => {
   );
 
   return (
-    <div style={{width:"100vw"}} className="min-h-screen font-heading bg-gray-50">
+    <div style={{ width: "100vw" }} className="min-h-screen font-heading bg-gray-50">
       {/* Header */}
       <div
-  className="relative bg-cover bg-center py-4 sm:py-8 px-4"
-  style={{ backgroundImage: "url('booklistheader.jpg')" }}
->
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70"></div>
+        className="relative bg-cover bg-center py-4 sm:py-8 px-4"
+        style={{ backgroundImage: "url('booklistheader.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70"></div>
 
-  {/* Cart Button – TOP RIGHT */}
-  {!showCart && (
-    <button
-      onClick={() => setShowCart(!showCart)}
-      className="absolute top-4 right-4 sm:top-6 sm:right-8 z-20
+        {/* Cart Button – TOP RIGHT */}
+        {!showCart && (
+          <button
+            onClick={() => setShowCart(!showCart)}
+            className="absolute top-4 right-4 sm:top-6 sm:right-8 z-20
                   text-white px-4 py-3 rounded-sm shadow-2xl
                  hover:scale-105 transition-transform
                  flex items-center gap-3 font-semibold"
-    >
-      <FaShoppingCart size={22} />
-      {/* <span className="hidden sm:inline">Cart</span> */}
+          >
+            <FaShoppingCart size={22} />
+            {/* <span className="hidden sm:inline">Cart</span> */}
 
-      {cart.length > 0 && (
-        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs
+            {cart.length > 0 && (
+              <span className="absolute -top-2 font-s -right-2 bg-red-500 text-white text-xs
                          w-6 h-6 rounded-full flex items-center justify-center font-bold">
-          {cart.reduce((a, b) => a + b.quantity, 0)}
-        </span>
-      )}
-    </button>
-  )}
+                {cart.reduce((a, b) => a + b.quantity, 0)}
+              </span>
+            )}
+          </button>
+        )}
 
-  <div className="relative z-10 w-full px-4">
-    <h1 className="text-4xl sm:text-6xl font-bold text-white my-2 text-center drop-shadow-2xl">
-      {showCart ? 'Your Shopping Cart' : 'AGT Books'}
-    </h1>
+        <div className="relative z-10 w-full px-4">
+          <h1 className="text-4xl sm:text-6xl font-bold text-white my-2 text-center drop-shadow-2xl">
+            {showCart ? 'Your Shopping Cart' : 'AGT Books'}
+          </h1>
 
-    {!showCart && (
-      <div className="max-w-4xl mx-auto">
-        <div className="relative">
-          <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search books..."
-            className="w-full pl-14 pr-6 py-4 rounded-sm bg-white/95 backdrop-blur outline-none
+          {!showCart && (
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-800" />
+                <input
+                  type="text"
+                  placeholder="Search books..."
+                  className="w-full pl-14 pr-6 py-4 rounded-sm bg-white/95 backdrop-blur outline-none
                        focus:ring-4 focus:ring-amber-400 shadow-2xl"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
-    )}
-  </div>
-</div>
 
 
       {!showCart ? (
@@ -253,46 +275,70 @@ const AgtBooks = () => {
           ) : filteredBooks.length > 0 ? (
             <>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
-                {filteredBooks.map(book => (
-                  <div key={book.srno || book.id} onClick={() => setSelectedBook(book)}
-                    className="group bg-white rounded-sm shadow-sm hover:shadow-lg transition-all cursor-pointer overflow-hidden border border-gray-200">
-                    <div className="relative aspect-[3/4] bg-gray-100">
-                      <img 
-                        src={getBookThumbnail(book.srno) || book.image || "/book-placeholder.webp"} 
-                        alt={book.name || book.title}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                        onError={(e) => { e.target.src = book.image || "/book-placeholder.webp"; }}
-                      />
-                      {(book.price || 0) > 0 ? (
+                {filteredBooks.map(book => {
+                  const isFeatured = book.isFeatured || book.featured;
+                  const isInCart = cart.some(item => item.id === book.id);
+
+                  return (
+                    <div key={book.srno || book.id} onClick={() => setSelectedBook(book)}
+                      className="group bg-white rounded-sm shadow-sm hover:shadow-lg transition-all cursor-pointer overflow-hidden border border-gray-200 relative">
+                      {/* Featured Ribbon */}
+                      {isFeatured && (
+                        <div className="absolute top-0 right-0 z-10 w-24 h-24 overflow-hidden pointer-events-none">
+                          <div className="absolute font-sans top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-10 py-1 transform rotate-45 translate-x-8 translate-y-2 shadow-md">
+                            ★★★★
+                          </div>
+                        </div>
+                      )}
+                      <div className="relative aspect-[3/4] bg-gray-100">
+                        <img
+                          src={getBookThumbnail(book.srno) || book.image || "/book-placeholder.webp"}
+                          alt={book.name || book.title}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          onError={(e) => { e.target.src = book.image || "/book-placeholder.webp"; }}
+                        />
+                        {/* {(book.price || 0) > 0 ? (
                         <div className="absolute top-0 right-0 bg-gray-800 text-white px-2 py-1 text-xs font-bold">₹{book.price}</div>
                       ) : (
                         <div className="absolute top-0 right-0 bg-green-600 text-white px-2 py-1 text-xs font-bold">अमूल्य</div>
-                      )}
-                      <div className="absolute top-0 left-0 bg-red-800 text-white px-2 py-1 text-xs font-bold">{book.srno || book.id}</div>
-                    </div>
-                    <div className="p-3">
-                      <div className="text-xs text-gray-500 uppercase mb-1">{book.shreni || ""}</div>
-                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-700">
-                        {book.name || book.title}
-                      </h3>
-                      <div className="space-y-1 text-xs text-gray-600 mb-3">
-                        <div className="flex justify-between">
-                          <span>भाषा:</span>
-                          <span className="font-medium">{book.Language.name}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>आवृत्ति:</span>
-                          <span className="font-medium">{book.edition}</span>
-                        </div>
+                      )} */}
+                        {/* <div className="absolute top-0 left-0 bg-red-800 text-white px-2 py-1 text-xs font-bold">{book.srno || book.id}</div> */}
                       </div>
-                      <button onClick={(e) => { e.stopPropagation(); addToCart(book); }}
-                        className="w-full bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 rounded text-sm font-semibold active:scale-95 transition-transform">
-                        <FaPlus className="inline mr-1" size={12} /> Add to Cart
-                      </button>
+                      <div className="p-3">
+                        <div className='h-24'>
+                          <div className="text-xs text-gray-500 uppercase mb-1">{book.shreni || ""}</div>
+                          <h3 className="text-sm font-semibold mb-2 line-clamp-2">
+                            <a href="#" onClick={(e) => e.preventDefault()} className="text-blue-600 hover:underline hover:text-blue-800">
+                              {book.name || book.title}
+                            </a>
+                          </h3>
+                          <div className="space-y-1 text-xs text-gray-600 mb-3">
+                            <div className="flex justify-between">
+                              <span>भाषा:</span>
+                              <span className="font-medium">{book.Language.name}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span>आवृत्ति:</span>
+                              <span className="font-medium">{book.edition}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <button onClick={(e) => { e.stopPropagation(); addToCart(book); }}
+                          className={`w-full text-white px-3 py-2 rounded text-sm font-semibold active:scale-95 transition-transform 
+                          ${isFeatured && !book.isAvailable ? 'bg-amber-700 hover:bg-amber-800' : 'bg-amber-600 hover:bg-amber-700'}
+                          ${isInCart ? 'bg-green-600 hover:bg-green-700' : ''}
+                          font-sans`}>
+                          {isInCart ? (
+                            <> <FaCheckCircle className="inline mr-1" size={12} /> {book.isAvailable ? "Added to Cart" : "Joined Wishlist"} </>
+                          ) : (
+                            <> <FaPlus className="inline mr-1" size={12} /> {book.isAvailable ? "Add to Cart" : "Join to Wishlist"} </>
+                          )}
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
 
               {/* Pagination */}
@@ -310,9 +356,8 @@ const AgtBooks = () => {
                         <span key={`ellipsis-${index}`} className="px-3 py-2 text-gray-500">...</span>
                       ) : (
                         <button key={page} onClick={() => handlePageChange(page)}
-                          className={`min-w-[40px] px-3 py-2 text-sm rounded font-medium transition-colors ${
-                            currentPage === page ? 'bg-red-800 text-white' : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
-                          }`}>
+                          className={`min-w-[40px] px-3 py-2 text-sm rounded font-medium transition-colors ${currentPage === page ? 'bg-red-800 text-white' : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                            }`}>
                           {page}
                         </button>
                       )
@@ -329,7 +374,7 @@ const AgtBooks = () => {
                     <button onClick={() => setShowPageDropdown(!showPageDropdown)}
                       className="flex items-center gap-2 px-4 py-2 text-sm border border-gray-300 rounded bg-white hover:bg-gray-50">
                       <span className="text-gray-700">Go to page {currentPage}</span>
-                      <svg className={`w-4 h-4 text-gray-500 transition-transform ${showPageDropdown ? 'rotate-180' : ''}`} 
+                      <svg className={`w-4 h-4 text-gray-500 transition-transform ${showPageDropdown ? 'rotate-180' : ''}`}
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -348,9 +393,8 @@ const AgtBooks = () => {
                           <div className="max-h-64 overflow-y-auto">
                             {getFilteredPageNumbers().map(page => (
                               <button key={page} onClick={() => handlePageChange(page)}
-                                className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                                  currentPage === page ? 'bg-red-50 text-red-800 font-semibold' : 'text-gray-700'
-                                }`}>
+                                className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${currentPage === page ? 'bg-red-50 text-red-800 font-semibold' : 'text-gray-700'
+                                  }`}>
                                 Page {page} {currentPage === page && <span className="float-right">✓</span>}
                               </button>
                             ))}
@@ -388,7 +432,7 @@ const AgtBooks = () => {
                 {/* <h2 className="text-2xl font-bold mb-4">Cart Items ({cart.reduce((a, b) => a + b.quantity, 0)})</h2> */}
                 {cart.map((item) => (
                   <div key={item.id} className="bg-white rounded-lg p-4 shadow border border-gray-200 flex gap-4">
-                    <img src={"/book-placeholder.webp" || getBookThumbnail(item.srno) || item.image } 
+                    <img src={"/book-placeholder.webp" || getBookThumbnail(item.srno) || item.image}
                       className="w-20 h-28 object-cover rounded flex-shrink-0" alt={item.title || item.name} />
                     <div className="flex-1">
                       <h4 className="font-semibold text-gray-900 mb-1">{item.title || item.name}</h4>
@@ -413,7 +457,7 @@ const AgtBooks = () => {
                     </div>
                   </div>
                 ))}
-                
+
                 {/* Order Summary in Cart Items Section */}
                 <div className="bg-white rounded-lg p-6 shadow border border-gray-200 mt-6">
                   <h3 className="text-xl font-bold mb-4">Order Summary</h3>
@@ -441,7 +485,7 @@ const AgtBooks = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-semibold text-gray-600 uppercase mb-1 block">First Name *</label>
-                      <input value={orderDetails.firstname} 
+                      <input value={orderDetails.firstname}
                         onChange={(e) => setOrderDetails({ ...orderDetails, firstname: e.target.value })}
                         className="w-full bg-gray-50 border-2 border-gray-200 focus:border-amber-500 p-3 rounded outline-none" />
                     </div>
@@ -528,20 +572,25 @@ const AgtBooks = () => {
             <div className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg bg-gray-100">
-                  <img src={getBookThumbnail(selectedBook.srno) || selectedBook.image || "/book-placeholder.webp"} 
+                  <img src={"/book-placeholder.webp"}
                     alt={selectedBook.name || selectedBook.title}
-                    className="w-full h-full object-cover" />
+                    className="w-full h-full object-contain" />
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <span className="inline-block bg-amber-100 text-amber-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">
+                    {/* <span className="inline-block bg-amber-100 text-amber-700 text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">
                       {selectedBook.shreni || ""}
-                    </span>
-                    <h3 className="text-3xl font-bold mb-2">{selectedBook.name || selectedBook.title}</h3>
+                    </span> */}
+                    <h3 className="text-2xl font-bold mb-2">{selectedBook.name || selectedBook.title}</h3>
                     <p className="text-gray-600">{selectedBook.author || "Unknown Author"}</p>
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-black text-amber-700">₹{selectedBook.price || 0}</span>
+                    {selectedBook.description && (
+                      <div>
+                        <h4 className="font-bold mb-2">Description</h4>
+                        <p className="text-gray-600">{selectedBook.description}</p>
+                      </div>
+                    )}
                     {(selectedBook.stockQty || 0) > 0 && <span className="text-green-600 font-semibold text-sm">In Stock</span>}
                   </div>
                   <div className="grid grid-cols-2 gap-4 py-4 border-y">
@@ -549,33 +598,32 @@ const AgtBooks = () => {
                       <p className="text-sm text-gray-500">Language</p>
                       <p className="font-semibold">{selectedBook.Language.name}</p>
                     </div>
-                    <div>
+                    {selectedBook.edition && <div>
                       <p className="text-sm text-gray-500">Edition</p>
                       <p className="font-semibold">{selectedBook.edition}</p>
-                    </div>
+                    </div>}
                     <div>
                       <p className="text-sm text-gray-500">Pages</p>
                       <p className="font-semibold">{selectedBook.pages || "N/A"}</p>
                     </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Stock</p>
-                      <p className="font-semibold">{selectedBook.stockQty || selectedBook.totalCopies || 0}</p>
-                    </div>
+                    {selectedBook.vishay && <div>
+                      <p className="text-sm text-gray-500">Vishay</p>
+                      <p className="font-semibold">{selectedBook.vishay}</p>
+                    </div>}
+                    {selectedBook.prakashak && <div>
+                      <p className="text-sm text-gray-500">Prakashak</p>
+                      <p className="font-semibold">{selectedBook.prakashak}</p>
+                    </div>}
                   </div>
-                  {selectedBook.description && (
-                    <div>
-                      <h4 className="font-bold mb-2">Description</h4>
-                      <p className="text-gray-600">{selectedBook.description}</p>
-                    </div>
-                  )}
-                  <div className="flex gap-4 pt-4">
+
+                  <div className="flex font-sans gap-4 pt-4">
                     <button onClick={() => { addToCart(selectedBook); setSelectedBook(null); }}
                       className="flex-1 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold py-4 rounded-lg shadow-lg flex items-center justify-center gap-2 active:scale-95">
-                      <FaPlus /> Add to Cart
+                      <FaPlus /> {selectedBook.isAvailable ? "Add to Cart" : "Join to Wishlist"}
                     </button>
                     <button onClick={() => { addToCart(selectedBook); setSelectedBook(null); setShowCart(true); }}
-                      className="flex-1 border-2 border-amber-600 text-amber-700 hover:bg-amber-50 font-bold py-4 rounded-lg active:scale-95">
-                      Buy Now
+                      className="flex-1 border-2 border-amber-600  text-amber-700 hover:bg-amber-50 font-bold py-4 rounded-lg active:scale-95">
+                      {selectedBook.isAvailable ? "Order Now" : "Show Interest"}
                     </button>
                   </div>
                 </div>
@@ -598,7 +646,7 @@ const AgtBooks = () => {
               <span className="text-xs font-bold text-gray-500 uppercase block mb-2">Order ID</span>
               <span className="text-2xl font-black text-amber-700">{orderSuccess}</span>
             </div>
-            <button onClick={() => setOrderSuccess(null)} 
+            <button onClick={() => setOrderSuccess(null)}
               className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white font-bold py-4 rounded-lg shadow-lg">
               Back to Store
             </button>

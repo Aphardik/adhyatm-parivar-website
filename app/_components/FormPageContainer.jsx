@@ -1279,6 +1279,7 @@ export default function DynamicForm() {
         successText={formData?.tqmsg || "Form submitted successfully!"}
         errorText="Failed to submit form. Please try again."
         showAutoClose={false}
+        language={currentLanguage}
       />
       {/* Verification Modal */}
       <UserFetchModal

@@ -120,11 +120,11 @@ import { Modal, Spin, message } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined, CopyOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 
-const SubmissionPopup = ({ 
-  visible, 
-  status, 
-  onClose, 
-  candidateName='user',
+const SubmissionPopup = ({
+  visible,
+  status,
+  onClose,
+  candidateName = 'user',
   onSuccess,
   title = "Tq",
   desc = "Form Submitted Successfully",
@@ -132,7 +132,8 @@ const SubmissionPopup = ({
   loadingText = "Submitting...",
   errorText = "Failed to submit form. Please try again.",
   showAutoClose = false,
-  autoCloseDelay = 3000 
+  autoCloseDelay = 3000,
+  language = 'english'
 }) => {
   const [copied, setCopied] = useState(false);
   const pathname = usePathname();
@@ -143,7 +144,7 @@ const SubmissionPopup = ({
       const timer = setTimeout(() => {
         onClose();
       }, autoCloseDelay);
-      
+
       return () => clearTimeout(timer);
     }
   }, [status, visible, onClose, autoCloseDelay, showAutoClose]);
@@ -168,14 +169,14 @@ const SubmissionPopup = ({
             <p className="mt-6 text-lg font-medium text-gray-600">{loadingText}</p>
           </div>
         );
-      
+
       case "success":
         return (
           <div className="text-center font-anek">
             {/* Success Icon with Animation */}
             <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100">
-              <CheckCircleOutlined 
-                style={{ fontSize: '48px', color: '#52c41a' }} 
+              <CheckCircleOutlined
+                style={{ fontSize: '48px', color: '#52c41a' }}
               />
             </div>
 
@@ -186,7 +187,7 @@ const SubmissionPopup = ({
             {/* Registration ID Card */}
             <div className="mb-6 mx-auto max-w-sm">
               {/* <p className="text-sm text-gray-500 mb-2 font-medium"></p> */}
-              <div 
+              <div
                 onClick={handleCopyID}
                 className="relative bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-xl p-4 cursor-pointer hover:shadow-lg transition-all duration-300 group"
               >
@@ -214,17 +215,17 @@ const SubmissionPopup = ({
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-800 font-semibold text-base leading-relaxed" lang="gu">
-                    આરાધના દિન દર્શિની (કેલેન્ડર પંચાંગ વિ.સ. ૨૦૮૨) <br /> 
+                    આરાધના દિન દર્શિની (કેલેન્ડર પંચાંગ વિ.સ. ૨૦૮૨) <br />
                     <span className="text-amber-700">10-10-2025</span> પછી આવશે, ત્યાં સુધી રાહ જોવા માટે વિનંતી.
                   </p>
                 </div>
-                
+
                 <div className="pl-5 border-l-2 border-amber-300 ml-1 mt-3 pt-3">
                   <p className="text-gray-700 text-sm leading-relaxed" lang="gu">
-                    10-10-2025 પછી જો આપને કેલેન્ડર/પંચાંગ ન મળે તો નીચેના નંબર પર જણાવવા વિનંતી. <br /> 
+                    10-10-2025 પછી જો આપને કેલેન્ડર/પંચાંગ ન મળે તો નીચેના નંબર પર જણાવવા વિનંતી. <br />
                     <span className="font-semibold text-red-600">ત્યાં સુધી ફોન ન કરવા તથા બીજીવાર ફોર્મ ન ભરવા વિનંતી.</span>
                   </p>
-                  
+
                   <div className="mt-3 bg-white rounded-lg p-3 border border-amber-200">
                     <p className="text-gray-800 text-sm font-semibold" lang="gu">
                       અધ્યાત્મ પરિવાર પુસ્તક વિભાગ
@@ -242,18 +243,31 @@ const SubmissionPopup = ({
               onClick={onSuccess || onClose}
               className="mt-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
             >
-             Ok
+              Ok
             </button>
+
+            <div className="mt-6 text-center flex items-center gap-2 justify-center border-t pt-4">
+              <p className="text-sm font-medium text-gray-600">
+                {language === 'hindi' && "और पुस्तकें देखना चाहते हैं?"}
+                {language === 'gujarati' && "વધુ પુસ્તકો જોવા માંગો છો?"}
+                {language === 'english' && "Want to explore more books?"}
+              </p>
+              <a href="/books" className="text-blue-600 font-bold hover:underline">
+                {language === 'hindi' && "यहां क्लिक करें"}
+                {language === 'gujarati' && "અહીં ક્લિક કરો"}
+                {language === 'english' && "Click Here"}
+              </a>
+            </div>
           </div>
         );
-      
+
       case "error":
         return (
           <div className="text-center py-8">
             {/* Error Icon */}
             <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100">
-              <CloseCircleOutlined 
-                style={{ fontSize: '48px', color: '#ff4d4f' }} 
+              <CloseCircleOutlined
+                style={{ fontSize: '48px', color: '#ff4d4f' }}
               />
             </div>
 
@@ -270,7 +284,7 @@ const SubmissionPopup = ({
             </button>
           </div>
         );
-      
+
       default:
         return null;
     }

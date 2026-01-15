@@ -147,7 +147,7 @@
 //             </Link>
 //           </div>
 
-        
+
 //    {/* <div className="flex flex-col items-center justify-center w-full group">
 //             <div className="relative w-full">
 //               {" "}
@@ -274,7 +274,7 @@
 //             </div>
 //           </div>
 
-                   
+
 
 //         </div>
 //       </div>
@@ -298,7 +298,7 @@ const RegisterForm = () => {
       try {
         const res = await fetch("https://book.adhyatmparivar.com/api/forms");
         const data = await res.json();
-        
+
         // Sort forms by order field (ascending), with null/undefined values at the end
         const sortedData = data.sort((a, b) => {
           // If both have order values, sort normally
@@ -312,7 +312,7 @@ const RegisterForm = () => {
           // If neither has order, sort by created_at (newest first)
           return new Date(b.created_at) - new Date(a.created_at);
         });
-        
+
         setForms(sortedData);
       } catch (err) {
         console.error("Error fetching forms:", err);
@@ -340,33 +340,35 @@ const RegisterForm = () => {
   // Check if form is still active based on active_to date
   const isFormActive = (form) => {
     if (!form.active) return false;
-    
+
     if (form.active_to) {
       const today = new Date();
       today.setHours(0, 0, 0, 0); // Reset time to start of day
       const activeToDate = new Date(form.active_to);
       activeToDate.setHours(23, 59, 59, 999); // Set to end of day
-      
+
       // Form is inactive if active_to date has passed
       if (activeToDate < today) {
         return false;
       }
     }
-    
+
     return true;
   };
 
   return (
     <div className="py-16 max-w-7xl mx-auto px-5 sm:px-10">
+
+
       <h1 className="font-bold flex items-center gap-2 border-b-2 border-[#01044c] font-heading mb-8 text-xl text-[#01044c] text-start">
-        रजिस्ट्रेशन फॉर्म
-        <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow" />
+        बुक रजिस्ट्रेशन फॉर्म
+        <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow mb-2" />
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
         {visibleForms.map((form) => {
           const formIsActive = isFormActive(form);
-          
+
           return (
             <div
               key={form.id}
@@ -419,7 +421,7 @@ const RegisterForm = () => {
           <p className="text-gray-600 text-lg">No forms are currently available for registration.</p>
         </div>
       )}
-      
+
       {/* Show skeleton loaders if no forms fetched */}
       {forms.length === 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-body justify-items-center">
@@ -432,12 +434,12 @@ const RegisterForm = () => {
                 <div className="relative bg-gray-200 animate-pulse overflow-hidden w-full h-full">
                   {/* Skeleton Image */}
                   <div className="sm:min-h-[70vh] h-full w-full bg-gray-300 animate-pulse"></div>
-                  
+
                   {/* Skeleton Hover Content (visible by default in loading) */}
                   <div className="absolute inset-x-0 bottom-0 h-full bg-gray-800/80 flex flex-col items-center justify-center p-6">
                     {/* Skeleton Title */}
                     <div className="h-8 bg-gray-600 rounded w-3/4 mb-3 animate-pulse"></div>
-                    
+
                     {/* Skeleton Text Lines */}
                     <div className="space-y-2 w-full mb-4">
                       <div className="h-4 bg-gray-600 rounded w-1/2 mx-auto animate-pulse"></div>
@@ -456,6 +458,36 @@ const RegisterForm = () => {
           ))}
         </div>
       )}
+
+      <Link
+        href="/books"
+        className="group relative block w-full h-40 sm:h-32 overflow-hidden rounded-sm shadow-lg my-6 transform transition-transform duration-300 hover:scale-[1]"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-50 group-hover:brightness-75 transition-all duration-500"
+          style={{
+            backgroundImage: "url(/booklistheader.jpg)",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <div className="relative z-10 flex items-center justify-evenly p-4 sm:p-6 h-full text-white">
+          <div className="flex items-center justify-center gap-4">
+
+            <span className="font-heading text-base sm:text-3xl font-bold drop-shadow-md">
+              ज्ञान भंडार में मौजूद पुस्तकों की सूची देखने के लिए यहां क्लिक
+              करें
+            </span>
+          </div>
+
+          <MdOutlineKeyboardDoubleArrowRight
+            size={32}
+            className="text-white opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+          />
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-[#01044c] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      </Link>
     </div>
   );
 };

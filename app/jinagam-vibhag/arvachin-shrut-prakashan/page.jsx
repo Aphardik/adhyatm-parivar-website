@@ -2,6 +2,7 @@ import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
+import CallToActionButton from "@/app/_components/CallToActionButton";
 import React from "react";
 
 export const metadata = {
@@ -91,7 +92,7 @@ const Page = () => {
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       {/* Header */}
       <header className="bg-lightpink relative flex items-center justify-center h-40">
-        <HeaderSvg/>
+        <HeaderSvg />
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
@@ -111,30 +112,30 @@ const Page = () => {
 
       <div className="px-2 sm:px-4">
         {/* Main Content */}
- <section className="py-4 max-w-5xl mx-auto sm:py-6 lg:py-8 lg:px-0">
-      <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
-        <div className="absolute top-0 left-0 opacity-15">
-          <TopLeftSvg />
-        </div>
-        <div className="absolute bottom-0 right-0 opacity-15">
-          <BottomRighSvg />
-        </div>
-        <div className="grid grid-cols-1 gap-6">
-          {bulletPoints.map((point, index) => (
-            <div key={index} className=" p-4  ">
-              <p className="text-lg font-semibold text-center leading-relaxed text-maroon">
-                 {point}
-              </p>
-                <div className="flex items-center justify-center mt-6">
+        <section className="py-4 max-w-5xl mx-auto sm:py-6 lg:py-8 lg:px-0">
+          <div className="relative rounded-sm p-4 sm:p-12 bg-lightyellow">
+            <div className="absolute top-0 left-0 opacity-15">
+              <TopLeftSvg />
+            </div>
+            <div className="absolute bottom-0 right-0 opacity-15">
+              <BottomRighSvg />
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+              {bulletPoints.map((point, index) => (
+                <div key={index} className=" p-4  ">
+                  <p className="text-lg font-semibold text-center leading-relaxed text-maroon">
+                    {point}
+                  </p>
+                  <div className="flex items-center justify-center mt-6">
                     <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
                     <div className="w-3 h-3 bg-darkpink rounded-full mx-3"></div>
                     <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
                   </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
 
         {/* Book Categories */}
         <section className="my-12">
@@ -158,7 +159,7 @@ const Page = () => {
 
         {/* Featured Content */}
         <section className="py-12">
-         
+
           <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
               विविध श्रुतकार्यों की झलक...
@@ -183,24 +184,24 @@ const Page = () => {
 
               <div className="space-y-2">
                 <div>
-                <p className="sm:text-lg leading-relaxed">
-                  ऐसी मध्यकालीन कृतियों वाली हजारों हस्तप्रतों के लाखों पन्ने
-                  जर्जर हालत में हैं।
-                </p>
-                <p className="sm:text-lg leading-relaxed">
-                  जिनको पिछले २५० वर्षों में शायद किसी ने कभी उठाया भी नहीं है।
-                </p>
+                  <p className="sm:text-lg leading-relaxed">
+                    ऐसी मध्यकालीन कृतियों वाली हजारों हस्तप्रतों के लाखों पन्ने
+                    जर्जर हालत में हैं।
+                  </p>
+                  <p className="sm:text-lg leading-relaxed">
+                    जिनको पिछले २५० वर्षों में शायद किसी ने कभी उठाया भी नहीं है।
+                  </p>
                 </div>
                 <div>
-                <p className="sm:text-lg leading-relaxed">
-                  पूज्य कृपानाथ के निश्रावर्ती संख्याबद्ध श्रमण-श्रमणीवर्या इस
-                  विराट साहित्य को गीतार्थसुलभ बनाने के लिए कमरतोड़ परिश्रम कर
-                  रहे हैं।
-                </p>
-                <p className="sm:text-lg leading-relaxed">
-                  जिसके सुंदर फल श्री संघ के करकमल में अर्पण किए जा रहे है।
-                </p>
-              </div>
+                  <p className="sm:text-lg leading-relaxed">
+                    पूज्य कृपानाथ के निश्रावर्ती संख्याबद्ध श्रमण-श्रमणीवर्या इस
+                    विराट साहित्य को गीतार्थसुलभ बनाने के लिए कमरतोड़ परिश्रम कर
+                    रहे हैं।
+                  </p>
+                  <p className="sm:text-lg leading-relaxed">
+                    जिसके सुंदर फल श्री संघ के करकमल में अर्पण किए जा रहे है।
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -275,8 +276,20 @@ const Page = () => {
           </div>
         </section>
 
+
+
         {/* Stats */}
-       <CounterStatsUI statsData={statsData} textColor="maroon" />
+        <CounterStatsUI statsData={statsData} textColor="maroon" />
+
+        {/* Call To Action */}
+        <section className="my-12">
+          <CallToActionButton
+            heading="ज्ञान भंडार में मौजूद पुस्तकों की सूची देखने के लिए"
+            content=""
+            href="/books"
+            id="books-cta"
+          />
+        </section>
       </div>
     </div>
   );
