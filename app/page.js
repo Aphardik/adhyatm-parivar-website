@@ -41,6 +41,7 @@ const LandingPage = () => {
       <VibhagDescription />
       <SbaHomePage />
       <Letters />
+
       <RegisterForm />
     </div>
   );

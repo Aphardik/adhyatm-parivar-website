@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { BOOKS_DATA } from '@/app/data/book-list';
 import { detectLanguage } from '@/app/utils/detectLanguage.utils';
 
-import { FaBookOpen, FaFilter, FaInfo, FaInfoCircle, FaSearch } from 'react-icons/fa';
+import { FaBookOpen, FaFilter, FaInfo, FaInfoCircle, FaSearch, FaWhatsapp } from 'react-icons/fa';
 import { FaMarsAndVenus, FaX } from 'react-icons/fa6';
 
 
@@ -688,6 +688,25 @@ const BookCatalog = () => {
     </div>
   </div>
 )}
+
+      {/* Footer Contact */}
+      <div className="bg-maroon font-heading text-white py-6 mt-auto">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-lg font-medium mb-2">अध्यात्म परिवार पुस्तक विभाग संपर्क:</p>
+          <div className="flex font-sans items-center justify-center gap-3 text-xl font-bold text-gray-200">
+            7676769600
+            <a
+              href="https://wa.me/917676769600"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 hover:text-green-400 transition-colors"
+              aria-label="Chat on WhatsApp"
+            >
+              <FaWhatsapp size={28} />
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
   );

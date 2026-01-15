@@ -289,6 +289,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import CallToActionButton from "@/app/_components/CallToActionButton";
+
 
 const RegisterForm = () => {
   const [forms, setForms] = useState([]);
@@ -459,7 +461,7 @@ const RegisterForm = () => {
         </div>
       )}
 
-      <Link
+      {/* <Link
         href="/books"
         className="group relative block w-full h-40 sm:h-32 overflow-hidden rounded-sm shadow-lg my-6 transform transition-transform duration-300 hover:scale-[1]"
       >
@@ -486,7 +488,16 @@ const RegisterForm = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 w-full h-2 bg-[#01044c] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-      </Link>
+      </Link> */}
+
+      <section className="mt-6 px-4 max-w-7xl mx-auto">
+        <CallToActionButton
+          heading="अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची देखने के लिए यहाँ क्लिक करे"
+          content=""
+          href="/books"
+          id="books-cta"
+        />
+      </section>
     </div>
   );
 };

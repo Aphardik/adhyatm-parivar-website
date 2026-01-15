@@ -284,7 +284,7 @@ const Page = () => {
         {/* Call To Action */}
         <section className="my-12">
           <CallToActionButton
-            heading="ज्ञान भंडार में मौजूद पुस्तकों की सूची देखने के लिए"
+            heading="अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची देखने के लिए यहाँ क्लिक करे"
             content=""
             href="/books"
             id="books-cta"

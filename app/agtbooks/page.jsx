@@ -1,8 +1,9 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
 import { message, notification } from 'antd';
+import { states } from '@/app/data/states';
 
-import { FaSearch, FaShoppingCart, FaPlus, FaMinus, FaTrash, FaCheckCircle, FaShoppingBag, FaTimes, FaInfoCircle, FaFilter, FaBookOpen } from 'react-icons/fa';
+import { FaSearch, FaShoppingCart, FaPlus, FaMinus, FaTrash, FaCheckCircle, FaShoppingBag, FaTimes, FaInfoCircle, FaFilter, FaBookOpen, FaWhatsapp } from 'react-icons/fa';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaSprayCanSparkles } from 'react-icons/fa6';
 
@@ -286,7 +287,7 @@ const AgtBooks = () => {
                       {isFeatured && (
                         <div className="absolute top-0 right-0 z-10 w-24 h-24 overflow-hidden pointer-events-none">
                           <div className="absolute font-sans top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-10 py-1 transform rotate-45 translate-x-8 translate-y-2 shadow-md">
-                            ★★★★
+                            Featured
                           </div>
                         </div>
                       )}
@@ -330,9 +331,9 @@ const AgtBooks = () => {
                           ${isInCart ? 'bg-green-600 hover:bg-green-700' : ''}
                           font-sans`}>
                           {isInCart ? (
-                            <> <FaCheckCircle className="inline mr-1" size={12} /> {book.isAvailable ? "Added to Cart" : "Joined Wishlist"} </>
+                            <> <FaCheckCircle className="inline mr-1" size={12} /> {book.isAvailable ? "Added to Cart" : "Waitlist  Joined"} </>
                           ) : (
-                            <> <FaPlus className="inline mr-1" size={12} /> {book.isAvailable ? "Add to Cart" : "Join to Wishlist"} </>
+                            <> <FaPlus className="inline mr-1" size={12} /> {book.isAvailable ? "Add to Cart" : "Join Waitlist"} </>
                           )}
                         </button>
                       </div>
@@ -479,7 +480,7 @@ const AgtBooks = () => {
               </div>
 
               {/* Shipping Form - 50% width */}
-              <div className="bg-white rounded-lg p-6 shadow border border-gray-200">
+              <div className="bg-white font-sans rounded-lg p-6 shadow border border-gray-200">
                 <h3 className="text-2xl font-bold mb-6">Shipping Information</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
@@ -532,11 +533,13 @@ const AgtBooks = () => {
                     <label className="text-xs font-semibold text-gray-600 uppercase mb-1 block">State *</label>
                     <select value={orderDetails.state}
                       onChange={(e) => setOrderDetails({ ...orderDetails, state: e.target.value })}
-                      className="w-full bg-gray-50 border-2 border-gray-200 focus:border-amber-500 p-3 rounded outline-none">
+                      className="w-full font-heading bg-gray-50 border-2 border-gray-200 focus:border-amber-500 p-3 rounded outline-none">
                       <option value="">Select State</option>
-                      <option value="Rajasthan">Rajasthan</option>
-                      <option value="Gujarat">Gujarat</option>
-                      <option value="Maharashtra">Maharashtra</option>
+                      {states.map((state) => (
+                        <option key={state.value} value={state.value}>
+                          {state.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <button onClick={handleCheckout} disabled={isSubmitting}
@@ -653,6 +656,7 @@ const AgtBooks = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };
