@@ -2340,27 +2340,27 @@ export const photoData1 = {
       imageUrl: "/shasan-bhakti-anjali/SBA-103E.webp",
       date: "2025-10-11"
     },
-    // {
-    //   uid: "sba104",
-    //   id: 104,
-    //   name: "Shaasan Bhakti Anjali-104",
-    //   imageUrl: "/shasan-bhakti-anjali/SBA-104E.webp",
-    //   date: "2025-10-12"
-    // },
-    // {
-    //   uid: "sba105",
-    //   id: 105,
-    //   name: "Shaasan Bhakti Anjali-105",
-    //   imageUrl: "/shasan-bhakti-anjali/SBA-105E.webp",
-    //   date: "2025-10-13"
-    // },
-    // {
-    //   uid: "sba106",
-    //   id: 106,
-    //   name: "Shaasan Bhakti Anjali-106",
-    //   imageUrl: "/shasan-bhakti-anjali/SBA-106E.webp",
-    //   date: "2025-10-14"
-    // },
+    {
+      uid: "sba104",
+      id: 104,
+      name: "Shaasan Bhakti Anjali-104",
+      imageUrl: "/shasan-bhakti-anjali/SBA-104E.webp",
+      date: "2025-10-12"
+    },
+    {
+      uid: "sba105",
+      id: 105,
+      name: "Shaasan Bhakti Anjali-105",
+      imageUrl: "/shasan-bhakti-anjali/SBA-105E.webp",
+      date: "2025-10-13"
+    },
+    {
+      uid: "sba106",
+      id: 106,
+      name: "Shaasan Bhakti Anjali-106",
+      imageUrl: "/shasan-bhakti-anjali/SBA-106E.webp",
+      date: "2025-10-14"
+    },
     // {
     //   uid: "sba107",
     //   id: 107,

@@ -22,6 +22,8 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-4H.webp",
             "/diksha/rangchhata-5H.webp",
             "/diksha/rangchhata-6H.webp",
+            "/diksha/rangchhata-7H.webp",
+            "/diksha/rangchhata-8H.webp",
         ],
         Gujarati: [
             "/diksha/rangchhata-1G.webp",
@@ -30,6 +32,8 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-4G.webp",
             "/diksha/rangchhata-5G.webp",
             "/diksha/rangchhata-6G.webp",
+            "/diksha/rangchhata-7G.webp",
+            "/diksha/rangchhata-8G.webp",
         ],
         English: [
             "/diksha/rangchhata-1E.webp",
@@ -38,6 +42,8 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-4E.webp",
             "/diksha/rangchhata-5E.webp",
             "/diksha/rangchhata-6E.webp",
+            "/diksha/rangchhata-7E.webp",
+            "/diksha/rangchhata-8E.webp",
         ]
     };
 
