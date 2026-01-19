@@ -6,11 +6,11 @@ const LogoDescription = () => {
 
   return (
     <>
-      <section  className="md:hidden  px-5 font-body text-content">
-                  <div className="w-full max-w-3xl flex items-center justify-center">
-            <img src="/logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
+      <section className="md:hidden  px-5 font-body text-content">
+        <div className="w-full max-w-3xl flex items-center justify-center">
+          <img src="/large_logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
 
-          </div>
+        </div>
         <h1 className="text-[#01044c] font-heading font-bold text-xl text-center  mb-4">
           ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
         </h1>
@@ -80,87 +80,87 @@ const LogoDescription = () => {
 
       <div className="hidden md:block px-8 py-16 font-body mx-auto">
         <div className="max-w-7xl mx-auto">
-        <h1 className="text-[#01044c] font-semibold text-3xl text-center font-heading mb-8">
-          ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
-        </h1>
+          <h1 className="text-[#01044c] font-semibold text-3xl text-center font-heading mb-8">
+            ...सातक्षेत्र से सुशोभित अध्यात्म परिवार के लोगो का रहस्य...
+          </h1>
 
-        <div className=" mb-4 px-64 text-center ">
-          <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">1. जिनप्रतिमा</h2>
-          <p className="text-base font-semibold text-content ">
-            सदा के लिए सम्पूर्ण सुखी बनने का मार्ग बताने वाली इस विश्व की
-            सर्वोत्तम हस्ती की प्रतिकृति।
-          </p>
+          <div className=" mb-4 px-64 text-center ">
+            <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">1. जिनप्रतिमा</h2>
+            <p className="text-base font-semibold text-content ">
+              सदा के लिए सम्पूर्ण सुखी बनने का मार्ग बताने वाली इस विश्व की
+              सर्वोत्तम हस्ती की प्रतिकृति।
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            {/* Left column */}
+            <div className="w-1/3 flex flex-col justify-between pr-4">
+              <div className="text-end mb-4">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">2. जिनमंदिर</h2>
+                <p className="text-base font-semibold text-content">
+                  यह उन सर्वोत्तम हस्ती का सर्वोत्कृष्ट पवित्र स्थान!
+                </p>
+              </div>
+              <div className="text-end mb-4 mr-8">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">4-5. श्रमण-श्रमणी (ओघा)</h2>
+                <p className="text-base font-semibold text-content">
+                  इस जानकारी और इस नक्शे के अनुसार उद्यमपूर्वक स्वयं उस मार्ग पर
+                  सदा चलने वाले तथा विश्व को यह सच्चा मार्ग बताने वाले!
+                </p>
+              </div>
+              <div className="text-end mb-4 mr-12">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">वृषभ</h2>
+                <p className="text-base font-semibold text-content">
+                  इस भरतक्षेत्र के प्रथम शासनस्थापक श्री आदिनाथ परमात्मा का लछ्न!
+                </p>
+              </div>
+              <div className="text-end">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">धर्मचक्र</h2>
+                <p className="text-base font-semibold text-content">
+                  इस अवसर्पिणी के २४ तीर्थंकरो की याद दिलाते धर्मचक्र के <br /> २४ आरे !
+                </p>
+              </div>
+            </div>
+
+            {/* Central image */}
+            <div className="w-1/3 max-w-3xl flex items-center justify-center">
+              <img src="/large_logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
+
+            </div>
+
+            {/* Right column */}
+            <div className="w-1/3 flex flex-col justify-between pl-4">
+              <div className=" mb-4 ">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">3. जिनागम</h2>
+                <p className="text-base font-semibold text-content">
+                  सुखी बनने के मार्ग की तमाम जानकारी तथा उसका नक्शा!!
+                </p>
+              </div>
+              <div className=" mb-4 ml-8">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">
+                  6-7. श्रावक-श्रविका (चरवला)
+                </h2>
+                <p className="text-base font-semibold text-content">
+                  इस मार्ग पर चलने वालों की समर्पित होकर, इस मार्ग पर चलने की चाहत
+                  रखने वाले तथा इसके लिए तन-मन-धन अर्पण करने वाले!
+                </p>
+              </div>
+              <div className="mb-4 ml-12">
+                <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">सिंह</h2>
+                <p className="text-base font-semibold text-content">
+                  इस भरतक्षेत्र के चरम शासनस्थापक श्री महावीर परमात्मा का लछ्न!
+                </p>
+              </div>
+              <div className="">
+                <h2 className="sm:text-xl text-lg text-[#01044c]  font-semibold">कमल</h2>
+                <p className="text-base font-semibold text-content">
+                  सातक्षेत्र की भक्ति सुरक्षा द्वारा जो अवस्था प्राप्त करनी है उस
+                  निर्लेप अवस्था का सूचक!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="flex justify-center">
-          {/* Left column */}
-          <div className="w-1/3 flex flex-col justify-between pr-4">
-            <div className="text-end mb-4">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">2. जिनमंदिर</h2>
-              <p className="text-base font-semibold text-content">
-                यह उन सर्वोत्तम हस्ती का सर्वोत्कृष्ट पवित्र स्थान!
-              </p>
-            </div>
-            <div className="text-end mb-4 mr-8">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">4-5. श्रमण-श्रमणी (ओघा)</h2>
-              <p className="text-base font-semibold text-content">
-                इस जानकारी और इस नक्शे के अनुसार उद्यमपूर्वक स्वयं उस मार्ग पर
-                सदा चलने वाले तथा विश्व को यह सच्चा मार्ग बताने वाले!
-              </p>
-            </div>
-            <div className="text-end mb-4 mr-12">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">वृषभ</h2>
-              <p className="text-base font-semibold text-content">
-                इस भरतक्षेत्र के प्रथम शासनस्थापक श्री आदिनाथ परमात्मा का लछ्न!
-              </p>
-            </div>
-            <div className="text-end">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">धर्मचक्र</h2>
-              <p className="text-base font-semibold text-content">
-                इस अवसर्पिणी के २४ तीर्थंकरो की याद दिलाते धर्मचक्र के <br /> २४ आरे !
-              </p>
-            </div>
-          </div>
-
-          {/* Central image */}
-          <div className="w-1/3 max-w-3xl flex items-center justify-center">
-            <img src="/logo.png" alt="Adhyatm Parivar" className="w-full drop-shadow-2xl h-auto object-contain" />
-
-          </div>
-
-          {/* Right column */}
-          <div className="w-1/3 flex flex-col justify-between pl-4">
-            <div className=" mb-4 ">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">3. जिनागम</h2>
-              <p className="text-base font-semibold text-content">
-                सुखी बनने के मार्ग की तमाम जानकारी तथा उसका नक्शा!!
-              </p>
-            </div>
-            <div className=" mb-4 ml-8">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">
-                6-7. श्रावक-श्रविका (चरवला)
-              </h2>
-              <p className="text-base font-semibold text-content">
-                इस मार्ग पर चलने वालों की समर्पित होकर, इस मार्ग पर चलने की चाहत
-                रखने वाले तथा इसके लिए तन-मन-धन अर्पण करने वाले!
-              </p>
-            </div>
-            <div className="mb-4 ml-12">
-              <h2 className="sm:text-xl text-lg text-[#01044c] font-semibold">सिंह</h2>
-              <p className="text-base font-semibold text-content">
-                इस भरतक्षेत्र के चरम शासनस्थापक श्री महावीर परमात्मा का लछ्न!
-              </p>
-            </div>
-            <div className="">
-              <h2 className="sm:text-xl text-lg text-[#01044c]  font-semibold">कमल</h2>
-              <p className="text-base font-semibold text-content">
-                सातक्षेत्र की भक्ति सुरक्षा द्वारा जो अवस्था प्राप्त करनी है उस
-                निर्लेप अवस्था का सूचक!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       </div>
     </>
   );
