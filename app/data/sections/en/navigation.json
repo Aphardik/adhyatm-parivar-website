@@ -1,0 +1,153 @@
+{
+    "title": "Adhyatm Parivar",
+    "aboutUs": "About us",
+    "contact": "Contact",
+    "menu1": {
+        "title": "Jinmurti Vibhag",
+        "items": [
+            {
+                "title": "Jinpratima Protection",
+                "desc": "Work of Lep and Op with natural substances keeping in mind the protection of ancient statues"
+            },
+            {
+                "title": "Jinpratima Construction - Stone",
+                "desc": "Construction of Pratima in a holy atmosphere from excellent stone obtained from mines like Makrana"
+            },
+            {
+                "title": "Jinpratima Construction - Metal",
+                "desc": "Construction of Panch Dhatu Pratima etc."
+            },
+            {
+                "title": "Ancient Jinpratima Collection",
+                "desc": "Acceptance work of statues at Pratimatirth in Surat so that worship of statues is done well"
+            },
+            {
+                "title": "Jinpratima Ashatana Prevention",
+                "desc": "Acceptance work for prevention of Ashatana of damaged statues and statues made of inappropriate material"
+            }
+        ]
+    },
+    "menu2": {
+        "title": "Jinmandir Vibhag",
+        "items": [
+            {
+                "title": "Jinalaya Protection (Repair)",
+                "desc": "Resolution work of problems like leakage in Jinalaya"
+            },
+            {
+                "title": "Jinalaya Purification - Upashray Purification",
+                "desc": "Purification work of every corner from floor to peak of Jinalaya and also purification of Upashray"
+            },
+            {
+                "title": "Jinalaya Reconstruction and Guidance",
+                "desc": "Construction work and guidance of Jinalaya anywhere"
+            },
+            {
+                "title": "Carving of marble stone for Jinalaya and Home Jinalaya",
+                "desc": "Work of carving stones required for Jinalaya and Home Jinalaya"
+            },
+            {
+                "title": "Construction of Dev Garden",
+                "desc": "Construction work of Dev gardens for flowers of God worship"
+            }
+        ]
+    },
+    "menu3": {
+        "title": "Jinagam Vibhag",
+        "items": [
+            {
+                "title": "Ancient Shrut Protection",
+                "desc": "Conservation work of crores of verse-proof ancient scriptures of Jinshasan"
+            },
+            {
+                "title": "Modern Shrut Publication-Promotion",
+                "desc": "Publication work of books of discourses etc. of pathfinder Suribhagwant"
+            },
+            {
+                "title": "Haribhadrasuri Shastrasangrah",
+                "desc": "A library in Surat from where scriptures are made available to hundreds of knowledge seekers"
+            },
+            {
+                "title": "Adhyatm Gyantirth",
+                "desc": "Four-storey building for various activities of protection of ancient-modern Shrutgyan"
+            },
+            {
+                "title": "Ganipitak Construction Propagation",
+                "desc": "In Upashray-Pathshala etc. as support to worship Shrutgyan in true sense"
+            }
+        ]
+    },
+    "menu4": {
+        "title": "Adhyatm Vibhag",
+        "items": [
+            {
+                "title": "Parishthapanika Committee Protection",
+                "desc": "Construction work of Matru Kundi and Shandil Dome for the protection of Parishthapanika Committee of Chaturvidh Sangh"
+            },
+            {
+                "title": "Vihar Protection",
+                "desc": "Work of sending employees across India for the protection of Shramanivaryas during Vihar"
+            },
+            {
+                "title": "Charitra Upkaran Bhakti",
+                "desc": "Devotion of revered ones with selected equipment that saves from Viradhana in Charitra Palan"
+            },
+            {
+                "title": "Stand for cooling hot water",
+                "desc": "Distribution work of stands to cool hot water"
+            },
+            {
+                "title": "Acquisition of pure Puja substances",
+                "desc": "Work of availability of pure substances certified by lab test required in Puja"
+            },
+            {
+                "title": "Availability of religious ritual decoration material",
+                "desc": "Work of availability of material that makes religious rituals majestic"
+            },
+            {
+                "title": "Udyapan Equipment Arrangement",
+                "desc": "Identifying the proper place of equipment kept in Udyapans and organizing Udyapan according to the need of equipment"
+            },
+            {
+                "title": "Ritual Organization",
+                "desc": "Organization of rituals like Group Diksha, Updhan Tap, Vachana Shreni etc."
+            },
+            {
+                "title": "Adhyatmshala (Child Culture School)",
+                "desc": "Interesting daily organization for irrigating values in children"
+            },
+            {
+                "title": "Sanskrit Teaching Class (Samshiv)",
+                "desc": "Organization of special classes to acquire knowledge of Sanskrit language"
+            },
+            {
+                "title": "Paiyashala (Prakrit Teaching School)",
+                "desc": "Arrangement to impart knowledge of Prakrit language"
+            },
+            {
+                "title": "Live Scenery (Emotional Drama)",
+                "desc": "Organization of plays stimulating the spirit of valor, dedication and sacrifice"
+            },
+            {
+                "title": "Construction of unique equipment for God devotion etc.",
+                "desc": "Work of making equipment for increasing feelings in God devotion etc."
+            },
+            {
+                "title": "Excellent Bhaktidravya Research",
+                "desc": "In-depth research of substances, medicines etc. required in God devotion"
+            },
+            {
+                "title": "Legal Cell: Legal Guidance",
+                "desc": "Disseminating information about legal matters related to Jainism in Shrisangh"
+            },
+            {
+                "title": "Painting Construction",
+                "desc": "Getting various paintings made and disseminating them"
+            },
+            {
+                "title": "Management of various Sanghs and Aradhana Bhavans",
+                "desc": "Construction and management work of complexes containing Jinalaya-Upashray etc. for worship"
+            }
+        ]
+    }
+}

@@ -5,6 +5,8 @@ import { BiChevronDown, BiMenu, BiX } from "react-icons/bi";
 import { usePathname } from "next/navigation";
 import HexagonalSvg from "../HexagonalSvg";
 import NoticeHeader from "../noticeHeader";
+import { useLanguage } from "../LanguageContext";
+import { HiOutlineTranslate } from "react-icons/hi";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -14,8 +16,8 @@ const Header = () => {
   const pathname = usePathname();
   const trimmedPath = pathname.replace(/^\/pages/, "");
   // console.log(pathname,"pathname")
-    const isUpdhanPage = pathname.includes("updhan-18");
-    const isMembershipPage = pathname.includes("membership");
+  const isUpdhanPage = pathname.includes("updhan-18");
+  const isMembershipPage = pathname.includes("membership");
 
 
   const handleMouseEnter = (dropdown) => {
@@ -295,6 +297,8 @@ const Header = () => {
     ],
   };
 
+  const { t, language, setIsLanguageModalOpen } = useLanguage();
+
   const toggleMobileSection = (section) => {
     setExpandedMobileSection(
       expandedMobileSection === section ? null : section
@@ -320,8 +324,8 @@ const Header = () => {
               <div className="flex items-center space-x-2">
                 <Link href={"/"} className="flex gap-4 items-center">
                   <img className="h-10" src="/logo.png" alt="" />
-                  <span className="text-lg uppercase text-maroon">
-                    <b>अध्यात्म &nbsp;परिवार</b>
+                  <span className={`text-lg text-maroon ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+                    <b>{t("navigation.title") || "अध्यात्म परिवार"}</b>
                   </span>
                 </Link>
               </div>
@@ -331,10 +335,10 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="/"
-                className={`${
-                  pathname == "/" && "text-black"
-                } text-maroon font-sans hover:text-pink-600 font-medium transition-colors`}
+                className={`${pathname == "/" && "text-black"
+                  } text-maroon ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'} hover:text-pink-600 font-medium transition-colors`}
               >
+                {/* {t("navigation.aboutUs")} */}
                 About us
               </a>
 
@@ -344,17 +348,14 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${
-                    pathname.includes("/jinmurti-vibhag") && "text-pink-600"
-                  }  ${
-                    activeDropdown === "menu1" ? "text-pink-600" : "text-maroon"
-                  } font-medium transition-colors`}
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinmurti-vibhag") && "text-pink-600"
+                    }  ${activeDropdown === "menu1" ? "text-pink-600" : "text-maroon"
+                    } font-medium transition-colors`}
                 >
-                  <span>जिनमूर्ति विभाग</span>
+                  <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu1.title")}</span>
                   <BiChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "menu1" ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "menu1" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               </div>
@@ -365,17 +366,14 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${
-                    pathname.includes("/jinmandir-vihabg") && "text-pink-600"
-                  }   ${
-                    activeDropdown === "menu2" ? "text-pink-600" : "text-maroon"
-                  } font-medium transition-colors`}
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinmandir-vihabg") && "text-pink-600"
+                    }   ${activeDropdown === "menu2" ? "text-pink-600" : "text-maroon"
+                    } font-medium transition-colors`}
                 >
-                  <span>जिनमंदिर विभाग</span>
+                  <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu2.title")}</span>
                   <BiChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "menu2" ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "menu2" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               </div>
@@ -385,17 +383,14 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${
-                    pathname.includes("/jinagam-vibhag") && "text-pink-600"
-                  }    ${
-                    activeDropdown === "menu3" ? "text-pink-600" : "text-maroon"
-                  } font-medium transition-colors`}
+                  className={`flex items-center space-x-1 ${pathname.includes("/jinagam-vibhag") && "text-pink-600"
+                    }    ${activeDropdown === "menu3" ? "text-pink-600" : "text-maroon"
+                    } font-medium transition-colors`}
                 >
-                  <span>जिनागम विभाग</span>
+                  <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu3.title")}</span>
                   <BiChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "menu3" ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "menu3" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               </div>
@@ -405,29 +400,34 @@ const Header = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center space-x-1 ${
-                    pathname.includes("/adhyatm-vibhag") && "text-pink-600"
-                  }  ${
-                    activeDropdown === "menu4" ? "text-pink-600" : "text-maroon"
-                  } font-medium transition-colors`}
+                  className={`flex items-center space-x-1 ${pathname.includes("/adhyatm-vibhag") && "text-pink-600"
+                    }  ${activeDropdown === "menu4" ? "text-pink-600" : "text-maroon"
+                    } font-medium transition-colors`}
                 >
-                  <span>अध्यात्म विभाग</span>
+                  <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu4.title")}</span>
                   <BiChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "menu4" ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "menu4" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               </div>
             </nav>
 
             {/* Desktop */}
-            <div className="hidden md:flex items-center">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setIsLanguageModalOpen(true)}
+                className="p-2 text-maroon hover:bg-lightpink rounded-full transition-colors flex items-center gap-2"
+                title="Change Language"
+              >
+                <HiOutlineTranslate className="w-6 h-6" />
+                <span className="text-sm font-bold uppercase">{language}</span>
+              </button>
               <Link
                 href="/pages/contactus"
-                className="bg-maroon font-body hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center"
+                className={`bg-maroon hidden md:flex font-body hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
               >
-                संपर्क
+                {t("navigation.contact")}
               </Link>
             </div>
 
@@ -447,11 +447,10 @@ const Header = () => {
 
         {/* Desktop Dropdown Menu - Animated Height */}
         <div
-          className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-auto transition-all duration-300 ease-out ${
-            activeDropdown
-              ? "max-h-96 opacity-100 translate-y-0"
-              : "max-h-0 opacity-0 -translate-y-2"
-          }`}
+          className={`absolute top-full left-0 w-full bg-whitey shadow-lg border-t z-40 overflow-y-auto transition-all duration-300 ease-out ${activeDropdown
+            ? "max-h-96 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-2"
+            }`}
           onMouseEnter={() => handleMouseEnter(activeDropdown)}
           onMouseLeave={handleMouseLeave}
         >
@@ -465,15 +464,13 @@ const Header = () => {
                       href={item.link}
                       key={item.id}
                       onClick={handleMenuItemClick}
-                      className={`p-4 rounded-lg relative transition-all duration-300 cursor-pointer group transform ${
-                        isActive
-                          ? "bg-maroon text-white"
-                          : "bg-lightpink/80 hover:bg-lightyellow hover:text-maroon"
-                      } ${
-                        activeDropdown
+                      className={`p-4 rounded-lg relative transition-all duration-300 cursor-pointer group transform ${isActive
+                        ? "bg-maroon text-white"
+                        : "bg-lightpink/80 hover:bg-lightyellow hover:text-maroon"
+                        } ${activeDropdown
                           ? "translate-y-0 opacity-100"
                           : "translate-y-4 opacity-0"
-                      }`}
+                        }`}
                       style={{
                         transitionDelay: `${index * 50}ms`,
                       }}
@@ -484,13 +481,14 @@ const Header = () => {
                           {/* {item.emoji} */}
                         </span>
                         <div>
-                          <h3 className="mb-1 font-semibold">{item.title}</h3>
+                          <h3 className={`mb-1 font-semibold ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+                            {t(`navigation.${activeDropdown}.items.${index}.title`)}
+                          </h3>
                           <p
-                            className={`text-sm leading-relaxed ${
-                              isActive ? "text-white/80" : ""
-                            }`}
+                            className={`text-sm leading-relaxed ${isActive ? "text-white/80" : ""
+                              } ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
                           >
-                            {item.description}
+                            {t(`navigation.${activeDropdown}.items.${index}.desc`)}
                           </p>
                         </div>
                       </div>
@@ -504,19 +502,18 @@ const Header = () => {
 
       {/* Mobile Menu - Fixed with Scrolling */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-whitey transform transition-all duration-300 ease-out ${
-          isMobileMenuOpen
-            ? "translate-x-0 opacity-100"
-            : "translate-x-full opacity-0"
-        }`}
+        className={`md:hidden fixed inset-0 z-50 bg-whitey transform transition-all duration-300 ease-out ${isMobileMenuOpen
+          ? "translate-x-0 opacity-100"
+          : "translate-x-full opacity-0"
+          }`}
       >
         {/* Fixed Header */}
         <div className="flex items-center justify-between h-16 px-4 border-b bg-whitey">
           <div className="flex items-center space-x-2">
             <Link href={"/"} className="flex gap-4 items-center">
               <img className="h-10" src="/logo.png" alt="" />
-              <span className="text-lg uppercase text-maroon">
-                <b>अध्यात्म &nbsp;परिवार</b>
+              <span className={`text-lg uppercase text-maroon ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+                <b>{t("navigation.title") || "अध्यात्म परिवार"}</b>
               </span>
             </Link>
           </div>
@@ -532,33 +529,29 @@ const Header = () => {
         <div className="h-[calc(100vh-4rem)] overflow-y-auto px-4 py-6 space-y-6">
           <a
             href="/"
-            className={`${
-              pathname == "/" && "text-pink-600"
-            } block font-sans text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+            className={`${pathname == "/" && "text-pink-600"
+              } block ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'} text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
           >
-            About us
+            {t("navigation.aboutUs")}
           </a>
 
           <div>
             <button
-              className={`${
-                pathname.includes("/jinmurti-vibhag") && "text-pink-600"
-              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${pathname.includes("/jinmurti-vibhag") && "text-pink-600"
+                } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu1")}
             >
-              <span>जिनमूर्ति विभाग</span>
+              <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu1.title")}</span>
               <BiChevronDown
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  expandedMobileSection === "menu1" ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-200 ${expandedMobileSection === "menu1" ? "rotate-180" : ""
+                  }`}
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-out ${
-                expandedMobileSection === "menu1"
-                  ? "max-h-[1000px] opacity-100 mt-4"
-                  : "max-h-0 opacity-0 mt-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ease-out ${expandedMobileSection === "menu1"
+                ? "max-h-[1000px] opacity-100 mt-4"
+                : "max-h-0 opacity-0 mt-0"
+                }`}
             >
               <div className=" space-y-4 pl-4">
                 {dropdownItems.menu1.map((item, index) => (
@@ -566,13 +559,11 @@ const Header = () => {
                     href={item.link}
                     key={item.id}
                     onClick={handleMenuItemClick}
-                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
-                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
-                      expandedMobileSection === "menu1"
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
+                      } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${expandedMobileSection === "menu1"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay:
                         expandedMobileSection === "menu1"
@@ -581,9 +572,9 @@ const Header = () => {
                     }}
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
-                    <div>
-                      <h3 className="mb-1 font-semibold">{item.title}</h3>
-                      <p className="text-sm text-content">{item.description}</p>
+                    <div className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>
+                      <h3 className="mb-1 font-semibold">{t(`navigation.menu1.items.${index}.title`)}</h3>
+                      <p className="text-sm text-content">{t(`navigation.menu1.items.${index}.desc`)}</p>
                     </div>
                     <HexagonalSvg accentColor="maroon" />
                   </Link>
@@ -594,24 +585,21 @@ const Header = () => {
 
           <div>
             <button
-              className={`${
-                pathname.includes("/jinmandir-vihabg") && "text-pink-600"
-              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${pathname.includes("/jinmandir-vihabg") && "text-pink-600"
+                } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu2")}
             >
-              <span>जिनमंदिर विभाग</span>
+              <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu2.title")}</span>
               <BiChevronDown
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  expandedMobileSection === "menu2" ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-200 ${expandedMobileSection === "menu2" ? "rotate-180" : ""
+                  }`}
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-out ${
-                expandedMobileSection === "menu2"
-                  ? "max-h-[1000px] opacity-100 mt-4"
-                  : "max-h-0 opacity-0 mt-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ease-out ${expandedMobileSection === "menu2"
+                ? "max-h-[1000px] opacity-100 mt-4"
+                : "max-h-0 opacity-0 mt-0"
+                }`}
             >
               <div className="space-y-4 pl-4">
                 {dropdownItems.menu2.map((item, index) => (
@@ -619,13 +607,11 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
-                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
-                      expandedMobileSection === "menu2"
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
+                      } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${expandedMobileSection === "menu2"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay:
                         expandedMobileSection === "menu2"
@@ -634,9 +620,9 @@ const Header = () => {
                     }}
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
-                    <div>
-                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
-                      <p className="text-sm text-content">{item.description}</p>
+                    <div className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>
+                      <h3 className=" mb-1 font-semibold">{t(`navigation.menu2.items.${index}.title`)}</h3>
+                      <p className="text-sm text-content">{t(`navigation.menu2.items.${index}.desc`)}</p>
                     </div>
                     <HexagonalSvg accentColor="maroon" />
                   </Link>
@@ -647,24 +633,21 @@ const Header = () => {
 
           <div>
             <button
-              className={`${
-                pathname.includes("/jinagam-vibhag") && "text-pink-600"
-              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${pathname.includes("/jinagam-vibhag") && "text-pink-600"
+                } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu3")}
             >
-              <span>जिनागम विभाग</span>
+              <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu3.title")}</span>
               <BiChevronDown
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  expandedMobileSection === "menu3" ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-200 ${expandedMobileSection === "menu3" ? "rotate-180" : ""
+                  }`}
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-out ${
-                expandedMobileSection === "menu3"
-                  ? "max-h-[1000px] opacity-100 mt-4"
-                  : "max-h-0 opacity-0 mt-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ease-out ${expandedMobileSection === "menu3"
+                ? "max-h-[1000px] opacity-100 mt-4"
+                : "max-h-0 opacity-0 mt-0"
+                }`}
             >
               <div className="space-y-4 pl-4">
                 {dropdownItems.menu3.map((item, index) => (
@@ -672,13 +655,11 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
-                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
-                      expandedMobileSection === "menu3"
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
+                      } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${expandedMobileSection === "menu3"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay:
                         expandedMobileSection === "menu3"
@@ -687,9 +668,9 @@ const Header = () => {
                     }}
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
-                    <div>
-                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
-                      <p className="text-sm text-content">{item.description}</p>
+                    <div className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>
+                      <h3 className=" mb-1 font-semibold">{t(`navigation.menu3.items.${index}.title`)}</h3>
+                      <p className="text-sm text-content">{t(`navigation.menu3.items.${index}.desc`)}</p>
                     </div>
                     <HexagonalSvg accentColor="maroon" />
                   </Link>
@@ -700,24 +681,21 @@ const Header = () => {
 
           <div>
             <button
-              className={`${
-                pathname.includes("/adhyatm-vibhag") && "text-pink-600"
-              } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
+              className={`${pathname.includes("/adhyatm-vibhag") && "text-pink-600"
+                } flex items-center justify-between w-full text-lg font-medium text-maroon hover:text-pink-600 transition-colors`}
               onClick={() => toggleMobileSection("menu4")}
             >
-              <span>अध्यात्म विभाग</span>
+              <span className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>{t("navigation.menu4.title")}</span>
               <BiChevronDown
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  expandedMobileSection === "menu4" ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-200 ${expandedMobileSection === "menu4" ? "rotate-180" : ""
+                  }`}
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-out ${
-                expandedMobileSection === "menu4"
-                  ? " opacity-100 mt-4"
-                  : "max-h-0 opacity-0 mt-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ease-out ${expandedMobileSection === "menu4"
+                ? " opacity-100 mt-4"
+                : "max-h-0 opacity-0 mt-0"
+                }`}
             >
               <div className="space-y-4 pl-4">
                 {dropdownItems.menu4.map((item, index) => (
@@ -725,13 +703,11 @@ const Header = () => {
                     href={item.link}
                     onClick={handleMenuItemClick}
                     key={item.id}
-                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${
-                      item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
-                    } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${
-                      expandedMobileSection === "menu4"
+                    className={`relative bg-lightpink flex items-start space-x-3 p-3 ${item.link == pathname || item.link === trimmedPath && "bg-maroon text-white"
+                      } rounded-lg hover:bg-maroon/20 transition-all duration-300 transform ${expandedMobileSection === "menu4"
                         ? "translate-x-0 opacity-100"
                         : "translate-x-4 opacity-0"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay:
                         expandedMobileSection === "menu4"
@@ -740,9 +716,9 @@ const Header = () => {
                     }}
                   >
                     {/* <span className="text-xl">{item.emoji}</span> */}
-                    <div>
-                      <h3 className=" mb-1 font-semibold">{item.title}</h3>
-                      <p className="text-sm text-content">{item.description}</p>
+                    <div className={language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}>
+                      <h3 className=" mb-1 font-semibold">{t(`navigation.menu4.items.${index}.title`)}</h3>
+                      <p className="text-sm text-content">{t(`navigation.menu4.items.${index}.desc`)}</p>
                     </div>
                     <HexagonalSvg accentColor="maroon" />
                   </Link>
@@ -752,15 +728,15 @@ const Header = () => {
           </div>
 
           <Link
-          onClick={handleMenuItemClick}
+            onClick={handleMenuItemClick}
             href={"/pages/contactus"}
-            className="w-full flex items-center font-body justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
+            className={`w-full flex items-center font-body justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
           >
-            संपर्क
+            {t("navigation.contact")}
           </Link>
         </div>
       </div>
-{/* {  !isUpdhanPage && !isMembershipPage &&  <NoticeHeader />} */}
+      {/* {  !isUpdhanPage && !isMembershipPage &&  <NoticeHeader />} */}
     </div>
   );
 };

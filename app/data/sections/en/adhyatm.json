@@ -1,0 +1,302 @@
+{
+    "sanskritShikshan": {
+        "metaTitle": "Sanskrit Shishkan Varg (Sanshiv) | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Total Students"
+            },
+            {
+                "label": "Total Class Hours"
+            },
+            {
+                "label": "Good utilization by Adhyatm Parivar"
+            }
+        ],
+        "header": {
+            "title": "Sanskrit Shishkan Varg (Sanshiv)",
+            "subtitle": "Project Started: V.S. 2077"
+        },
+        "intro": {
+            "text": "A method has been developed by the pathfinder Pujyashri so that Shravaks can also learn Sanskrit easily. It is hard to believe, but it is a reality that in the 'Two days a week' Sanshiv project by Adhyatm Parivar, today the Sanskrit education of many Shravaks and Shravikas in Mumbai is heading towards completion.",
+            "highlight": "This Gyan Yajna has been going on continuously for two years and will continue in the future."
+        }
+    },
+    "suddhPujaDravya": {
+        "metaTitle": "Suddh Puja Dravya Samprapti | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Total Collection Centers"
+            },
+            {
+                "label": "Total Material Types"
+            },
+            {
+                "label": "Total Value of Materials purchased by Devotees"
+            }
+        ],
+        "header": {
+            "title": "Suddh Puja Dravya Samprapti",
+            "subtitle": "Adhyatm Parivar",
+            "date": "Project Started: V.S. 2070"
+        },
+        "intro": {
+            "title": "Adhyatm Parivar presents Puja materials that will please the devotees of the Lord!"
+        },
+        "products": {
+            "gauseershChandan": {
+                "title": "Gauseersh Chandan",
+                "desc": "Among all sandalwood in the world, the best is the sandalwood of the 'Gauseersh' tree, which grows on the scripture-described Malayachal mountain. License holder Adhyatm Parivar takes sandalwood from the Government Auction out of 16 varieties, which has the most oil and is certified by a report to have the best quality oil. After this, its lab testing is done using IS and GCMS methods."
+            },
+            "chandanKaTel": {
+                "title": "Sandalwood Oil",
+                "desc": "The main thing to test regarding sandalwood is sandalwood oil. Adhyatm Parivar has made available the best of the best sandalwood oil for coating."
+            },
+            "vasachoorna": {
+                "title": "Vasachoorna",
+                "desc": "This is the best Vasachoorna of Gauseersh Chandan itself. This Vasachoorna is also lab tested by IS and GCMS methods."
+            },
+            "orisaya": {
+                "title": "Orisaya",
+                "desc": "The first useful instrument for worshiping with Svadravya. Different sizes of Orisayas are available for rubbing saffron sandalwood, etc."
+            },
+            "kesar": {
+                "title": "Kesar (Saffron)",
+                "desc": "It is mentioned in the scriptures to use musk, which is hotter than saffron, in the worship of the Lord. So where does the question arise in saffron? The report of ASI is also the same that: Aras is damaged by moisture, not by saffron. Therefore presented: Pure saffron tested by 12 types of reports!"
+            },
+            "gandhakashaayiVastra": {
+                "title": "Gandhakashaayi Vastra",
+                "desc": "This is a 500 count Bengali cloth - Dhaka muslin for wiping the Lord's body. While wiping with this cloth, the memory of Janmabhishek done by Saudharmendra will come!"
+            },
+            "yakshaKardamChoorna": {
+                "title": "Yaksha Kardam Choorna",
+                "desc": "This powder made from a mixture of Gauseersh Chandan, Kesar etc. gets ready by rubbing in a short time. In this way, saffron for Lord's worship gets ready quickly!"
+            },
+            "soneChandiKaBarak": {
+                "title": "Gold-Silver Leaf (Varakh)",
+                "desc": "The specialty of this leaf is: its thickness due to which more Nirmalya comes off. As a result, Devdravya is preserved. Devotees knowledgeable about leaf can clearly understand about the weight and 100% purity of Adhyatm Parivar's leaf. Example: Where elsewhere leaf of 7 grams weight is available for ₹700, Adhyatm Parivar's leaf of 20 grams weight is available for ₹1900. As a result, there is a saving of 25 to 30% material. Before making every lot available, the leaf is checked."
+            },
+            "soneKaBadla": {
+                "title": "Gold Badla - Silver Badla",
+                "desc": "Gold Badla with a mixture of 7 grams of gold (999) with 1 kg of silver (999) and Silver Badla of silver (999) are rarely found in the entire Jain rule."
+            },
+            "bheemsetiKapoor": {
+                "title": "Bheemseti Camphor",
+                "desc": "This Bheemseti (Baras) camphor is the best variety of camphor. It is found only abroad and is obtained from rare trees. Ghanasar camphor is also a substance obtained from vegetation. According to the scriptures, such camphor should be mixed in saffron for worship. This makes the saffron thick, and due to its antifungal properties, there is no problem of fungus and pits in the idol. Special: 'Synthetic Camphor' made by Germany during the First World War is mostly being found everywhere at present. It is impure. Pure camphor could not be found in India."
+            },
+            "ghanasaraKapoor": {
+                "title": "Ghanasara Camphor"
+            }
+        },
+        "cta": {
+            "text": "Contact for information about your nearest pure Puja Dravya collection center."
+        }
+    },
+    "uddhyapanUpkaran": {
+        "metaTitle": "Uddhyapan Upkaran Vyavastha | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Uddhyapan Upkaran Arrangement"
+            },
+            {
+                "label": "Beneficiary Sanghs"
+            }
+        ],
+        "header": {
+            "title": "Uddhyapan Upkaran Vyavastha",
+            "subtitle": "Identifying the proper place for instruments kept in Uddhyapans and organizing Uddhyapan according to the need of instruments",
+            "date": "Project Started: V.S. 2067"
+        },
+        "intro": {
+            "p1": "Through many supports like Updhan, various penances, etc., worshipers perform Uddhyapan (Ujamana) of instruments of Ratnatrayi. After that, there should be such an arrangement for those instruments that they reach where needed and become useful in the worship of Chaturvidh Sangh. If this is not possible, then those instruments remain lying in some place.",
+            "p2": "Adhyatm Parivar has become a 'bridge' for such arrangement due to its expansion. So far, such instruments have been delivered to about 70 Sanghs by the family."
+        },
+        "gallery": {
+            "title": "A unique glimpse of instruments!"
+        },
+        "cta": {
+            "text": "Contact for cooperation in organizing Uddhyapan and providing instruments."
+        }
+    },
+    "uttamBhaktidrivya": {
+        "metaTitle": "Uttam Bhaktidrivya Sanshodhan | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Total estimated researchable medicines"
+            },
+            {
+                "label": "Number of rivers of water collected so far"
+            },
+            {
+                "label": "Number of pilgrimages of collected soil"
+            }
+        ],
+        "header": {
+            "title": "Uttam Bhaktidrivya Sanshodhan",
+            "subtitle": "Deep research of materials, medicines etc. required in Lord's worship",
+            "date": "Project Started: V.S. 2073"
+        },
+        "intro": {
+            "text": "This is a project in which research enthusiasts of Adhyatm Parivar give hundreds of hours, travel thousands of kilometers, oh, roam inside the forest with the permission of the forest department and do hard work like Samudra Manthan and finally when the result like 'Amrit' is obtained, then there is a feeling of success of hard work. There are many such things worth knowing...."
+        },
+        "documentCaption": "With the influence of Prabhu Shashan, when the permission to obtain medicine from all the forests of the country was received by the Central Government of India, the enthusiasm of Adhyatm Parivar increased 100 times.",
+        "abhishek": {
+            "title": "Abhishek Medicine...",
+            "desc": "If you see the price of a medicine like Triphala for medicine and see the price of a whole packet of 18 Abhishek, then the doubt remains whether there is real medicine in this packet? That is why Adhyatm Parivar has started efforts for pure medicines. Along with this, soil of various pilgrimages and water of rivers are also being collected."
+        },
+        "captions": [
+            "Methodical Medicine Collection",
+            "Methodical Water Collection",
+            "Water of various rivers",
+            "Soil of various pilgrimages (Mitti)"
+        ]
+    },
+    "viharSuraksha": {
+        "metaTitle": "Vihar Suraksha | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Total Vihar"
+            },
+            {
+                "label": "Total Km."
+            },
+            {
+                "label": "Total Vihar Days"
+            },
+            {
+                "label": "Total Shramani Count"
+            },
+            {
+                "label": "Good utilization by Adhyatm Parivar"
+            }
+        ],
+        "header": {
+            "title": "Vihar Suraksha",
+            "subtitle": "Task of sending staff across India for the security of Shramanivaryas during Vihar",
+            "date": "Project Started: V.S. 2073"
+        },
+        "intro": {
+            "text": "Describing the types of devotion to Shramanikshetra in Yoga Shastra scripture, Kalikal Sarvagya Shri says that:",
+            "highlight": "Shravak should protect the Shramani class from wicked and evil people.",
+            "text2": "Adhyatm Parivar is dedicated to the devotion of seven fields. Through this work, Adhyatm Parivar is getting the benefit of ensuring the safety of ascetics and freedom from worries about money etc."
+        },
+        "captions": {
+            "left": "Trained to stay together in Vihar, this staff becomes instrumental in the peace of Sadhviji Bhagwants.",
+            "right": "Whether the Vihar is from Mumbai to Bengaluru or Ahmedabad to Chennai, proper arrangements are made as soon as Adhyatm Parivar receives the message!"
+        }
+    },
+    "vividhSangh": {
+        "metaTitle": "Management of Various Sanghs - Aradhana Bhavans | Adhyatm Vibhag",
+        "stats": [
+            {
+                "label": "Management expenses, donations to other Sanghs/Trusts and various ritual expenses etc."
+            }
+        ],
+        "header": {
+            "title": "Management of Various Sanghs - Aradhana Bhavans"
+        },
+        "intro": {
+            "text": "So that worshipers continue to get the support of the place of worship for the whole twelve months at various places, therefore Adhyatm Parivar is constructing and managing many Sanghs and Shravika Aradhana Bhavans."
+        },
+        "trustProfile": {
+            "title": "Shri Shanti-Kanak Shramanopasak Trust - Outline of Shri Sangh etc. managed by Shri Adhyatm Parivar"
+        },
+        "surat": {
+            "title": "Shri Shantivardhak Shwe.Mu.Pu. Tapagachha Jain Sangh, Pal-Surat",
+            "list": [
+                "Huge Complex",
+                "Two-storied and three-spired magnificent Jinalaya (Under Construction)",
+                "Anand Shravak Aradhana Bhavan",
+                "Champa Shravika Aradhana Bhavan",
+                "Adhyatm Bhavan",
+                "Ayambilshala",
+                "Pathshala",
+                "Achit Jalagruha",
+                "Bhaktikhand",
+                "Agamatirth",
+                "Guest House",
+                "Mangal Ghar"
+            ]
+        },
+        "nanpura": {
+            "title": "Shri Shanti-Kanak Shwe.Mu.Pu. Tapagachha Jain Sangh, Nanpura",
+            "list": [
+                "Unique carving-rich Jinalaya of ancient Adinath Prabhu",
+                "Shravak Aradhana Bhavan",
+                "Saubhagya Uttam Shravika Aradhana Bhavan",
+                "Shri Haribhadrasuri Shastrasangrah (Gyanbhandar)",
+                "Anusthan Bhavan",
+                "Pathshala",
+                "Ayambilshala",
+                "Achit Jalagruha",
+                "Adhyatm Gyantirth"
+            ]
+        },
+        "usmanpura": {
+            "title": "Shri Shanti-Sanyam Shwe.Mu.Pu. Tapagachha Jain Sangh, Usmanpura - Ahmedabad",
+            "list": [
+                "Jinalaya",
+                "Aradhana Bhavan",
+                "Ayambilshala",
+                "Pathshala",
+                "Guest House"
+            ]
+        },
+        "madalpur": {
+            "title": "Shri Shanti-Jin Shwe.Mu.Pu. Tapagachha Jain Sangh, Madalpur - Paldi Ahmedabad (Under Construction)",
+            "list": [
+                "Grand Jinalaya",
+                "Shravak Aradhana Bhavan",
+                "Shravika Aradhana Bhavan",
+                "Ayambilshala",
+                "Guest House",
+                "Anusthan Khand",
+                "Adhyatm Bhavan",
+                "Pathshala",
+                "Bhojanshala",
+                "Yanshala",
+                "Rathshala"
+            ]
+        },
+        "adajan": {
+            "title": "Shri Shanti-Bahubali Shwe.Mu.Pu. Tapagachha Jain Sangh, Adajan Patiya - Surat",
+            "list": [
+                "Jinalaya",
+                "Aradhana Bhavan"
+            ]
+        },
+        "newVasana": {
+            "title": "Shri Shanti-Sohan Shwe.Mu.Pu. Tapagachha Jain Sangh, New Vasana - Ahmedabad",
+            "list": [
+                "Jinalaya",
+                "Shravak Aradhana Bhavan",
+                "Shravika Aradhana Bhavan",
+                "Ayambilshala",
+                "Pathshala"
+            ]
+        },
+        "gurumandir": {
+            "title": "Gurumandir",
+            "list": [
+                "'Surishanti' Avataran Bhumi-Mandal",
+                "'Jinvihar' Yugbhumi, Vesu, Surat",
+                "'Jinvihar' Bhabhartirth (Under Construction)",
+                "'Suritray' Janmabhumi, Wakadiya Vadgam"
+            ]
+        },
+        "yugbhumi": {
+            "title": "Yugbhumi Gurumandir"
+        },
+        "otherBhavans": {
+            "title": "Other Shravika Aradhana Bhavans",
+            "list": [
+                "Shri Shanti-Kanak Aradhana Bhavan - Katargam, Surat",
+                "Shri Shanti-Kanak Aradhana Bhavan - Deesa",
+                "Shri Arya Brahmi-Sundari Adhyatm Bhavan - Borivali Mumbai",
+                "Shri Sita Sati Adhyatm Bhavan - Khotachiwadi, Mumbai",
+                "Shri Anjana Sati Adhyatm Bhavan - Navrangpura, Ahmedabad",
+                "Shri Dharini Adhyatm Bhavan - Walkeshwar, Mumbai",
+                "Sadhvi Shri Sulochana Shriji Shravika Aradhana Bhavan - Sabarmati, Ahmedabad"
+            ]
+        }
+    }
+}

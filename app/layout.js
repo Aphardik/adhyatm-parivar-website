@@ -5,6 +5,8 @@ import Footer from "./_components/layouts/Footer";
 import GoogleAnalytics from "./_components/googleAnalytics/GoogleAnalytics";
 // import GoogleTagManager from "./_components/googleAnalytics/GTM";
 import GoogleTrack from "./_components/googleAnalytics/GoogleTrack";
+import { LanguageProvider } from "./_components/LanguageContext";
+import LanguageModal from "./_components/LanguageModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,24 +30,27 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
 
 
-        <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
-          <GoogleAnalytics/>
-        <GoogleTrack/>
+        <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
+        <GoogleAnalytics />
+        <GoogleTrack />
         {/* <GoogleTagManager/> */}
       </head>
       <body
         className="font-body bg-white"
       >
-        <Header />
-       
-        {/* <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
-        <div className=' min-h-dvh pt-16 bg-whitey flex  justify-center mx-auto '>
-          {children}
-        </div>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+
+          {/* <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}
+          <div className=' min-h-dvh pt-16 bg-whitey flex  justify-center mx-auto '>
+            {children}
+          </div>
+          <Footer />
+          <LanguageModal />
+        </LanguageProvider>
       </body>
     </html>
   );
