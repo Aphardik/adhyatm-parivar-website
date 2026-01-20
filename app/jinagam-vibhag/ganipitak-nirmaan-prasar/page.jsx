@@ -1,15 +1,17 @@
+"use client";
+import React from "react";
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
-import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-
-export const metadata = {
-  title: "गणिपिटक निर्माण-प्रसार | जिनागम विभाग",
-  description: "",
-};
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const Page = () => {
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinagam");
+  const data = content?.ganipitakNirmaanPrasar;
+
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       <header className="bg-lightpink relative flex items-center justify-center h-40">
@@ -18,7 +20,7 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
-                गणिपिटक निर्माण-प्रसार
+                {data?.header?.title}
               </h1>
             </div>
           </div>
@@ -37,16 +39,12 @@ const Page = () => {
             <div className="bg-lightyellow flex items-center justify-center p-6 sm:p-8 rounded-sm">
               <p className="text-maroon font-semibold flex items-center justify-center gap-4 text-xl sm:text-3xl italic text-center">
                 <FaQuoteLeft size={32} className="text-maroon flex-shrink-0" />
-                जिनबिंब जिनागम भवियण कुं आधारा
+                {data?.quote}
                 <FaQuoteRight size={32} className="text-maroon flex-shrink-0" />
               </p>
             </div>
             <p className="text-maroon text-base sm:text-lg font-medium text-center">
-              इन पंक्तियों के अनुसार जैसे जिनालय में जिनबिंब तथा उनके सेवक
-              अधिष्ठायकों की स्थापना होती है, उसी प्रकार पाठशाला आदि में
-              जिनागमस्थापना रूप श्री गणिपिटक तथा वाणी की अधिष्ठायिका सरस्वती
-              देवी की स्थापना के लिए संगमरमर की श्री गणिपिटक का निर्माण तथा उसका
-              प्रसार अध्यात्म परिवार द्वारा हो रहा है।
+              {data?.text}
             </p>
           </div>
         </section>
@@ -66,7 +64,7 @@ const Page = () => {
 
               <div className="space-y-6 w-full max-w-4xl">
                 <p className="p-6 bg-secondary-color text-white rounded-xl sm:text-xl leading-relaxed text-center font-semibold">
-                  ऐसे नैनाकर्षक श्री गणिपिटक अनेक स्थानों पर स्थापित हुए हैं।
+                  {data?.caption}
                 </p>
               </div>
             </div>

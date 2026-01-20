@@ -56,8 +56,16 @@ body {
   --foreground: #171717;
   /* --font-heading: 'Yatra One', sans-serif; */
   /* --font-heading: 'Anek Devanagari', sans-serif; */
+  /* --font-heading: 'Anek Devanagari', sans-serif; */
   --font-heading: 'Anek Devanagari', sans-serif;
-  --font-body: 'Tiro Devanagari Hindi', sans-serif;
+
+  --font-body-hi: 'Tiro Devanagari Hindi', sans-serif;
+  --font-body-gu: 'Anek Gujarati', sans-serif;
+  --font-body-en: 'Nunito Sans', sans-serif;
+
+  --font-body: var(--font-body-hi);
+  /* Default to Hindi */
+
   --font-anek: 'Anek Gujarati', sans-serif;
   --font-sans: 'Nunito Sans', sans-serif;
   --secondary-color: #104E64;
@@ -66,7 +74,20 @@ body {
   --text-color-content: #4A5565;
   --light-bg: #cbcbcb;
   --lighten-bg: #ececec;
-   --border-color: #d1d5db;
+  --border-color: #d1d5db;
+}
+
+:root[data-language="en"] {
+  --font-body: var(--font-body-en);
+}
+
+:root[data-language="gu"] {
+  --font-body: var(--font-body-gu);
+  --font-heading: 'Anek Gujarati', sans-serif;
+}
+
+:root[data-language="hi"] {
+  --font-body: var(--font-body-hi);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,13 +95,19 @@ body {
     /* Dark mode colors */
     --background: #0a0a0a;
     --foreground: #ededed;
-    --secondary-color: #4A90B8; /* Lighter blue for better contrast */
-    --text-color-heading: #ededed; /* Light text for dark backgrounds */
-    --text-color-light: #ffffff; /* Keep white for emphasis */
-    --text-color-content: #b4b4b4; /* Lighter gray for better readability */
-    --light-bg: #2a2a2a; /* Darker background alternative */
-    --lighten-bg: #1a1a1a; /* Very dark background for contrast */
-     --border-color: #4b5563;
+    --secondary-color: #4A90B8;
+    /* Lighter blue for better contrast */
+    --text-color-heading: #ededed;
+    /* Light text for dark backgrounds */
+    --text-color-light: #ffffff;
+    /* Keep white for emphasis */
+    --text-color-content: #b4b4b4;
+    /* Lighter gray for better readability */
+    --light-bg: #2a2a2a;
+    /* Darker background alternative */
+    --lighten-bg: #1a1a1a;
+    /* Very dark background for contrast */
+    --border-color: #4b5563;
   }
 }
 
@@ -101,9 +128,9 @@ body {
   --color-greyish: var(--greyish);
 
 
-   --color-lightblue: var(--lightblue);
-   --color-darkblue: var(--darkblue);
-   --color-shadeblue: var(--shadeblue);
+  --color-lightblue: var(--lightblue);
+  --color-darkblue: var(--darkblue);
+  --color-shadeblue: var(--shadeblue);
 }
 
 body {
@@ -113,14 +140,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.bg-gradient1{
-background: #ffd1e5;
-background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 25%, rgba(134, 174, 191, 1) 50%, rgba(127, 199, 191, 1) 75%, rgba(121, 121, 168, 1) 100%);
+.bg-gradient1 {
+  background: #ffd1e5;
+  background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 25%, rgba(134, 174, 191, 1) 50%, rgba(127, 199, 191, 1) 75%, rgba(121, 121, 168, 1) 100%);
 
 }
-.bg-gradient2{
-background: #ffd1e5;
-background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 100%);
+
+.bg-gradient2 {
+  background: #ffd1e5;
+  background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 129, 1) 100%);
 
 }
 
@@ -135,13 +163,13 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --text-color-content: #b4b4b4;
   --light-bg: #2a2a2a;
   --lighten-bg: #1a1a1a;
-   --border-color: #4b5563;
+  --border-color: #4b5563;
 }
 
-  [data-theme="light"] {
-    /* first section */
+[data-theme="light"] {
+  /* first section */
   --whitey: #fff;
-  --lightpink:#FFDCDC;
+  --lightpink: #FFDCDC;
   --foreground: #171717;
   --darkpink: #E63463;
   --darkyellow: #cdc565;
@@ -149,8 +177,8 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
   --greyish: #4A5565;
   /* --lightyellow: #fffbcc; */
   --lightyellow: #FFF0C4;
-    /* second section */
-  --lightblue:#a8bffe;
+  /* second section */
+  --lightblue: #a8bffe;
   --foreground: #171717;
   --darkblue: #1f1793;
   --shadeblue: #dff1ff;
@@ -164,31 +192,32 @@ background: linear-gradient(180deg, rgba(255, 209, 229, 1) 0%, rgba(235, 221, 12
 
 
 
-   /* animation for comment  */
+/* animation for comment  */
 
-          @keyframes slideUpMobile {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideDownMobile {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(100%);
-      opacity: 0;
-    }
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
   }
 
-  .ant-form-item-label > label {
-  font-family: "Anek Gujarati", serif !important;
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+@keyframes slideDownMobile {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.ant-form-item-label>label {
+  font-family: "Anek Gujarati", serif !important;
+}

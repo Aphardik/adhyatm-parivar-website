@@ -3,19 +3,29 @@
         "metaTitle": "जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग",
         "stats": [
             {
-                "label": "कुल संघ जिनालय"
+                "count": "653",
+                "label": "कुल संघ जिनालय",
+                "color": "bg-gradient-to-b from-yellow-400 to-orange-500"
             },
             {
-                "label": " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा"
+                "count": "12002",
+                "label": " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा",
+                "color": "bg-gradient-to-b from-green-400 to-green-600"
             },
             {
-                "label": " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा"
+                "count": "4865",
+                "label": " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा",
+                "color": "bg-gradient-to-b from-teal-400 to-teal-600"
             },
             {
-                "label": "श्रीसंघ द्वारा सद्व्यय"
+                "count": "1Cr +",
+                "label": "श्रीसंघ द्वारा सद्व्यय",
+                "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             },
             {
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय"
+                "count": "3.5Cr +",
+                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             }
         ],
         "header": {

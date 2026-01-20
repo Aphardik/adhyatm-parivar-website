@@ -44,7 +44,7 @@ const Header = () => {
       {
         id: 11,
         emoji: "🔥",
-        link: "/pages/jinmurti-vibhag/jinpratima-suraksha",
+        link: "/jinmurti-vibhag/jinpratima-suraksha",
         title: "जिनप्रतिमा सुरक्षा",
         description:
           "प्राचीन प्रतिमाओं की सुरक्षा को ध्यान में रखकर कुदरती द्रव्यों से लेप व ओप का कार्य",
@@ -52,7 +52,7 @@ const Header = () => {
       {
         id: 12,
         emoji: "❤️",
-        link: "/pages/jinmurti-vibhag/jinpratima-nirmaan-pashaan",
+        link: "/jinmurti-vibhag/jinpratima-nirmaan-pashaan",
         title: "जिनप्रतिमा निर्माण - पाषाण",
         description:
           "मकराना आदि की माइन्स में से प्राप्त उत्कृष्ट पाषाण में से प्रतिमाजी का पवित्र वातावरण में निर्माणकार्य",
@@ -60,14 +60,14 @@ const Header = () => {
       {
         id: 13,
         emoji: "🤘",
-        link: "/pages/jinmurti-vibhag/jinpratima-nirmaan-dhatu",
+        link: "/jinmurti-vibhag/jinpratima-nirmaan-dhatu",
         title: "जिनप्रतिमा निर्माण - धातु",
         description: "पंच धातु की प्रतिमा आदि का निर्माणकार्य",
       },
       {
         id: 42,
         emoji: "🤘",
-        link: "/pages/jinmurti-vibhag/jinpratima-sangrahan",
+        link: "/jinmurti-vibhag/jinpratima-sangrahan",
         title: "प्राचीन जिनप्रतिमा संग्रहण",
         description:
           "प्रतिमाओं की पूजा-अर्चना अच्छी तरह से हो इसके लिए सूरत में प्रतिमातीर्थ में प्रतिमा का स्वीकार कार्य",
@@ -75,7 +75,7 @@ const Header = () => {
       {
         id: 14,
         emoji: "🤘",
-        link: "/pages/jinmurti-vibhag/jinpratima-aashatara-nivaran",
+        link: "/jinmurti-vibhag/jinpratima-aashatara-nivaran",
         title: "जिनप्रतिमा आशातरा निवारण",
         description:
           "खंडित आदि प्रतिमा एवं अयोग्य द्रव्य से बनी प्रतिमाओं की आशातना के निवारण के लिए स्वीकार कार्य",
@@ -85,14 +85,14 @@ const Header = () => {
       {
         id: 15,
         emoji: "🔥",
-        link: "/pages/jinmandir-vihabg/jinalaya-suraksha",
+        link: "/jinmandir-vihabg/jinalaya-suraksha",
         title: "जिनालय सुरक्षा (मरम्मत)",
         description: "जिनालय का लीकेज आदि समस्याओं का निवारण कार्य",
       },
       {
         id: 16,
         emoji: "❤️",
-        link: "/pages/jinmandir-vihabg/jinalaya-suddhi",
+        link: "/jinmandir-vihabg/jinalaya-suddhi",
         title: "जिनालय शुद्धि - उपाश्रय शुद्धि",
         description:
           "जिनालय के तल से लेकर शिखर तक की कोने कोने की शुद्धि एवं उपाश्रय की भी शुद्धि का कार्य",
@@ -100,14 +100,14 @@ const Header = () => {
       {
         id: 17,
         emoji: "🤘",
-        link: "/pages/jinmandir-vihabg/jinalaya-navnirmaan",
+        link: "/jinmandir-vihabg/jinalaya-navnirmaan",
         title: "जिनालय नवनिर्माण तथा मार्गदर्शन",
         description: "कहीं पर भी जिनालय का निर्माणकार्य एवं मार्गदर्शन",
       },
       {
         id: 18,
         emoji: "📘",
-        link: "/pages/jinmandir-vihabg/patthar-ghadayi",
+        link: "/jinmandir-vihabg/patthar-ghadayi",
         title: "जिनालय और गृहजिनालय के लिए संगमरमर के पत्थर की घड़ाई",
         description:
           "जिनालय एवं गृहजिनालय के लिए आवश्यक पत्थरों को गढ़ने का कार्य",
@@ -115,7 +115,7 @@ const Header = () => {
       {
         id: 19,
         emoji: "😎",
-        link: "/pages/jinmandir-vihabg/dev-bagicha",
+        link: "/jinmandir-vihabg/dev-bagicha",
         title: "देव बगीचे का निर्माण",
         description: "प्रभुपूजा के पुष्पों के लिए देवबगीचो का निर्माणकार्य",
       },
@@ -124,7 +124,7 @@ const Header = () => {
       {
         id: 20,
         emoji: "🔥",
-        link: "/pages/jinagam-vibhag/prachin-shrut-surksha",
+        link: "/jinagam-vibhag/prachin-shrut-surksha",
         title: "प्राचीन श्रुत सुरक्षा",
         description:
           "जिनशासन के करोडों श्लोकप्रमाण प्राचीन शास्त्रों का संरक्षणकार्य",
@@ -132,7 +132,7 @@ const Header = () => {
       {
         id: 21,
         emoji: "❤️",
-        link: "/pages/jinagam-vibhag/arvachin-shrut-prakashan",
+        link: "/jinagam-vibhag/arvachin-shrut-prakashan",
         title: "अर्वाचीन श्रुत प्रकाशन-प्रचार",
         description:
           "पथदर्शक सूरिभगवन्त के प्रवचन आदि के पुस्तकों का प्रकाशन कार्य",
@@ -140,7 +140,7 @@ const Header = () => {
       {
         id: 22,
         emoji: "🤘",
-        link: "/pages/jinagam-vibhag/haribhadrasuri-shastra-sangrah",
+        link: "/jinagam-vibhag/haribhadrasuri-shastra-sangrah",
         title: "हरिभद्रसूरी शास्त्रसंग्रह",
         description:
           "सूरत में एक ऐसा ग्रंथालय जहाँ से सैकड़ों ज्ञानपिपासुओं को शास्त्र उपलब्ध कराये जाते है",
@@ -148,7 +148,7 @@ const Header = () => {
       {
         id: 23,
         emoji: "🔥",
-        link: "/pages/jinagam-vibhag/adhyatm-gyantirth",
+        link: "/jinagam-vibhag/adhyatm-gyantirth",
         title: "अध्यात्म ज्ञानतीर्थ",
         description:
           "प्राचीन- अर्वाचीन श्रुतज्ञान की सुरक्षा की विविध कार्यवाही के लिए चार मंजिला भवन",
@@ -156,7 +156,7 @@ const Header = () => {
       {
         id: 24,
         emoji: "❤️",
-        link: "/pages/jinagam-vibhag/ganipitak-nirmaan-prasar",
+        link: "/jinagam-vibhag/ganipitak-nirmaan-prasar",
         title: "गणीपिटक निर्माण प्रसार",
         description:
           "श्रुतज्ञान की सही अर्थ में पूजा करने का आलंबन उपाश्रय-पाठशाला आदि में",
@@ -166,7 +166,7 @@ const Header = () => {
       {
         id: 25,
         emoji: "🔥",
-        link: "/pages/adhyatm-vibhag/parishthapanika-samiti",
+        link: "/adhyatm-vibhag/parishthapanika-samiti",
         title: "पारिष्ठापनिका समिति सुरक्षा",
         description:
           "चतुर्विध संघ की पारिष्ठापनिका समिति की रक्षा के लिए मात्रु कुंडी एवं स्थण्डिल डोम का निर्माण कार्य ",
@@ -174,7 +174,7 @@ const Header = () => {
       {
         id: 26,
         emoji: "❤️",
-        link: "/pages/adhyatm-vibhag/vihar-suraksha",
+        link: "/adhyatm-vibhag/vihar-suraksha",
         title: "विहार सुरक्षा",
         description:
           "विहार के दौरान श्रमणीवर्याओं की सुरक्षा के लिए भारतभर में कर्मचारी भेजने का कार्य",
@@ -182,7 +182,7 @@ const Header = () => {
       {
         id: 27,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/charitra-upkaran-bhakti",
+        link: "/adhyatm-vibhag/charitra-upkaran-bhakti",
         title: "चारित्र उपकरण भक्ति",
         description:
           "चारित्रपालन में विराधना से बचाए ऐसे चुनिंदे उपकरणों से पूज्यो की भक्ति",
@@ -190,14 +190,14 @@ const Header = () => {
       {
         id: 28,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/jal-stand",
+        link: "/adhyatm-vibhag/jal-stand",
         title: "उष्ण जल ठंडा करने का स्टैंड",
         description: "उष्णजल को शीत करने के स्टैंड का वितरण कार्य",
       },
       {
         id: 29,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/suddh-puja-dravya",
+        link: "/adhyatm-vibhag/suddh-puja-dravya",
         title: "शुद्ध पूजा के द्रव्यों की सम्प्राप्ति",
         description:
           " पूजा में आवश्यक लेब टेस्ट द्वारा प्रमाणित शुद्धद्रव्यों की उपलब्धि का कार्य",
@@ -205,7 +205,7 @@ const Header = () => {
       {
         id: 30,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/dharmanusthan",
+        link: "/adhyatm-vibhag/dharmanusthan",
         title: "धर्मानुष्ठान सुशोभन सामग्री की उपलब्धि",
         description:
           "धर्म के अनुष्ठानों को जाजरमान बनाने वाली सामग्री की उपलब्धि का कार्य",
@@ -213,7 +213,7 @@ const Header = () => {
       {
         id: 31,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/uddhyapan-upkaran",
+        link: "/adhyatm-vibhag/uddhyapan-upkaran",
         title: "उद्यापन उपकरण व्यवस्था",
         description:
           "उद्यापनों में रखे गए उपकरणों की उचित जगह पहचानना और उपकरणों की आवश्यकता के अनुसार उद्यापन का आयोजन",
@@ -221,7 +221,7 @@ const Header = () => {
       {
         id: 32,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/anusthan-aayojan",
+        link: "/adhyatm-vibhag/anusthan-aayojan",
         title: "अनुष्ठान आयोजन (सामूहिक दीक्षा, उपधान , वाचना श्रेणी आदि)",
         description:
           "सामूहिक दीक्षाएँ , उपधान तप , वाचनाश्रेणी जैसे अनुष्ठानों का आयोजन",
@@ -229,14 +229,14 @@ const Header = () => {
       {
         id: 33,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/adhyatmshala",
+        link: "/adhyatm-vibhag/adhyatmshala",
         title: "अध्यात्मशाला (बालसंस्करण पाठशाला)",
         description: "बच्चो में संस्कार सिंचन के लिए रुचिकर दैनिक आयोजन ",
       },
       {
         id: 34,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/sanskrit-shikshan",
+        link: "/adhyatm-vibhag/sanskrit-shikshan",
         title: "संस्कृत शिक्षण वर्ग (संशिव)",
         description:
           "संस्कृत भाषा का ज्ञान प्राप्त करने के लिए विशिष्ट वर्गो का आयोजन ",
@@ -244,14 +244,14 @@ const Header = () => {
       {
         id: 35,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/paiyashala",
+        link: "/adhyatm-vibhag/paiyashala",
         title: "पाइयशाला (प्राकृत शिक्षणशाला)",
         description: "प्राकृत भाषा का ज्ञान प्राप्त कराने के लिए व्यवस्था ",
       },
       {
         id: 36,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/jivant-drishyawali",
+        link: "/adhyatm-vibhag/jivant-drishyawali",
         title: "जीवंत दृश्यावली (भावोत्पादक नाटक)",
         description:
           "शौर्य, समर्पण एवं त्याग की भावना को उद्दीप्त करने वाले नाटकों का आयोजन",
@@ -259,7 +259,7 @@ const Header = () => {
       {
         id: 37,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/prabhubhakti-upkaran",
+        link: "/adhyatm-vibhag/prabhubhakti-upkaran",
         title: "प्रभुभक्ति आदि के बेजोड़ उपकरणों का निर्माण",
         description:
           "प्रभुभक्ति आदि में भावों की वृद्धि के लिए उपकरण बनवाने का कार्य",
@@ -267,14 +267,14 @@ const Header = () => {
       {
         id: 38,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/uttam-bhaktidrivya",
+        link: "/adhyatm-vibhag/uttam-bhaktidrivya",
         title: "उत्तम भक्तिद्रव्य संशोधन",
         description: "प्रभुभक्ति में आवश्यक द्रव्य, औषधियाँ आदि का गहन संशोधन",
       },
       {
         id: 39,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/legal-cell",
+        link: "/adhyatm-vibhag/legal-cell",
         title: "लीगल सेल : क़ानूनी मार्गदर्शन",
         description:
           "जैन धर्म से संलग्न होने वाली लीगल बाबतों की जानकारी श्रीसंघ में प्रसारित करना ",
@@ -282,14 +282,14 @@ const Header = () => {
       {
         id: 40,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/chitra-nirmaan",
+        link: "/adhyatm-vibhag/chitra-nirmaan",
         title: "चित्र निर्माण",
         description: "विविध चित्रों को बनवाकर प्रसारित करना",
       },
       {
         id: 41,
         emoji: "🤘",
-        link: "/pages/adhyatm-vibhag/vividh-sangh",
+        link: "/adhyatm-vibhag/vividh-sangh",
         title: "विविध संघो तथा आराधना भवनों का संचालन",
         description:
           "आराधना के लिए जिनालय-उपाश्रय आदि से युक्त संकुलो का निर्माण व संचालन कार्य",
@@ -424,7 +424,7 @@ const Header = () => {
                 <span className="text-sm font-bold uppercase">{language}</span>
               </button>
               <Link
-                href="/pages/contactus"
+                href="/contactus"
                 className={`bg-maroon hidden md:flex font-body hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
               >
                 {t("navigation.contact")}
@@ -729,7 +729,7 @@ const Header = () => {
 
           <Link
             onClick={handleMenuItemClick}
-            href={"/pages/contactus"}
+            href={"/contactus"}
             className={`w-full flex items-center font-body justify-center bg-maroon hover:bg-maroon/90 text-white px-6 py-3 rounded-full font-medium transition-colors ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
           >
             {t("navigation.contact")}

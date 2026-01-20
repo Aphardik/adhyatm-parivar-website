@@ -1,59 +1,44 @@
+"use client";
+import React from "react";
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
-import React from "react";
-
-export const metadata = {
-  title: 'प्राचीन श्रुत सुरक्षा | जिनागम विभाग',
-  description: '',
-}
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const Page = () => {
-  const statsData = [
-    {
-      count: "60",
-      label: "आज तक प्रकाशित वॉल्यूम",
-      color: "bg-gradient-to-b from-yellow-400 to-orange-500",
-    },
-    {
-      count: "21717",
-      label: "कुल पृष्ठ ",
-      color: "bg-gradient-to-b from-green-400 to-green-600",
-    },
-    {
-      count: "32750",
-      label: "कुल नकल",
-      color: "bg-gradient-to-b from-teal-400 to-teal-600",
-    },
-    {
-      count: "116",
-      label: "वॉल्यूम में समाविष्ट कुल ग्रंथ",
-      color: "bg-gradient-to-b from-blue-400 to-blue-600",
-    },
-    {
-      count: "5,01,544",
-      label: "ग्रंथों की कुल (लगभग) श्लोक संख्या",
-      color: "bg-gradient-to-b from-green-400 to-green-600",
-    },
-    {
-      count: "1.25cr +",
-      label: "अध्यात्म परिवार द्वारा सद्व्यय",
-      color: "bg-gradient-to-b from-blue-400 to-blue-600",
-    },
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinagam");
+  const data = content?.prachinShrutSuraksha;
+
+  const statsDataMap = [
+    { count: "60", color: "bg-gradient-to-b from-yellow-400 to-orange-500" },
+    { count: "21717", color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "32750", color: "bg-gradient-to-b from-teal-400 to-teal-600" },
+    { count: "116", color: "bg-gradient-to-b from-blue-400 to-blue-600" },
+    { count: "5,01,544", color: "bg-gradient-to-b from-green-400 to-green-600" },
+    { count: "1.25cr +", color: "bg-gradient-to-b from-blue-400 to-blue-600" },
   ];
+
+  const statsData = data?.stats?.map((stat) => ({
+    count: stat.count,
+    label: stat.label,
+    color: stat.color || "bg-gradient-to-b from-blue-400 to-blue-600",
+  })) || [];
+
   return (
     <div className="mx-auto max-w-7xl font-body bg-whitey">
       <header className="bg-lightpink relative flex items-center justify-center h-40">
-        <HeaderSvg/>
+        <HeaderSvg />
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
-                प्राचीन श्रुत सुरक्षा
+                {data?.header?.title}
               </h1>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium my-1">
-                कार्य प्रगति: वि.सं. २०६३
+                {data?.header?.date}
               </p>
             </div>
           </div>
@@ -70,12 +55,7 @@ const Page = () => {
               <BottomRighSvg />
             </div>
             <p className="text-xl leading-relaxed text-maroon">
-              जिस श्रुत के बल पर २१,००० वर्ष तक शासन जयवंता रहने वाला है, उसकी
-              महिमा शब्दों में वर्णन कर पाना असम्भव है। पूज्य कृपानाथ के
-              मार्गदर्शन से सैकड़ों श्रमण-श्रमणियों अपने हजारों घंटे दे कर इसकी
-              रक्षा के लिए तनतोड़ परिश्रम कर रहे हैं। जिसके सुंदर परिणाम स्वरूप
-              अध्यात्म परिवार द्वारा की गई प्राचीन श्रुत प्रकाशन की एक छोटीसी
-              झलक :
+              {data?.intro?.text}
             </p>
           </div>
         </section>
@@ -139,8 +119,7 @@ const Page = () => {
 
               <div className=" space-y-6">
                 <p className="py-3 px-6 rounded-sm bg-lightpink font-bold text-lg text-maroon  leading-relaxed">
-                  सैकड़ों घंटों के परिश्रम द्वारा ये ग्रंथ गीतार्थों के हाथों तक
-                  पहुंचे हैं।
+                  {data?.gallery?.caption}
                 </p>
               </div>
             </div>

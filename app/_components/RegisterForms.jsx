@@ -290,10 +290,14 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import CallToActionButton from "@/app/_components/CallToActionButton";
-
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const RegisterForm = () => {
   const [forms, setForms] = useState([]);
+  const { language } = useLanguage();
+  const content = getSectionData(language, "home");
+  const formData = content?.forms;
 
   useEffect(() => {
     async function fetchForms() {
@@ -363,7 +367,7 @@ const RegisterForm = () => {
 
 
       <h1 className="font-bold flex items-center gap-2 border-b-2 border-[#01044c] font-heading mb-8 text-xl text-[#01044c] text-start">
-        बुक रजिस्ट्रेशन फॉर्म
+        {formData?.title}
         <MdOutlineKeyboardDoubleArrowRight size={24} className="arrow mb-2" />
       </h1>
 
@@ -389,11 +393,11 @@ const RegisterForm = () => {
                       {form.title}
                     </h3>
                     <div className="space-y-2 text-sm text-center mb-4">
-                      <p className="font-semibold text-cyan-800">ઓફિસ ડીટેલ:</p>
-                      <p>અધ્યાત્મ ભવન</p>
-                      <p>ત્રીજો માળ, આનંદ શ્રાવક આરાધના ભવન</p>
-                      <p>સંજીવકુમાર ઓડિટોરીયમ પાસે, પાલ, સુરત - 395 009</p>
-                      <p className="">M. 7676769600</p>
+                      <p className="font-semibold text-cyan-800 text-lg">{formData?.officeDetail}</p>
+                      <p>{formData?.address?.line1}</p>
+                      <p>{formData?.address?.line2}</p>
+                      <p>{formData?.address?.line3}</p>
+                      <p className="">{formData?.address?.phone}</p>
                     </div>
                   </div>
                 </div>
@@ -405,11 +409,11 @@ const RegisterForm = () => {
                   href={`/pages/forms?form=${form.slug}`}
                   className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold hover:bg-[#02055a] transition-colors duration-200"
                 >
-                  Register
+                  {formData?.register}
                 </Link>
               ) : (
                 <div className="text-lg font-sans py-2 w-full text-center bg-[#01044c] text-white font-semibold opacity-50 cursor-not-allowed">
-                  Out Of Stock
+                  {formData?.outOfStock}
                 </div>
               )}
             </div>
@@ -420,7 +424,7 @@ const RegisterForm = () => {
       {/* Show message if no forms are visible */}
       {visibleForms.length === 0 && forms.length > 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">No forms are currently available for registration.</p>
+          <p className="text-gray-600 text-lg">{formData?.noForms}</p>
         </div>
       )}
 
@@ -460,35 +464,6 @@ const RegisterForm = () => {
           ))}
         </div>
       )}
-
-      {/* <Link
-        href="/books"
-        className="group relative block w-full h-40 sm:h-32 overflow-hidden rounded-sm shadow-lg my-6 transform transition-transform duration-300 hover:scale-[1]"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center brightness-50 group-hover:brightness-75 transition-all duration-500"
-          style={{
-            backgroundImage: "url(/booklistheader.jpg)",
-            backgroundPosition: "center",
-          }}
-        />
-
-        <div className="relative z-10 flex items-center justify-evenly p-4 sm:p-6 h-full text-white">
-          <div className="flex items-center justify-center gap-4">
-
-            <span className="font-heading text-base sm:text-3xl font-bold drop-shadow-md">
-              अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची देखने के लिए यहाँ क्लिक करे
-            </span>
-          </div>
-
-          <MdOutlineKeyboardDoubleArrowRight
-            size={32}
-            className="text-white opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
-          />
-        </div>
-
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-[#01044c] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-      </Link> */}
 
       <section className="mt-6 px-4 max-w-7xl mx-auto">
         <CallToActionButton

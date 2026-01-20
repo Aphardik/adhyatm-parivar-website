@@ -1,28 +1,21 @@
-import React from 'react';
+import { useLanguage } from "./LanguageContext";
+import { getSectionData } from "../_utils/sectionData";
 
 const VibhagDescription = () => {
-  const vibhags = [
-    {
-      title: "जिनमूर्ति विभाग",
-      description: "समग्र भारत में रही प्राचीन से लेकर आधुनिक काल तक की सभी जिनप्रतिमाओं की सुरक्षा के लिए विज्ञानसिद्ध परंपरागत पद्धति से लेप - ऑप आदि कार्य। नई, सुंदर पाषाण एवं धातु प्रतिमाओ का निर्माण, प्रतिमाओं की अशतना का निवारण आदि।",
-      icon: "/Jinpratima.webp"
-    },
-    {
-      title: "जिनमंदिर विभाग", 
-      description: "समग्र भारत के जिनमंदिरों के लिए लीकेज समस्या जैसी समस्याओं का निवारण, यथासंभव हर वर्ष शुद्धि, नूतन जिनालय निर्माण के लिए शिल्पशाला आदि कार्य।",
-      icon: "/jinmandir.webp"
-    },
-    {
-      title: "जिनागम विभाग",
-      description: "समग्र भारत में एवं विदेशों में भी स्थित जैन हस्तप्रतों का सूचीकरण करके १.५ करोड़ से भी ज्यादा श्लोकप्रमाण, करीब १५००० प्राचीन जैन ग्रंथों का अच्छी तरह से संपादन एवं विविध पुस्तकों का प्रकाशन वगैरह।",
-      icon: "/jinagam.webp"
-    },
-    {
-      title: "अध्यात्म विभाग",
-      description: "जैनशासन के चार अंग - साधु, साध्वी, श्रावक एवं श्राविका - इन सबको धर्म की साधना में जहां-जहां बाधाए आती हो उन समस्याओं के निवारण के लिए संशोधन करके समाधान को क्रियान्वित करना। इसमें करीब 18 से 20 प्रकार के कार्य चल रहे हैं।",
-      icon: "/adhyatm.webp"
-    }
+  const { language } = useLanguage();
+  const content = getSectionData(language, "home");
+
+  const icons = [
+    "/Jinpratima.webp",
+    "/jinmandir.webp",
+    "/jinagam.webp",
+    "/adhyatm.webp"
   ];
+
+  const vibhags = content?.vibhag?.map((item, index) => ({
+    ...item,
+    icon: icons[index]
+  })) || [];
 
   return (
     <div className="font-body  sm:px-4">
@@ -33,9 +26,8 @@ const VibhagDescription = () => {
             {vibhags.map((vibhag, index) => (
               <div
                 key={index}
-                className={`flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                } gap-8 lg:gap-16`}
+                className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  } gap-8 lg:gap-16`}
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
                   <div className="inline-block">
@@ -72,7 +64,7 @@ const VibhagDescription = () => {
                       <img className='w-16 h-16 rounded-full object-cover' src={vibhag.icon} alt="" />
                     </div>
                   </div>
-                  
+
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-semibold text-[#01044c] mb-2 font-heading">
                       {vibhag.title}

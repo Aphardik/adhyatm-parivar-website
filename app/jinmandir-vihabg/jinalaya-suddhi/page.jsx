@@ -1,46 +1,51 @@
+"use client";
+import React from "react";
 import BottomRighSvg from "@/app/_components/BottomRighSvg";
 import CallToActionButton from "@/app/_components/CallToActionButton";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
-import React from "react";
-
-export const metadata = {
-  title: 'जिनालय शुद्धि - उपाश्रय शुद्धि | जिनमंदिर विभाग',
-  description: '',
-}
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const Page = () => {
-  const statsData = [
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinmandir");
+  const data = content?.jinalayaSuddhi;
+
+  const statsDataMap = [
     {
       count: "381",
-      label: "कुल जिनालयों का शुद्धिकरण",
       color: "bg-gradient-to-b from-yellow-400 to-orange-500",
     },
     {
       count: "85",
-      label: "कुल उपाश्रय को शुद्धिकरण",
       color: "bg-gradient-to-b from-green-400 to-green-600",
     },
     {
       count: "3.5Cr +",
-      label: "अध्यात्म परिवार द्वारा सद्व्यय",
       color: "bg-gradient-to-b from-blue-400 to-blue-600",
     },
   ];
+
+  const statsData = data?.stats?.map((stat) => ({
+    count: stat.count,
+    label: stat.label,
+    color: stat.color || "bg-gradient-to-b from-blue-400 to-blue-600",
+  })) || [];
 
   return (
     <div className="max-w-7xl font-body bg-whitey">
       {/* Header Section */}
       <header className="bg-lightpink relative flex items-center justify-center h-40">
-        <HeaderSvg/>
+        <HeaderSvg />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon mb-4">
-              जिनालय शुद्धि - उपाश्रय शुद्धि
+              {data?.header?.title}
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-maroon font-medium">
-              कार्य प्रारंभ : वि.सं. २०७७
+              {data?.header?.date}
             </p>
           </div>
         </div>
@@ -59,13 +64,7 @@ const Page = () => {
             </div>
             <div className="bg-lightyellow rounded-xl p-6 sm:p-8 lg:p-12">
               <p className="text-base sm:text-lg leading-relaxed text-maroon">
-                'प्रभु का धाम तो देवविमान जैसा लगना चाहिए।' इस भावना से यह कार्य
-                करने की अध्यात्म परिवार की रीत अनोखी है। जिनालय का प्रत्येक
-                स्तंभ, कोना, सामरण-शिखर और बारिक-बारिक कोरणी-इन सभी भागों की
-                शुद्धि के साथ पूजा के विविध उपकरणों की भी शुद्धि की जाती है।
-                आराधना के धाम की तरह उपाश्रयों की भी आमूलचूल शुद्धि यह इसके साथ
-                जुड़ा हुआ प्रकल्प है। शुद्धियों के पूर्व और पश्चात की छवियों में
-                कार्य की खूबी दिखाई देगी!
+                {data?.intro?.text}
               </p>
             </div>
           </div>
@@ -76,7 +75,7 @@ const Page = () => {
           {/* Section Title */}
           <div className="text-center mb-6 sm:mb-8 lg:mb-10">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-8 py-4 sm:px-12 sm:py-6 rounded-lg">
-              सौभाग्य का सीमाचिह्न : शत्रुंजय के शिखर पर
+              {data?.shatrunjay?.title}
             </h3>
           </div>
 
@@ -84,14 +83,10 @@ const Page = () => {
           <div className="max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20">
             <div className="space-y-6 text-center">
               <p className="text-base sm:text-lg leading-relaxed text-maroon">
-                हर वर्ष दादा आदिनाथ के गर्भगृह-रंगमंडप की शुद्धि तथा आस-पास के
-                जिनालयों-देरियों तथा नवटूंक के जिनालयों का शुद्धिकरण, रंगरोगान
-                आदि का कार्य गतिमान है।
+                {data?.shatrunjay?.p1}
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-maroon">
-                नवटूक के जिनालयों के सभी शिखरों की शुद्धि के साथ निगोद न हो, इस
-                लिए जर्मन कंपनी के वोटर रिपेलन्ट द्वारा प्रिझर्वेशन-प्रोसेस
-                प्रगति पर है।
+                {data?.shatrunjay?.p2}
               </p>
             </div>
           </div>
@@ -106,7 +101,7 @@ const Page = () => {
               />
               <div className="p-4 text-center bg-maroon">
                 <p className="text-lg sm:text-xl text-whitey font-medium">
-                  शुद्धि से पहले
+                  {data?.labels?.before}
                 </p>
               </div>
             </div>
@@ -118,7 +113,7 @@ const Page = () => {
               />
               <div className="p-4 text-center bg-maroon">
                 <p className="text-lg sm:text-xl text-whitey font-medium">
-                  शुद्धि के बाद
+                  {data?.labels?.after}
                 </p>
               </div>
             </div>
@@ -134,7 +129,7 @@ const Page = () => {
               />
               <div className="p-4 text-center bg-maroon">
                 <p className="text-lg sm:text-xl text-whitey font-medium">
-                  शुद्धि से पहले
+                  {data?.labels?.before}
                 </p>
               </div>
             </div>
@@ -146,7 +141,7 @@ const Page = () => {
               />
               <div className="p-4 text-center bg-maroon">
                 <p className="text-lg sm:text-xl text-whitey font-medium">
-                  शुद्धि के बाद
+                  {data?.labels?.after}
                 </p>
               </div>
             </div>
@@ -155,7 +150,7 @@ const Page = () => {
           {/* Risk Section */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-8 py-4 sm:px-12 sm:py-6 rounded-lg">
-              जान के जोखिम पर भी शुद्धि का काम होता है।
+              {data?.risk?.title}
             </h3>
           </div>
 
@@ -193,11 +188,11 @@ const Page = () => {
         </section>
 
         {/* Stats Section */}
-          <CounterStatsUI statsData={statsData} textColor="maroon" />
+        <CounterStatsUI statsData={statsData} textColor="maroon" />
       </div>
-       <CallToActionButton
-        heading="जिनालय / उपाश्रय की शुद्धि की आवश्यकता?"
-        content="यदि आपके आसपास कोई जिनालय या उपाश्रय शुद्धि की आवश्यकता है — हमें बताएं, हम सेवा में तत्पर हैं।"
+      <CallToActionButton
+        heading={data?.cta?.heading}
+        content={data?.cta?.content}
         id="jinalay/upashray-suddhi-cta"
         href={
           "https://wa.me/918448444050"

@@ -1,29 +1,31 @@
+"use client";
+import React from "react";
 import CallToActionButton from "@/app/_components/CallToActionButton";
 import HeaderSvg from "@/app/_components/HeaderSvg";
-import React from "react";
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
-
-export const metadata = {
-  title: 'जिनप्रतिमा आशातना निवारण | जिनमूर्ति विभाग',
-  description: '',
-}
 const Page = () => {
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinmurti");
+  const data = content?.jinpratimaAashatanaNivaran;
+
   return (
     <div className="bg-whitey max-w-7xl text-maroon font-body">
       {/* Header */}
       <header className="bg-lightpink relative flex items-center justify-center h-40">
-        <HeaderSvg/>
+        <HeaderSvg />
         <div className="mx-auto p-4 sm:p-6 lg:py-8 relative z-10">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
-                जिनप्रतिमा आशातना निवारण
+                {data?.header?.title}
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg text-content font-semibold">
-                बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था
+                {data?.header?.subtitle}
               </p>
               <p className="text-sm text-center sm:text-base lg:text-lg text-content font-medium">
-                 कार्य प्रारंभ : वि.सं. २०७६
+                {data?.header?.date}
               </p>
             </div>
           </div>
@@ -37,12 +39,8 @@ const Page = () => {
 
           <div className="p-4 mx-auto max-w-4xl sm:p-6">
             <p className="text-content text-lg lg:text-xl leading-relaxed text-center">
-              श्री षोडशक ग्रंथ षो.८गा.१ में पूज्य हरिभद्रसूरि महाराजा का वचन है
-              कि : <br />
-              <span className="text-maroon font-bold">‘प्रतिमा बनाने के बाद मात्र दस दिनों में उसका अंजन विधान होना
-              चाहिए।’</span> <br />सद्गुरु के मुख से ऐसा सुनने के बाद आराधक आत्मा को अत्यंत
-              चिंता होती है कि पूर्व में नासमझी में घर में 'गिफ्ट' के रूप में
-              स्वीकार की हुई पाषाण, धातु, फाइबर की प्रतिमाजी का क्या करें?
+              {data?.content?.quote} <br />
+              <span className="text-maroon font-bold">{data?.content?.quoteText}</span> <br />{data?.content?.desc}
             </p>
           </div>
         </div>
@@ -60,8 +58,7 @@ const Page = () => {
           <div className=" bg-lightyellow flex items-center justify-center border-l-4  border-darkyellow p-4 mx-auto max-w-4xl sm:p-6  rounded-2xl ">
             <div className="flex items-center justify-center space-x-4">
               <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
-                इसके समाधान के लिए उनकी आशातना न हो उस प्रकार उनकी व्यवस्था के
-                लिए अध्यात्म परिवार सज्ज है।
+                {data?.content?.solution}
               </p>
             </div>
           </div>
@@ -73,9 +70,9 @@ const Page = () => {
           </div>
         </div>
       </section>
-       <CallToActionButton
-        heading="क्या आपके पास ऐसी प्रतिमा है, जो पूजा के योग्य न हो।"
-        content=""
+      <CallToActionButton
+        heading={data?.cta?.heading}
+        content={data?.cta?.content}
         id="aashatana-nivaran-cta"
         href={
           "https://wa.me/918448444050"

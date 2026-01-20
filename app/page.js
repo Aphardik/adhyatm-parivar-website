@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import LogoDescription from "./_components/LogoDescription";
@@ -6,17 +7,22 @@ import RegisterForm from "./_components/RegisterForms";
 import VibhagDescription from "./_components/VibhagDescription";
 import SbaHomePage from "./_components/SbaHomePage";
 import MangalgharProducts from "./_components/MangalgharItems";
+import { useLanguage } from "./_components/LanguageContext";
+import { getSectionData } from "./_utils/sectionData";
 
 const LandingPage = () => {
+  const { language } = useLanguage();
+  const content = getSectionData(language, "home");
+
   return (
     <div className="bg-gradient1">
       <div className="font-heading w-full  min-h-[80dvh]  flex items-center justify-center px-4 sm:px-6">
         <div className="mx-auto  text-center">
           {/* Main heading */}
           <h1 className="text-5xl md:text-8xl leading-relaxed font-bold text-heading mb-8">
-            <span className="block text-[#01044c]">अध्यात्म परिवार</span>
+            <span className="block text-[#01044c]">{content?.heroTitle1}</span>
             <span className="block text-2xl md:text-3xl text-[#01044c] font-medium">
-              मेरा शासन मेरा जीवन
+              {content?.heroTitle2}
             </span>
           </h1>
 
@@ -24,14 +30,14 @@ const LandingPage = () => {
           <div className="">
             <div className="sm:px-36">
               <p className="text-lg md:text-xl font-body text-[#01044c] leading-relaxed">
-                अध्यात्म परिवार विश्व के लिए कल्याणकारी जैनशासन को समर्पित एक विशाल संगठन है। समाज में धार्मिक एवं आध्यात्मिक उन्नति के लिए हर संभव प्रयत्नों के लिए यह संगठन कटिबद्ध है। हर मनुष्य अपने जीवन को उच्चतम बना सके इस लिए आलंबन रूप प्राचीन धरोहरों की रक्षा, प्रवचन और जैनशासन के विविध अनुष्ठानों का आयोजन एवं संचालन संगठन द्वारा किया जाता है। जिसके द्वारा सदाचार, श्रद्धा एवं समर्पण की भावनाएं विकसित होती है। परिवार का व्याप्त भारत एवं विदेश में भी है।
+                {content?.heroDescription}
               </p>
             </div>
           </div>
           {/* 
          <div className="mt-12">
           <button className=" border font-body text-white border-gray-400 bg-gray-700 hover:bg-gray-800 hover:text-white font-medium py-3 px-8 rounded-full text-lg transition-all duration-300">
-            Know More about us
+            {content?.knowMore}
             <FaArrowRight className="inline-block ml-2 h-5 w-5" />
           </button>
         </div> */}

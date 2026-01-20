@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CounterStatsUI from "@/app/_components/StatData";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
@@ -5,40 +6,20 @@ import Link from "next/link";
 import HeaderSvg from "@/app/_components/HeaderSvg";
 import CallToActionButton from "@/app/_components/CallToActionButton";
 import HexagonalSvg from "@/app/_components/HexagonalSvg";
-
-export const metadata = {
-  title: "जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग",
-  description: "",
-};
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const Page = () => {
-  const statsData = [
-    {
-      count: "653",
-      label: "कुल संघ जिनालय",
-      color: "bg-gradient-to-b from-yellow-400 to-orange-500",
-    },
-    {
-      count: "12002",
-      label: " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा",
-      color: "bg-gradient-to-b from-green-400 to-green-600",
-    },
-    {
-      count: "4865",
-      label: " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा",
-      color: "bg-gradient-to-b from-teal-400 to-teal-600",
-    },
-    {
-      count: "1Cr +",
-      label: "श्रीसंघ द्वारा सद्व्यय",
-      color: "bg-gradient-to-b from-blue-400 to-blue-600",
-    },
-    {
-      count: "3.5Cr +",
-      label: "अध्यात्म परिवार द्वारा सद्व्यय",
-      color: "bg-gradient-to-b from-blue-400 to-blue-600",
-    },
-  ];
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinmurti");
+  const data = content?.jinpratimaSuraksha;
+
+  const statsData = data?.stats?.map((stat) => ({
+    count: stat.count,
+    label: stat.label,
+    color: stat.color || "bg-gradient-to-b from-blue-400 to-blue-600",
+  })) || [];
+
   return (
     <div className="bg-whitey max-w-7xl text-maroon  font-body">
       {/* Header */}
@@ -49,13 +30,13 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl text-center sm:text-4xl font-heading font-bold text-maroon">
-                जिनप्रतिमा सुरक्षा
+                {data?.header?.title}
               </h1>
               <p className="text-sm text-center sm:text-base lg:text-lg my-1 text-maroon font-semibold">
-               जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य
+                {data?.header?.subtitle}
               </p>
               <p className="sm:text-base text-center lg:text-lg text-maroon font-medium">
-                कार्य आरंभ: वि.सं. २०७३
+                {data?.header?.date}
               </p>
             </div>
           </div>
@@ -69,20 +50,18 @@ const Page = () => {
             <div className="bg-whitey  p-6 sm:p-8 lg:p-10">
               <div className="space-y-6 text-center">
                 <p className="text-maroon text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
-                  एक नयनरम्य प्रतिमा में हजारों को समकित प्राप्त करवाने की ताकत
-                  होती है। यह प्रतिमा हमारी अज्ञानता के कारण यदि खराब हो जाए और
-                  मन में भक्ति के उल्लास के बदले चिंता के बादल छा जाएं तो
+                  {data?.intro?.p1}
                   <span className="text-darkpink font-semibold">
                     {" "}
-                    यह कितनी बड़ी हानि है!
+                    {data?.intro?.p1Highlight}
                   </span>
                 </p>
                 <p className="text-maroon text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
-                  इसके मूल शोधते शोधते अध्यात्म परिवार ने{" "}
+                  {data?.intro?.p2}{" "}
                   <span className="text-darkpink font-sans font-bold">
-                    Archaeological Survey of India (ASI)
+                    {data?.intro?.p2Highlight}
                   </span>{" "}
-                  के दरवाजे खटखटाने तक के प्रयत्न किये है।
+                  {data?.intro?.p2End}
                 </p>
               </div>
             </div>
@@ -94,7 +73,7 @@ const Page = () => {
           <div className="mx-auto  max-w-7xl">
             <div className="text-center mb-8 lg:mb-12">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?
+                {data?.problems?.title}
               </h2>
             </div>
 
@@ -112,10 +91,10 @@ const Page = () => {
                 </div>
                 <div className="order-1 lg:order-2 bg-whitey rounded-sm  p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold text-maroon mb-4">
-                    कड़वी वास्तविकता
+                    {data?.problems?.items?.[0]?.title}
                   </h3>
                   <p className="text-lg sm:text-xl text-maroon leading-relaxed">
-                    चिपकाए हुए कंके को निकालने पर प्रकट हुई कड़वी वास्तविकता!
+                    {data?.problems?.items?.[0]?.desc}
                   </p>
                 </div>
               </div>
@@ -126,12 +105,10 @@ const Page = () => {
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="bg-whitey rounded-sm  p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold text-maroon mb-4">
-                    प्रभु के चरणों की दुर्दशा
+                    {data?.problems?.items?.[1]?.title}
                   </h3>
                   <p className="text-lg sm:text-xl text-maroon mb-4 leading-relaxed">
-                    जिन प्रभु के चरण जहां पड़ते थे वहां स्वर्णकमल रखे जाते थे{" "}
-                    <br /> उन प्रभु के चरणों पर चिपकाये हुए पंजे से पैदा होने
-                    वाली दर्दनाक दुर्दशा!
+                    {data?.problems?.items?.[1]?.desc}
                   </p>
                 </div>
                 <div className="bg-whitey rounded-sm  overflow-hidden">
@@ -167,11 +144,10 @@ const Page = () => {
                 </div>
                 <div className="order-1 lg:order-2 bg-whitey rounded-sm  p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold text-maroon mb-4">
-                    अवदशा का कारण
+                    {data?.problems?.items?.[2]?.title}
                   </h3>
                   <p className="text-lg sm:text-xl text-maroon leading-relaxed">
-                    इस अवदशा का कारण और कुछ नहीं, टिके आदि के भीतर रहने वाली नमी
-                    ही है।
+                    {data?.problems?.items?.[2]?.desc}
                   </p>
                 </div>
               </div>
@@ -182,11 +158,10 @@ const Page = () => {
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="bg-whitey rounded-sm  p-6 sm:p-8">
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold text-maroon mb-4">
-                    धरणेंद्र की सुरक्षा
+                    {data?.problems?.items?.[3]?.title}
                   </h3>
                   <p className="text-lg sm:text-xl text-maroon mb-4 leading-relaxed">
-                    पार्श्वनाथ प्रभु को तो धरणेंद्रने सुरक्षित रखा था। <br /> हम
-                    प्रभु के प्रतिबिंब रूपी फणा को नहीं संभाल सके!
+                    {data?.problems?.items?.[3]?.desc}
                   </p>
                 </div>
                 <div className="bg-whitey flex flex-col gap-2 sm:flex-row items-center rounded-sm  overflow-hidden">
@@ -213,13 +188,12 @@ const Page = () => {
             <div className="mb-8 lg:mb-12">
               <div className="text-center mb-8 lg:mb-12">
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                  महत्वपूर्ण निष्कर्ष
+                  {data?.rootCause?.title}
                 </h3>
               </div>
               <div className="bg-lightyellow rounded-sm  p-6 sm:p-8">
                 <p className="text-maroon text-lg sm:text-xl font-medium text-center">
-                  जो बात ASI ने कही है वह बात सदियों पहले श्री श्राद्धविधि ग्रंथ
-                  में अंकित है:
+                  {data?.rootCause?.ancientWisdom}
                 </p>
                 <div className="bg-lightyellow flex items-center justify-center p-6 sm:p-8 rounded-sm">
                   <p className="text-maroon font-semibold flex items-center justify-center gap-4 text-xl sm:text-3xl italic text-center">
@@ -227,8 +201,7 @@ const Page = () => {
                       size={32}
                       className="text-maroon flex-shrink-0"
                     />
-                    प्रतिमा पर जिस जगह पर जरा भी पानी रह जाता है (वहां) श्यामलता
-                    आ जाती है।
+                    {data?.rootCause?.quote}
                     <FaQuoteRight
                       size={32}
                       className="text-maroon flex-shrink-0"
@@ -259,35 +232,19 @@ const Page = () => {
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 text-maroon">
-                    बबूल के पेड़ की जड़ के बदले मात्र डालियां कांटने से कांटे
-                    चुभना किस प्रकार बंद होंगे?
+                    {data?.rootCause?.mainTitle}
                   </h3>
                   <div className="space-y-4">
-                    <div className="flex gap-4 items-start">
-                      <span className="w-8 h-8 bg-maroon text-whitey rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                        1
-                      </span>
-                      <span className="font-medium text-lg">
-                        सबसे पहले १ इंच का टिका लगाया गया उसके गड्ढ़े!
-                      </span>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                      <span className="w-8 h-8 bg-maroon text-whitey rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                        2
-                      </span>
-                      <span className="font-medium text-lg">
-                        उसको ढकने १.५ इंच का टिका लगाया उससे दूसरा गड्ढ़ा हुआ!
-                      </span>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                      <span className="w-8 h-8 bg-maroon text-whitey rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                        3
-                      </span>
-                      <span className="font-medium text-lg">
-                        इन दोनों को छिपाने के २ इंच का टिका लगाया उससे बना तीसरा
-                        गड्ढ़ा!
-                      </span>
-                    </div>
+                    {data?.rootCause?.steps?.map((step, index) => (
+                      <div key={index} className="flex gap-4 items-start">
+                        <span className="w-8 h-8 bg-maroon text-whitey rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                          {index + 1}
+                        </span>
+                        <span className="font-medium text-lg">
+                          {step}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -302,7 +259,7 @@ const Page = () => {
             <div className="text-center mb-12">
               <div className="inline-block bg-lightpink text-maroon px-8 py-4 rounded-sm ">
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold">
-                  सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...
+                  {data?.story?.title}
                 </h1>
               </div>
             </div>
@@ -312,99 +269,18 @@ const Page = () => {
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Story Content */}
                 <div className="space-y-6">
-                  <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
-                      प्रतीक्षा का काल
-                    </h2>
-                    <div className="space-y-3 text-maroon leading-relaxed">
-                      <p>
-                        १५,०६० दिनों तक लाखों लोगों के दिल की अनकही पीड़ा के
-                        अनुभव से कौन अनजान है?
-                      </p>
-                      <p>
-                        कि जब श्री अंतरिक्षजी के अधिनायक दादा दरवाजों के पीछे
-                        बंद थे।
-                      </p>
-                      <p>
-                        अपने दादा को पाने के लिए कितना धनव्यय... कितनी बाधाएं...
-                      </p>
-                      <p>
-                        कितनी तप साधना... कितने दशकों, महीनों, घंटों की लम्बी
-                        प्रतीक्षा...
-                      </p>
-                      <p>
-                        <span className="font-bold text-maroon">
-                          श्वेतांबर श्रीसंघ ने की है....
-                        </span>
-                      </p>
+                  {data?.story?.sections?.map((section, index) => (
+                    <div key={index} className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
+                      <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
+                        {section?.title}
+                      </h2>
+                      <div className="space-y-3 text-maroon leading-relaxed">
+                        {section?.content?.map((text, i) => (
+                          <p key={i} dangerouslySetInnerHTML={{ __html: text }} />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
-                      साधना का फल
-                    </h2>
-                    <div className="space-y-3 text-maroon leading-relaxed">
-                      <p>
-                        अंत में सर्वोच्च न्यायालय के उस ऐतिहासिक इंटरिम ऑर्डर के
-                        रूप में वह साधना फलीभूत हुई।
-                      </p>
-                      <p>अब दादा की पूजा का लाभ मिलने वाला था।</p>
-                      <p>
-                        जो लेपकार्य दशकों से रुका हुआ था उसको संपन्न करना था।
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
-                      तैयारी और चुनौती
-                    </h2>
-                    <div className="space-y-3 text-maroon leading-relaxed">
-                      <p>
-                        संपूर्ण भारत के जैन संघों की परस्पर बैठकें शुरू हुईं।
-                      </p>
-                      <p>क्या होगा? किस प्रकार होगा? होगा तो सही न?</p>
-                      <p>
-                        और उस समय, अध्यात्म परिवार के पूर्णसमर्पित शासन सेवक का
-                        संपर्क किया गया।
-                      </p>
-                      <p>
-                        पूछा गया कि: क्या आप अंतरिक्षजी के दादा के लेप करने का
-                        कार्य कर सकोगे?
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-lightyellow p-6 rounded-lg border-l-4 border-darkyellow">
-                    <h2 className="text-xl font-semibold font-heading  text-maroon mb-4">
-                      समर्पण और सफलता
-                    </h2>
-                    <div className="space-y-3 text-maroon leading-relaxed">
-                      <p>
-                        अध्यात्म परिवार के कार्यवाहक शासन सेवक के साढ़े तीन
-                        करोड़ रोम हर्षित हो गए।
-                      </p>
-                      <p>
-                        उन्होंने तत्काल जवाब दिया:{" "}
-                        <span className="font-bold text-maroon">
-                          अवश्य। मैं अंतरिक्षजी पहुंचता हूं।
-                        </span>
-                      </p>
-                      <p>
-                        किन्तु वहां पहुंचते ही वहां के गंभीर हालत में जान के
-                        जोखम का अंदाज आ गया।
-                      </p>
-                      <p>
-                        पर दादा की भक्ति के उल्लास के सामने जोखम का भय फीका पड़
-                        गया।
-                      </p>
-                      <p>
-                        दादा की भक्ति और समग्र भारत के चतुर्विध संघों के मंगल
-                        आशीष के बल से दादा के लेप का मंगल कार्य संपन्न हुआ।
-                      </p>
-                    </div>
-                  </div>
+                  ))}
 
                   {/* <div className="bg-whitey p-6 rounded-lg border-2 border-light-bg">
                   <p className="text-xl font-bold text-center text-maroon">
@@ -417,8 +293,7 @@ const Page = () => {
                 <div className="space-y-6">
                   <div className="bg-whitey p-8 rounded-md ">
                     <h3 className="text-base font-semibold text-center mb-4 text-maroon">
-                      वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा
-                      क्योंकि उन्हें पता था कि...
+                      {data?.story?.images?.title}
                     </h3>
                     <div className="bg-whitey h-48 flex items-center justify-center rounded-lg mb-4">
                       <img
@@ -431,8 +306,7 @@ const Page = () => {
                       </div> */}
                     </div>
                     <p className="font-semibold text-center text-maroon bg-whitey p-3 rounded">
-                      ठग कारीगर एमसील आदि हल्के द्रव्यों का उपयोग करके प्रभु की
-                      दुर्दशा करते हैं!
+                      {data?.story?.images?.label1}
                     </p>
                   </div>
 
@@ -464,8 +338,7 @@ const Page = () => {
                       <div className="flex flex-col justify-center space-y-4">
                         <div className="bg-whitey p-4 rounded-lg ">
                           <p className="font-semibold text-maroon">
-                            अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड
-                            पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।
+                            {data?.story?.images?.label2}
                           </p>
                         </div>
                         {/* <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
@@ -490,7 +363,7 @@ const Page = () => {
           <div className="mx-auto  max-w-7xl">
             <div className="text-center mb-8 lg:mb-12">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                सौभाग्य का सीमाचिह्न
+                {data?.milestones?.title}
               </h2>
             </div>
 
@@ -503,17 +376,14 @@ const Page = () => {
                 />
               </div> */}
               <div className="block sm:hidden">
-                <HexagonalSvg accentColor="red"/>
-                </div>
+                <HexagonalSvg accentColor="red" />
+              </div>
               <div className="p-6">
                 <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
-                  श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा
+                  {data?.milestones?.items?.[0]?.title}
                 </h4>
                 <p className="text-maroon leading-relaxed">
-                  वि.सं. २०७५-७६ से प्रतिवर्ष भादरवा सुद छठ से आसोज सुद छठ (एक
-                  माह) तक श्री शत्रुंजय तीर्थाधिपति दादा आदिनाथ का ओप (शुद्धि)
-                  सहित महातीर्थ पर विराजमान प्रतिमाओं के ओप आदि का कार्य अविरत
-                  चल रहा है।
+                  {data?.milestones?.items?.[0]?.desc}
                 </p>
               </div>
             </div>
@@ -521,7 +391,7 @@ const Page = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 lg:mb-8">
               {/* Card 1 */}
               <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm h-52 sm:h-auto overflow-hidden hover: transition-shadow">
-                <HexagonalSvg accentColor="red"/>
+                <HexagonalSvg accentColor="red" />
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.7.webp"
@@ -531,20 +401,17 @@ const Page = () => {
                 </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
-                    श्री गिरनार महातीर्थ
+                    {data?.milestones?.items?.[1]?.title}
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    वर्तमान विश्व की सबसे प्राचीन प्रतिमा गिरनार महातीर्थ मंडन
-                    श्री नेमिनाथ दादा की प्रतिमा का शास्त्रवर्णित शुद्ध द्रव्यों
-                    से लेप का कार्य एवं प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ
-                    परमात्मा के ओप का कार्य भी अध्यात्म परिवार द्वारा संपन्न!
+                    {data?.milestones?.items?.[1]?.desc}
                   </p>
                 </div>
               </div>
 
               {/* Card 2 */}
               <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% h-52 sm:h-auto rounded-sm  overflow-hidden hover: transition-shadow">
-                <HexagonalSvg accentColor="red"/>
+                <HexagonalSvg accentColor="red" />
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.8.webp"
@@ -554,19 +421,17 @@ const Page = () => {
                 </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
-                    श्री समेतशिखर महातीर्थ
+                    {data?.milestones?.items?.[2]?.title}
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    इस अवसर्पिणी काल के २०-२० तीर्थंकरों के मोक्ष कल्याणक से
-                    सुवासित श्री समेत्तशिखर महातीर्थ के जलमंदिर में विराजमान
-                    श्री शामला पार्श्वनाथ परमात्मा के लेप का कार्य
+                    {data?.milestones?.items?.[2]?.desc}
                   </p>
                 </div>
               </div>
 
               {/* Card 3 */}
               <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm h-52 sm:h-auto overflow-hidden transition-shadow sm:col-span-2 lg:col-span-1">
-                <HexagonalSvg accentColor="red"/>
+                <HexagonalSvg accentColor="red" />
                 {/* <div className="h-48 sm:h-56 bg-lightyellow flex items-center justify-center">
                   <img
                     src="/jinmurti/jinpratima-suraksha/img-1.9.webp"
@@ -576,16 +441,16 @@ const Page = () => {
                 </div> */}
                 <div className="p-6">
                   <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
-                    श्री शंखेश्वर महातीर्थ
+                    {data?.milestones?.items?.[3]?.title}
                   </h4>
                   <p className="text-maroon leading-relaxed">
-                    की भमती में विराजमान तमाम परमात्माओं के ओप का कार्य
+                    {data?.milestones?.items?.[3]?.desc}
                   </p>
                 </div>
               </div>
             </div>
 
-             <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
+            <div className="relative bg-radial-[at_25%_25%] from-lightpink to-lightyellow to-75% rounded-sm mb-8 h-52 sm:h-auto  overflow-hidden hover: transition-shadow">
               {/* <div className="h-full bg-lightyellow flex items-center justify-center">
                 <img
                   src="/jinmurti/jinpratima-suraksha/img-1.6.webp"
@@ -594,16 +459,14 @@ const Page = () => {
                 />
               </div> */}
               <div className="block sm:hidden">
-                <HexagonalSvg accentColor="red"/>
-                </div>
+                <HexagonalSvg accentColor="red" />
+              </div>
               <div className="p-6">
                 <h4 className="font-semibold font-heading text-xl mb-3 text-maroon">
-                 श्री मक्षीजी तीर्थ
+                  {data?.milestones?.items?.[4]?.title}
                 </h4>
                 <p className="text-maroon leading-relaxed">
-                  श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा
-                के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओं के ओप आदि का
-                कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!
+                  {data?.milestones?.items?.[4]?.desc}
                 </p>
               </div>
             </div>
@@ -614,7 +477,7 @@ const Page = () => {
           <div className="mx-auto  max-w-7xl">
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                प्रत्येक पूजक का एक संकल्प, जिससे भविष्य का नुकसान रुकेगा
+                {data?.pledge?.title}
               </h2>
             </div>
 
@@ -626,7 +489,7 @@ const Page = () => {
 
                 <div className="bg-lightyellow rounded-sm ">
                   <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
-                    'शासन की धरोहर की सुरक्षा के लिए रोज १ मिनट अर्पण करूंगा'।
+                    {data?.pledge?.text1}
                   </p>
                   <div className="flex items-center justify-center my-6">
                     <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
@@ -634,7 +497,7 @@ const Page = () => {
                     <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
                   </div>
                   <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
-                    मै अंगलुंछ्ने से अपने प्रभु को सूखा कर ही पूजा करूंगा।
+                    {data?.pledge?.text2}
                   </p>
                   <div className="flex items-center justify-center my-6">
                     <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
@@ -649,14 +512,14 @@ const Page = () => {
         </section>
       </div>
       <CallToActionButton
-                heading=" जो नुकसान पहले ही हो चुका है उसका क्या?"
-                content=" अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।"
-                id="jinpratima-suraksha-cta"
-                href={
-                  "https://wa.me/918448444050"
-                }
-              />
-    </div>
+        heading={data?.cta?.heading}
+        content={data?.cta?.content}
+        id="jinpratima-suraksha-cta"
+        href={
+          "https://wa.me/918448444050"
+        }
+      />
+    </div >
   );
 };
 

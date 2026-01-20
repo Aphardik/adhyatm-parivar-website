@@ -1,13 +1,15 @@
+"use client";
+import React from "react";
 import CallToActionButton from "@/app/_components/CallToActionButton";
 import HeaderSvg from "@/app/_components/HeaderSvg";
-import React from "react";
-
-export const metadata = {
-  title: "प्राचीन जिनप्रतिमा संग्रहण | जिनप्रतिमा सुरक्षा ",
-  description: "",
-};
+import { useLanguage } from "@/app/_components/LanguageContext";
+import { getSectionData } from "@/app/_utils/sectionData";
 
 const Page = () => {
+  const { language } = useLanguage();
+  const content = getSectionData(language, "jinmurti");
+  const data = content?.jinpratimaSangrahan;
+
   return (
     <div className="max-w-7xl bg-whitey text-maroon font-body">
       {/* Header */}
@@ -17,10 +19,10 @@ const Page = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center sm:text-left">
               <h1 className="text-2xl sm:text-4xl font-heading font-bold text-maroon">
-                प्राचीन जिनप्रतिमा संग्रहण
+                {data?.header?.title}
               </h1>
               <p className="text-sm sm:text-base text-center lg:text-lg text-maroon font-medium">
-                कार्य आरंभ : वि.सं. २०६८
+                {data?.header?.date}
               </p>
             </div>
           </div>
@@ -32,10 +34,7 @@ const Page = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="p-4 sm:p-6">
               <p className="text-maroon text-lg lg:text-xl leading-relaxed text-center">
-                जमीन से निकलने वाली प्रतिमाजी सरकारी म्यूज़ियम आदि अयोग्य
-                स्थानों पर न चली जाएं अपितु योग्य स्थान पर उनकी पूजा हो सके,
-                इसलिए उन प्रतिमाजी का शुद्धिकरण, यदि जरूरत हो तो लेप आदि करके
-                योग्य स्थान पर विराजमान करना। यह कार्य सुचारू रूप से चल रहा है।
+                {data?.intro?.text}
               </p>
             </div>
           </div>
@@ -48,9 +47,7 @@ const Page = () => {
                 <div className="w-12 h-1 bg-darkpink rounded-sm"></div>
               </div>
               <p className="text-center font-semibold text-maroon leading-relaxed text-lg sm:text-xl">
-                साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले
-                जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म
-                परिवार 'सेतु' बन रहा है।
+                {data?.highlight?.text}
               </p>
             </div>
           </section>
@@ -61,7 +58,7 @@ const Page = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 lg:mb-12">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-heading bg-lightpink text-maroon inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-sm">
-                सफलता की कहानी
+                {data?.success?.title}
               </h3>
             </div>
 
@@ -73,9 +70,7 @@ const Page = () => {
                   <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-16">
                     <div className="flex items-start space-x-4">
                       <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
-                        डीसा के नजदीक खेत में से निकले अतिप्राचीन आदिनाथ दादा आज
-                        श्री शांतिकनक जैन संघ, नानपुरा-सूरत जिनालय के महाराजा
-                        बनकर शोभायमान हैं।
+                        {data?.success?.story1}
                       </p>
                     </div>
                   </div>
@@ -121,15 +116,12 @@ const Page = () => {
                   <div className="relative bg-lightyellow border-l-4 border-darkyellow rounded-2xl shadow-lg p-8 lg:p-16">
                     <div className="flex items-start space-x-4">
                       <p className="text-maroon text-lg lg:text-xl leading-relaxed font-medium">
-                        यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक
-                        भूमि रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर
-                        शोभायमान <br />
+                        {data?.success?.story2} <br />
                         <span className="font-bold text-darkpink">
                           {" "}
-                          अतिप्राचीन धर्मनाथ दादा!{" "}
+                          {data?.success?.story2Highlight}{" "}
                         </span>
-                        यह प्रतिमाजी हिम्मतनगर, गुजरात के समीप के खेत से प्राप्त
-                        हुई थी।
+                        {data?.success?.story2End}
                       </p>
                     </div>
                   </div>
@@ -140,8 +132,8 @@ const Page = () => {
         </section>
       </div>
       <CallToActionButton
-        heading="आपको ऐसी प्रतिमाओं की जानकारी है?"
-        content="हम शुद्धिकरण और योग्य स्थान पर विराजमान करने में सहयोग कर सकते हैं।"
+        heading={data?.cta?.heading}
+        content={data?.cta?.content}
         id="jinpratima-suraksha-cta"
         href={
           "https://wa.me/918448444050"
