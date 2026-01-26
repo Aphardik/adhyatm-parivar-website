@@ -66,12 +66,12 @@ const Page = () => {
               <div className=" w-full flex justify-center items-center">
                 <img
                   src="/adhyatm/vihar-suraksha/img-3.20.webp"
-                  alt={data?.images?.[0]?.alt}
+                  alt={data?.captions?.left}
                   className="w-full h-full object-contain rounded-sm shadow"
                 />
               </div>
               <p className="text-whitey py-3 sm:text-base font-semibold text-center leading-relaxed">
-                {data?.images?.[0]?.desc}
+                {data?.captions?.left}
               </p>
             </div>
 
@@ -80,12 +80,12 @@ const Page = () => {
               <div className=" w-full flex justify-center items-center">
                 <img
                   src="/adhyatm/vihar-suraksha/img-3.21.webp"
-                  alt={data?.images?.[1]?.alt}
+                  alt={data?.captions?.right}
                   className="w-full h-full object-contain rounded-sm shadow"
                 />
               </div>
               <p className="text-whitey py-3 sm:text-base font-semibold text-center leading-relaxed">
-                {data?.images?.[1]?.desc}
+                {data?.captions?.right}
               </p>
             </div>
           </div>

@@ -17,6 +17,7 @@ export const LanguageProvider = ({ children }) => {
         document.documentElement.setAttribute("data-language", initialLang);
 
         if (!savedLanguage) {
+            // setIsLanguageModalOpen(false);
             setIsLanguageModalOpen(true);
         }
 

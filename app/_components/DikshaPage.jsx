@@ -294,7 +294,7 @@ const Timeline = () => {
           </p>
 
           <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>63</span> दीक्षा
+            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>64</span> दीक्षा
           </p>
 
 
@@ -319,12 +319,12 @@ const Timeline = () => {
           </div>
 
           {/* Auto-Sliding Carousel */}
-          {/* <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
+          <div className="relative w-full max-w-4xl mx-auto my-8 md:my-12">
             <div className="relative inline-block w-full text-center my-6">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
               <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-                63 दीक्षार्थियों के
+                64 दीक्षार्थियों के
                 <span className="block mt-1">
                   'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
                 </span>
@@ -373,7 +373,7 @@ const Timeline = () => {
                 ))}
               </div>
             </div>
-          </div> */}
+          </div>
           {/* Rang Chhata Section */}
           <RangChhataSection />
 

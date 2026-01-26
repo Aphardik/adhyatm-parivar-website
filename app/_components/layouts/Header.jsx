@@ -415,14 +415,14 @@ const Header = () => {
 
             {/* Desktop */}
             <div className="flex items-center space-x-4">
-              <button
+              {/* <button
                 onClick={() => setIsLanguageModalOpen(true)}
                 className="p-2 text-maroon hover:bg-lightpink rounded-full transition-colors flex items-center gap-2"
                 title="Change Language"
               >
                 <HiOutlineTranslate className="w-6 h-6" />
                 <span className="text-sm font-bold uppercase">{language}</span>
-              </button>
+              </button> */}
               <Link
                 href="/contactus"
                 className={`bg-maroon hidden md:flex font-body hover:bg-maroon/90 text-white px-6 py-2 rounded-full font-medium transition-colors flex items-center justify-center ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}
