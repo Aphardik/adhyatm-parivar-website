@@ -2,8 +2,12 @@
 import Link from "next/link";
 import React from "react";
 import HexagonalSvg from "./HexagonalSvg";
+import { FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "./LanguageContext";
 
 const CallToActionButton = ({ heading, content, id, href }) => {
+  const { language } = useLanguage();
+
   return (
     <div className="bg-gradient-to-r  from-maroon to-maroon/80 text-whitey shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden p-8 sm:p-12">
       {/* Header */}
@@ -36,15 +40,11 @@ const CallToActionButton = ({ heading, content, id, href }) => {
             >
               {/* Show SVG only if NOT book-cta */}
               {id !== "books-cta" && (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-..." />
-                </svg>
+                <FaWhatsapp className="w-5 h-5" />
               )}
 
-              {id == "books-cta" ? "देखें →" : "संपर्क करें"}
+              {id == "books-cta" ? language === "gu" ? "View" : "View →" : language === "gu" ? "સંપર્ક કરો" : "Contact Us"}
             </Link>
-
-
           </div>
         </div>
       </div>

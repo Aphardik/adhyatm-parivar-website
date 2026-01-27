@@ -1,0 +1,14 @@
+{
+    "tabs": {
+        "suddhDravya": "Suddh Dravya Praptisthan",
+        "pustak": "Pustak Praptisthan"
+    },
+    "searchPlaceholder": "Search by city or area...",
+    "noResults": {
+        "suddhDravya": "No Suddh Dravya Praptisthan found",
+        "pustak": "No Pustak Praptisthan found"
+    },
+    "cta": "Contact for special information on your nearest Praptisthan.",
+    "footer": "Pustak/Suddh Dravya Praptisthan in total {count} areas",
+    "locationUnit": "locations"
+}

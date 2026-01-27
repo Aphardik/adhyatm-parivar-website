@@ -3,19 +3,31 @@ import { useState, useMemo } from 'react';
 import { BiSearch, BiChevronDown, BiChevronUp, BiPhone, BiMapPin } from 'react-icons/bi';
 import { IoLocation } from "react-icons/io5";
 import { FiBook } from "react-icons/fi";
-import {suddhDravyaPraptisthanData} from "@/app/data/suddhDravyaPraptisthan"
-import {pustakPraptisthanData} from "@/app/data/pustakPraptisthan"
+import hiSuddhDravyaData from "@/app/data/sections/hi/suddhDravyaPraptisthan.json";
+import hiPustakData from "@/app/data/sections/hi/pustakPraptisthan.json";
+import guSuddhDravyaData from "@/app/data/sections/gu/suddhDravyaPraptisthan.json";
+import guPustakData from "@/app/data/sections/gu/pustakPraptisthan.json";
 import HexagonalSvg from './HexagonalSvg';
 import Link from 'next/link';
 import CallToActionButton from './CallToActionButton';
+import { useLanguage } from './LanguageContext';
 
 const Praptisthan = () => {
+  const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('suddh-dravya');
   const [collapsedCities, setCollapsedCities] = useState({});
 
-  const currentData = activeTab === 'suddh-dravya' ? suddhDravyaPraptisthanData : pustakPraptisthanData;
-  const tabTitle = activeTab === 'suddh-dravya' ? 'शुद्धद्रव्य प्राप्तिस्थान' : 'पुस्तक प्राप्तिस्थान';
+  // Select data based on language
+  const currentData = useMemo(() => {
+    if (activeTab === 'suddh-dravya') {
+      return language === 'gu' ? guSuddhDravyaData : hiSuddhDravyaData;
+    } else {
+      return language === 'gu' ? guPustakData : hiPustakData;
+    }
+  }, [activeTab, language]);
+
+  const tabTitle = activeTab === 'suddh-dravya' ? t('praptisthan.tabs.suddhDravya') : t('praptisthan.tabs.pustak');
 
   // Extract unique areas from data
   const processedData = useMemo(() => {
@@ -65,7 +77,7 @@ const Praptisthan = () => {
           </h3>
           <div className="flex items-center gap-2">
             <span className="text-sm bg-whitey/20 px-2 py-1 font-body rounded-full">
-              {areas.length} स्थान
+              {areas.length} {t('praptisthan.locationUnit')}
             </span>
             {collapsedCities[city] ? (
               <BiChevronDown className="w-6 h-6" />
@@ -100,28 +112,6 @@ const Praptisthan = () => {
     </div>
   );
 
-  const CallToActionCard = () => (
-    <div className="bg-gradient-to-r from-maroon to-maroon/80 text-whitey shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
-      <HexagonalSvg accentColor="rgba(255,255,255,0.1)"/>
-      <div className="p-8 text-center relative z-10">
-        <div className="flex justify-center mb-4">
-          <div className="bg-whitey/20 p-4 rounded-full">
-            <BiPhone className="w-8 h-8" />
-          </div>
-        </div>
-        <h3 className="text-xl sm:text-2xl font-heading font-bold mb-4">
-          आपके नज़दीकी प्राप्तिस्थान की विशेष जानकारी के लिए संपर्क करें।
-        </h3>
-        <p className="text-base sm:text-lg font-body opacity-90 mb-6">
-          पूरी जानकारी और पता प्राप्त करने के लिए हमसे संपर्क करें
-        </p>
-        <Link href="https://wa.me/918448444050" className="bg-whitey text-maroon font-body font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 shadow-md">
-          संपर्क करें
-        </Link>
-      </div>
-    </div>
-  );
-
   const totalLocations = Object.values(filteredData).reduce((sum, areas) => sum + areas.length, 0);
 
   return (
@@ -144,7 +134,7 @@ const Praptisthan = () => {
                 }`}
               >
                 <IoLocation className="hidden sm:block w-5 h-5" />
-                शुद्धद्रव्य प्राप्तिस्थान
+                {t('praptisthan.tabs.suddhDravya')}
               </button>
               <button
                 onClick={() => {
@@ -158,7 +148,7 @@ const Praptisthan = () => {
                 }`}
               >
                 <FiBook className="hidden sm:block w-5 h-5" />
-                पुस्तक प्राप्तिस्थान
+                {t('praptisthan.tabs.pustak')}
               </button>
             </div>
           </div>
@@ -170,7 +160,7 @@ const Praptisthan = () => {
             </div>
             <input
               type="text"
-              placeholder="शहर या क्षेत्र से खोजें..."
+              placeholder={t('praptisthan.searchPlaceholder')}
               className="w-full placeholder:font-body bg-whitey placeholder:text-content pl-10 pr-4 py-3 text-sm border rounded-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-maroon/60 focus:border-gray-400"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -184,7 +174,7 @@ const Praptisthan = () => {
         {Object.keys(filteredData).length === 0 ? (
           <div className="text-center py-12">
             <p className="text-xl text-content font-body">
-              {activeTab === 'suddh-dravya' ? 'कोई शुद्धद्रव्य प्राप्तिस्थान नहीं मिला' : 'कोई पुस्तक प्राप्तिस्थान नहीं मिला'}
+              {activeTab === 'suddh-dravya' ? t('praptisthan.noResults.suddhDravya') : t('praptisthan.noResults.pustak')}
             </p>
           </div>
         ) : (
@@ -195,7 +185,7 @@ const Praptisthan = () => {
             
             {/* Call to Action Card */}
             <CallToActionButton 
-             heading="आपके नज़दीकी प्राप्तिस्थान की विशेष जानकारी के लिए संपर्क करें।"
+             heading={t('praptisthan.cta')}
                 id="contactus-cta"
                 href={
                   "https://wa.me/918448444050"
@@ -208,7 +198,7 @@ const Praptisthan = () => {
       {/* Footer */}
       <div className="bg-whitey border-t-2 border-gray-300 mt-12">
         <div className="max-w-7xl mx-auto px-4 py-6 font-heading text-center text-content">
-          <p>कुल {totalLocations} क्षेत्रों में {tabTitle}</p>
+          <p>{t('praptisthan.footer').replace('{count}', totalLocations).replace('{title}', tabTitle)}</p>
         </div>
       </div>
     </div>
