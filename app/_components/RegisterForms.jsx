@@ -467,7 +467,7 @@ const RegisterForm = () => {
 
       <section className="mt-6 px-4 max-w-7xl mx-auto">
         <CallToActionButton
-          heading="अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची देखने के लिए यहाँ क्लिक करे"
+          heading={formData?.booksCtaHeading}
           content=""
           href="/books"
           id="books-cta"

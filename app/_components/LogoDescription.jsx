@@ -30,6 +30,21 @@ const LogoDescription = () => {
         </div>
       </section>
 
+      {/* Mobile Symbolic Logo Section */}
+      <section className="md:hidden px-5 mb-16">
+        <div className="max-w-md mx-auto bg-[#330000] rounded-2xl p-6 flex flex-col items-center text-center gap-4 border-2 border-[#e1c18d] shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            {/* <div className="absolute top-1/2 left-2 -translate-y-1/2 text-white text-2xl">❧</div>
+            <div className="absolute top-1/2 right-2 -translate-y-1/2 text-white text-2xl rotate-180">❧</div> */}
+          </div>
+          <img src="/basic_logo.png" alt="Symbolic Logo" className="h-24 object-contain z-10" />
+          <div className={`z-10 ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+            <h3 className="text-white font-bold text-lg mb-2">{content?.logoDescription?.symbolicLogo?.title}</h3>
+            <p className="text-white/90 text-sm leading-relaxed">{content?.logoDescription?.symbolicLogo?.desc}</p>
+          </div>
+        </div>
+      </section>
+
       <div className="hidden md:block px-8 py-16 font-body mx-auto">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-[#01044c] font-semibold text-3xl text-center font-heading mb-8">
@@ -106,6 +121,41 @@ const LogoDescription = () => {
                   {items[8]?.desc}
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Desktop Symbolic Logo Section */}
+          <div className="mt-20 max-w-7xl mx-auto bg-[#330000] rounded-2xl p-4 flex items-center gap-12 border-2 border-[#e1c18d] shadow-2xl relative overflow-hidden group">
+            {/* Background pattern */}
+            <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
+
+            {/* Decorative Side Icons */}
+            {/* <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[#e1c18d] text-4xl opacity-30 group-hover:opacity-100 transition-opacity">
+              <svg width="40" height="60" viewBox="0 0 40 60" fill="currentColor">
+                <path d="M20,0 C20,0 40,20 40,30 C40,40 30,50 20,50 C10,50 0,40 0,30 C0,20 20,0 20,0 Z M20,10 C20,10 10,25 10,30 C10,35 15,38 20,38 C25,38 30,35 30,30 C30,25 20,10 20,10 Z" />
+                <path d="M20,52 C25,52 30,55 30,58 L10,58 C10,55 15,52 20,52 Z" />
+              </svg>
+            </div>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-[#e1c18d] text-4xl opacity-30 group-hover:opacity-100 transition-opacity rotate-180">
+              <svg width="40" height="60" viewBox="0 0 40 60" fill="currentColor">
+                <path d="M20,0 C20,0 40,20 40,30 C40,40 30,50 20,50 C10,50 0,40 0,30 C0,20 20,0 20,0 Z M20,10 C20,10 10,25 10,30 C10,35 15,38 20,38 C25,38 30,35 30,30 C30,25 20,10 20,10 Z" />
+                <path d="M20,52 C25,52 30,55 30,58 L10,58 C10,55 15,52 20,52 Z" />
+              </svg>
+            </div> */}
+
+            <div className="w-1/3 flex justify-center z-10 shrink-0">
+              <div className="p-4 rounded-full ">
+                <img src="/basic_logo.png" alt="Symbolic Logo" className="h-40 object-contain drop-shadow-[0_0_15px_rgba(225,193,141,0.3)]" />
+              </div>
+            </div>
+
+            <div className={`w-2/3 text-white z-10 `}>
+              <h3 className={`text-2xl font-bold mb-4 text-[#e1c18d] ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+                {content?.logoDescription?.symbolicLogo?.title}
+              </h3>
+              <p className={`text-lg leading-relaxed text-white/90 ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
+                {content?.logoDescription?.symbolicLogo?.desc}
+              </p>
             </div>
           </div>
         </div>

@@ -43,7 +43,11 @@
                 "title": "Kamala (Lotus)",
                 "desc": "Indicator of that detached state which is to be attained through the devotion and protection of the seven fields!"
             }
-        ]
+        ],
+        "symbolicLogo": {
+            "title": "Due to other reasons like Ashatana etc.",
+            "desc": "Wherever the main logo cannot be used, this symbolic logo of Adhyatm Parivar is used in its place."
+        }
     },
     "vibhag": [
         {
@@ -118,6 +122,7 @@
         "register": "Register",
         "outOfStock": "Out Of Stock",
         "noForms": "No forms are currently available for registration.",
+        "booksCtaHeading": "Click here to see the list of all books published by Adhyatm Parivar",
         "address": {
             "line1": "Adhyatm Bhavan",
             "line2": "3rd Floor, Anand Shravak Aradhana Bhavan",

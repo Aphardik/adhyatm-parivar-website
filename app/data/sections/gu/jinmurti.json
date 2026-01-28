@@ -4,27 +4,27 @@
         "stats": [
             {
                 "count": "653",
-                "label": "कुल संघ जिनालय",
+                "label": "કુલ સંઘ જિનાલયો",
                 "color": "bg-gradient-to-b from-yellow-400 to-orange-500"
             },
             {
                 "count": "12002",
-                "label": " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा",
+                "label": "કુલ આરસના પરમાત્માની શુદ્ધિ-સુરક્ષા",
                 "color": "bg-gradient-to-b from-green-400 to-green-600"
             },
             {
                 "count": "4865",
-                "label": " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा",
+                "label": "કુલ ધાતુના પરમાત્માની શુદ્ધિ-સુરક્ષા",
                 "color": "bg-gradient-to-b from-teal-400 to-teal-600"
             },
             {
                 "count": "1Cr +",
-                "label": "श्रीसंघ द्वारा सद्व्यय",
+                "label": "શ્રી સંઘ દ્વારા સદવ્યય",
                 "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             },
             {
                 "count": "3.5Cr +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "label": "અધ્યાત્મ પરિવાર દ્વારા સદવ્યય",
                 "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             }
         ],

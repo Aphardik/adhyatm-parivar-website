@@ -7,6 +7,7 @@ import GoogleAnalytics from "./_components/googleAnalytics/GoogleAnalytics";
 import GoogleTrack from "./_components/googleAnalytics/GoogleTrack";
 import { LanguageProvider } from "./_components/LanguageContext";
 import LanguageModal from "./_components/LanguageModal";
+import MetadataManager from "./_components/MetadataManager";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         className="font-body bg-white"
       >
         <LanguageProvider>
+          <MetadataManager />
           <Header />
 
           {/* <div className='max-w-7xl min-h-dvh pt-16 flex items-center justify-center mx-auto px-2 sm:px-6'> */}

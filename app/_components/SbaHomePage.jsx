@@ -17,11 +17,11 @@ const PhotoGalleryHome = () => {
   // Memoize the latest photos to prevent recalculation on every render
   const latestPhotos = useMemo(() => {
     // Check if photoData1 has the current language key, strictly
-    const key = language === 'hi' ? 'hindi' : (photoData1[language] ? language : 'hindi');
+    const key = language === 'hi' ? 'hindi' : (language === 'gu' ? 'gujarati' : 'hindi');
     const allPhotos = [...(photoData1[key] || photoData1.hindi || [])];
     return allPhotos
       .sort((a, b) => new Date(a.date) - new Date(b.date))
-      .slice(0, 4);
+      .slice(0, 3);
   }, [language]);
 
   // Memoized navigation handlers to prevent unnecessary re-renders
@@ -253,7 +253,7 @@ const PhotoGalleryHome = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid grid-cols-4 gap-4 sm:gap-6">
+        <div className="hidden lg:grid grid-cols-3 gap-4 sm:gap-6">
           {latestPhotos.map((photo, index) => (
             <PhotoCard key={photo.id} photo={photo} index={index} />
           ))}
