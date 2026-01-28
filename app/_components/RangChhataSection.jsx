@@ -1,21 +1,31 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import Image3DCarousel from './Image3DCarousel';
+import { useLanguage } from './LanguageContext';
+import { getSectionData } from '../_utils/sectionData';
 
 const RangChhataSection = () => {
-    const [activeLanguage, setActiveLanguage] = useState('Hindi');
+    const { language } = useLanguage();
+    const content = getSectionData(language, "diksha");
 
     const getFontClass = (lang) => {
         switch (lang) {
-            case 'Hindi': return 'font-heading';
-            case 'Gujarati': return 'font-anek';
-            case 'English': return 'font-sans';
+            case 'hi': return 'font-heading';
+            case 'gu': return 'font-anek';
+            case 'en': return 'font-sans';
             default: return 'font-heading';
         }
     };
 
-    const images = {
-        Hindi: [
+    const [localLang, setLocalLang] = React.useState(language);
+
+    // Update local language when global language changes
+    React.useEffect(() => {
+        setLocalLang(language);
+    }, [language]);
+
+    const imagesMapping = {
+        hi: [
             "/diksha/rangchhata-1H.webp",
             "/diksha/rangchhata-2H.webp",
             "/diksha/rangchhata-3H.webp",
@@ -27,9 +37,8 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-9H.webp",
             "/diksha/rangchhata-10H.webp",
             "/diksha/rangchhata-11H.webp",
-
         ],
-        Gujarati: [
+        gu: [
             "/diksha/rangchhata-1G.webp",
             "/diksha/rangchhata-2G.webp",
             "/diksha/rangchhata-3G.webp",
@@ -42,7 +51,7 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-10G.webp",
             "/diksha/rangchhata-11G.webp",
         ],
-        English: [
+        en: [
             "/diksha/rangchhata-1E.webp",
             "/diksha/rangchhata-2E.webp",
             "/diksha/rangchhata-3E.webp",
@@ -57,58 +66,42 @@ const RangChhataSection = () => {
         ]
     };
 
-    const titles = {
-        Hindi: "रंग छटा",
-        Gujarati: "રંગ છાંટણા",
-        English: "Flashes of Diksha Mahotsav"
-    };
+    const languages = [
+        { code: 'hi', label: 'हिन्दी' },
+        { code: 'gu', label: 'ગુજરાતી' },
+        { code: 'en', label: 'English' }
+    ];
 
     return (
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-            <div className="text-center mb-2 relative">
-                <div className={`relative inline-block w-full text-center my-2 ${getFontClass(activeLanguage)}`}>
+            <div className="text-center mb-8 relative">
+                <div className={`relative inline-block w-full text-center my-2 ${getFontClass(language)}`}>
                     <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
                     <h2 className="relative text-3xl md:text-5xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent pb-2 leading-snug">
-                        {titles[activeLanguage]}
+                        {content?.rangChhata?.title}
                     </h2>
                 </div>
 
-                <div className="flex justify-center relative z-10">
-                    <div className="relative flex items-center bg-gray-300 rounded-3xl p-1 shadow-inner">
+                {/* Language Toggle Buttons */}
+                <div className="flex justify-center gap-3 mt-6">
+                    {languages.map((lang) => (
                         <button
-                            onClick={() => setActiveLanguage('Hindi')}
-                            className={`relative cursor-pointer px-6 py-2 rounded-3xl text-sm md:text-base font-bold transition-all duration-300 ease-in-out transform font-heading ${activeLanguage === 'Hindi'
-                                ? 'bg-black text-white shadow-lg scale-105'
-                                : 'text-gray-600 hover:text-maroon'
-                                }`}
+                            key={lang.code}
+                            onClick={() => setLocalLang(lang.code)}
+                            className={`px-6 py-2 rounded-full transition-all duration-300 font-medium text-sm md:text-base shadow-sm
+                                ${localLang === lang.code
+                                    ? 'bg-maroon text-white scale-105 shadow-maroon/20'
+                                    : 'bg-white text-maroon hover:bg-red-50 border border-red-100 hover:scale-105'}`}
                         >
-                            हिन्दी
+                            {lang.label}
                         </button>
-                        <button
-                            onClick={() => setActiveLanguage('Gujarati')}
-                            className={`relative cursor-pointer px-6 py-2 rounded-3xl text-sm md:text-base font-bold transition-all duration-300 ease-in-out transform font-anek ${activeLanguage === 'Gujarati'
-                                ? 'bg-black text-white shadow-lg scale-105'
-                                : 'text-gray-600 hover:text-maroon'
-                                }`}
-                        >
-                            ગુજરાતી
-                        </button>
-                        <button
-                            onClick={() => setActiveLanguage('English')}
-                            className={`relative cursor-pointer px-6 py-2 rounded-3xl text-sm md:text-base font-bold transition-all duration-300 ease-in-out transform font-sans ${activeLanguage === 'English'
-                                ? 'bg-black text-white shadow-lg scale-105'
-                                : 'text-gray-600 hover:text-maroon'
-                                }`}
-                        >
-                            English
-                        </button>
-                    </div>
+                    ))}
                 </div>
             </div>
 
             <div className="relative animate-fade-in">
-                <Image3DCarousel key={activeLanguage} images={images[activeLanguage]} />
+                <Image3DCarousel key={localLang} images={imagesMapping[localLang] || imagesMapping['hi']} />
             </div>
 
             <style jsx>{`

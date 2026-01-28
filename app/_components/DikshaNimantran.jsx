@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLanguage } from './LanguageContext';
+import { getSectionData } from '../_utils/sectionData';
 
 const scheduleData = [
     {
@@ -117,38 +119,40 @@ const HighlightedTitle = ({ title }) => {
 };
 
 const DikshaNimantran = () => {
+    const { language } = useLanguage();
+    const content = getSectionData(language, "diksha");
+    const scheduleData = content?.nimantran?.schedule || [];
+
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-20 font-heading">
+        <div className={`w-full max-w-7xl mx-auto px-4 py-8 md:py-20 ${language === 'hi' ? 'font-heading' : language === 'gu' ? 'font-anek' : 'font-sans'}`}>
             {/* Header Section */}
             <div className="text-center mb-8 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-200/20 via-orange-200/20 to-amber-200/20 blur-3xl -z-10"></div>
                 <p className="text-lg md:text-2xl text-maroon font-extrabold mb-2">
-                    600 से अधिक श्रमण-श्रमणी भगवंतों की पवित्र ऊर्जामय उपस्थिति में
+                    {content?.nimantran?.presence_shraman}
                 </p>
                 {/* <p className="text-4xl pt-2 md:text-5xl lg:text-6xl font-black bg-gradient-to-b from-maroon to-red-600 bg-clip-text text-transparent pb-4">
                     संयमरंग उत्सव
                 </p> */}
                 <img src="/diksha/sanyamrang.png" className="w-full max-w-[500px] mb-4 mx-auto" alt="" />
-                <p className="text-xl md:text-3xl text-maroon font-bold">
-                    के शामियाने में पधारने के लिए <br className="md:hidden" /> सस्नेह सन्निमंत्रणम् !
-                </p>
+                <p className="text-xl md:text-3xl text-maroon font-bold" dangerouslySetInnerHTML={{ __html: content?.nimantran?.invitation_text }} />
             </div>
             {/* Schedule Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
                 {scheduleData.map((day, idx) => (
                     <div
                         key={idx}
-                        className={`group relative bg-gradient-to-br ${day.theme.bg} rounded-sm p-6 md:p-12 shadow-md border ${day.theme.border} hover:shadow-2xl transition-all duration-500 overflow-hidden`}
+                        className={`group relative bg-gradient-to-br from-pink-50 to-rose-50 rounded-sm p-6 md:p-12 shadow-md border border-pink-200 hover:shadow-2xl transition-all duration-500 overflow-hidden`}
                     >
                         {/* Background Decorative Element */}
-                        <div className={`absolute top-0 right-0 w-48 h-48 ${day.theme.glow} rounded-bl-full -z-0 opacity-40 group-hover:scale-110 transition-transform duration-500`}></div>
+                        <div className={`absolute top-0 right-0 w-48 h-48 bg-pink-400/20 rounded-bl-full -z-0 opacity-40 group-hover:scale-110 transition-transform duration-500`}></div>
 
                         <div className="relative z-10">
                             <div className="flex flex-col items-center text-center gap-2 mb-4">
                                 <h3 className="text-2xl md:text-3xl font-black text-maroon">{day.day}</h3>
                                 <p className="text-gray-700 font-bold text-lg md:text-xl">{day.tithi}</p>
-                                <div className={`bg-gradient-to-r font-sans ${day.theme.accent} text-white px-8 py-2 rounded-full text-sm md:text-lg font-bold shadow-xl border-2 border-white/20 transform hover:scale-105 transition-transform mt-2`}>
-                                    {day.date}
+                                <div className={`bg-gradient-to-r font-sans from-pink-600 to-rose-600 text-white px-8 py-2 rounded-full text-sm md:text-lg font-bold shadow-xl border-2 border-white/20 transform hover:scale-105 transition-transform mt-2`}>
+                                    {day.date || (idx === 0 ? "04-02-2026" : idx === 1 ? "05-02-2026" : idx === 2 ? "06-02-2026" : idx === 3 ? "07-02-2026" : "08-02-2026")}
                                 </div>
                                 <div className="w-full h-px bg-gradient-to-r from-transparent via-maroon/20 to-transparent mt-2 mb-2"></div>
                             </div>

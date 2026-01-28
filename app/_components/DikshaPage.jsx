@@ -7,8 +7,12 @@ import Image3DCarousel from "./Image3DCarousel";
 import RangChhataSection from "./RangChhataSection";
 import NewsInfiniteCarousel from "./NewsInfiniteCarousel";
 import DikshaNimantran from "./DikshaNimantran";
+import { useLanguage } from "./LanguageContext";
+import { getSectionData } from "../_utils/sectionData";
 
 const Timeline = () => {
+  const { language } = useLanguage();
+  const content = getSectionData(language, "diksha");
   const [activeImageIndex, setActiveImageIndex] = useState({});
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -31,7 +35,7 @@ const Timeline = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const timelineData = [
+  const timelineDataStatic = [
     {
       year: 2024,
       logo: "/diksha/35DikshaAhmedabad.webp",
@@ -216,6 +220,12 @@ const Timeline = () => {
     },
   ];
 
+  const timelineData = (content?.timeline?.items || []).map((item, index) => ({
+    ...item,
+    logo: timelineDataStatic[index]?.logo,
+    images: timelineDataStatic[index]?.images,
+  }));
+
   const handleNextImage = (yearIndex) => {
     const currentIndex = activeImageIndex[yearIndex] || 0;
     const maxIndex = timelineData[yearIndex].images.length - 1;
@@ -280,21 +290,19 @@ const Timeline = () => {
       {/* Announcement Text Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-12">
         <div className="text-center space-y-2 md:space-y-3">
-          <p className="text-lg md:text-xl text-gray-700 font-medium">
-            ऐतिहासिक <span className='font-bold text-xl text-maroon md:text-2xl'> 17-45-36-26-44-18-74-35 </span> आदि
+          <p className={`text-lg md:text-xl text-gray-700 font-medium ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+            {content?.banner?.historical_dikshas} <span className="text-maroon text-xl md:text-2xl font-bold"> 17-45-36-26-44-18-74-35 </span> {content?.banner?.historical_dikshas_etc}
           </p>
-          <p className="text-base md:text-lg text-gray-600">
-            अनेक सामूहिक दीक्षा के बाद फिर एकबार
+          <p className={`text-base md:text-lg text-gray-600 ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+            {content?.banner?.after_many_dikshas}
           </p>
-          <p className="text-xl md:text-2xl text-amber-600 font-bold italic">
-            'सूरियोग' की अद्वितीय वाणी के प्रभाव से...
+          <p className={`text-xl md:text-2xl text-amber-600 font-bold italic ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+            {content?.banner?.surayog_voice}
           </p>
-          <p className="text-lg md:text-xl text-gray-700 font-semibold">
-            महाराष्ट्र की धरा पर सदियों में सर्वप्रथम बार <br /> एक ही साथ एक ही मंडप में
-          </p>
+          <p className={`text-lg md:text-xl text-gray-700 font-semibold ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`} dangerouslySetInnerHTML={{ __html: content?.banner?.maharashtra_first_time }} />
 
-          <p className="text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold">
-            सामूहिक <span className='font-extrabold text-4xl md:text-5xl lg:text-6xl'>64</span> दीक्षा
+          <p className={`text-3xl md:text-4xl lg:text-5xl pt-2 text-maroon font-bold ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+            {content?.banner?.collective_64_diksha}
           </p>
 
 
@@ -309,11 +317,11 @@ const Timeline = () => {
               className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="relative z-10 text-center space-y-1 md:space-y-2 px-6">
-              <div className="text-base md:text-xl font-extrabold text-gray-700 uppercase tracking-wider">दीक्षा दिन</div>
+              <div className={`text-base md:text-xl font-extrabold text-gray-700 uppercase tracking-wider ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>{content?.banner?.diksha_day_title}</div>
               {/* <div className="h-px w-12 md:w-16 bg-maroon/30 mx-auto"></div> */}
               <div className="space-y-0.5">
-                <div className="text-maroon font-bold text-xl md:text-2xl">माघ वदी 7</div>
-                <div className="text-maroon font-bold text-lg md:text-xl">February 8, 2026</div>
+                <div className={`text-maroon font-bold text-xl md:text-2xl ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>{content?.banner?.diksha_date_tithi}</div>
+                <div className="text-maroon font-bold text-lg md:text-xl">{content?.banner?.diksha_date_english}</div>
               </div>
             </div>
           </div>
@@ -323,10 +331,10 @@ const Timeline = () => {
             <div className="relative inline-block w-full text-center my-6">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
 
-              <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-                64 दीक्षार्थियों के
+              <h2 className={`relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+                {content?.banner?.muhurt_title}
                 <span className="block mt-1">
-                  'दीक्षा मुहूर्तप्रदान महोत्सव' की एक झांकी
+                  {content?.banner?.muhurt_subtitle}
                 </span>
               </h2>
             </div>
@@ -388,11 +396,11 @@ const Timeline = () => {
 
             <div className="relative rounded-sm shadow-2xl border border-amber-200/50 overflow-hidden group hover:shadow-hover-light transition-all duration-300 text-left">
               <div className="relative bg-gradient-to-br from-white via-amber-50/30 to-white p-6 md:p-8 border-b border-amber-100">
-                <h3 className="text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3">
-                  दीक्षा स्थान
+                <h3 className={`text-lg md:text-2xl text-center font-extrabold text-gray-700 mb-3 ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+                  {content?.banner?.location_title}
                 </h3>
-                <p className="text-maroon font-bold text-lg md:text-2xl leading-tight text-center">
-                  चिकूवाड़ी प्लेग्राउंड, 85, कांति पार्क रोड, गोराई 1, बोरीवली वेस्ट, मुंबई, महाराष्ट्र 400092
+                <p className={`text-maroon font-bold text-lg md:text-2xl leading-tight text-center ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+                  {content?.banner?.address}
                 </p>
               </div>
 
@@ -417,8 +425,8 @@ const Timeline = () => {
           <div className="relative w-full max-w-4xl mx-auto my-6 md:my-16">
             <div className="relative inline-block w-full text-center mb-4 px-4">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-300/40 via-red-200/40 to-pink-300/40 blur-xl"></div>
-              <h2 className="relative text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug">
-                महाराष्ट्र के मुंबई नगरी में जैन शासन के इतिहास में पहली बार जगमशहूर  जैनाचार्य श्री योगतिलकसूरी महाराजा की निश्रा में 59  जैन मुमुक्षु का दीक्षा लेने का मुहूर्त प्रदान किया गया
+              <h2 className={`relative text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 leading-snug ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+                {content?.banner?.newspaper_headline}
               </h2>
             </div>
             <NewsInfiniteCarousel
@@ -449,11 +457,10 @@ const Timeline = () => {
             <div className="flex-grow h-px bg-gradient-to-r from-transparent via-maroon/30 to-transparent max-w-md"></div>
           </div>
 
-          {/* Main Heading */}
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-orange-200/40 to-amber-200/40 blur-xl"></div>
-            <h2 className="relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2">
-              पिछले कुछ सालों में हुई सामूहिक दीक्षा की झलक
+            <h2 className={`relative text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-maroon via-amber-700 to-maroon bg-clip-text text-transparent py-2 ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
+              {content?.banner?.past_dikshas_title}
             </h2>
           </div>
         </div>
@@ -493,8 +500,8 @@ const Timeline = () => {
 
                     {/* Info */}
                     <div className="flex-1 min-w-0 text-center my-auto">
-                      <h3 className="text-lg font-bold text-gray-800"><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> दीक्षा</h3>
-                      <p className="text-maroon text-lg font-semibold leading-relaxed">{item.description}</p>
+                      <h3 className={`text-lg font-bold text-gray-800 ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}><span className='text-2xl text-maroon font-extrabold'>{item.title} </span> {content?.timeline?.diksha_label}</h3>
+                      <p className={`text-maroon text-lg font-semibold leading-relaxed ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>{item.description}</p>
                       <div className="space-y-0">
                         <div className="text-center text-gray-600">
                           <span className="text-base">{item.place}</span>
@@ -543,13 +550,13 @@ const Timeline = () => {
                       </div>
 
                       <div className="flex-1 text-center my-auto">
-                        <h3 className="text-xl font-bold text-gray-700 mb-1">
+                        <h3 className={`text-xl font-bold text-gray-700 mb-1 ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
                           <span className="text-4xl text-maroon">
                             {item.title}{" "}
                           </span>
-                          दीक्षा
+                          {content?.timeline?.diksha_label}
                         </h3>
-                        <h3 className="text-maroon font-extrabold text-xl lg:text-3xl leading-relaxed">
+                        <h3 className={`text-maroon font-extrabold text-xl lg:text-3xl leading-relaxed ${language === 'gu' ? 'font-anek' : language === 'hi' ? 'font-heading' : ''}`}>
                           {item.description}
                         </h3>
                         <p className="text-gray-700 text-lg font-medium">

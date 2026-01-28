@@ -1,0 +1,618 @@
+{
+    "banner": {
+        "historical_dikshas": "Historical.",
+        "historical_dikshas_etc": "etc.",
+        "after_many_dikshas": "Once again after many collective Dikshas",
+        "surayog_voice": "By the influence of the unique voice of 'Surayog'...",
+        "maharashtra_first_time": "For the first time in centuries on the land of Maharashtra <br /> All together in one pavilion",
+        "collective_64_diksha": "Collective 64 Diksha",
+        "diksha_day_title": "Diksha Day",
+        "diksha_date_tithi": "Magh Vadi 7",
+        "diksha_date_english": "February 8, 2026",
+        "muhurt_title": "A glimpse of the",
+        "muhurt_subtitle": "'Diksha Muhurt Presentation Ceremony' of 64 candidates",
+        "location_title": "Diksha Location",
+        "address": "Chikoowadi Playground, 85, Kanti Park Road, Gorai 1, Borivali West, Mumbai, Maharashtra 400092",
+        "newspaper_headline": "For the first time in the history of Jain Shasan in Mumbai, Maharashtra, under the guidance of world-renowned Jainacharya Shri Yogtilaksuri Maharaja, the Muhurt for the Diksha of 59 Jain Mumukshus was presented",
+        "past_dikshas_title": "A glimpse of collective Dikshas held in recent years"
+    },
+    "rangChhata": {
+        "title": "Flashes of Diksha Mahotsav"
+    },
+    "details": {
+        "title": "Details of 63 Candidates",
+        "male_title": "Male Candidates",
+        "female_title": "Female Candidates",
+        "mumukshu_ratna_m": "Mumukshu Ratna",
+        "mumukshu_ratna_f": "Mumukshu Ratna",
+        "age_prefix": "Age: ",
+        "maleData": [
+            {
+                "name": "Harakhchandji Bachhrajji Bhansali",
+                "gender": "M",
+                "age": 71,
+                "residence": "Hadecha-Mumbai"
+            },
+            {
+                "name": "Parasmalji Siremalji Angara",
+                "gender": "M",
+                "age": 68,
+                "residence": "Satyapur-Mumbai"
+            },
+            {
+                "name": "Champakbhai Mohanlalji Morkhia",
+                "gender": "M",
+                "age": 61,
+                "residence": "Vatam-Surat"
+            },
+            {
+                "name": "Pravinbhai Shivlalji Hirani",
+                "gender": "M",
+                "age": 60,
+                "residence": "Malwara-Mumbai"
+            },
+            {
+                "name": "Samirbhai Kantilalji Shah",
+                "gender": "M",
+                "age": 52,
+                "residence": "Pindwara-Ahmedabad"
+            },
+            {
+                "name": "Shailendrabhai Gautamchandji Sanklecha",
+                "gender": "M",
+                "age": 49,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Ashishbhai Rajendraji Surana",
+                "gender": "M",
+                "age": 44,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Mayurbhai Manharbhai Shah",
+                "gender": "M",
+                "age": 42,
+                "residence": "Surat"
+            },
+            {
+                "name": "Harshilbhai Bhadreshbhai Shah",
+                "gender": "M",
+                "age": 34,
+                "residence": "Jamanpur-Mumbai"
+            },
+            {
+                "name": "Jainamkumar Nimishbhai Shah",
+                "gender": "M",
+                "age": 27,
+                "residence": "Botad-Mumbai"
+            },
+            {
+                "name": "Harshilbhai Champakbhai Morkhia",
+                "gender": "M",
+                "age": 26,
+                "residence": "Vatam-Surat"
+            },
+            {
+                "name": "Dhruvkumar Kumarbhai Maniyar",
+                "gender": "M",
+                "age": 22,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Priyalkumar Sanjaybhai Sanghavi",
+                "gender": "M",
+                "age": 18,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Aryankumar Ashishbhai Surana",
+                "gender": "M",
+                "age": 16,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Jinangkumar Yogeshbhai",
+                "gender": "M",
+                "age": 15,
+                "residence": "Kuwala-Mumbai"
+            },
+            {
+                "name": "Arushkumar Ashishbhai Surana",
+                "gender": "M",
+                "age": 14,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Vajrabhai Rohanbhai Mujpura",
+                "gender": "M",
+                "age": 14,
+                "residence": "Bhabhar-Surat"
+            },
+            {
+                "name": "Tanishkumar Pramodbhai Sonigara",
+                "gender": "M",
+                "age": 13,
+                "residence": "Raipur"
+            }
+        ],
+        "femaleData": [
+            {
+                "name": "Sujataben Rajeshbhai Vora",
+                "gender": "F",
+                "age": 66,
+                "residence": "USA"
+            },
+            {
+                "name": "Sangeetaben Sanjaybhai Shah",
+                "gender": "F",
+                "age": 63,
+                "residence": "Kheda-USA"
+            },
+            {
+                "name": "Lataben Pravinbhai Hirani",
+                "gender": "F",
+                "age": 55,
+                "residence": "Malwara-Mumbai"
+            },
+            {
+                "name": "Pallaviben Rakeshkumar Shah",
+                "gender": "F",
+                "age": 53,
+                "residence": "Aseda (Deesa)-Mumbai"
+            },
+            {
+                "name": "Shilpaben Champakbhai Morkhia",
+                "gender": "F",
+                "age": 52,
+                "residence": "Vatam-Surat"
+            },
+            {
+                "name": "Jinagnyaben Bipinbhai Gada",
+                "gender": "F",
+                "age": 52,
+                "residence": "Lakadiya Kunwagad-Mumbai"
+            },
+            {
+                "name": "Ektaben Shailendrabhai Sanklecha",
+                "gender": "F",
+                "age": 47,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Ruchikaben Samirbhai Shah",
+                "gender": "F",
+                "age": 46,
+                "residence": "Pindwara-Ahmedabad"
+            },
+            {
+                "name": "Rituben Ashishbhai Surana",
+                "gender": "F",
+                "age": 42,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Rimpalben Mayurbhai Shah",
+                "gender": "F",
+                "age": 36,
+                "residence": "Surat"
+            },
+            {
+                "name": "Priyalben Harshilbhai Shah",
+                "gender": "F",
+                "age": 33,
+                "residence": "Jamanpur-Mumbai"
+            },
+            {
+                "name": "Mittalkumari Parasmalji Doshi",
+                "gender": "F",
+                "age": 30,
+                "residence": "Hadecha-Vadodara"
+            },
+            {
+                "name": "Mokshiben Dhavalkumar Akrani",
+                "gender": "F",
+                "age": 29,
+                "residence": "Khimat-Bhabhar"
+            },
+            {
+                "name": "Itikumari Ashokbhai Jain",
+                "gender": "F",
+                "age": 28,
+                "residence": "Udaipur"
+            },
+            {
+                "name": "Shreshthikumari Bharatbhai Ajbani",
+                "gender": "F",
+                "age": 27,
+                "residence": "Dhanera-Surat"
+            },
+            {
+                "name": "Sakshikumari Narbhai Baid",
+                "gender": "F",
+                "age": 27,
+                "residence": "Nokha (Rajasthan)-Hinganghat (Maharashtra)"
+            },
+            {
+                "name": "Surbhikumari Kapurchandji Bhansali",
+                "gender": "F",
+                "age": 27,
+                "residence": "Raipur"
+            },
+            {
+                "name": "Anjali Kantilalji Bhansali",
+                "gender": "F",
+                "age": 27,
+                "residence": "Garh Siwana (Rajasthan)-Pune"
+            },
+            {
+                "name": "Hetvikumari Prakashbhai Ostwal",
+                "gender": "F",
+                "age": 27,
+                "residence": "Garh Siwana (Rajasthan)-Chalthan (Gujarat)"
+            },
+            {
+                "name": "Dinishakumari Bhupendraji Kanungo (Bothra)",
+                "gender": "F",
+                "age": 26,
+                "residence": "Supur-Mumbai"
+            },
+            {
+                "name": "Samyamikumari Mayurbhai Doshi",
+                "gender": "F",
+                "age": 23,
+                "residence": "Deodar-Mumbai"
+            },
+            {
+                "name": "Kavyakumari Dilipbhai Mehta",
+                "gender": "F",
+                "age": 23,
+                "residence": "Hadecha-Mumbai"
+            },
+            {
+                "name": "Pravajyakumari Purvishbhai Sheth",
+                "gender": "F",
+                "age": 23,
+                "residence": "Tharad-Surat"
+            },
+            {
+                "name": "Khushikumari Mahendrabhai Angara",
+                "gender": "F",
+                "age": 23,
+                "residence": "Hadecha-Mumbai"
+            },
+            {
+                "name": "Khushikumari Jigneshbhai Mehta",
+                "gender": "F",
+                "age": 22,
+                "residence": "Madka (Vav)-Surat"
+            },
+            {
+                "name": "Hanikumari Manojbhai Rathod",
+                "gender": "F",
+                "age": 21,
+                "residence": "Pindwara-Surat"
+            },
+            {
+                "name": "Mitvakumari Hiteshbhai Sanghavi",
+                "gender": "F",
+                "age": 19,
+                "residence": "Shanwal-Surat"
+            },
+            {
+                "name": "Shriyakumari Kalpeshbhai Sanghavi",
+                "gender": "F",
+                "age": 19,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Anshikumari Jigneshbhai Mehta",
+                "gender": "F",
+                "age": 19,
+                "residence": "Madka (Vav)-Surat"
+            },
+            {
+                "name": "Virtikumari Jigarbhai Shah",
+                "gender": "F",
+                "age": 18,
+                "residence": "Aglod (Gujarat)-Mumbai"
+            },
+            {
+                "name": "Diyakumari Vijaybhai Seth",
+                "gender": "F",
+                "age": 18,
+                "residence": "Tirthgam (Banaskantha)-Surat"
+            },
+            {
+                "name": "Parikumari Mukeshbhai Dhokha",
+                "gender": "F",
+                "age": 17,
+                "residence": "Zherda-Pune"
+            },
+            {
+                "name": "Divyakumari Purvishbhai Sheth",
+                "gender": "F",
+                "age": 17,
+                "residence": "Tharad-Surat"
+            },
+            {
+                "name": "Shrenikumari Ketanbhai Rolia",
+                "gender": "F",
+                "age": 17,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Maishakumari Riteshbhai Mehta",
+                "gender": "F",
+                "age": 17,
+                "residence": "Ujjain-Mumbai"
+            },
+            {
+                "name": "Kriyakumari Jigneshbhai Fofani",
+                "gender": "F",
+                "age": 17,
+                "residence": "Tervada-Thara"
+            },
+            {
+                "name": "Shreyasikumari Kinjalbhai Rolia (Shah)",
+                "gender": "F",
+                "age": 16,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Jainikumari Mehul Sanghavi",
+                "gender": "F",
+                "age": 15,
+                "residence": "Shanwal-Ahmedabad"
+            },
+            {
+                "name": "Pranjalkumari Kunalbhai Shah",
+                "gender": "F",
+                "age": 14,
+                "residence": "Kalandri (Rajasthan)-Coimbatore"
+            },
+            {
+                "name": "Zilkumari Nitin Sanghavi",
+                "gender": "F",
+                "age": 14,
+                "residence": "Bhabhar"
+            },
+            {
+                "name": "Mokshakumari Mayankbhai Rolia",
+                "gender": "F",
+                "age": 13,
+                "residence": "Bhabhar-Mumbai"
+            },
+            {
+                "name": "Aryakumari Amitbhai Rolia",
+                "gender": "F",
+                "age": 11,
+                "residence": "Bhabhar-Surat"
+            },
+            {
+                "name": "Jainakumari Tusharbhai Bhabhera",
+                "gender": "F",
+                "age": 11,
+                "residence": "Dunavada (Patan)-Surat"
+            },
+            {
+                "name": "Dhritikumari Harshilbhai Shah",
+                "gender": "F",
+                "age": 8,
+                "residence": "Jamanpur-Mumbai"
+            }
+        ]
+    },
+    "nimantran": {
+        "presence_shraman": "In the holy and energetic presence of more than 600 Shraman-Shramani Bhagvants",
+        "invitation_text": "Hearty invitation for <br className=\"md:hidden\" /> the Sanyamrang Mahotsav !",
+        "schedule": [
+            {
+                "day": "Day 1",
+                "tithi": "V.S. 2082 Magh Vadi 3, Wednesday",
+                "events": [
+                    {
+                        "time": "6:30 AM",
+                        "title": "Grand entry of God and Saints, Shaurya Gatha, and inauguration of various exhibitions"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "title": "'Meru Shikhar Nhvrave Ho Surpati' Grand Snatra Mahotsav"
+                    },
+                    {
+                        "time": "2:00 PM",
+                        "title": "'Mohe Rang De Sanyam Rang Mein' Welcome of robes and Mehndi"
+                    },
+                    {
+                        "time": "6:00 PM",
+                        "title": "'Jade Jod Na Kyayn Evi Tun Ma Chhe' Evening Devotion"
+                    },
+                    {
+                        "time": "7:30 PM",
+                        "title": "'Vairagya Thi Zhalhalti Savari' Grand procession (Vandoli) of Mumukshus"
+                    }
+                ]
+            },
+            {
+                "day": "Day 2",
+                "tithi": "V.S. 2082 Magh Vadi 4, Thursday",
+                "events": [
+                    {
+                        "time": "9:00 AM",
+                        "title": "'Diksha Hi Sukh' Unique Discourse"
+                    },
+                    {
+                        "time": "2:00 PM",
+                        "title": "'Sanyam Safarno Sathvaro - Upkarakari Upkarno' Chhab (Ceremonial offering) and honoring the parents"
+                    },
+                    {
+                        "time": "6:00 PM",
+                        "title": "'Fani Duniya Chhodi Tara Charonma Rahi Jau' Evening Devotion"
+                    },
+                    {
+                        "time": "7:00 PM - 10:00 PM",
+                        "title": "'Aaj Ude Mumbaima Sanyamna Uzla Rango' Grand Farewell Ceremony - 1"
+                    }
+                ]
+            },
+            {
+                "day": "Day 3",
+                "tithi": "V.S. 2082 Magh Vadi 5, Friday",
+                "events": [
+                    {
+                        "time": "7:00 AM",
+                        "title": "Bidding for ceremonial items and naming ceremony"
+                    },
+                    {
+                        "time": "2:00 PM",
+                        "title": "'Ho Raj ! Mane Lagyo Chhe Samkitno Rang' Ashtaprakari Puja reaching the peak of devotion"
+                    },
+                    {
+                        "time": "6:00 PM",
+                        "title": "'Chalkavi Do Ne Nath ! Karunani Pyali' Evening Devotion"
+                    },
+                    {
+                        "time": "7:00 PM - 10:00 PM",
+                        "title": "'Aaj Ude Mumbaima Sanyamna Uzla Rango' Grand Farewell Ceremony - 2"
+                    }
+                ]
+            },
+            {
+                "day": "Day 4",
+                "tithi": "V.S. 2082 Magh Vadi 6, Saturday",
+                "events": [
+                    {
+                        "time": "8:30 AM",
+                        "title": "Royal Varshidan Yatra (Procession of detachment and charity)"
+                    },
+                    {
+                        "time": "3:30 PM",
+                        "title": "'Anahari Banvani Yatrano Prarambh' Final meal (Vaypun)"
+                    },
+                    {
+                        "time": "6:00 PM",
+                        "title": "Unique Mahapuja and divine Aarti"
+                    },
+                    {
+                        "time": "7:30 PM - 10:00 PM",
+                        "title": "'Sanyamgatha' with musical support"
+                    }
+                ]
+            },
+            {
+                "day": "Diksha Day",
+                "tithi": "V.S. 2082 Magh Vadi 7, Sunday",
+                "events": [
+                    {
+                        "time": "4:41 AM",
+                        "title": "Arrival of all Saints and Candidates at the pavilion"
+                    },
+                    {
+                        "time": "6:30 AM",
+                        "title": "'Rajoharanne Vando Re... Bhav Dhari Anando Re' Rajoharan presenting moment"
+                    },
+                    {
+                        "time": "9:27 AM",
+                        "title": "'Aa Karmonu Lunchan Chhe' Keshlunchan (Manual hair removal) moment"
+                    }
+                ]
+            }
+        ]
+    },
+    "timeline": {
+        "diksha_label": "Diksha",
+        "items": [
+            {
+                "year": 2024,
+                "title": "35",
+                "place": "Ahmedabad",
+                "description": "Veervratotsav",
+                "date": "V.S. 2080"
+            },
+            {
+                "year": 2023,
+                "title": "8",
+                "place": "Bhabhar",
+                "description": "Aatmahitotsav",
+                "date": "V.S. 2080"
+            },
+            {
+                "year": 2023,
+                "title": "5",
+                "place": "Tervada",
+                "description": "Sanyam Yog Utsav",
+                "date": "V.S. 2079"
+            },
+            {
+                "year": 2022,
+                "title": "7",
+                "place": "Ahmedabad",
+                "description": "Mohavijayotsav",
+                "date": "V.S. 2079"
+            },
+            {
+                "year": 2021,
+                "title": "74",
+                "place": "Surat",
+                "description": "Sinhsattvotsav",
+                "date": "V.S. 2078"
+            },
+            {
+                "year": 2019,
+                "title": "18",
+                "place": "Surat",
+                "description": "Prabhu Panthotsav",
+                "date": "V.S. 2076"
+            },
+            {
+                "year": 2019,
+                "title": "44",
+                "place": "Mumbai",
+                "description": "Spiritual Wedding Mahotsav",
+                "date": "V.S. 2075"
+            },
+            {
+                "year": 2017,
+                "title": "26",
+                "place": "Ahmedabad",
+                "description": "Vishvanand Utsav",
+                "date": "V.S. 2074"
+            },
+            {
+                "year": 2016,
+                "title": "36",
+                "place": "Surat",
+                "description": "Ratnatrayi Utsav",
+                "date": "V.S. 2073"
+            },
+            {
+                "year": 2014,
+                "title": "45",
+                "place": "Surat",
+                "description": "Sanyam Suvas Utsav",
+                "date": "V.S. 2071"
+            },
+            {
+                "year": 2013,
+                "title": "6",
+                "place": "Bhabhar",
+                "description": "Updhan - Diksha Utsav",
+                "date": "V.S. 2070"
+            },
+            {
+                "year": 2012,
+                "title": "17",
+                "place": "Palitana",
+                "description": "Ajitshanti Diksha Pratishtha Utsav",
+                "date": "V.S. 2068"
+            },
+            {
+                "year": 2011,
+                "title": "7",
+                "place": "Surat",
+                "description": "Pravrajya Pradan Utsav",
+                "date": "V.S. 2067"
+            }
+        ]
+    }
+}

@@ -18,6 +18,10 @@ import hiAdhyatm from '../data/sections/hi/adhyatm.json';
 import enAdhyatm from '../data/sections/en/adhyatm.json';
 import guAdhyatm from '../data/sections/gu/adhyatm.json';
 
+import hiDiksha from '../data/sections/hi/diksha.json';
+import enDiksha from '../data/sections/en/diksha.json';
+import guDiksha from '../data/sections/gu/diksha.json';
+
 const data = {
     hi: {
         home: hiHome,
@@ -25,6 +29,7 @@ const data = {
         jinmandir: hiJinmandir,
         jinmurti: hiJinmurti,
         adhyatm: hiAdhyatm,
+        diksha: hiDiksha,
     },
     en: {
         home: enHome,
@@ -32,6 +37,7 @@ const data = {
         jinmandir: enJinmandir,
         jinmurti: enJinmurti,
         adhyatm: enAdhyatm,
+        diksha: enDiksha,
     },
     gu: {
         home: guHome,
@@ -39,6 +45,7 @@ const data = {
         jinmandir: guJinmandir,
         jinmurti: guJinmurti,
         adhyatm: guAdhyatm,
+        diksha: guDiksha,
     },
 };
 
