@@ -37,6 +37,10 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-9H.webp",
             "/diksha/rangchhata-10H.webp",
             "/diksha/rangchhata-11H.webp",
+            "/diksha/rangchhata-12H.webp",
+            "/diksha/rangchhata-13H.webp",
+            "/diksha/rangchhata-14H.webp",
+            "/diksha/rangchhata-15H.webp",
         ],
         gu: [
             "/diksha/rangchhata-1G.webp",
@@ -50,6 +54,10 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-9G.webp",
             "/diksha/rangchhata-10G.webp",
             "/diksha/rangchhata-11G.webp",
+            "/diksha/rangchhata-12G.webp",
+            "/diksha/rangchhata-13G.webp",
+            "/diksha/rangchhata-14G.webp",
+            "/diksha/rangchhata-15G.webp",
         ],
         en: [
             "/diksha/rangchhata-1E.webp",
@@ -63,6 +71,10 @@ const RangChhataSection = () => {
             "/diksha/rangchhata-9E.webp",
             "/diksha/rangchhata-10E.webp",
             "/diksha/rangchhata-11E.webp",
+            "/diksha/rangchhata-12E.webp",
+            "/diksha/rangchhata-13E.webp",
+            "/diksha/rangchhata-14E.webp",
+            "/diksha/rangchhata-15E.webp",
         ]
     };
 

@@ -347,7 +347,7 @@ export const BOOKS_DATA = [
   { srno: 346, name: "મહાભારત : જૈન ગ્રંથોના આલોકમાં ભાગ - ૫", shreniCode:"PSG-63", shreni: "प्रवचन साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "2", totalCopies: 5000, image: "/books/346.webp" },
   { srno: 347, name: "તાસકમાં મસ્તક : ઉદયનમંત્રી", shreniCode:"PSG-64", shreni: "प्रवचन साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 3000, image: "/books/347.webp" },
   { srno: 348, name: "રાવણની ભીતરમાં", shreniCode:"PSG-65", shreni: "प्रवचन साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 3000, image: "/books/348.webp" },
-  { srno: 349, name: "तासकमें मस्तक: उदयनमंत्री", shreniCode:"PSH-25", shreni: "प्रवचन साहित्यश्रेणी", language: "हिन्दी", price: 0, edition: "1", totalCopies: 500, image: "/books/349.webp" },
+  { srno: 349, name: "तासक में मस्तक: उदयनमंत्री", shreniCode:"PSH-25", shreni: "प्रवचन साहित्यश्रेणी", language: "हिन्दी", price: 0, edition: "1", totalCopies: 500, image: "/books/349.webp" },
   { srno: 350, name: "रावण के भीतर", shreniCode:"PSH-26", shreni: "प्रवचन साहित्यश्रेणी", language: "हिन्दी", price: 0, edition: "1", totalCopies: 500, image: "/books/350.webp" },
   // { srno: 351, name: "સંસ્કારશાળા - પ્રગતિપત્રક", shreniCode:"SSSG-01", shreni: "संस्कारशाला साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 500, image: "/books/351.webp" },
   // { srno: 352, name: "સંસ્કારશાળા - માર્ગદર્શિકા", shreniCode:"SSSG-02", shreni: "संस्कारशाला साहित्यश्रेणी", language: "गुजराती", price: 0, edition: "1", totalCopies: 500, image: "/books/352.webp" },

@@ -407,7 +407,7 @@ const Timeline = () => {
               <div className="p-1">
                 <div className="rounded-sm overflow-hidden border border-gray-100">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.37911893077!2d72.83427737382075!3d19.22230224736603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13254bedfc9%3A0xb8de434d3e78fbf7!2sChikoowadi%20Playground!5e0!3m2!1sen!2sin!4v1767419915722!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.488646860104!2d72.8359823!3d19.2175243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6cd11e19243%3A0x11fba8546aa21ba4!2sLate%20Shri%20Pramod%20Mahajan%20Sports%20Complex!5e0!3m2!1sen!2sin!4v1770030651831!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
