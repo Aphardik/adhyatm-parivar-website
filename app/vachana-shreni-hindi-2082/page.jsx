@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Form, Input, Row, Col, Button, Select, message, Radio, Modal, Checkbox } from "antd";
-import { PlusOutlined, DeleteOutlined, UserOutlined, CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { Form, Input, Button, Row, Col, Modal, Radio, Select, Checkbox, DatePicker } from "antd";
+import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { states } from "@/app/data/states";
 
@@ -69,7 +69,7 @@ export default function VachanaShreniHindiForm() {
 
                     <div className="py-4">
                         <p className="text-lg md:text-xl font-bold px-4">
-                            जिनकी ओजस्वी वाणी के प्रभाव से मुंबई में 64-64 दीक्षा का ऐतिहासिक- यशस्वी कार्यक्रम हुआ.. वो प्रभावक वाणी हिंदी में सुनने का एक सुनहरा अवसर
+                            जिनकी ओजस्वी वाणी के प्रभाव से मुंबई में 64-64 दीक्षा का ऐतिहासिक-यशस्वी कार्यक्रम हुआ.. <br /> वो प्रभावक वाणी हिंदी में सुनने का एक सुनहरा अवसर
                         </p>
                     </div>
 
@@ -95,7 +95,7 @@ export default function VachanaShreniHindiForm() {
                         <div className="inline-block bg-lightpink px-8 py-4 rounded-sm shadow-lg">
                             <h2 className="text-xl font-bold mb-1 text-gray-800">...वाचना दाता...</h2>
                             <p className="text-lg md:text-xl font-bold text-black">
-                                'सूरिजिन-संयम' कृपाप्राप्त दीक्षाधर्म के महानायक प.पू.आ.भ.श्रीमद् विजय योगतिलकसूरीश्वरजी महाराजा
+                                'सूरिजिन-संयम' कृपाप्राप्त दीक्षाधर्म के महानायक <br /> प.पू.आ.भ.श्रीमद् विजय योगतिलकसूरीश्वरजी महाराजा
                             </p>
                         </div>
                     </div>
@@ -115,8 +115,7 @@ export default function VachanaShreniHindiForm() {
                             </div>
                         </div>
 
-                        {/* Mangal Sthal */}
-                        <div className="group transition-all duration-300">
+                        {/* <div className="group transition-all duration-300">
                             <div className="bg-white text-center rounded-sm shadow-md border border-red-100 overflow-hidden hover:shadow-lg h-full">
                                 <div className="bg-lightpink p-4">
                                     <h3 className="text-xl font-bold text-gray-800">मंगल स्थल</h3>
@@ -126,10 +125,9 @@ export default function VachanaShreniHindiForm() {
                                     <p className="font-medium text-xl">वसई, मुंबई</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        {/* Contact */}
-                        <div className="group transition-all duration-300">
+                        {/* <div className="group transition-all duration-300">
                             <div className="bg-white text-center rounded-sm shadow-md border border-purple-100 overflow-hidden hover:shadow-lg h-full">
                                 <div className="bg-lightpink p-4">
                                     <h3 className="text-xl font-bold text-gray-800">संपर्क</h3>
@@ -139,7 +137,7 @@ export default function VachanaShreniHindiForm() {
                                     <p className="font-medium text-lg">आशीष बैद - 9827111110</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -193,7 +191,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "fullName"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">पूरा नाम </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">पूरा नाम </span>}
                                                                 rules={[{ required: true, message: "कृपया नाम दर्ज करें" }]}
                                                             >
                                                                 <Input
@@ -204,26 +202,27 @@ export default function VachanaShreniHindiForm() {
                                                             </Form.Item>
                                                         </Col>
 
-                                                        <Col xs={12} sm={8}>
+                                                        <Col xs={24} sm={12}>
                                                             <Form.Item
                                                                 {...restField}
-                                                                name={[name, "age"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">उम्र </span>}
-                                                                rules={[{ required: true, message: "उम्र आवश्यक है" }]}
+                                                                name={[name, "dob"]}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">जन्म तारीख</span>}
+                                                                rules={[{ required: true, message: "जन्म तारीख आवश्यक है" }]}
                                                             >
-                                                                <Input
-                                                                    type="number"
-                                                                    placeholder="उम्र"
+                                                                <DatePicker
+                                                                    placeholder="तारीख चुनें"
+                                                                    format="DD-MM-YYYY"
                                                                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-heading text-base"
+                                                                    style={{ height: '50px' }} // Match input height
                                                                 />
                                                             </Form.Item>
                                                         </Col>
 
-                                                        <Col xs={12} sm={16}>
+                                                        <Col xs={24} sm={12}>
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "gender"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">लिंग </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">लिंग </span>}
                                                                 rules={[{ required: true, message: "लिंग चुनें" }]}
                                                             >
                                                                 <Radio.Group className="w-full flex gap-6 pt-2">
@@ -234,10 +233,34 @@ export default function VachanaShreniHindiForm() {
                                                         </Col>
 
                                                         <Col xs={24} sm={12}>
+                                                            {index > 0 && (
+                                                                <div className="mb-2">
+                                                                    <Checkbox
+                                                                        onChange={(e) => {
+                                                                            if (e.target.checked) {
+                                                                                const participants = form.getFieldValue("participants");
+                                                                                const prevData = participants[index - 1];
+                                                                                if (prevData) {
+                                                                                    const currentParticipants = [...participants];
+                                                                                    currentParticipants[index] = {
+                                                                                        ...currentParticipants[index],
+                                                                                        mobile: prevData.mobile,
+                                                                                        altMobile: prevData.altMobile,
+                                                                                    };
+                                                                                    form.setFieldsValue({ participants: currentParticipants });
+                                                                                }
+                                                                            }
+                                                                        }}
+                                                                        className="!font-heading text-xs font-bold text-[#901E3E]"
+                                                                    >
+                                                                        ऊपर दिए गए प्रतिभागी से मोबाइल नंबर कॉपी करें
+                                                                    </Checkbox>
+                                                                </div>
+                                                            )}
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "mobile"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">मोबाइल नंबर </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">मोबाइल नंबर </span>}
                                                                 rules={[
                                                                     { required: true, message: "मोबाइल नंबर आवश्यक है" },
                                                                     { pattern: /^[0-9]{10}$/, message: "10 अंकों का वैध नंबर दर्ज करें" },
@@ -255,7 +278,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "altMobile"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">वैकल्पिक मोबाइल नंबर</span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">वैकल्पिक मोबाइल नंबर</span>}
                                                                 rules={[
                                                                     { pattern: /^[0-9]{10}$/, message: "10 अंकों का वैध नंबर दर्ज करें" },
                                                                 ]}
@@ -269,9 +292,11 @@ export default function VachanaShreniHindiForm() {
                                                         </Col>
 
 
-                                                        {index > 0 && (
-                                                            <Col span={24}>
-                                                                <Form.Item className="mb-0 bg-blue-50 p-3 rounded-lg border border-blue-100">
+
+
+                                                        <Col xs={24} sm={12}>
+                                                            {index > 0 && (
+                                                                <div className="mb-2">
                                                                     <Checkbox
                                                                         onChange={(e) => {
                                                                             if (e.target.checked) {
@@ -290,19 +315,16 @@ export default function VachanaShreniHindiForm() {
                                                                                 }
                                                                             }
                                                                         }}
-                                                                        className="font-heading text-sm sm:text-base font-bold text-blue-800"
+                                                                        className="!font-heading text-xs font-bold text-[#901E3E]"
                                                                     >
                                                                         ऊपर दिए गए प्रतिभागी से पता कॉपी करें
                                                                     </Checkbox>
-                                                                </Form.Item>
-                                                            </Col>
-                                                        )}
-
-                                                        <Col xs={24} sm={12}>
+                                                                </div>
+                                                            )}
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "address"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">पूरा पता</span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">पूरा पता</span>}
                                                                 rules={[{ required: true, message: "पता आवश्यक है" }]}
                                                             >
                                                                 <Input.TextArea
@@ -317,7 +339,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "city"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">शहर </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">शहर </span>}
                                                                 rules={[{ required: true, message: "शहर आवश्यक है" }]}
                                                             >
                                                                 <Input
@@ -331,7 +353,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "state"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">राज्य </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">राज्य </span>}
                                                                 rules={[{ required: true, message: "राज्य चुनें" }]}
                                                             >
                                                                 <Select
@@ -356,7 +378,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "pincode"]}
-                                                                label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed">पिनकोड </span>}
+                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">पिनकोड </span>}
                                                                 rules={[
                                                                     { required: true, message: "पिनकोड आवश्यक है" },
                                                                     { pattern: /^[0-9]{6}$/, message: "6 अंकों का वैध पिनकोड दर्ज करें" },
@@ -375,7 +397,7 @@ export default function VachanaShreniHindiForm() {
                                                                 <Form.Item
                                                                     {...restField}
                                                                     name={[name, "attendedBefore"]}
-                                                                    label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed block mb-2">क्या आप पहले हिंदी वाचना अटेंड कर चुके हैं? </span>}
+                                                                    label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed block mb-2">क्या आप पहले हिंदी वाचना अटेंड कर चुके हैं? </span>}
                                                                     rules={[{ required: true, message: "कृपया चुनें" }]}
                                                                     className="mb-0"
                                                                 >
@@ -392,7 +414,7 @@ export default function VachanaShreniHindiForm() {
                                                                 <Form.Item
                                                                     {...restField}
                                                                     name={[name, "understandGujarati"]}
-                                                                    label={<span className="text-gray-700 font-bold text-lg font-heading leading-relaxed block mb-2">क्या आपको गुजराती समझ आती हैं? </span>}
+                                                                    label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed block mb-2">क्या आपको गुजराती समझ आती हैं? </span>}
                                                                     rules={[{ required: true, message: "कृपया चुनें" }]}
                                                                     className="mb-0"
                                                                 >
@@ -503,6 +525,18 @@ export default function VachanaShreniHindiForm() {
                         >
                             Google Maps पर देखें
                         </a>
+                    </div>
+                </div>
+
+                <div className="group transition-all duration-300">
+                    <div className="bg-white text-center rounded-sm shadow-md border border-purple-100 overflow-hidden hover:shadow-lg h-full">
+                        <div className="bg-lightpink p-4">
+                            <h3 className="text-xl font-bold text-gray-800">संपर्क</h3>
+                        </div>
+                        <div className="p-6 space-y-2 text-gray-700">
+                            <p className="font-medium text-lg">प्रणय संचेती - 9979894114</p>
+                            <p className="font-medium text-lg">आशीष बैद - 9827111110</p>
+                        </div>
                     </div>
                 </div>
 
