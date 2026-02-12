@@ -63,7 +63,7 @@ export default function VachanaShreniHindiForm() {
                 {/* Header */}
                 <div className="text-center mb-6">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-2 font-heading">
-                        नौवीं हिंदी वाचना श्रेणी
+                        नवमी हिंदी वाचना श्रेणी
                     </h1>
                     <p className="text-xl sm:text-2xl text-black font-semibold mb-1">रजिस्ट्रेशन फॉर्म</p>
                     <p className="text-base sm:text-lg text-gray-600 font-medium">मुंबई</p>
