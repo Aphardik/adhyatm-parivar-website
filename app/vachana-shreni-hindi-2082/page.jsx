@@ -202,7 +202,7 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "altMobile"]}
-                                                                label={<span className="text-base font-bold text-black font-heading">वैकल्पिक मोबाइल नंबर (Alternate Mobile)</span>}
+                                                                label={<span className="text-base font-bold text-black font-heading">वैकल्पिक मोबाइल नंबर</span>}
                                                                 rules={[
                                                                     { pattern: /^[0-9]{10}$/, message: "10 अंकों का वैध नंबर दर्ज करें" },
                                                                 ]}
@@ -278,14 +278,14 @@ export default function VachanaShreniHindiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "pincode"]}
-                                                                label={<span className="text-base font-bold text-black font-heading">पिन कोड (Pincode)</span>}
+                                                                label={<span className="text-base font-bold text-black font-heading">पिनकोड</span>}
                                                                 rules={[
-                                                                    { required: true, message: "पिन कोड आवश्यक है" },
-                                                                    { pattern: /^[0-9]{6}$/, message: "6 अंकों का वैध पिन कोड दर्ज करें" },
+                                                                    { required: true, message: "पिनकोड आवश्यक है" },
+                                                                    { pattern: /^[0-9]{6}$/, message: "6 अंकों का वैध पिनकोड दर्ज करें" },
                                                                 ]}
                                                             >
                                                                 <Input
-                                                                    placeholder="पिन कोड"
+                                                                    placeholder="पिनकोड"
                                                                     className="py-2 text-base font-heading border border-black"
                                                                     size="large"
                                                                     maxLength={6}
