@@ -63,14 +63,14 @@ export default function VachanaShreniGujaratiForm() {
             <div className="w-full">
                 {/* Placeholder for the top banner image. Please replace '/path/to/your/banner.jpg' with the actual image path. */}
                 <img
-                    src="/formpatternbg.jpg" // Using an existing image as placeholder, please update
+                    src="/vachana-shreni-hindi-2082.jpg" // Using an existing image as placeholder, please update
                     alt="Vachana Shreni Banner"
-                    className="w-full h-auto max-h-[400px] object-cover"
+                    className="w-full h-auto max-w-5xl mx-auto object-contain"
                 />
             </div>
 
             {/* Main Content */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 -mt-12 pb-12">
+            <div className="max-w-5xl mx-auto  relative z-10 pb-12">
 
                 {/* Registration Form Section */}
                 <div className="bg-white rounded-sm border border-gray-100 overflow-hidden mb-12 shadow-lg">
@@ -109,7 +109,7 @@ export default function VachanaShreniGujaratiForm() {
                                                             onClick={() => remove(name)}
                                                             className="flex items-center px-4 h-9 bg-white border border-red-200 rounded-lg hover:bg-red-50 hover:border-red-300 transition-colors"
                                                         >
-                                                            <span className="hidden sm:inline ml-1">દૂર કરો</span>
+                                                            {/* <span className="hidden sm:inline ml-1">દૂર કરો</span> */}
                                                         </Button>
                                                     )}
                                                 </div>
@@ -224,8 +224,8 @@ export default function VachanaShreniGujaratiForm() {
 
 
 
-                                                        <Col xs={24} sm={12}>
-                                                            {index > 0 && (
+                                                        {index > 0 && (
+                                                            <Col xs={24} sm={24}>
                                                                 <div className="mb-2">
                                                                     <Checkbox
                                                                         onChange={(e) => {
@@ -250,20 +250,8 @@ export default function VachanaShreniGujaratiForm() {
                                                                         ઉપરના પ્રતિભાગી માંથી સરનામું કોપી કરો
                                                                     </Checkbox>
                                                                 </div>
-                                                            )}
-                                                            <Form.Item
-                                                                {...restField}
-                                                                name={[name, "address"]}
-                                                                label={<span className="text-[#901E3E] font-bold text-lg font-anek leading-relaxed">પૂરું સરનામું</span>}
-                                                                rules={[{ required: true, message: "સરનામું જરૂરી છે" }]}
-                                                            >
-                                                                <Input.TextArea
-                                                                    rows={2}
-                                                                    placeholder="પૂરું સરનામું દાખલ કરો"
-                                                                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-anek text-base"
-                                                                />
-                                                            </Form.Item>
-                                                        </Col>
+                                                            </Col>
+                                                        )}
 
                                                         <Col xs={24} sm={12}>
                                                             <Form.Item
@@ -304,7 +292,7 @@ export default function VachanaShreniGujaratiForm() {
                                                             </Form.Item>
                                                         </Col>
 
-                                                        <Col xs={24} sm={12}>
+                                                        {/* <Col xs={24} sm={12}>
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "pincode"]}
@@ -320,7 +308,7 @@ export default function VachanaShreniGujaratiForm() {
                                                                     maxLength={6}
                                                                 />
                                                             </Form.Item>
-                                                        </Col>
+                                                        </Col> */}
 
                                                         <Col xs={24} sm={12}>
                                                             <div className="bg-white p-4 rounded-lg border border-gray-200 h-full">
@@ -489,3 +477,4 @@ export default function VachanaShreniGujaratiForm() {
         </div>
     );
 }
+

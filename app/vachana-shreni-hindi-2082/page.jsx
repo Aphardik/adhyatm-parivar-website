@@ -224,8 +224,8 @@ export default function VachanaShreniHindiForm() {
 
 
 
-                                                        <Col xs={24} sm={12}>
-                                                            {index > 0 && (
+                                                        {index > 0 && (
+                                                            <Col xs={24} sm={24}>
                                                                 <div className="mb-2">
                                                                     <Checkbox
                                                                         onChange={(e) => {
@@ -250,20 +250,8 @@ export default function VachanaShreniHindiForm() {
                                                                         ऊपर दिए गए प्रतिभागी से पता कॉपी करें
                                                                     </Checkbox>
                                                                 </div>
-                                                            )}
-                                                            {/* <Form.Item
-                                                                {...restField}
-                                                                name={[name, "address"]}
-                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">पूरा पता</span>}
-                                                                rules={[{ required: true, message: "पता आवश्यक है" }]}
-                                                            >
-                                                                <Input.TextArea
-                                                                    rows={2}
-                                                                    placeholder="पूरा पता दर्ज करें"
-                                                                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-heading text-base"
-                                                                />
-                                                            </Form.Item> */}
-                                                        </Col>
+                                                            </Col>
+                                                        )}
 
                                                         <Col xs={24} sm={12}>
                                                             <Form.Item
