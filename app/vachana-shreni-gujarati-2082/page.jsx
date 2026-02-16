@@ -7,11 +7,11 @@ import { states } from "@/app/data/states";
 
 const translations = {
     gu: {
-        formTitle: "વાચના શ્રેણી રજીસ્ટ્રેશન ૨૦૮૨",
+        formTitle: "ભાવના પત્ર",
         instructionTitle: "વાચનાશ્રેણીનો વેશભૂષા નિયમ (ડ્રેસકોડ)",
-        instructionText: "નિમ્નલિખિત ડ્રેસકોડવાળાને જ પ્રવેશ મળશે. ચોબીશે કલાક (દિવસ અને રાત્રે) એના સિવાયનો વેશ પહેરી શકાશે નહીં. એ સિવાયના વેશમાં આવનાર ૨૦૦૦ કિ.મી. દૂરથી પણ આવેલ હશે તો પણ અમે પ્રવેશ આપી શકીશું નહીં. કોઈપણ ઉમરની વ્યક્તિ માટે આ જ ડ્રેસકોડ છે.",
+        instructionText: "નિમ્નલિખિત ડ્રેસકોડવાળાને જ પ્રવેશ મળશે. ચોવીશે કલાક (દિવસ અને રાત્રે) એના સિવાયનો વેશ પહેરી શકાશે નહીં. એ સિવાયનાં વેશમાં આવનાર ૨૦૦૦ કિ.મી. દૂરથી પણ આવેલ હશે તો પણ અમે પ્રવેશ આપી શકીશું નહીં. કોઈપણ ઉંમરની વ્યક્તિ માટે આ જ ડ્રેસકોડ છે.",
         markOnly: "Mark only one oval.",
-        option1Dress: "પુરુષો માટે - ધોતી-ખેસ, લુંઘો-ઝભ્ભો અથવા ચુડીદાર",
+        option1Dress: "પુરુષો માટે - ધોતી-ખેસ, લેંઘો-ઝભ્ભો અથવા ચૂડીદાર",
         option2Dress: "બહેનો માટે - સાડી અથવા ચણિયાચોળી",
         naam: "પૂરું નામ",
         naamPlaceholder: "પૂરું નામ દાખલ કરો",
@@ -19,16 +19,17 @@ const translations = {
         dobPlaceholder: "તારીખ પસંદ કરો",
         gender: "લિંગ",
         male: "પુરુષ",
-        female: "મહિલા",
-        address1: "શેરી સરનામું ૧",
-        address2: "શેરી સરનામું ૨",
+        female: "સ્ત્રી",
+        address1: "એડ્રેસ ૧",
+        address2: "એડ્રેસ ૨",
         city: "શહેર",
         state: "રાજ્ય",
         pincode: "પીનકોડ",
         mulVatan: "મૂળ વતન",
         mobile: "મોબાઇલ નંબર",
         altMobile: "વૈકલ્પિક મોબાઇલ નંબર",
-        groupPrimaryMobile: "ગ્રુપ પ્રાઈમરી મોબાઇલ નંબર",
+        groupPrimaryMobile: "ગ્રુપના મુખ્ય વ્યક્તિનો નંબર",
+        groupPrimaryMobileInfo: "જો તમારે ગ્રુપમાં ફોર્મ ભરવું હોય, તો તમારા ગ્રુપના મુખ્ય વ્યક્તિનો નંબર અહીં લખવો. તમારા ગ્રુપના બીજા જેટલા પણ ફોર્મ ભરાય તેમાં પણ આ જ મોબાઈલ નંબર લખવા વિનંતી. જેથી અમને તમારા ગ્રુપનો ખ્યાલ આવી શકે. જો તમે તમારા એકલાનું ફોર્મ ભરી રહ્યા હોવ તો તમારો નંબર અહીં લખવો.",
         firstVachana: "શું આ તમારી પ્રથમ વાચના છે?",
         howKnow: "તમને વાચના શ્રેણી વિશે કેવી રીતે જાણ થઈ?",
         option1: "હું કે મારા પરિવારમાંથી કોઈ ગુરુમહારાજ સાથે જોડાયેલ છે",
@@ -55,7 +56,7 @@ const translations = {
         participantTitle: "પ્રતિભાગી વિગતો"
     },
     hi: {
-        formTitle: "वाचना श्रेणी पंजीकरण २०८२",
+        formTitle: "भावना पत्र",
         instructionTitle: "वाचनाश्रेणी का वेशभूषा नियम (ड्रेसकोड)",
         instructionText: "निम्नलिखित ड्रेसकोड वाले को ही प्रवेश मिलेगा। चौबीसों घंटे (दिन और रात) अन्य कोई वेश पहना नहीं जा सकता। अन्य कोई वेश में आने वाले २००० किलोमीटर दूर से भी आए तो भी हम प्रवेश नहीं दे पाएंगे। किसी भी उम्र के व्यक्ति के लिए यही ड्रेसकोड है।",
         markOnly: "Mark only one oval.",
@@ -67,7 +68,7 @@ const translations = {
         dobPlaceholder: "तारीख चुनें",
         gender: "लिंग",
         male: "पुरुष",
-        female: "महिला",
+        female: "स्त्री",
         address1: "गली का पता १",
         address2: "गली का पता २",
         city: "शहर",
@@ -76,7 +77,8 @@ const translations = {
         mulVatan: "मूल वतन",
         mobile: "मोबाइल नंबर",
         altMobile: "वैकल्पिक मोबाइल नंबर",
-        groupPrimaryMobile: "ग्रुप प्राइमरी मोबाइल नंबर",
+        groupPrimaryMobile: "ग्रुप का मुख्य मोबाइल नंबर",
+        groupPrimaryMobileInfo: "अगर आपको समूह में फ़ॉर्म भरना हो, तो अपने समूह के मुख्य व्यक्ति का नंबर यहाँ लिखें। आपके समूह के अन्य जितने भी फ़ॉर्म भरे जाएँ, उनमें भी यही मोबाइल नंबर लिखने का अनुरोध है, ताकि हमें आपके समूह की जानकारी मिल सके। यदि आप अकेले फ़ॉर्म भर रहे हैं, तो अपना नंबर यहाँ लिखें।",
         firstVachana: "क्या यह आपकी पहली वाचना है?",
         howKnow: "आपको वाचना श्रेणी के बारे में कैसे पता चला?",
         option1: "में या मेरे परिवार में से कोई गुरुमहाराज से जुड़ा हुआ है",
@@ -457,13 +459,15 @@ export default function VachanaShreniGujaratiForm() {
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "groupPrimaryMobile"]}
-                                                                label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.groupPrimaryMobile}</span>}
+                                                                label={<span className={`text-[#901E3E] font-bold text-lg !${fontClass} leading-relaxed`}>{t.groupPrimaryMobile}</span>}
                                                                 rules={[
                                                                     { required: true, message: t.required },
                                                                     { pattern: /^[0-9]{10}$/, message: t.validMobile },
                                                                 ]}
                                                             >
-                                                                <Input placeholder="10 Digits" maxLength={10} className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+                                                                <span className={`text-gray-500 text-sm ${fontClass}`}>{t.groupPrimaryMobileInfo}</span>
+
+                                                                <Input placeholder="10 Digits" maxLength={10} className={`w-full px-4 py-3 !mt-4 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
                                                             </Form.Item>
                                                         </Col>
 
@@ -481,7 +485,7 @@ export default function VachanaShreniGujaratiForm() {
                                                             </Form.Item>
                                                         </Col>
 
-                                                        <Col xs={24}>
+                                                        {/* <Col xs={24}>
                                                             <Form.Item
                                                                 {...restField}
                                                                 name={[name, "howKnow"]}
@@ -565,7 +569,7 @@ export default function VachanaShreniGujaratiForm() {
                                                                     ) : null
                                                                 }
                                                             </Form.Item>
-                                                        </Col>
+                                                        </Col> */}
                                                     </Row>
                                                 </div>
                                             </div>
