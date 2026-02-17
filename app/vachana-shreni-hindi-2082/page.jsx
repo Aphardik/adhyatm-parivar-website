@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form, Input, Button, Row, Col, Modal, Radio, Select, Checkbox, DatePicker } from "antd";
-import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined, DownloadOutlined } from "@ant-design/icons";
 import axios from "axios";
+import Link from "next/link";
 import { states } from "@/app/data/states";
 
 export default function VachanaShreniHindiForm() {
@@ -10,25 +11,22 @@ export default function VachanaShreniHindiForm() {
     const [loading, setLoading] = useState(false);
     const [successModalVisible, setSuccessModalVisible] = useState(false);
     const [registrationCodes, setRegistrationCodes] = useState([]);
+    const modalContentRef = useRef(null);
 
     const onFinish = async (values) => {
         setLoading(true);
 
         try {
-            // Structure the data for the Firebase Function
             const payload = {
                 participants: values.participants,
             };
 
-            // Replace with your actual Firebase Function URL
             const response = await axios.post(
-                "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/vachanaShreniHindi2082",
+                "https://vachanashrenihindi2082test-fahifz22ha-uc.a.run.app",
                 payload
             );
 
             if (response.status === 200) {
-                // Assuming the response contains unique codes for each participant
-                // Example: response.data.codes = ["CODE001", "CODE002", ...]
                 const codes = response.data.codes || values.participants.map((_, i) =>
                     `REG${Date.now()}${String(i + 1).padStart(3, '0')}`
                 );
@@ -57,20 +55,43 @@ export default function VachanaShreniHindiForm() {
         setRegistrationCodes([]);
     };
 
+    const handleDownloadScreenshot = async () => {
+        try {
+            const html2canvas = (await import("html2canvas")).default;
+            const element = modalContentRef.current;
+            if (!element) return;
+
+            const canvas = await html2canvas(element, {
+                backgroundColor: "#ffffff",
+                scale: 2,
+                useCORS: true,
+                logging: false,
+            });
+
+            const link = document.createElement("a");
+            link.download = "registration-confirmation.png";
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        } catch (error) {
+            console.error("Screenshot error:", error);
+            // Fallback: try dynamic import if module not available
+            alert("स्क्रीनशॉट डाउनलोड करने में समस्या आई। कृपया मैन्युअल स्क्रीनशॉट लें।");
+        }
+    };
+
     return (
         <div className="min-h-screen w-screen bg-gradient-to-br from-orange-50 to-yellow-50 font-heading">
             {/* Top Image Section */}
             <div className="w-full">
-                {/* Placeholder for the top banner image. Please replace '/path/to/your/banner.jpg' with the actual image path. */}
                 <img
-                    src="/vachana-shreni-hindi-2082.jpg" // Using an existing image as placeholder, please update
+                    src="/vachana-shreni-hindi-2082.jpg"
                     alt="Vachana Shreni Banner"
                     className="w-full h-auto max-w-5xl mx-auto object-contain"
                 />
             </div>
 
             {/* Main Content */}
-            <div className="max-w-5xl mx-auto  relative z-10  pb-12">
+            <div className="max-w-5xl mx-auto relative z-10 pb-12">
 
                 {/* Registration Form Section */}
                 <div className="bg-white rounded-sm border border-gray-100 overflow-hidden mb-12 shadow-lg">
@@ -78,7 +99,7 @@ export default function VachanaShreniHindiForm() {
                         <h2 className="text-2xl font-bold text-gray-800">रजिस्ट्रेशन फॉर्म</h2>
                     </div>
 
-                    <div className=" sm:p-8">
+                    <div className="sm:p-8">
                         <Form
                             form={form}
                             layout="vertical"
@@ -114,6 +135,17 @@ export default function VachanaShreniHindiForm() {
                                                     )}
                                                 </div>
 
+                                                {/* ── Waiting Message (shown above पूरा नाम) ── */}
+                                                <div className="mb-6 border border-amber-300 bg-amber-50 rounded-sm p-4 font-heading text-sm leading-relaxed text-gray-800">
+                                                    <p className="font-bold text-amber-800 mb-2 text-base">प्रणाम</p>
+                                                    <p className="mb-1">आपका वाचना सुनने में रस है उसकी हम अनुमोदना करते हैं।</p>
+                                                    <p className="mb-1">व्यवस्था अनुसार वाचनार्थी की संख्या पूरी हो चुकी है।</p>
+                                                    <p className="mb-1">आपका नाम वेटिंग में लिया जा रहा है।</p>
+                                                    <p className="mb-1">उतारे की और जगह प्राप्त करने के लिए हमारा प्रयास चालू है।</p>
+                                                    <p className="mb-1">यदि जगह मिल जाती है अथवा कोई कैंसिलेशन आता है तो आपको हमारी ओर से कंफर्मेशन दिया जाएगा।</p>
+                                                    <p className="mt-2 font-semibold text-amber-700">क्षमा करें अभी आपका नाम वेटिंग में लिया जा रहा है।</p>
+                                                </div>
+
                                                 {/* Form Fields */}
                                                 <div className="space-y-4">
                                                     <Row gutter={[24, 24]}>
@@ -143,7 +175,7 @@ export default function VachanaShreniHindiForm() {
                                                                     placeholder="तारीख चुनें"
                                                                     format="DD-MM-YYYY"
                                                                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-heading text-base"
-                                                                    style={{ height: '50px' }} // Match input height
+                                                                    style={{ height: '50px' }}
                                                                 />
                                                             </Form.Item>
                                                         </Col>
@@ -221,9 +253,6 @@ export default function VachanaShreniHindiForm() {
                                                             </Form.Item>
                                                         </Col>
 
-
-
-
                                                         {index > 0 && (
                                                             <Col xs={24} sm={24}>
                                                                 <div className="mb-2">
@@ -276,7 +305,7 @@ export default function VachanaShreniHindiForm() {
                                                             >
                                                                 <Select
                                                                     placeholder="राज्य चुनें"
-                                                                    className="font-heading h-[52px]" // Height match for AntD Select
+                                                                    className="font-heading h-[52px]"
                                                                     showSearch
                                                                     size="large"
                                                                     filterOption={(input, option) =>
@@ -291,24 +320,6 @@ export default function VachanaShreniHindiForm() {
                                                                 </Select>
                                                             </Form.Item>
                                                         </Col>
-
-                                                        {/* <Col xs={24} sm={12}>
-                                                            <Form.Item
-                                                                {...restField}
-                                                                name={[name, "pincode"]}
-                                                                label={<span className="text-[#901E3E] font-bold text-lg font-heading leading-relaxed">पिनकोड </span>}
-                                                                rules={[
-                                                                    { required: true, message: "पिनकोड आवश्यक है" },
-                                                                    { pattern: /^[0-9]{6}$/, message: "6 अंकों का वैध पिनकोड दर्ज करें" },
-                                                                ]}
-                                                            >
-                                                                <Input
-                                                                    placeholder="पिनकोड"
-                                                                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-heading text-base"
-                                                                    maxLength={6}
-                                                                />
-                                                            </Form.Item>
-                                                        </Col> */}
 
                                                         <Col xs={24} sm={12}>
                                                             <div className="bg-white p-4 rounded-lg border border-gray-200 h-full">
@@ -427,9 +438,10 @@ export default function VachanaShreniHindiForm() {
                 className="font-heading"
                 closeIcon={<CloseCircleOutlined className="text-2xl text-gray-400 hover:text-gray-600" />}
             >
-                <div className="text-center py-6 px-4">
+                {/* Ref wraps only the content to be captured in the screenshot */}
+                <div ref={modalContentRef} className="text-center py-6 px-4 bg-white">
                     <div className="mb-6">
-                        <CheckCircleOutlined className="text-6xl text-green-500 sm:text-7xl " />
+                        <CheckCircleOutlined className="text-6xl text-green-500 sm:text-7xl" />
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl font-bold text-black mb-3 font-heading">
@@ -440,7 +452,7 @@ export default function VachanaShreniHindiForm() {
                         आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।
                     </p>
 
-                    <div className="bg-white p-4 mb-6">
+                    <div className="bg-white p-4 mb-4">
                         <h3 className="text-lg sm:text-xl font-bold text-black mb-4 font-heading">
                             रजिस्ट्रेशन नंबर:
                         </h3>
@@ -449,7 +461,6 @@ export default function VachanaShreniHindiForm() {
                                 <div key={index} className="bg-gray-200 rounded-sm p-3">
                                     <div className="flex items-center justify-between flex-wrap gap-2">
                                         <span className="text-sm sm:text-base font-semibold text-gray-600 font-heading">
-                                            {/* प्रतिभागी {index + 1}: */}
                                             {code.name}
                                         </span>
                                         <span className="text-lg sm:text-xl font-bold text-black font-mono tracking-wider bg-gray-100 px-3 py-1">
@@ -463,15 +474,24 @@ export default function VachanaShreniHindiForm() {
                             यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।
                         </p>
                     </div>
+                </div>
 
+                {/* Buttons row — outside the screenshot ref */}
+                <div className="flex flex-col sm:flex-row gap-3 px-4 pb-6">
                     <Button
-                        type="primary"
+                        icon={<DownloadOutlined />}
                         size="large"
-                        onClick={handleModalClose}
-                        className="!bg-black !rounded-sm border-none h-10 sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:bg-gray-800"
+                        onClick={handleDownloadScreenshot}
+                        className="flex-1 !rounded-sm !font-heading border border-gray-300 h-10 sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
                     >
-                        बंद करें
+                        स्क्रीनशॉट डाउनलोड करें
                     </Button>
+                    <Link
+                        href="/"
+                        className="flex-1 !bg-black !rounded-sm border-none h-10 sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:bg-gray-800"
+                    >
+                        OK
+                    </Link>
                 </div>
             </Modal>
         </div>
