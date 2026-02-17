@@ -50,105 +50,141 @@ export default function VachanaShreniHindiForm() {
         router.push("/");
     };
 
-    // Opens a styled print-ready window — no external library needed
+    // Downloads registration card as a PNG image using Canvas API (no external library)
     const handleDownloadScreenshot = () => {
-        const codesHtml = registrationCodes
-            .map(
-                (entry) => `
-            <div class="code-row">
-                <span class="name">${entry.name}</span>
-                <span class="code">${entry.code}</span>
-            </div>`
-            )
-            .join("");
+        const scale = 2; // retina quality
+        const W = 520;
+        const rowH = 64;
+        const paddingX = 36;
+        const headerH = 180;
+        const footerH = 60;
+        const totalH = headerH + registrationCodes.length * (rowH + 12) + footerH;
 
-        const html = `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>रजिस्ट्रेशन कन्फर्मेशन</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9fafb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 24px;
-    }
-    .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 40px 32px 32px;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-    }
-    .icon { font-size: 60px; margin-bottom: 14px; }
-    h1 { font-size: 26px; font-weight: 800; color: #111827; margin-bottom: 6px; }
-    .subtitle { font-size: 15px; color: #6b7280; margin-bottom: 24px; }
-    .divider { border: none; border-top: 1px solid #f3f4f6; margin: 18px 0; }
-    h2 { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 14px; }
-    .code-row {
-      background: #f3f4f6;
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-    .name { font-size: 14px; font-weight: 600; color: #374151; text-align: left; }
-    .code {
-      font-size: 18px;
-      font-weight: 800;
-      color: #111827;
-      font-family: monospace;
-      letter-spacing: 2px;
-      background: #ffffff;
-      padding: 4px 12px;
-      border-radius: 4px;
-      border: 1px solid #d1d5db;
-      white-space: nowrap;
-    }
-    .note { font-size: 12px; color: #9ca3af; margin-top: 18px; }
-    @media print {
-      body { background: #fff; padding: 0; }
-      .card { box-shadow: none; border: none; }
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="icon">&#9989;</div>
-    <h1>&#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0938;&#x092B;&#x0932;!</h1>
-    <p class="subtitle">&#x0906;&#x092A;&#x0915;&#x093E; &#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0938;&#x092B;&#x0932;&#x0924;&#x093E;&#x092A;&#x0942;&#x0930;&#x094D;&#x0935;&#x0915; &#x092A;&#x0942;&#x0930;&#x094D;&#x0923; &#x0939;&#x094B; &#x0917;&#x092F;&#x093E; &#x0939;&#x0948;&#x0964;</p>
-    <hr class="divider"/>
-    <h2>&#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0928;&#x0902;&#x092C;&#x0930;:</h2>
-    ${codesHtml}
-    <p class="note">&#x092F;&#x0939; &#x0906;&#x092A;&#x0915;&#x093E; &#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0928;&#x0902;&#x092C;&#x0930; &#x0939;&#x0948;&#x0964; &#x0915;&#x0943;&#x092A;&#x092F;&#x093E; &#x0907;&#x0938;&#x0947; &#x0928;&#x094B;&#x091F; &#x0915;&#x0930; &#x0932;&#x0947;&#x0902;&#x0964;</p>
-  </div>
-  <script>
-    window.onload = function () {
-      setTimeout(function () { window.print(); }, 400);
-    };
-  </script>
-</body>
-</html>`;
+        const canvas = document.createElement("canvas");
+        canvas.width = W * scale;
+        canvas.height = totalH * scale;
+        const ctx = canvas.getContext("2d");
+        ctx.scale(scale, scale);
 
-        const win = window.open("", "_blank", "width=620,height=600");
-        if (!win) {
-            alert("पॉप-अप ब्लॉक है। कृपया ब्राउज़र में पॉप-अप की अनुमति दें और पुनः प्रयास करें।");
-            return;
-        }
-        win.document.write(html);
-        win.document.close();
+        // ── Background ──
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, W, totalH);
+
+        // ── Top green accent bar ──
+        ctx.fillStyle = "#22c55e";
+        ctx.fillRect(0, 0, W, 6);
+
+        // ── Checkmark circle ──
+        const cx = W / 2;
+        ctx.beginPath();
+        ctx.arc(cx, 52, 26, 0, Math.PI * 2);
+        ctx.fillStyle = "#dcfce7";
+        ctx.fill();
+        ctx.font = "bold 28px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#16a34a";
+        ctx.fillText("✓", cx, 62);
+
+        // ── Title ──
+        ctx.font = "bold 22px sans-serif";
+        ctx.fillStyle = "#111827";
+        ctx.textAlign = "center";
+        ctx.fillText("रजिस्ट्रेशन सफल!", cx, 108);
+
+        // ── Subtitle ──
+        ctx.font = "14px sans-serif";
+        ctx.fillStyle = "#6b7280";
+        ctx.fillText("आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।", cx, 130);
+
+        // ── Divider ──
+        ctx.strokeStyle = "#e5e7eb";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(paddingX, 148);
+        ctx.lineTo(W - paddingX, 148);
+        ctx.stroke();
+
+        // ── "Registration Number" label ──
+        ctx.font = "bold 14px sans-serif";
+        ctx.fillStyle = "#374151";
+        ctx.textAlign = "center";
+        ctx.fillText("रजिस्ट्रेशन नंबर:", cx, 168);
+
+        // ── Code rows ──
+        let y = headerH;
+        registrationCodes.forEach((entry) => {
+            const rowY = y;
+            const rowW = W - paddingX * 2;
+
+            // Row background
+            ctx.fillStyle = "#f3f4f6";
+            roundRect(ctx, paddingX, rowY, rowW, rowH, 8);
+            ctx.fill();
+
+            // Name (left)
+            ctx.font = "600 14px sans-serif";
+            ctx.fillStyle = "#374151";
+            ctx.textAlign = "left";
+            ctx.fillText(entry.name, paddingX + 16, rowY + 28);
+
+            // Participant label
+            ctx.font = "11px sans-serif";
+            ctx.fillStyle = "#9ca3af";
+            ctx.fillText("प्रतिभागी", paddingX + 16, rowY + 46);
+
+            // Code pill (right)
+            const codeText = entry.code;
+            ctx.font = "bold 16px monospace";
+            const codeW = ctx.measureText(codeText).width + 28;
+            const codeX = W - paddingX - codeW - 8;
+            const codeY = rowY + 14;
+            const codeH = 36;
+
+            ctx.fillStyle = "#ffffff";
+            ctx.strokeStyle = "#d1d5db";
+            ctx.lineWidth = 1.5;
+            roundRect(ctx, codeX, codeY, codeW, codeH, 6);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.fillStyle = "#111827";
+            ctx.textAlign = "center";
+            ctx.fillText(codeText, codeX + codeW / 2, codeY + 23);
+
+            y += rowH + 12;
+        });
+
+        // ── Footer note ──
+        ctx.font = "12px sans-serif";
+        ctx.fillStyle = "#9ca3af";
+        ctx.textAlign = "center";
+        ctx.fillText("यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।", cx, y + 28);
+
+        // ── Bottom border ──
+        ctx.fillStyle = "#f59e0b";
+        ctx.fillRect(0, totalH - 4, W, 4);
+
+        // ── Trigger download ──
+        const link = document.createElement("a");
+        link.download = "registration-confirmation.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
     };
+
+    // Helper: rounded rectangle path
+    function roundRect(ctx, x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.lineTo(x + w - r, y);
+        ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+        ctx.lineTo(x + w, y + h - r);
+        ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        ctx.lineTo(x + r, y + h);
+        ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+        ctx.lineTo(x, y + r);
+        ctx.quadraticCurveTo(x, y, x + r, y);
+        ctx.closePath();
+    }
 
     return (
         <div className="min-h-screen w-screen bg-gradient-to-br from-orange-50 to-yellow-50 font-heading">
@@ -545,14 +581,14 @@ export default function VachanaShreniHindiForm() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                        {/* Download button — opens a styled print-ready page in a new tab */}
+                        {/* Download button — saves as PNG image via Canvas API */}
                         <Button
                             icon={<DownloadOutlined />}
                             size="large"
                             onClick={handleDownloadScreenshot}
                             className="flex-1 !rounded-sm border border-gray-300 h-10 sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
                         >
-                            डाउनलोड / प्रिंट करें
+                            इमेज डाउनलोड करें
                         </Button>
 
                         {/* Close button — redirects to home page */}
