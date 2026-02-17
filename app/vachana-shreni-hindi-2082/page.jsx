@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Form, Input, Button, Row, Col, Modal, Radio, Select, Checkbox, DatePicker } from "antd";
 import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined, DownloadOutlined } from "@ant-design/icons";
 import axios from "axios";
-import Link from "next/link";
 import { states } from "@/app/data/states";
 
 export default function VachanaShreniHindiForm() {
@@ -11,31 +11,24 @@ export default function VachanaShreniHindiForm() {
     const [loading, setLoading] = useState(false);
     const [successModalVisible, setSuccessModalVisible] = useState(false);
     const [registrationCodes, setRegistrationCodes] = useState([]);
-    const modalContentRef = useRef(null);
+    const router = useRouter();
 
     const onFinish = async (values) => {
         setLoading(true);
-
         try {
-            const payload = {
-                participants: values.participants,
-            };
-
+            const payload = { participants: values.participants };
             const response = await axios.post(
-                "https://vachanashrenihindi2082test-fahifz22ha-uc.a.run.app",
+                "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/vachanaShreniHindi2082",
                 payload
             );
-
             if (response.status === 200) {
                 const codes = response.data.codes || values.participants.map((_, i) =>
-                    `REG${Date.now()}${String(i + 1).padStart(3, '0')}`
+                    `REG${Date.now()}${String(i + 1).padStart(3, "0")}`
                 );
-
                 const registrationDetails = values.participants.map((p, i) => ({
                     code: codes[i],
-                    name: p.fullName
+                    name: p.fullName,
                 }));
-
                 setRegistrationCodes(registrationDetails);
                 setSuccessModalVisible(true);
                 form.resetFields();
@@ -50,33 +43,111 @@ export default function VachanaShreniHindiForm() {
         }
     };
 
+    // Close modal and redirect to home page
     const handleModalClose = () => {
         setSuccessModalVisible(false);
         setRegistrationCodes([]);
+        router.push("/");
     };
 
-    const handleDownloadScreenshot = async () => {
-        try {
-            const html2canvas = (await import("html2canvas")).default;
-            const element = modalContentRef.current;
-            if (!element) return;
+    // Opens a styled print-ready window — no external library needed
+    const handleDownloadScreenshot = () => {
+        const codesHtml = registrationCodes
+            .map(
+                (entry) => `
+            <div class="code-row">
+                <span class="name">${entry.name}</span>
+                <span class="code">${entry.code}</span>
+            </div>`
+            )
+            .join("");
 
-            const canvas = await html2canvas(element, {
-                backgroundColor: "#ffffff",
-                scale: 2,
-                useCORS: true,
-                logging: false,
-            });
+        const html = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>रजिस्ट्रेशन कन्फर्मेशन</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 40px 32px 32px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    .icon { font-size: 60px; margin-bottom: 14px; }
+    h1 { font-size: 26px; font-weight: 800; color: #111827; margin-bottom: 6px; }
+    .subtitle { font-size: 15px; color: #6b7280; margin-bottom: 24px; }
+    .divider { border: none; border-top: 1px solid #f3f4f6; margin: 18px 0; }
+    h2 { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 14px; }
+    .code-row {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .name { font-size: 14px; font-weight: 600; color: #374151; text-align: left; }
+    .code {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+      font-family: monospace;
+      letter-spacing: 2px;
+      background: #ffffff;
+      padding: 4px 12px;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      white-space: nowrap;
+    }
+    .note { font-size: 12px; color: #9ca3af; margin-top: 18px; }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .card { box-shadow: none; border: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">&#9989;</div>
+    <h1>&#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0938;&#x092B;&#x0932;!</h1>
+    <p class="subtitle">&#x0906;&#x092A;&#x0915;&#x093E; &#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0938;&#x092B;&#x0932;&#x0924;&#x093E;&#x092A;&#x0942;&#x0930;&#x094D;&#x0935;&#x0915; &#x092A;&#x0942;&#x0930;&#x094D;&#x0923; &#x0939;&#x094B; &#x0917;&#x092F;&#x093E; &#x0939;&#x0948;&#x0964;</p>
+    <hr class="divider"/>
+    <h2>&#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0928;&#x0902;&#x092C;&#x0930;:</h2>
+    ${codesHtml}
+    <p class="note">&#x092F;&#x0939; &#x0906;&#x092A;&#x0915;&#x093E; &#x0930;&#x091C;&#x093F;&#x0938;&#x094D;&#x091F;&#x094D;&#x0930;&#x0947;&#x0936;&#x0928; &#x0928;&#x0902;&#x092C;&#x0930; &#x0939;&#x0948;&#x0964; &#x0915;&#x0943;&#x092A;&#x092F;&#x093E; &#x0907;&#x0938;&#x0947; &#x0928;&#x094B;&#x091F; &#x0915;&#x0930; &#x0932;&#x0947;&#x0902;&#x0964;</p>
+  </div>
+  <script>
+    window.onload = function () {
+      setTimeout(function () { window.print(); }, 400);
+    };
+  </script>
+</body>
+</html>`;
 
-            const link = document.createElement("a");
-            link.download = "registration-confirmation.png";
-            link.href = canvas.toDataURL("image/png");
-            link.click();
-        } catch (error) {
-            console.error("Screenshot error:", error);
-            // Fallback: try dynamic import if module not available
-            alert("स्क्रीनशॉट डाउनलोड करने में समस्या आई। कृपया मैन्युअल स्क्रीनशॉट लें।");
+        const win = window.open("", "_blank", "width=620,height=600");
+        if (!win) {
+            alert("पॉप-अप ब्लॉक है। कृपया ब्राउज़र में पॉप-अप की अनुमति दें और पुनः प्रयास करें।");
+            return;
         }
+        win.document.write(html);
+        win.document.close();
     };
 
     return (
@@ -104,9 +175,7 @@ export default function VachanaShreniHindiForm() {
                             form={form}
                             layout="vertical"
                             onFinish={onFinish}
-                            initialValues={{
-                                participants: [{}],
-                            }}
+                            initialValues={{ participants: [{}] }}
                             className="space-y-6"
                         >
                             <Form.List name="participants">
@@ -135,9 +204,9 @@ export default function VachanaShreniHindiForm() {
                                                     )}
                                                 </div>
 
-                                                {/* ── Waiting Message (shown above पूरा नाम) ── */}
+                                                {/* ── Waiting Message above पूरा नाम ── */}
                                                 <div className="mb-6 border border-amber-300 bg-amber-50 rounded-sm p-4 font-heading text-sm leading-relaxed text-gray-800">
-                                                    <p className="font-bold text-amber-800 mb-2 text-base">प्रणाम</p>
+                                                    <p className="font-bold text-amber-800 mb-2 text-base">🙏 प्रणाम</p>
                                                     <p className="mb-1">आपका वाचना सुनने में रस है उसकी हम अनुमोदना करते हैं।</p>
                                                     <p className="mb-1">व्यवस्था अनुसार वाचनार्थी की संख्या पूरी हो चुकी है।</p>
                                                     <p className="mb-1">आपका नाम वेटिंग में लिया जा रहा है।</p>
@@ -175,7 +244,7 @@ export default function VachanaShreniHindiForm() {
                                                                     placeholder="तारीख चुनें"
                                                                     format="DD-MM-YYYY"
                                                                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-amber-400 transition duration-300 font-heading text-base"
-                                                                    style={{ height: '50px' }}
+                                                                    style={{ height: "50px" }}
                                                                 />
                                                             </Form.Item>
                                                         </Col>
@@ -309,7 +378,7 @@ export default function VachanaShreniHindiForm() {
                                                                     showSearch
                                                                     size="large"
                                                                     filterOption={(input, option) =>
-                                                                        (option?.children ?? '').toLowerCase().includes(input.toLowerCase())
+                                                                        (option?.children ?? "").toLowerCase().includes(input.toLowerCase())
                                                                     }
                                                                 >
                                                                     {states.map((s) => (
@@ -385,7 +454,7 @@ export default function VachanaShreniHindiForm() {
                                     size="large"
                                     block
                                     loading={loading}
-                                    className="h-14 text-xl !font-heading font-bold font-heading !pt-1 !bg-gradient-to-r from-blue-500 to-purple-600 border-none hover:from-blue-600 hover:to-purple-700 shadow-lg rounded-xl transform hover:-translate-y-0.5 transition-all duration-300"
+                                    className="h-14 text-xl !font-heading font-bold !pt-1 !bg-gradient-to-r from-blue-500 to-purple-600 border-none hover:from-blue-600 hover:to-purple-700 shadow-lg rounded-xl transform hover:-translate-y-0.5 transition-all duration-300"
                                 >
                                     {loading ? "रजिस्ट्रेशन हो रहा है..." : "सभी प्रतिभागियों को रजिस्टर करें"}
                                 </Button>
@@ -438,8 +507,7 @@ export default function VachanaShreniHindiForm() {
                 className="font-heading"
                 closeIcon={<CloseCircleOutlined className="text-2xl text-gray-400 hover:text-gray-600" />}
             >
-                {/* Ref wraps only the content to be captured in the screenshot */}
-                <div ref={modalContentRef} className="text-center py-6 px-4 bg-white">
+                <div className="text-center py-6 px-4">
                     <div className="mb-6">
                         <CheckCircleOutlined className="text-6xl text-green-500 sm:text-7xl" />
                     </div>
@@ -452,7 +520,7 @@ export default function VachanaShreniHindiForm() {
                         आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।
                     </p>
 
-                    <div className="bg-white p-4 mb-4">
+                    <div className="bg-white p-4 mb-6">
                         <h3 className="text-lg sm:text-xl font-bold text-black mb-4 font-heading">
                             रजिस्ट्रेशन नंबर:
                         </h3>
@@ -474,24 +542,29 @@ export default function VachanaShreniHindiForm() {
                             यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।
                         </p>
                     </div>
-                </div>
 
-                {/* Buttons row — outside the screenshot ref */}
-                <div className="flex flex-col sm:flex-row gap-3 px-4 pb-6">
-                    <Button
-                        icon={<DownloadOutlined />}
-                        size="large"
-                        onClick={handleDownloadScreenshot}
-                        className="flex-1 !rounded-sm !font-heading border border-gray-300 h-10 sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
-                    >
-                        स्क्रीनशॉट डाउनलोड करें
-                    </Button>
-                    <Link
-                        href="/"
-                        className="flex-1 !bg-black !rounded-sm border-none h-10 sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:bg-gray-800"
-                    >
-                        OK
-                    </Link>
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        {/* Download button — opens a styled print-ready page in a new tab */}
+                        <Button
+                            icon={<DownloadOutlined />}
+                            size="large"
+                            onClick={handleDownloadScreenshot}
+                            className="flex-1 !rounded-sm border border-gray-300 h-10 sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
+                        >
+                            डाउनलोड / प्रिंट करें
+                        </Button>
+
+                        {/* Close button — redirects to home page */}
+                        <Button
+                            type="primary"
+                            size="large"
+                            onClick={handleModalClose}
+                            className="flex-1 !bg-black !rounded-sm border-none h-10 sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:!bg-gray-800"
+                        >
+                            बंद करें
+                        </Button>
+                    </div>
                 </div>
             </Modal>
         </div>
