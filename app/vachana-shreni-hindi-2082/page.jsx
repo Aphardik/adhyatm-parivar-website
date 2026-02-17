@@ -18,7 +18,7 @@ export default function VachanaShreniHindiForm() {
         try {
             const payload = { participants: values.participants };
             const response = await axios.post(
-                "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/vachanaShreniHindi2082",
+                "https://vachanashrenihindi2082test-fahifz22ha-uc.a.run.app",
                 payload
             );
             if (response.status === 200) {
