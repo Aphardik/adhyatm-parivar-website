@@ -133,7 +133,10 @@ const SubmissionPopup = ({
   errorText = "Failed to submit form. Please try again.",
   showAutoClose = false,
   autoCloseDelay = 3000,
-  language = 'english'
+  language = 'english',
+  showSuratMessage = false,
+  suratTexts = null,
+  fontClass = ''
 }) => {
   const [copied, setCopied] = useState(false);
   const pathname = usePathname();
@@ -172,7 +175,7 @@ const SubmissionPopup = ({
 
       case "success":
         return (
-          <div className="text-center font-anek">
+          <div className={`${fontClass} text-center font-anek`}>
             {/* Success Icon with Animation */}
             <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100">
               <CheckCircleOutlined
@@ -181,8 +184,11 @@ const SubmissionPopup = ({
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">ધન્યવાદ ! {candidateName}</h2>
-            <p className="text-gray-600 font-semibold text-lg mb-6">{title}</p>
+            <h2 className={`${fontClass} text-2xl font-bold text-gray-800 mb-2`}>
+              {language === 'hindi' && "धन्यवाद"}
+              {language === 'gujarati' && "ધન્યવાદ"}
+              {language === 'english' && "Thank you"} ! {candidateName}</h2>
+            <p className="text-gray-600 font-semibold text-base mb-6">{title}</p>
 
             {/* Registration ID Card */}
             <div className="mb-6 mx-auto max-w-sm">
@@ -202,12 +208,34 @@ const SubmissionPopup = ({
                     </span>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 mt-2">તમારું રજિસ્ટ્રેશન ID</p>
+                <p className="text-xs text-gray-500 mt-2">{desc}</p>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-gray-700 mb-6 px-4">{desc}</p>
+            {/* <p className="text-gray-700 mb-6 px-4">{desc}</p> */}
+
+            {/* Surat Pickup Information */}
+            {showSuratMessage && suratTexts && (
+              <div className={`mt-6 mb-6 text-left p-5 bg-green-50 rounded-sm border-2 border-green-200 shadow-sm ${fontClass}`}>
+                <div className="flex items-start gap-3 mb-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-green-800 font-bold text-lg leading-relaxed">
+                    {suratTexts.title}
+                  </p>
+                </div>
+                <div className="pl-5">
+                  <p className="text-gray-700 font-semibold mb-3 border-l-2 border-green-300 pl-3">
+                    {suratTexts.message}
+                  </p>
+                  <div className="bg-white rounded-sm p-4 border border-green-200 shadow-inner">
+                    <pre className={`text-gray-800 text-sm font-bold whitespace-pre-wrap leading-relaxed ${fontClass}`}>
+                      {suratTexts.address}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Calendar Page Specific Info */}
             {isCalendarPage && (
@@ -226,7 +254,7 @@ const SubmissionPopup = ({
                     <span className="font-semibold text-red-600">ત્યાં સુધી ફોન ન કરવા તથા બીજીવાર ફોર્મ ન ભરવા વિનંતી.</span>
                   </p>
 
-                  <div className="mt-3 bg-white rounded-lg p-3 border border-amber-200">
+                  <div className="mt-3 bg-white rounded-sm p-3 border border-amber-200">
                     <p className="text-gray-800 text-sm font-semibold" lang="gu">
                       અધ્યાત્મ પરિવાર પુસ્તક વિભાગ
                     </p>
@@ -241,9 +269,9 @@ const SubmissionPopup = ({
             {/* Action Button */}
             <button
               onClick={onSuccess || onClose}
-              className="mt-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+              className="font-sans bg-gradient-to-r text-xl from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-2 rounded-sm shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
             >
-              Ok
+              OK
             </button>
 
             <div className="mt-6 text-center flex items-center gap-2 justify-center border-t pt-4">
@@ -278,7 +306,7 @@ const SubmissionPopup = ({
             {/* Action Button */}
             <button
               onClick={onClose}
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-sm shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
             >
               Try Again
             </button>

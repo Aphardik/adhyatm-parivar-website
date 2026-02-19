@@ -20,6 +20,17 @@ import useUserFetch from "../_hooks/useUserFetch";
 import UserFetchModal from "./UserFetchModal";
 import { maskData } from "../_utils/userFetchUtils";
 
+// Helper: detect if city value is Surat (any script, with/without spaces)
+const isSuratCity = (val) => {
+  if (!val) return false;
+  const cleaned = val.replace(/\s+/g, "").toLowerCase();
+  return [
+    "surat",
+    "\u0AB8\u0AC1\u0AB0\u0AA4",  // સુરત (Gujarati)
+    "\u0938\u0942\u0930\u0924"   // सूरत (Hindi)
+  ].includes(cleaned);
+};
+
 // Translation object for multi-language support
 const translations = {
   english: {
@@ -66,6 +77,11 @@ const translations = {
       title: "Out of Stock",
       message: "This book is currently out of stock.",
     },
+    surat: {
+      title: "\uD83D\uDCCD Surat City — Book Collection Address",
+      message: "You are in Surat city, so you need to collect the book from the following address:",
+      address: "Adhyatm Bhavan\nThird Floor, Anand Shravak Aradhana Bhavan\nNear Sanjeevkumar Auditorium, Pal, Surat - 395 009\nM. 7676769600",
+    },
   },
   hindi: {
     mobile: { label: "मोबाइल नंबर", placeholder: "मोबाइल नंबर" },
@@ -111,6 +127,11 @@ const translations = {
       title: "स्टॉक खत्म",
       message: "यह पुस्तक वर्तमान में स्टॉक में नहीं है।",
     },
+    surat: {
+      title: "सूरत शहर — पुस्तक संग्रह स्थान",
+      message: "आप सूरत शहर में हैं, इसलिए आपको निम्नलिखित पते से पुस्तक लेनी होगी:",
+      address: "अध्यात्म भवन\nतीसरा माला, आनंद श्रावक आराधना भवन\nसंजीवकुमार ऑडिटोरियम के पास, पाल, सूरत - 395 009\nM. 7676769600",
+    },
   },
   gujarati: {
     mobile: { label: "મોબાઇલ નંબર", placeholder: "મોબાઇલ નંબર" },
@@ -155,6 +176,11 @@ const translations = {
     outOfStock: {
       title: "સ્ટોક ખાલી છે",
       message: "આ પુસ્તક હાલમાં સ્ટોકમાં નથી.",
+    },
+    surat: {
+      title: "સુરત શહેર — પુસ્તક સંગ્રહ સ્થળ",
+      message: "તમે સુરત શહેરમાં છો, તેથી તમારે નીચેના સરનામેથી પુસ્તક લઈ જવું પડશે:",
+      address: "અધ્યાત્મ ભવન\nત્રીજો માળ, આનંદ શ્રાવક આરાધના ભવન\nસંજીવકુમાર ઓડિટોરિયમ પાસે, પાલ, સૂરત - 395 009\nM. 7676769600",
     },
   },
 };
@@ -469,6 +495,7 @@ export default function DynamicForm() {
   const [fetchedUser, setFetchedUser] = useState(null);
   const [realUserValues, setRealUserValues] = useState({});
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [suratCity, setSuratCity] = useState(false);
 
   const [isVerified, setIsVerified] = useState(false);
 
@@ -762,6 +789,7 @@ export default function DynamicForm() {
           className="rounded-md"
           placeholder={t.city.placeholder}
           disabled={form.getFieldValue(fieldKeys.city)?.includes('xxxx')}
+          onChange={(e) => setSuratCity(isSuratCity(e.target.value))}
         />,
       },
       address: {
@@ -1280,6 +1308,9 @@ export default function DynamicForm() {
         errorText="Failed to submit form. Please try again."
         showAutoClose={false}
         language={currentLanguage}
+        showSuratMessage={suratCity}
+        suratTexts={t.surat}
+        fontClass={fontClass}
       />
       {/* Verification Modal */}
       <UserFetchModal
