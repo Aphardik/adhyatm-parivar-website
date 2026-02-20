@@ -928,7 +928,7 @@ export default function DynamicForm() {
 
     try {
       setLoading(true);
-      const response = await axios.post(formData.link, finalValues);
+      const response = await axios.post(`${formData.link}?mode=TEST`, finalValues);
       console.log(response, "response");
       const generatedID = response.data.registrationId || null;
       setGeneratedID(generatedID);
