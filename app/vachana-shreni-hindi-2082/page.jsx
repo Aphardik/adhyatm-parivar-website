@@ -108,7 +108,7 @@ export default function VachanaShreniHindiForm() {
         ctx.font = "bold 14px sans-serif";
         ctx.fillStyle = "#374151";
         ctx.textAlign = "center";
-        ctx.fillText("रजिस्ट्रेशन नंबर:", cx, 168);
+        ctx.fillText("वेटिंग नंबर:", cx, 168);
 
         // ── Code rows ──
         let y = headerH;
@@ -158,7 +158,7 @@ export default function VachanaShreniHindiForm() {
         ctx.font = "12px sans-serif";
         ctx.fillStyle = "#9ca3af";
         ctx.textAlign = "center";
-        ctx.fillText("यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।", cx, y + 28);
+        ctx.fillText("यह आपका वेटिंग नंबर है। कृपया इसे नोट कर लें।", cx, y + 28);
 
         // ── Bottom border ──
         ctx.fillStyle = "#f59e0b";
@@ -552,13 +552,13 @@ export default function VachanaShreniHindiForm() {
                         रजिस्ट्रेशन सफल!
                     </h2>
 
-                    <p className="text-base sm:text-lg text-gray-600 mb-6 font-heading">
-                        आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।
+                    <p className="text-base sm:text-lg font-semibold text-red-600 mb-6 font-heading">
+                        आपका रजिस्ट्रेशन वेटिंग में सफलतापूर्वक पूर्ण हो गया है।
                     </p>
 
                     <div className="bg-white p-4 mb-6">
                         <h3 className="text-lg sm:text-xl font-bold text-black mb-4 font-heading">
-                            रजिस्ट्रेशन नंबर:
+                            वेटिंग नंबर:
                         </h3>
                         <div className="space-y-3">
                             {registrationCodes.map((code, index) => (
@@ -575,7 +575,7 @@ export default function VachanaShreniHindiForm() {
                             ))}
                         </div>
                         <p className="text-xs sm:text-sm text-gray-500 mt-4 font-heading">
-                            यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।
+                            यह आपका वेटिंग नंबर है। कृपया इसे नोट कर लें।
                         </p>
                     </div>
 
@@ -586,7 +586,7 @@ export default function VachanaShreniHindiForm() {
                             icon={<DownloadOutlined />}
                             size="large"
                             onClick={handleDownloadScreenshot}
-                            className="flex-1 !rounded-sm border border-gray-300 h-10 sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
+                            className="flex-1 !rounded-sm border bg-gray-100 !border-blue-400 !py-2 !h-10 !sm:h-12 text-base sm:text-lg font-bold font-heading hover:bg-gray-50"
                         >
                             इमेज डाउनलोड करें
                         </Button>
@@ -596,7 +596,7 @@ export default function VachanaShreniHindiForm() {
                             type="primary"
                             size="large"
                             onClick={handleModalClose}
-                            className="flex-1 !bg-black !rounded-sm border-none h-10 sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:!bg-gray-800"
+                            className="flex-1 !bg-black !rounded-sm !py-2 border-none !h-10 !sm:h-12 text-base sm:text-lg font-bold font-heading px-8 hover:!bg-gray-800"
                         >
                             बंद करें
                         </Button>
