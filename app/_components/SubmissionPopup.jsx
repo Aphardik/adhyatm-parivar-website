@@ -276,9 +276,9 @@ const SubmissionPopup = ({
 
             <div className="mt-6 text-center flex items-center gap-2 justify-center border-t pt-4">
               <p className="text-sm font-medium text-gray-600">
-                {language === 'hindi' && "और पुस्तकें देखना चाहते हैं?"}
-                {language === 'gujarati' && "વધુ પુસ્તકો જોવા માંગો છો?"}
-                {language === 'english' && "Want to explore more books?"}
+                {language === 'hindi' && "अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची के लिए "}
+                {language === 'gujarati' && "અધ્યાત્મ પરિવાર દ્વારા પ્રકાશિત તમામ પુસ્તકોની યાદી માટે "}
+                {language === 'english' && "For the list of all books published by Adhyatma Parivar "}
               </p>
               <a href="/books" className="text-blue-600 font-bold hover:underline">
                 {language === 'hindi' && "यहां क्लिक करें"}

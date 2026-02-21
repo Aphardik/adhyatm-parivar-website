@@ -242,7 +242,7 @@ export default function VachanaShreniHindiForm() {
 
                                                 {/* ── Waiting Message above पूरा नाम ── */}
                                                 <div className="mb-6 border border-amber-300 bg-amber-50 rounded-sm p-4 font-heading text-sm leading-relaxed text-gray-800">
-                                                    <p className="font-bold text-amber-800 mb-2 text-base">🙏 प्रणाम</p>
+                                                    <p className="font-bold text-amber-800 mb-2 text-base">प्रणाम</p>
                                                     <p className="mb-1">आपका वाचना सुनने में रस है उसकी हम अनुमोदना करते हैं।</p>
                                                     <p className="mb-1">व्यवस्था अनुसार वाचनार्थी की संख्या पूरी हो चुकी है।</p>
                                                     <p className="mb-1">आपका नाम वेटिंग में लिया जा रहा है।</p>
@@ -472,7 +472,7 @@ export default function VachanaShreniHindiForm() {
                                                 onClick={() => add()}
                                                 block
                                                 icon={<PlusOutlined />}
-                                                className="h-14 text-lg font-bold !font-heading border-2 border-dashed border-gray-400 text-gray-600 hover:text-blue-600 hover:border-blue-500 rounded-xl flex items-center justify-center gap-2 font-heading transition-all duration-300 hover:bg-blue-50"
+                                                className="h-14 text-lg font-bold !font-heading border-2 border-dashed border-gray-400 text-gray-600 hover:text-blue-600 hover:border-blue-500 rounded-xl flex items-center justify-center gap-2  transition-all duration-300 hover:bg-blue-50"
                                                 size="large"
                                             >
                                                 एक और प्रतिभागी जोड़ें
