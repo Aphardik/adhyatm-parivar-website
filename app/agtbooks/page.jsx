@@ -7,8 +7,8 @@ import { FaSearch, FaShoppingCart, FaPlus, FaMinus, FaTrash, FaCheckCircle, FaSh
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaSprayCanSparkles } from 'react-icons/fa6';
 
-const BOOKS_API = "http://agt-api.adhyatmparivar.com/api/books";
-const ORDERS_API = "http://agt-api.adhyatmparivar.com/api/orders";
+const BOOKS_API = "https://agt-api.adhyatmparivar.com/api/books";
+const ORDERS_API = "https://agt-api.adhyatmparivar.com/api/orders";
 
 const AgtBooks = () => {
   const [books, setBooks] = useState([]);
