@@ -117,7 +117,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Modal, Spin, message } from "antd";
-import { CheckCircleOutlined, CloseCircleOutlined, CopyOutlined } from "@ant-design/icons";
+import { CheckCircleOutlined, CloseCircleOutlined, CopyOutlined, DownloadOutlined } from "@ant-design/icons";
 import { usePathname } from "next/navigation";
 
 const SubmissionPopup = ({
@@ -135,6 +135,7 @@ const SubmissionPopup = ({
   autoCloseDelay = 3000,
   language = 'english',
   showSuratMessage = false,
+  onDownload,
   suratTexts = null,
   fontClass = ''
 }) => {
@@ -267,13 +268,23 @@ const SubmissionPopup = ({
             )}
 
             {/* Action Button */}
-            <button
-              onClick={onSuccess || onClose}
-              className="font-sans bg-gradient-to-r text-xl from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-2 rounded-sm shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
-            >
-              OK
-            </button>
-
+            <div className="flex flex-col items-center justify-between gap-2">
+              <button
+                onClick={onSuccess || onClose}
+                className="font-sans bg-gradient-to-r w-full text-sm from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-2 rounded-sm shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+              >
+                OK
+              </button>
+              {onDownload && (
+                <button
+                  type="button"
+                  onClick={onDownload}
+                  className="flex items-center justify-center w-full gap-2 px-4 py-2 border border-blue-400 bg-gray-100 rounded text-sm font-semibold hover:bg-gray-50 transition"
+                >
+                  <DownloadOutlined /> Download Screenshot
+                </button>
+              )}
+            </div>
             <div className="mt-6 text-center flex items-center gap-2 justify-center border-t pt-4">
               <p className="text-sm font-medium text-gray-600">
                 {language === 'hindi' && "अध्यात्म परिवार द्वारा प्रकाशित सभी पुस्तकों की सूची के लिए "}

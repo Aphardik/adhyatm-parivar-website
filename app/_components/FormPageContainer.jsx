@@ -19,6 +19,7 @@ import { detectLanguage } from "../utils/detectLanguage.utils";
 import useUserFetch from "../_hooks/useUserFetch";
 import UserFetchModal from "./UserFetchModal";
 import { maskData } from "../_utils/userFetchUtils";
+import { downloadRegistrationCard } from "@/app/utils/downloadRegisterCard.Utils";
 
 // Helper: detect if city value is Surat (any script, with/without spaces)
 const isSuratCity = (val) => {
@@ -496,6 +497,7 @@ export default function DynamicForm() {
   const [realUserValues, setRealUserValues] = useState({});
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [suratCity, setSuratCity] = useState(false);
+  const [registrationCard, setRegistrationCard] = useState([]);
 
   const [isVerified, setIsVerified] = useState(false);
 
@@ -937,6 +939,16 @@ export default function DynamicForm() {
       setGeneratedID(generatedID);
       if (response.status === 200) {
         setPopupStatus("success");
+        const fullName = `${finalValues["नाम"] || finalValues["નામ"] || finalValues["Name"] || ""} ${finalValues["उपनाम"] || finalValues["અટક"] || finalValues["Surname"] || ""}`.trim();
+        setCandidateName(fullName);
+
+        const id = response.data.registrationId || null;
+        setGeneratedID(id);
+
+        // NEW — build the card data
+        if (id) {
+          setRegistrationCard([{ name: fullName, code: id }]);
+        }
         console.log("Response sent successfully:", response.data);
         form.resetFields();
         if (isSanskrutamSaralamForm) {
@@ -977,12 +989,14 @@ export default function DynamicForm() {
     setPopupVisible(false);
     setCandidateName("");
     setPopupStatus("loading");
+    setRegistrationCard([]);
   };
 
   const handleSuccessOk = () => {
     setPopupVisible(false);
     setPopupStatus("loading");
     setCandidateName("");
+    setRegistrationCard([]);
     router.push("/");
   };
 
@@ -993,6 +1007,30 @@ export default function DynamicForm() {
       </div>
     );
   }
+
+  const handleDownloadCard = () => {
+    downloadRegistrationCard({
+      registrationCodes: registrationCard,
+      // Customise labels per language if needed:
+      labels: currentLanguage === "hindi"
+        ? {
+          title: "रजिस्ट्रेशन सफल!",
+          subtitle: "आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।",
+          codeLabel: "रजिस्ट्रेशन नंबर:",
+          participant: "वाचक",
+          footer: "यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।",
+        }
+        : currentLanguage === "gujarati"
+          ? {
+            title: "રજિસ્ટ્રેશન સફળ!",
+            subtitle: "તમારું રજિસ્ટ્રેશન સફળતાપૂર્વક પૂર્ણ થઈ ગયું છે.",
+            codeLabel: "રજિસ્ટ્રેશન નંબર:",
+            participant: "વાચક",
+            footer: "આ તમારો રજિસ્ટ્રેશન નંબર છે. કૃપા કરીને નોંધ લો.",
+          }
+          : undefined,
+    });
+  };
 
   if (!formSlug) {
     return (
@@ -1314,6 +1352,7 @@ export default function DynamicForm() {
         showSuratMessage={suratCity}
         suratTexts={t.surat}
         fontClass={fontClass}
+        onDownload={registrationCard.length ? handleDownloadCard : undefined}
       />
       {/* Verification Modal */}
       <UserFetchModal
