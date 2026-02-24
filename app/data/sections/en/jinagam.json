@@ -1,29 +1,29 @@
 {
     "prachinShrutSuraksha": {
-        "metaTitle": "Ancient Scripture Safety | Jinagam Vibhag",
+        "metaTitle": "Ancient Scripture Safety | Jinagam Department",
         "stats": [
             {
-                "label": "आज तक प्रकाशित वॉल्यूम",
+                "label": "Volumes Published Till Date",
                 "count": "60"
             },
             {
-                "label": "कुल पृष्ठ",
+                "label": "Total Pages",
                 "count": "21717"
             },
             {
-                "label": "कुल नकल",
+                "label": "Total Copies",
                 "count": "32750"
             },
             {
-                "label": "वॉल्यूम में समाविष्ट कुल ग्रंथ",
+                "label": "Total Texts Included in the Volumes",
                 "count": "116"
             },
             {
-                "label": "ग्रंथों की कुल (लगभग) श्लोक संख्या",
+                "label": "Approximate Total Verse Count of the Texts",
                 "count": "5,01,544"
             },
             {
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "label": "Expenditure by Adhyatma Parivar",
                 "count": "1.25cr +"
             }
         ],
@@ -32,90 +32,90 @@
             "date": "Work in Progress: V.S. 2063"
         },
         "intro": {
-            "text": "It is impossible to describe in words the glory of the Shrut (scripture) on the strength of which the Shasan (order) is going to remain victorious for 21,000 years. Under the guidance of Pujya Kripanath, hundreds of Shramans and Shraminis are working hard to protect it by giving thousands of hours. A small glimpse of the ancient Shrut publication done by Adhyatm Parivar as a beautiful result of which:"
+            "text": "It is impossible to describe in words the glory of the Shrut (scripture), on whose strength the Shasan (order) will remain victorious for 21,000 years. Under the guidance of Pujya Kripanath, hundreds of Shramans and Shraminis are dedicating thousands of hours to its protection. A small glimpse of the ancient Shrut publication carried out by Adhyatma Parivar as a beautiful result of these efforts:"
         },
         "gallery": {
-            "caption": "These texts have reached the hands of Geetharths through the hard work of hundreds of hours."
+            "caption": "These texts have reached the hands of Geetarths through the dedicated efforts of hundreds of hours."
         }
     },
     "adhyatmGyantirth": {
-        "metaTitle": "Adhyatm Gyantirth : Collection, Amendment, Publication | Jinagam Vibhag",
+        "metaTitle": "Adhyatma Gyantirth : Collection, Amendment, Publication | Jinagam Department",
         "header": {
-            "title": "Adhyatm Gyantirth : Collection, Amendment, Publication",
-            "subtitle": "A four-storey building for various activities of protection of ancient and modern Shrut knowledge",
+            "title": "Adhyatma Gyantirth : Collection, Amendment, Publication",
+            "subtitle": "A four-storey building dedicated to various activities for the protection of ancient and modern Shrut knowledge",
             "date": "Work Started : V.S. 2079"
         },
         "images": {
-            "building": "Four-storey Shrutprasad built only and only for Shrut works",
-            "workshop": "Take a look at the main workshop of this Gyan Tirth once"
+            "building": "Four-storey Shrutprasad constructed exclusively for Shrut-related works",
+            "workshop": "Take a look at the main workshop of this Gyan Tirth"
         },
         "sections": {
             "collection": {
                 "title": "Collection :",
-                "text": "Rare books are collected here by high range scanning machines from Germany."
+                "text": "Rare books are collected here using high-range scanning machines imported from Germany."
             },
             "amendment": {
                 "title": "Amendment :",
-                "text": "Based on the purification done by the revered ones, the amended texts are printed here and a huge Shrut collection is prepared. To reach the transliterated texts to the Geetarth Guru Bhagwants, the skilled staff here makes the texts printable by composing and proofreading very carefully."
+                "text": "Based on the purification carried out by revered scholars, the amended texts are printed here and a vast Shrut collection is prepared. To deliver transliterated texts to Geetarth Guru Bhagwants, the skilled staff carefully compose and proofread the texts to make them print-ready."
             },
             "publication": {
                 "title": "Publication :",
-                "text": "319 texts have been published till date. This process is going on continuously. Currently a staff of 21 people is working here. It is our heart's desire that this number keeps increasing!"
+                "text": "319 texts have been published till date. This process continues continuously. Currently, a staff of 21 members is working here. It is our heartfelt wish that this number continues to grow."
             }
         }
     },
     "arvachinShrutPrakashan": {
-        "metaTitle": "Modern Shrut Publication-Shrut Propagation | Jinagam Vibhag",
+        "metaTitle": "Modern Shrut Publication - Shrut Propagation | Jinagam Department",
         "stats": [
             {
-                "label": "प्रवचन पुस्तक",
+                "label": "Discourse Books",
                 "count": "85",
-                "label1": " पृष्ठ: 10,170",
-                "label2": " नकल: 7,74,000"
+                "label1": " Pages: 10,170",
+                "label2": " Copies: 7,74,000"
             },
             {
-                "label": "वाचना पुस्तक",
+                "label": "Recitation Books",
                 "count": "09",
-                "label1": " पृष्ठ: 1200",
-                "label2": " नकल: 45,000"
+                "label1": " Pages: 1200",
+                "label2": " Copies: 45,000"
             },
             {
-                "label": "कथा पुस्तक",
+                "label": "Story Books",
                 "count": "34",
-                "label1": " पृष्ठ: 1245",
-                "label2": " नकल: 1,58,000"
+                "label1": " Pages: 1245",
+                "label2": " Copies: 1,58,000"
             },
             {
-                "label": "अध्धयन पुस्तक",
+                "label": "Study Books",
                 "count": "42",
-                "label1": " पृष्ठ: 6,457",
-                "label2": " नकल: 39,700"
+                "label1": " Pages: 6,457",
+                "label2": " Copies: 39,700"
             },
             {
-                "label": "अन्य पुस्तके",
+                "label": "Other Books",
                 "count": "46",
-                "label1": " पृष्ठ: 7,194",
-                "label2": " नकल: 1,04,300"
+                "label1": " Pages: 7,194",
+                "label2": " Copies: 1,04,300"
             },
             {
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "label": "Expenditure by Adhyatma Parivar",
                 "count": "1.75cr +"
             }
         ],
         "header": {
-            "title": "Modern Shrut Publication-Shrut Propagation",
-            "subtitle": "Publication work of books of discourses etc. of guide Suribhagwant",
+            "title": "Modern Shrut Publication - Shrut Propagation",
+            "subtitle": "Publication of discourse books and other works of the revered guide Suribhagwant",
             "date": "Work Started : V.S. 2063"
         },
         "bulletPoints": [
-            "From whose discourses on an average one Diksha is being created every 10 to 15 days.",
-            "The words which have kept the Shraman-Shramini class safe from the poisonous air of Kalikal.",
-            "The daily useful literature which has become the breath of the worshipers.",
-            "The new creation which is soaked in devotion and detachment, such series of literature is being published by Adhyatm Parivar."
+            "From whose discourses, on average, one Diksha is being inspired every 10 to 15 days.",
+            "The words that have protected the Shraman-Shramini community from the poisonous influence of Kalikal.",
+            "Daily-use literature that has become the very breath of devotees.",
+            "Such literature, infused with devotion and detachment, is being published by Adhyatma Parivar."
         ],
         "categories": [
             {
-                "title": "Books of Discourses"
+                "title": "Discourse Books"
             },
             {
                 "title": "Study Books"
@@ -127,68 +127,68 @@
                 "title": "Various Literature"
             },
             {
-                "title": "Daily Useful Literature"
+                "title": "Daily-use Literature"
             }
         ],
         "featured": {
             "title": "A glimpse of various Shrut works...",
-            "p1": "Lakhs of pages of thousands of manuscripts containing such medieval works are in a dilapidated condition.",
-            "p2": "Which perhaps no one has even picked up in the last 250 years.",
-            "p3": "Hundreds of Shraman-Shraminis under the guidance of Pujya Kripanath are working hard to make this vast literature accessible to Geetarths.",
-            "p4": "Beautiful fruits of which are being offered in the lotus hands of Shri Sangh."
+            "p1": "Lakhs of pages of thousands of manuscripts containing such medieval works are in deteriorating condition.",
+            "p2": "Many of which perhaps have not even been opened in the last 250 years.",
+            "p3": "Hundreds of Shraman-Shraminis under the guidance of Pujya Kripanath are working tirelessly to make this vast literature accessible to Geetarths.",
+            "p4": "The beautiful fruits of these efforts are being offered at the lotus feet of Shri Sangh."
         },
         "adhyatmParichay": {
-            "title": "Adhyatm Introduction",
-            "text": "How many streams of ancient Shrut, modern Shrut etc. are there in this Shrut Yatra started by Adhyatm Parivar for the last 16-17 years? So how many milestones has the journey crossed? What is the future destination of this journey? To know many such things, here is... Small in size but huge in information booklet :",
-            "highlight": "Shrut Yatra of Adhyatm Parivar"
+            "title": "Adhyatma Introduction",
+            "text": "How many streams of ancient and modern Shrut flow in this Shrut Yatra initiated by Adhyatma Parivar over the past 16–17 years? How many milestones has this journey crossed? What is its future destination? To learn about such questions, here is a booklet — small in size but vast in information:",
+            "highlight": "Shrut Yatra of Adhyatma Parivar"
         },
         "gyansetu": {
-            "text": "This is the issue of Gyansetu published every month. Through this, Adhyatm Parivar makes a beautiful bouquet of information about the book flowers blooming every month in the garden of the entire Jinshasan and delivers it to the Gyan Bhandars and the Shrut Rasik Chaturvidh Sangh."
+            "text": "This is the monthly issue of Gyansetu. Through it, Adhyatma Parivar prepares a beautiful bouquet of information about the book-flowers blooming every month in the garden of the entire Jinshasan and delivers it to Gyan Bhandars and the Shrut-loving Chaturvidh Sangh."
         }
     },
     "ganipitakNirmaanPrasar": {
-        "metaTitle": "Ganipitak Construction-Propagation | Jinagam Vibhag",
+        "metaTitle": "Ganipitak Construction - Propagation | Jinagam Department",
         "header": {
-            "title": "Ganipitak Construction-Propagation"
+            "title": "Ganipitak Construction - Propagation"
         },
         "quote": "Jinbimb Jinagam Bhaviyan Kun Aadhara",
-        "text": "According to these lines, just as Jinbimb and his servant Adhishthayaks are established in Jinalaya, similarly for the establishment of Shri Ganipitak in the form of Jinagam establishment and Saraswati Devi, the presiding deity of speech, in Pathshala etc., construction of marble Shri Ganipitak and its propagation is being done by Adhyatm Parivar.",
-        "caption": "Such eye-catching Shri Ganipitaks have been installed at many places."
+        "text": "According to these lines, just as Jinbimb and their Adhishthayaks are established in Jinalayas, similarly for the establishment of Shri Ganipitak in the form of Jinagam and Saraswati Devi, the presiding deity of speech, in Pathshalas and other places, marble Shri Ganipitaks are being constructed and propagated by Adhyatma Parivar.",
+        "caption": "Such magnificent Shri Ganipitaks have been installed at many places."
     },
     "haribhadrasuriShastraSangrah": {
-        "metaTitle": "Haribhadrasuri Shastra Sangrah : Achievement of Shrut for Shri Sangh | Jinagam Vibhag",
+        "metaTitle": "Haribhadrasuri Shastra Sangrah : A Shrut Achievement for Shri Sangh | Jinagam Department",
         "stats": [
             {
-                "label": "कुल पुस्तक/ग्रन्थ",
+                "label": "Total Books / Texts",
                 "count": "1.25L +"
             },
             {
-                "label": "साधु/साध्वी सदस्य संख्या",
+                "label": "Sadhu/Sadhvi Members",
                 "count": "1007"
             },
             {
-                "label": "श्रावक/श्राविका सदस्य संख्या",
+                "label": "Shravak/Shravika Members",
                 "count": "1184"
             },
             {
-                "label": "कुल प्रकाशक",
+                "label": "Total Publishers",
                 "count": "16K +"
             },
             {
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "label": "Expenditure by Adhyatma Parivar",
                 "count": "50L +"
             }
         ],
         "header": {
-            "title": "Haribhadrasuri Shastra Sangrah : Achievement of Shrut for Shri Sangh",
+            "title": "Haribhadrasuri Shastra Sangrah : A Shrut Achievement for Shri Sangh",
             "date": "(Work Started : V.S. 2073)"
         },
-        "intro": "A glimpse of this Gyan Bhandar located in Surat, which in a short span of just six years has come to be counted in the advanced class not only in Surat but in the whole of India, is presented here, yet there is a lot left to tell which you will be able to know only by visiting.",
+        "intro": "A glimpse of this Gyan Bhandar located in Surat, which within just six years has become counted among the advanced centers not only in Surat but across India, is presented here. Yet much remains to be experienced, which you can truly understand only by visiting.",
         "captions": {
-            "shelves": "In these 373 cupboards, the knowledge wealth of the omniscient Lord has been kept safe so that termites and dampness do not affect it.",
-            "books": "Today, whose figure is more than 1.25 lakhs, these texts and books are dearer than life to the knowledge seekers.",
-            "window": "Books can be obtained from this window daily from 9:00 am to 7:00 pm. That too in just 2 minutes!",
-            "statue": "1007 Sadhu-Sadhviji Bhagwant and 1184 Shravak-Shravika class have used this Shastra Sangrah. Are you left?"
+            "shelves": "In these 373 cupboards, the treasure of knowledge of the Omniscient Lord has been safely preserved so that termites and moisture do not affect it.",
+            "books": "Today, with a count exceeding 1.25 lakhs, these texts and books are dearer than life to knowledge seekers.",
+            "window": "Books can be obtained daily from this window between 9:00 am and 7:00 pm — in just 2 minutes!",
+            "statue": "1007 Sadhu-Sadhvi Bhagwants and 1184 Shravak-Shravika members have benefited from this Shastra Sangrah. Are you still left?"
         }
     }
 }

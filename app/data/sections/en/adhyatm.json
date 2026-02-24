@@ -1,651 +1,651 @@
 {
     "sanskritShikshan": {
-        "metaTitle": "संस्कृत शिक्षण वर्ग (संशिव) | अध्यात्म विभाग",
+        "metaTitle": "Sanskrit Teaching Classes (Sanshiv) | Adhyatma Department",
         "stats": [
             {
                 "count": "225",
-                "label": "कुल छात्र"
+                "label": "Total Students"
             },
             {
                 "count": "600",
-                "label": "कुल वर्ग घंटे"
+                "label": "Total Class Hours"
             },
             {
                 "count": "5L +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय"
+                "label": "Expenditure by Adhyatma Parivar"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "संस्कृत शिक्षण वर्ग (संशिव)",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०७७"
+            "title": "Sanskrit Teaching Classes (Sanshiv)",
+            "subtitle": "Work Started : V.S. 2077"
         },
         "intro": {
-            "text": "पथप्रदर्शक पूज्यश्री के द्वारा श्रावक भी सरलता से संस्कृत सीख सकें ऐसी पद्धति विकसित की गई है। जल्दी से यकीन नहीं होता है परंतु यह वास्तविकता है कि अध्यात्म परिवार द्वारा ‘हफ्ते में दो दिन' वाले संशिव प्रकल्प में, आज मुंबई के कई श्रावक और श्राविकाओं का संस्कृत शिक्षण पूर्णता की ओर अग्रसर है।",
-            "highlight": "लगातार दो वर्षों से यह ज्ञानयज्ञ चल रहा है और आगे भी चलता रहेगा।"
+            "text": "Under the guidance of Pujyashri, a method has been developed through which Shravaks can learn Sanskrit easily. It may be hard to believe, but it is a reality that through the 'Two Days a Week' Sanshiv project of Adhyatma Parivar, many Shravaks and Shravikas in Mumbai are progressing toward completion of Sanskrit learning.",
+            "highlight": "This knowledge-yajna has been continuing for two consecutive years and will continue in the future."
         }
     },
     "suddhPujaDravya": {
-        "metaTitle": "शुद्ध पूजाद्रव्य संप्राप्ति | अध्यात्म विभाग",
+        "metaTitle": "Pure Puja Materials Procurement | Adhyatma Department",
         "stats": [
             {
                 "count": "125",
-                "label": "कुल प्राप्तिस्थान"
+                "label": "Total Distribution Centers"
             },
             {
                 "count": "15",
-                "label": "कुल द्रव्य प्रकार"
+                "label": "Total Types of Materials"
             },
             {
                 "count": "14Cr +",
-                "label": "प्रभुपूजको द्वारा ख़रीदे गए द्रव्यों की कुल कीमत"
+                "label": "Total Value of Materials Purchased by Devotees"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "शुद्ध पूजाद्रव्य संप्राप्ति",
-            "subtitle": "अध्यात्म परिवार",
-            "date": "कार्य प्रारंभ: वि.सं. २०७०"
+            "title": "Pure Puja Materials Procurement",
+            "subtitle": "Adhyatma Parivar",
+            "date": "Work Started: V.S. 2070"
         },
         "intro": {
-            "title": "अध्यात्म परिवार प्रस्तुत करता है, प्रभु भक्तों को प्रसन्न कर देने वाले पूजा के द्रव्य !"
+            "title": "Adhyatma Parivar presents worship materials that delight the devotees of the Lord!"
         },
         "products": {
             "gauseershChandan": {
-                "title": "गौशीर्ष चंदन",
-                "desc": "विश्व के तमाम चंदनों में सर्वश्रेष्ठ, शास्त्रवर्णित मलयाचल पर्वत पर होने वाला 'गौशीर्ष' वृक्ष का चंदन है। लायसेंस धारक अध्यात्म परिवार गवर्नमेंट ऑक्शन से चंदन की १६ किस्मों में से सबसे ज्यादा तेल वाला तथा रिपोर्ट द्वारा प्रमाणित जिसमें तेल भी श्रेष्ठ जाति का होता है, वह चंदन लेता है। इसके पश्चात IS और GCMS पद्धति से उसकी लैब टेस्टिंग होती है।"
+                "title": "Gaushirsha Sandalwood",
+                "desc": "Among all sandalwoods in the world, the finest is the 'Gaushirsha' tree sandalwood found on the Malayachal mountain as described in scriptures. Licensed Adhyatma Parivar acquires sandalwood through government auctions — selecting from 16 varieties the one with the highest oil content and laboratory-certified superior quality oil. Thereafter, it undergoes lab testing through IS and GCMS methods."
             },
             "chandanKaTel": {
-                "title": "चंदन का तेल",
-                "desc": "चंदन के विषय में सबसे मुख्य परीक्षणीय है चंदन का तेल । अध्यात्म परिवार ने विलेपन के लिए उत्तम में उत्तम चंदन का तेल उपलब्ध करवाया है।"
+                "title": "Sandalwood Oil",
+                "desc": "The most important testing factor of sandalwood is its oil. Adhyatma Parivar provides the finest quality sandalwood oil for anointing."
             },
             "vasachoorna": {
-                "title": "वासचूर्ण",
-                "desc": "यह गौशीर्ष चंदन का ही श्रेष्ठ वासचूर्ण है। यह वासचूर्ण भी IS और GCMS पद्धति से लैब टेस्टेड है।"
+                "title": "Vasachurna",
+                "desc": "This is premium fragrance powder made from Gaushirsha sandalwood. It is also lab tested through IS and GCMS methods."
             },
             "orisaya": {
-                "title": "ओरसिया",
-                "desc": "स्वद्रव्य से पूजा करने का प्रथम उपयोगी उपकरण । केसर चंदन आदि घिसने के लिए, अलग-अलग साइज के ओरसिए उपलब्ध हैं।"
+                "title": "Orasiya",
+                "desc": "The primary tool for performing worship with one’s own materials. Different sizes of Orasiyas are available for grinding saffron, sandalwood, etc."
             },
             "kesar": {
-                "title": "केसर",
-                "desc": "प्रभु की पूजा में तो केसर से भी गरम कस्तूरी का भी उपयोग करने के लिए शास्त्र में बताया गया है। तो केसर में तो प्रश्न ही कहां उठता है? ASI की भी रिपोर्ट यही है कि : आरस को नुकसान नमी से है केसर से नहीं। इसलिए प्रस्तुत है : १२ प्रकार की रिपोर्ट से टेस्टेड शुद्ध केसर !"
+                "title": "Saffron",
+                "desc": "Scriptures even mention using musk, which is warmer than saffron, in worship. Then how can there be any doubt about saffron? Even ASI reports state that: damage to marble occurs due to moisture, not saffron. Therefore, we present: pure saffron tested through 12 types of reports!"
             },
             "gandhakashaayiVastra": {
-                "title": "गंधकाषायी वस्त्र",
-                "desc": "यह है प्रभु के अंगलूछने के लिए ५०० काउंट का बंगाली वस्त्र-ढाका की मलमल। इस वस्त्र से अंगलूछना करते वक्त सौधर्मेंद्र कृत जन्माभिषेक की स्मृति होगी!"
+                "title": "Gandhakashayi Cloth",
+                "desc": "This is 500-count Bengali fabric – Dhaka muslin – for wiping the Lord’s idol. While using this cloth, one is reminded of the divine birth-abhishek performed by Saudharmendra!"
             },
             "yakshaKardamChoorna": {
-                "title": "यक्षकर्दम चूर्ण",
-                "desc": "गौशीर्ष चंदन, केसर आदि के मिश्रण से बनाया हुआ यह चूर्ण अल्प समय में घिस कर तैयार हो जाता है। इस प्रकार शीघ्र प्रभु पूजा की केसर तैयार हो जाती है!"
+                "title": "Yakshakardam Powder",
+                "desc": "Prepared from a mixture of Gaushirsha sandalwood, saffron, etc., this powder becomes ready quickly when ground. Thus, saffron paste for worship is prepared promptly."
             },
             "soneChandiKaBarak": {
-                "title": "सोने-चांदी का बरक (वर्क)",
-                "desc": "इस बरक की विशेषता है : उसकी मोटाई (Thickness) जिसके कारण निर्माल्य ज्यादा उतरता है। परिणाम स्वरूप देवद्रव्य का संरक्षण होता है। अध्यात्म परिवार के बरक का वजन और १००% शुद्धता के विषय में वर्क के जानकार प्रभु भक्त स्पष्ट समझ सकते हैं। उदाहरण : जहां अन्यत्र ७ ग्राम वजन का बरक ₹७०० में मिलता है, वहीं अध्यात्म परिवार का २० ग्राम वजन का बरक ₹१९०० में मिलता है। फलस्वरूप २५ से ३०% द्रव्य की बचत होती है। हर लॉट को उपलब्ध करवाने से पहले बरक की जांच होती है।"
+                "title": "Gold-Silver Foil (Varakh)",
+                "desc": "The specialty of this foil is its thickness, due to which more sacred residue (Nirmalya) is obtained. As a result, Devdravyas are conserved. Knowledgeable devotees can clearly understand the weight and 100% purity of Adhyatma Parivar’s foil. Example: where elsewhere 7 grams of foil costs ₹700, Adhyatma Parivar provides 20 grams for ₹1900. This results in 25–30% savings. Each lot is tested before being made available."
             },
             "soneKaBadla": {
-                "title": "सोने का बादला - चांदी का बादला",
-                "desc": "१ किलो चांदी (९९९) के साथ ७ ग्राम स्वर्ण (९९९) के मिश्रण वाला सोने का बादला और चांदी (९९९) का चांदी का बादला समग्र जैनशासन में प्रायः नहीं मिलता है।"
+                "title": "Gold Badla – Silver Badla",
+                "desc": "Gold Badla made from a mixture of 1 kg silver (999) with 7 grams gold (999), and pure silver (999) Badla are rarely available across the Jain community."
             },
             "bheemsetiKapoor": {
-                "title": "भीमसेनी कर्पूर",
-                "desc": "यह भीमसेनी (बरास) कर्पूर, कर्पूर की सबसे उत्तम जाती है। यह विदेशों में ही मिलता है तथा दुर्लभ वृक्षों से प्राप्त होता है। घनसार कर्पूर भी वनस्पति से प्राप्त होने वाला द्रव्य है। शास्त्र के अनुसार ऐसे कर्पूर को पूजा के लिए केसर में मिलाना चाहिए। इससे केसर घट्ट बनती है, साथ ही इसके एन्टीफंगल गुण के कारण प्रतिमाजी में फंगस और गड्ढे पढ़ने की समस्या नहीं होती है। विशेष : प्रथम विश्वयुद्ध के समय जर्मनी द्वारा बनाया हुआ 'सिंथेटिक कर्पूर' ही प्रायः वर्तमान में सब स्थानों पर मिल रहा है। वह अशुद्ध है। भारत में शुद्ध कर्पूर नहीं मिल सका है।"
+                "title": "Bhimsen Camphor",
+                "desc": "This Bhimsen (Baras) camphor is the finest variety. It is found only abroad and obtained from rare trees. Ghanasar camphor is also plant-derived. As per scriptures, such camphor should be mixed with saffron for worship. It makes saffron paste thicker and, due to its antifungal properties, prevents fungus and cavity formation in idols. Special note: During World War I, Germany produced 'synthetic camphor,' which is now commonly available everywhere. It is impure. Pure camphor has not been available in India."
             },
             "ghanasaraKapoor": {
-                "title": "घनसार कर्पूर"
+                "title": "Ghanasar Camphor"
             }
         },
         "cta": {
-            "text": "आपके नज़दीकी शुद्ध पूजाद्रव्य के प्राप्तिस्थान की जानकारी के लिए संपर्क करें।"
+            "text": "Contact us for information about the nearest distribution center for pure puja materials."
         }
     },
     "uddhyapanUpkaran": {
-        "metaTitle": "उद्यापन उपकरण व्यवस्था | अध्यात्म विभाग",
+        "metaTitle": "Uddhyapan Equipment Arrangement | Adhyatma Department",
         "stats": [
             {
                 "count": "15",
-                "label": "उद्यापन उपकरण व्यवस्था"
+                "label": "Uddhyapan Equipment Arrangements"
             },
             {
                 "count": "90",
-                "label": "जिनका लाभ प्राप्त हुआ हो वो श्रीसंघ"
+                "label": "Shrisanghs Who Have Benefited"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "उद्यापन उपकरण व्यवस्था",
-            "subtitle": "उद्यापनों में रखे गए उपकरणों की उचित जगह पहचानना और उपकरणों की आवश्यकता के अनुसार उद्यापन का आयोजन",
-            "date": "कार्य प्रारंभ : वि.सं. २०६७"
+            "title": "Uddhyapan Equipment Arrangement",
+            "subtitle": "Identifying proper placement of equipment used in Uddhyapan and organizing Uddhyapan according to required equipment",
+            "date": "Work Started : V.S. 2067"
         },
         "intro": {
-            "p1": "उपधान, विविध तप आदि अनेक आलंबनों से आराधक रत्नत्रयी के उपकरणों का उद्यापन (उजमणा) करते हैं। तत्पश्चात उन उपकरणों की कोई ऐसी व्यवस्था होनी चाहिए कि जहां आवश्यकता हो वहां वह पहुंचें और चतुर्विध संघ की आराधना में उपयोगी बनें। यदि ऐसा नहीं हो पाता है तो वे उपकरण किसी स्थान पर भरे पड़े रह जाते हैं।",
-            "p2": "अध्यात्म परिवार अपने विस्तार के कारण ऐसी व्यवस्था के लिए 'सेतु' बना है। अब तक परिवार द्वारा लगभग ७० संघों में ऐसे उपकरण पहुंचाए जा चुके हैं।"
+            "p1": "Through Upadhan, various austerities and other spiritual practices, devotees perform Uddhyapan (completion ceremony) of Ratnatrayi-related equipment. Thereafter, there should be an arrangement so that these items reach places where needed and become useful for the fourfold Sangh. Otherwise, they remain stored unused at one place.",
+            "p2": "Due to its wide network, Adhyatma Parivar has become a 'bridge' for such arrangements. So far, equipment has been delivered to approximately 70 Sanghs."
         },
         "gallery": {
-            "title": "उपकरणों की एक अनेरी झलक!"
+            "title": "A Unique Glimpse of the Equipment!"
         },
         "cta": {
-            "text": "उद्यापन आयोजन में सहयोग और उपकरण उपलब्ध कराने के लिए संपर्क करे।"
+            "text": "Contact us for assistance in organizing Uddhyapan and providing equipment."
         }
     },
     "uttamBhaktidrivya": {
-        "metaTitle": "उत्तम भक्तिद्रव्य संशोधन | अध्यात्म विभाग",
+        "metaTitle": "Research of Superior Devotional Materials | Adhyatma Department",
         "stats": [
             {
                 "count": "60",
-                "label": "कुल अंदाजन संशोधनीय औषधियां"
+                "label": "Approximate Total Researchable Herbs"
             },
             {
                 "count": "08",
-                "label": "आज तक एकत्रित जल के नदियों की संख्या"
+                "label": "Number of Rivers Collected (Water)"
             },
             {
                 "count": "120",
-                "label": "एकत्रित मिट्टी के तीर्थो की संख्या"
+                "label": "Number of Pilgrimage Sites Collected (Soil)"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "उत्तम भक्तिद्रव्य संशोधन",
-            "subtitle": "प्रभुभक्ति में आवश्यक द्रव्य, औषधियाँ आदि का गहन संशोधन",
-            "date": "कार्य प्रारंभ : वि.सं. २०७३"
+            "title": "Research of Superior Devotional Materials",
+            "subtitle": "In-depth research of materials, herbs, etc. required for devotion to the Lord",
+            "date": "Work Started : V.S. 2073"
         },
         "intro": {
-            "text": "यह एक ऐसा प्रकल्प है जिसमें अध्यात्म परिवार के संशोधन रसिक लोग सैकड़ो घंटे देकर, हजारों किलोमीटर का प्रवास करके, अरे, वन विभाग की अनुमति से जंगल के अंदर परिभ्रमण करके समुद्रमंथन जैसी मेहनत करते हैं और अंत में जब 'अमृत' जैसा परिणाम मिलता है, तब मेहनत सफल लगने का एहसास होता है। ऐसी कई बातें जानने जैसी हैं...."
+            "text": "This is a project in which research-enthusiasts of Adhyatma Parivar dedicate hundreds of hours, travel thousands of kilometers, and even roam inside forests with permission from the Forest Department, putting in effort like the churning of the ocean. When finally a result like 'nectar' is obtained, the effort feels worthwhile. There are many such inspiring aspects to know..."
         },
-        "documentCaption": "प्रभु शासन के प्रभाव से, भारत की सेंट्रल गवर्नमेंट द्वारा देश के सभी जंगलों में से औषधि प्राप्त करने की अनुमति मिल जाने पर अध्यात्म परिवार का उत्साह १०० गुना बढ़ गया है।",
+        "documentCaption": "By the grace of the Lord’s Shasan, after receiving permission from the Central Government of India to obtain medicinal herbs from forests across the country, the enthusiasm of Adhyatma Parivar has increased 100 times.",
         "abhishek": {
-            "title": "अभिषेक औषधि...",
-            "desc": "दवा के लिए त्रिफला जैसी एक औषधि की कीमत देखें और १८ अभिषेक के पूरे पैकेट की कीमत देखें तो शंका हुए बिना नहीं रहती है कि क्या इस पैकेट में वास्तविक औषधि है? इसलिए अध्यात्म परिवार ने शुद्ध औषधियों के लिए प्रयत्न शुरू किया है। साथ ही साथ विविध तीर्थों की मिट्टी तथा नदियों का जल भी एकत्रित किया जा रहा है।"
+            "title": "Abhishek Herbs...",
+            "desc": "If one compares the price of a medicinal herb like Triphala used in medicine with the price of a complete 18-Abhishek packet, doubt naturally arises whether the packet truly contains genuine herbs. Therefore, Adhyatma Parivar has begun efforts to procure pure herbs. Along with this, soil from various pilgrimage sites and water from sacred rivers are also being collected."
         },
         "captions": [
-            "विधिपूर्वक औषधि ग्रहण",
-            "विधिपूर्वक जल ग्रहण",
-            "विविध नदियों का जल",
-            "विविध तीर्थों की मूर्तिका (मिट्टी)"
+            "Ritualistic collection of herbs",
+            "Ritualistic collection of water",
+            "Water from various rivers",
+            "Sacred soil from various pilgrimage sites"
         ]
     },
     "viharSuraksha": {
-        "metaTitle": "विहार सुरक्षा | अध्यात्म विभाग",
+        "metaTitle": "Vihar Safety | Adhyatma Department",
         "stats": [
             {
                 "count": "1132",
-                "label": "कुल विहार"
+                "label": "Total Vihars"
             },
             {
                 "count": "2,43,651",
-                "label": "कुल कि.मी."
+                "label": "Total Kilometers"
             },
             {
                 "count": "23,117",
-                "label": "कुल विहार के दिन"
+                "label": "Total Days of Vihar"
             },
             {
                 "count": "6,484",
-                "label": "कुल श्रमणी संख्या"
+                "label": "Total Number of Sadhvis"
             },
             {
                 "count": "1.33Cr +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय"
+                "label": "Expenditure by Adhyatma Parivar"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "विहार सुरक्षा",
-            "subtitle": "विहार के दौरान श्रमणीवर्याओं की सुरक्षा के लिए भारतभर में कर्मचारी भेजने का कार्य",
-            "date": "कार्य प्रारंभ : वि.सं. २०७३"
+            "title": "Vihar Safety",
+            "subtitle": "Sending staff across India to ensure the safety of Sadhvijis during Vihar",
+            "date": "Work Started : V.S. 2073"
         },
         "intro": {
-            "text": "योगशास्त्र ग्रंथ में श्रामणीक्षेत्र की भर्ती के प्रकारों का वर्णन करते हुए कलिकाल सर्वज्ञ श्री फरमाते हैं कि :",
-            "highlight": "श्रावक को श्रमणीवर्ग का दुष्ट और दुराचारी लोगों से रक्षण करना चाहिए।",
-            "text2": "अध्यात्म परिवार तो सात क्षेत्र की भक्ति के लिए ही समर्पित है। इस कार्य द्वारा संयमियों की सुरक्षा तथा पैसे आदि के विषय की निश्चिंतता करवाने का लाभ अध्यात्म परिवार को मिल रहा है।"
+            "text": "While describing the types of support required in the Shramani field in the Yogashastra scripture, the omniscient of the Kaliyug states:",
+            "highlight": "A Shravak must protect the Shramani group from wicked and immoral people.",
+            "text2": "Adhyatma Parivar is dedicated to devotion across all seven fields. Through this work, the organization gains the opportunity to ensure the safety of ascetics and relieve them of concerns related to money and logistics."
         },
         "captions": {
-            "left": "विहार में साथ रहने के लिए ट्रेंड, यह स्टाफ साध्वीजी भगवंतों की शाता में निमित्त बनता है।",
-            "right": "विहार चाहे मुंबई से बेंगलुरु का हो या अहमदाबाद से चेन्नई का, अध्यात्म परिवार को संदेश मिलते ही योग्य व्यवस्था हो जाती है!"
+            "left": "Trained staff accompany during Vihar and become instrumental in serving Sadhviji Bhagwants.",
+            "right": "Whether the Vihar is from Mumbai to Bengaluru or from Ahmedabad to Chennai, as soon as Adhyatma Parivar receives the message, proper arrangements are made!"
         }
     },
     "vividhSangh": {
-        "metaTitle": "विविध संघों - आराधना भवनों का संचालन | अध्यात्म विभाग",
+        "metaTitle": "Management of Various Sanghs – Aradhana Bhavans | Adhyatma Department",
         "stats": [
             {
                 "count": "7.09Cr +",
-                "label": "व्यवस्था का खर्च, अन्य संघो/ट्रस्टों को दान तथा विविध अनुष्ठान खर्च आदि"
+                "label": "Administrative expenses, donations to other Sanghs/Trusts, and various ritual expenses, etc."
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "विविध संघों - आराधना भवनों का संचालन"
+            "title": "Management of Various Sanghs – Aradhana Bhavans"
         },
         "intro": {
-            "text": "विविध स्थलों पर आराधकों को पूरे बारह महीने आराधना स्थल का आलंबन मिलता रहे, इसलिए अध्यात्म परिवार अनेक संघों तथा श्राविका आराधना भवनों का निर्माण तथा संचालन कर रहा है।"
+            "text": "In order to ensure that spiritual aspirants receive the support of a place for worship throughout all twelve months of the year at various locations, the Adhyatma Parivar is constructing and managing multiple Sanghs and Shravika Aradhana Bhavans."
         },
         "trustProfile": {
-            "title": "श्री शांति-कनक श्रमणोपासक ट्रस्ट - श्री अध्यात्म परिवार संचालित श्री संघ आदि की रूपरेखा"
+            "title": "Shri Shanti-Kanak Shramanopasak Trust – Structure of Sanghs Managed by Shri Adhyatma Parivar"
         },
         "surat": {
-            "title": "श्री शांतिवर्धक श्वे.मू.पू. तपागच्छ जैन संघ, पाल-सूरत",
+            "title": "Shri Shantivardhak Shwetambar Murtipujak Tapagaccha Jain Sangh, Pal-Surat",
             "list": [
-                "विशाल संकुल",
-                "द्वि मंजिलीय तथा त्रिशिखरीय शानदार जिनालय (निर्माणाधीन)",
-                "आनंद श्रावक आराधना भवन",
-                "चंपा श्राविका आराधना भवन",
-                "अध्यात्म भवन",
-                "आयंबिलशाला",
-                "पाठशाला",
-                "अचित जलगृह",
-                "भक्तिखंड",
-                "आगमतीर्थ",
-                "अतिथि भवन",
-                "मंगल घर"
+                "Spacious campus",
+                "Two-storeyed and three-spired magnificent Jinalaya (under construction)",
+                "Anand Shravak Aradhana Bhavan",
+                "Champa Shravika Aradhana Bhavan",
+                "Adhyatma Bhavan",
+                "Ayambil Shala",
+                "Pathshala (Religious School)",
+                "Filtered Water Facility",
+                "Bhakti Hall",
+                "Agam Tirth",
+                "Guest House",
+                "Mangal Ghar"
             ]
         },
         "nanpura": {
-            "title": "श्री शांति-कनक श्वे.मू.पू. तपागच्छ जैन संघ, नानपुरा",
+            "title": "Shri Shanti-Kanak Shwetambar Murtipujak Tapagaccha Jain Sangh, Nanpura",
             "list": [
-                "प्राचीन आदिनाथ प्रभु का बेजोड़ कोरणीयुक्त जिनालय",
-                "श्रावक आराधना भवन",
-                "सौभाग्य उत्तम श्राविका आराधना भवन",
-                "श्री हरिभद्रसूरि शास्त्रसंग्रह (ज्ञानभंडार)",
-                "अनुष्ठान भवन",
-                "पाठशाला",
-                "आयंबिलशाला",
-                "अचित जलगृह",
-                "अध्यात्म ज्ञानतीर्थ"
+                "Unique intricately carved ancient Adinath Prabhu Jinalaya",
+                "Shravak Aradhana Bhavan",
+                "Saubhagya Uttam Shravika Aradhana Bhavan",
+                "Shri Haribhadrasuri Scripture Collection (Knowledge Library)",
+                "Anushthan Bhavan",
+                "Pathshala",
+                "Ayambil Shala",
+                "Filtered Water Facility",
+                "Adhyatma Gyan Tirth"
             ]
         },
         "usmanpura": {
-            "title": "श्री शांति-संयम श्वे.मू.पू. तपागच्छ जैन संघ, उस्मानपुरा - अहमदाबाद",
+            "title": "Shri Shanti-Sanyam Shwetambar Murtipujak Tapagaccha Jain Sangh, Usmanpura – Ahmedabad",
             "list": [
-                "जिनालय",
-                "आराधना भवन",
-                "आयंबिलशाला",
-                "पाठशाला",
-                "अतिथि भवन"
+                "Jinalaya",
+                "Aradhana Bhavan",
+                "Ayambil Shala",
+                "Pathshala",
+                "Guest House"
             ]
         },
         "madalpur": {
-            "title": "श्री शांति-जिन श्वे.मू.पू. तपागच्छ जैन संघ, मादलपुर - पालड़ी अहमदाबाद (निर्माणाधीन)",
+            "title": "Shri Shanti-Jin Shwetambar Murtipujak Tapagaccha Jain Sangh, Madalpur – Paldi, Ahmedabad (Under Construction)",
             "list": [
-                "आलीशान जिनालय",
-                "श्रावक आराधना भवन",
-                "श्राविका आराधना भवन",
-                "आयंबिलशाला",
-                "अतिथि भवन",
-                "अनुष्ठान खंड",
-                "अध्यात्म भवन",
-                "पाठशाला",
-                "भोजनशाला",
-                "यानशाला",
-                "रथशाला"
+                "Grand Jinalaya",
+                "Shravak Aradhana Bhavan",
+                "Shravika Aradhana Bhavan",
+                "Ayambil Shala",
+                "Guest House",
+                "Anushthan Hall",
+                "Adhyatma Bhavan",
+                "Pathshala",
+                "Dining Hall",
+                "Vehicle Hall",
+                "Chariot Hall"
             ]
         },
         "adajan": {
-            "title": "श्री शांति-बाहुबली श्वे.मू.पू. तपागच्छ जैन संघ, अडाजन पाटिया - सुरत",
+            "title": "Shri Shanti-Bahubali Shwetambar Murtipujak Tapagaccha Jain Sangh, Adajan Patiya – Surat",
             "list": [
-                "जिनालय",
-                "आराधना भवन"
+                "Jinalaya",
+                "Aradhana Bhavan"
             ]
         },
         "newVasana": {
-            "title": "श्री शांति-सोहन श्वे.मू.पू. तपागच्छ जैन संघ, न्यू वासणा - अहमदाबाद",
+            "title": "Shri Shanti-Sohan Shwetambar Murtipujak Tapagaccha Jain Sangh, New Vasna – Ahmedabad",
             "list": [
-                "जिनालय",
-                "श्रावक आराधना भवन",
-                "श्राविका आराधना भवन",
-                "आयंबिलशाला",
-                "पाठशाला"
+                "Jinalaya",
+                "Shravak Aradhana Bhavan",
+                "Shravika Aradhana Bhavan",
+                "Ayambil Shala",
+                "Pathshala"
             ]
         },
         "gurumandir": {
-            "title": "गुरुमंदिर",
+            "title": "Guru Mandir",
             "list": [
-                "'सूरिशांति' अवतरण भूमि-मांडल",
-                "'जिनविहार' युगभूमि, वेसु, सूरत",
-                "'जिनविहार' भाभरतीर्थ (निर्माणाधीन)",
-                "'सूरित्रय' जन्मभूमि, वाकड़िया वडगाम"
+                "'Surishanti' Avataran Bhumi-Mandal",
+                "'Jinvihar' Yugbhumi, Vesu, Surat",
+                "'Jinvihar' Bhabhar Tirth (Under Construction)",
+                "'Suritray' Birthplace, Vakadiya Vadgam"
             ]
         },
         "yugbhumi": {
-            "title": "युगभूमि गुरुमंदिर"
+            "title": "Yugbhumi Guru Mandir"
         },
         "otherBhavans": {
-            "title": "अन्य श्राविका आराधना भवन",
+            "title": "Other Shravika Aradhana Bhavans",
             "list": [
-                "श्री शांति-कनक आराधना भवन - कतारगाम, सुरत",
-                "श्री शांति-कनक आराधना भवन - डीसा",
-                "श्री आर्या ब्राह्मी-सुंदरी अध्यात्म भवन - बोरीवली मुंबई",
-                "श्री सीता सती अध्यात्म भवन - खोताचीवाड़ी, मुंबई",
-                "श्री अंजना सती अध्यात्म भवन - नवरंगपुरा, अहमदाबाद",
-                "श्री धारिणी अध्यात्म भवन - वालकेश्वर, मुंबई",
-                "साध्वी श्री सुलोचना श्रीजी श्राविका आराधना भवन - साबरमती, अहमदाबाद"
+                "Shri Shanti-Kanak Aradhana Bhavan – Katargam, Surat",
+                "Shri Shanti-Kanak Aradhana Bhavan – Deesa",
+                "Shri Arya Brahmi-Sundari Adhyatma Bhavan – Borivali, Mumbai",
+                "Shri Sita Sati Adhyatma Bhavan – Khotachiwadi, Mumbai",
+                "Shri Anjana Sati Adhyatma Bhavan – Navrangpura, Ahmedabad",
+                "Shri Dharini Adhyatma Bhavan – Walkeshwar, Mumbai",
+                "Sadhvi Shri Sulochana Shriji Shravika Aradhana Bhavan – Sabarmati, Ahmedabad"
             ]
         }
     },
     "parishthapanikaSamiti": {
-        "metaTitle": "पारिष्ठापनिका समिति सुरक्षा मात्रु की कुंडी निर्माण स्थंडिल भूमि (डेम) निर्माण | अध्यात्म विभाग",
+        "metaTitle": "Parishthapanika Samiti Security – Construction of Matru Kundi and Sthandil Bhoomi (Dome) | Adhyatma Department",
         "stats": [
             {
                 "count": "1320",
-                "label": "कुल कुण्डी निर्माण"
+                "label": "Total Kundi Construction"
             },
             {
                 "count": "1.62Cr +",
-                "label": "श्री संघ द्वारा सद्व्यय",
-                "label1": "कुण्डी निर्माण"
+                "label": "Amount Spent by Shri Sangh",
+                "label1": "Kundi Construction"
             },
             {
                 "count": "52L +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
-                "label1": "कुण्डी निर्माण"
+                "label": "Amount Spent by Adhyatma Parivar",
+                "label1": "Kundi Construction"
             },
             {
                 "count": "205",
-                "label": "कुल डोम निर्माण"
+                "label": "Total Dome Construction"
             },
             {
                 "count": "4.25Cr +",
-                "label": "श्रीसंघ द्वारा सद्व्यय",
-                "label1": "डोम निर्माण"
+                "label": "Amount Spent by Shri Sangh",
+                "label1": "Dome Construction"
             },
             {
                 "count": "1.5Cr +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
-                "label1": "डोम निर्माण"
+                "label": "Amount Spent by Adhyatma Parivar",
+                "label1": "Dome Construction"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "पारिष्ठापनिका समिति सुरक्षा",
-            "subtitle": "चतुर्विध संघ की पारिष्ठापनिका समिति की रक्षा के लिए मात्रु कुंडी एवं स्थण्डिल डोम का निर्माणकार्य",
-            "date": "कार्य प्रारंभ : वि.सं. २०६६"
+            "title": "Parishthapanika Samiti Security",
+            "subtitle": "Construction of Matru Kundi and Sthandil Dome for the protection of the Parishthapanika Samiti of the Chaturvidh Sangh",
+            "date": "Work Started: V.S. 2066"
         },
         "intro": {
-            "text": "चारित्र का प्राण है, पांच समिति और तीन गुप्ति। वर्तमान काल में पांचवी समिति का पालन बहुत कठिन बन गया है, यह कौन नहीं जानता है? घने जंगलों के स्थान पर एक को सट कर एक इमारतें की भीड़ में जैसे यह समिति कुचल गई है! ऐसे समय में जिनकी नसों में चारित्र का रक्त बह रहा है, ऐसे पूज्य कृपानाथ के मार्गदर्शन से एक अद्भुत विकल्प प्राप्त हुआ है। देखते ही देखते इसकी सुरभि संपूर्ण भारत में फैल गई। सैकड़ो-हजारों श्रमण-श्रमणियों के चारित्रपालन में सहायक बनने का लाभ मिला अध्यात्म परिवार को!"
+            "text": "The life of Charitra lies in the five Samitis and three Guptis. Who does not know that in the present time, observing the fifth Samiti has become extremely difficult? In place of dense forests, in the crowd of closely packed buildings, this Samiti seems to have been crushed! At such a time, under the guidance of the revered Krupanath, whose veins flow with the blood of Charitra, an extraordinary solution was found. Very soon its fragrance spread across the entire nation. Adhyatma Parivar received the opportunity to assist hundreds and thousands of monks and nuns in the observance of their Charitra!"
         },
         "details": [
             {
-                "text": "संपूर्ण भारत के विविध स्थलों पर बनाई गई ऐसी मात्रु परठने की कुंडियों में उपयोग होने वाले स्पेशल कोयले ने दुर्गंध की कंप्लेंट पर पूर्णविराम लगा दिया है!"
+                "text": "The special charcoal used in these Matru Kundis built at various places across India has completely put an end to complaints of foul odor!"
             },
             {
-                "text": "संपूर्ण भारत के विविध श्रीसंघों में बनाई गई यह स्थंडिलभूमि (डोम)ने जैसे असंभव को संभव कर दिया है!"
+                "text": "These Sthandil Bhoomi (Domes) constructed in various Shri Sanghs across India have made the impossible possible!"
             }
         ],
         "cta": {
-            "heading": "मात्रु कुंडी / स्थण्डिल डोम बनवाना चाहते हैं?",
+            "heading": "Do you wish to construct a Matru Kundi / Sthandil Dome?",
             "href": "https://wa.me/918448444050"
         }
     },
     "charitraUpkaranBhakti": {
-        "metaTitle": "चारित्र उपकरण भक्ति | अध्यात्म विभाग",
+        "metaTitle": "Charitra Equipment Devotion | Adhyatma Department",
         "header": {
-            "title": "चारित्र उपकरण भक्ति",
-            "subtitle": "चारित्रपालन में विराधना से बचाए ऐसे चुनिंदे उपकरणों से पूज्यो की भक्ति",
-            "date": "कार्य प्रारंभ : वि.सं. २०७७"
+            "title": "Charitra Equipment Devotion",
+            "subtitle": "Devotion to the revered ones through selected equipment that helps avoid transgressions in the observance of Charitra",
+            "date": "Work Started: V.S. 2077"
         },
         "intro": {
-            "text": "वैसे तो यह कार्य जैन शासन में बहुत व्यापक रूप से हो ही रहा है। अध्यात्म परिवार का मुख्य उद्देश्य यह है कि ऐसे उपकरणों से पूज्यों की भक्ति करना जिससे चारित्र ज्यादा उज्जवल रूप से पाला जा सके।"
+            "text": "This work is already being carried out widely in the Jain tradition. The main objective of Adhyatma Parivar is to serve the revered ones with such equipment that allows Charitra to be observed in a more radiant and pure manner."
         },
         "items": [
             {
-                "title": "यह प्योर गर्म कामली",
-                "desc": "अप्काय उपरांत अग्निकाय आदि की विराधना से भी बचाती है!"
+                "title": "This is pure warm woolen blanket.",
+                "desc": "It also protects from transgressions related to fire-bodied beings after usage."
             },
             {
-                "title": "अब तांबे और प्लास्टिक के घड़ों के उपयोग की जरूरत नहीं है।",
-                "desc": "यह लकड़ी का लोट श्रमणसंघ को आत्मविराधना से भी बचाएगा।"
+                "title": "Now there is no need to use copper or plastic pots.",
+                "desc": "This wooden lota will also protect the monastic community from self-transgression."
             },
             {
-                "title": "यह प्योर ऊन है।",
-                "desc": "अग्निकाय की विराधना से बचाती है।"
+                "title": "This is pure wool.",
+                "desc": "It protects from transgressions related to fire-bodied beings."
             },
             {
-                "title": "नाके की डोरी की रील की भी ऐसी ही भूमिका है।"
+                "title": "The reel of nose-string also serves a similar purpose."
             },
             {
-                "title": "रेशमी डोरी की रील ओघे के पाटे की किनार के लिए है।",
-                "desc": "यह श्रमणीवर्याओं की विशेष भक्ति के लिए है।"
+                "title": "The silk thread reel is for the border of the Ogha cloth.",
+                "desc": "This is specially for the devotion of revered nuns."
             },
             {
-                "title": "प्लास्टिक की टोक्सी का उपयोग न करना पड़े,",
-                "desc": "इसलिए विकल्प के रूप में यह काष्ठ की विविध साइज की टोक्सियां हैं।"
+                "title": "So that plastic baskets need not be used,",
+                "desc": "these are wooden baskets available in various sizes as an alternative."
             }
         ]
     },
     "jalStand": {
-        "metaTitle": "उष्णजल ठंडा करने का स्टैंड | अध्यात्म विभाग",
+        "metaTitle": "Hot Water Cooling Stand | Adhyatma Department",
         "stats": [
             {
                 "count": "85",
-                "label": "श्रीसंघ विहरधाम में कुल स्टैंड अर्पण"
+                "label": "Total Stands Offered in Shri Sangh Vihardhams"
             },
             {
                 "count": "10L +",
-                "label": "श्रीसंघ द्वारा सद्व्यय"
+                "label": "Amount Spent by Shri Sangh"
             },
             {
                 "count": "42L +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय"
+                "label": "Amount Spent by Adhyatma Parivar"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "उष्णजल ठंडा करने का स्टैंड",
-            "subtitle": "उष्णजल को शीत करने के स्टैंड का वितरण कार्य",
-            "date": "कार्य प्रारंभ : वि.सं. २०७७"
+            "title": "Hot Water Cooling Stand",
+            "subtitle": "Distribution of stands for cooling boiled water",
+            "date": "Work Started : V.S. 2077"
         },
         "intro": {
-            "text": "गर्मियों में उबाला हुआ पानी जल्दी ठंडा नहीं होता है, इसलिए कहीं-कहीं विहारधाम और आयंबिल शालाओं में कई बार आधा गर्म किए हुए पानी को बिना उकाले ही ठार (ठंडा कर) दिया जाता है। इस भयंकर दोष का विकल्प है: जल ठंडा करने का स्टैंड"
+            "text": "In summer, boiled water does not cool quickly. Therefore, in some Vihardhams and Ayambil Shalas, sometimes half-heated water is cooled without properly boiling it. The solution to this serious fault is: the Water Cooling Stand."
         },
         "features": {
-            "title": "इस स्टैंड की अनेक विशेषताएं हैं",
+            "title": "This stand has several special features",
             "list": [
-                "हल्के एल्युमिनियम के बदले Govt. Approved फ़ूड ग्रेड 'स्टेनलेस स्टील' का उपयोग किया गया है।",
-                "इसमें नल का उपयोग नहीं होने से जयणा का पालन होता है।",
-                "इसमें १२ ट्रैक वाला झरना है। पानी इतने ट्रैक्स में घूमता है तो 100° पर गर्म पानी नीचे पहुंचते-पहुंचते लगभग 32° तक ठंडा हो जाता है।"
+                "Instead of lightweight aluminum, Govt. Approved food-grade 'Stainless Steel' has been used.",
+                "As no tap is used in this, the observance of Jayna is maintained.",
+                "It has a 12-track flow system. As the water circulates through these tracks, water heated to 100° cools down to approximately 32° by the time it reaches the bottom."
             ]
         },
         "cta": {
-            "heading": "जयणायुक्त-अनुकूल जल ठंडा करने की व्यवस्था ।",
+            "heading": "Jayna-compliant water cooling arrangement.",
             "href": "https://wa.me/918448444050"
         }
     },
     "dharmanusthan": {
-        "metaTitle": "धर्मानुष्ठान सुशोभन सामग्रियों की उपलब्धि | अध्यात्म विभाग",
+        "metaTitle": "Availability of Decorative Materials for Religious Rituals | Adhyatma Department",
         "stats": [
             {
                 "count": "151",
-                "label": "कुल सुशोभन उपकरण प्रकार"
+                "label": "Total Decorative Equipment Types"
             },
             {
                 "count": "43L +",
-                "label": "अनुमानित कुल कीमत"
+                "label": "Estimated Total Cost"
             },
             {
                 "count": "400",
-                "label": "आजतक के कुल प्रसंग"
+                "label": "Total Events So Far"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "धर्मानुष्ठान सुशोभन सामग्रियों की उपलब्धि",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०७६"
+            "title": "Availability of Decorative Materials for Religious Rituals",
+            "subtitle": "Work Started : V.S. 2076"
         },
         "intro": {
-            "text": "पूजन हो या पूजा, महोत्सव हो या महापूजा, वंदना हो या संवेदना, तमाम धर्मानुष्ठानों में भावों में वृद्धि का कार्य करने वाले चार फुट के कलश जैसी अनेक यूनिक सामग्री परिवार द्वारा संग्रहित की गई है। तथा सभी को बिना किसी मूल्य उपयोग करने के लिए उपलब्ध की जा रही है। आज तक इन सैकड़ों आइटम के संग्रह द्वारा लगभग ४०० अवसरों को शोभायमान किया है।"
+            "text": "Whether it is Pujan or Puja, Mahotsav or Mahapuja, Vandana or Samvedana, numerous unique items such as four-foot Kalash that enhance devotion in all religious rituals have been collected by the Parivar. These are made available to everyone for use without any charge. Till now, through the collection of hundreds of such items, nearly 400 occasions have been beautified."
         },
         "gallery": {
-            "title": "इन सामग्रियों की एक अनेरी झलक!"
+            "title": "A unique glimpse of these materials!"
         },
         "cta": {
-            "heading": "धर्मानुष्ठानों को आकर्षक बनाना चाहते हैं?",
-            "content": "पूजा, महापूजा और अनुष्ठानों को भावनात्मक एवं सौंदर्यपूर्ण बनाने के लिए हम कलश और अन्य सुशोभन सामग्री उपलब्ध कराते हैं।",
+            "heading": "Want to make your religious rituals attractive?",
+            "content": "We provide Kalash and other decorative materials to make Pujas, Mahapujas, and rituals emotionally uplifting and aesthetically beautiful.",
             "href": "https://wa.me/918448444050"
         }
     },
     "anusthanAayojan": {
-        "metaTitle": "अनुष्ठान आयोजन | अध्यात्म विभाग",
+        "metaTitle": "Ritual Organization | Adhyatma Department",
         "stats": [
             {
                 "count": "09",
-                "label": "कुल सामूहिक दीक्षा"
+                "label": "Total Group Diksha"
             },
             {
                 "count": "12",
-                "label": "कुल वाचना - श्रेणी"
+                "label": "Total Vachana – Series"
             },
             {
                 "count": "05",
-                "label": "कुल उपधान"
+                "label": "Total Upadhan"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "अनुष्ठान आयोजन",
-            "subtitle": "कार्य प्रारंभ : वि.सं.२०६५"
+            "title": "Ritual Organization",
+            "subtitle": "Work Started : V.S. 2065"
         },
         "intro": {
-            "text": "अध्यात्म परिवार द्वारा सामूहिक दीक्षा, उपधान तप, वाचना - श्रेणी, S3 विशिष्ट प्रश्नोत्तरी प्रवचन, प्रतिष्ठा महोत्सव, महापूजाएं और हाल ही में एक कदम आगे बढ़कर ब्रह्मयात्रा आदि जैसे अनुष्ठानों का आयोजन होता है कि जो हजारों के जीवन में बोधिबीज डालने का कार्य करते हैं।",
-            "highlight": "उपधान की साधना जीवन की दिशा बदल देती है।"
+            "text": "Adhyatma Parivar organizes group Diksha, Upadhan Tap, Vachana–Series, S3 special Q&A discourses, Pratishtha Mahotsav, Mahapujas, and recently has taken a step forward by organizing Brahmyatra and similar rituals, which plant the seed of enlightenment in the lives of thousands.",
+            "highlight": "The practice of Upadhan transforms the direction of life."
         },
         "activities": {
-            "title": "विविध अनुष्ठानों की झलक!",
+            "title": "Glimpses of Various Rituals!",
             "vachana": {
-                "title": "वाचना - श्रेणी",
-                "desc": "अब तक वाचना - श्रेणी में लगभग २५,००० श्रोताओंने जिनवाणी पान किया है।"
+                "title": "Vachana – Series",
+                "desc": "So far, approximately 25,000 listeners have received the nectar of Jinvaani through the Vachana – Series."
             },
             "brahmyatra": {
-                "title": "ब्रह्मयात्रा",
-                "desc": "'ब्रह्मयात्रा' के अंतर्गत १५ से २५ वर्ष के युवा नेमिनाथ प्रभु के प्राचीन तीर्थों की यात्रा करके धन्य बने!"
+                "title": "Brahmyatra",
+                "desc": "Under 'Brahmyatra', youth aged 15 to 25 became blessed by visiting the ancient pilgrimage sites of Lord Neminath."
             },
             "deeksha": {
-                "title": "'सिंहसत्त्वोत्सव' सामूहिक ७४ दीक्षा का मानव सैलाब"
+                "title": "'Sinhsattvotsav' Group 74 Diksha – A human ocean of devotion"
             }
         }
     },
     "adhyatmshala": {
-        "metaTitle": "अध्यात्मशाला | अध्यात्म विभाग",
+        "metaTitle": "Adhyatmashala | Adhyatma Department",
         "stats": [
             {
                 "count": "06",
-                "label": "कुल स्थल"
+                "label": "Total Locations"
             },
             {
                 "count": "1200",
-                "label": "अंदाजन कुल बच्चे"
+                "label": "Approximate Total Children"
             },
             {
                 "count": "51",
-                "label": "कुल सत्र संख्या"
+                "label": "Total Sessions"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "अध्यात्मशाला",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०७४"
+            "title": "Adhyatmashala",
+            "subtitle": "Work Started : V.S. 2074"
         },
         "intro": {
-            "text": "आज के बालक कल के शासन के रखवाले हैं। यदि उनको अच्छे संस्कार नहीं दिए गए तो उनके दिलों दिमाग में नास्तिकता बस जाएगी! अध्यात्म परिवार द्वारा संचालित संघों में तथा पथप्रदर्शक सूरिभगवंत तथा उनके आज्ञावर्ती श्रमणों के चातुर्मास स्थलों में अभी प्रारंभिक स्तर पर चल रही ‘अध्यात्मशाला' के अभ्यासक्रम का प्रभाव ऐसा है कि बालकों के माता-पिता आयोजकों को आभार व्यक्त करते-करते गदगद हो जाते हैं।",
-            "caption": "बच्चे आनंद से अध्यात्मशाला में पढ़ रहे हैं!"
+            "text": "Today’s children are the future guardians of the Jain tradition. If they are not given proper values, atheism may settle in their hearts and minds. In the Sanghs operated by Adhyatma Parivar and at the Chaturmas locations of guiding Suribhagwants and their obedient monks, the ‘Adhyatmashala’ curriculum currently running at a primary level has had such an impact that parents of children become deeply emotional while expressing gratitude to the organizers.",
+            "caption": "Children are joyfully studying in Adhyatmashala!"
         },
         "cta": {
-            "heading": "आपके नज़दीकी बालसंस्करण पाठशाला की विशेष जानकारी के लिए संपर्क करें।"
+            "heading": "Contact us for special information about the Bal Sanskar Pathshala near you."
         }
     },
     "paiyashala": {
-        "metaTitle": "पाइयशाला-प्राकृत शिक्षण शाला | अध्यात्म विभाग",
+        "metaTitle": "Paiyashala – Prakrit Teaching School | Adhyatma Department",
         "header": {
-            "title": "पाइयशाला-प्राकृत शिक्षण शाला",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०७९"
+            "title": "Paiyashala – Prakrit Teaching School",
+            "subtitle": "Work Started : V.S. 2079"
         },
         "intro": {
-            "text": "जो भाषा प्रभु वीर के मूल उपदेशों को अपने अंदर समाकर बैठी है, उस भाषा का ठोस और सरल पद्धति वाला अध्ययन चतुर्विध संघ कर सके इसलिए यह अद्भुत प्रकल्प फिलहाल पूज्य श्रमणी भगवंतो के लिए कार्यरत है। धीरे-धीरे सकल संघ के लिए कार्यरत बनेगा ।"
+            "text": "The language that carries within it the original teachings of Lord Mahavir—so that the Chaturvidh Sangh can study it through a solid and simple method—this wonderful project is currently functioning for revered nuns. Gradually, it will become operational for the entire Sangh."
         }
     },
     "jivantDrishyawali": {
-        "metaTitle": "जीवंत दृश्यावली | अध्यात्म विभाग",
+        "metaTitle": "Live Dramatic Presentations | Adhyatma Department",
         "stats": [
             {
                 "count": "08",
-                "label": "कुल प्रयोग"
+                "label": "Total Performances"
             },
             {
                 "count": "1.5L +",
-                "label": "अंदाजन कुल दर्शक"
+                "label": "Approximate Total Audience"
             }
         ],
-        "statsDisclaimer": "सभी आंकड़े जून 2025 तक उपलब्ध नवीनतम डेटा पर आधारित हैं।",
+        "statsDisclaimer": "All figures are based on the latest available data up to June 2025.",
         "header": {
-            "title": "जीवंत दृश्यावली",
-            "subtitle": "कार्य प्रारंभ : वि.सं.२०७१"
+            "title": "Live Dramatic Presentations",
+            "subtitle": "Work Started : V.S. 2071"
         },
         "intro": {
-            "text": "अध्यात्म परिवार द्वारा हृदय को वैराग्यरस से भिंजा दे और शासनखुमारी से छलका दे ऐसी विविध जीवंत दृश्यावली (भाववर्धक नाटक) तैयार किए गए हैं। इसमें विशेष तौर पर शास्त्र तथा महापुरुषों की मर्यादा अखंडित रहे इस प्रकार भगवान, साधु आदि महापुरुषों के किरदार निभाए बिना मात्र बोधदायक प्रसंग दर्शाए गए हैं। उन प्रस्तुतियों को देखने के बाद दर्शकों में एक अलग ही संवेदना पैदा होती है। अभी तक 'भवप्रपंच', 'आनंदक्रांति' तथा 'शौर्यगाथा' जैसी दृश्यावली कई लोगों के जीवन परिवर्तन में आधार बनी है।"
+            "text": "Adhyatma Parivar has prepared various live dramatic presentations (emotion-enhancing plays) that soak the heart in the essence of detachment and overflow it with pride for the Jain tradition. Special care has been taken to preserve the dignity of scriptures and great personalities; therefore, instead of portraying the roles of Bhagwan, monks, or other great beings, only enlightening incidents are depicted. After watching these presentations, viewers experience a unique emotional awakening. So far, presentations like 'Bhavprapanch', 'Anandkranti', and 'Shauryagatha' have become instrumental in transforming many lives."
         },
         "gallery": {
-            "title": "'शौर्यगाथा' के ऐसे दृश्यों ने अच्छे-अच्छे की आंखें नम कर दी !"
+            "title": "Such scenes from 'Shauryagatha' have brought tears even to the strongest eyes!"
         }
     },
     "prabhubhaktiUpkaran": {
-        "metaTitle": "प्रभुभक्ति आदि के उपकरणों का निर्माण | अध्यात्म विभाग",
+        "metaTitle": "Manufacturing of Devotional Equipment | Adhyatma Department",
         "header": {
-            "title": "प्रभुभक्ति आदि के उपकरणों का निर्माण",
-            "subtitle": "प्रभुभक्ति आदि में भावों की वृद्धि के लिए उपकरण बनवाने का कार्य",
-            "date": "कार्य प्रारंभ : वि.सं. २०६८"
+            "title": "Manufacturing of Devotional Equipment",
+            "subtitle": "Creation of equipment to enhance devotion in Prabhubhakti and other rituals",
+            "date": "Work Started : V.S. 2068"
         },
         "intro": {
-            "text": "जिनको देखते ही हृदय भावों से छलक जाए कला के ऐसे जीवंत नमूने जैसे १४ महास्वप्न, पालना, पोखना, अष्टमंगल, ५६ दिक्कुमारियों की सामग्रियां, स्थापनाजी के लिए कमल, रथ, भंडार, चार-चार फुट के कलश आदि उपकरणों का निर्माण अध्यात्म परिवार द्वारा किया गया है।"
+            "text": "Artistic, lifelike creations that overflow the heart with devotion at first sight—such as the 14 Mahaswapnas, cradle, Pokhana, Ashtamangal, materials for 56 Dik-kumaris, lotus for Sthapana, chariot, treasury, four-foot Kalash, etc.—have been created by Adhyatma Parivar."
         },
         "sections": [
             {
-                "title": "प्रभु की माता को आने वाले सपनों की वास्तविक झांकी यहां होती है।"
+                "title": "Here one can witness a realistic depiction of the dreams seen by the Lord’s mother."
             },
             {
-                "title": "यह पालन इतना जोरदार है तो त्रिशला माताने जो झुलाया होगा वह पालना कैसा होगा?"
+                "title": "If this cradle is so magnificent, how extraordinary must have been the cradle in which Mother Trishala rocked the Lord?"
             }
         ]
     },
     "legalCell": {
-        "metaTitle": "कानूनी मार्गदर्शन : लीगल सेल | अध्यात्म विभाग",
+        "metaTitle": "Legal Guidance: Legal Cell | Adhyatma Department",
         "header": {
-            "title": "कानूनी मार्गदर्शन : लीगल सेल",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०७२"
+            "title": "Legal Guidance: Legal Cell",
+            "subtitle": "Work Started : V.S. 2072"
         },
         "intro": {
-            "text": "अध्यात्म परिवार के ही २५ वर्ष से ज्यादा अनुभवशाली चार्टर्ड अकाउंटेंटों की एक पूरी टीम इस बात के लिए सक्रिय है कि जैन ट्रस्टों को इनकम टैक्स, ट्रस्ट एक्ट आदि के कारण पैदा होने वाली मुश्किलों में मार्गदर्शन मिलता रहे।"
+            "text": "A complete team of Chartered Accountants with more than 25 years of experience within Adhyatma Parivar remains active to ensure that Jain trusts receive guidance in matters related to Income Tax, Trust Act, and other legal challenges."
         },
         "advocacy": {
-            "title": "धर्मबाधक कानूनों से सुरक्षा",
-            "text": "अध्यात्म परिवार के अग्रणीजन अपनी कानूनी सूझबूझ द्वारा तथा पहचान और प्रभाव का उपयोग करके, धर्मबाधक जिन मुद्दों पर सरकार द्वारा कानून बनाने का विचार चल रहा है अथवा जो धर्मबाधक कानून बन गए हैं, उनको रोकने अथवा सुधरवाने के लिए सक्रिय हैं।"
+            "title": "Protection from Religion-Obstructing Laws",
+            "text": "The leading members of Adhyatma Parivar actively use their legal insight, recognition, and influence to prevent or amend laws that obstruct religious practices—whether such laws are under consideration by the government or have already been enacted."
         },
         "stories": {
-            "text1": "नहीं, यह कोई फाइलें भरने के लिए लिखे गए पत्र नहीं हैं। इनमें से किसी पत्र ने ट्रस्टों के अमुक दान पर लागू पढ़ने जा रहे GST को रोका है, तो किसी पत्र में UCC में कोई धर्मबाधक कलम न आए उसकी सावधानियां बताई हैं।",
-            "text2": "कोई पत्र श्री सम्मेत शिखर महातीर्थ प्रवासन स्थल (टूरिज्म प्लेस) ना बने इसके लिए लिखा गया है, तो कोई पत्र जीवंत पशुओं का निकास रोकने में सफल बना है।"
+            "text1": "No, these are not letters written merely to fill files. Some of these letters have successfully prevented GST from being imposed on certain donations received by trusts, while others have suggested precautions to ensure that no religion-obstructing clauses enter the UCC.",
+            "text2": "Some letters were written to ensure that Shri Sammed Shikhar Mahatirth does not become merely a tourism place, while others have successfully prevented the export of live animals."
         },
         "deeksha": {
-            "title": "सौभाग्य का सीमाचिह्न : बालदीक्षा की रक्षा",
-            "text": "बालदीक्षा को राजमान्यता - पुस्तक का शीर्षक गवाही देता है। सदियों से बालदीक्षा पर रहा हुआ जोखम दूर हुआ है और राजमान्यता द्वारा 'बालदीक्षा' की जयजयकार हुई है।"
+            "title": "A Landmark of Fortune: Protection of Bal Diksha",
+            "text": "The title of the book 'Bal Diksha ko Rajmanyata' itself bears testimony. The long-standing risk over Bal Diksha has been removed, and through state recognition, 'Bal Diksha' has been glorified."
         },
         "cta": {
-            "heading": "ट्रस्ट और संघ से जुड़े आयकर व ट्रस्ट एक्ट जैसे मामलों में मार्गदर्शन उपलब्ध",
+            "heading": "Guidance available in matters related to Income Tax and Trust Act for trusts and Sanghs",
             "href": "https://wa.me/918448444050"
         }
     },
     "chitraNirmaan": {
-        "metaTitle": "चित्र निर्माण | अध्यात्म विभाग",
+        "metaTitle": "Artwork Creation | Adhyatma Department",
         "header": {
-            "title": "चित्र निर्माण",
-            "subtitle": "कार्य प्रारंभ : वि.सं. २०६७"
+            "title": "Artwork Creation",
+            "subtitle": "Work Started : V.S. 2067"
         },
         "intro": {
-            "p1": "पार्श्वप्रभु की थुई में हम बोलते हैं : 'नेमी - राजी चित्त विराजी विलोकित व्रत लिये'",
-            "p2": "अर्थात कि चित्रों का दर्शन वैराग्य में और पट निहारने की मंगलक्रिया भक्ति में वृद्धि करती है। इसलिए अध्यात्म परिवार ऐसे चित्र तैयार कर रहा है जिनसे शुभभावों में खूब अभिवृद्धि होगी!"
+            "p1": "In the praise of Parshva Prabhu we say: 'Nemi – Raji chitt viraji vilokit vrat liye.'",
+            "p2": "This means that viewing sacred paintings increases detachment, and beholding the sacred panels enhances devotion. Therefore, Adhyatma Parivar is preparing such artworks that greatly elevate auspicious sentiments."
         },
         "completed": {
-            "text": "अभी तक श्री मुनिसुव्रत स्वामी का जीवनदर्शन, पूज्य हरिभद्रसूरीश्वरजी महाराज का व्यक्तित्व चित्र, कल्पसूत्र-बारसासूत्र-सामाचारी चित्रसंपुट, पाटपरंपरावर्ती पूज्यों के चित्र, प्राचीन पूज्यों के प्रसंगचित्र, गिरिराज आदि तीर्थ के पट इत्यादि चित्र सज्ज हो चुके हैं !"
+            "text": "So far, artworks such as the life depiction of Shri Munisuvrat Swami, the personality portrait of Pujya Haribhadrasurishwarji Maharaj, illustrated compilations of Kalpasutra-Barasasootra-Samachari, portraits of lineage-based revered Gurus, incident paintings of ancient revered personalities, and panels of Giriraj and other pilgrimages have been completed."
         },
         "workshop": {
-            "text": "श्री कल्पसूत्र में वर्णित साधु सामाचारी का साक्षात्कार करवाते ऐसे चित्रों का निर्माण अध्यात्म परिवार की पहल है।"
+            "text": "Creating artworks that visually present the Sadhu Samachari described in Shri Kalpasutra is an initiative of Adhyatma Parivar."
         }
     }
 }

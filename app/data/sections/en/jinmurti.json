@@ -1,272 +1,272 @@
 {
     "jinpratimaSuraksha": {
-        "metaTitle": "जिनप्रतिमा सुरक्षा | जिनमूर्ति विभाग",
+        "metaTitle": "Jin Idol Protection | Jinmurti Department",
         "stats": [
             {
                 "count": "653",
-                "label": "कुल संघ जिनालय",
+                "label": "Total Sangh Jain Temples",
                 "color": "bg-gradient-to-b from-yellow-400 to-orange-500"
             },
             {
                 "count": "12002",
-                "label": " कुल आरस की प्रतिमा की शुद्धि-सुरक्षा",
+                "label": "Total Marble Idols Purified & Protected",
                 "color": "bg-gradient-to-b from-green-400 to-green-600"
             },
             {
                 "count": "4865",
-                "label": " कुल धातु की प्रतिमा की शुद्धि-सुरक्षा",
+                "label": "Total Metal Idols Purified & Protected",
                 "color": "bg-gradient-to-b from-teal-400 to-teal-600"
             },
             {
                 "count": "1Cr +",
-                "label": "श्रीसंघ द्वारा सद्व्यय",
+                "label": "Funds Utilized by Shri Sangh",
                 "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             },
             {
                 "count": "3.5Cr +",
-                "label": "अध्यात्म परिवार द्वारा सद्व्यय",
+                "label": "Funds Utilized by Adhyatma Parivar",
                 "color": "bg-gradient-to-b from-blue-400 to-blue-600"
             }
         ],
         "header": {
-            "title": "जिनप्रतिमा सुरक्षा",
-            "subtitle": "जिनालय का लीकेज आदि समस्याओं का निर्माणकार्य",
-            "date": "कार्य आरंभ: वि.सं. २०७३"
+            "title": "Jin Idol Protection",
+            "subtitle": "Construction work for leakage and other issues in Jain temples",
+            "date": "Work Started: V.S. 2073"
         },
         "intro": {
-            "p1": "एक नयनरम्य प्रतिमा में हजारों को समकित प्राप्त करवाने की ताकत होती है। यह प्रतिमा हमारी अज्ञानता के कारण यदि खराब हो जाए और मन में भक्ति के उल्लास के बदले चिंता के बादल छा जाएं तो",
-            "p1Highlight": " यह कितनी बड़ी हानि है!",
-            "p2": "इसके मूल शोधते शोधते अध्यात्म परिवार ने ",
+            "p1": "A beautiful idol has the power to grant right faith (Samkit) to thousands. If due to our ignorance the idol gets damaged and instead of devotional joy clouds of worry arise in the mind,",
+            "p1Highlight": " what a great loss it is!",
+            "p2": "While researching its root causes, Adhyatma Parivar even made efforts to knock on the doors of ",
             "p2Highlight": "Archaeological Survey of India (ASI)",
-            "p2End": " के दरवाजे खटखटाने तक के प्रयत्न किये है।"
+            "p2End": "."
         },
         "problems": {
-            "title": "यह प्रतिमा की तस्वीर है या हमारे अज्ञान की तस्वीर?",
+            "title": "Is this a picture of the idol or a picture of our ignorance?",
             "items": [
                 {
-                    "title": "कड़वी वास्तविकता",
-                    "desc": "चिपकाए हुए कंके को निकालने पर प्रकट हुई कड़वी वास्तविकता!"
+                    "title": "Bitter Reality",
+                    "desc": "The bitter reality revealed after removing the glued layers!"
                 },
                 {
-                    "title": "प्रभु के चरणों की दुर्दशा",
-                    "desc": "जिन प्रभु के चरण जहां पड़ते थे वहां स्वर्णकमल रखे जाते थे \n उन प्रभु के चरणों पर चिपकाये हुए पंजे से पैदा होने वाली दर्दनाक दुर्दशा!"
+                    "title": "The Miserable Condition of the Lord’s Feet",
+                    "desc": "Where golden lotuses were once placed at the Lord’s feet,\n the painful condition caused by glued patches!"
                 },
                 {
-                    "title": "अवदशा का कारण",
-                    "desc": "इस अवदशा का कारण और कुछ नहीं, टिके आदि के भीतर रहने वाली नमी ही है।"
+                    "title": "Cause of Deterioration",
+                    "desc": "The main reason for this deterioration is nothing but the moisture trapped inside tika and similar substances."
                 },
                 {
-                    "title": "धरणेंद्र की सुरक्षा",
-                    "desc": "पार्श्वनाथ प्रभु को तो धरणेंद्रने सुरक्षित रखा था। \n हम प्रभु के प्रतिबिंब रूपी फणा को नहीं संभाल सके!"
+                    "title": "Protection by Dharanendra",
+                    "desc": "Lord Parshwanath was protected by Dharanendra.\n But we could not protect the hood-like reflection of the Lord!"
                 }
             ]
         },
         "rootCause": {
-            "title": "महत्वपूर्ण निष्कर्ष",
-            "ancientWisdom": "जो बात ASI ने कही है वह बात सदियों पहले श्री श्राद्धविधि ग्रंथ में अंकित है:",
-            "quote": "प्रतिमा पर जिस जगह पर जरा भी पानी रह जाता है (वहां) श्यामलता आ जाती है।",
-            "mainTitle": "बबूल के पेड़ की जड़ के बदले मात्र डालियां कांटने से कांटे चुभना किस प्रकार बंद होंगे?",
+            "title": "Important Conclusion",
+            "ancientWisdom": "What ASI has stated was written centuries ago in Shri Shraddhavidhi Granth:",
+            "quote": "If even a little water remains on the idol, darkness (blackening) appears there.",
+            "mainTitle": "If we cut only the branches instead of the root of a babul tree, how will the thorns stop pricking?",
             "steps": [
-                "सबसे पहले १ इंच का टिका लगाया गया उसके गड्ढ़े!",
-                "उसको ढकने १.५ इंच का टिका लगाया उससे दूसरा गड्ढ़ा हुआ!",
-                "इन दोनों को छिपाने के २ इंच का टिका लगाया उससे बना तीसरा गड्ढ़ा!"
+                "First, a 1-inch tika was applied, creating a cavity!",
+                "To cover it, a 1.5-inch tika was applied, creating another cavity!",
+                "To hide both, a 2-inch tika was applied, resulting in a third cavity!"
             ]
         },
         "story": {
-            "title": "सौभाग्य का सीमाचिह्न: अंतरिक्षजी के आंगन में...",
+            "title": "A Milestone of Fortune: In the Courtyard of Antarikshji...",
             "sections": [
                 {
-                    "title": "प्रतीक्षा का काल",
+                    "title": "The Period of Waiting",
                     "content": [
-                        "१५,०६० दिनों तक लाखों लोगों के दिल की अनकही पीड़ा के अनुभव से कौन अनजान है?",
-                        "कि जब श्री अंतरिक्षजी के अधिनायक दादा दरवाजों के पीछे बंद थे।",
-                        "अपने दादा को पाने के लिए कितना धनव्यय... कितनी बाधाएं...",
-                        "कितनी तप साधना... कितने दशकों, महीनों, घंटों की लम्बी प्रतीक्षा...",
-                        "श्वेतांबर श्रीसंघ ने की है...."
+                        "Who is unaware of the unspoken pain in the hearts of millions for 15,060 days?",
+                        "When the presiding Lord of Shri Antarikshji was locked behind doors.",
+                        "How much expenditure... how many obstacles...",
+                        "How much penance... how many decades, months, and hours of long waiting...",
+                        "The Shwetambar Shri Sangh endured...."
                     ]
                 },
                 {
-                    "title": "साधना का फल",
+                    "title": "Fruit of Devotion",
                     "content": [
-                        "अंत में सर्वोच्च न्यायालय के उस ऐतिहासिक इंटरिम ऑर्डर के रूप में वह साधना फलीभूत हुई।",
-                        "अब दादा की पूजा का लाभ मिलने वाला था।",
-                        "जो लेपकार्य दशकों से रुका हुआ था उसको संपन्न करना था।"
+                        "Finally, that devotion bore fruit in the form of a historic interim order from the Supreme Court.",
+                        "Now the opportunity to worship Dada was about to be restored.",
+                        "The coating work that had been halted for decades had to be completed."
                     ]
                 },
                 {
-                    "title": "तैयारी और चुनौती",
+                    "title": "Preparation and Challenge",
                     "content": [
-                        "संपूर्ण भारत के जैन संघों की परस्पर बैठकें शुरू हुईं।",
-                        "क्या होगा? किस प्रकार होगा? होगा तो सही न?",
-                        "और उस समय, अध्यात्म परिवार के पूर्णसमर्पित शासन सेवक का संपर्क किया गया।",
-                        "पूछा गया कि: क्या आप अंतरिक्षजी के दादा के लेप करने का कार्य कर सकोगे?"
+                        "Meetings of Jain Sanghs across India began.",
+                        "What will happen? How will it happen? Will it happen properly?",
+                        "At that time, the fully dedicated Shasan servant of Adhyatma Parivar was contacted.",
+                        "He was asked: Can you undertake the coating work of Antarikshji’s Dada?"
                     ]
                 },
                 {
-                    "title": "समर्पण और सफलता",
+                    "title": "Dedication and Success",
                     "content": [
-                        "अध्यात्म परिवार के कार्यवाहक शासन सेवक के साढ़े तीन करोड़ रोम हर्षित हो गए।",
-                        "उन्होंने तत्काल जवाब दिया: ",
-                        "अवश्य। मैं अंतरिक्षजी पहुंचता हूं।",
-                        "किन्तु वहां पहुंचते ही वहां के गंभीर हालत में जान के जोखम का अंदाज आ गया।",
-                        "पर दादा की भक्ति के उल्लास के सामने जोखम का भय फीका पड़ गया।",
-                        "दादा की भक्ति और समग्र भारत के चतुर्विध संघों के मंगल आशीष के बल से दादा के लेप का मंगल कार्य संपन्न हुआ।"
+                        "Every nerve of the dedicated Shasan servant of Adhyatma Parivar thrilled with devotion.",
+                        "He immediately replied:",
+                        "Certainly. I am reaching Antarikshji.",
+                        "But upon arrival, the grave situation and life risk became evident.",
+                        "Yet before the joy of devotion to Dada, fear of risk faded away.",
+                        "With devotion to Dada and the auspicious blessings of the fourfold Sangh of India, the sacred coating work was successfully completed."
                     ]
                 }
             ],
             "images": {
-                "title": "वहीवटदारो ने यह क्रिटिकल कार्य अध्यात्म परिवार को सौंपा क्योंकि उन्हें पता था कि...",
-                "label1": "ठग कारीगर एमसील आदि हल्के द्रव्यों का उपयोग करके प्रभु की दुर्दशा करते हैं!",
-                "label2": "अध्यात्म परिवार तमाम ओप आदि में प्योर डायमंड पाउडर-शुद्धद्रव्यों का ही उपयोग करता है।"
+                "title": "The trustees entrusted this critical task to Adhyatma Parivar because they knew that...",
+                "label1": "Fraudulent craftsmen use cheap materials like M-seal and cause damage to the Lord!",
+                "label2": "Adhyatma Parivar uses pure diamond powder and only pure materials in all coating and polishing work."
             }
         },
         "milestones": {
-            "title": "सौभाग्य का सीमाचिह्न",
+            "title": "Milestones of Fortune",
             "items": [
                 {
-                    "title": "श्री शत्रुंजय तीर्थाधिपति आदिनाथ दादा",
-                    "desc": "वि.सं. २०७५-७६ से प्रतिवर्ष भादरवा सुद छठ से आसोज सुद छठ (एक माह) तक श्री शत्रुंजय तीर्थाधिपति दादा आदिनाथ का ओप (शुद्धि) सहित महातीर्थ पर विराजमान प्रतिमाओं के ओप आदि का कार्य अविरत चल रहा है।"
+                    "title": "Shri Shatrunjaya Tirthadhipati Adinath Dada",
+                    "desc": "Since V.S. 2075-76, every year from Bhadarva Sud Chhath to Asoj Sud Chhath (one month), the purification and polishing work of Adinath Dada and other idols at the great pilgrimage site of Shatrunjaya has been continuously carried out."
                 },
                 {
-                    "title": "श्री गिरनार महातीर्थ",
-                    "desc": "वर्तमान विश्व की सबसे प्राचीन प्रतिमा गिरनार महातीर्थ मंडन श्री नेमिनाथ दादा की प्रतिमा का शास्त्रवर्णित शुद्ध द्रव्यों से लेप का कार्य एवं प्रगट प्रभावी श्री अमीझरा पार्श्वनाथ परमात्मा के ओप का कार्य भी अध्यात्म परिवार द्वारा संपन्न!"
+                    "title": "Shri Girnar Mahatirth",
+                    "desc": "The coating of the world’s most ancient idol — Shri Neminath Dada at Girnar Mahatirth — with scripturally prescribed pure substances, and polishing of the manifest powerful Shri Amizara Parshwanath Parmatma, completed by Adhyatma Parivar!"
                 },
                 {
-                    "title": "श्री समेतशिखर महातीर्थ",
-                    "desc": "इस अवसर्पिणी काल के २०-२० तीर्थंकरों के मोक्ष कल्याणक से सुवासित श्री समेत्तशिखर महातीर्थ के जलमंदिर में विराजमान श्री शामला पार्श्वनाथ परमात्मा के लेप का कार्य"
+                    "title": "Shri Samet Shikhar Mahatirth",
+                    "desc": "Coating work of Shri Shyamala Parshwanath Parmatma in the Jalmandir of Samet Shikhar Mahatirth, sanctified by the Moksha Kalyanak of 20 Tirthankars of this Avasarpini era."
                 },
                 {
-                    "title": "श्री शंखेश्वर महातीर्थ",
-                    "desc": "की भमती में विराजमान तमाम परमात्माओं के ओप का कार्य"
+                    "title": "Shri Shankheshwar Mahatirth",
+                    "desc": "Polishing work of all the deities enshrined in the temple premises."
                 },
                 {
-                    "title": "श्री मक्षीजी तीर्थ",
-                    "desc": "श्री मक्षीजी तीर्थ में विराजमान श्री मक्षीजी पार्श्वनाथ परमात्मा के लेप सहित बावन जिनालय में सुशोभित तमाम परमात्माओं के ओप आदि का कार्य अध्यात्म परिवार द्वारा सहर्ष संपन्न हुआ है!"
+                    "title": "Shri Makshiji Tirth",
+                    "desc": "Coating of Shri Makshiji Parshwanath Parmatma and polishing work of all idols in the 52 Jinalayas completed joyfully by Adhyatma Parivar!"
                 }
             ]
         },
         "pledge": {
-            "title": "प्रत्येक पूजक का एक संकल्प, जिससे भविष्य का नुकसान रुकेगा",
-            "text1": "'शासन की धरोहर की सुरक्षा के लिए रोज १ मिनट अर्पण करूंगा'।",
-            "text2": "मै अंगलुंछ्ने से अपने प्रभु को सूखा कर ही पूजा करूंगा।"
+            "title": "One Resolution of Every Devotee to Prevent Future Damage",
+            "text1": "'I will dedicate 1 minute daily for the protection of the heritage of the Shasan.'",
+            "text2": "I will dry my Lord with a clean cloth before performing worship."
         },
         "cta": {
-            "heading": " जो नुकसान पहले ही हो चुका है उसका क्या?",
-            "content": " अध्यात्म परिवार ने टीका आदि निकाल कर प्रतिमाजी का लेप-ओप करने के लिए बहुत परिश्रमपूर्वक शुद्ध द्रव्यों की खोज की है। बस, हमें ज्यादा से ज्यादा प्रतिमाजी की शुद्धि-सुरक्षा का लाभ दीजिए-दिलवाइये।"
+            "heading": "What about the damage that has already occurred?",
+            "content": "Adhyatma Parivar has painstakingly researched pure substances to remove tika and perform proper coating and polishing of idols. Please allow and help us extend purification and protection to as many idols as possible."
         }
     },
     "jinpratimaAashatanaNivaran": {
-        "metaTitle": "जिनप्रतिमा आशातना निवारण | जिनमूर्ति विभाग",
+        "metaTitle": "Jin Idol Ashatana Prevention | Jinmurti Department",
         "header": {
-            "title": "जिनप्रतिमा आशातना निवारण",
-            "subtitle": "बिना अंजन वाली प्रतिमाओं की योग्य व्यवस्था",
-            "date": "कार्य प्रारंभ : वि.सं. २०७६"
+            "title": "Jin Idol Ashatana Prevention",
+            "subtitle": "Proper arrangement for idols without Anjan ritual",
+            "date": "Work Started: V.S. 2076"
         },
         "content": {
-            "quote": "श्री षोडशक ग्रंथ षो.८गा.१ में पूज्य हरिभद्रसूरि महाराजा का वचन है कि :",
-            "quoteText": "'प्रतिमा बनाने के बाद मात्र दस दिनों में उसका अंजन विधान होना चाहिए।'",
-            "desc": "सद्गुरु के मुख से ऐसा सुनने के बाद आराधक आत्मा को अत्यंत चिंता होती है कि पूर्व में नासमझी में घर में 'गिफ्ट' के रूप में स्वीकार की हुई पाषाण, धातु, फाइबर की प्रतिमाजी का क्या करें?",
-            "solution": "इसके समाधान के लिए उनकी आशातना न हो उस प्रकार उनकी व्यवस्था के लिए अध्यात्म परिवार सज्ज है।"
+            "quote": "In Shri Shodashak Granth Sho.8 Ga.1, Pujya Haribhadrasuri Maharaj states:",
+            "quoteText": "'Within ten days after making an idol, the Anjan ritual must be performed.'",
+            "desc": "After hearing this from the Sadguru, a devoted soul becomes deeply concerned about what to do with stone, metal, or fiber idols that were previously accepted at home as 'gifts' without proper understanding.",
+            "solution": "To ensure that such idols do not incur Ashatana, Adhyatma Parivar is prepared to arrange proper solutions."
         },
         "cta": {
-            "heading": "क्या आपके पास ऐसी प्रतिमा है, जो पूजा के योग्य न हो।",
+            "heading": "Do you have such an idol that is not fit for worship?",
             "content": ""
         }
     },
     "jinpratimaNirmaanDhatu": {
-        "metaTitle": "जिनप्रतिमा निर्माण : धातु | जिनप्रतिमा सुरक्षा",
+        "metaTitle": "Jin Idol Construction: Metal | Jin Idol Protection",
         "header": {
-            "title": "जिनप्रतिमा निर्माण : धातु",
-            "date": "कार्य आरंभ : वि.सं. २०७६"
+            "title": "Jin Idol Construction: Metal",
+            "date": "Work Started: V.S. 2076"
         },
         "intro": {
-            "text": "अध्यात्म शिल्पशाला की यह दूसरी उपलब्धि है। धातु की प्रतिमाजी के निर्माण में आधुनिक तकनीक और पारंपरिक कलाकारी का संयोजन किया गया है।"
+            "text": "This is the second achievement of Adhyatma Shilpashala. In the construction of metal idols, a combination of modern technology and traditional craftsmanship is applied."
         },
         "sections": [
             {
-                "title": "वैक्यूम इन्वेस्टमेंट कास्टिंग",
-                "text": "धातु की प्रतिमाजी के लिए भी पूर्व में बताए अनुसार (पाषाण जिनप्रतिमा निर्माण) मिट्टी का मॉडल बनाया जाता है, उसके बाद वैक्स की डाई बनाकर वैक्यूम इन्वेस्टमेंट कास्टिंग पद्धति से धातु की प्रतिमाजी का निर्माण किया जाता है।"
+                "title": "Vacuum Investment Casting",
+                "text": "As previously described (in stone idol construction), a clay model is first prepared. Then a wax die is made, and through the vacuum investment casting method, the metal idol is created."
             },
             {
-                "title": "विशिष्ट डिटेलिंग",
-                "text": "ऐसे अद्भुत डिटेलिंग वाले प्रभुजी, सिद्धचक्रजी तथा परिकर उपलब्ध करवाने के लिए अध्यात्म परिवार सज्ज है! प्रत्येक कलाकृति में सूक्ष्म से सूक्ष्म विवरण को सावधानीपूर्वक तैयार किया जाता है।"
+                "title": "Specialized Detailing",
+                "text": "Adhyatma Parivar is ready to provide beautifully detailed idols of the Lord, Siddhachakraji, and Parikar. Every artwork is crafted with careful attention to the finest details."
             }
         ]
     },
     "jinpratimaNirmaanPashaan": {
-        "metaTitle": "जिनप्रतिमा निर्माण - पाषाण | जिनमूर्ति विभाग",
+        "metaTitle": "Jin Idol Construction - Stone | Jinmurti Department",
         "header": {
-            "title": "जिनप्रतिमा निर्माण - पाषाण",
-            "date": "कार्य आरंभ: वि.सं. २०७६"
+            "title": "Jin Idol Construction - Stone",
+            "date": "Work Started: V.S. 2076"
         },
         "intro": {
-            "title": "आज ज्यादातर प्रतिमाजी के पाषाण के लिए 'सफेदी' यही अग्रिम और एकमात्र मापदंड बन गया है। वास्तव में क्रम ऐसा होना चाहिए :"
+            "title": "Today, for most idols, 'whiteness' has become the primary and only criterion for selecting stone. In reality, the order should be:"
         },
         "criteria": [
             {
                 "id": 1,
-                "title": "पोगर परीक्षण :",
-                "desc": "जो पाषाण मोटी पोगर का होता है वह ज्यादा पानी एब्ज़ोर्ब करता है, जिसके परिणाम स्वरुप प्रतिमाजी कुछ वर्षों में नष्टप्राय: हो जाएगी। इसलिए यह प्रथम मापदंड है।"
+                "title": "Porosity Test:",
+                "desc": "Stone with high porosity absorbs more water, as a result of which the idol may deteriorate within a few years. Therefore, this is the first criterion."
             },
             {
                 "id": 2,
-                "title": "वरण विचार :",
-                "desc": "पाषाण के जिस भाग में सल्फर (वरण) का प्रमाण ज्यादा होता है, वहां पर हल्की सी ठोकर या मार लगने पर ही प्रतिमाजी का टुकड़ा पड़ जायेगा।"
+                "title": "Sulfur Content Consideration:",
+                "desc": "In parts of the stone where sulfur content is high, even a slight impact can cause a fragment to break off from the idol."
             },
             {
                 "id": 3,
-                "title": "शुक्लता :",
-                "desc": "ऊपर की दो चीजें सुनिश्चित करने के बाद फिर तीसरे क्रम पर भावोत्पादकताके लिए शुक्लता (सफेदी-बेदागपना) अवश्य देखना चाहिए।"
+                "title": "Whiteness:",
+                "desc": "After ensuring the above two factors, whiteness (spotless appearance) should be considered third for devotional appeal."
             }
         ],
         "process": [
             {
-                "title": "पोगर परीक्षण विधि",
-                "desc": "पत्थर के पीस में छोटा होल करके स्टेन डाला जाता है। उसकी ललामी जितनी ज्यादा फैलती है उतनी मोटी पोगरका पाषाण कहा जाता है। वह प्रतिमाजी के लिए उपयोग नहीं किया जाता है।"
+                "title": "Porosity Testing Method",
+                "desc": "A small hole is made in a piece of stone and stain is applied. The more the color spreads, the higher the porosity of the stone. Such stone is not used for idol construction."
             },
             {
-                "title": "वरण की पहचान",
-                "desc": "यह जो लाइन दिख रही है, वह वरण है। यह अत्यंत जोखमी है। इसकी उपस्थिति से प्रतिमा में दरार या टूटने का खतरा बना रहता है।"
+                "title": "Identification of Sulfur Lines",
+                "desc": "The line visible here indicates sulfur presence. It is extremely risky, as it increases the chances of cracks or breakage in the idol."
             },
             {
-                "title": "प्रारंभिक मॉडल निर्माण",
-                "desc": "शास्त्रोक्त माप अनुसार सर्वप्रथम मिट्टी का नयनाकर्षक मॉडल बनाया जाता है। यह मॉडल आगे की सभी प्रक्रियाओं का आधार बनता है।"
+                "title": "Initial Model Creation",
+                "desc": "According to scriptural measurements, an attractive clay model is first created. This model becomes the foundation for all further processes."
             },
             {
-                "title": "डिजिटल प्रसंस्करण",
-                "desc": "मिट्टी के मॉडल को 3D स्कैन करके कंप्यूटर द्वारा बारीक एडिटिंग से सुंदर घाट दिया जाता है। आधुनिक तकनीक का उपयोग करके पारंपरिक कला को और भी निखारा जाता है।"
+                "title": "Digital Processing",
+                "desc": "The clay model is 3D scanned and finely edited using computer technology to refine its form. Modern technology enhances traditional art further."
             },
             {
-                "title": "प्रारंभिक डिज़ाइन और नाप",
-                "desc": "यह नयनरम्य प्रतिमाजीओं का निर्माण ऐसी चीवट से किया जाता है कि लेफ्ट-राईट सभी छोटे से छोटे अंग-ऊपांगो का नाप प्रभु के समचतुरस्र संस्थान की झांकि दिलाए ऐसे समान नाप के बनते है।"
+                "title": "Initial Design and Proportion",
+                "desc": "These beautiful idols are crafted with such precision that the measurements of left-right and even the smallest limbs and sub-parts reflect the symmetry of the Lord’s perfect proportions."
             }
         ],
         "conclusion": {
-            "text": "गुजरात के हिम्मतनगर शहर में अध्यात्म परिवार द्वारा प्रारंभ अध्यात्म शिल्पशाला का उपक्रम एक बहुआयामी योजना है। जिसकी बातें अत्यंत रोमांचक हैं।"
+            "text": "The Adhyatma Shilpashala initiative started by Adhyatma Parivar in Himmatnagar, Gujarat, is a multidimensional project with extremely fascinating aspects."
         }
     },
     "jinpratimaSangrahan": {
-        "metaTitle": "प्राचीन जिनप्रतिमा संग्रहण | जिनप्रतिमा सुरक्षा",
+        "metaTitle": "Ancient Jin Idol Collection | Jin Idol Protection",
         "header": {
-            "title": "प्राचीन जिनप्रतिमा संग्रहण",
-            "date": "कार्य आरंभ : वि.सं. २०६८"
+            "title": "Ancient Jin Idol Collection",
+            "date": "Work Started: V.S. 2068"
         },
         "intro": {
-            "text": "जमीन से निकलने वाली प्रतिमाजी सरकारी म्यूज़ियम आदि अयोग्य स्थानों पर न चली जाएं अपितु योग्य स्थान पर उनकी पूजा हो सके, इसलिए उन प्रतिमाजी का शुद्धिकरण, यदि जरूरत हो तो लेप आदि करके योग्य स्थान पर विराजमान करना। यह कार्य सुचारू रूप से चल रहा है।"
+            "text": "Idols discovered from the ground should not go to government museums or other inappropriate places, but instead be worshipped at suitable locations. Therefore, such idols are purified and, if required, coated, and then installed at proper places. This work is progressing smoothly."
         },
         "highlight": {
-            "text": "साथ-साथ निर्जन बन गए गांवों आदि में अपूज रह जाने की संभावना वाले जिनबिंबों की योग्य स्थान पर पूजा हो सके, इसमें भी अध्यात्म परिवार 'सेतु' बन रहा है।"
+            "text": "Simultaneously, in deserted villages where idols may remain unworshipped, Adhyatma Parivar is acting as a 'bridge' to ensure they are worshipped at appropriate locations."
         },
         "success": {
-            "title": "सफलता की कहानी",
-            "story1": "डीसा के नजदीक खेत में से निकले अतिप्राचीन आदिनाथ दादा आज श्री शांतिकनक जैन संघ, नानपुरा-सूरत जिनालय के महाराजा बनकर शोभायमान हैं।",
-            "story2": "यह है उत्तर प्रदेश स्थित धर्मनाथ दादा की चार कल्याणक भूमि रतनपुरी (रानोही) के जिनालय में मूलनायक के पद पर शोभायमान",
-            "story2Highlight": "अतिप्राचीन धर्मनाथ दादा!",
-            "story2End": "यह प्रतिमाजी हिम्मतनगर, गुजरात के समीप के खेत से प्राप्त हुई थी।"
+            "title": "Success Stories",
+            "story1": "The extremely ancient Adinath Dada found in a field near Deesa now shines as the presiding deity at Shri Shantikanak Jain Sangh, Nanpura-Surat Jinalaya.",
+            "story2": "Here is the extremely ancient Dharmanath Dada, now enshrined as the main deity at the four Kalyanak land Ratnapuri (Ranohi) in Uttar Pradesh.",
+            "story2Highlight": "Extremely Ancient Dharmanath Dada!",
+            "story2End": "This idol was discovered from a field near Himmatnagar, Gujarat."
         },
         "cta": {
-            "heading": "आपको ऐसी प्रतिमाओं की जानकारी है?",
-            "content": "हम शुद्धिकरण और योग्य स्थान पर विराजमान करने में सहयोग कर सकते हैं।"
+            "heading": "Do you have information about such idols?",
+            "content": "We can assist in purification and installation at an appropriate place."
         }
     }
 }

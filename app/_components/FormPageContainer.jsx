@@ -2,19 +2,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Form, Input, Row, Col, message, Spin, Select, Radio, InputNumber } from "antd";
 import axios from "axios";
-import {
-  WhatsAppOutlined,
-  PhoneOutlined,
-  CheckCircleFilled,
-} from "@ant-design/icons";
+import { CheckCircleFilled } from "@ant-design/icons";
 import { useRouter, useSearchParams } from "next/navigation";
 import { states } from "../data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
 import FormSkeleton from "@/app/_components/FormSkeleton";
-import HexagonalSvg from "./HexagonalSvg";
-import HeaderSvg from "./HeaderSvg";
 import { detectLanguage } from "../utils/detectLanguage.utils";
 import useUserFetch from "../_hooks/useUserFetch";
 import UserFetchModal from "./UserFetchModal";
@@ -27,8 +21,8 @@ const isSuratCity = (val) => {
   const cleaned = val.replace(/\s+/g, "").toLowerCase();
   return [
     "surat",
-    "\u0AB8\u0AC1\u0AB0\u0AA4",  // સુરત (Gujarati)
-    "\u0938\u0942\u0930\u0924"   // सूरत (Hindi)
+    "સુરત",  //  (Gujarati)
+    "सूरत"   //  (Hindi)
   ].includes(cleaned);
 };
 
@@ -566,13 +560,12 @@ export default function DynamicForm() {
     setIsModalVisible(false);
     setIsVerified(false);
     setRealUserValues({});
-    // Optionally clear fields or leave them as is (user might want to edit)
-    // Requirement: "edit button for override the details" -> assumes we just close modal and let them type.
+
   };
 
   // Get language from formData
   const language = formData?.language?.toLowerCase() || 'gujarati';
-  console.log(language, formData, "formData")
+  // console.log(language, formData, "formData")
   const t = translations[language] || translations.gujarati;
 
   const detectedLang = detectLanguage(formData?.title);
@@ -634,7 +627,7 @@ export default function DynamicForm() {
         );
 
         const totalCopies = response.data?.totalCopies || 0;
-        console.log("Stock Check:", { totalCopies, stockLimit: formData.stock });
+        // console.log("Stock Check:", { totalCopies, stockLimit: formData.stock });
 
         if (totalCopies >= formData.stock) {
           setIsOutOfStock(true);
@@ -924,9 +917,9 @@ export default function DynamicForm() {
     const fullName = `${nameForDisplay} ${surnameForDisplay}`.trim();
     setCandidateName(fullName);
 
-    console.log("Form values (initial): ", values);
-    console.log("Form values (merged): ", finalValues);
-    console.log("Real values available: ", realUserValues);
+    // console.log("Form values (initial): ", values);
+    // console.log("Form values (merged): ", finalValues);
+    // console.log("Real values available: ", realUserValues);
 
     try {
       setLoading(true);
@@ -934,7 +927,7 @@ export default function DynamicForm() {
       //   params: { mode: 'TEST' }
       // });
       const response = await axios.post(formData.link, finalValues);
-      console.log(response, "response");
+      // console.log(response, "response");
       const generatedID = response.data.registrationId || null;
       setGeneratedID(generatedID);
       if (response.status === 200) {
