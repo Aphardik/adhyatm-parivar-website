@@ -7,8 +7,8 @@ import { FaSearch, FaShoppingCart, FaPlus, FaMinus, FaTrash, FaCheckCircle, FaSh
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaSprayCanSparkles } from 'react-icons/fa6';
 
-const BOOKS_API = "https://agtbook-backend-1.onrender.com/api/books";
-const ORDERS_API = "https://agtbook-backend-1.onrender.com/api/orders";
+const BOOKS_API = "http://agt-api.adhyatmparivar.com/api/books";
+const ORDERS_API = "http://agt-api.adhyatmparivar.com/api/orders";
 
 const AgtBooks = () => {
   const [books, setBooks] = useState([]);
@@ -118,9 +118,7 @@ const AgtBooks = () => {
     return descriptions[shreni] || "विवरण उपलब्ध नहीं है।";
   };
 
-  const getBookThumbnail = (srno) => {
-    return `https://agtbook-backend-1.onrender.com/uploads/books/${srno}.webp`;
-  };
+
 
   const filteredBooks = useMemo(() => {
     const result = books.filter(b => {
@@ -281,7 +279,7 @@ const AgtBooks = () => {
                   const isInCart = cart.some(item => item.id === book.id);
 
                   return (
-                    <div key={book.srno || book.id} onClick={() => setSelectedBook(book)}
+                    <div key={book.id} onClick={() => setSelectedBook(book)}
                       className="group bg-white rounded-sm shadow-sm hover:shadow-lg transition-all cursor-pointer overflow-hidden border border-gray-200 relative">
                       {/* Featured Ribbon */}
                       {isFeatured && (
@@ -293,7 +291,7 @@ const AgtBooks = () => {
                       )}
                       <div className="relative aspect-[3/4] bg-gray-100">
                         <img
-                          src={getBookThumbnail(book.srno) || book.image || "/book-placeholder.webp"}
+                          src={book.frontImage}
                           alt={book.name || book.title}
                           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
@@ -433,7 +431,7 @@ const AgtBooks = () => {
                 {/* <h2 className="text-2xl font-bold mb-4">Cart Items ({cart.reduce((a, b) => a + b.quantity, 0)})</h2> */}
                 {cart.map((item) => (
                   <div key={item.id} className="bg-white rounded-lg p-4 shadow border border-gray-200 flex gap-4">
-                    <img src={"/book-placeholder.webp" || getBookThumbnail(item.srno) || item.image}
+                    <img src={item.frontImage}
                       className="w-20 h-28 object-cover rounded flex-shrink-0" alt={item.title || item.name} />
                     <div className="flex-1">
                       <h4 className="font-semibold text-gray-900 mb-1">{item.title || item.name}</h4>
