@@ -211,7 +211,7 @@ export default function UdayanmantriForm() {
       message.error(error.response?.data?.message || "An error occurred");
     } finally {
       setLoading(false);
-      router.push("/pages/success");
+      router.push("/success");
     }
   };
 
@@ -393,7 +393,7 @@ export default function UdayanmantriForm() {
                 </Row>
 
                 <Row gutter={16}>
-                <Col xs={24} md={12}>
+                  <Col xs={24} md={12}>
                     <Form.Item
                       label={<b className="font-anek">એડ્રેસ/एड्रेस</b>}
                       name="એડ્રેસ/एड्रेस"
@@ -422,7 +422,7 @@ export default function UdayanmantriForm() {
                       onChange={setCopies}
                     />
                   </Col>
-                  
+
                 </Row>
 
                 <div className="flex mt-6 justify-between items-center">

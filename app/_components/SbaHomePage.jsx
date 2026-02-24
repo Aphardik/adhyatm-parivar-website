@@ -132,7 +132,7 @@ const PhotoGalleryHome = () => {
         </div>
 
         {/* Title below image - always visible */}
-        <Link href={'/pages/sba'} className="p-3 block bg-[#01044c]">
+        <Link href={'/sba'} className="p-3 block bg-[#01044c]">
           <h3 className="text-base font-semibold text-gray-100 line-clamp-2 text-center">
             {photo.name}
           </h3>
@@ -262,7 +262,7 @@ const PhotoGalleryHome = () => {
         {/* View All Button */}
         <div className="mt-8 text-center">
           <Link
-            href="/pages/sba"
+            href="/sba"
             className="font-sans font-semibold flex rounded-md sm:inline-flex items-center justify-center bg-[#01044c] text-white px-8 py-3 transition-all duration-300 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             {content?.sba?.viewAll}
