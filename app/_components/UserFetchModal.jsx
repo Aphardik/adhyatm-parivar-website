@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Button, Descriptions } from 'antd';
-import { maskData } from '../_utils/userFetchUtils';
+import { maskData } from '@/app/utils/userFetchUtils';
 
 const translations = {
     hindi: {
