@@ -7,7 +7,7 @@ import { FaX } from "react-icons/fa6";
 import { photoData1 } from '@/app/data/sba';
 
 import { useLanguage } from "./LanguageContext";
-import { getSectionData } from "../_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const PhotoGalleryHome = () => {
   const { language } = useLanguage();

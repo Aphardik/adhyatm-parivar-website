@@ -4,15 +4,15 @@ import { Form, Input, Row, Col, message, Spin, Select, Radio, InputNumber } from
 import axios from "axios";
 import { CheckCircleFilled } from "@ant-design/icons";
 import { useRouter, useSearchParams } from "next/navigation";
-import { states } from "../data/states";
+import { states } from "@/app/data/states";
 import TextArea from "antd/es/input/TextArea";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SubmissionPopup from "@/app/_components/SubmissionPopup";
 import FormSkeleton from "@/app/_components/FormSkeleton";
-import { detectLanguage } from "../utils/detectLanguage.utils";
-import useUserFetch from "../_hooks/useUserFetch";
-import UserFetchModal from "./UserFetchModal";
-import { maskData } from "../_utils/userFetchUtils";
+import { detectLanguage } from "@/app/utils/detectLanguage.utils";
+import useUserFetch from "@/app/_hooks/useUserFetch";
+import UserFetchModal from "@/app/_components/UserFetchModal";
+import { maskData } from "@/app/utils/userFetchUtils";
 import { downloadRegistrationCard } from "@/app/utils/downloadRegisterCard.Utils";
 
 // Helper: detect if city value is Surat (any script, with/without spaces)

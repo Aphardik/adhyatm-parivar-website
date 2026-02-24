@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLanguage } from './LanguageContext';
-import { getSectionData } from '../_utils/sectionData';
+import { getSectionData } from '@/app/utils/sectionData';
 
 const Card3DCarousel = ({ items, title, language, content }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

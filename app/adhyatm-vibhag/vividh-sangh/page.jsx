@@ -6,7 +6,7 @@ import CounterStatsUI from "@/app/_components/StatData";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import { FaCheck } from "react-icons/fa";
 import { useLanguage } from "@/app/_components/LanguageContext";
-import { getSectionData } from "@/app/_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 // export const metadata = {
 //   title: "विविध संघों - आराधना भवनों का संचालन | अध्यात्म विभाग",

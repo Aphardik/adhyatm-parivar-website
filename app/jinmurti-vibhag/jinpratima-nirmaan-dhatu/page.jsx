@@ -3,7 +3,7 @@ import React from 'react'
 import HeaderSvg from '@/app/_components/HeaderSvg'
 import Link from 'next/link'
 import { useLanguage } from "@/app/_components/LanguageContext";
-import { getSectionData } from "@/app/_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const Page = () => {
   const { language } = useLanguage();

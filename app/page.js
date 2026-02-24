@@ -8,7 +8,7 @@ import VibhagDescription from "./_components/VibhagDescription";
 import SbaHomePage from "./_components/SbaHomePage";
 import MangalgharProducts from "./_components/MangalgharItems";
 import { useLanguage } from "./_components/LanguageContext";
-import { getSectionData } from "./_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const LandingPage = () => {
   const { language } = useLanguage();

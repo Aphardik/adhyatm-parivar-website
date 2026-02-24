@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { fetchUserByPhone } from '../_utils/userFetchUtils';
+import { fetchUserByPhone } from '@/app/utils/userFetchUtils';
 import { message } from 'antd';
 
 /**

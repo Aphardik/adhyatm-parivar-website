@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import { useLanguage } from "./LanguageContext";
-import { getSectionData } from "../_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 export default function TestimonialSlider() {
   const { language } = useLanguage();

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image3DCarousel from './Image3DCarousel';
 import { useLanguage } from './LanguageContext';
-import { getSectionData } from '../_utils/sectionData';
+import { getSectionData } from '@/app/utils/sectionData';
 
 const RangChhataSection = () => {
     const { language } = useLanguage();

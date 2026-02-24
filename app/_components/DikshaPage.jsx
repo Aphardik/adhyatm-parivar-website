@@ -8,7 +8,7 @@ import RangChhataSection from "./RangChhataSection";
 import NewsInfiniteCarousel from "./NewsInfiniteCarousel";
 import DikshaNimantran from "./DikshaNimantran";
 import { useLanguage } from "./LanguageContext";
-import { getSectionData } from "../_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const Timeline = () => {
   const { language } = useLanguage();

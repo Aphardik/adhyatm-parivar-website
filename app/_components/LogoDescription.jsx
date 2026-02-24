@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useLanguage } from "./LanguageContext";
-import { getSectionData } from "../_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const LogoDescription = () => {
   const { language } = useLanguage();

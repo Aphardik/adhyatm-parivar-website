@@ -5,7 +5,7 @@ import HeaderSvg from "@/app/_components/HeaderSvg";
 import TopLeftSvg from "@/app/_components/TopLeftSvg";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { useLanguage } from "@/app/_components/LanguageContext";
-import { getSectionData } from "@/app/_utils/sectionData";
+import { getSectionData } from "@/app/utils/sectionData";
 
 const Page = () => {
   const { language } = useLanguage();
