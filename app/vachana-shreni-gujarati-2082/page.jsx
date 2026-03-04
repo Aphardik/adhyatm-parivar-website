@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Form, Input, Button, Row, Col, Modal, Radio, Select, Checkbox, DatePicker, Switch, message } from "antd";
-import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined, WarningOutlined } from "@ant-design/icons";
+import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined, WarningOutlined, DownloadOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { states } from "@/app/data/states";
+import { downloadRegistrationCard } from "@/app/utils/downloadRegisterCard.Utils";
 
 const translations = {
     gu: {
@@ -39,7 +40,7 @@ const translations = {
         registrationCodeTitle: "રજીસ્ટ્રેશન નંબર:",
         successTitle: "રજીસ્ટ્રેશન સફળ!",
         successMessage: "તમારું રજીસ્ટ્રેશન સફળતાપૂર્વક પૂર્ણ થયું છે.",
-        close: "બંધ કરો",
+        close: "OK",
         address: "સરનામું",
         addressPlaceholder: "સરનામું દાખલ કરો",
         pincodePlaceholder: "પીનકોડ",
@@ -84,7 +85,7 @@ const translations = {
         registrationCodeTitle: "पंजीकरण संख्या:",
         successTitle: "पंजीकरण सफल!",
         successMessage: "आपका पंजीकरण सफलतापूर्वक पूरा हो गया है।",
-        close: "बंद करें",
+        close: "OK",
         address: "पता",
         addressPlaceholder: "पता दर्ज करें",
         pincodePlaceholder: "पिनकोड",
@@ -557,12 +558,613 @@ export default function VachanaShreniGujaratiForm() {
                             ))}
                         </div>
                     </div>
-                    <Button type="primary" size="large" onClick={() => setSuccessModalVisible(false)}
-                        className={`!bg-black !rounded-sm border-none h-12 text-lg font-bold px-8 ${fontClass}`}>
-                        {t.close}
-                    </Button>
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        <Button
+                            icon={<DownloadOutlined />}
+                            size="large"
+                            onClick={() => {
+                                const labels = language === "gu" ? {
+                                    title: "રજીસ્ટ્રેશન સફળ!",
+                                    subtitle: "તમારું રજીસ્ટ્રેશન સફળતાપૂર્વક પૂર્ણ થયું છે.",
+                                    codeLabel: "રજીસ્ટ્રેશન નંબર:",
+                                    participant: "પ્રતિભાગી",
+                                    footer: "આ તમારો રજીસ્ટ્રેશન નંબર છે. કૃપા કરીને તેને નોંધી લો.",
+                                } : {
+                                    title: "रजिस्ट्रेशन सफल!",
+                                    subtitle: "आपका रजिस्ट्रेशन सफलतापूर्वक पूर्ण हो गया है।",
+                                    codeLabel: "रजिस्ट्रेशन नंबर:",
+                                    participant: "प्रतिभागी",
+                                    footer: "यह आपका रजिस्ट्रेशन नंबर है। कृपया इसे नोट कर लें।",
+                                };
+                                downloadRegistrationCard({
+                                    registrationCodes,
+                                    labels,
+                                    filename: `registration-${Date.now()}.png`
+                                });
+                            }}
+                            className={`flex-1 !rounded-sm border bg-gray-100 !border-orange-400 !py-2 h-12 text-base font-bold ${fontClass} hover:bg-gray-50`}
+                        >
+                            {language === "gu" ? "ઇમેજ ડાઉનલોડ કરો" : "इमेज डाउनलोड करें"}
+                        </Button>
+                        <Button type="primary" size="large" onClick={() => setSuccessModalVisible(false)}
+                            className={`flex-1 !bg-black !rounded-sm border-none !py-2 text-lg font-bold px-8 ${fontClass}`}>
+                            {t.close}
+                        </Button>
+                    </div>
                 </div>
             </Modal>
         </div>
     );
 }
+
+
+
+
+// "use client";
+// import React, { useState } from "react";
+// import { Form, Input, Button, Row, Col, Modal, Radio, Select, Checkbox, DatePicker, Switch, message } from "antd";
+// import { UserOutlined, PlusOutlined, DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined, WarningOutlined } from "@ant-design/icons";
+// import axios from "axios";
+// import { states } from "@/app/data/states";
+
+// const translations = {
+//     gu: {
+//         formTitle: "ભાવના પત્ર",
+//         instructionTitle: "વાચનાશ્રેણીનો વેશભૂષા નિયમ (ડ્રેસકોડ)",
+//         instructionText: "નિમ્નલિખિત ડ્રેસકોડવાળાને જ પ્રવેશ મળશે. ચોવીશે કલાક (દિવસ અને રાત્રે) એના સિવાયનો વેશ પહેરી શકાશે નહીં. એ સિવાયનાં વેશમાં આવનાર ૨૦૦૦ કિ.મી. દૂરથી પણ આવેલ હશે તો પણ અમે પ્રવેશ આપી શકીશું નહીં. કોઈપણ ઉંમરની વ્યક્તિ માટે આ જ ડ્રેસકોડ છે.",
+//         option1Dress: "પુરુષો માટે - ધોતી-ખેસ, લેંઘો-ઝભ્ભો અથવા ચૂડીદાર",
+//         option2Dress: "બહેનો માટે - સાડી અથવા ચણિયાચોળી",
+//         naam: "પૂરું નામ",
+//         naamPlaceholder: "પૂરું નામ દાખલ કરો",
+//         dob: "જન્મ તારીખ",
+//         dobPlaceholder: "તારીખ પસંદ કરો",
+//         gender: "પુરુષ/સ્ત્રી",
+//         male: "પુરુષ",
+//         female: "સ્ત્રી",
+//         address1: "એડ્રેસ ૧",
+//         address2: "એડ્રેસ ૨",
+//         city: "શહેર",
+//         state: "રાજ્ય",
+//         pincode: "પીનકોડ",
+//         mulVatan: "મૂળ વતન",
+//         mobile: "મોબાઇલ નંબર",
+//         altMobile: "વૈકલ્પિક મોબાઇલ નંબર",
+//         groupPrimaryMobile: "ગ્રુપના મુખ્ય વ્યક્તિનો નંબર",
+//         groupPrimaryMobileInfo: "જો તમારે ગ્રુપમાં ફોર્મ ભરવું હોય, તો તમારા ગ્રુપના મુખ્ય વ્યક્તિનો નંબર અહીં લખવો. તમારા ગ્રુપના બીજા જેટલા પણ ફોર્મ ભરાય તેમાં પણ આ જ મોબાઈલ નંબર લખવા વિનંતી. જેથી અમને તમારા ગ્રુપનો ખ્યાલ આવી શકે. જો તમે તમારા એકલાનું ફોર્મ ભરી રહ્યા હોવ તો તમારો નંબર અહીં લખવો.",
+//         firstVachana: "શું આ આપની પ્રથમ વાચના છે?",
+//         copyHeader: "ઉપરના પ્રતિભાગીમાંથી વિગતો કોપી કરો",
+//         addParticipant: "બીજા પ્રતિભાગી ઉમેરો",
+//         submit: "બધા પ્રતિભાગીઓને રજીસ્ટર કરો",
+//         submitting: "રજીસ્ટ્રેશન થઈ રહ્યું છે...",
+//         yes: "હા",
+//         no: "ના",
+//         registrationCodeTitle: "રજીસ્ટ્રેશન નંબર:",
+//         successTitle: "રજીસ્ટ્રેશન સફળ!",
+//         successMessage: "તમારું રજીસ્ટ્રેશન સફળતાપૂર્વક પૂર્ણ થયું છે.",
+//         close: "બંધ કરો",
+//         address: "સરનામું",
+//         addressPlaceholder: "સરનામું દાખલ કરો",
+//         pincodePlaceholder: "પીનકોડ",
+//         required: "જરૂરી છે",
+//         validMobile: "૧૦ અંકોનો માન્ય નંબર દાખલ કરો",
+//         validPincode: "૬ અંકોનો માન્ય પીનકોડ દાખલ કરો",
+//         participantTitle: "પ્રતિભાગી વિગતો",
+//         limitExceededTitle: "લિમિટ પૂરી થઈ ગઈ છે",
+//         addLimitWarningTitle: "લિમિટ પૂર્ણ",
+//         understood: "OK",
+//     },
+//     hi: {
+//         formTitle: "भावना पत्र",
+//         instructionTitle: "वाचनाश्रेणी का वेशभूषा नियम (ड्रेसकोड)",
+//         instructionText: "निम्नलिखित ड्रेसकोड वाले को ही प्रवेश मिलेगा। चौबीसों घंटे (दिन और रात) अन्य कोई वेश पहना नहीं जा सकता। अन्य कोई वेश में आने वाले २००० किलोमीटर दूर से भी आए तो भी हम प्रवेश नहीं दे पाएंगे। किसी भी उम्र के व्यक्ति के लिए यही ड्रेसकोड है।",
+//         option1Dress: "पुरुषों के लिए - धोती-खेस, कुर्ता-पायजामा या चूड़ीदार",
+//         option2Dress: "बहनों के लिए - साड़ी या चनियाचोली",
+//         naam: "पूरा नाम",
+//         naamPlaceholder: "पूरा नाम दर्ज करें",
+//         dob: "जन्म तिथि",
+//         dobPlaceholder: "तारीख चुनें",
+//         gender: "लिंग",
+//         male: "पुरुष",
+//         female: "स्त्री",
+//         address1: "एड्रेस 1",
+//         address2: "एड्रेस 2",
+//         city: "शहर",
+//         state: "राज्य",
+//         pincode: "पिनकोड",
+//         mulVatan: "मूल वतन",
+//         mobile: "मोबाइल नंबर",
+//         altMobile: "वैकल्पिक मोबाइल नंबर",
+//         groupPrimaryMobile: "ग्रुप का मुख्य मोबाइल नंबर",
+//         groupPrimaryMobileInfo: "अगर आपको समूह में फ़ॉर्म भरना हो, तो अपने समूह के मुख्य व्यक्ति का नंबर यहाँ लिखें। आपके समूह के अन्य जितने भी फ़ॉर्म भरे जाएँ, उनमें भी यही मोबाइल नंबर लिखने का अनुरोध है, ताकि हमें आपके समूह की जानकारी मिल सके। यदि आप अकेले फ़ॉर्म भर रहे हैं, तो अपना नंबर यहाँ लिखें।",
+//         firstVachana: "क्या यह आपकी पहली वाचना है?",
+//         copyHeader: "पिछले प्रतिभागी से विवरण कॉपी करें",
+//         addParticipant: "अन्य प्रतिभागी जोड़ें",
+//         submit: "सभी प्रतिभागियों को पंजीकृत करें",
+//         submitting: "पंजीकरण हो रहा है...",
+//         yes: "हाँ",
+//         no: "नहीं",
+//         registrationCodeTitle: "पंजीकरण संख्या:",
+//         successTitle: "पंजीकरण सफल!",
+//         successMessage: "आपका पंजीकरण सफलतापूर्वक पूरा हो गया है।",
+//         close: "बंद करें",
+//         address: "पता",
+//         addressPlaceholder: "पता दर्ज करें",
+//         pincodePlaceholder: "पिनकोड",
+//         required: "आवश्यक है",
+//         validMobile: "१० अंकों का मान्य नंबर दर्ज करें",
+//         validPincode: "६ अंकों का मान्य पिनकोड दर्ज करें",
+//         participantTitle: "प्रतिभागी विवरण",
+//         limitExceededTitle: "सीमा पार हो गई है",
+//         addLimitWarningTitle: "सीमा पूर्ण",
+//         understood: "OK",
+//     }
+// };
+
+// export default function VachanaShreniGujaratiForm() {
+//     const [form] = Form.useForm();
+//     const [loading, setLoading] = useState(false);
+//     const [language, setLanguage] = useState("gu");
+
+//     // Success modal
+//     const [successModalVisible, setSuccessModalVisible] = useState(false);
+//     const [registrationCodes, setRegistrationCodes] = useState([]);
+
+//     // ✅ Limit modal — fully state-driven, no Modal.error() static calls
+//     const [limitModal, setLimitModal] = useState({ visible: false, title: "", content: "" });
+
+//     const [labharthiId, setLabharthiId] = useState(null);
+//     const [labharthiInfo, setLabharthiInfo] = useState(null);
+
+//     const t = translations[language];
+//     const fontClass = language === "hi" ? "font-heading" : "font-anek";
+
+//     const showLimitModal = (title, content) => {
+//         setLimitModal({ visible: true, title, content });
+//     };
+
+//     React.useEffect(() => {
+//         const searchParams = new URLSearchParams(window.location.search);
+//         const id = searchParams.get("lid");
+//         if (id) {
+//             setLabharthiId(id);
+//             fetchLabharthi(id);
+//         }
+//     }, []);
+
+//     const fetchLabharthi = async (id) => {
+//         try {
+//             const response = await axios.get(
+//                 `https://us-central1-adhyatm-parivar-main.cloudfunctions.net/getLabharthiDetails?id=${id}`
+//             );
+//             if (response.status === 200) {
+//                 setLabharthiInfo(response.data);
+//             }
+//         } catch (error) {
+//             console.error("Error fetching Labharthi:", error);
+//             if (error.response?.status === 404) {
+//                 showLimitModal(
+//                     language === "gu" ? "લાભાર્થી મળ્યા નથી" : "लाभार्थी नहीं मिला",
+//                     language === "gu"
+//                         ? "તમે જે લિંકનો ઉપયોગ કરી રહ્યા છો તે અમાન્ય છે અથવા આ લાભાર્થી રજીસ્ટર થયેલ નથી."
+//                         : "आप जिस लिंक का उपयोग कर रहे हैं वह अमान्य है या यह लाभार्थी पंजीकृत नहीं है।"
+//                 );
+//             } else {
+//                 message.error(language === "gu" ? "લાભાર્થીની વિગતો મેળવવામાં ભૂલ થઈ." : "लाभार्थी विवरण प्राप्त करने में त्रुटि।");
+//             }
+//         }
+//     };
+
+//     const onFinish = async (values) => {
+//         if (!values.participants || values.participants.length === 0) {
+//             message.error(language === "gu" ? "પ્રતિભાગીઓની વિગતો ખાલી છે." : "प्रतिभागियों का विवरण खाली है।");
+//             return;
+//         }
+
+//         const participantsFormatted = values.participants.map((p) => ({
+//             ...p,
+//             dob: p.dob && typeof p.dob.format === "function" ? p.dob.format("YYYY-MM-DD") : null,
+//         }));
+
+//         // ✅ Client-side limit check BEFORE starting loader — show state modal directly
+//         if (labharthiInfo) {
+//             const totalAfterSubmission = (labharthiInfo.totalSubmitted || 0) + participantsFormatted.length;
+//             if (totalAfterSubmission > labharthiInfo.formLimit) {
+//                 const remaining = labharthiInfo.formLimit - labharthiInfo.totalSubmitted;
+//                 showLimitModal(
+//                     t.limitExceededTitle,
+//                     language === "gu"
+//                         ? `આ લાભાર્થી માટે કુલ લિમિટ ${labharthiInfo.formLimit} ફોર્મની છે. તમે અત્યાર સુધીમાં ${labharthiInfo.totalSubmitted} પ્રતિભાગી(ઓ)નું રજીસ્ટ્રેશન કરી લીધું છે. તમે આ વખતે ફક્ત ${remaining} પ્રતિભાગી(ઓ)ને જ રજીસ્ટર કરી શકો છો.`
+//                         : `इस लाभार्थी के लिए कुल सीमा ${labharthiInfo.formLimit} फॉर्म की है। आपने अब तक ${labharthiInfo.totalSubmitted} प्रतिभागी(ओं) का पंजीकरण कर लिया है। आप इस बार केवल ${remaining} प्रतिभागी(ओं) को ही पंजीकृत कर सकते हैं।`
+//                 );
+//                 return;
+//             }
+//         }
+
+//         // Limit passed — start loading spinner now
+//         const hide = message.loading(language === "gu" ? "પ્રક્રિયા ચાલુ છે..." : "प्रक्रिया चल रही है...", 0);
+//         setLoading(true);
+
+//         try {
+//             const payload = { participants: participantsFormatted, labharthiId };
+//             const response = await axios.post(
+//                 "https://us-central1-adhyatm-parivar-main.cloudfunctions.net/vachanaShreniGujarati2082",
+//                 payload
+//             );
+
+//             if (response.status === 200) {
+//                 const codes = response.data.codes ||
+//                     values.participants.map((_, i) => `REG${Date.now()}${String(i + 1).padStart(3, "0")}`);
+//                 setRegistrationCodes(values.participants.map((p, i) => ({ code: codes[i], name: p.fullName })));
+//                 setSuccessModalVisible(true);
+//                 form.resetFields();
+//                 if (labharthiId) fetchLabharthi(labharthiId);
+//             } else {
+//                 message.error(language === "gu" ? "સર્વર તરફથી અનપેક્ષિત પ્રતિસાદ." : "सर्वर से अप्रत्याशित प्रतिक्रिया।");
+//             }
+//         } catch (error) {
+//             console.error("Submission error:", error);
+//             // ✅ Server-side limit error also uses state modal
+//             if (error.response?.data?.message === "Limit Exceeded") {
+//                 const limit = error.response.data.limit;
+//                 const current = error.response.data.current;
+//                 showLimitModal(
+//                     t.limitExceededTitle,
+//                     language === "gu"
+//                         ? `આ લાભાર્થી માટે કુલ લિમિટ ${limit} ફોર્મની છે. તમે અત્યાર સુધીમાં ${current} પ્રતિભાગી(ઓ)નું રજીસ્ટ્રેશન કરી લીધું છે. તમે આ વખતે ફક્ત ${limit - current} પ્રતિભાગી(ઓ)ને જ રજીસ્ટર કરી શકો છો.`
+//                         : `इस लाभार्थी के लिए कुल सीमा ${limit} फॉर्म की है। आपने अब तक ${current} प्रतिभागी(ओं) का पंजीकरण कर लिया है। आप इस बार केवल ${limit - current} प्रतिभागी(ओं) को ही पंजीकृत कर सकते हैं।`
+//                 );
+//             } else {
+//                 message.error(language === "gu" ? "ફોર્મ જમા કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો." : "फॉर्म जमा करने में विफल। कृपया पुनः प्रयास करें।");
+//             }
+//         } finally {
+//             hide();
+//             setLoading(false);
+//         }
+//     };
+
+//     const onFinishFailed = (errorInfo) => {
+//         message.error(language === "gu" ? "કૃપા કરીને બધા જરૂરી ફીલ્ડ્સ ભરો." : "कृपया सभी आवश्यक फ़ील्ड भरें।");
+//         if (errorInfo.errorFields?.length > 0) form.scrollToField(errorInfo.errorFields[0].name);
+//     };
+
+//     const handleCopyPrevious = (index) => {
+//         const participants = form.getFieldValue("participants");
+//         const prevData = participants[index - 1];
+//         if (prevData) {
+//             const updated = [...participants];
+//             updated[index] = {
+//                 ...updated[index],
+//                 address1: prevData.address1,
+//                 address2: prevData.address2,
+//                 city: prevData.city,
+//                 state: prevData.state,
+//                 pincode: prevData.pincode,
+//                 mulVatan: prevData.mulVatan,
+//                 mobile: prevData.mobile,
+//                 altMobile: prevData.altMobile,
+//                 groupPrimaryMobile: prevData.groupPrimaryMobile,
+//             };
+//             form.setFieldsValue({ participants: updated });
+//         }
+//     };
+
+//     return (
+//         <div className={`min-h-screen w-screen bg-gradient-to-br from-orange-50 to-yellow-50 ${fontClass}`}>
+
+//             {/* Language Toggle */}
+//             <div className="max-w-5xl mx-auto px-4 py-4 flex justify-end items-center gap-3">
+//                 <span className={`text-sm font-bold ${language === "gu" ? "text-orange-600" : "text-gray-400"}`}>ગુજરાતી</span>
+//                 <Switch checked={language === "hi"} onChange={(checked) => setLanguage(checked ? "hi" : "gu")} className="bg-gray-400" />
+//                 <span className={`text-sm font-bold ${language === "hi" ? "text-orange-600" : "text-gray-400"}`}>हिन्दी</span>
+//             </div>
+
+//             <div className="max-w-5xl mx-auto relative z-10 pb-12 px-4">
+
+//                 {/* Dress Code Instructions */}
+//                 <div className="bg-white rounded-lg border border-orange-200 overflow-hidden mb-8 shadow-md">
+//                     <div className="bg-gradient-to-r from-orange-500 to-yellow-500 p-4 px-4">
+//                         <h3 className={`text-xl font-bold text-white ${fontClass}`}>{t.instructionTitle}</h3>
+//                     </div>
+//                     <div className="p-6 space-y-4">
+//                         <p className={`text-base leading-relaxed text-gray-700 ${fontClass}`}>{t.instructionText}</p>
+//                         <div className="space-y-3 pt-2">
+//                             <div className="flex items-start gap-3 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+//                                 <p className={`text-base text-gray-800 ${fontClass}`}>{t.option1Dress}</p>
+//                             </div>
+//                             <div className="flex items-start gap-3 p-4 bg-pink-50 border-l-4 border-pink-500 rounded-r-lg">
+//                                 <p className={`text-base text-gray-800 ${fontClass}`}>{t.option2Dress}</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 {/* Form */}
+//                 <div className="bg-white rounded-sm border border-gray-100 overflow-hidden mb-12 shadow-lg">
+//                     <div className="bg-lightpink p-4 px-8 text-center border-b border-gray-100">
+//                         <h2 className="text-2xl font-bold text-gray-800">{t.formTitle}</h2>
+//                     </div>
+//                     <div className="p- sm:p-8">
+//                         <Form
+//                             form={form}
+//                             layout="vertical"
+//                             onFinish={onFinish}
+//                             onFinishFailed={onFinishFailed}
+//                             initialValues={{ participants: [{}] }}
+//                             className="space-y-6"
+//                         >
+//                             <Form.List name="participants">
+//                                 {(fields, { add, remove }) => (
+//                                     <div className="space-y-8">
+//                                         {fields.map(({ key, name, ...restField }, index) => (
+//                                             <div key={key} className={`bg-gray-50 p-6 ${fontClass} rounded-sm border border-gray-200 shadow-sm relative`}>
+//                                                 <div className="flex justify-between items-center mb-6 pb-2 border-b-2 border-orange-200">
+//                                                     <h3 className="text-xl font-bold text-gray-800 flex items-center gap-3">
+//                                                         <span className="w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold shadow-sm">{index + 1}</span>
+//                                                         {t.participantTitle}
+//                                                     </h3>
+//                                                     {fields.length > 1 && (
+//                                                         <Button type="text" danger icon={<DeleteOutlined />} onClick={() => remove(name)}
+//                                                             className="flex items-center px-4 h-9 bg-white border border-red-200 rounded-lg hover:bg-red-50 hover:border-red-300 transition-colors" />
+//                                                     )}
+//                                                 </div>
+
+//                                                 <div className="space-y-4">
+//                                                     {index > 0 && (
+//                                                         <div className="mb-6 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+//                                                             <Checkbox onChange={(e) => e.target.checked && handleCopyPrevious(index)}
+//                                                                 className={`${fontClass} text-sm font-bold text-[#901E3E]`}>
+//                                                                 {t.copyHeader}
+//                                                             </Checkbox>
+//                                                         </div>
+//                                                     )}
+
+//                                                     <Row gutter={[24, 16]}>
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "fullName"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.naam}</span>}
+//                                                                 rules={[{ required: true, message: t.required }]}>
+//                                                                 <Input placeholder={t.naamPlaceholder} prefix={<UserOutlined className="text-gray-400 mr-2" />}
+//                                                                     className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "dob"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.dob}</span>}
+//                                                                 rules={[{ required: true, message: t.required }]}>
+//                                                                 <DatePicker placeholder={t.dobPlaceholder} format="DD-MM-YYYY"
+//                                                                     className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`}
+//                                                                     style={{ height: "50px" }} />
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "gender"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.gender}</span>}
+//                                                                 rules={[{ required: true, message: t.required }]}>
+//                                                                 <Radio.Group className="w-full flex gap-6 pt-2">
+//                                                                     <Radio value="Male" className="text-base font-medium text-gray-700"><span className="ml-1">{t.male}</span></Radio>
+//                                                                     <Radio value="Female" className="text-base font-medium text-gray-700"><span className="ml-1">{t.female}</span></Radio>
+//                                                                 </Radio.Group>
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24}>
+//                                                             <h4 className={`text-[#901E3E] font-bold text-lg mb-2 ${fontClass}`}>{t.address}</h4>
+//                                                             <Row gutter={[16, 16]}>
+//                                                                 <Col xs={24} sm={12}>
+//                                                                     <Form.Item {...restField} name={[name, "address1"]}
+//                                                                         label={<span className={`text-sm font-bold text-gray-600 ${fontClass}`}>{t.address1}</span>}
+//                                                                         rules={[{ required: true, message: t.required }]}>
+//                                                                         <Input placeholder={t.addressPlaceholder} className={`w-full px-4 py-2 border-2 border-gray-300 rounded-lg ${fontClass}`} />
+//                                                                     </Form.Item>
+//                                                                 </Col>
+//                                                                 <Col xs={24} sm={12}>
+//                                                                     <Form.Item {...restField} name={[name, "address2"]}
+//                                                                         label={<span className={`text-sm font-bold text-gray-600 ${fontClass}`}>{t.address2}</span>}>
+//                                                                         <Input placeholder={t.addressPlaceholder} className={`w-full px-4 py-2 border-2 border-gray-300 rounded-lg ${fontClass}`} />
+//                                                                     </Form.Item>
+//                                                                 </Col>
+//                                                                 <Col xs={24} sm={8}>
+//                                                                     <Form.Item {...restField} name={[name, "city"]}
+//                                                                         label={<span className={`text-sm font-bold text-gray-600 ${fontClass}`}>{t.city}</span>}
+//                                                                         rules={[{ required: true, message: t.required }]}>
+//                                                                         <Input placeholder={t.city} className={`w-full px-4 py-2 border-2 border-gray-300 rounded-lg ${fontClass}`} />
+//                                                                     </Form.Item>
+//                                                                 </Col>
+//                                                                 <Col xs={24} sm={8}>
+//                                                                     <Form.Item {...restField} name={[name, "state"]}
+//                                                                         label={<span className={`text-sm font-bold text-gray-600 ${fontClass}`}>{t.state}</span>}
+//                                                                         rules={[{ required: true, message: t.required }]}>
+//                                                                         <Select placeholder={t.state} showSearch
+//                                                                             filterOption={(input, option) => (option?.children ?? "").toLowerCase().includes(input.toLowerCase())}
+//                                                                             className={`w-full h-[45px] ${fontClass}`}>
+//                                                                             {states.map((s) => (
+//                                                                                 <Select.Option key={s.value} value={s.value}>{s.label}</Select.Option>
+//                                                                             ))}
+//                                                                         </Select>
+//                                                                     </Form.Item>
+//                                                                 </Col>
+//                                                                 <Col xs={24} sm={8}>
+//                                                                     <Form.Item {...restField} name={[name, "pincode"]}
+//                                                                         label={<span className={`text-sm font-bold text-gray-600 ${fontClass}`}>{t.pincode}</span>}
+//                                                                         rules={[{ required: true, message: t.required }, { pattern: /^[0-9]{6}$/, message: t.validPincode }]}>
+//                                                                         <Input placeholder={t.pincodePlaceholder} maxLength={6} className={`w-full px-4 py-2 border-2 border-gray-300 rounded-lg ${fontClass}`} />
+//                                                                     </Form.Item>
+//                                                                 </Col>
+//                                                             </Row>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "mulVatan"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.mulVatan}</span>}
+//                                                                 rules={[{ required: true, message: t.required }]}>
+//                                                                 <Input placeholder={t.mulVatan} className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "mobile"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.mobile}</span>}
+//                                                                 rules={[{ required: true, message: t.required }, { pattern: /^[0-9]{10}$/, message: t.validMobile }]}>
+//                                                                 <Input placeholder="10 Digits" maxLength={10} className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "altMobile"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.altMobile}</span>}
+//                                                                 rules={[{ pattern: /^[0-9]{10}$/, message: t.validMobile }]}>
+//                                                                 <Input placeholder="10 Digits" maxLength={10} className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+//                                                             </Form.Item>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <div className="flex flex-col gap-2">
+//                                                                 <span className={`text-gray-500 text-sm ${fontClass}`}>{t.groupPrimaryMobileInfo}</span>
+//                                                                 <Form.Item {...restField} name={[name, "groupPrimaryMobile"]}
+//                                                                     label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.groupPrimaryMobile}</span>}
+//                                                                     rules={[{ required: true, message: t.required }, { pattern: /^[0-9]{10}$/, message: t.validMobile }]}>
+//                                                                     <Input placeholder="10 Digits" maxLength={10} className={`w-full px-4 py-3 border-2 border-gray-300 rounded-lg ${fontClass} text-base`} />
+//                                                                 </Form.Item>
+//                                                             </div>
+//                                                         </Col>
+
+//                                                         <Col xs={24} sm={12}>
+//                                                             <Form.Item {...restField} name={[name, "firstVachana"]}
+//                                                                 label={<span className={`text-[#901E3E] font-bold text-lg ${fontClass} leading-relaxed`}>{t.firstVachana}</span>}
+//                                                                 rules={[{ required: true, message: t.required }]}>
+//                                                                 <Radio.Group className="w-full flex gap-4">
+//                                                                     <Radio value="Yes" className="text-base text-gray-700">{t.yes}</Radio>
+//                                                                     <Radio value="No" className="text-base text-gray-700">{t.no}</Radio>
+//                                                                 </Radio.Group>
+//                                                             </Form.Item>
+//                                                         </Col>
+//                                                     </Row>
+//                                                 </div>
+//                                             </div>
+//                                         ))}
+
+//                                         {/* Add Participant */}
+//                                         <Form.Item className="mb-0">
+//                                             {(() => {
+//                                                 const totalSubmitted = labharthiInfo?.totalSubmitted || 0;
+//                                                 const limit = labharthiInfo?.formLimit || Infinity;
+//                                                 const isLimitReached = (totalSubmitted + fields.length) >= limit;
+//                                                 return (
+//                                                     <Button type="dashed" block icon={<PlusOutlined />}
+//                                                         onClick={() => {
+//                                                             if (isLimitReached) {
+//                                                                 showLimitModal(
+//                                                                     t.addLimitWarningTitle,
+//                                                                     language === "gu"
+//                                                                         ? `આ લાભાર્થી માટે કુલ લિમિટ ${limit} ફોર્મની છે. તમે અત્યાર સુધીમાં ${totalSubmitted} પ્રતિભાગી(ઓ)નું રજીસ્ટ્રેશન કરી લીધું છે અને અત્યારે ${fields.length} પ્રતિભાગી(ઓ)ના નામ લખ્યા છે. તમે કુલ ${limit} થી વધુ પ્રતિભાગી(ઓ) ઉમેરી શકતા નથી.`
+//                                                                         : `इस लाभार्थी के लिए कुल सीमा ${limit} फॉर्म की है। आपने अब तक ${totalSubmitted} प्रतिभागी(ओं) का पंजीकरण कर लिया है और अभी ${fields.length} प्रतिभागी(ओं) के नाम लिखे हैं। आप कुल ${limit} से अधिक प्रतिभागी(ओं) नहीं जोड़ सकते।`
+//                                                                 );
+//                                                             } else {
+//                                                                 add();
+//                                                             }
+//                                                         }}
+//                                                         className="h-14 text-lg font-bold border-2 border-dashed border-gray-400 text-gray-600 hover:text-blue-600 hover:border-blue-500 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:bg-blue-50">
+//                                                         {t.addParticipant}
+//                                                     </Button>
+//                                                 );
+//                                             })()}
+//                                         </Form.Item>
+//                                     </div>
+//                                 )}
+//                             </Form.List>
+
+//                             <div className="pt-6 border-t border-gray-100">
+//                                 <Button type="primary" htmlType="submit" size="large" block loading={loading}
+//                                     className="h-14 text-xl font-bold !pt-1 !bg-gradient-to-r from-orange-500 to-yellow-600 border-none hover:from-orange-600 hover:to-yellow-700 shadow-lg rounded-xl transform hover:-translate-y-0.5 transition-all duration-300">
+//                                     {loading ? t.submitting : t.submit}
+//                                 </Button>
+//                             </div>
+//                         </Form>
+//                     </div>
+//                 </div>
+
+//                 {/* Map */}
+//                 <div className="bg-white rounded-sm shadow-sm border border-lightpink overflow-hidden hover:shadow-2xl transition-all duration-300 mb-12">
+//                     <div className="bg-lightpink p-4 text-center">
+//                         <h3 className={`text-2xl font-bold text-gray-800 flex items-center justify-center gap-2 ${fontClass}`}>
+//                             📍 {language === "gu" ? "મંગલ સ્થળ" : "मंगल स्थल"}
+//                         </h3>
+//                         <p className={`text-center font-medium mt-1 ${fontClass}`}>
+//                             {language === "gu" ? "શ્રી જીવદયા ધામ, વસઈ, મુંબઈ" : "श्री जीवदया धाम, वसई, मुंबई"}
+//                         </p>
+//                     </div>
+//                     <div className="h-96 w-full">
+//                         <iframe
+//                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.18432579603!2d72.84334927498143!3d19.5076283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7081ec7e32ed9%3A0x514bb76c4877e603!2sJeevdaya%20Dham%20Jain%20Tirth!5e0!3m2!1sen!2sin!4v1719223456789!5m2!1sen!2sin"
+//                             width="100%" height="100%" allowFullScreen="" loading="lazy"
+//                             referrerPolicy="no-referrer-when-downgrade" title="Jeevdaya Dham Map" className="border-0"
+//                         />
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {/* ✅ Limit Exceeded Modal — pure React state, always renders correctly */}
+//             <Modal
+//                 open={limitModal.visible}
+//                 onCancel={() => setLimitModal({ ...limitModal, visible: false })}
+//                 footer={null}
+//                 centered
+//                 width={480}
+//                 destroyOnClose
+//                 zIndex={1100}
+//                 closeIcon={<CloseCircleOutlined className="text-xl text-gray-400 hover:text-gray-600" />}
+//             >
+//                 <div className={`text-center py-6 px-2 ${fontClass}`}>
+//                     <WarningOutlined style={{ fontSize: 60, color: "#ef4444" }} />
+//                     <h2 className={`text-xl font-bold text-gray-800 mt-4 mb-3 ${fontClass}`}>{limitModal.title}</h2>
+//                     <p className={`text-base text-gray-600 mb-6 leading-relaxed ${fontClass}`}>{limitModal.content}</p>
+//                     <Button
+//                         type="primary"
+//                         size="large"
+//                         onClick={() => setLimitModal({ ...limitModal, visible: false })}
+//                         style={{ backgroundColor: "#ef4444", borderColor: "#ef4444" }}
+//                         className={`h-11 text-base font-bold px-8 rounded-lg ${fontClass}`}
+//                     >
+//                         {t.understood}
+//                     </Button>
+//                 </div>
+//             </Modal>
+
+//             {/* Success Modal */}
+//             <Modal
+//                 open={successModalVisible}
+//                 onCancel={() => setSuccessModalVisible(false)}
+//                 footer={null}
+//                 centered
+//                 width={500}
+//                 destroyOnClose
+//                 closeIcon={<CloseCircleOutlined className="text-2xl text-gray-400 hover:text-gray-600" />}
+//             >
+//                 <div className="text-center py-6 px-4">
+//                     <CheckCircleOutlined style={{ fontSize: 64, color: "#22c55e" }} />
+//                     <h2 className={`text-2xl sm:text-3xl font-bold text-black mt-4 mb-3 ${fontClass}`}>{t.successTitle}</h2>
+//                     <p className={`text-base sm:text-lg text-gray-600 mb-6 ${fontClass}`}>{t.successMessage}</p>
+//                     <div className="bg-white p-4 mb-6">
+//                         <h3 className={`text-lg sm:text-xl font-bold text-black mb-4 ${fontClass}`}>{t.registrationCodeTitle}</h3>
+//                         <div className="space-y-3">
+//                             {registrationCodes.map((code, index) => (
+//                                 <div key={index} className="bg-gray-200 rounded-sm p-3">
+//                                     <div className="flex items-center justify-between flex-wrap gap-2">
+//                                         <span className={`text-sm sm:text-base font-semibold text-gray-600 ${fontClass}`}>{code.name}</span>
+//                                         <span className="text-lg sm:text-xl font-bold text-black font-mono tracking-wider bg-gray-100 px-3 py-1">{code.code}</span>
+//                                     </div>
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+//                     <Button type="primary" size="large" onClick={() => setSuccessModalVisible(false)}
+//                         className={`!bg-black !rounded-sm border-none h-12 text-lg font-bold px-8 ${fontClass}`}>
+//                         {t.close}
+//                     </Button>
+//                 </div>
+//             </Modal>
+//         </div>
+//     );
