@@ -122,7 +122,7 @@ export default function VachanaShreniGujaratiForm() {
 
     React.useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);
-        const id = searchParams.get("labharthiId");
+        const id = searchParams.get("lid");
         if (id) {
             setLabharthiId(id);
             fetchLabharthi(id);
